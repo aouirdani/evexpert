@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand palette — restrained electric accent on charcoal/neutral. */
+  --color-ink: #0b1220;
+  --color-ink-soft: #1e293b;
+  --color-accent: #059669;
+  --color-accent-hover: #047857;
+  --color-accent-subtle: #ecfdf5;
+
+  --radius-card: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+:focus-visible {
+  outline-offset: 2px;
+}
+
+/* Editorial display headings: tighter tracking for confidence. */
+.display {
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+/* Subtle engineered grid used behind the hero. */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+}
+
+/* Fast, tasteful entrance animation. */
+@keyframes evx-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-rise {
+  animation: evx-rise 0.4s ease-out both;
+}
+
+/* Numeric result emphasis using tabular figures. */
+.tabular {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
