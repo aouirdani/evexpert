@@ -29,7 +29,7 @@ npm install
 
 # 2. Configurer l'environnement
 cp .env.example .env.local
-# renseignez DATABASE_URL et NEXT_PUBLIC_SITE_URL
+# renseignez NEXT_PUBLIC_SITE_URL (DATABASE_URL est optionnel)
 
 # 3. (Optionnel) Appliquer le schéma Drizzle
 npx drizzle-kit push
@@ -55,8 +55,8 @@ npm run build && npm run start
 
 | Variable | Rôle | Défaut |
 |----------|------|--------|
-| `NEXT_PUBLIC_SITE_URL` | URL canonique (SEO, sitemap, OG) | `https://evexpert.example` |
-| `DATABASE_URL` | Connexion PostgreSQL | — |
+| `NEXT_PUBLIC_SITE_URL` | URL canonique (SEO, sitemap, OG) | `https://evexpert.fr` |
+| `DATABASE_URL` | Connexion PostgreSQL (optionnelle, non requise pour les pages publiques) | — |
 | `ADSENSE_ENABLED` | Active la publicité | `false` |
 | `NEXT_PUBLIC_ADSENSE_CLIENT_ID` | Identifiant AdSense | — |
 | `NEXT_PUBLIC_GA_ID` | Google Analytics 4 (après consentement) | — |

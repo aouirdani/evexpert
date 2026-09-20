@@ -1,42 +1,78 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { Cookie } from "lucide-react";
 
 const STORAGE_KEY = "evscope-consent";
+const CONSENT_EVENT = "evscope:consent";
 
 export type ConsentValue = "accepted" | "rejected" | null;
 
+// Fallback when localStorage is unavailable (private mode, blocked site data).
+let memoryConsent: ConsentValue = null;
+
 export function getConsent(): ConsentValue {
   if (typeof window === "undefined") return null;
-  const v = window.localStorage.getItem(STORAGE_KEY);
-  return v === "accepted" || v === "rejected" ? v : null;
+  try {
+    const v = window.localStorage.getItem(STORAGE_KEY);
+    if (v === "accepted" || v === "rejected") return v;
+  } catch {
+    return memoryConsent;
+  }
+  return null;
 }
 
+function subscribeConsent(onChange: () => void) {
+  window.addEventListener(CONSENT_EVENT, onChange);
+  window.addEventListener("storage", onChange);
+  return () => {
+    window.removeEventListener(CONSENT_EVENT, onChange);
+    window.removeEventListener("storage", onChange);
+  };
+}
+
+/** Current consent choice; `null` on the server and until the user decides. */
+export function useConsent(): ConsentValue {
+  return useSyncExternalStore(subscribeConsent, getConsent, () => null);
+}
+
+const noopSubscribe = () => () => {};
+
 export function CookieBanner() {
-  const [visible, setVisible] = useState(false);
+  const consent = useConsent();
+  const hydrated = useSyncExternalStore(
+    noopSubscribe,
+    () => true,
+    () => false,
+  );
+  const [reopened, setReopened] = useState(false);
 
   useEffect(() => {
-    if (!getConsent()) setVisible(true);
-    const handler = () => setVisible(true);
+    const handler = () => setReopened(true);
     document.addEventListener("evscope:open-cookie-settings", handler);
     // Wire footer "Gestion des cookies" button.
     const btn = document.querySelector<HTMLButtonElement>(
       "[data-cookie-settings]",
     );
-    const click = () => setVisible(true);
-    btn?.addEventListener("click", click);
+    btn?.addEventListener("click", handler);
     return () => {
       document.removeEventListener("evscope:open-cookie-settings", handler);
-      btn?.removeEventListener("click", click);
+      btn?.removeEventListener("click", handler);
     };
   }, []);
 
+  const visible = hydrated && (consent === null || reopened);
+
   function choose(value: "accepted" | "rejected") {
-    window.localStorage.setItem(STORAGE_KEY, value);
-    setVisible(false);
-    window.dispatchEvent(new CustomEvent("evscope:consent", { detail: value }));
+    memoryConsent = value;
+    try {
+      window.localStorage.setItem(STORAGE_KEY, value);
+    } catch {
+      // Ignored: the in-memory fallback keeps the choice for this page view.
+    }
+    setReopened(false);
+    window.dispatchEvent(new CustomEvent(CONSENT_EVENT, { detail: value }));
   }
 
   if (!visible) return null;

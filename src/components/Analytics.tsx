@@ -1,9 +1,8 @@
 "use client";
 
 import Script from "next/script";
-import { useEffect, useState } from "react";
 import { analyticsConfig } from "@/config/site";
-import { getConsent } from "./CookieBanner";
+import { useConsent } from "./CookieBanner";
 
 /**
  * Charge GA4 / GTM uniquement APRÈS consentement de l'utilisateur.
@@ -11,17 +10,7 @@ import { getConsent } from "./CookieBanner";
  * d'environnement NEXT_PUBLIC_GA_ID / NEXT_PUBLIC_GTM_ID.
  */
 export function Analytics() {
-  const [consented, setConsented] = useState(false);
-
-  useEffect(() => {
-    setConsented(getConsent() === "accepted");
-    const handler = (e: Event) => {
-      const detail = (e as CustomEvent).detail;
-      setConsented(detail === "accepted");
-    };
-    window.addEventListener("evscope:consent", handler);
-    return () => window.removeEventListener("evscope:consent", handler);
-  }, []);
+  const consented = useConsent() === "accepted";
 
   if (!consented) return null;
 
