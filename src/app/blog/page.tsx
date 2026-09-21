@@ -19,20 +19,20 @@ export default async function BlogPage() {
   const articles = await getArticles();
   const sorted = [...articles].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
   return (
-    <Container className="py-10">
+    <Container className="pb-section pt-8">
       <Breadcrumbs items={[{ name: "Blog", href: "/blog" }]} />
       <PageHeader
         eyebrow="Blog"
         title="Blog : analyses chiffrées sur la voiture électrique"
         description="Nous privilégions la qualité au volume : chaque article s'appuie sur des données du catalogue ou sur des sources citées, et indique sa date de mise à jour. Nous ne publions pas d'actualité que nous ne pouvons pas vérifier."
       />
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
         {sorted.map((a) => (
           <ArticleCard key={a.slug} article={a} />
         ))}
       </div>
-      <p className="mt-8 text-sm text-slate-600">
-        Suivre le blog : <a href="/blog/rss.xml" className="font-medium text-emerald-800 underline">flux RSS</a>.
+      <p className="mt-section text-sm text-muted">
+        Suivre le blog : <a href="/blog/rss.xml" className="link-u font-semibold text-signal-deep">flux RSS</a>.
       </p>
       <JsonLd data={itemListJsonLd("Articles du blog EVExpert", sorted.map((a) => ({ name: a.title, href: `/blog/${a.slug}` })))} />
     </Container>

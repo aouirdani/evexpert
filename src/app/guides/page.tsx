@@ -22,16 +22,17 @@ const order: GuideCategory[] = ["autonomie", "recharge", "batterie", "coûts", "
 export default async function GuidesPage() {
   const guides = await getGuides();
   return (
-    <Container className="py-10">
+    <Container className="pb-section pt-8">
       <Breadcrumbs items={[{ name: "Guides", href: "/guides" }]} />
       <PageHeader
         eyebrow="Guides"
         title="Guides voiture électrique : recharge, autonomie, batterie et coûts"
         description={`${guides.length} guides pratiques, rédigés à partir de méthodes de calcul visibles et de sources citées. Chaque guide renvoie vers l'outil de calcul correspondant.`}
       />
-      <nav aria-label="Catégories" className="mt-6 flex flex-wrap gap-2">
+      <nav aria-label="Catégories" className="mt-10 flex flex-wrap items-baseline gap-x-6 gap-y-2 border-t border-line pt-4">
+        <span className="label mr-1">Rubriques</span>
         {order.map((c) => (
-          <a key={c} href={`#${c}`} className="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-800 hover:border-emerald-500 hover:text-emerald-800">
+          <a key={c} href={`#${c}`} className="link-u text-sm font-medium text-ink">
             {guideCategoryLabels[c]}
           </a>
         ))}
@@ -40,9 +41,12 @@ export default async function GuidesPage() {
         const list = guides.filter((g) => g.category === c);
         if (!list.length) return null;
         return (
-          <section key={c} id={c} className="mt-12" aria-labelledby={`h-${c}`}>
-            <h2 id={`h-${c}`} className="text-2xl font-bold text-slate-900">{guideCategoryLabels[c]}</h2>
-            <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <section key={c} id={c} className="mt-section grid scroll-mt-28 gap-x-12 gap-y-8 lg:grid-cols-12" aria-labelledby={`h-${c}`}>
+            <div className="lg:col-span-3">
+              <h2 id={`h-${c}`} className="text-h2 font-bold text-ink">{guideCategoryLabels[c]}</h2>
+              <p className="label mt-3">{list.length} guide{list.length > 1 ? "s" : ""}</p>
+            </div>
+            <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 xl:grid-cols-3 lg:col-span-9">
               {list.map((g) => (
                 <GuideCard key={g.slug} guide={g} />
               ))}
@@ -50,8 +54,8 @@ export default async function GuidesPage() {
           </section>
         );
       })}
-      <p className="mt-12 text-sm text-slate-600">
-        Vous cherchez un calcul plutôt qu&apos;une explication ? Rendez-vous dans les <Link href="/outils" className="font-medium text-emerald-800 underline">outils</Link>.
+      <p className="mt-section text-sm text-muted">
+        Vous cherchez un calcul plutôt qu&apos;une explication ? Rendez-vous dans les <Link href="/outils" className="link-u font-semibold text-signal-deep">outils</Link>.
       </p>
       <JsonLd data={itemListJsonLd("Guides voiture électrique", guides.map((g) => ({ name: g.title, href: `/guides/${g.slug}` })))} />
     </Container>

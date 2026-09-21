@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { Clock } from "lucide-react";
 import type { ArticleSection, EditorialImage, FaqItem, Source } from "@/types";
 import { Container } from "@/components/layout/Container";
+import { Kicker } from "@/components/layout/Section";
+import { Colophon } from "@/components/content/Colophon";
 import { Breadcrumbs, type Crumb } from "@/components/layout/Breadcrumbs";
 import { Prose, TableOfContents } from "@/components/ui/Prose";
 import { Faq } from "@/components/ui/Faq";
@@ -9,7 +10,7 @@ import { JsonLd } from "@/components/ui/JsonLd";
 import { EditorialFigure } from "@/components/content/EditorialFigure";
 import { RelatedGuides, RelatedTools, RelatedVehicles } from "@/components/related";
 import { articleJsonLd, faqJsonLd, shareImageOf } from "@/lib/seo";
-import { formatDateFr } from "@/lib/utils";
+import { formatDateFr, frTypo } from "@/lib/utils";
 
 /** Mise en page commune aux guides et aux articles de blog. */
 export function ArticleView({
@@ -47,42 +48,33 @@ export function ArticleView({
   relatedTools?: string[];
   relatedGuides?: string[];
   relatedVehicleIds?: string[];
-  /** Image principale : affichée sous l'introduction, reprise dans le JSON-LD. */
+  /** Image principale : photo pleine largeur en ouverture, ou schéma sous l'introduction ; reprise dans le JSON-LD. */
   hero?: EditorialImage;
   jsonLdType?: "Article" | "BlogPosting";
   /** Rubrique (articleSection du JSON-LD), identique à celle affichée dans le surtitre. */
   section?: string;
 }) {
+  const heroIsPhoto = hero && !hero.src.endsWith(".svg");
   return (
-    <Container className="py-10">
+    <Container className="pb-section pt-8">
       <Breadcrumbs items={crumbs} />
-      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_300px]">
-        <article className="min-w-0 max-w-3xl">
-          <header>
-            <p className="eyebrow text-signal-deep">{kicker}</p>
-            <h1 className="mt-2 text-h1 font-bold text-ink">{title}</h1>
-            <p className="mt-4 text-lg leading-relaxed text-body">{intro}</p>
-            <p className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted">
-              <span>Par la rédaction EVExpert</span>
-              <span>
-                Publié le <time dateTime={publishedAt}>{formatDateFr(publishedAt)}</time>
-              </span>
-              <span>
-                Mis à jour le <time dateTime={updatedAt}>{formatDateFr(updatedAt)}</time>
-              </span>
-              <span className="inline-flex items-center gap-1">
-                <Clock className="h-3 w-3" aria-hidden /> {readingTime} min de lecture
-              </span>
-            </p>
-          </header>
 
-          {hero && <EditorialFigure image={hero} priority className="mb-0 mt-6" />}
+      <header className="max-w-4xl">
+        <Kicker aside={`${readingTime} min de lecture`}>{kicker}</Kicker>
+        <h1 className="balance mt-5 text-h1 font-bold text-ink">{frTypo(title)}</h1>
+        <p className="pretty mt-6 max-w-3xl text-dek text-body">{intro}</p>
+      </header>
+      <Colophon publishedAt={publishedAt} updatedAt={updatedAt} readingTime={readingTime} />
 
-          <TableOfContents sections={sections} />
+      {heroIsPhoto && <EditorialFigure image={hero} priority wide className="mb-0 mt-10" />}
 
-          <div className="mt-8">
-            <Prose sections={sections} />
-          </div>
+      <div className="mt-12 grid gap-x-16 gap-y-10 lg:grid-cols-[minmax(0,44rem)_minmax(0,1fr)]">
+        <article className="min-w-0">
+          {hero && !heroIsPhoto && <EditorialFigure image={hero} priority className="mb-8 mt-0" />}
+
+          <TableOfContents sections={sections} className="mb-10 lg:hidden" />
+
+          <Prose sections={sections} />
 
           {faq && faq.length > 0 && (
             <>
@@ -92,47 +84,55 @@ export function ArticleView({
           )}
 
           {sources && sources.length > 0 && (
-            <section aria-labelledby="sources-titre" className="mt-12 rounded-2xl border border-line bg-surface p-5">
-              <h2 id="sources-titre" className="text-lg font-bold text-ink">Sources</h2>
-              <ul className="mt-3 space-y-2 text-sm">
+            <section aria-labelledby="sources-titre" className="mt-14">
+              <h2 id="sources-titre" className="text-h3 font-bold text-ink">Sources</h2>
+              <ul className="mt-3 border-t-2 border-ink text-sm">
                 {sources.map((s) => (
-                  <li key={s.url}>
-                    <a href={s.url} target="_blank" rel="noopener noreferrer nofollow" className="font-medium text-signal-deep underline underline-offset-2">
+                  <li key={s.url} className="border-b border-line py-3">
+                    <a href={s.url} target="_blank" rel="noopener noreferrer nofollow" className="link-u font-semibold text-signal-deep">
                       {s.label}
                     </a>{" "}
                     <span className="text-muted">(consulté le {formatDateFr(s.accessed)})</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-3 text-xs text-muted">
+              <p className="mt-3 text-caption text-muted">
                 Les chiffres calculés par EVExpert reposent sur les hypothèses de la page{" "}
-                <Link href="/methodologie" className="underline">Méthodologie</Link>.
+                <Link href="/methodologie" className="link-u font-semibold text-signal-deep">Méthodologie</Link>.
               </p>
             </section>
           )}
         </article>
 
-        <aside className="space-y-2 lg:sticky lg:top-24 lg:h-fit">
+        <aside className="hidden lg:block">
+          <div className="sticky top-[calc(var(--header-h)+2rem)]">
+            <TableOfContents sections={sections} />
+            <div className="on-ink mt-8 rounded-2xl bg-ink p-6 text-paper">
+              <p className="eyebrow text-signal">Passer à la pratique</p>
+              <ul className="mt-4 space-y-3 text-sm font-semibold">
+                <li>
+                  <Link href="/voitures-electriques" className="link-u text-paper">
+                    Explorer les fiches techniques
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/comparer" className="link-u text-paper">
+                    Comparer deux ou trois modèles côte à côte
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      {(relatedTools || relatedGuides || relatedVehicleIds) && (
+        <div className="mt-section grid gap-x-12 md:grid-cols-2 lg:grid-cols-3">
           {relatedTools && <RelatedTools hrefs={relatedTools} />}
           {relatedGuides && <RelatedGuides slugs={relatedGuides} />}
           {relatedVehicleIds && <RelatedVehicles ids={relatedVehicleIds} title="Fiches véhicules" />}
-          <section className="mt-8 rounded-2xl border border-line bg-ink p-5 text-paper">
-            <h2 className="text-lg font-bold">Passer à la pratique</h2>
-            <ul className="mt-3 space-y-2 text-sm font-medium">
-              <li>
-                <Link href="/voitures-electriques" className="text-signal underline-offset-4 hover:underline">
-                  Explorer les fiches techniques des voitures électriques
-                </Link>
-              </li>
-              <li>
-                <Link href="/comparer" className="text-signal underline-offset-4 hover:underline">
-                  Comparer deux ou trois modèles côte à côte
-                </Link>
-              </li>
-            </ul>
-          </section>
-        </aside>
-      </div>
+        </div>
+      )}
       <JsonLd
         data={articleJsonLd({
           type: jsonLdType,

@@ -13,18 +13,18 @@ export const metadata = buildMetadata({
 
 export default function OutilsPage() {
   return (
-    <Container className="py-10">
+    <Container className="pb-section pt-8">
       <Breadcrumbs items={[{ name: "Outils", href: "/outils" }]} />
       <PageHeader
         eyebrow="Outils"
         title="Calculateurs pour voiture électrique"
         description="Des outils gratuits et transparents pour estimer vos coûts, votre autonomie et le coût total de possession."
       />
-      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {tools.map((t) => (
-          <ToolCard key={t.slug} tool={t} />
+      <ol className="mt-12 grid gap-x-14 border-t-2 border-ink md:grid-cols-2">
+        {tools.map((t, i) => (
+          <ToolCard key={t.slug} tool={t} index={i} />
         ))}
-      </div>
+      </ol>
     </Container>
   );
 }

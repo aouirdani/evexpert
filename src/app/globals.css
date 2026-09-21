@@ -247,7 +247,7 @@
   text-wrap: balance;
   color: var(--color-ink);
 }
-.prose-ev h2:first-child {
+.prose-ev > section:first-child > h2:first-child {
   margin-top: 0;
   padding-top: 0;
   border-top: 0;
@@ -277,6 +277,17 @@
 }
 .prose-ev strong {
   font-weight: 650;
+  color: var(--color-ink);
+}
+.prose-ev {
+  counter-reset: fig;
+}
+.prose-ev .fig {
+  counter-increment: fig;
+}
+.prose-ev .fig-caption::before {
+  content: "Fig. " counter(fig) " · ";
+  font-weight: 600;
   color: var(--color-ink);
 }
 .prose-ev a {

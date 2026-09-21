@@ -4,6 +4,7 @@ import { Container } from "@/components/layout/Container";
 import { Kicker } from "@/components/layout/Section";
 import { ButtonLink } from "@/components/ui/primitives";
 import { DataFigure } from "@/components/ui/DataFigure";
+import { frTypo } from "@/lib/utils";
 
 // Fondu technique des bords de la photo (haut, bas, gauche) : le studio n'est pas exactement
 // du navy de marque, sans cela ses bords resteraient visibles. Ce n'est pas un effet décoratif.
@@ -41,7 +42,7 @@ export function Hero({
         <div className="relative z-10 max-w-[44rem] lg:min-h-[26rem]">
           <Kicker tone="ink">Expertise électrique</Kicker>
           {/* Espace insécable avant « : » (typographie française) : le deux-points ne passe jamais en début de ligne. */}
-          <h1 className="balance mt-6 text-display font-bold text-paper lg:text-[4rem]">{h1.replace(" :", "\u00a0:")}</h1>
+          <h1 className="balance mt-6 text-display font-bold text-paper lg:text-[4rem]">{frTypo(h1)}</h1>
           <p className="pretty mt-7 max-w-xl text-dek text-ink-muted">
             Autonomie, batterie, recharge et coût d&apos;usage de chaque modèle, comparés côte à côte à partir de
             données sourcées. La nature de chaque chiffre est toujours indiquée.

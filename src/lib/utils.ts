@@ -58,3 +58,8 @@ export function minutesToHuman(minutes: number): string {
   if (m === 0) return `${h} h`;
   return `${h} h ${m.toString().padStart(2, "0")}`;
 }
+
+/** Typographie française : espace insécable avant « : ; ? ! » et après « «  » (pas de ponctuation orpheline en début de ligne). */
+export function frTypo(text: string): string {
+  return text.replace(/ ([:;?!»])/g, "\u00a0$1").replace(/« /g, "«\u00a0");
+}

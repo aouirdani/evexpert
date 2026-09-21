@@ -9,23 +9,21 @@ function sectionId(heading: string): string {
 }
 
 /** Sommaire (ancres) construit à partir des titres H2 des sections. */
-export function TableOfContents({ sections }: { sections: ArticleSection[] }) {
+export function TableOfContents({ sections, className }: { sections: ArticleSection[]; className?: string }) {
   const items = sections.filter((s) => s.heading && (s.level ?? 2) === 2);
   if (items.length < 3) return null;
   return (
-    <nav
-      aria-label="Sommaire"
-      className="mt-8 rounded-2xl border border-line bg-surface p-5"
-    >
-      <p className="text-sm font-bold text-ink">Sommaire</p>
-      <ol className="mt-3 list-decimal space-y-1.5 pl-5 text-sm">
-        {items.map((s) => (
-          <li key={s.heading}>
+    <nav aria-label="Sommaire" className={className}>
+      <p className="label mb-2">Dans cet article</p>
+      <ol className="border-t-2 border-ink">
+        {items.map((s, i) => (
+          <li key={s.heading} className="border-b border-line">
             <a
               href={`#${sectionId(s.heading!)}`}
-              className="text-body hover:text-signal-deep hover:underline"
+              className="group flex gap-3 py-2.5 text-sm font-medium leading-snug text-body transition-colors duration-150 hover:text-ink"
             >
-              {s.heading}
+              <span className="num w-5 shrink-0 text-signal-deep">{String(i + 1).padStart(2, "0")}</span>
+              <span>{s.heading}</span>
             </a>
           </li>
         ))}
@@ -62,29 +60,27 @@ export function Prose({ sections }: { sections: ArticleSection[] }) {
               </ul>
             )}
             {s.table && (
-              <div className="mt-5 overflow-x-auto rounded-xl border border-line">
-                <table className="w-full min-w-[420px] text-left text-sm">
+              <div className="relative mt-6 overflow-x-auto">
+                <table className="w-full min-w-[26rem] text-left text-sm">
                   {s.table.caption && (
-                    <caption className="bg-paper-deep px-4 py-2 text-left text-xs font-semibold text-muted">
-                      {s.table.caption}
-                    </caption>
+                    <caption className="label pb-2 text-left">{s.table.caption}</caption>
                   )}
-                  <thead className="bg-paper-deep text-muted">
+                  <thead>
                     <tr>
                       {s.table.headers.map((h) => (
-                        <th key={h} scope="col" className="px-4 py-2.5 font-semibold">
+                        <th key={h} scope="col" className="label whitespace-nowrap pb-2.5 pr-4 text-left font-semibold">
                           {h}
                         </th>
                       ))}
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-line">
+                  <tbody className="border-t-2 border-ink">
                     {s.table.rows.map((row, r) => (
-                      <tr key={r}>
+                      <tr key={r} className="border-t border-line first:border-t-0">
                         {row.map((cell, c) => (
                           <td
                             key={c}
-                            className={c === 0 ? "px-4 py-2.5 font-medium text-ink" : "tabular px-4 py-2.5 text-body"}
+                            className={c === 0 ? "py-2.5 pr-4 align-top font-semibold text-ink" : "num whitespace-nowrap py-2.5 pr-4 align-top text-body"}
                           >
                             <Inline text={cell} />
                           </td>
