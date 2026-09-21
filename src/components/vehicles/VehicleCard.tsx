@@ -21,7 +21,7 @@ function Spec({
   return (
     <div className={cn("min-w-0", className)}>
       <dt className="label whitespace-nowrap">{label}</dt>
-      <dd className="num mt-1 text-data-md font-semibold text-ink">
+      <dd className="num mt-1 text-lg font-semibold text-ink sm:text-data-md">
         {value === null ? (
           <>
             <span aria-hidden className="text-muted">—</span>
@@ -52,8 +52,8 @@ export function VehicleCard({ vehicle: v, href }: { vehicle: Vehicle; href?: str
     <article className="group relative grid grid-cols-[6.75rem_minmax(0,1fr)] gap-x-4 gap-y-3 border-t-2 border-ink bg-surface px-4 pb-4 pt-3.5 transition-colors duration-200 hover:border-signal-deep sm:block sm:px-5 sm:pb-5 sm:pt-4 has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-offset-2 has-[a:focus-visible]:outline-signal-deep">
       <div className="col-start-2 row-start-1 min-w-0">
         <p className="flex items-baseline justify-between gap-3">
-          <span className="eyebrow text-signal-deep">{v.brand}</span>
-          <span className="label">{bodyTypeLabels[v.bodyType]}</span>
+          <span className="eyebrow truncate text-signal-deep">{v.brand}</span>
+          <span className="label hidden sm:inline">{bodyTypeLabels[v.bodyType]}</span>
         </p>
         <h3 className="mt-1.5 text-h3 font-bold text-ink">
           <Link
@@ -79,7 +79,7 @@ export function VehicleCard({ vehicle: v, href }: { vehicle: Vehicle; href?: str
         <RangeBar value={v.rangeWltp} decorative className="mt-2.5" />
       </div>
 
-      <dl className="col-start-2 row-start-2 grid grid-cols-2 gap-x-3 sm:mt-5 sm:flex sm:justify-between sm:gap-x-4 sm:border-t sm:border-line sm:pt-4">
+      <dl className="col-start-2 row-start-2 grid grid-cols-2 gap-x-4 sm:mt-5 sm:flex sm:justify-between sm:gap-x-4 sm:border-t sm:border-line sm:pt-4">
         <Spec label="Batterie" value={formatNumber(v.batteryUsable, 1)} unit="kWh" />
         <Spec label="DC max" value={v.chargingDC === null ? null : formatNumber(v.chargingDC)} unit="kW" />
         <Spec
