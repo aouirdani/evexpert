@@ -14,7 +14,7 @@ export const metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <Container className="py-10">
+    <Container className="pb-section pt-8">
       <Breadcrumbs items={[{ name: "Contact", href: "/contact" }]} />
       <article className="max-w-3xl">
         <PageHeader
@@ -26,17 +26,17 @@ export default function Page() {
           <LastUpdated date="2026-09-21" />
         </div>
 
-        <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+        <div className="mt-8 rounded-2xl border border-line bg-paper-deep p-5">
           {siteConfig.email ? (
-            <p className="text-slate-800">
+            <p className="text-ink">
               Écrivez-nous à{" "}
-              <a href={`mailto:${siteConfig.email}`} className="font-bold text-emerald-800 underline">{siteConfig.email}</a>.
+              <a href={`mailto:${siteConfig.email}`} className="link-u font-bold text-signal-deep">{siteConfig.email}</a>.
             </p>
           ) : (
-            <p className="text-slate-800">
+            <p className="text-ink">
               L&apos;adresse de contact sera publiée sur cette page prochainement. En attendant, consultez la{" "}
-              <Link href="/methodologie" className="font-medium text-emerald-800 underline">méthodologie</Link> et les{" "}
-              <Link href="/sources" className="font-medium text-emerald-800 underline">sources</Link> pour vérifier une donnée.
+              <Link href="/methodologie" className="link-u font-semibold text-signal-deep">méthodologie</Link> et les{" "}
+              <Link href="/sources" className="link-u font-semibold text-signal-deep">sources</Link> pour vérifier une donnée.
             </p>
           )}
         </div>

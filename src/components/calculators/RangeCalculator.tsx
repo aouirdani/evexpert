@@ -28,7 +28,7 @@ export function RangeCalculator({ presets = [] }: { presets?: VehiclePreset[] })
 
   return (
     <>
-      <div className="mb-4 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+      <div className="mb-4 rounded-xl border border-warn/30 bg-warn-bg p-4 text-sm text-warn">
         Cette autonomie est une <strong>estimation</strong> et non une valeur
         officielle constructeur. Elle dépend de nombreux facteurs réels.
       </div>

@@ -22,7 +22,7 @@ export default async function SourcesPage() {
   const catalog = await getCatalog();
   const n = catalog.vehicles.length;
   return (
-    <Container className="py-10">
+    <Container className="pb-section pt-8">
       <Breadcrumbs items={[{ name: "Sources", href: "/sources" }]} />
       <PageHeader
         eyebrow="Transparence"
@@ -34,7 +34,7 @@ export default async function SourcesPage() {
       </div>
 
       <section className="mt-10 max-w-3xl" aria-labelledby="vehicules">
-        <h2 id="vehicules" className="text-2xl font-bold text-slate-900">Fiches véhicules</h2>
+        <h2 id="vehicules" className="text-h2 font-bold text-ink">Fiches véhicules</h2>
         <div className="prose-ev">
           <p>
             Les caractéristiques des {n} versions du catalogue proviennent de{" "}
@@ -49,47 +49,33 @@ export default async function SourcesPage() {
       </section>
 
       <section className="mt-12" aria-labelledby="natures">
-        <h2 id="natures" className="text-2xl font-bold text-slate-900">Nature des données</h2>
+        <h2 id="natures" className="text-h2 font-bold text-ink">Nature des données</h2>
         <DataLegend className="mt-4" />
-        <p className="mt-3 text-sm text-slate-700">
-          Détail des méthodes : <Link href="/methodologie" className="font-medium text-emerald-800 underline">page Méthodologie</Link>.
+        <p className="mt-3 text-sm text-body">
+          Détail des méthodes : <Link href="/methodologie" className="link-u font-semibold text-signal-deep">page Méthodologie</Link>.
         </p>
       </section>
 
       <section className="mt-12" aria-labelledby="refs">
-        <h2 id="refs" className="text-2xl font-bold text-slate-900">Références externes citées</h2>
-        <p className="mt-2 max-w-3xl text-slate-700">
+        <h2 id="refs" className="text-h2 font-bold text-ink">Références externes citées</h2>
+        <p className="mt-2 max-w-3xl text-body">
           Ces liens ont été ouverts avec succès à la date indiquée. Nous ne citons pas de source que nous n&apos;avons pas consultée.
         </p>
-        <div className="mt-5 overflow-x-auto rounded-2xl border border-slate-200 bg-white">
-          <table className="w-full min-w-[640px] text-left text-sm">
-            <caption className="sr-only">Sources externes et usage sur EVExpert</caption>
-            <thead className="bg-slate-50 text-slate-600">
-              <tr>
-                <th scope="col" className="px-5 py-3 font-semibold">Source</th>
-                <th scope="col" className="px-5 py-3 font-semibold">Usage sur EVExpert</th>
-                <th scope="col" className="px-5 py-3 font-semibold">Consultée le</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-100">
-              {SOURCE_ROLES.map(({ source, usage }) => (
-                <tr key={source.url}>
-                  <th scope="row" className="px-5 py-3 font-medium">
-                    <a href={source.url} target="_blank" rel="noopener noreferrer nofollow" className="text-emerald-800 underline underline-offset-2">
-                      {source.label}
-                    </a>
-                  </th>
-                  <td className="px-5 py-3 text-slate-700">{usage}</td>
-                  <td className="tabular px-5 py-3 text-slate-700">{formatDateFr(source.accessed)}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <ul className="mt-6 border-t-2 border-ink">
+          {SOURCE_ROLES.map(({ source, usage }) => (
+            <li key={source.url} className="grid gap-x-8 gap-y-1 border-b border-line py-4 md:grid-cols-[minmax(0,22rem)_1fr_9rem]">
+              <a href={source.url} target="_blank" rel="noopener noreferrer nofollow" className="link-u self-start font-semibold text-signal-deep">
+                {source.label}
+              </a>
+              <p className="text-sm text-body">{usage}</p>
+              <p className="num text-caption text-muted md:text-right">Consultée le {formatDateFr(source.accessed)}</p>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="mt-12 max-w-3xl" aria-labelledby="corrections">
-        <h2 id="corrections" className="text-2xl font-bold text-slate-900">Corrections</h2>
+        <h2 id="corrections" className="text-h2 font-bold text-ink">Corrections</h2>
         <div className="prose-ev">
           <p>
             Une erreur ? Signalez-la via la <Link href="/contact">page Contact</Link> avec le modèle, la donnée et la source à l&apos;appui : nous corrigeons et mettons la date à jour.

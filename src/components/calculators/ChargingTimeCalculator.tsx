@@ -37,7 +37,7 @@ export function ChargingTimeCalculator({ presets = [] }: { presets?: VehiclePres
 
   return (
     <>
-      <div className="mb-4 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+      <div className="mb-4 rounded-xl border border-warn/30 bg-warn-bg p-4 text-sm text-warn">
         Ce temps est <strong>théorique</strong>. En recharge rapide (DC), la
         courbe de charge n&apos;est pas linéaire&nbsp;: la puissance diminue au-delà
         de 80 %, le temps réel peut donc être plus long.
@@ -55,7 +55,7 @@ export function ChargingTimeCalculator({ presets = [] }: { presets?: VehiclePres
               hint="Renseigne la capacité utile et rappelle la puissance AC maximale du modèle."
             />
             {acLimit !== null && (
-              <p className="rounded-lg bg-amber-50 p-3 text-sm text-amber-900">
+              <p className="rounded-lg bg-warn-bg p-3 text-sm text-warn">
                 Ce modèle accepte au plus <strong>{acLimit.toString().replace(".", ",")} kW</strong> en courant alternatif : une borne plus puissante ne charge pas plus vite en AC.
               </p>
             )}

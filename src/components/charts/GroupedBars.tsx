@@ -46,7 +46,7 @@ export function GroupedBars({
         role="img"
         aria-label={title}
       >
-        <line x1={padL} x2={W - padR} y1={H - padB} y2={H - padB} stroke="#cbd5e1" />
+        <line x1={padL} x2={W - padR} y1={H - padB} y2={H - padB} stroke="#D9D6CC" />
         {groups.map((g, gi) => {
           const x0 = padL + gi * groupW + (groupW - clusterW) / 2;
           return (
@@ -57,14 +57,14 @@ export function GroupedBars({
                 const y = H - padB - h;
                 return (
                   <g key={series[si].label}>
-                    <rect x={x} y={y} width={barW} height={h} rx={4} fill={series[si].color} />
+                    <rect x={x} y={y} width={barW} height={h} rx={2} fill={series[si].color} />
                     <text
                       x={x + barW / 2}
                       y={y - 6}
                       textAnchor="middle"
                       fontSize="11"
                       fontWeight="600"
-                      fill="#0f172a"
+                      fill="#0B1626"
                     >
                       {format(v)}
                     </text>
@@ -76,7 +76,7 @@ export function GroupedBars({
                 y={H - padB + 20}
                 textAnchor="middle"
                 fontSize="12"
-                fill="#475569"
+                fill="#556174"
               >
                 {g.label}
               </text>
@@ -84,7 +84,7 @@ export function GroupedBars({
           );
         })}
       </svg>
-      <figcaption className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-600">
+      <figcaption className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted">
         {series.map((s) => (
           <span key={s.label} className="inline-flex items-center gap-1.5">
             <span className="h-2.5 w-2.5 rounded-sm" style={{ background: s.color }} aria-hidden />

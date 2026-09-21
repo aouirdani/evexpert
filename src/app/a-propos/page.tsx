@@ -15,7 +15,7 @@ export const metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <Container className="py-10">
+    <Container className="pb-section pt-8">
       <Breadcrumbs items={[{ name: "À propos", href: "/a-propos" }]} />
       <article className="max-w-3xl">
         <PageHeader
@@ -69,9 +69,9 @@ export default function Page() {
             ]}
           />
           <ul className="mt-2 space-y-2 text-sm">
-            <li><Link href="/methodologie" className="font-medium text-emerald-800 underline">Méthodologie : comment nous calculons</Link></li>
-            <li><Link href="/sources" className="font-medium text-emerald-800 underline">Sources des données</Link></li>
-            <li><Link href="/contact" className="font-medium text-emerald-800 underline">Nous contacter ou signaler une erreur</Link></li>
+            <li><Link href="/methodologie" className="link-u font-semibold text-signal-deep">Méthodologie : comment nous calculons</Link></li>
+            <li><Link href="/sources" className="link-u font-semibold text-signal-deep">Sources des données</Link></li>
+            <li><Link href="/contact" className="link-u font-semibold text-signal-deep">Nous contacter ou signaler une erreur</Link></li>
           </ul>
         </div>
       </article>

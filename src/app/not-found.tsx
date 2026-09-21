@@ -4,24 +4,25 @@ import { ButtonLink } from "@/components/ui/primitives";
 
 export default function NotFound() {
   return (
-    <Container className="py-24">
-      <div className="mx-auto max-w-lg text-center">
-        <p className="text-sm font-semibold uppercase tracking-wide text-emerald-600">
-          Erreur 404
+    <Container className="py-section">
+      <div className="grid gap-x-12 gap-y-6 border-t-2 border-ink pt-6 lg:grid-cols-12">
+        <p className="num text-data-xl font-bold text-ink lg:col-span-4" aria-hidden>
+          404
         </p>
-        <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-          Page introuvable
-        </h1>
-        <p className="mt-3 text-slate-600">
-          La page que vous cherchez n&apos;existe pas ou a été déplacée.
-        </p>
-        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <ButtonLink href="/" variant="primary">
-            Retour à l&apos;accueil
-          </ButtonLink>
-          <Link href="/outils" className="text-sm font-semibold text-emerald-700 hover:underline">
-            Voir les calculateurs →
-          </Link>
+        <div className="lg:col-span-8">
+          <p className="eyebrow text-signal-deep">Erreur 404</p>
+          <h1 className="mt-4 text-h1 font-bold text-ink">Page introuvable</h1>
+          <p className="pretty mt-4 max-w-xl text-dek text-body">
+            La page que vous cherchez n&apos;existe pas ou a été déplacée.
+          </p>
+          <div className="mt-8 flex flex-col gap-x-8 gap-y-4 sm:flex-row sm:items-center">
+            <ButtonLink href="/" variant="primary" size="lg">
+              Retour à l&apos;accueil
+            </ButtonLink>
+            <Link href="/outils" className="link-u self-start text-base font-semibold text-signal-deep sm:self-auto">
+              Voir les calculateurs
+            </Link>
+          </div>
         </div>
       </div>
     </Container>

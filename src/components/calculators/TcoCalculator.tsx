@@ -54,8 +54,8 @@ function TcoForm({ title, state, set }: { title: string; state: TcoInput; set: (
     { k: "taxes", label: "Taxes (€/an)", step: 10 },
   ];
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-5">
-      <h2 className="text-base font-bold text-slate-900">{title}</h2>
+    <div className="rounded-2xl border border-line bg-surface p-5">
+      <h2 className="text-base font-bold text-ink">{title}</h2>
       <div className="mt-4 grid grid-cols-2 gap-3">
         {fields.map((f) => (
           <Field key={String(f.k)} label={f.label} htmlFor={`${title}-${String(f.k)}`}>
@@ -81,7 +81,7 @@ export function TcoCalculator() {
 
   return (
     <div className="space-y-6">
-      <div className="rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm text-blue-900">
+      <div className="rounded-xl border border-info/30 bg-info-bg p-4 text-sm text-info">
         Distinguez vos <strong>données</strong> (prix, kilométrage, énergie) des{" "}
         <strong>hypothèses</strong> (revente, assurance, entretien). Le TCO est
         aussi fiable que les valeurs saisies.
@@ -92,7 +92,7 @@ export function TcoCalculator() {
         <TcoForm title="Véhicule B" state={b} set={setB} />
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="on-ink grid gap-x-8 gap-y-5 rounded-2xl bg-ink p-6 text-paper sm:grid-cols-2 sm:p-8" aria-live="polite">
         <ResultCard label={`TCO total — Véhicule A (${a.years} ans)`} value={formatEuro(rA.total)} emphasis />
         <ResultCard label={`TCO total — Véhicule B (${b.years} ans)`} value={formatEuro(rB.total)} emphasis />
         <ResultCard label="Coût mensuel — A" value={formatEuro(rA.perMonth)} />
@@ -101,16 +101,16 @@ export function TcoCalculator() {
         <ResultCard label="Coût / km — B" value={formatEuro(rB.perKm, 2)} />
       </div>
 
-      <div className="rounded-2xl border border-slate-200 bg-white p-5">
-        <h2 className="mb-4 text-base font-bold text-slate-900">
+      <div className="rounded-2xl border border-line bg-surface p-5">
+        <h2 className="mb-4 text-base font-bold text-ink">
           Répartition des coûts par poste
         </h2>
         <GroupedBars
           title="Répartition des coûts par poste, véhicule A et véhicule B"
           groups={groups}
           series={[
-            { label: "Véhicule A", color: "#047857" },
-            { label: "Véhicule B", color: "#0369a1" },
+            { label: "Véhicule A", color: "#0F6B4F" },
+            { label: "Véhicule B", color: "#0B1626" },
           ]}
         />
       </div>

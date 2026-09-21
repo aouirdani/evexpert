@@ -71,10 +71,10 @@ export function CostPer100Calculator({ presets = [] }: { presets?: VehiclePreset
         {computed.map((r) => (
           <div
             key={r.key}
-            className={`rounded-2xl border p-5 ${r.key === cheapest.key ? "border-emerald-300 bg-emerald-50" : "border-slate-200 bg-white"}`}
+            className={`rounded-2xl border p-5 ${r.key === cheapest.key ? "border-signal-deep bg-signal-tint" : "border-line bg-surface"}`}
           >
             <div className="flex items-center justify-between">
-              <h2 className="text-base font-bold text-slate-900">{r.label}</h2>
+              <h2 className="text-base font-bold text-ink">{r.label}</h2>
               {r.key === cheapest.key && (
                 <span className="rounded-sm bg-signal-deep px-2 py-1 text-xs font-semibold text-white">
                   Le moins cher
@@ -91,21 +91,21 @@ export function CostPer100Calculator({ presets = [] }: { presets?: VehiclePreset
             </div>
             <dl className="mt-4 space-y-1 text-sm">
               <div className="flex justify-between">
-                <dt className="text-slate-600">Coût aux 100 km</dt>
-                <dd className="font-semibold text-slate-900">{formatEuro(r.per100, 2)}</dd>
+                <dt className="text-muted">Coût aux 100 km</dt>
+                <dd className="font-semibold text-ink">{formatEuro(r.per100, 2)}</dd>
               </div>
               <div className="flex justify-between">
-                <dt className="text-slate-600">Coût énergie annuel</dt>
-                <dd className="font-bold text-slate-900">{formatEuro(r.annual)}</dd>
+                <dt className="text-muted">Coût énergie annuel</dt>
+                <dd className="font-bold text-ink">{formatEuro(r.annual)}</dd>
               </div>
             </dl>
           </div>
         ))}
       </div>
 
-      <p className="mt-6 rounded-xl bg-slate-50 p-4 text-sm text-slate-600">
+      <p className="mt-6 rounded-xl bg-paper-deep p-4 text-sm text-muted">
         Économie annuelle estimée de l&apos;électrique face à l&apos;essence&nbsp;:{" "}
-        <strong className="text-emerald-700">
+        <strong className="text-signal-deep">
           {formatEuro(
             Math.max(0, (computed.find((r) => r.key === "essence")?.annual ?? 0) - (computed.find((r) => r.key === "ev")?.annual ?? 0)),
           )}

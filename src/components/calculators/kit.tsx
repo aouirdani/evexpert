@@ -16,11 +16,11 @@ export function Field({
 }) {
   return (
     <div className="flex flex-col gap-1.5">
-      <label htmlFor={htmlFor} className="text-sm font-semibold text-slate-800">
+      <label htmlFor={htmlFor} className="text-sm font-semibold text-ink">
         {label}
       </label>
       {children}
-      {hint && <p className="text-xs text-muted">{hint}</p>}
+      {hint && <p className="text-caption text-muted">{hint}</p>}
     </div>
   );
 }
@@ -53,10 +53,10 @@ export function NumberInput({
         max={max}
         step={step}
         onChange={(e) => onChange(parseFloat(e.target.value))}
-        className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-base text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
+        className="w-full rounded-md border border-control bg-surface px-3 py-2.5 text-base text-ink focus-visible:border-signal-deep"
       />
       {suffix && (
-        <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-slate-600">
+        <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-muted">
           {suffix}
         </span>
       )}
@@ -91,9 +91,9 @@ export function RangeInputControl({
         max={max}
         step={step}
         onChange={(e) => onChange(parseFloat(e.target.value))}
-        className="w-full accent-emerald-600"
+        className="w-full accent-signal-deep"
       />
-      <div className="mt-1 text-sm font-semibold text-slate-900">
+      <div className="mt-1 text-sm font-semibold text-ink">
         {value}
         {suffix ? ` ${suffix}` : ""}
       </div>
@@ -117,7 +117,7 @@ export function SelectInput<T extends string>({
       id={id}
       value={value}
       onChange={(e) => onChange(e.target.value as T)}
-      className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-base text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
+      className="w-full rounded-md border border-control bg-surface px-3 py-2.5 text-base text-ink focus-visible:border-signal-deep"
     >
       {options.map((o) => (
         <option key={o.value} value={o.value}>
@@ -128,6 +128,7 @@ export function SelectInput<T extends string>({
   );
 }
 
+/** Résultat de calcul, composé sur fond sombre (voir CalcLayout) : étiquette, grande valeur tabulaire. */
 export function ResultCard({
   label,
   value,
@@ -140,30 +141,15 @@ export function ResultCard({
   hint?: string;
 }) {
   return (
-    <div
-      className={cn(
-        "rounded-xl border p-4",
-        emphasis
-          ? "border-emerald-200 bg-white ring-1 ring-emerald-100"
-          : "border-slate-200 bg-white",
-      )}
-    >
-      <p className="text-xs font-medium uppercase tracking-wide text-muted">
-        {label}
-      </p>
-      <p
-        className={cn(
-          "tabular mt-1 font-extrabold",
-          emphasis ? "text-4xl text-emerald-700 sm:text-5xl" : "text-2xl text-slate-900",
-        )}
-      >
-        {value}
-      </p>
-      {hint && <p className="tabular mt-1 text-sm text-muted">{hint}</p>}
+    <div className="border-t border-line-ink pt-4">
+      <p className="label text-ink-muted">{label}</p>
+      <p className={cn("num mt-2 font-bold", emphasis ? "text-data-xl text-signal" : "text-data-lg text-paper")}>{value}</p>
+      {hint && <p className="num mt-1.5 text-sm text-ink-muted">{hint}</p>}
     </div>
   );
 }
 
+/** Saisie à gauche (encadré blanc), résultats à droite (panneau sombre : c'est le résultat du calcul). */
 export function CalcLayout({
   inputs,
   results,
@@ -173,13 +159,13 @@ export function CalcLayout({
 }) {
   return (
     <div className="grid gap-6 lg:grid-cols-2">
-      <div className="rounded-2xl border border-slate-200 bg-white p-6">
-        <h2 className="text-lg font-bold text-slate-900">Vos paramètres</h2>
-        <div className="mt-5 space-y-5">{inputs}</div>
+      <div className="rounded-2xl border border-line bg-surface p-6 sm:p-8">
+        <h2 className="label">Vos paramètres</h2>
+        <div className="mt-6 space-y-5">{inputs}</div>
       </div>
-      <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-        <h2 className="text-lg font-bold text-slate-900">Résultats</h2>
-        <div className="mt-5 space-y-4">{results}</div>
+      <div className="on-ink rounded-2xl bg-ink p-6 text-paper sm:p-8" aria-live="polite">
+        <h2 className="label text-ink-muted">Résultats</h2>
+        <div className="mt-6 space-y-5">{results}</div>
       </div>
     </div>
   );
@@ -222,7 +208,7 @@ export function VehiclePresetSelect({
           const p = presets.find((x) => x.id === e.target.value);
           if (p) onPick(p);
         }}
-        className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-base text-slate-900 focus:border-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-600/30"
+        className="w-full rounded-md border border-control bg-surface px-3 py-2.5 text-base text-ink focus-visible:border-signal-deep   "
       >
         <option value="">Saisie manuelle</option>
         {presets.map((p) => (

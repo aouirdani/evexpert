@@ -73,33 +73,33 @@ export function StationPowerCalculator({ presets = [] }: { presets?: VehiclePres
             emphasis
             hint={`${best.label} ${formatNumber(best.kw, 1)} kW → ${formatNumber(best.effective, 1)} kW effectifs`}
           />
-          <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white">
-            <table className="w-full min-w-[420px] text-left text-sm">
+          <div className="relative overflow-x-auto">
+            <table className="w-full text-left text-sm">
               <caption className="sr-only">Temps de recharge théorique selon la puissance de la borne</caption>
-              <thead className="bg-slate-50 text-slate-600">
+              <thead className="text-ink-muted">
                 <tr>
-                  <th scope="col" className="px-3 py-2 font-semibold">Borne</th>
-                  <th scope="col" className="px-3 py-2 font-semibold">Puissance utilisée</th>
-                  <th scope="col" className="px-3 py-2 font-semibold">Durée</th>
+                  <th scope="col" className="label px-0 py-2 pr-3 font-semibold text-ink-muted">Borne</th>
+                  <th scope="col" className="label px-0 py-2 pr-3 font-semibold text-ink-muted">Puissance utilisée</th>
+                  <th scope="col" className="label px-0 py-2 pr-3 font-semibold text-ink-muted">Durée</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100">
+              <tbody className="divide-y divide-line-ink border-t border-line-ink">
                 {rows.map((r) => (
                   <tr key={r.kw}>
-                    <th scope="row" className="px-3 py-2 font-medium text-slate-900">
+                    <th scope="row" className="py-2.5 pr-3 font-semibold text-paper">
                       {formatNumber(r.kw, 1)} kW {r.kind}
                     </th>
-                    <td className="tabular px-3 py-2 text-slate-700">
+                    <td className="num py-2.5 pr-3 text-ink-muted">
                       {formatNumber(r.effective, 1)} kW
-                      {r.limitedByVehicle && <span className="ml-1 text-xs text-amber-800">(limité par le véhicule)</span>}
+                      {r.limitedByVehicle && <span className="ml-1 text-xs text-signal">(limité par le véhicule)</span>}
                     </td>
-                    <td className="tabular px-3 py-2 font-semibold text-slate-900">{minutesToHuman(r.minutes)}</td>
+                    <td className="num py-2.5 font-semibold text-paper">{minutesToHuman(r.minutes)}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-slate-600">
+          <p className="text-caption text-ink-muted">
             Temps théorique à puissance constante. En DC la puissance réelle baisse au fil du remplissage : le temps réel est plus long
             (voir le temps 10-80 % publié sur la fiche de chaque modèle). En AC, rendement de charge de 90 % supposé.
           </p>

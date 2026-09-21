@@ -50,8 +50,8 @@ function CarForm({
 }) {
   const upd = (k: keyof CarInputs, v: number) => set({ ...state, [k]: v });
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-5">
-      <h2 className="text-base font-bold text-slate-900">{title}</h2>
+    <div className="rounded-2xl border border-line bg-surface p-5">
+      <h2 className="text-base font-bold text-ink">{title}</h2>
       <div className="mt-4 grid grid-cols-2 gap-3">
         <Field label="Prix (€)" htmlFor={`${title}-price`}>
           <NumberInput id={`${title}-price`} value={state.price} onChange={(v) => upd("price", v)} min={0} step={500} />
@@ -93,7 +93,7 @@ export function EvVsPetrolCalculator() {
 
   return (
     <div className="space-y-6">
-      <div className="rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm text-blue-900">
+      <div className="rounded-xl border border-info/30 bg-info-bg p-4 text-sm text-info">
         Les valeurs par défaut sont des <strong>hypothèses</strong> modifiables
         (assurance, entretien, dépréciation). Ajustez-les à votre situation pour
         un résultat pertinent.
@@ -104,7 +104,7 @@ export function EvVsPetrolCalculator() {
         <CarForm title="Essence" state={petrol} set={setPetrol} energyLabel="L/100" />
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="on-ink grid gap-x-8 gap-y-5 rounded-2xl bg-ink p-6 text-paper sm:grid-cols-3 sm:p-8" aria-live="polite">
         <ResultCard label="Coût annuel (électrique)" value={formatEuro(evR.annualTotal)} emphasis />
         <ResultCard label="Coût mensuel (électrique)" value={formatEuro(evR.monthly)} />
         <ResultCard label="Coût / km (électrique)" value={formatEuro(evR.perKm, 2)} />
@@ -113,16 +113,16 @@ export function EvVsPetrolCalculator() {
         <ResultCard label="Coût / km (essence)" value={formatEuro(petrolR.perKm, 2)} />
       </div>
 
-      <div className="rounded-2xl border border-slate-200 bg-white p-5">
-        <h2 className="mb-4 text-base font-bold text-slate-900">
+      <div className="rounded-2xl border border-line bg-surface p-5">
+        <h2 className="mb-4 text-base font-bold text-ink">
           Coût cumulé selon la durée
         </h2>
         <GroupedBars
           title="Coût cumulé sur 3, 5 et 8 ans : électrique et essence"
           groups={groups}
           series={[
-            { label: "Électrique", color: "#047857" },
-            { label: "Essence", color: "#64748b" },
+            { label: "Électrique", color: "#0F6B4F" },
+            { label: "Essence", color: "#7B8494" },
           ]}
         />
       </div>

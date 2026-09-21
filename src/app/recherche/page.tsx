@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Container, PageHeader } from "@/components/layout/Container";
 import { SearchBar } from "@/components/layout/SearchBar";
-import { Badge } from "@/components/ui/primitives";
 import { searchAll, type SearchResultType } from "@/lib/search";
 import { buildMetadata } from "@/lib/seo";
 
@@ -28,42 +27,50 @@ export default async function SearchPage({
   const query = q?.trim() ?? "";
   const results = query ? await searchAll(query) : [];
 
+  const groups = (Object.keys(typeLabels) as SearchResultType[])
+    .map((t) => ({ type: t, items: results.filter((r) => r.type === t) }))
+    .filter((g) => g.items.length);
+
   return (
-    <Container className="py-10">
+    <Container className="pb-section pt-8">
       <PageHeader
         title="Recherche"
         description="Trouvez une voiture, un calculateur, un guide ou un article."
       />
-      <div className="mt-6 max-w-2xl">
+      <div className="mt-8 max-w-2xl">
         <SearchBar size="lg" defaultValue={query} />
       </div>
 
       {query && (
-        <p className="mt-6 text-sm text-slate-600">
-          {results.length} résultat(s) pour «&nbsp;{query}&nbsp;»
+        <p className="mt-8 text-sm text-muted">
+          <span className="num text-data-md font-bold text-ink">{results.length}</span> résultat{results.length > 1 ? "s" : ""} pour «&nbsp;{query}&nbsp;»
         </p>
       )}
 
-      <div className="mt-4 space-y-3">
-        {results.map((r) => (
-          <Link
-            key={`${r.type}-${r.href}`}
-            href={r.href}
-            className="block rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-emerald-300 hover:shadow-sm"
-          >
-            <div className="mb-1.5">
-              <Badge tone="blue">{typeLabels[r.type]}</Badge>
-            </div>
-            <h2 className="text-base font-bold text-slate-900">{r.title}</h2>
-            <p className="mt-1 text-sm text-slate-600">{r.description}</p>
-          </Link>
-        ))}
-        {query && results.length === 0 && (
-          <p className="rounded-xl bg-slate-50 p-8 text-center text-sm text-muted">
-            Aucun résultat. Essayez un autre terme (marque, modèle, « recharge », « TCO »…).
-          </p>
-        )}
-      </div>
+      {groups.map((g) => (
+        <section key={g.type} className="mt-8" aria-labelledby={`res-${g.type}`}>
+          <h2 id={`res-${g.type}`} className="label mb-2">
+            {typeLabels[g.type]}s <span className="num text-ink">{g.items.length}</span>
+          </h2>
+          <ul className="border-t-2 border-ink">
+            {g.items.map((r) => (
+              <li key={`${r.type}-${r.href}`} className="border-b border-line">
+                <Link href={r.href} className="group grid gap-x-8 gap-y-1 py-4 md:grid-cols-[minmax(0,20rem)_1fr]">
+                  <span className="text-base font-bold text-ink">
+                    <span className="link-h group-hover:[background-size:100%_2px]">{r.title}</span>
+                  </span>
+                  <span className="text-sm text-muted">{r.description}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+      {query && results.length === 0 && (
+        <p className="mt-8 border-t-2 border-ink pt-5 text-body">
+          Aucun résultat. Essayez un autre terme (marque, modèle, « recharge », « TCO »…).
+        </p>
+      )}
     </Container>
   );
 }

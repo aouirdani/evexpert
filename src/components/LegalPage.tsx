@@ -22,7 +22,7 @@ export function LegalPage({
   children?: React.ReactNode;
 }) {
   return (
-    <Container className="py-10">
+    <Container className="pb-section pt-8">
       <Breadcrumbs items={[{ name: breadcrumb, href }]} />
       <article className="max-w-3xl">
         <PageHeader title={title} description={description} />

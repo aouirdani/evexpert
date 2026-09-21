@@ -4,7 +4,7 @@ import { Skeleton } from "@/components/ui/states";
 // /recherche est la seule page rendue à la demande : squelette pendant le calcul.
 export default function SearchLoading() {
   return (
-    <Container className="py-10">
+    <Container className="pb-section pt-8">
       <div role="status" aria-live="polite">
         <span className="sr-only">Chargement des résultats…</span>
         <Skeleton className="h-10 w-48" />

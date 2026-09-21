@@ -82,16 +82,16 @@ export function CookieBanner() {
       role="dialog"
       aria-live="polite"
       aria-label="Consentement aux cookies"
-      className="fixed inset-x-0 bottom-0 z-[60] border-t border-slate-200 bg-white p-4 shadow-[0_-8px_30px_rgba(0,0,0,0.08)]"
+      className="fixed inset-x-0 bottom-0 z-[60] border-t border-line bg-surface p-4 shadow-[0_-8px_30px_rgba(0,0,0,0.08)]"
     >
       <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-start gap-3">
-          <Cookie className="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" aria-hidden />
-          <p className="text-sm text-slate-700">
+          <Cookie className="mt-0.5 h-5 w-5 shrink-0 text-signal-deep" aria-hidden />
+          <p className="text-sm text-body">
             Nous utilisons des cookies de mesure d&apos;audience et, à l&apos;avenir,
             des cookies publicitaires. Les cookies non essentiels ne sont pas
             déposés sans votre accord.{" "}
-            <Link href="/cookies" className="font-medium text-emerald-700 hover:underline">
+            <Link href="/cookies" className="font-medium text-signal-deep hover:underline">
               En savoir plus
             </Link>
             .
@@ -101,14 +101,14 @@ export function CookieBanner() {
           <button
             type="button"
             onClick={() => choose("rejected")}
-            className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+            className="rounded-lg border border-control px-4 py-2 text-sm font-semibold text-body hover:bg-paper-deep"
           >
             Refuser
           </button>
           <button
             type="button"
             onClick={() => choose("accepted")}
-            className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+            className="rounded-lg border border-control px-4 py-2 text-sm font-semibold text-body hover:bg-paper-deep"
           >
             Accepter
           </button>

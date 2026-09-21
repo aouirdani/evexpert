@@ -138,7 +138,7 @@ function buildSections(checkedAt: string): ArticleSection[] {
 export default async function Page() {
   const sections = buildSections(await getCatalogDate());
   return (
-    <Container className="py-10">
+    <Container className="pb-section pt-8">
       <Breadcrumbs items={[{ name: "Méthodologie", href: "/methodologie" }]} />
       <article className="max-w-3xl">
         <PageHeader
@@ -156,9 +156,9 @@ export default async function Page() {
           <div className="mt-2">
             <Prose sections={sections.slice(3)} />
           </div>
-          <p className="mt-10 text-sm text-slate-700">
-            Voir aussi la liste des <Link href="/sources" className="font-medium text-emerald-800 underline">sources</Link> et les{" "}
-            <Link href="/outils" className="font-medium text-emerald-800 underline">outils</Link> où chaque formule est détaillée.
+          <p className="mt-10 text-sm text-body">
+            Voir aussi la liste des <Link href="/sources" className="link-u font-semibold text-signal-deep">sources</Link> et les{" "}
+            <Link href="/outils" className="link-u font-semibold text-signal-deep">outils</Link> où chaque formule est détaillée.
           </p>
         </div>
       </article>
