@@ -41,7 +41,7 @@ export function ComparisonTable({ vehicles }: { vehicles: Vehicle[] }) {
         </section>
       )}
 
-      <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white">
+      <div className="relative overflow-x-auto rounded-2xl border border-slate-200 bg-white">
         <table className="w-full min-w-[560px] text-left text-sm">
           <caption className="sr-only">Comparaison détaillée des véhicules sélectionnés</caption>
           <thead className="bg-slate-950 text-white">

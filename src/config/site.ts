@@ -47,20 +47,43 @@ export const siteConfig = {
 export type NavItem = {
   label: string;
   href: string;
+  /** Mis en avant dans le header (une seule entrée : le comparateur). */
+  emphasis?: boolean;
 };
 
+/** Navigation principale, par ordre d'importance. Toutes les routes existent. */
 export const mainNav: NavItem[] = [
-  { label: "Outils", href: "/outils" },
   { label: "Voitures électriques", href: "/voitures-electriques" },
-  { label: "Comparer", href: "/comparer" },
+  { label: "Comparer", href: "/comparer", emphasis: true },
   { label: "Recharge", href: "/recharge" },
   { label: "Guides", href: "/guides" },
   { label: "Blog", href: "/blog" },
 ];
 
+/** Navigation secondaire : bandeau desktop au-dessus du header et bas du menu mobile. */
+export const secondaryNav: NavItem[] = [
+  { label: "Outils", href: "/outils" },
+  { label: "Méthodologie", href: "/methodologie" },
+  { label: "Sources des données", href: "/sources" },
+  { label: "À propos", href: "/a-propos" },
+];
+
+/**
+ * Colonnes du footer. Les six calculateurs restent listés : ce sont des pages
+ * stratégiques et le footer est leur maillage interne sur tout le site.
+ */
 export const footerNav: { title: string; items: NavItem[] }[] = [
   {
-    title: "Outils",
+    title: "Explorer",
+    items: [
+      { label: "Voitures électriques", href: "/voitures-electriques" },
+      { label: "Comparateur", href: "/comparer" },
+      { label: "Recharge", href: "/recharge" },
+      { label: "Outils", href: "/outils" },
+    ],
+  },
+  {
+    title: "Calculateurs",
     items: [
       { label: "Coût de recharge", href: "/outils/cout-recharge-voiture-electrique" },
       { label: "Coût aux 100 km", href: "/outils/cout-100-km" },
@@ -71,31 +94,22 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
     ],
   },
   {
-    title: "Explorer",
+    title: "Guides",
     items: [
-      { label: "Voitures électriques", href: "/voitures-electriques" },
-      { label: "Comparer", href: "/comparer" },
-      { label: "Recharge", href: "/recharge" },
       { label: "Guides", href: "/guides" },
       { label: "Blog", href: "/blog" },
-      { label: "Recherche", href: "/recherche" },
-    ],
-  },
-  {
-    title: "EVExpert",
-    items: [
-      { label: "À propos", href: "/a-propos" },
       { label: "Méthodologie", href: "/methodologie" },
       { label: "Sources des données", href: "/sources" },
-      { label: "Contact", href: "/contact" },
       { label: "Flux RSS du blog", href: "/blog/rss.xml" },
     ],
   },
   {
-    title: "Légal",
+    title: "Informations",
     items: [
+      { label: "À propos", href: "/a-propos" },
+      { label: "Contact", href: "/contact" },
       { label: "Mentions légales", href: "/mentions-legales" },
-      { label: "Confidentialité", href: "/confidentialite" },
+      { label: "Politique de confidentialité", href: "/confidentialite" },
       { label: "Cookies", href: "/cookies" },
       { label: "Conditions d'utilisation", href: "/conditions-utilisation" },
     ],

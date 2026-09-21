@@ -88,3 +88,11 @@ Surfaces sombres : ajouter la classe `on-ink` au conteneur pour que le focus cla
 
 `cn()` (`src/lib/utils.ts`) étend `tailwind-merge` avec `text-display|h1|h2|h3` ; sans cela une couleur
 de texte déclarée après une taille personnalisée la supprimerait.
+
+## Navigation (header, footer)
+
+- Configuration : `src/config/site.ts` (`mainNav`, `secondaryNav`, `footerNav`). Toutes les routes existent ; le comparateur est `emphasis: true`.
+- `Header` (Server Component) : bandeau desktop `ink` (baseline + navigation secondaire), barre sticky `paper` avec logo, cinq entrées, Comparer plein `ink` + point signal, recherche GET compacte. Mobile : deux `<details name="site-panel">` exclusifs (recherche, menu) ; panneaux ancrés sur le bas du header (`absolute top-full`), hauteur max `calc(100dvh - var(--header-h))`.
+- `--header-h` (globals.css : 3,5 rem, 4 rem dès `lg`) est la source unique de la hauteur du header ; ne jamais coder de pixels.
+- `NavLink` (seul Client Component de la navigation) lit `usePathname()` : `aria-current="page"` (page exacte) ou `"true"` (même section) + classe active. Ses classes sont désignées par `variant` (`nav`, `compare`, `utility`, `row`, `row-compare`, `sub`) : les passer en props gonflerait la charge utile RSC. Pas de `cn()` dedans (tailwind-merge alourdirait le JS de chaque page).
+- `Footer` : fond `ink`, règle graduée SVG, bandeau éditorial (promesse + CTA Comparer/Explorer), quatre colonnes, mentions et « Gestion des cookies » (`data-cookie-settings`, relié par CookieBanner).

@@ -83,9 +83,20 @@
 }
 
 @layer base {
+  /* Hauteur du header : source unique, utilisée par le header, le panneau du menu
+     mobile (calc(100dvh - var(--header-h))) et le décalage des ancres. */
+  :root {
+    --header-h: 3.5rem;
+  }
+  @media (min-width: 64rem) {
+    :root {
+      --header-h: 4rem;
+    }
+  }
+
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+    scroll-padding-top: calc(var(--header-h) + 1rem);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     background-color: var(--color-paper);
