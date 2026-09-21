@@ -5,6 +5,7 @@ import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { Analytics } from "@/components/Analytics";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
@@ -61,6 +62,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Footer />
         <CookieBanner />
         <Analytics />
+        <VercelAnalytics />
       </body>
     </html>
   );
