@@ -2,9 +2,13 @@ import Link from "next/link";
 import { Container, PageHeader } from "@/components/layout/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ComparisonBuilder } from "@/components/comparison/ComparisonBuilder";
-import { getAllVehicles, vehicleTitle } from "@/data/vehicles";
+import { getAllVehicles } from "@/data/catalog";
+import { vehicleTitle } from "@/lib/vehicle-utils";
 import { getFeaturedComparisons } from "@/lib/comparison";
 import { buildMetadata } from "@/lib/seo";
+
+// Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
+export const revalidate = 86400;
 
 export const metadata = buildMetadata({
   title: "Comparateur de voitures électriques",
@@ -13,9 +17,9 @@ export const metadata = buildMetadata({
   path: "/comparer",
 });
 
-export default function ComparePage() {
-  const vehicles = getAllVehicles();
-  const featured = getFeaturedComparisons();
+export default async function ComparePage() {
+  const vehicles = await getAllVehicles();
+  const featured = await getFeaturedComparisons();
   return (
     <Container className="py-10">
       <Breadcrumbs items={[{ name: "Comparer", href: "/comparer" }]} />

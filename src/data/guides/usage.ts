@@ -1,20 +1,22 @@
 import type { Guide } from "@/types";
 import { ASSUMPTIONS } from "@/data/assumptions";
 import { SOURCES } from "@/data/sources";
-import { getAllVehicles } from "@/data/vehicles";
 import { chargeCost, costPer100km } from "@/lib/vehicle-calcs";
 import { annualCost, costPer100km as costPer100 } from "@/lib/calculators";
 import { formatEuro, formatNumber } from "@/lib/utils";
-import { GUIDE_DATE, veh } from "./helpers";
+import type { GuideContext } from "./helpers";
+import { GUIDE_DATE } from "./helpers";
 
-const r5 = veh("renault-5-e-tech-52-kwh-150-ch");
-const my = veh("tesla-model-y-rwd");
-const ev3 = veh("kia-ev3-long-range");
-const twingo = veh("renault-twingo-e-tech-27-5-kwh");
-const elroq = veh("skoda-elroq-85");
-const A = ASSUMPTIONS;
+export function buildUsageGuides(ctx: GuideContext): Guide[] {
+  const { veh } = ctx;
+  const r5 = veh("renault-5-e-tech-52-kwh-150-ch");
+  const my = veh("tesla-model-y-rwd");
+  const ev3 = veh("kia-ev3-long-range");
+  const twingo = veh("renault-twingo-e-tech-27-5-kwh");
+  const elroq = veh("skoda-elroq-85");
+  const A = ASSUMPTIONS;
 
-export const usageGuides: Guide[] = [
+  return [
   {
     slug: "preserver-batterie-voiture-electrique",
     category: "batterie",
@@ -413,7 +415,7 @@ export const usageGuides: Guide[] = [
         table: {
           caption: "Modèles du catalogue avec une batterie utile de 50 kWh ou moins et moins de 4,2 m",
           headers: ["Modèle", "Batterie utile", "Autonomie WLTP", "Longueur", "Coffre"],
-          rows: getAllVehicles()
+          rows: ctx.vehicles
             .filter((v) => v.batteryUsable <= 50 && v.dimensions.length < 4200)
             .sort((a, b) => a.dimensions.length - b.dimensions.length)
             .slice(0, 8)
@@ -434,7 +436,7 @@ export const usageGuides: Guide[] = [
         table: {
           caption: "Modèles du catalogue avec un coffre d'au moins 540 L",
           headers: ["Modèle", "Coffre", "Coffre banquette rabattue", "Autonomie WLTP"],
-          rows: getAllVehicles()
+          rows: ctx.vehicles
             .filter((v) => (v.trunkVolume ?? 0) >= 540)
             .sort((a, b) => (b.trunkVolume ?? 0) - (a.trunkVolume ?? 0))
             .slice(0, 8)
@@ -454,7 +456,7 @@ export const usageGuides: Guide[] = [
         table: {
           caption: "Modèles du catalogue avec au moins 600 km WLTP et une charge 10-80 % en 32 min ou moins",
           headers: ["Modèle", "Autonomie WLTP", "DC max.", "10-80 %"],
-          rows: getAllVehicles()
+          rows: ctx.vehicles
             .filter((v) => v.rangeWltp >= 600 && (v.chargingTime10to80 ?? 99) <= 32)
             .sort((a, b) => b.rangeWltp - a.rangeWltp)
             .slice(0, 8)
@@ -545,4 +547,5 @@ export const usageGuides: Guide[] = [
     ],
     sources: [SOURCES.avere, SOURCES.servicePublic, SOURCES.evdb],
   },
-];
+  ];
+}

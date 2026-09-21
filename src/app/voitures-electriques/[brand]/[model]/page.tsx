@@ -5,18 +5,22 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { VehicleDetail } from "@/components/vehicles/VehicleDetail";
 import { ModelOverview } from "@/components/vehicles/ModelOverview";
 import { LastUpdated } from "@/components/ui/SourceBadge";
-import { getModelVersions, getModels, modelTitle, vehicleHref, vehicleTitle } from "@/data/vehicles";
+import { getModelVersions, getModels, getSimilarVehicles } from "@/data/catalog";
+import { modelTitle, vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 import { buildMetadata } from "@/lib/seo";
+
+// Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
+export const revalidate = 86400;
 
 type Params = { brand: string; model: string };
 
-export function generateStaticParams() {
-  return getModels().map((v) => ({ brand: v.brandSlug, model: v.modelSlug }));
+export async function generateStaticParams() {
+  return (await getModels()).map((v) => ({ brand: v.brandSlug, model: v.modelSlug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { brand, model } = await params;
-  const versions = getModelVersions(brand, model);
+  const versions = await getModelVersions(brand, model);
   if (!versions.length) return {};
   const v = versions[0];
   if (versions.length === 1) {
@@ -37,9 +41,10 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 
 export default async function ModelPage({ params }: { params: Promise<Params> }) {
   const { brand, model } = await params;
-  const versions = getModelVersions(brand, model);
+  const versions = await getModelVersions(brand, model);
   if (!versions.length) notFound();
   const v = versions[0];
+  const similar = await getSimilarVehicles(v, 3);
   const single = versions.length === 1;
   return (
     <Container className="py-10">
@@ -61,7 +66,7 @@ export default async function ModelPage({ params }: { params: Promise<Params> })
       <div className="mt-3">
         <LastUpdated date={v.source.lastUpdated} label="Données relevées le" />
       </div>
-      <div className="mt-8">{single ? <VehicleDetail vehicle={v} /> : <ModelOverview versions={versions} />}</div>
+      <div className="mt-8">{single ? <VehicleDetail vehicle={v} similar={similar} /> : <ModelOverview versions={versions} similar={similar} />}</div>
     </Container>
   );
 }

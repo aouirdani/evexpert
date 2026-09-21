@@ -1,7 +1,10 @@
-import { getModelVersions, vehicleHref, vehicleTitle, vehicles } from "@/data/vehicles";
+import "server-only";
+import { getAllVehicles } from "@/data/catalog";
+import { versionsOf } from "@/data/catalog/selectors";
+import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 import { tools } from "@/data/tools";
-import { guides } from "@/data/guides";
-import { articles } from "@/data/articles";
+import { getGuides } from "@/data/guides";
+import { getArticles } from "@/data/blog";
 
 export type SearchResultType = "vehicle" | "tool" | "guide" | "article";
 
@@ -19,7 +22,8 @@ function normalize(s: string): string {
     .replace(/[\u0300-\u036f]/g, "");
 }
 
-export function searchAll(query: string): SearchResult[] {
+export async function searchAll(query: string): Promise<SearchResult[]> {
+  const [vehicles, guides, articles] = await Promise.all([getAllVehicles(), getGuides(), getArticles()]);
   const q = normalize(query.trim());
   if (!q) return [];
 
@@ -32,7 +36,7 @@ export function searchAll(query: string): SearchResult[] {
         type: "vehicle",
         title: vehicleTitle(v),
         description: `${v.rangeWltp} km WLTP · batterie ${v.batteryUsable} kWh utiles · charge AC ${v.chargingAC} kW${v.chargingDC ? ` · DC ${v.chargingDC} kW` : ""}`,
-        href: vehicleHref(v, getModelVersions(v.brandSlug, v.modelSlug).length > 1 ? "version" : "model"),
+        href: vehicleHref(v, versionsOf(vehicles, v.brandSlug, v.modelSlug).length > 1 ? "version" : "model"),
       });
     }
   }

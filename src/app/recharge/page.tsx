@@ -5,9 +5,12 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { GuideCard } from "@/components/cards";
 import { chargingTopics } from "@/data/charging";
-import { guides } from "@/data/guides";
+import { getGuides } from "@/data/guides";
 import { SOURCES } from "@/data/sources";
 import { buildMetadata, itemListJsonLd } from "@/lib/seo";
+
+// Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
+export const revalidate = 86400;
 
 export const metadata = buildMetadata({
   title: "Recharge d'une voiture électrique : puissances, connecteurs, coûts",
@@ -16,8 +19,8 @@ export const metadata = buildMetadata({
   path: "/recharge",
 });
 
-export default function RechargePage() {
-  const rechargeGuides = guides.filter((g) => g.category === "recharge").slice(0, 6);
+export default async function RechargePage() {
+  const rechargeGuides = (await getGuides()).filter((g) => g.category === "recharge").slice(0, 6);
   return (
     <Container className="py-10">
       <Breadcrumbs items={[{ name: "Recharge", href: "/recharge" }]} />

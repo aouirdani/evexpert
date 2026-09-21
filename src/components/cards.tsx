@@ -4,7 +4,7 @@ import { ArrowRight, Clock } from "lucide-react";
 import type { Article, Guide, Tool } from "@/types";
 import { formatDateFr } from "@/lib/utils";
 import { Badge } from "@/components/ui/primitives";
-import { guideCategoryLabels } from "@/data/guides";
+import { guideCategoryLabels } from "@/data/guides/labels";
 
 function DynamicIcon({ name, className }: { name: string; className?: string }) {
   const Icon = (Icons as unknown as Record<string, Icons.LucideIcon>)[name] ??

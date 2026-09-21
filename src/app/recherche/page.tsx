@@ -26,7 +26,7 @@ export default async function SearchPage({
 }) {
   const { q } = await searchParams;
   const query = q?.trim() ?? "";
-  const results = query ? searchAll(query) : [];
+  const results = query ? await searchAll(query) : [];
 
   return (
     <Container className="py-10">

@@ -8,14 +8,18 @@ import { JsonLd } from "@/components/ui/JsonLd";
 import { Faq } from "@/components/ui/Faq";
 import { LastUpdated } from "@/components/ui/SourceBadge";
 import { RelatedGuides, RelatedTools } from "@/components/related";
-import { getFeaturedComparisons, objectiveDifferences, parseComparison } from "@/lib/comparison";
-import { vehicleHref, vehicleTitle } from "@/data/vehicles";
+import { getFeaturedComparisons, parseComparison } from "@/lib/comparison";
+import { objectiveDifferences } from "@/lib/comparison-metrics";
+import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 import { buildMetadata, faqJsonLd } from "@/lib/seo";
+
+// Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
+export const revalidate = 86400;
 
 type Params = { slug: string };
 
-export function generateStaticParams() {
-  return getFeaturedComparisons().map((c) => ({ slug: c.slug }));
+export async function generateStaticParams() {
+  return (await getFeaturedComparisons()).map((c) => ({ slug: c.slug }));
 }
 
 // Seules les comparaisons pré-générées existent : pas de page à la volée.
@@ -23,7 +27,7 @@ export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { slug } = await params;
-  const pair = parseComparison(slug);
+  const pair = await parseComparison(slug);
   if (!pair) return { robots: { index: false, follow: true } };
   const [a, b] = pair;
   return buildMetadata({
@@ -35,7 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 
 export default async function ComparisonPage({ params }: { params: Promise<Params> }) {
   const { slug } = await params;
-  const pair = parseComparison(slug);
+  const pair = await parseComparison(slug);
   if (!pair) notFound();
   const [a, b] = pair;
   const diffs = objectiveDifferences([a, b]);

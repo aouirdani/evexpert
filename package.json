@@ -7,7 +7,16 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "check:data": "node scripts/check-vehicle-data.mjs"
+    "check:data": "node --env-file-if-exists=.env.local node_modules/tsx/dist/cli.mjs --conditions=react-server scripts/check-data.ts",
+    "db:local:up": "bash scripts/local-db.sh up",
+    "db:local:down": "bash scripts/local-db.sh down",
+    "db:local:reset": "bash scripts/local-db.sh reset",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "node --env-file-if-exists=.env.local node_modules/drizzle-kit/bin.cjs migrate",
+    "db:import": "node --env-file-if-exists=.env.local node_modules/tsx/dist/cli.mjs --conditions=react-server scripts/migrate-vehicles.ts",
+    "test": "vitest run",
+    "test:routes": "node scripts/smoke-routes.mjs",
+    "snapshot:seo": "node scripts/seo-snapshot.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -17,6 +26,7 @@
     "pg": "8.20.0",
     "react": "19.2.6",
     "react-dom": "19.2.6",
+    "server-only": "^0.0.1",
     "tailwind-merge": "^3.7.0",
     "zod": "^4.6.5"
   },
@@ -31,6 +41,9 @@
     "eslint-config-next": "16.2.6",
     "postcss": "8.5.8",
     "tailwindcss": "4.1.17",
-    "typescript": "5.9.3"
+    "tsx": "^4.23.15",
+    "typescript": "5.9.3",
+    "vite": "^7.3.6",
+    "vitest": "^5.0.1"
   }
 }

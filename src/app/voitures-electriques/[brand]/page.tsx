@@ -4,26 +4,30 @@ import { Container, PageHeader } from "@/components/layout/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { VehicleCard } from "@/components/vehicles/VehicleCard";
-import { getBrands, getModels, getVehiclesByBrand, vehicleHref } from "@/data/vehicles";
+import { getBrands, getModels, getVehiclesByBrand } from "@/data/catalog";
+import { vehicleHref } from "@/lib/vehicle-utils";
 import { buildMetadata, itemListJsonLd } from "@/lib/seo";
 import { formatNumber } from "@/lib/utils";
 
+// Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
+export const revalidate = 86400;
+
 type Params = { brand: string };
 
-export function generateStaticParams() {
-  return getBrands().map((b) => ({ brand: b.slug }));
+export async function generateStaticParams() {
+  return (await getBrands()).map((b) => ({ brand: b.slug }));
 }
 
-function modelsOf(brand: string) {
-  return getModels().filter((m) => m.brandSlug === brand);
+async function modelsOf(brand: string) {
+  return (await getModels()).filter((m) => m.brandSlug === brand);
 }
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { brand } = await params;
-  const list = getVehiclesByBrand(brand);
+  const list = await getVehiclesByBrand(brand);
   if (!list.length) return {};
   const name = list[0].brand;
-  const models = modelsOf(brand);
+  const models = await modelsOf(brand);
   // Une marque avec un seul modèle n'apporte rien de plus que la fiche modèle.
   const indexable = models.length >= 2;
   return buildMetadata({
@@ -36,10 +40,10 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 
 export default async function BrandPage({ params }: { params: Promise<Params> }) {
   const { brand } = await params;
-  const list = getVehiclesByBrand(brand);
+  const list = await getVehiclesByBrand(brand);
   if (!list.length) notFound();
   const name = list[0].brand;
-  const models = modelsOf(brand);
+  const models = await modelsOf(brand);
   const ranges = list.map((v) => v.rangeWltp);
   return (
     <Container className="py-10">

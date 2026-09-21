@@ -1,20 +1,23 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArticleView } from "@/components/content/ArticleView";
-import { articles, getArticle } from "@/data/articles";
+import { getArticle, getArticles } from "@/data/blog";
 import { buildMetadata } from "@/lib/seo";
+
+// Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
+export const revalidate = 86400;
 
 type Params = { slug: string };
 
-export function generateStaticParams() {
-  return articles.map((a) => ({ slug: a.slug }));
+export async function generateStaticParams() {
+  return (await getArticles()).map((a) => ({ slug: a.slug }));
 }
 
 export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { slug } = await params;
-  const a = getArticle(slug);
+  const a = await getArticle(slug);
   if (!a) return {};
   return buildMetadata({
     title: a.title,
@@ -28,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 
 export default async function ArticlePage({ params }: { params: Promise<Params> }) {
   const { slug } = await params;
-  const a = getArticle(slug);
+  const a = await getArticle(slug);
   if (!a) notFound();
   return (
     <ArticleView

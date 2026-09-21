@@ -2,8 +2,11 @@ import { Container, PageHeader } from "@/components/layout/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { ArticleCard } from "@/components/cards";
-import { articles } from "@/data/articles";
+import { getArticles } from "@/data/blog";
 import { buildMetadata, itemListJsonLd } from "@/lib/seo";
+
+// Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
+export const revalidate = 86400;
 
 export const metadata = buildMetadata({
   title: "Blog EVExpert : analyses chiffrées sur la voiture électrique",
@@ -12,7 +15,8 @@ export const metadata = buildMetadata({
   path: "/blog",
 });
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const articles = await getArticles();
   const sorted = [...articles].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
   return (
     <Container className="py-10">

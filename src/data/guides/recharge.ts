@@ -3,19 +3,21 @@ import { ASSUMPTIONS } from "@/data/assumptions";
 import { SOURCES } from "@/data/sources";
 import { acChargeMinutes, averageDcPower, chargeCost } from "@/lib/vehicle-calcs";
 import { formatEuro, formatNumber, minutesToHuman } from "@/lib/utils";
-import { GUIDE_DATE, veh } from "./helpers";
+import type { GuideContext } from "./helpers";
+import { GUIDE_DATE } from "./helpers";
 
-const r5 = veh("renault-5-e-tech-52-kwh-150-ch");
-const my = veh("tesla-model-y-rwd");
-const ioniq5 = veh("hyundai-ioniq-5-84-kwh-rwd");
-const ev3 = veh("kia-ev3-long-range");
-const inster = veh("hyundai-inster-long-range");
-const bmw = veh("bmw-i4-edrive40");
-const twingo = veh("renault-twingo-e-tech-27-5-kwh");
+export function buildRechargeGuides(ctx: GuideContext): Guide[] {
+  const { veh } = ctx;
+  const r5 = veh("renault-5-e-tech-52-kwh-150-ch");
+  const my = veh("tesla-model-y-rwd");
+  const ioniq5 = veh("hyundai-ioniq-5-84-kwh-rwd");
+  const ev3 = veh("kia-ev3-long-range");
+  const inster = veh("hyundai-inster-long-range");
+  const bmw = veh("bmw-i4-edrive40");
+  const twingo = veh("renault-twingo-e-tech-27-5-kwh");
+  const home = ASSUMPTIONS.homePrice;
 
-const home = ASSUMPTIONS.homePrice;
-
-export const rechargeGuides: Guide[] = [
+  return [
   {
     slug: "combien-coute-recharge-domicile",
     category: "coûts",
@@ -448,4 +450,5 @@ export const rechargeGuides: Guide[] = [
     ],
     sources: [SOURCES.evdb, SOURCES.avere],
   },
-];
+  ];
+}

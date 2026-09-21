@@ -9,15 +9,20 @@ import { JsonLd } from "@/components/ui/JsonLd";
 import { ToolCard, ArticleCard, GuideCard } from "@/components/cards";
 import { VehicleCard } from "@/components/vehicles/VehicleCard";
 import { tools } from "@/data/tools";
-import { getAllVehicles, getBrands, getModelVersions, getVehicleById, vehicleHref, vehicleTitle } from "@/data/vehicles";
-import { guides } from "@/data/guides";
-import { articles } from "@/data/articles";
+import { getAllVehicles, getBrands, getVehicleById } from "@/data/catalog";
+import { versionsOf } from "@/data/catalog/selectors";
+import { getGuides } from "@/data/guides";
+import { getArticles } from "@/data/blog";
+import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 import { ASSUMPTIONS } from "@/data/assumptions";
 import { batteryConsumption100, costPer100km } from "@/lib/vehicle-calcs";
 import { getFeaturedComparisons } from "@/lib/comparison";
 import { siteConfig } from "@/config/site";
 import { buildMetadata, faqJsonLd } from "@/lib/seo";
 import { formatEuro, formatNumber } from "@/lib/utils";
+
+// Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
+export const revalidate = 86400;
 
 export const metadata = buildMetadata({
   title: "Voiture électrique : comparez l'autonomie, la recharge et le coût réel",
@@ -48,10 +53,10 @@ const homeFaq = [
   },
 ];
 
-export default function HomePage() {
-  const all = getAllVehicles();
-  const brands = getBrands();
-  const example = getVehicleById("renault-5-e-tech-52-kwh-150-ch")!;
+export default async function HomePage() {
+  const all = await getAllVehicles();
+  const [brands, guides, articles, comparisons] = await Promise.all([getBrands(), getGuides(), getArticles(), getFeaturedComparisons()]);
+  const example = (await getVehicleById("renault-5-e-tech-52-kwh-150-ch"))!;
   const featuredIds = [
     "renault-5-e-tech-52-kwh-150-ch",
     "tesla-model-y-rwd",
@@ -60,8 +65,7 @@ export default function HomePage() {
     "citroen-e-c3-standard-range-44-kwh",
     "hyundai-ioniq-5-84-kwh-rwd",
   ];
-  const featured = featuredIds.map(getVehicleById).filter((v): v is NonNullable<typeof v> => Boolean(v));
-  const comparisons = getFeaturedComparisons().slice(0, 3);
+  const featured = (await Promise.all(featuredIds.map(getVehicleById))).filter((v): v is NonNullable<typeof v> => Boolean(v));
   const featuredGuides = guides.filter((g) =>
     ["calculer-autonomie-reelle", "combien-coute-recharge-domicile", "puissance-borne-7-11-22-kw", "recharge-ac-ou-dc", "voiture-electrique-vs-essence", "choisir-premiere-voiture-electrique"].includes(g.slug),
   );
@@ -183,7 +187,7 @@ export default function HomePage() {
         </nav>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((v) => (
-            <VehicleCard key={v.id} vehicle={v} href={vehicleHref(v, getModelVersions(v.brandSlug, v.modelSlug).length > 1 ? "version" : "model")} />
+            <VehicleCard key={v.id} vehicle={v} href={vehicleHref(v, versionsOf(all, v.brandSlug, v.modelSlug).length > 1 ? "version" : "model")} />
           ))}
         </div>
       </Container>
@@ -201,7 +205,7 @@ export default function HomePage() {
             </div>
           </div>
           <ul className="space-y-3">
-            {comparisons.map((c) => (
+            {comparisons.slice(0, 3).map((c) => (
               <li key={c.slug}>
                 <Link href={`/comparer/${c.slug}`} className="block rounded-xl border border-slate-200 bg-white p-4 text-sm font-semibold text-slate-900 hover:border-emerald-500 hover:text-emerald-800">
                   {vehicleTitle(c.vehicles[0])} <span className="font-normal text-slate-600">contre</span> {vehicleTitle(c.vehicles[1])}

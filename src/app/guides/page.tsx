@@ -3,9 +3,12 @@ import { Container, PageHeader } from "@/components/layout/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { GuideCard } from "@/components/cards";
-import { guideCategoryLabels, guides } from "@/data/guides";
+import { getGuides, guideCategoryLabels } from "@/data/guides";
 import { buildMetadata, itemListJsonLd } from "@/lib/seo";
 import type { GuideCategory } from "@/types";
+
+// Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
+export const revalidate = 86400;
 
 export const metadata = buildMetadata({
   title: "Guides voiture électrique : recharge, autonomie, batterie et coûts",
@@ -16,7 +19,8 @@ export const metadata = buildMetadata({
 
 const order: GuideCategory[] = ["autonomie", "recharge", "batterie", "coûts", "achat"];
 
-export default function GuidesPage() {
+export default async function GuidesPage() {
+  const guides = await getGuides();
   return (
     <Container className="py-10">
       <Breadcrumbs items={[{ name: "Guides", href: "/guides" }]} />

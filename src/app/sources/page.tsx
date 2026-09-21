@@ -4,9 +4,12 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { DataLegend } from "@/components/ui/DataBadge";
 import { LastUpdated } from "@/components/ui/SourceBadge";
 import { SOURCE_ROLES } from "@/data/sources";
-import { SOURCE_CHECKED_AT, getAllVehicles } from "@/data/vehicles";
+import { getCatalog } from "@/data/catalog";
 import { buildMetadata } from "@/lib/seo";
 import { formatDateFr } from "@/lib/utils";
+
+// Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
+export const revalidate = 86400;
 
 export const metadata = buildMetadata({
   title: "Sources des données",
@@ -15,8 +18,9 @@ export const metadata = buildMetadata({
   path: "/sources",
 });
 
-export default function SourcesPage() {
-  const n = getAllVehicles().length;
+export default async function SourcesPage() {
+  const catalog = await getCatalog();
+  const n = catalog.vehicles.length;
   return (
     <Container className="py-10">
       <Breadcrumbs items={[{ name: "Sources", href: "/sources" }]} />
@@ -35,7 +39,7 @@ export default function SourcesPage() {
           <p>
             Les caractéristiques des {n} versions du catalogue proviennent de{" "}
             <a href="https://ev-database.org/" target="_blank" rel="noopener noreferrer nofollow">EV Database</a>, une base spécialisée. Elles ont été relevées le{" "}
-            {formatDateFr(SOURCE_CHECKED_AT)}. Ce n&apos;est pas une source constructeur : chaque fiche l&apos;indique (« Source spécialisée ») et renvoie vers la fiche d&apos;origine.
+            {formatDateFr(catalog.checkedAt)}. Ce n&apos;est pas une source constructeur : chaque fiche l&apos;indique (« Source spécialisée ») et renvoie vers la fiche d&apos;origine.
           </p>
           <p>
             Une donnée absente de la source est affichée « Non disponible ». Le prix en France et la garantie véhicule ne sont pas collectés à ce stade. Notre priorité future est

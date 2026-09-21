@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { FaqItem, Vehicle } from "@/types";
 import { ASSUMPTIONS } from "@/data/assumptions";
-import { getSimilarVehicles, vehicleHref, vehicleTitle } from "@/data/vehicles";
+import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 import {
   RANGE_SCENARIOS,
   acChargeMinutes,
@@ -63,7 +63,7 @@ function KeyStat({ label, value, sub, type }: { label: string; value: string; su
 }
 
 /** Fiche technique complète d'une version. Server Component, aucun JS client. */
-export function VehicleDetail({ vehicle: v }: { vehicle: Vehicle }) {
+export function VehicleDetail({ vehicle: v, similar }: { vehicle: Vehicle; similar: Vehicle[] }) {
   const src = v.source.dataType;
   const battCons = batteryConsumption100(v);
   const scenarios = RANGE_SCENARIOS.map((s) => ({ s, km: estimateRange(v, s) }));
@@ -73,7 +73,6 @@ export function VehicleDetail({ vehicle: v }: { vehicle: Vehicle }) {
     { label: "Recharge rapide DC", price: ASSUMPTIONS.fastDcPrice },
   ];
   const faq = vehicleFaq(v);
-  const similar = getSimilarVehicles(v, 3);
   const acStations = [3.7, 7.4, 11, 22];
 
   return (

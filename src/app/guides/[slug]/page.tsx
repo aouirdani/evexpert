@@ -1,20 +1,23 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArticleView } from "@/components/content/ArticleView";
-import { getGuide, guideCategoryLabels, guides } from "@/data/guides";
+import { getGuide, getGuides, guideCategoryLabels } from "@/data/guides";
 import { buildMetadata } from "@/lib/seo";
+
+// Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
+export const revalidate = 86400;
 
 type Params = { slug: string };
 
-export function generateStaticParams() {
-  return guides.map((g) => ({ slug: g.slug }));
+export async function generateStaticParams() {
+  return (await getGuides()).map((g) => ({ slug: g.slug }));
 }
 
 export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { slug } = await params;
-  const g = getGuide(slug);
+  const g = await getGuide(slug);
   if (!g) return {};
   return buildMetadata({
     title: g.title,
@@ -28,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 
 export default async function GuidePage({ params }: { params: Promise<Params> }) {
   const { slug } = await params;
-  const g = getGuide(slug);
+  const g = await getGuide(slug);
   if (!g) notFound();
   return (
     <ArticleView

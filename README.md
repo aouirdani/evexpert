@@ -16,26 +16,45 @@ Scripts : `npm run build`, `npm run lint`, `npm run typecheck`, `npm run check:d
 
 ## Architecture
 
+```
+Next.js (Server Components, pages statiques + régénération quotidienne)
+        ↓  @/data/catalog  (couche d'accès, serveur uniquement)
+Drizzle ORM
+        ↓
+Supabase PostgreSQL   ← source de vérité des données véhicules
+```
+
 | Dossier | Rôle |
 | --- | --- |
-| `src/data/vehicles.ts` | Catalogue véhicules (lignes positionnelles + source par fiche). Toute donnée inconnue = `null`. |
-| `src/data/guides/`, `articles.ts`, `charging.ts`, `toolContent.ts` | Contenus éditoriaux. Les tableaux chiffrés sont calculés depuis le catalogue. |
-| `src/data/assumptions.ts` | Hypothèses par défaut (prix du kWh, rendement…), modifiables. |
-| `src/data/sources.ts` | Sources externes citées (URLs vérifiées). |
-| `src/lib/calculators`, `vehicle-calcs.ts`, `comparison.ts` | Calculs purs et comparaisons objectives. |
-| `src/db` | Drizzle/PostgreSQL, **optionnel** : pool créé à la demande, jamais à l'import. |
+| `src/db/schema/` | Schéma Drizzle (marques, modèles, versions, recharge, prix, sources, provenance) |
+| `drizzle/` | Migrations SQL versionnées |
+| `src/data/catalog/` | Couche d'accès aux données (`getBrands`, `getModels`, `getVehicleBySlug`, `getVehiclePrice`, …) |
+| `src/data/vehicles.ts` | Jeu initial (seed) importé en base + repli de développement sans `DATABASE_URL` |
+| `src/data/guides/`, `articles.ts`, `charging.ts`, `toolContent.ts` | Contenus éditoriaux (tableaux chiffrés calculés depuis le catalogue) |
+| `src/data/assumptions.ts`, `sources.ts` | Hypothèses de calcul, sources externes citées |
+| `src/lib/` | Calculs purs (calculateurs, coûts, comparaison) et helpers |
+| `scripts/` | Import, contrôle qualité, snapshot SEO, smoke test, Postgres local |
+| `tests/` | Vitest : unitaires + intégration sur base de test isolée |
+| `docs/` | `database.md`, `supabase.md`, `data-model.md` |
 
-Les données sont structurées pour migrer plus tard vers PostgreSQL/Supabase (véhicules, articles, guides, sources) sans changer les composants.
+Documentation détaillée : [`docs/database.md`](docs/database.md) (exploitation), [`docs/data-model.md`](docs/data-model.md) (schéma), [`docs/supabase.md`](docs/supabase.md) (Supabase + Vercel).
+
+## Scripts
+
+`dev`, `build`, `lint`, `typecheck` · `test` · `check:data` · `db:generate`, `db:migrate`, `db:import` · `db:local:up|down|reset` · `test:routes` · `snapshot:seo`
 
 ## Politique de données
 
-- Aucune donnée inventée : une valeur absente s'affiche « Non disponible ».
+- Aucune donnée inventée : une valeur absente est `NULL` en base et s'affiche « Non disponible ».
 - Chaque fiche cite sa source, son URL et sa date de relevé ; nature des données : source officielle / spécialisée / calcul EVExpert / estimation EVExpert.
-- Le prix France n'est pas collecté (les prix de la source concernent d'autres marchés).
-- Ajouter un véhicule : ajouter une ligne dans `vehicles.ts`, vérifier la fiche source, lancer `npm run check:data`.
+- **Un prix appartient toujours à un marché** : seul un prix `FR` s'affiche comme prix français. Aucun prix n'est collecté à ce jour (les prix de la source utilisée sont néerlandais ou allemands).
+- Ajouter un véhicule, mettre à jour un prix : voir [`docs/database.md`](docs/database.md).
 
 ## Variables d'environnement
 
-Voir `.env.example`. Minimum en production : `NEXT_PUBLIC_SITE_URL=https://evexpert.fr` et `ADSENSE_ENABLED=false`.
-Avant une demande AdSense : renseigner `NEXT_PUBLIC_CONTACT_EMAIL` et les champs éditeur (`NEXT_PUBLIC_PUBLISHER_*`).
-`DATABASE_URL` n'est pas nécessaire.
+Voir `.env.example`.
+
+- Production Vercel : `NEXT_PUBLIC_SITE_URL=https://evexpert.fr`, `ADSENSE_ENABLED=false`, `DATABASE_URL` (rôle **lecture seule**, pooler Supabase — voir [`docs/supabase.md`](docs/supabase.md)).
+- Sans `DATABASE_URL`, le site lit `src/data/vehicles.ts` (développement / transition). Avec `DATABASE_URL`, une base injoignable **fait échouer le build** (pas de repli silencieux).
+- `DATABASE_ADMIN_URL` (migrations et import) : **local uniquement**, jamais dans Vercel.
+- Avant une demande AdSense : `NEXT_PUBLIC_CONTACT_EMAIL` et `NEXT_PUBLIC_PUBLISHER_*`.

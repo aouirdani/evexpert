@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Vehicle } from "@/types";
-import { vehicleHref, vehicleTitle } from "@/data/vehicles";
+import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 import { fmt } from "@/lib/vehicle-format";
 import { ASSUMPTIONS } from "@/data/assumptions";
 import { costPer100km } from "@/lib/vehicle-calcs";
@@ -8,13 +8,11 @@ import { formatEuro, formatNumber } from "@/lib/utils";
 import { DataBadge } from "@/components/ui/DataBadge";
 import { SourceLine } from "@/components/ui/SourceBadge";
 import { RelatedGuides, RelatedTools } from "@/components/related";
-import { getSimilarVehicles } from "@/data/vehicles";
 import { VehicleCard } from "./VehicleCard";
 
 /** Page modèle à plusieurs versions : tableau comparatif des versions. */
-export function ModelOverview({ versions }: { versions: Vehicle[] }) {
+export function ModelOverview({ versions, similar }: { versions: Vehicle[]; similar: Vehicle[] }) {
   const first = versions[0];
-  const similar = getSimilarVehicles(first, 3);
   return (
     <div>
       <p className="max-w-3xl text-slate-700">

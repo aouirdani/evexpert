@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Vehicle } from "@/types";
-import { METRICS, METRIC_GROUPS, objectiveDifferences } from "@/lib/comparison";
-import { vehicleHref, vehicleTitle } from "@/data/vehicles";
+import { METRICS, METRIC_GROUPS, objectiveDifferences } from "@/lib/comparison-metrics";
+import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 import { DataBadge } from "@/components/ui/DataBadge";
 
 /**

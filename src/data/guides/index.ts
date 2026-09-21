@@ -1,19 +1,28 @@
-import type { Guide, GuideCategory } from "@/types";
-import { autonomieGuides } from "./autonomie";
-import { rechargeGuides } from "./recharge";
-import { usageGuides } from "./usage";
+import "server-only";
+import type { Guide } from "@/types";
+import { getCatalog, type Catalog } from "@/data/catalog";
+import { buildAutonomieGuides } from "./autonomie";
+import { makeGuideContext } from "./helpers";
+import { buildRechargeGuides } from "./recharge";
+import { buildUsageGuides } from "./usage";
 
-export const guides: Guide[] = [...autonomieGuides, ...rechargeGuides, ...usageGuides];
+export { guideCategoryLabels } from "./labels";
 
-export const guideCategoryLabels: Record<GuideCategory, string> = {
-  autonomie: "Autonomie",
-  recharge: "Recharge",
-  batterie: "Batterie",
-  coûts: "Coûts",
-  achat: "Achat",
-  comprendre: "Comprendre",
-};
+// Les tableaux chiffrés des guides sont calculés depuis le catalogue : on les
+// construit une fois par catalogue chargé.
+const cache = new WeakMap<Catalog, Guide[]>();
 
-export function getGuide(slug: string): Guide | undefined {
-  return guides.find((g) => g.slug === slug);
+export async function getGuides(): Promise<Guide[]> {
+  const catalog = await getCatalog();
+  let guides = cache.get(catalog);
+  if (!guides) {
+    const ctx = makeGuideContext(catalog.vehicles);
+    guides = [...buildAutonomieGuides(ctx), ...buildRechargeGuides(ctx), ...buildUsageGuides(ctx)];
+    cache.set(catalog, guides);
+  }
+  return guides;
+}
+
+export async function getGuide(slug: string): Promise<Guide | undefined> {
+  return (await getGuides()).find((g) => g.slug === slug);
 }

@@ -1,3 +1,4 @@
+import { slugify } from "@/lib/vehicle-utils";
 import type {
   BatteryChemistry,
   BodyType,
@@ -19,8 +20,10 @@ import type {
  *   capacité utile × autonomie (voir scripts/check-vehicle-data.mjs).
  * - Les garanties véhicule ne sont pas collectées (`warranty: null`).
  *
- * Pour ajouter un véhicule : ajouter une ligne ci-dessous, lancer
- * `npm run check:data`, puis vérifier la fiche source.
+ * STATUT (V3) : ce fichier est désormais le JEU DE DONNÉES INITIAL (seed) de la
+ * base PostgreSQL/Supabase (`npm run db:import`) et le repli de développement
+ * quand DATABASE_URL est absente. La source de vérité est la base ; les pages ne
+ * l'importent jamais directement : elles passent par `@/data/catalog`.
  */
 
 export const SOURCE_CHECKED_AT = "2026-09-21";
@@ -117,17 +120,6 @@ const rows: Row[] = [
   ["Porsche", "Macan", "4 Electric", "2025-2026", "SUV", "AWD", "NMC", 100, 94.9, 611, 178, 300, 408, 650, 5.2, 220, 11, 269, 23, 4784, 1938, 1622, 2405, 540, 1348, 5, "8 ans", "car/3379/Porsche-Macan-4-Electric"],
 ];
 
-export function slugify(input: string): string {
-  return input
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .toLowerCase()
-    .replace(/#/g, "")
-    .replace(/,/g, "-")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
-
 function build(r: Row): Vehicle {
   const [
     brand, model, version, years, bodyType, drive, chemistry,
@@ -181,107 +173,3 @@ function build(r: Row): Vehicle {
 }
 
 export const vehicles: Vehicle[] = rows.map(build);
-
-/* --------------------------- Helper selectors --------------------------- */
-
-export function getAllVehicles(): Vehicle[] {
-  return vehicles;
-}
-
-export function getVehicleById(id: string): Vehicle | undefined {
-  return vehicles.find((v) => v.id === id);
-}
-
-export function getVehiclesByBrand(brandSlug: string): Vehicle[] {
-  return vehicles.filter((v) => v.brandSlug === brandSlug);
-}
-
-export function getVehicle(
-  brandSlug: string,
-  modelSlug: string,
-  versionSlug?: string,
-): Vehicle | undefined {
-  return vehicles.find(
-    (v) =>
-      v.brandSlug === brandSlug &&
-      v.modelSlug === modelSlug &&
-      (versionSlug ? v.versionSlug === versionSlug : true),
-  );
-}
-
-export function getModelVersions(brandSlug: string, modelSlug: string): Vehicle[] {
-  return vehicles.filter(
-    (v) => v.brandSlug === brandSlug && v.modelSlug === modelSlug,
-  );
-}
-
-/** Marques triées alphabétiquement avec leur nombre de fiches. */
-export function getBrands(): { slug: string; name: string; count: number }[] {
-  const map = new Map<string, { name: string; count: number }>();
-  for (const v of vehicles) {
-    const existing = map.get(v.brandSlug);
-    if (existing) existing.count += 1;
-    else map.set(v.brandSlug, { name: v.brand, count: 1 });
-  }
-  return Array.from(map.entries())
-    .map(([slug, val]) => ({ slug, ...val }))
-    .sort((a, b) => a.name.localeCompare(b.name, "fr"));
-}
-
-/** Un modèle = une page /[brand]/[model], regroupant ses versions. */
-export function getModels(): Vehicle[] {
-  const seen = new Set<string>();
-  const out: Vehicle[] = [];
-  for (const v of vehicles) {
-    const key = `${v.brandSlug}/${v.modelSlug}`;
-    if (!seen.has(key)) {
-      seen.add(key);
-      out.push(v);
-    }
-  }
-  return out;
-}
-
-/**
- * Une page version n'est indexable que si le modèle possède plusieurs
- * versions : sinon elle dupliquerait la page modèle (canonical → modèle).
- */
-export function isVersionPageIndexable(v: Vehicle): boolean {
-  return getModelVersions(v.brandSlug, v.modelSlug).length > 1;
-}
-
-/** Véhicules proches : même carrosserie d'abord, puis capacité et autonomie voisines. */
-export function getSimilarVehicles(vehicle: Vehicle, limit = 3): Vehicle[] {
-  return vehicles
-    .filter((v) => v.id !== vehicle.id && v.modelSlug !== vehicle.modelSlug)
-    .map((v) => ({
-      v,
-      score:
-        (v.bodyType === vehicle.bodyType ? 0 : 3) +
-        Math.abs(v.batteryUsable - vehicle.batteryUsable) / 15 +
-        Math.abs(v.rangeWltp - vehicle.rangeWltp) / 100,
-    }))
-    .sort((a, b) => a.score - b.score)
-    .slice(0, limit)
-    .map((x) => x.v);
-}
-
-export function vehicleTitle(v: Vehicle): string {
-  return `${v.brand} ${v.model} ${v.version}`;
-}
-
-/** Titre court, sans version, pour les pages modèle. */
-export function modelTitle(v: Vehicle): string {
-  return `${v.brand} ${v.model}`;
-}
-
-export function vehicleSlug(v: Vehicle): string {
-  return `${v.brandSlug}-${v.modelSlug}`;
-}
-
-export function vehicleHref(v: Vehicle, level: "brand" | "model" | "version" = "model"): string {
-  const base = `/voitures-electriques/${v.brandSlug}`;
-  if (level === "brand") return base;
-  if (level === "model") return `${base}/${v.modelSlug}`;
-  return `${base}/${v.modelSlug}/${v.versionSlug}`;
-}

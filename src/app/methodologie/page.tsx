@@ -5,11 +5,14 @@ import { Prose, TableOfContents } from "@/components/ui/Prose";
 import { DataLegend } from "@/components/ui/DataBadge";
 import { LastUpdated } from "@/components/ui/SourceBadge";
 import { ASSUMPTIONS, ASSUMPTIONS_UPDATED_AT } from "@/data/assumptions";
-import { SOURCE_CHECKED_AT } from "@/data/vehicles";
+import { getCatalogDate } from "@/data/catalog";
 import { drivingFactor, speedFactor, temperatureFactor } from "@/lib/calculators";
 import { buildMetadata } from "@/lib/seo";
 import { formatNumber } from "@/lib/utils";
 import type { ArticleSection } from "@/types";
+
+// Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
+export const revalidate = 86400;
 
 export const metadata = buildMetadata({
   title: "Méthodologie : sources, calculs et limites",
@@ -20,7 +23,8 @@ export const metadata = buildMetadata({
 
 const f = (n: number) => formatNumber(n, 2);
 
-const sections: ArticleSection[] = [
+function buildSections(checkedAt: string): ArticleSection[] {
+  return [
   {
     heading: "Principes",
     paragraphs: [
@@ -30,7 +34,7 @@ const sections: ArticleSection[] = [
   {
     heading: "Les données véhicules",
     paragraphs: [
-      `Les caractéristiques techniques du catalogue proviennent de la base spécialisée EV Database (source spécialisée, non constructeur), relevées le ${SOURCE_CHECKED_AT}. Chaque fiche cite sa source, son lien et sa date de relevé.`,
+      `Les caractéristiques techniques du catalogue proviennent de la base spécialisée EV Database (source spécialisée, non constructeur), relevées le ${checkedAt}. Chaque fiche cite sa source, son lien et sa date de relevé.`,
       "Un script de contrôle vérifie la cohérence de chaque ligne avant publication : batterie utile ≤ brute, kW et chevaux concordants, consommation cohérente avec capacité et autonomie, temps de charge et performances dans des plages plausibles. Une donnée jugée incohérente ou absente est laissée vide (« Non disponible ») : elle n'est jamais corrigée ni complétée à la main.",
       "Le prix en France, la garantie véhicule et certaines consommations WLTP ne sont pas collectés à ce stade. Les prix publiés par notre source concernent d'autres marchés et ne sont pas présentés comme des prix français.",
     ],
@@ -129,8 +133,10 @@ const sections: ArticleSection[] = [
     ],
   },
 ];
+}
 
-export default function Page() {
+export default async function Page() {
+  const sections = buildSections(await getCatalogDate());
   return (
     <Container className="py-10">
       <Breadcrumbs items={[{ name: "Méthodologie", href: "/methodologie" }]} />

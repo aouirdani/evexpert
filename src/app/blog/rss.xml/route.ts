@@ -1,7 +1,7 @@
 import { siteConfig } from "@/config/site";
-import { articles } from "@/data/articles";
+import { getArticles } from "@/data/blog";
 
-export const dynamic = "force-static";
+export const revalidate = 86400;
 
 function escapeXml(s: string): string {
   return s
@@ -14,6 +14,7 @@ function escapeXml(s: string): string {
 
 export async function GET() {
   const base = siteConfig.url;
+  const articles = await getArticles();
   const items = [...articles]
     .sort(
       (a, b) =>

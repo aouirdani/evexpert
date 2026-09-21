@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { tools } from "@/data/tools";
-import { guides } from "@/data/guides";
-import { getVehicleById, vehicleHref, vehicleTitle } from "@/data/vehicles";
+import { getGuides } from "@/data/guides";
+import { getVehiclesForComparison } from "@/data/catalog";
+import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 
 function LinkList({
   title,
@@ -39,7 +40,8 @@ export function RelatedTools({ hrefs, title = "Outils utiles" }: { hrefs: string
   return <LinkList title={title} items={items} />;
 }
 
-export function RelatedGuides({ slugs, title = "Guides associés" }: { slugs: string[]; title?: string }) {
+export async function RelatedGuides({ slugs, title = "Guides associés" }: { slugs: string[]; title?: string }) {
+  const guides = await getGuides();
   const items = slugs
     .map((s) => guides.find((g) => g.slug === s))
     .filter((g): g is NonNullable<typeof g> => Boolean(g))
@@ -47,10 +49,8 @@ export function RelatedGuides({ slugs, title = "Guides associés" }: { slugs: st
   return <LinkList title={title} items={items} />;
 }
 
-export function RelatedVehicles({ ids, title = "Voitures associées" }: { ids: string[]; title?: string }) {
-  const items = ids
-    .map(getVehicleById)
-    .filter((v): v is NonNullable<typeof v> => Boolean(v))
+export async function RelatedVehicles({ ids, title = "Voitures associées" }: { ids: string[]; title?: string }) {
+  const items = (await getVehiclesForComparison(ids))
     .map((v) => ({ href: vehicleHref(v), label: `${vehicleTitle(v)} : fiche technique` }));
   return <LinkList title={title} items={items} />;
 }

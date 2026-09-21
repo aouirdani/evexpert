@@ -4,8 +4,13 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { DataLegend } from "@/components/ui/DataBadge";
 import { VehicleExplorer } from "@/components/vehicles/VehicleExplorer";
-import { getAllVehicles, getBrands, getModelVersions, getModels, vehicleHref } from "@/data/vehicles";
+import { getAllVehicles, getBrands, getModels } from "@/data/catalog";
+import { versionsOf } from "@/data/catalog/selectors";
+import { vehicleHref } from "@/lib/vehicle-utils";
 import { buildMetadata, itemListJsonLd } from "@/lib/seo";
+
+// Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
+export const revalidate = 86400;
 
 export const metadata = buildMetadata({
   title: "Voitures électriques : autonomie, recharge et fiches techniques",
@@ -14,13 +19,14 @@ export const metadata = buildMetadata({
   path: "/voitures-electriques",
 });
 
-export default function VehiclesPage() {
-  const vehicles = getAllVehicles().map((v) => ({
+export default async function VehiclesPage() {
+  const all = await getAllVehicles();
+  const vehicles = all.map((v) => ({
     ...v,
-    href: vehicleHref(v, getModelVersions(v.brandSlug, v.modelSlug).length > 1 ? "version" : "model"),
+    href: vehicleHref(v, versionsOf(all, v.brandSlug, v.modelSlug).length > 1 ? "version" : "model"),
   }));
-  const brands = getBrands();
-  const models = getModels();
+  const brands = await getBrands();
+  const models = await getModels();
   return (
     <Container className="py-10">
       <Breadcrumbs items={[{ name: "Voitures électriques", href: "/voitures-electriques" }]} />

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { BatteryCharging, Gauge, Plug, Timer } from "lucide-react";
 import type { Vehicle } from "@/types";
-import { vehicleHref } from "@/data/vehicles";
+import { vehicleHref } from "@/lib/vehicle-utils";
 import { fmt } from "@/lib/vehicle-format";
 
 const bodyLabel: Record<Vehicle["bodyType"], string> = {

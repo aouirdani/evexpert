@@ -1,48 +1,49 @@
 import type { Article, ArticleCategory, Vehicle } from "@/types";
 import { SOURCES } from "@/data/sources";
-import { vehicles } from "@/data/vehicles";
 import { averageDcPower, batteryConsumption100 } from "@/lib/vehicle-calcs";
 import { formatNumber } from "@/lib/utils";
 
-/**
- * Articles du blog. Politique éditoriale : pas d'actualité non vérifiée. Les
- * analyses reposent sur le catalogue EVExpert et sont recalculées à chaque
- * build : chaque chiffre publié peut être retrouvé dans les fiches véhicules.
- */
+export function buildArticles(vehicles: Vehicle[]): Article[] {
 
-const DATE = "2026-09-21";
-const N = vehicles.length;
-const name = (v: Vehicle) => `${v.brand} ${v.model} ${v.version}`;
-const median = (a: number[]) => {
-  const s = [...a].sort((x, y) => x - y);
-  const m = Math.floor(s.length / 2);
-  return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
-};
+  /**
+   * Articles du blog. Politique éditoriale : pas d'actualité non vérifiée. Les
+   * analyses reposent sur le catalogue EVExpert et sont recalculées à chaque
+   * build : chaque chiffre publié peut être retrouvé dans les fiches véhicules.
+   */
 
-const byCons = [...vehicles].sort((a, b) => batteryConsumption100(a) - batteryConsumption100(b));
-const withDc = vehicles.filter((v): v is Vehicle & { chargingTime10to80: number; chargingDC: number } => v.chargingTime10to80 !== null && v.chargingDC !== null);
-const byTime = [...withDc].sort((a, b) => a.chargingTime10to80 - b.chargingTime10to80 || b.chargingDC - a.chargingDC);
-const lfp = vehicles.filter((v) => v.chemistry === "LFP");
-const nmc = vehicles.filter((v) => v.chemistry === "NMC");
-const avg = (a: number[]) => a.reduce((s, x) => s + x, 0) / a.length;
+  const DATE = "2026-09-21";
+  const N = vehicles.length;
+  const name = (v: Vehicle) => `${v.brand} ${v.model} ${v.version}`;
+  const median = (a: number[]) => {
+    const s = [...a].sort((x, y) => x - y);
+    const m = Math.floor(s.length / 2);
+    return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+  };
 
-const bodyTypes = ["citadine", "compacte", "berline", "SUV"] as const;
-const bodyStats = bodyTypes.map((b) => {
-  const l = vehicles.filter((v) => v.bodyType === b);
-  return { b, n: l.length, cons: avg(l.map(batteryConsumption100)), range: avg(l.map((v) => v.rangeWltp)) };
-});
+  const byCons = [...vehicles].sort((a, b) => batteryConsumption100(a) - batteryConsumption100(b));
+  const withDc = vehicles.filter((v): v is Vehicle & { chargingTime10to80: number; chargingDC: number } => v.chargingTime10to80 !== null && v.chargingDC !== null);
+  const byTime = [...withDc].sort((a, b) => a.chargingTime10to80 - b.chargingTime10to80 || b.chargingDC - a.chargingDC);
+  const lfp = vehicles.filter((v) => v.chemistry === "LFP");
+  const nmc = vehicles.filter((v) => v.chemistry === "NMC");
+  const avg = (a: number[]) => a.reduce((s, x) => s + x, 0) / a.length;
 
-const rangeBuckets: [string, (r: number) => boolean][] = [
-  ["Moins de 350 km", (r) => r < 350],
-  ["350 à 449 km", (r) => r >= 350 && r < 450],
-  ["450 à 549 km", (r) => r >= 450 && r < 550],
-  ["550 à 649 km", (r) => r >= 550 && r < 650],
-  ["650 km et plus", (r) => r >= 650],
-];
+  const bodyTypes = ["citadine", "compacte", "berline", "SUV"] as const;
+  const bodyStats = bodyTypes.map((b) => {
+    const l = vehicles.filter((v) => v.bodyType === b);
+    return { b, n: l.length, cons: avg(l.map(batteryConsumption100)), range: avg(l.map((v) => v.rangeWltp)) };
+  });
 
-const acValues = Array.from(new Set(vehicles.map((v) => v.chargingAC))).sort((a, b) => a - b);
+  const rangeBuckets: [string, (r: number) => boolean][] = [
+    ["Moins de 350 km", (r) => r < 350],
+    ["350 à 449 km", (r) => r >= 350 && r < 450],
+    ["450 à 549 km", (r) => r >= 450 && r < 550],
+    ["550 à 649 km", (r) => r >= 550 && r < 650],
+    ["650 km et plus", (r) => r >= 650],
+  ];
 
-export const articles: Article[] = [
+  const acValues = Array.from(new Set(vehicles.map((v) => v.chargingAC))).sort((a, b) => a - b);
+
+  return [
   {
     slug: "voitures-electriques-les-plus-sobres",
     title: "Les voitures électriques les plus sobres de notre catalogue",
@@ -343,7 +344,8 @@ export const articles: Article[] = [
     faq: [{ question: "Puis-je signaler une erreur ?", answer: "Oui : utilisez la page Contact en précisant le modèle, la donnée concernée et la source à l'appui." }],
     sources: [SOURCES.evdb],
   },
-];
+  ];
+}
 
 export const articleCategories: ArticleCategory[] = [
   "Nouveautés",
@@ -354,7 +356,3 @@ export const articleCategories: ArticleCategory[] = [
   "Technologie",
   "Guides pratiques",
 ];
-
-export function getArticle(slug: string): Article | undefined {
-  return articles.find((a) => a.slug === slug);
-}

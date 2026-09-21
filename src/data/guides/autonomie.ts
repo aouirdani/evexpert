@@ -2,15 +2,18 @@ import type { Guide } from "@/types";
 import { SOURCES } from "@/data/sources";
 import { RANGE_SCENARIOS, batteryConsumption100, estimateRange } from "@/lib/vehicle-calcs";
 import { formatNumber } from "@/lib/utils";
-import { GUIDE_DATE, veh } from "./helpers";
+import type { GuideContext } from "./helpers";
+import { GUIDE_DATE } from "./helpers";
 
-const r5 = veh("renault-5-e-tech-52-kwh-150-ch");
-const my = veh("tesla-model-y-rwd");
-const ev3 = veh("kia-ev3-long-range");
-const scen = (id: string) => RANGE_SCENARIOS.find((s) => s.id === id)!;
-const km = (v: typeof r5, id: string) => formatNumber(Math.round(estimateRange(v, scen(id)) / 5) * 5);
+export function buildAutonomieGuides(ctx: GuideContext): Guide[] {
+  const { veh } = ctx;
+  const r5 = veh("renault-5-e-tech-52-kwh-150-ch");
+  const my = veh("tesla-model-y-rwd");
+  const ev3 = veh("kia-ev3-long-range");
+  const scen = (id: string) => RANGE_SCENARIOS.find((s) => s.id === id)!;
+  const km = (v: typeof r5, id: string) => formatNumber(Math.round(estimateRange(v, scen(id)) / 5) * 5);
 
-export const autonomieGuides: Guide[] = [
+  return [
   {
     slug: "calculer-autonomie-reelle",
     category: "autonomie",
@@ -330,4 +333,5 @@ export const autonomieGuides: Guide[] = [
     ],
     sources: [SOURCES.evdb],
   },
-];
+  ];
+}
