@@ -76,7 +76,7 @@ export function CostPer100Calculator({ presets = [] }: { presets?: VehiclePreset
             <div className="flex items-center justify-between">
               <h2 className="text-base font-bold text-slate-900">{r.label}</h2>
               {r.key === cheapest.key && (
-                <span className="rounded-full bg-emerald-600 px-2.5 py-0.5 text-xs font-semibold text-white">
+                <span className="rounded-sm bg-signal-deep px-2 py-1 text-xs font-semibold text-white">
                   Le moins cher
                 </span>
               )}

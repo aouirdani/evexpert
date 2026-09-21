@@ -13,7 +13,7 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
   return (
     <>
       <nav aria-label="Fil d'Ariane" className="mb-6">
-        <ol className="flex flex-wrap items-center gap-1 text-sm text-slate-500">
+        <ol className="flex flex-wrap items-center gap-1 text-sm text-muted">
           {full.map((item, i) => {
             const isLast = i === full.length - 1;
             return (

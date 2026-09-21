@@ -18,7 +18,7 @@ const bodyLabel: Record<Vehicle["bodyType"], string> = {
 /** Carte véhicule : données sourcées uniquement, aucune image décorative. */
 export function VehicleCard({ vehicle: v, href }: { vehicle: Vehicle; href?: string }) {
   return (
-    <article className="group relative flex flex-col rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-md">
+    <article className="group relative flex flex-col rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-md has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-offset-2 has-[a:focus-visible]:outline-signal-deep">
       <div className="flex items-center justify-between gap-2">
         <p className="text-xs font-semibold uppercase tracking-wide text-emerald-800">{v.brand}</p>
         <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-700">

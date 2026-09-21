@@ -36,7 +36,7 @@ export function SpecTable({
             <dd
               className={
                 r.value === "Non disponible"
-                  ? "tabular text-right text-slate-500"
+                  ? "tabular text-right text-muted"
                   : "tabular text-right font-semibold text-slate-900"
               }
             >

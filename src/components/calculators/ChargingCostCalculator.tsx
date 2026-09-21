@@ -73,7 +73,7 @@ export function ChargingCostCalculator({ presets = [] }: { presets?: VehiclePres
             <ResultCard label="Coût aux 100 km" value={formatEuro(r.costPer100km, 2)} />
             <ResultCard label="Autonomie ajoutée" value={`≈ ${formatNumber(r.rangeAdded)} km`} />
           </div>
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-muted">
             Calcul transparent&nbsp;: énergie stockée = capacité × (cible − actuel) / 100 ;
             énergie au compteur = énergie stockée / rendement ; coût = énergie au compteur × prix du kWh.
           </p>

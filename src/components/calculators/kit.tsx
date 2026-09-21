@@ -20,7 +20,7 @@ export function Field({
         {label}
       </label>
       {children}
-      {hint && <p className="text-xs text-slate-500">{hint}</p>}
+      {hint && <p className="text-xs text-muted">{hint}</p>}
     </div>
   );
 }
@@ -148,7 +148,7 @@ export function ResultCard({
           : "border-slate-200 bg-white",
       )}
     >
-      <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
+      <p className="text-xs font-medium uppercase tracking-wide text-muted">
         {label}
       </p>
       <p
@@ -159,7 +159,7 @@ export function ResultCard({
       >
         {value}
       </p>
-      {hint && <p className="tabular mt-1 text-sm text-slate-500">{hint}</p>}
+      {hint && <p className="tabular mt-1 text-sm text-muted">{hint}</p>}
     </div>
   );
 }

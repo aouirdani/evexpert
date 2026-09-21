@@ -83,7 +83,7 @@ export function ComparisonTable({ vehicles }: { vehicles: Vehicle[] }) {
                             isBest
                               ? "tabular bg-emerald-50 px-4 py-2.5 font-bold text-emerald-900"
                               : m.format(v) === "Non disponible"
-                                ? "px-4 py-2.5 text-slate-500"
+                                ? "px-4 py-2.5 text-muted"
                                 : "tabular px-4 py-2.5 text-slate-900"
                           }
                         >

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { ReactNode } from "react";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 export function Card({
@@ -12,7 +12,7 @@ export function Card({
   return (
     <div
       className={cn(
-        "rounded-2xl border border-slate-200 bg-white shadow-sm",
+        "rounded-2xl border border-line bg-surface shadow-xs",
         className,
       )}
     >
@@ -35,16 +35,10 @@ export function SectionHeading({
   return (
     <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
       <div className="max-w-2xl">
-        {eyebrow && (
-          <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-emerald-800">
-            {eyebrow}
-          </p>
-        )}
-        <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
-          {title}
-        </h2>
+        {eyebrow && <p className="eyebrow mb-2 text-signal-deep">{eyebrow}</p>}
+        <h2 className="text-h2 font-bold text-ink">{title}</h2>
         {description && (
-          <p className="mt-2 text-base text-slate-600">{description}</p>
+          <p className="mt-2 text-base text-muted">{description}</p>
         )}
       </div>
       {action && <div className="shrink-0">{action}</div>}
@@ -52,63 +46,132 @@ export function SectionHeading({
   );
 }
 
-type ButtonVariant = "primary" | "secondary" | "outline";
+/* ------------------------------------------------------------------ */
+/* Boutons                                                             */
+/* ------------------------------------------------------------------ */
 
-const buttonStyles: Record<ButtonVariant, string> = {
-  primary:
-    "bg-emerald-700 text-white hover:bg-emerald-800 focus-visible:outline-emerald-700",
-  secondary:
-    "bg-slate-900 text-white hover:bg-slate-800 focus-visible:outline-slate-900",
-  outline:
-    "border border-slate-300 bg-white text-slate-800 hover:bg-slate-50 focus-visible:outline-slate-400",
+export type ButtonVariant = "primary" | "signal" | "secondary" | "outline" | "ghost";
+export type ButtonSize = "md" | "lg";
+
+const buttonVariants: Record<ButtonVariant, string> = {
+  // Action principale sur fond clair.
+  primary: "bg-ink text-paper hover:bg-ink-raised",
+  // Action principale sur fond sombre (ou mise en avant forte) : lime + encre.
+  signal: "bg-signal text-ink hover:brightness-95",
+  // Alias historique de primary, conservé pour les pages existantes.
+  secondary: "bg-ink text-paper hover:bg-ink-raised",
+  outline: "border border-ink/25 bg-transparent text-ink hover:border-ink hover:bg-surface",
+  ghost: "text-ink hover:bg-paper-deep",
 };
+
+const buttonSizes: Record<ButtonSize, string> = {
+  md: "px-5 py-2.5 text-sm",
+  lg: "px-6 py-3.5 text-base",
+};
+
+/** Classes d'un bouton : réutilisables pour <Link>, <button> ou <summary>. */
+export function buttonClass(
+  variant: ButtonVariant = "primary",
+  size: ButtonSize = "md",
+  className?: string,
+) {
+  return cn(
+    "inline-flex items-center justify-center gap-2 rounded-md font-semibold transition-colors disabled:pointer-events-none disabled:opacity-50",
+    buttonVariants[variant],
+    buttonSizes[size],
+    className,
+  );
+}
 
 export function ButtonLink({
   href,
   children,
   variant = "primary",
+  size = "md",
   className,
 }: {
   href: string;
   children: ReactNode;
   variant?: ButtonVariant;
+  size?: ButtonSize;
   className?: string;
 }) {
   return (
-    <Link
-      href={href}
-      className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
-        buttonStyles[variant],
-        className,
-      )}
-    >
+    <Link href={href} className={buttonClass(variant, size, className)}>
       {children}
     </Link>
   );
 }
+
+export function Button({
+  variant = "primary",
+  size = "md",
+  className,
+  type = "button",
+  ...props
+}: {
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+} & ButtonHTMLAttributes<HTMLButtonElement>) {
+  return <button type={type} className={buttonClass(variant, size, className)} {...props} />;
+}
+
+/* ------------------------------------------------------------------ */
+/* Badges et puces                                                     */
+/* ------------------------------------------------------------------ */
+
+export type BadgeTone = "neutral" | "emerald" | "amber" | "blue";
+
+// Les noms de tons historiques (emerald, amber, blue) sont conservés pour ne pas
+// toucher aux pages existantes ; ils pointent désormais sur les tokens EVExpert.
+const badgeTones: Record<BadgeTone, string> = {
+  neutral: "bg-paper-deep text-body",
+  emerald: "bg-signal-tint text-signal-deep",
+  amber: "bg-warn-bg text-warn",
+  blue: "bg-info-bg text-info",
+};
 
 export function Badge({
   children,
   tone = "neutral",
 }: {
   children: ReactNode;
-  tone?: "neutral" | "emerald" | "amber" | "blue";
+  tone?: BadgeTone;
 }) {
-  const tones = {
-    neutral: "bg-slate-100 text-slate-700",
-    emerald: "bg-emerald-50 text-emerald-700",
-    amber: "bg-amber-50 text-amber-700",
-    blue: "bg-blue-50 text-blue-700",
-  };
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium",
-        tones[tone],
+        "inline-flex items-center gap-1 rounded-sm px-2 py-1 text-xs font-semibold",
+        badgeTones[tone],
       )}
     >
       {children}
     </span>
+  );
+}
+
+/** Lien-puce (marques, catégories) : cible tactile ≥ 40 px de haut. */
+export function Chip({
+  href,
+  children,
+  count,
+  className,
+}: {
+  href: string;
+  children: ReactNode;
+  count?: number;
+  className?: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className={cn(
+        "inline-flex min-h-10 items-center gap-1.5 rounded-md border border-line bg-surface px-3 text-sm font-medium text-ink transition-colors hover:border-ink",
+        className,
+      )}
+    >
+      {children}
+      {count !== undefined && <span className="tabular text-muted">({count})</span>}
+    </Link>
   );
 }

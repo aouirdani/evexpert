@@ -76,7 +76,7 @@ export function RangeCalculator({ presets = [] }: { presets?: VehiclePreset[] })
               <ResultCard label="Énergie exploitable" value={`${formatNumber(r.usableEnergy, 1)} kWh`} />
               <ResultCard label="Consommation ajustée" value={`${formatNumber(r.adjustedConsumption, 1)} kWh/100`} />
             </div>
-            <p className="text-xs text-slate-500">
+            <p className="text-xs text-muted">
               L&apos;estimation applique des facteurs liés à la vitesse, la
               température et le type de conduite à votre consommation de référence.
             </p>

@@ -59,7 +59,7 @@ export default async function SearchPage({
           </Link>
         ))}
         {query && results.length === 0 && (
-          <p className="rounded-xl bg-slate-50 p-8 text-center text-sm text-slate-500">
+          <p className="rounded-xl bg-slate-50 p-8 text-center text-sm text-muted">
             Aucun résultat. Essayez un autre terme (marque, modèle, « recharge », « TCO »…).
           </p>
         )}

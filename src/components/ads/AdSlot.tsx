@@ -26,7 +26,7 @@ export function AdSlot({ slot, format = "leaderboard", className }: AdSlotProps)
   if (!adsConfig.enabled || !adsConfig.clientId) return null;
   return (
     <aside aria-label="Publicité" data-ad-slot={slot} className={cn("w-full overflow-hidden", sizes[format], className)}>
-      <p className="text-center text-[11px] uppercase tracking-wide text-slate-500">Publicité</p>
+      <p className="text-center text-[11px] uppercase tracking-wide text-muted">Publicité</p>
     </aside>
   );
 }

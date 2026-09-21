@@ -1,15 +1,26 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
+const containerWidths = {
+  /** 72 rem : largeur historique, valeur par défaut. */
+  page: "max-w-page",
+  /** 80 rem : pages de données (comparateur, tableaux larges). */
+  wide: "max-w-wide",
+  /** 44 rem : lecture longue (guides, articles). */
+  reading: "max-w-reading",
+} as const;
+
 export function Container({
   children,
   className,
+  width = "page",
 }: {
   children: ReactNode;
   className?: string;
+  width?: keyof typeof containerWidths;
 }) {
   return (
-    <div className={cn("mx-auto w-full max-w-6xl px-4 sm:px-6", className)}>
+    <div className={cn("mx-auto w-full px-4 sm:px-6", containerWidths[width], className)}>
       {children}
     </div>
   );
@@ -27,15 +38,13 @@ export function PageHeader({
   return (
     <div className="max-w-3xl">
       {eyebrow && (
-        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-emerald-800">
-          {eyebrow}
-        </p>
+        <p className="eyebrow mb-2 text-signal-deep">{eyebrow}</p>
       )}
-      <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+      <h1 className="text-h1 font-bold text-ink">
         {title}
       </h1>
       {description && (
-        <p className="mt-3 text-lg leading-relaxed text-slate-700">{description}</p>
+        <p className="mt-3 text-lg leading-relaxed text-body">{description}</p>
       )}
     </div>
   );
