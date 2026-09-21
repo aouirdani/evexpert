@@ -45,27 +45,45 @@
   --color-danger-bg: #fbe4e4;
 
   /* Échelle typographique fluide (mobile-first) */
-  --text-display: clamp(2.5rem, 1.7rem + 3.6vw, 4.25rem);
-  --text-display--line-height: 1.02;
-  --text-display--letter-spacing: -0.03em;
-  --text-h1: clamp(2rem, 1.55rem + 2vw, 3rem);
-  --text-h1--line-height: 1.08;
-  --text-h1--letter-spacing: -0.025em;
+  --text-display: clamp(2.5rem, 1.55rem + 4.4vw, 4.75rem);
+  --text-display--line-height: 1;
+  --text-display--letter-spacing: -0.038em;
+  --text-h1: clamp(2.125rem, 1.6rem + 2.4vw, 3.5rem);
+  --text-h1--line-height: 1.04;
+  --text-h1--letter-spacing: -0.03em;
   --text-h2: clamp(1.5rem, 1.3rem + 0.9vw, 2rem);
   --text-h2--line-height: 1.15;
   --text-h2--letter-spacing: -0.02em;
-  --text-h3: 1.25rem;
+  --text-h3: clamp(1.125rem, 1.08rem + 0.2vw, 1.25rem);
   --text-h3--line-height: 1.3;
   --text-h3--letter-spacing: -0.01em;
 
-  /* Rayons : 4 (étiquettes) / 8 (contrôles) / 12 (cartes). Écrase l'échelle Tailwind. */
+  /* Chapô éditorial et légendes */
+  --text-dek: clamp(1.125rem, 1.03rem + 0.45vw, 1.375rem);
+  --text-dek--line-height: 1.45;
+  --text-dek--letter-spacing: -0.008em;
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.5;
+
+  /* Données : la valeur est un objet typographique (tabulaire, serré). */
+  --text-data-xl: clamp(3.5rem, 2.6rem + 4.2vw, 5.5rem);
+  --text-data-xl--line-height: 0.92;
+  --text-data-xl--letter-spacing: -0.045em;
+  --text-data-lg: clamp(2rem, 1.7rem + 1.3vw, 2.75rem);
+  --text-data-lg--line-height: 1;
+  --text-data-lg--letter-spacing: -0.035em;
+  --text-data-md: 1.25rem;
+  --text-data-md--line-height: 1.2;
+  --text-data-md--letter-spacing: -0.015em;
+
+  /* Rayons : 4 (étiquettes) / 8 (contrôles, encadrés). Écrase l'échelle Tailwind. */
   --radius-xs: 4px;
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 8px;
   --radius-xl: 8px;
-  --radius-2xl: 12px;
-  --radius-3xl: 12px;
+  --radius-2xl: 8px;
+  --radius-3xl: 8px;
 
   /* Ombres : quasi absentes, l'élévation passe par les filets. */
   --shadow-xs: 0 1px 0 0 rgb(11 22 38 / 0.04);
@@ -79,7 +97,8 @@
   --container-reading: 44rem;
 
   /* Rythme vertical entre sections */
-  --spacing-section: clamp(3rem, 2rem + 4vw, 6rem);
+  --spacing-section: clamp(3.5rem, 2.4rem + 5vw, 7rem);
+  --spacing-block: clamp(2rem, 1.5rem + 2vw, 3.5rem);
 }
 
 @layer base {
@@ -127,10 +146,35 @@
   text-transform: uppercase;
 }
 
+/* Étiquette de donnée : plus sobre que l'eyebrow, pensée pour être répétée. */
+@utility label {
+  font-size: 0.6875rem;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, currentColor 72%, transparent);
+}
+
 /* Chiffres alignés (tableaux, grands chiffres). */
 @utility tabular {
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.01em;
+}
+
+/* Valeur de donnée : tabulaire, sans changer l'interlettrage de la taille choisie. */
+@utility num {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* Unité qui suit une valeur : petite, discrète, sur la ligne de base. */
+@utility unit {
+  font-size: 0.42em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: color-mix(in srgb, currentColor 66%, transparent);
+  margin-inline-start: 0.28em;
 }
 
 /* Titres éditoriaux : équilibre des retours à la ligne. */
@@ -139,42 +183,102 @@
   text-wrap: balance;
 }
 
+@utility balance {
+  text-wrap: balance;
+}
+
+@utility pretty {
+  text-wrap: pretty;
+}
+
+/* Lien éditorial : filet discret qui se trace en pleine couleur au survol (160 ms). */
+@utility link-u {
+  background-image:
+    linear-gradient(currentColor, currentColor),
+    linear-gradient(color-mix(in srgb, currentColor 35%, transparent), color-mix(in srgb, currentColor 35%, transparent));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px, 100% 1px;
+  padding-bottom: 1px;
+  text-decoration: none;
+  transition: background-size 160ms ease-out;
+  &:hover {
+    background-size: 100% 2px, 100% 1px;
+  }
+}
+
+/* Filets : fort (encre) en tête de section, fin (line) entre les lignes. */
+@utility rule-strong {
+  border-top: 2px solid var(--color-ink);
+}
+@utility rule-fine {
+  border-top: 1px solid var(--color-line);
+}
+
 /* Texte éditorial (guides, articles, pages légales). */
 .prose-ev {
   color: var(--color-body);
-  line-height: 1.75;
+  font-size: 1.0625rem;
+  line-height: 1.72;
 }
 .prose-ev h2 {
   scroll-margin-top: 5.5rem;
-  margin-top: 2.5rem;
-  font-size: 1.5rem;
-  line-height: 1.25;
+  margin-top: 3.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-line);
+  font-size: 1.75rem;
+  line-height: 1.15;
   font-weight: 700;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
   color: var(--color-ink);
+}
+.prose-ev h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
 }
 .prose-ev h3 {
   scroll-margin-top: 5.5rem;
-  margin-top: 1.75rem;
-  font-size: 1.15rem;
+  margin-top: 2rem;
+  font-size: 1.1875rem;
+  line-height: 1.3;
   font-weight: 700;
+  letter-spacing: -0.012em;
   color: var(--color-ink);
 }
 .prose-ev p {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
 }
 .prose-ev ul {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
   padding-left: 1.25rem;
   list-style: disc;
 }
 .prose-ev li {
-  margin-top: 0.4rem;
+  margin-top: 0.45rem;
+}
+.prose-ev li::marker {
+  color: var(--color-control);
+}
+.prose-ev strong {
+  font-weight: 650;
+  color: var(--color-ink);
 }
 .prose-ev a {
   color: var(--color-signal-deep);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  text-decoration: none;
+  background-image:
+    linear-gradient(currentColor, currentColor),
+    linear-gradient(color-mix(in srgb, currentColor 35%, transparent), color-mix(in srgb, currentColor 35%, transparent));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px, 100% 1px;
+  padding-bottom: 1px;
+  transition: background-size 160ms ease-out;
+}
+.prose-ev a:hover {
+  background-size: 100% 2px, 100% 1px;
 }
 
 @media (prefers-reduced-motion: reduce) {

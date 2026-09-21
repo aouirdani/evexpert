@@ -47,14 +47,22 @@ Une seule famille : Schibsted Grotesk, variable 400-800, auto-hébergée
 | `text-h1` | 32 → 48 px | titre de page |
 | `text-h2` | 24 → 32 px | titre de section |
 | `text-h3` | 20 px | titre de carte |
-| `eyebrow` | 12 px capitales | étiquettes |
-| `tabular` | — | chiffres alignés |
+| `text-dek` | 18 → 22 px | chapô éditorial (sous un h1) |
+| `text-data-xl` / `-lg` / `-md` | 56-88 / 32-44 / 20 px | valeurs de données (autonomie de fiche, cotes de carte, tableaux) |
+| `text-caption` | 13 px | légendes, métadonnées |
+| `eyebrow` | 12 px capitales | rubrique |
+| `label` | 11 px capitales | étiquette de donnée (couleur = 72 % du texte courant, fonctionne sur clair et sombre) |
+| `num` / `tabular` | — | chiffres tabulaires |
+| `unit` | 0,42 em | unité qui suit une valeur (66 % du texte courant) |
+| `link-u` | — | lien à filet qui se trace au survol (160 ms) ; `.prose-ev a` l'applique |
+| `rule-strong` / `rule-fine` | — | filet fort (encre, 2 px) / fin (`line`) en tête de bloc |
+| `balance` / `pretty` | — | `text-wrap` |
 
 ## Rayons, ombres, espacements
 
-- Rayons : `rounded-sm` 4 px (étiquettes), `rounded-md`/`lg`/`xl` 8 px (contrôles), `rounded-2xl`/`3xl` 12 px (cartes). `rounded-full` réservé aux éléments circulaires.
+- Rayons : `rounded-sm` 4 px (étiquettes), `rounded-md`/`lg`/`xl`/`2xl`/`3xl` 8 px (contrôles et encadrés). `rounded-full` réservé aux éléments circulaires.
 - Ombres : `shadow-xs`/`sm` quasi nulles, `shadow-md`/`lg` uniquement pour les surcouches (menus).
-- Grille 4 px (échelle Tailwind). Rythme de section : `py-section`, `mt-section`.
+- Grille 4 px (échelle Tailwind). Rythme de section : `py-section`, `mt-section` (56 → 112 px) ; `--spacing-block` (32 → 56 px) entre blocs d'une même section.
 - Largeurs : `Container width="page"` 72 rem (défaut), `"wide"` 80 rem, `"reading"` 44 rem.
 - Breakpoints Tailwind (640 / 768 / 1024 / 1280), mobile-first.
 
