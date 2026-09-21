@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
@@ -26,23 +27,56 @@ export function SectionHeading({
   title,
   description,
   action,
+  tone = "paper",
+  id,
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   action?: ReactNode;
+  /** `ink` : sur fond sombre. */
+  tone?: "paper" | "ink";
+  id?: string;
 }) {
+  const onInk = tone === "ink";
   return (
     <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
       <div className="max-w-2xl">
-        {eyebrow && <p className="eyebrow mb-2 text-signal-deep">{eyebrow}</p>}
-        <h2 className="text-h2 font-bold text-ink">{title}</h2>
+        {eyebrow && <p className={cn("eyebrow mb-2", onInk ? "text-signal" : "text-signal-deep")}>{eyebrow}</p>}
+        <h2 id={id} className={cn("text-h2 font-bold", onInk ? "text-paper" : "text-ink")}>{title}</h2>
         {description && (
-          <p className="mt-2 text-base text-muted">{description}</p>
+          <p className={cn("mt-2 text-base", onInk ? "text-ink-muted" : "text-muted")}>{description}</p>
         )}
       </div>
       {action && <div className="shrink-0">{action}</div>}
     </div>
+  );
+}
+
+/** Lien fléché discret (« Voir toutes les voitures → »). */
+export function ArrowLink({
+  href,
+  children,
+  tone = "paper",
+  className,
+}: {
+  href: string;
+  children: ReactNode;
+  tone?: "paper" | "ink";
+  className?: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className={cn(
+        "group inline-flex min-h-10 items-center gap-1.5 rounded-sm text-sm font-semibold underline-offset-4 hover:underline",
+        tone === "ink" ? "text-signal" : "text-signal-deep",
+        className,
+      )}
+    >
+      {children}
+      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
+    </Link>
   );
 }
 

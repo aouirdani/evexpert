@@ -96,3 +96,13 @@ de texte déclarée après une taille personnalisée la supprimerait.
 - `--header-h` (globals.css : 3,5 rem, 4 rem dès `lg`) est la source unique de la hauteur du header ; ne jamais coder de pixels.
 - `NavLink` (seul Client Component de la navigation) lit `usePathname()` : `aria-current="page"` (page exacte) ou `"true"` (même section) + classe active. Ses classes sont désignées par `variant` (`nav`, `compare`, `utility`, `row`, `row-compare`, `sub`) : les passer en props gonflerait la charge utile RSC. Pas de `cn()` dedans (tailwind-merge alourdirait le JS de chaque page).
 - `Footer` : fond `ink`, règle graduée SVG, bandeau éditorial (promesse + CTA Comparer/Explorer), quatre colonnes, mentions et « Gestion des cookies » (`data-cookie-settings`, relié par CookieBanner).
+
+## Cartes véhicule et accueil (étape 4)
+
+- `VehicleCard` (`vehicles/VehicleCard.tsx`) : type de carrosserie + silhouette, marque, modèle (h3 = lien étiré, `aria-label` = titre complet), **autonomie WLTP en grand** avec `RangeBar`, puis batterie utile / charge DC max / conso. calculée en second plan, temps 10-80 % si connu. Valeur absente → « — » (lue « Non disponible »). Aucun prix : la source n'en fournit pas pour la France, on n'en invente pas.
+- `BodyGlyph` : `<use>` vers le sprite statique `public/brand/body-glyphs.svg` (8 silhouettes, une par `BodyType`, trait `currentColor`). Illustrations génériques, toujours `aria-hidden` ; à annoncer comme telles (note sous les grilles). Le sprite est mis en cache : chaque carte n'ajoute qu'une balise au HTML.
+- `RangeBar` : barre CSS relative à l'échelle commune `RANGE_SCALE_MAX` (800 km, `vehicle-format.ts`, garantie par un test). Une seule couleur : c'est une donnée, pas un classement. `decorative` quand la valeur est écrite à côté ; sinon `role="img"` + `aria-label`.
+- `bodyTypeLabels`, `bodyGlyphId` (`vehicle-format.ts`) : source unique des libellés et identifiants de carrosserie.
+- `ArrowLink`, `SectionHeading tone="ink"` (`ui/primitives.tsx`) : liens fléchés et titres de section sur fond sombre.
+- Accueil : `components/home/` (`Hero`, `BlueprintArt`, `sections.tsx`). Rythme : hero ink → démarrer (tuile claire + tuile ink + lignes) → sélection de voitures → comparateur (ink, tableau réel) → données (paper-deep) → recharge (colonnes filetées) → guides et analyses (listes) → outils (ink) → FAQ.
+- Titres : sous un h1, une grille de cartes (h3) est précédée d'un h2 (visible, ou `sr-only` sur l'explorateur et les pages marque).

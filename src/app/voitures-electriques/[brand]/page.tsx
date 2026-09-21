@@ -58,6 +58,7 @@ export default async function BrandPage({ params }: { params: Promise<Params> })
         title={`${name} électriques : modèles, autonomie et recharge`}
         description={`${models.length} modèle${models.length > 1 ? "s" : ""} et ${list.length} version${list.length > 1 ? "s" : ""} dans notre base. Autonomie WLTP de ${formatNumber(Math.min(...ranges))} à ${formatNumber(Math.max(...ranges))} km selon la source.`}
       />
+      <h2 className="sr-only">Versions {name}</h2>
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {list.map((v) => (
           <VehicleCard key={v.id} vehicle={v} href={vehicleHref(v, list.filter((x) => x.modelSlug === v.modelSlug).length > 1 ? "version" : "model")} />

@@ -6,7 +6,7 @@ import { formatDateFr } from "@/lib/utils";
 import { Badge } from "@/components/ui/primitives";
 import { guideCategoryLabels } from "@/data/guides/labels";
 
-function DynamicIcon({ name, className }: { name: string; className?: string }) {
+export function DynamicIcon({ name, className }: { name: string; className?: string }) {
   const Icon = (Icons as unknown as Record<string, Icons.LucideIcon>)[name] ??
     Icons.Calculator;
   return <Icon className={className} aria-hidden />;

@@ -1,21 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { BodyType, Vehicle } from "@/types";
+import type { Vehicle } from "@/types";
 import { ASSUMPTIONS } from "@/data/assumptions";
 import { costPer100km } from "@/lib/vehicle-calcs";
+import { bodyTypeLabels } from "@/lib/vehicle-format";
 import { VehicleCard } from "./VehicleCard";
-
-const bodyLabels: Record<BodyType, string> = {
-  citadine: "Citadine",
-  compacte: "Compacte",
-  berline: "Berline",
-  SUV: "SUV",
-  break: "Break",
-  monospace: "Monospace",
-  utilitaire: "Utilitaire",
-  coupé: "Coupé",
-};
 
 type SortKey = "range-desc" | "cost-asc" | "dc-desc" | "battery-desc" | "name";
 
@@ -83,7 +73,7 @@ export function VehicleExplorer({ vehicles }: { vehicles: (Vehicle & { href: str
           <label htmlFor="v-body" className={labelCls}>Carrosserie</label>
           <select id="v-body" value={body} onChange={(e) => setBody(e.target.value)} className={inputCls}>
             <option value="all">Toutes</option>
-            {bodies.map((b) => (<option key={b} value={b}>{bodyLabels[b]}</option>))}
+            {bodies.map((b) => (<option key={b} value={b}>{bodyTypeLabels[b]}</option>))}
           </select>
         </div>
         <div>
@@ -107,6 +97,7 @@ export function VehicleExplorer({ vehicles }: { vehicles: (Vehicle & { href: str
       </form>
 
       <div>
+        <h2 className="sr-only">Résultats</h2>
         <p className="mb-4 text-sm font-medium text-slate-700" role="status" aria-live="polite">
           {filtered.length} version{filtered.length > 1 ? "s" : ""} affichée{filtered.length > 1 ? "s" : ""} sur {vehicles.length}
         </p>

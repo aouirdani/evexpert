@@ -1,70 +1,86 @@
 import Link from "next/link";
-import { BatteryCharging, Gauge, Plug, Timer } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { Vehicle } from "@/types";
-import { vehicleHref } from "@/lib/vehicle-utils";
-import { fmt } from "@/lib/vehicle-format";
+import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
+import { batteryConsumption100 } from "@/lib/vehicle-calcs";
+import { bodyTypeLabels } from "@/lib/vehicle-format";
+import { formatNumber } from "@/lib/utils";
+import { BodyGlyph } from "./BodyGlyph";
+import { RangeBar } from "./RangeBar";
 
-const bodyLabel: Record<Vehicle["bodyType"], string> = {
-  citadine: "Citadine",
-  compacte: "Compacte",
-  berline: "Berline",
-  SUV: "SUV",
-  break: "Break",
-  monospace: "Monospace",
-  utilitaire: "Utilitaire",
-  coupé: "Coupé",
-};
+function Spec({ label, value, unit }: { label: string; value: string | null; unit: string }) {
+  return (
+    <div className="min-w-0">
+      <dt className="text-[0.6875rem] font-medium leading-tight text-muted">{label}</dt>
+      <dd className="mt-1">
+        {value === null ? (
+          <>
+            <span aria-hidden className="text-lg font-semibold text-muted">—</span>
+            <span className="sr-only">Non disponible</span>
+          </>
+        ) : (
+          <>
+            <span className="tabular block text-lg font-semibold leading-none text-ink">{value}</span>
+            <span className="mt-1 block text-xs text-muted">{unit}</span>
+          </>
+        )}
+      </dd>
+    </div>
+  );
+}
 
-/** Carte véhicule : données sourcées uniquement, aucune image décorative. */
+/**
+ * Carte véhicule : l'autonomie domine, le reste est en second plan. Aucune donnée
+ * n'est inventée : une valeur absente s'affiche « — » (lue « Non disponible »).
+ * Toute la carte est cliquable via un vrai lien HTML (lien étiré) ; l'anneau de focus
+ * entoure la carte entière. Server Component (aussi rendu dans l'explorateur client).
+ */
 export function VehicleCard({ vehicle: v, href }: { vehicle: Vehicle; href?: string }) {
   return (
-    <article className="group relative flex flex-col rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-md has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-offset-2 has-[a:focus-visible]:outline-signal-deep">
-      <div className="flex items-center justify-between gap-2">
-        <p className="text-xs font-semibold uppercase tracking-wide text-emerald-800">{v.brand}</p>
-        <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-700">
-          {bodyLabel[v.bodyType]}
-        </span>
+    <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-colors hover:border-ink has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-offset-2 has-[a:focus-visible]:outline-signal-deep">
+      <div className="bg-paper-deep px-5 pb-2 pt-3.5">
+        <p className="eyebrow text-body">{bodyTypeLabels[v.bodyType]}</p>
+        <BodyGlyph type={v.bodyType} className="mx-auto h-14 w-full max-w-52 text-ink" />
       </div>
-      <h3 className="mt-1 text-lg font-bold leading-snug text-slate-900">
-        <Link
-          href={href ?? vehicleHref(v)}
-          className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none"
-        >
-          {v.model}
-        </Link>
-      </h3>
-      <p className="text-sm text-slate-600">{v.version}</p>
 
-      <dl className="mt-4 grid grid-cols-2 gap-x-3 gap-y-3 text-sm">
-        <div>
-          <dt className="flex items-center gap-1.5 text-xs text-slate-600">
-            <Gauge className="h-4 w-4 shrink-0 text-emerald-700" aria-hidden />
-            Autonomie WLTP
-          </dt>
-          <dd className="tabular mt-0.5 font-semibold text-slate-900">{fmt(v.rangeWltp, "km")}</dd>
+      <div className="flex flex-1 flex-col px-5 pb-4 pt-4">
+        <p className="eyebrow text-signal-deep">{v.brand}</p>
+        <h3 className="mt-1 text-h3 font-bold text-ink">
+          <Link
+            href={href ?? vehicleHref(v)}
+            aria-label={vehicleTitle(v)}
+            className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none"
+          >
+            {v.model}
+          </Link>
+        </h3>
+        <p className="text-sm text-muted">{v.version}</p>
+
+        <div className="mt-4">
+          <p className="tabular text-h1 font-bold leading-none text-ink">
+            {formatNumber(v.rangeWltp)}
+            <span className="ml-1 text-base font-semibold text-muted">km</span>
+          </p>
+          <p className="eyebrow mt-2 text-muted">Autonomie WLTP</p>
+          <RangeBar value={v.rangeWltp} decorative className="mt-3" />
         </div>
-        <div>
-          <dt className="flex items-center gap-1.5 text-xs text-slate-600">
-            <BatteryCharging className="h-4 w-4 shrink-0 text-emerald-700" aria-hidden />
-            Batterie utile
-          </dt>
-          <dd className="tabular mt-0.5 font-semibold text-slate-900">{fmt(v.batteryUsable, "kWh", 1)}</dd>
-        </div>
-        <div>
-          <dt className="flex items-center gap-1.5 text-xs text-slate-600">
-            <Plug className="h-4 w-4 shrink-0 text-emerald-700" aria-hidden />
-            Charge DC max
-          </dt>
-          <dd className="tabular mt-0.5 font-semibold text-slate-900">{fmt(v.chargingDC, "kW")}</dd>
-        </div>
-        <div>
-          <dt className="flex items-center gap-1.5 text-xs text-slate-600">
-            <Timer className="h-4 w-4 shrink-0 text-emerald-700" aria-hidden />
-            10-80 % (DC)
-          </dt>
-          <dd className="tabular mt-0.5 font-semibold text-slate-900">{fmt(v.chargingTime10to80, "min")}</dd>
-        </div>
-      </dl>
+
+        <dl className="mt-4 grid grid-cols-3 gap-x-3 border-t border-line pt-3.5">
+          <Spec label="Batterie utile" value={formatNumber(v.batteryUsable, 1)} unit="kWh" />
+          <Spec label="Charge DC max" value={v.chargingDC === null ? null : formatNumber(v.chargingDC)} unit="kW" />
+          <Spec label="Conso. calculée" value={formatNumber(batteryConsumption100(v), 1)} unit="kWh/100 km" />
+        </dl>
+        {v.chargingTime10to80 !== null && (
+          <p className="mt-3 text-xs text-muted">
+            Recharge rapide 10-80 % : <span className="tabular font-semibold text-body">{formatNumber(v.chargingTime10to80)} min</span>
+          </p>
+        )}
+
+        <p aria-hidden className="mt-auto flex items-center gap-1.5 pt-4 text-sm font-semibold text-signal-deep">
+          Voir la fiche
+          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+        </p>
+      </div>
     </article>
   );
 }
