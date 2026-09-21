@@ -61,28 +61,31 @@ export function SectionHeading({
   return (
     <div
       className={cn(
-        "mb-8 grid gap-x-10 gap-y-4 border-t-2 pt-4 md:mb-10 md:grid-cols-12 md:items-end",
+        "mb-8 grid gap-x-10 gap-y-3 border-t-2 pt-4 md:mb-12 md:grid-cols-12 md:gap-y-4",
         onInk ? "border-paper" : "border-ink",
       )}
     >
-      <div className="md:col-span-7">
-        {(eyebrow || numeral) && (
-          <p className={cn("label mb-3 flex items-center gap-3", onInk ? "text-ink-muted" : "text-muted")}>
-            {numeral && <span className={cn("num", onInk ? "text-signal" : "text-signal-deep")}>{numeral}</span>}
-            {eyebrow}
-          </p>
+      {(eyebrow || numeral) && (
+        <p className={cn("label flex items-center gap-3 md:col-span-7", onInk ? "text-ink-muted" : "text-muted")}>
+          {numeral && <span className={cn("num", onInk ? "text-signal" : "text-signal-deep")}>{numeral}</span>}
+          {eyebrow}
+        </p>
+      )}
+      {action && <div className="md:col-span-5 md:col-start-8 md:row-start-1 md:justify-self-end">{action}</div>}
+      <h2
+        id={id}
+        className={cn(
+          "balance text-h2 font-bold md:self-end",
+          description ? "md:col-span-7" : "md:col-span-12",
+          onInk ? "text-paper" : "text-ink",
         )}
-        <h2 id={id} className={cn("balance text-h2 font-bold", onInk ? "text-paper" : "text-ink")}>
-          {title}
-        </h2>
-      </div>
-      {(description || action) && (
-        <div className="md:col-span-5 md:justify-self-end md:text-right lg:max-w-md">
-          {description && (
-            <p className={cn("pretty text-base md:text-left", onInk ? "text-ink-muted" : "text-muted")}>{description}</p>
-          )}
-          {action && <div className={cn(description && "mt-3")}>{action}</div>}
-        </div>
+      >
+        {title}
+      </h2>
+      {description && (
+        <p className={cn("pretty text-base md:col-span-5 md:self-end", onInk ? "text-ink-muted" : "text-muted")}>
+          {description}
+        </p>
       )}
     </div>
   );

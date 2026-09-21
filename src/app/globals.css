@@ -207,6 +207,20 @@
   }
 }
 
+/* Titre-lien d'une liste ou d'une fiche : aucun soulignement au repos, un filet se trace au survol. */
+@utility link-h {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 2px;
+  padding-bottom: 1px;
+  text-decoration: none;
+  transition: background-size 160ms ease-out;
+  &:hover {
+    background-size: 100% 2px;
+  }
+}
+
 /* Filets : fort (encre) en tête de section, fin (line) entre les lignes. */
 @utility rule-strong {
   border-top: 2px solid var(--color-ink);

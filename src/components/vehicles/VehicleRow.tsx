@@ -24,7 +24,7 @@ export function VehicleRow({ vehicle: v, href }: { vehicle: Vehicle; href?: stri
         <Link
           href={href ?? vehicleHref(v)}
           aria-label={vehicleTitle(v)}
-          className="link-u mt-0.5 inline text-base font-bold text-ink after:absolute after:inset-0 after:content-[''] focus-visible:outline-none group-hover:[background-size:100%_2px,100%_1px]"
+          className="link-h mt-0.5 inline text-base font-bold text-ink after:absolute after:inset-0 after:content-[''] focus-visible:outline-none group-hover:[background-size:100%_2px]"
         >
           {v.model}
         </Link>

@@ -1,12 +1,11 @@
-import { Container } from "@/components/layout/Container";
-import { ArrowLink, SectionHeading } from "@/components/ui/primitives";
+import { Section } from "@/components/layout/Section";
 import { Faq } from "@/components/ui/Faq";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { Hero } from "@/components/home/Hero";
-import { ChargingBand, CompareSpotlight, ContentSection, DataTrust, QuickStart, ToolsBand } from "@/components/home/sections";
-import { VehicleCard } from "@/components/vehicles/VehicleCard";
+import { ChargingFeature, CompareSpotlight, DataTrust, RangeFinder, ReadingSection, Selection, ToolsLedger } from "@/components/home/sections";
 import { tools } from "@/data/tools";
-import { getAllVehicles, getBrands, getVehicleById } from "@/data/catalog";
+import { getAllVehicles, getBrands } from "@/data/catalog";
+import { EDITORIAL_PHOTOS } from "@/data/editorial/media";
 import { versionsOf } from "@/data/catalog/selectors";
 import { getGuides } from "@/data/guides";
 import { getArticles } from "@/data/blog";
@@ -14,6 +13,7 @@ import { vehicleHref } from "@/lib/vehicle-utils";
 import { ASSUMPTIONS } from "@/data/assumptions";
 import { getFeaturedComparisons } from "@/lib/comparison";
 import { siteConfig } from "@/config/site";
+import { formatDateFr } from "@/lib/utils";
 import { buildMetadata, faqJsonLd } from "@/lib/seo";
 
 // Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
@@ -51,6 +51,10 @@ const homeFaq = [
 export default async function HomePage() {
   const all = await getAllVehicles();
   const [brands, guides, articles, comparisons] = await Promise.all([getBrands(), getGuides(), getArticles(), getFeaturedComparisons()]);
+  const withHref = all.map((v) => ({
+    ...v,
+    href: vehicleHref(v, versionsOf(all, v.brandSlug, v.modelSlug).length > 1 ? "version" : "model"),
+  }));
   const featuredIds = [
     "renault-5-e-tech-52-kwh-150-ch",
     "tesla-model-y-rwd",
@@ -59,63 +63,41 @@ export default async function HomePage() {
     "citroen-e-c3-standard-range-44-kwh",
     "hyundai-ioniq-5-84-kwh-rwd",
   ];
-  const featured = (await Promise.all(featuredIds.map(getVehicleById))).filter((v): v is NonNullable<typeof v> => Boolean(v));
-  const featuredGuides = guides.filter((g) =>
-    ["calculer-autonomie-reelle", "combien-coute-recharge-domicile", "puissance-borne-7-11-22-kw", "recharge-ac-ou-dc", "voiture-electrique-vs-essence", "choisir-premiere-voiture-electrique"].includes(g.slug),
-  );
+  const featured = featuredIds
+    .map((id) => withHref.find((v) => v.id === id))
+    .filter((v): v is NonNullable<typeof v> => Boolean(v));
+  const leadGuide = guides.find((g) => g.slug === "batterie-brute-batterie-utile");
+  const featuredGuides = ["calculer-autonomie-reelle", "recharge-ac-ou-dc", "combien-coute-recharge-domicile", "voiture-electrique-vs-essence"]
+    .map((slug) => guides.find((g) => g.slug === slug))
+    .filter((g): g is NonNullable<typeof g> => Boolean(g));
   const latest = [...articles].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt)).slice(0, 3);
+  const updated = all.map((v) => v.source.lastUpdated).sort().at(-1);
 
   return (
     <>
       <Hero
         h1="Voiture électrique : comparez l'autonomie, la recharge et le coût réel"
+        updated={updated ? formatDateFr(updated) : undefined}
         stats={[
-          { value: String(all.length), label: "versions de véhicules" },
-          { value: String(brands.length), label: "marques" },
-          { value: String(tools.length), label: "calculateurs" },
-          { value: String(guides.length), label: "guides sourcés" },
+          { value: String(all.length), label: "Versions" },
+          { value: String(brands.length), label: "Marques" },
+          { value: String(guides.length), label: "Guides sourcés" },
+          { value: String(tools.length), label: "Calculateurs" },
         ]}
       />
 
-      <QuickStart brands={brands} total={all.length} />
-
-      <section aria-labelledby="selection" className="pb-section">
-        <Container>
-          <SectionHeading
-            id="selection"
-            eyebrow="Sélection"
-            title="Explorer les voitures électriques"
-            description="Autonomie, batterie, puissance de recharge et coût calculé, avec la source de chaque fiche."
-            action={<ArrowLink href="/voitures-electriques">Voir toutes les voitures ({all.length} versions)</ArrowLink>}
-          />
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-            {featured.map((v, i) => (
-              // Sous 640 px, seules les quatre premières cartes sont affichées (page plus courte) ;
-              // les six restent dans le HTML.
-              <div key={v.id} className={i >= 4 ? "hidden sm:contents" : "contents"}>
-                <VehicleCard vehicle={v} href={vehicleHref(v, versionsOf(all, v.brandSlug, v.modelSlug).length > 1 ? "version" : "model")} />
-              </div>
-            ))}
-          </div>
-          <p className="mt-4 max-w-3xl text-xs leading-relaxed text-muted">
-            Silhouettes schématiques par type de carrosserie : illustrations génériques, jamais le modèle exact. Les barres
-            situent l&apos;autonomie WLTP sur une échelle commune de 0 à 800 km ; elles ne constituent pas un classement.
-          </p>
-        </Container>
-      </section>
-
+      <RangeFinder vehicles={withHref} />
+      <Selection featured={featured} brands={brands} total={all.length} />
       <CompareSpotlight comparisons={comparisons} />
+      <ChargingFeature photo={EDITORIAL_PHOTOS["puissance-recharge-dc"]?.image} />
+      <ReadingSection lead={leadGuide} guides={featuredGuides} articles={latest} guideTotal={guides.length} />
+      <ToolsLedger tools={tools} />
       <DataTrust />
-      <ChargingBand />
-      <ContentSection guides={featuredGuides} guideTotal={guides.length} articles={latest} />
-      <ToolsBand tools={tools} />
 
-      <section className="pb-section pt-4">
-        <Container>
-          <Faq items={homeFaq} title="Questions fréquentes" />
-          <JsonLd data={faqJsonLd(homeFaq)} />
-        </Container>
-      </section>
+      <Section spacing="none" className="py-section">
+        <Faq items={homeFaq} title="Questions fréquentes" layout="split" />
+        <JsonLd data={faqJsonLd(homeFaq)} />
+      </Section>
     </>
   );
 }

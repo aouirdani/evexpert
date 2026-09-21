@@ -59,7 +59,7 @@ export function VehicleCard({ vehicle: v, href }: { vehicle: Vehicle; href?: str
           <Link
             href={href ?? vehicleHref(v)}
             aria-label={vehicleTitle(v)}
-            className="link-u after:absolute after:inset-0 after:content-[''] focus-visible:outline-none group-hover:[background-size:100%_2px,100%_1px]"
+            className="link-h after:absolute after:inset-0 after:content-[''] focus-visible:outline-none group-hover:[background-size:100%_2px]"
           >
             {v.model}
           </Link>
