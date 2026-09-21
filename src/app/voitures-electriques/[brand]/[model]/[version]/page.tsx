@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Container, PageHeader } from "@/components/layout/Container";
+import { Container } from "@/components/layout/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { VehicleDetail } from "@/components/vehicles/VehicleDetail";
-import { LastUpdated } from "@/components/ui/SourceBadge";
 import { getAllVehicles, getSimilarVehicles, getVehicleBySlug, isVersionPageIndexable } from "@/data/catalog";
 import { modelTitle, vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 import { buildMetadata } from "@/lib/seo";
@@ -43,7 +42,7 @@ export default async function VersionPage({ params }: { params: Promise<Params> 
   if (!v) notFound();
   const similar = await getSimilarVehicles(v, 3);
   return (
-    <Container className="py-10">
+    <Container className="pb-section pt-8">
       <Breadcrumbs
         items={[
           { name: "Voitures électriques", href: "/voitures-electriques" },
@@ -52,16 +51,12 @@ export default async function VersionPage({ params }: { params: Promise<Params> 
           { name: v.version, href: vehicleHref(v, "version") },
         ]}
       />
-      <PageHeader
+      <VehicleDetail
+        vehicle={v}
+        similar={similar}
         eyebrow={modelTitle(v)}
         title={`${vehicleTitle(v)} : autonomie, recharge et caractéristiques`}
       />
-      <div className="mt-3">
-        <LastUpdated date={v.source.lastUpdated} label="Données relevées le" />
-      </div>
-      <div className="mt-8">
-        <VehicleDetail vehicle={v} similar={similar} />
-      </div>
     </Container>
   );
 }

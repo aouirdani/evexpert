@@ -14,17 +14,14 @@ function LinkList({
 }) {
   if (!items.length) return null;
   return (
-    <section className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5">
-      <h2 className="text-lg font-bold text-slate-900">{title}</h2>
-      <ul className="mt-3 space-y-2">
+    <section className="mt-10">
+      <h2 className="label mb-2">{title}</h2>
+      <ul className="border-t-2 border-ink">
         {items.map((it) => (
-          <li key={it.href}>
-            <Link
-              href={it.href}
-              className="inline-flex items-start gap-1.5 text-sm font-medium text-emerald-800 hover:underline"
-            >
-              <ArrowRight className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
-              {it.label}
+          <li key={it.href} className="border-b border-line">
+            <Link href={it.href} className="group flex items-start justify-between gap-3 py-3 text-sm font-semibold text-ink">
+              <span className="link-h group-hover:[background-size:100%_2px]">{it.label}</span>
+              <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-signal-deep transition-transform duration-150 group-hover:translate-x-0.5" aria-hidden />
             </Link>
           </li>
         ))}

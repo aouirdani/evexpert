@@ -4,11 +4,16 @@ import { DataBadge } from "@/components/ui/DataBadge";
 export interface SpecRow {
   label: string;
   value: string;
-  /** Nature de la donnée, affichée seulement si différente de celle du tableau. */
+  /** Nature de la donnée, affichée seulement si différente de celle du groupe. */
   type?: DataType;
   note?: string;
 }
 
+/**
+ * Groupe de caractéristiques : filet fort, titre, lignes à filets fins. La provenance par défaut
+ * (`type`) est dite une fois en tête de page et dans la section Sources ; seule une ligne d'une autre
+ * nature (calcul, estimation) porte un badge.
+ */
 export function SpecTable({
   title,
   id,
@@ -18,28 +23,19 @@ export function SpecTable({
   title: string;
   id?: string;
   rows: SpecRow[];
-  /** Nature par défaut des lignes du tableau. */
+  /** Nature par défaut des lignes du groupe. */
   type: DataType;
 }) {
   return (
-    <section aria-labelledby={id} className="rounded-2xl border border-slate-200 bg-white">
-      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 px-5 py-3">
-        <h3 id={id} className="text-base font-bold text-slate-900">
-          {title}
-        </h3>
-        <DataBadge type={type} />
-      </div>
-      <dl className="divide-y divide-slate-100">
+    <section aria-labelledby={id} className="min-w-0">
+      <h3 id={id} className="border-t-2 border-ink pb-1 pt-3 text-base font-bold text-ink">
+        {title}
+      </h3>
+      <dl>
         {rows.map((r) => (
-          <div key={r.label} className="grid grid-cols-[1fr_auto] gap-x-4 gap-y-0.5 px-5 py-2.5 text-sm">
-            <dt className="text-slate-600">{r.label}</dt>
-            <dd
-              className={
-                r.value === "Non disponible"
-                  ? "tabular text-right text-muted"
-                  : "tabular text-right font-semibold text-slate-900"
-              }
-            >
+          <div key={r.label} className="grid grid-cols-[1fr_auto] gap-x-4 gap-y-0.5 border-t border-line py-2.5 text-sm first:border-t-0">
+            <dt className="text-muted">{r.label}</dt>
+            <dd className={r.value === "Non disponible" ? "num text-right text-muted" : "num text-right font-semibold text-ink"}>
               {r.value}
               {r.type && r.type !== type && (
                 <span className="ml-2 align-middle">
@@ -47,7 +43,7 @@ export function SpecTable({
                 </span>
               )}
             </dd>
-            {r.note && <dd className="col-span-2 text-xs text-slate-600">{r.note}</dd>}
+            {r.note && <dd className="col-span-2 text-caption text-muted">{r.note}</dd>}
           </div>
         ))}
       </dl>

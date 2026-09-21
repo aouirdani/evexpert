@@ -6,7 +6,7 @@ import { DataBadge } from "./DataBadge";
 
 export function LastUpdated({ date, label = "Dernière mise à jour" }: { date: string; label?: string }) {
   return (
-    <p className="text-xs text-slate-600">
+    <p className="text-caption text-muted">
       {label}&nbsp;: <time dateTime={date}>{formatDateFr(date)}</time>
     </p>
   );
@@ -16,20 +16,20 @@ export function LastUpdated({ date, label = "Dernière mise à jour" }: { date: 
 export function SourceLine({ source }: { source: DataSource }) {
   const external = source.url.startsWith("http");
   return (
-    <div className="flex flex-wrap items-center gap-2 text-xs text-slate-600">
-      <FileText className="h-3.5 w-3.5" aria-hidden />
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-sm text-muted">
+      <FileText className="h-4 w-4" aria-hidden />
       <span>Source&nbsp;:</span>
       {external ? (
         <a
           href={source.url}
           target="_blank"
           rel="noopener noreferrer nofollow"
-          className="font-medium text-emerald-800 underline underline-offset-2"
+          className="link-u font-semibold text-signal-deep"
         >
           {source.name}
         </a>
       ) : (
-        <Link href={source.url} className="font-medium text-emerald-800 underline underline-offset-2">
+        <Link href={source.url} className="link-u font-semibold text-signal-deep">
           {source.name}
         </Link>
       )}

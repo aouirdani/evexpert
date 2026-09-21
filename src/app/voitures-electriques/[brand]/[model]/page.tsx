@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Container, PageHeader } from "@/components/layout/Container";
+import { Container } from "@/components/layout/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { VehicleDetail } from "@/components/vehicles/VehicleDetail";
 import { ModelOverview } from "@/components/vehicles/ModelOverview";
-import { LastUpdated } from "@/components/ui/SourceBadge";
+import { VehicleHeader } from "@/components/vehicles/VehicleHeader";
 import { getModelVersions, getModels, getSimilarVehicles } from "@/data/catalog";
 import { modelTitle, vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 import { buildMetadata } from "@/lib/seo";
@@ -46,8 +46,11 @@ export default async function ModelPage({ params }: { params: Promise<Params> })
   const v = versions[0];
   const similar = await getSimilarVehicles(v, 3);
   const single = versions.length === 1;
+  const title = single
+    ? `${vehicleTitle(v)} : autonomie, recharge et caractéristiques`
+    : `${modelTitle(v)} : versions, autonomie et recharge`;
   return (
-    <Container className="py-10">
+    <Container className="pb-section pt-8">
       <Breadcrumbs
         items={[
           { name: "Voitures électriques", href: "/voitures-electriques" },
@@ -55,18 +58,21 @@ export default async function ModelPage({ params }: { params: Promise<Params> })
           { name: v.model, href: vehicleHref(v, "model") },
         ]}
       />
-      <PageHeader
-        eyebrow={v.brand}
-        title={
-          single
-            ? `${vehicleTitle(v)} : autonomie, recharge et caractéristiques`
-            : `${modelTitle(v)} : versions, autonomie et recharge`
-        }
-      />
-      <div className="mt-3">
-        <LastUpdated date={v.source.lastUpdated} label="Données relevées le" />
-      </div>
-      <div className="mt-8">{single ? <VehicleDetail vehicle={v} similar={similar} /> : <ModelOverview versions={versions} similar={similar} />}</div>
+      {single ? (
+        <VehicleDetail vehicle={v} similar={similar} eyebrow={v.brand} title={title} />
+      ) : (
+        <>
+          <VehicleHeader
+            eyebrow={v.brand}
+            title={title}
+            source={v.source}
+            dek={`Le ${v.brand} ${v.model} est présent dans notre base en ${versions.length} versions. Le tableau les compare sur les critères principaux ; chaque version dispose de sa fiche complète (coûts de recharge, temps de charge, autonomie estimée par scénario).`}
+          />
+          <div className="mt-12 border-t-2 border-ink pt-8">
+            <ModelOverview versions={versions} similar={similar} />
+          </div>
+        </>
+      )}
     </Container>
   );
 }
