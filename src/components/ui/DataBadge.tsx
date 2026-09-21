@@ -44,16 +44,16 @@ export function DataBadge({ type, className }: { type: DataType; className?: str
   );
 }
 
-/** Légende expliquant les quatre natures de données. */
+/** Légende expliquant les quatre natures de données (liste à filets, pas de boîtes). */
 export function DataLegend({ className }: { className?: string }) {
   return (
-    <dl className={cn("grid gap-3 text-sm sm:grid-cols-2", className)}>
+    <dl className={cn("grid gap-x-10 text-sm sm:grid-cols-2", className)}>
       {(Object.keys(config) as DataType[]).map((t) => (
-        <div key={t} className="rounded-md border border-line bg-surface p-4">
+        <div key={t} className="border-t border-line py-4">
           <dt>
             <DataBadge type={t} />
           </dt>
-          <dd className="mt-2 text-muted">{config[t].hint}</dd>
+          <dd className="mt-2 max-w-md text-muted">{config[t].hint}</dd>
         </div>
       ))}
     </dl>

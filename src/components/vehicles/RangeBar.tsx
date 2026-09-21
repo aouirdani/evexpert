@@ -6,6 +6,7 @@ import { RANGE_SCALE_MAX } from "@/lib/vehicle-format";
  * Une seule couleur pour tous les véhicules : la longueur est une donnée, pas un classement.
  * `decorative` : la valeur est déjà écrite à côté, la barre est masquée aux lecteurs d'écran ;
  * sinon elle expose une alternative textuelle (role="img" + aria-label).
+ * Dans un conteneur `group`, le trait passe au vert profond au survol.
  */
 export function RangeBar({
   value,
@@ -28,11 +29,11 @@ export function RangeBar({
         "aria-label": `${label} : ${formatNumber(value)} km, sur une échelle de 0 à ${formatNumber(max)} km`,
       } as const);
   return (
-    <div {...a11y} className={cn("relative h-1.5 w-full overflow-hidden rounded-sm bg-paper-deep", className)}>
-      <div className="absolute inset-y-0 left-0 bg-ink" style={{ width: `${pct}%` }} />
-      {[25, 50, 75].map((t) => (
-        <span key={t} className="absolute inset-y-0 w-px bg-surface" style={{ left: `${t}%` }} />
-      ))}
+    <div {...a11y} className={cn("relative h-[3px] w-full bg-line", className)}>
+      <div
+        className="absolute inset-y-0 left-0 bg-ink transition-colors duration-200 group-hover:bg-signal-deep"
+        style={{ width: `${pct}%` }}
+      />
     </div>
   );
 }

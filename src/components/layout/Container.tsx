@@ -36,16 +36,10 @@ export function PageHeader({
   eyebrow?: string;
 }) {
   return (
-    <div className="max-w-3xl">
-      {eyebrow && (
-        <p className="eyebrow mb-2 text-signal-deep">{eyebrow}</p>
-      )}
-      <h1 className="text-h1 font-bold text-ink">
-        {title}
-      </h1>
-      {description && (
-        <p className="mt-3 text-lg leading-relaxed text-body">{description}</p>
-      )}
+    <div className="max-w-4xl">
+      {eyebrow && <p className="eyebrow mb-4 text-signal-deep">{eyebrow}</p>}
+      <h1 className="balance text-h1 font-bold text-ink">{title}</h1>
+      {description && <p className="pretty mt-5 max-w-2xl text-dek text-body">{description}</p>}
     </div>
   );
 }

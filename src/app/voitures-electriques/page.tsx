@@ -1,13 +1,16 @@
 import Link from "next/link";
-import { Container, PageHeader } from "@/components/layout/Container";
+import { Container } from "@/components/layout/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { Kicker } from "@/components/layout/Section";
 import { JsonLd } from "@/components/ui/JsonLd";
+import { DataFigure } from "@/components/ui/DataFigure";
 import { DataLegend } from "@/components/ui/DataBadge";
 import { VehicleExplorer } from "@/components/vehicles/VehicleExplorer";
 import { getAllVehicles, getBrands, getModels } from "@/data/catalog";
 import { versionsOf } from "@/data/catalog/selectors";
 import { vehicleHref } from "@/lib/vehicle-utils";
 import { buildMetadata, itemListJsonLd } from "@/lib/seo";
+import { formatNumber } from "@/lib/utils";
 
 // Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
 export const revalidate = 86400;
@@ -27,40 +30,57 @@ export default async function VehiclesPage() {
   }));
   const brands = await getBrands();
   const models = await getModels();
+  const ranges = vehicles.map((v) => v.rangeWltp);
   return (
-    <Container className="py-10">
+    <Container className="pb-section pt-8">
       <Breadcrumbs items={[{ name: "Voitures électriques", href: "/voitures-electriques" }]} />
-      <PageHeader
-        eyebrow="Base de véhicules"
-        title="Voitures électriques : autonomie, recharge et fiches techniques"
-        description={`${models.length} modèles et ${vehicles.length} versions de ${brands.length} marques. Chaque fiche indique sa source, sa date de relevé et distingue données sourcées, calculs et estimations.`}
-      />
 
-      <nav aria-label="Marques" className="mt-6 flex flex-wrap gap-2">
+      <header className="grid gap-x-12 gap-y-8 lg:grid-cols-12 lg:items-end">
+        <div className="lg:col-span-8">
+          <Kicker>Base de véhicules</Kicker>
+          <h1 className="balance mt-4 text-h1 font-bold text-ink">
+            Voitures électriques : autonomie, recharge et fiches techniques
+          </h1>
+          <p className="pretty mt-5 max-w-2xl text-dek text-body">
+            Chaque fiche indique sa source et sa date de relevé, et distingue données sourcées, calculs et estimations.
+          </p>
+        </div>
+        <dl className="grid grid-cols-3 gap-x-6 border-t-2 border-ink pt-4 lg:col-span-4">
+          <DataFigure label="Versions" value={String(vehicles.length)} size="lg" />
+          <DataFigure label="Modèles" value={String(models.length)} size="lg" />
+          <DataFigure label="Marques" value={String(brands.length)} size="lg" />
+        </dl>
+      </header>
+
+      <nav aria-label="Marques" className="mt-10 flex flex-wrap items-baseline gap-x-5 gap-y-2 border-t border-line pt-4">
+        <span className="label mr-1">Marques</span>
         {brands.map((b) => (
-          <Link
-            key={b.slug}
-            href={`/voitures-electriques/${b.slug}`}
-            className="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-800 hover:border-emerald-500 hover:text-emerald-800"
-          >
-            {b.name} <span className="text-slate-600">({b.count})</span>
+          <Link key={b.slug} href={`/voitures-electriques/${b.slug}`} className="link-u text-sm font-medium text-ink">
+            {b.name} <span className="num text-muted">{b.count}</span>
           </Link>
         ))}
       </nav>
 
-      <div className="mt-8">
+      <div className="mt-10">
         <VehicleExplorer vehicles={vehicles} />
       </div>
 
-      <section className="mt-16" aria-labelledby="lire-fiches">
-        <h2 id="lire-fiches" className="text-2xl font-bold text-slate-900">Comment lire les fiches</h2>
-        <p className="mt-2 max-w-3xl text-slate-700">
-          Les caractéristiques techniques proviennent de la base spécialisée EV Database, sans complément manuel : une donnée absente est affichée « Non disponible ».
-          Le prix en France n&apos;est pas encore collecté. Les coûts et temps de recharge sont des calculs EVExpert dont les hypothèses sont modifiables dans les{" "}
-          <Link href="/outils" className="font-medium text-emerald-800 underline">outils</Link> ; le détail figure sur la page{" "}
-          <Link href="/methodologie" className="font-medium text-emerald-800 underline">Méthodologie</Link>.
-        </p>
-        <DataLegend className="mt-5" />
+      <section className="mt-section grid gap-x-12 gap-y-6 lg:grid-cols-12" aria-labelledby="lire-fiches">
+        <div className="lg:col-span-4">
+          <h2 id="lire-fiches" className="text-h2 font-bold text-ink">Comment lire les fiches</h2>
+          <p className="label mt-3">
+            Autonomie de {formatNumber(Math.min(...ranges))} à {formatNumber(Math.max(...ranges))} km WLTP
+          </p>
+        </div>
+        <div className="lg:col-span-8">
+          <p className="pretty max-w-2xl text-body">
+            Les caractéristiques techniques proviennent de la base spécialisée EV Database, sans complément manuel : une donnée absente est affichée « Non disponible ».
+            Le prix en France n&apos;est pas encore collecté. Les coûts et temps de recharge sont des calculs EVExpert dont les hypothèses sont modifiables dans les{" "}
+            <Link href="/outils" className="link-u font-medium text-signal-deep">outils</Link> ; le détail figure sur la page{" "}
+            <Link href="/methodologie" className="link-u font-medium text-signal-deep">Méthodologie</Link>.
+          </p>
+          <DataLegend className="mt-6" />
+        </div>
       </section>
 
       <JsonLd

@@ -46,7 +46,7 @@ export default async function BrandPage({ params }: { params: Promise<Params> })
   const models = await modelsOf(brand);
   const ranges = list.map((v) => v.rangeWltp);
   return (
-    <Container className="py-10">
+    <Container className="pb-section pt-8">
       <Breadcrumbs
         items={[
           { name: "Voitures électriques", href: "/voitures-electriques" },
@@ -59,7 +59,7 @@ export default async function BrandPage({ params }: { params: Promise<Params> })
         description={`${models.length} modèle${models.length > 1 ? "s" : ""} et ${list.length} version${list.length > 1 ? "s" : ""} dans notre base. Autonomie WLTP de ${formatNumber(Math.min(...ranges))} à ${formatNumber(Math.max(...ranges))} km selon la source.`}
       />
       <h2 className="sr-only">Versions {name}</h2>
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {list.map((v) => (
           <VehicleCard key={v.id} vehicle={v} href={vehicleHref(v, list.filter((x) => x.modelSlug === v.modelSlug).length > 1 ? "version" : "model")} />
         ))}

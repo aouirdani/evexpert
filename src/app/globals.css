@@ -170,7 +170,7 @@
 
 /* Unité qui suit une valeur : petite, discrète, sur la ligne de base. */
 @utility unit {
-  font-size: 0.42em;
+  font-size: max(0.4em, 0.75rem);
   font-weight: 500;
   letter-spacing: 0.01em;
   color: color-mix(in srgb, currentColor 66%, transparent);
