@@ -3,32 +3,15 @@
 import { useMemo, useState } from "react";
 import { computeRange, type DrivingType } from "@/lib/calculators";
 import { formatNumber } from "@/lib/utils";
-import { CalcLayout, Field, NumberInput, RangeInputControl, ResultCard, SelectInput } from "./kit";
+import { CalcLayout, Field, NumberInput, RangeInputControl, ResultCard, SelectInput, VehiclePresetSelect, type VehiclePreset } from "./kit";
 
-const vehiclePresets = [
-  { value: "custom", label: "Personnalisé", cap: 60, conso: 16 },
-  { value: "citadine", label: "Citadine (~52 kWh)", cap: 50, conso: 14 },
-  { value: "berline", label: "Berline (~58 kWh)", cap: 57, conso: 15 },
-  { value: "suv", label: "SUV (~77 kWh)", cap: 75, conso: 18 },
-] as const;
-
-export function RangeCalculator() {
-  const [preset, setPreset] = useState<string>("custom");
+export function RangeCalculator({ presets = [] }: { presets?: VehiclePreset[] }) {
   const [capacity, setCapacity] = useState(60);
   const [consumption, setConsumption] = useState(16);
   const [speed, setSpeed] = useState(110);
   const [temperature, setTemperature] = useState(15);
   const [drivingType, setDrivingType] = useState<DrivingType>("mixte");
   const [reserve, setReserve] = useState(10);
-
-  function applyPreset(p: string) {
-    setPreset(p);
-    const found = vehiclePresets.find((v) => v.value === p);
-    if (found && found.value !== "custom") {
-      setCapacity(found.cap);
-      setConsumption(found.conso);
-    }
-  }
 
   const r = useMemo(
     () =>
@@ -52,9 +35,15 @@ export function RangeCalculator() {
       <CalcLayout
         inputs={
           <>
-            <Field label="Type de véhicule (préréglage)" htmlFor="r-preset">
-              <SelectInput id="r-preset" value={preset} onChange={applyPreset} options={vehiclePresets.map((v) => ({ value: v.value, label: v.label }))} />
-            </Field>
+            <VehiclePresetSelect
+              id="r-preset"
+              presets={presets}
+              onPick={(p) => {
+                setCapacity(p.usable);
+                setConsumption(Math.round(p.batteryConsumption * 10) / 10);
+              }}
+              hint="Consommation de référence = capacité utile ÷ autonomie WLTP de la fiche."
+            />
             <Field label="Capacité utile (kWh)" htmlFor="r-cap">
               <NumberInput id="r-cap" value={capacity} onChange={setCapacity} min={10} max={200} step={0.5} suffix="kWh" />
             </Field>

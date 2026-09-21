@@ -15,31 +15,18 @@ const sizes: Record<NonNullable<AdSlotProps["format"]>, string> = {
 };
 
 /**
- * Emplacement publicitaire prêt pour Google AdSense.
- * - Désactivé par défaut (ADSENSE_ENABLED != "true").
- * - N'affiche jamais de fausse publicité : un placeholder neutre en dev.
- * - Réserve l'espace pour éviter le layout shift (CLS).
+ * Conteneur publicitaire Google AdSense — INACTIF par défaut.
+ * - Ne rend RIEN tant que ADSENSE_ENABLED != "true" ou que l'identifiant éditeur est absent :
+ *   aucun faux emplacement, aucune fausse publicité, aucun espace vide.
+ * - Une fois actif, réserve une hauteur fixe (pas de décalage de mise en page) et affiche
+ *   la mention « Publicité » exigée pour distinguer l'annonce du contenu.
+ * - Le script AdSense lui-même n'est jamais chargé sans consentement (à brancher au moment de l'activation).
  */
 export function AdSlot({ slot, format = "leaderboard", className }: AdSlotProps) {
-  const active = adsConfig.enabled && adsConfig.clientId;
-
+  if (!adsConfig.enabled || !adsConfig.clientId) return null;
   return (
-    <aside
-      aria-label="Emplacement publicitaire"
-      className={cn(
-        "flex w-full items-center justify-center overflow-hidden rounded-xl border border-dashed border-slate-200 bg-slate-50 text-xs text-slate-400",
-        sizes[format],
-        className,
-      )}
-      data-ad-slot={slot}
-    >
-      {active ? (
-        // En production, l'intégration AdSense (script + <ins class="adsbygoogle">)
-        // sera injectée ici une fois le compte validé.
-        <span className="sr-only">Publicité</span>
-      ) : (
-        <span>Emplacement publicitaire</span>
-      )}
+    <aside aria-label="Publicité" data-ad-slot={slot} className={cn("w-full overflow-hidden", sizes[format], className)}>
+      <p className="text-center text-[11px] uppercase tracking-wide text-slate-500">Publicité</p>
     </aside>
   );
 }

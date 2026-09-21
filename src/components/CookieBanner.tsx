@@ -86,7 +86,7 @@ export function CookieBanner() {
     >
       <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-start gap-3">
-          <Cookie className="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" aria-hidden />
+          <Cookie className="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" aria-hidden />
           <p className="text-sm text-slate-700">
             Nous utilisons des cookies de mesure d&apos;audience et, à l&apos;avenir,
             des cookies publicitaires. Les cookies non essentiels ne sont pas
@@ -108,7 +108,7 @@ export function CookieBanner() {
           <button
             type="button"
             onClick={() => choose("accepted")}
-            className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
+            className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
           >
             Accepter
           </button>

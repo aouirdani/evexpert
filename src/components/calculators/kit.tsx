@@ -56,7 +56,7 @@ export function NumberInput({
         className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-base text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
       />
       {suffix && (
-        <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-slate-400">
+        <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-slate-600">
           {suffix}
         </span>
       )}
@@ -182,5 +182,55 @@ export function CalcLayout({
         <div className="mt-5 space-y-4">{results}</div>
       </div>
     </div>
+  );
+}
+
+/** Modèle réel servant à préremplir un calculateur (données de la base EVExpert). */
+export interface VehiclePreset {
+  id: string;
+  label: string;
+  /** Capacité utile (kWh). */
+  usable: number;
+  /** Consommation côté batterie (kWh/100 km) = capacité utile ÷ autonomie WLTP. */
+  batteryConsumption: number;
+  /** Consommation côté réseau (kWh/100 km), rendement de charge 90 %. */
+  gridConsumption: number;
+  /** Puissance de charge AC maximale (kW). */
+  acKw: number;
+  /** Puissance de charge DC maximale (kW), si connue. */
+  dcKw: number | null;
+}
+
+export function VehiclePresetSelect({
+  id,
+  presets,
+  onPick,
+  hint = "Préremplit les champs avec les données de la fiche (source citée sur la fiche du modèle).",
+}: {
+  id: string;
+  presets: VehiclePreset[];
+  onPick: (p: VehiclePreset) => void;
+  hint?: string;
+}) {
+  if (!presets.length) return null;
+  return (
+    <Field label="Préremplir avec un modèle (facultatif)" htmlFor={id} hint={hint}>
+      <select
+        id={id}
+        defaultValue=""
+        onChange={(e) => {
+          const p = presets.find((x) => x.id === e.target.value);
+          if (p) onPick(p);
+        }}
+        className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-base text-slate-900 focus:border-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-600/30"
+      >
+        <option value="">Saisie manuelle</option>
+        {presets.map((p) => (
+          <option key={p.id} value={p.id}>
+            {p.label} — {p.usable.toString().replace(".", ",")} kWh utiles
+          </option>
+        ))}
+      </select>
+    </Field>
   );
 }

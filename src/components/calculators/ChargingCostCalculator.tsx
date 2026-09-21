@@ -3,13 +3,14 @@
 import { useMemo, useState } from "react";
 import { computeChargingCost } from "@/lib/calculators";
 import { formatEuro, formatNumber } from "@/lib/utils";
-import { CalcLayout, Field, NumberInput, RangeInputControl, ResultCard } from "./kit";
+import { ASSUMPTIONS } from "@/data/assumptions";
+import { CalcLayout, Field, NumberInput, RangeInputControl, ResultCard, VehiclePresetSelect, type VehiclePreset } from "./kit";
 
-export function ChargingCostCalculator() {
+export function ChargingCostCalculator({ presets = [] }: { presets?: VehiclePreset[] }) {
   const [batteryCapacity, setBattery] = useState(60);
   const [currentSoc, setCurrent] = useState(20);
   const [targetSoc, setTarget] = useState(80);
-  const [price, setPrice] = useState(0.25);
+  const [price, setPrice] = useState<number>(ASSUMPTIONS.homePrice);
   const [efficiency, setEfficiency] = useState(90);
   const [consumption, setConsumption] = useState(16);
 
@@ -30,6 +31,14 @@ export function ChargingCostCalculator() {
     <CalcLayout
       inputs={
         <>
+          <VehiclePresetSelect
+            id="cc-preset"
+            presets={presets}
+            onPick={(p) => {
+              setBattery(p.usable);
+              setConsumption(Math.round(p.batteryConsumption * 10) / 10);
+            }}
+          />
           <Field label="Capacité utile de la batterie (kWh)" htmlFor="cc-battery">
             <NumberInput id="cc-battery" value={batteryCapacity} onChange={setBattery} min={5} max={200} step={0.5} suffix="kWh" />
           </Field>
@@ -39,7 +48,7 @@ export function ChargingCostCalculator() {
           <Field label="État de charge souhaité" htmlFor="cc-target">
             <RangeInputControl id="cc-target" value={targetSoc} onChange={setTarget} min={0} max={100} suffix="%" />
           </Field>
-          <Field label="Prix du kWh (€)" htmlFor="cc-price" hint="Ex. tarif domicile ~0,25 €, borne rapide ~0,45-0,70 €.">
+          <Field label="Prix du kWh (€)" htmlFor="cc-price" hint="Hypothèse de départ (0,25 € à domicile) : reprenez le prix de votre contrat ou celui affiché à la borne.">
             <NumberInput id="cc-price" value={price} onChange={setPrice} min={0} max={2} step={0.01} suffix="€/kWh" />
           </Field>
           <Field label="Rendement de recharge" htmlFor="cc-eff" hint="Pertes en chaleur : généralement 85-95 %.">

@@ -1,16 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  Legend,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
+import { GroupedBars } from "@/components/charts/GroupedBars";
+import { ASSUMPTIONS } from "@/data/assumptions";
 import { computeRunningCost } from "@/lib/calculators";
 import { formatEuro } from "@/lib/utils";
 import { Field, NumberInput, ResultCard } from "./kit";
@@ -29,7 +21,7 @@ const defaultEv: CarInputs = {
   price: 40000,
   annualKm: 15000,
   consumption: 16,
-  energyPrice: 0.25,
+  energyPrice: ASSUMPTIONS.homePrice,
   insurance: 700,
   maintenance: 250,
   depreciationRate: 12,
@@ -39,7 +31,7 @@ const defaultPetrol: CarInputs = {
   price: 30000,
   annualKm: 15000,
   consumption: 6.5,
-  energyPrice: 1.85,
+  energyPrice: ASSUMPTIONS.petrolPrice,
   insurance: 650,
   maintenance: 600,
   depreciationRate: 14,
@@ -59,7 +51,7 @@ function CarForm({
   const upd = (k: keyof CarInputs, v: number) => set({ ...state, [k]: v });
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-5">
-      <h3 className="text-base font-bold text-slate-900">{title}</h3>
+      <h2 className="text-base font-bold text-slate-900">{title}</h2>
       <div className="mt-4 grid grid-cols-2 gap-3">
         <Field label="Prix (€)" htmlFor={`${title}-price`}>
           <NumberInput id={`${title}-price`} value={state.price} onChange={(v) => upd("price", v)} min={0} step={500} />
@@ -94,10 +86,9 @@ export function EvVsPetrolCalculator() {
   const evR = useMemo(() => computeRunningCost(ev), [ev]);
   const petrolR = useMemo(() => computeRunningCost(petrol), [petrol]);
 
-  const chartData = [3, 5, 8].map((y) => ({
-    name: `${y} ans`,
-    Électrique: Math.round(evR.costOverYears(y)),
-    Essence: Math.round(petrolR.costOverYears(y)),
+  const groups = [3, 5, 8].map((y) => ({
+    label: `${y} ans`,
+    values: [Math.round(evR.costOverYears(y)), Math.round(petrolR.costOverYears(y))],
   }));
 
   return (
@@ -123,22 +114,17 @@ export function EvVsPetrolCalculator() {
       </div>
 
       <div className="rounded-2xl border border-slate-200 bg-white p-5">
-        <h3 className="mb-4 text-base font-bold text-slate-900">
+        <h2 className="mb-4 text-base font-bold text-slate-900">
           Coût cumulé selon la durée
-        </h3>
-        <div className="h-72 w-full">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={chartData}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-              <XAxis dataKey="name" tick={{ fontSize: 12 }} />
-              <YAxis tick={{ fontSize: 12 }} tickFormatter={(v) => `${v / 1000}k€`} />
-              <Tooltip formatter={(v) => formatEuro(Number(v))} />
-              <Legend />
-              <Bar dataKey="Électrique" fill="#059669" radius={[6, 6, 0, 0]} />
-              <Bar dataKey="Essence" fill="#64748b" radius={[6, 6, 0, 0]} />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
+        </h2>
+        <GroupedBars
+          title="Coût cumulé sur 3, 5 et 8 ans : électrique et essence"
+          groups={groups}
+          series={[
+            { label: "Électrique", color: "#047857" },
+            { label: "Essence", color: "#64748b" },
+          ]}
+        />
       </div>
     </div>
   );

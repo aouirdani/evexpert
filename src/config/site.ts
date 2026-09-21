@@ -32,16 +32,15 @@ export const siteConfig = {
   name: "EVExpert",
   tagline: "Comprendre. Comparer. Calculer.",
   description:
-    "Comparez les voitures électriques, calculez le coût de recharge, l'autonomie et le coût réel d'utilisation. Guides et données sur la mobilité électrique.",
+    "Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.",
   // Public base URL used for canonical links, sitemap and Open Graph.
   url: resolveSiteUrl(process.env.NEXT_PUBLIC_SITE_URL),
   locale: "fr_FR",
   lang: "fr",
-  twitter: "@evscope",
-  email: "contact@evscope.example",
+  /** Adresse de contact publique (optionnelle) : NEXT_PUBLIC_CONTACT_EMAIL. */
+  email: readEnv(process.env.NEXT_PUBLIC_CONTACT_EMAIL),
   organization: {
     name: "EVExpert",
-    legalName: "EVExpert (nom de projet temporaire)",
   },
 } as const;
 
@@ -61,30 +60,43 @@ export const mainNav: NavItem[] = [
 
 export const footerNav: { title: string; items: NavItem[] }[] = [
   {
+    title: "Outils",
+    items: [
+      { label: "Coût de recharge", href: "/outils/cout-recharge-voiture-electrique" },
+      { label: "Coût aux 100 km", href: "/outils/cout-100-km" },
+      { label: "Autonomie réelle", href: "/outils/autonomie-voiture-electrique" },
+      { label: "Temps de recharge", href: "/outils/temps-recharge" },
+      { label: "Essence vs électrique", href: "/outils/essence-vs-electrique" },
+      { label: "Calculateur TCO", href: "/outils/tco-voiture-electrique" },
+    ],
+  },
+  {
     title: "Explorer",
     items: [
-      { label: "Outils", href: "/outils" },
       { label: "Voitures électriques", href: "/voitures-electriques" },
       { label: "Comparer", href: "/comparer" },
       { label: "Recharge", href: "/recharge" },
       { label: "Guides", href: "/guides" },
       { label: "Blog", href: "/blog" },
+      { label: "Recherche", href: "/recherche" },
     ],
   },
   {
-    title: "À propos",
+    title: "EVExpert",
     items: [
       { label: "À propos", href: "/a-propos" },
+      { label: "Méthodologie", href: "/methodologie" },
+      { label: "Sources des données", href: "/sources" },
       { label: "Contact", href: "/contact" },
-      { label: "Sources", href: "/sources" },
+      { label: "Flux RSS du blog", href: "/blog/rss.xml" },
     ],
   },
   {
     title: "Légal",
     items: [
       { label: "Mentions légales", href: "/mentions-legales" },
-      { label: "Politique de confidentialité", href: "/confidentialite" },
-      { label: "Politique cookies", href: "/cookies" },
+      { label: "Confidentialité", href: "/confidentialite" },
+      { label: "Cookies", href: "/cookies" },
       { label: "Conditions d'utilisation", href: "/conditions-utilisation" },
     ],
   },

@@ -1,4 +1,4 @@
-import { vehicles, vehicleTitle } from "@/data/vehicles";
+import { getModelVersions, vehicleHref, vehicleTitle, vehicles } from "@/data/vehicles";
 import { tools } from "@/data/tools";
 import { guides } from "@/data/guides";
 import { articles } from "@/data/articles";
@@ -26,13 +26,13 @@ export function searchAll(query: string): SearchResult[] {
   const results: SearchResult[] = [];
 
   for (const v of vehicles) {
-    const hay = normalize(`${vehicleTitle(v)} ${v.bodyType} ${v.summary}`);
+    const hay = normalize(`${vehicleTitle(v)} ${v.bodyType} ${v.chemistry ?? ""}`);
     if (hay.includes(q)) {
       results.push({
         type: "vehicle",
         title: vehicleTitle(v),
-        description: v.summary,
-        href: `/voitures-electriques/${v.brandSlug}/${v.modelSlug}`,
+        description: `${v.rangeWltp} km WLTP · batterie ${v.batteryUsable} kWh utiles · charge AC ${v.chargingAC} kW${v.chargingDC ? ` · DC ${v.chargingDC} kW` : ""}`,
+        href: vehicleHref(v, getModelVersions(v.brandSlug, v.modelSlug).length > 1 ? "version" : "model"),
       });
     }
   }

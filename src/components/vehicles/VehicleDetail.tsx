@@ -1,257 +1,301 @@
 import Link from "next/link";
+import type { FaqItem, Vehicle } from "@/types";
+import { ASSUMPTIONS } from "@/data/assumptions";
+import { getSimilarVehicles, vehicleHref, vehicleTitle } from "@/data/vehicles";
 import {
-  BatteryCharging,
-  Gauge,
-  Ruler,
-  Timer,
-  Weight,
-  Zap,
-} from "lucide-react";
-import type { Vehicle } from "@/types";
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
-import { Container } from "@/components/layout/Container";
-import { DemoNotice, LastUpdated, SourceBadge } from "@/components/ui/SourceBadge";
+  RANGE_SCENARIOS,
+  acChargeMinutes,
+  batteryConsumption100,
+  chargeCost,
+  costPer100km,
+  estimateRange,
+} from "@/lib/vehicle-calcs";
+import { fmt, fmtText } from "@/lib/vehicle-format";
+import { formatEuro, formatNumber, minutesToHuman } from "@/lib/utils";
 import { Faq } from "@/components/ui/Faq";
-import { ComparisonTable } from "@/components/comparison/ComparisonTable";
-import { AdSlot } from "@/components/ads/AdSlot";
 import { JsonLd } from "@/components/ui/JsonLd";
+import { DataBadge } from "@/components/ui/DataBadge";
+import { SourceLine } from "@/components/ui/SourceBadge";
+import { RelatedGuides, RelatedTools } from "@/components/related";
 import { faqJsonLd } from "@/lib/seo";
-import { computeChargingCost, computeRange, costPer100km } from "@/lib/calculators";
-import { formatEuro, formatNumber } from "@/lib/utils";
-import { getSimilarVehicles, vehicleTitle } from "@/data/vehicles";
-import { guides } from "@/data/guides";
+import { SpecTable } from "./SpecTable";
+import { VehicleCard } from "./VehicleCard";
 
-function Spec({
-  icon: Icon,
-  label,
-  value,
-}: {
-  icon: React.ComponentType<{ className?: string }>;
-  label: string;
-  value: string;
-}) {
-  return (
-    <div className="rounded-xl border border-slate-200 bg-white p-4">
-      <div className="flex items-center gap-2 text-slate-500">
-        <Icon className="h-4 w-4 text-emerald-600" />
-        <span className="text-xs font-medium uppercase tracking-wide">{label}</span>
-      </div>
-      <p className="mt-1 text-lg font-bold text-slate-900">{value}</p>
-    </div>
-  );
-}
+const driveLabel = { FWD: "Traction (avant)", RWD: "Propulsion (arrière)", AWD: "4 roues motrices" } as const;
 
-function SpecRow({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="flex items-center justify-between border-b border-slate-100 py-2.5 text-sm">
-      <dt className="text-slate-600">{label}</dt>
-      <dd className="font-semibold text-slate-900">{value}</dd>
-    </div>
-  );
-}
-
-export function VehicleDetail({ vehicle: v }: { vehicle: Vehicle }) {
-  const similar = getSimilarVehicles(v, 3);
-  const title = vehicleTitle(v);
-
-  // Cost estimates (transparent, computed live).
-  const homeCharge = computeChargingCost({
-    batteryCapacity: v.usableBatteryCapacity,
-    currentSoc: 20,
-    targetSoc: 80,
-    electricityPrice: 0.25,
-    efficiency: 90,
-    consumption: v.consumptionWltp,
-  });
-  const per100Home = costPer100km({ consumption: v.consumptionWltp, price: 0.25 });
-  const winterRange = computeRange({
-    usableCapacity: v.usableBatteryCapacity,
-    baseConsumption: v.consumptionWltp,
-    speed: 110,
-    temperature: 0,
-    drivingType: "autoroute",
-    reserve: 10,
-  });
-
-  const relatedGuides = guides.filter((g) =>
-    ["achat", "recharge", "autonomie"].includes(g.category),
-  );
-
-  const faq = [
+export function vehicleFaq(v: Vehicle): FaqItem[] {
+  const home = costPer100km(v, ASSUMPTIONS.homePrice);
+  const items: FaqItem[] = [
     {
-      question: `Quelle est l'autonomie réelle de la ${title} ?`,
-      answer: `L'autonomie WLTP annoncée est de ${formatNumber(v.rangeWltp)} km. En usage réel, comptez une valeur inférieure (estimation ~${formatNumber(v.realWorldRange)} km en mixte, moins sur autoroute et par temps froid).`,
+      question: `Quelle est l'autonomie WLTP de la ${vehicleTitle(v)} ?`,
+      answer: `La source indique ${formatNumber(v.rangeWltp)} km en cycle WLTP mixte pour une batterie de ${formatNumber(v.batteryUsable, 1)} kWh utiles. L'autonomie réelle dépend de la vitesse, de la température et du type de trajet : les estimations EVExpert par scénario figurent plus haut sur cette page.`,
     },
     {
-      question: `Combien coûte une recharge de la ${title} ?`,
-      answer: `Une recharge de 20 à 80 % à domicile (0,25 €/kWh) coûte environ ${formatEuro(homeCharge.cost, 2)} et ajoute ≈ ${formatNumber(homeCharge.rangeAdded)} km (données d'exemple).`,
+      question: `Quelle puissance de recharge accepte la ${vehicleTitle(v)} ?`,
+      answer:
+        v.chargingDC !== null
+          ? `Elle accepte jusqu'à ${formatNumber(v.chargingAC, 1)} kW en courant alternatif (AC) et jusqu'à ${formatNumber(v.chargingDC)} kW en courant continu (DC)${v.chargingTime10to80 ? `, avec un temps de charge de 10 à 80 % de ${formatNumber(v.chargingTime10to80)} minutes selon la source` : ""}.`
+          : `Elle accepte jusqu'à ${formatNumber(v.chargingAC, 1)} kW en courant alternatif (AC). La puissance DC maximale n'est pas disponible dans notre source.`,
     },
     {
-      question: `Quelle est la puissance de recharge rapide ?`,
-      answer: `La ${title} accepte jusqu'à ${formatNumber(v.chargingDC)} kW en courant continu, pour un passage 10-80 % annoncé autour de ${formatNumber(v.chargingTime10to80)} minutes.`,
+      question: `Combien coûte 100 km en ${v.brand} ${v.model} ?`,
+      answer: `Avec une hypothèse de ${formatNumber(ASSUMPTIONS.homePrice, 2)} €/kWh à domicile et un rendement de charge de ${ASSUMPTIONS.chargingEfficiency} %, le calcul EVExpert donne environ ${formatEuro(home, 2)} aux 100 km dans les conditions WLTP. Ce montant change avec votre tarif et votre conduite : utilisez le calculateur de coût aux 100 km.`,
+    },
+    {
+      question: `Peut-on recharger la ${v.brand} ${v.model} à la maison ?`,
+      answer: `Oui, en courant alternatif jusqu'à ${formatNumber(v.chargingAC, 1)} kW selon son chargeur embarqué. La puissance réellement utilisée est celle de votre installation, dans la limite de ce que le véhicule accepte.`,
     },
   ];
+  return items;
+}
+
+function KeyStat({ label, value, sub, type }: { label: string; value: string; sub?: string; type: Vehicle["source"]["dataType"] }) {
+  return (
+    <div className="rounded-xl border border-slate-200 bg-white p-4">
+      <p className="text-xs font-medium uppercase tracking-wide text-slate-600">{label}</p>
+      <p className="tabular mt-1 text-2xl font-extrabold text-slate-900 sm:text-3xl">{value}</p>
+      {sub && <p className="mt-0.5 text-xs text-slate-600">{sub}</p>}
+      <div className="mt-2">
+        <DataBadge type={type} />
+      </div>
+    </div>
+  );
+}
+
+/** Fiche technique complète d'une version. Server Component, aucun JS client. */
+export function VehicleDetail({ vehicle: v }: { vehicle: Vehicle }) {
+  const src = v.source.dataType;
+  const battCons = batteryConsumption100(v);
+  const scenarios = RANGE_SCENARIOS.map((s) => ({ s, km: estimateRange(v, s) }));
+  const tariffs = [
+    { label: "Domicile", price: ASSUMPTIONS.homePrice },
+    { label: "Borne publique AC", price: ASSUMPTIONS.publicAcPrice },
+    { label: "Recharge rapide DC", price: ASSUMPTIONS.fastDcPrice },
+  ];
+  const faq = vehicleFaq(v);
+  const similar = getSimilarVehicles(v, 3);
+  const acStations = [3.7, 7.4, 11, 22];
 
   return (
-    <Container className="py-10">
-      <Breadcrumbs
-        items={[
-          { name: "Voitures électriques", href: "/voitures-electriques" },
-          { name: v.brand, href: `/voitures-electriques/${v.brandSlug}` },
-          { name: `${v.model} ${v.version}`, href: `/voitures-electriques/${v.brandSlug}/${v.modelSlug}` },
-        ]}
-      />
+    <div>
+      <p className="max-w-3xl text-slate-700">
+        {vehicleTitle(v)} ({v.years}) : {v.bodyType === "SUV" ? "SUV" : v.bodyType} électrique {v.seats} places, {driveLabel[v.drive].toLowerCase()},
+        batterie de {fmt(v.batteryUsable, "kWh", 1)} utiles pour {fmt(v.rangeWltp, "km")} d&apos;autonomie WLTP selon la source,
+        recharge AC jusqu&apos;à {fmt(v.chargingAC, "kW", 1)}
+        {v.chargingDC ? ` et DC jusqu'à ${fmt(v.chargingDC, "kW")}` : ""}.
+      </p>
 
-      <div className="mb-6">
-        <DemoNotice />
+      <div className="mt-6 grid grid-cols-2 gap-3 lg:grid-cols-4">
+        <KeyStat label="Autonomie WLTP" value={fmt(v.rangeWltp, "km")} type={src} />
+        <KeyStat label="Batterie utile" value={fmt(v.batteryUsable, "kWh", 1)} sub={v.batteryGross ? `${fmt(v.batteryGross, "kWh", 1)} brute` : undefined} type={src} />
+        <KeyStat label="Charge DC max" value={fmt(v.chargingDC, "kW")} sub={v.chargingTime10to80 ? `10-80 % en ${v.chargingTime10to80} min` : undefined} type={src} />
+        <KeyStat label="Coût aux 100 km" value={formatEuro(costPer100km(v, ASSUMPTIONS.homePrice), 2)} sub={`à ${formatNumber(ASSUMPTIONS.homePrice, 2)} €/kWh, domicile`} type="calculated" />
       </div>
 
-      <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-wide text-emerald-600">
-            {v.brand} · {v.bodyType} · {v.year}
-          </p>
-          <h1 className="mt-1 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-            {v.model} <span className="text-slate-500">{v.version}</span>
-          </h1>
-          <p className="mt-3 max-w-2xl text-lg text-slate-600">{v.summary}</p>
-          <p className="mt-4 text-3xl font-extrabold text-slate-900">
-            {formatEuro(v.price)}{" "}
-            <span className="text-sm font-medium text-slate-500">à partir de (indicatif)</span>
-          </p>
-
-          {/* Summary specs */}
-          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <Spec icon={Gauge} label="Autonomie WLTP" value={`${formatNumber(v.rangeWltp)} km`} />
-            <Spec icon={BatteryCharging} label="Batterie utile" value={`${formatNumber(v.usableBatteryCapacity, 1)} kWh`} />
-            <Spec icon={Zap} label="Recharge DC" value={`${formatNumber(v.chargingDC)} kW`} />
-            <Spec icon={Timer} label="10-80 %" value={`${formatNumber(v.chargingTime10to80)} min`} />
-          </div>
-        </div>
-
-        <aside
-          className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-gradient-to-br from-slate-100 to-emerald-50 lg:aspect-auto"
-          aria-hidden
-        >
-          <span className="text-5xl font-black tracking-tight text-slate-300">
-            {v.brand}
-          </span>
-        </aside>
+      <h2 className="mt-12 text-2xl font-bold text-slate-900">Caractéristiques techniques</h2>
+      <p className="mt-2 max-w-3xl text-sm text-slate-600">
+        Les valeurs proviennent de la source citée en bas de page. Une donnée absente est indiquée « Non disponible » : elle n&apos;est jamais estimée.
+        Le prix en France n&apos;est pas encore collecté : consultez le configurateur du constructeur.
+      </p>
+      <div className="mt-5 grid gap-4 lg:grid-cols-2">
+        <SpecTable
+          title="Batterie et autonomie"
+          id="spec-batterie"
+          type={src}
+          rows={[
+            { label: "Batterie brute", value: fmt(v.batteryGross, "kWh", 1) },
+            { label: "Batterie utile", value: fmt(v.batteryUsable, "kWh", 1) },
+            { label: "Technologie", value: v.chemistry ?? "Non disponible" },
+            { label: "Autonomie WLTP (mixte)", value: fmt(v.rangeWltp, "km") },
+            { label: "Consommation WLTP", value: fmt(v.consumptionWltp, "kWh/100 km", 1), note: v.consumptionWltp === null ? "Non publiée ou incohérente dans la source ; voir la consommation calculée ci-dessous." : undefined },
+            { label: "Consommation calculée (côté batterie)", value: fmt(battCons, "kWh/100 km", 1), type: "calculated", note: "Capacité utile ÷ autonomie WLTP × 100." },
+          ]}
+        />
+        <SpecTable
+          title="Recharge"
+          id="spec-recharge"
+          type={src}
+          rows={[
+            { label: "Puissance AC maximale", value: fmt(v.chargingAC, "kW", 1) },
+            { label: "Puissance DC maximale", value: fmt(v.chargingDC, "kW") },
+            { label: "Charge DC 10-80 %", value: fmt(v.chargingTime10to80, "min") },
+          ]}
+        />
+        <SpecTable
+          title="Performances"
+          id="spec-performances"
+          type={src}
+          rows={[
+            { label: "Puissance", value: `${fmt(v.powerKw, "kW")} (${fmt(v.powerPs, "ch")})` },
+            { label: "Couple", value: fmt(v.torque, "Nm") },
+            { label: "0 à 100 km/h", value: fmt(v.acceleration0to100, "s", 1) },
+            { label: "Vitesse maximale", value: fmt(v.topSpeed, "km/h") },
+            { label: "Transmission", value: driveLabel[v.drive] },
+          ]}
+        />
+        <SpecTable
+          title="Dimensions, poids et coffre"
+          id="spec-dimensions"
+          type={src}
+          rows={[
+            { label: "Longueur × largeur × hauteur", value: `${formatNumber(v.dimensions.length)} × ${formatNumber(v.dimensions.width)} × ${formatNumber(v.dimensions.height)} mm` },
+            { label: "Poids à vide", value: fmt(v.weight, "kg") },
+            { label: "Coffre", value: fmt(v.trunkVolume, "L") },
+            { label: "Coffre, banquette rabattue", value: fmt(v.trunkVolumeMax, "L") },
+            { label: "Places", value: String(v.seats) },
+          ]}
+        />
+        <SpecTable
+          title="Garanties"
+          id="spec-garanties"
+          type={src}
+          rows={[
+            { label: "Garantie véhicule", value: fmtText(v.warranty) },
+            { label: "Garantie batterie", value: fmtText(v.batteryWarranty), note: "Telle que publiée par la source ; les conditions françaises peuvent différer." },
+          ]}
+        />
       </div>
 
-      {/* Technical specifications */}
-      <section className="mt-12">
-        <h2 className="text-2xl font-bold text-slate-900">Caractéristiques techniques</h2>
-        <div className="mt-4 grid gap-x-10 gap-y-0 sm:grid-cols-2">
-          <dl>
-            <SpecRow label="Batterie totale" value={`${formatNumber(v.batteryCapacity, 1)} kWh`} />
-            <SpecRow label="Batterie utile" value={`${formatNumber(v.usableBatteryCapacity, 1)} kWh`} />
-            <SpecRow label="Autonomie WLTP" value={`${formatNumber(v.rangeWltp)} km`} />
-            <SpecRow label="Consommation WLTP" value={`${formatNumber(v.consumptionWltp, 1)} kWh/100 km`} />
-            <SpecRow label="Recharge AC" value={`${formatNumber(v.chargingAC)} kW`} />
-            <SpecRow label="Recharge DC" value={`${formatNumber(v.chargingDC)} kW`} />
-            <SpecRow label="Pic DC observé" value={`${formatNumber(v.dcPeakPower)} kW`} />
-          </dl>
-          <dl>
-            <SpecRow label="0-100 km/h" value={`${formatNumber(v.acceleration, 1)} s`} />
-            <SpecRow label="Puissance" value={`${formatNumber(v.power)} ch`} />
-            <SpecRow label="Couple" value={`${formatNumber(v.torque)} Nm`} />
-            <SpecRow label="Poids" value={`${formatNumber(v.weight)} kg`} />
-            <SpecRow label="Coffre" value={`${formatNumber(v.trunkVolume)} L`} />
-            <SpecRow label="Places" value={`${v.seats}`} />
-            <SpecRow label="Dimensions (L×l×h)" value={`${v.dimensions.length} × ${v.dimensions.width} × ${v.dimensions.height} mm`} />
-          </dl>
-        </div>
-      </section>
+      <h2 className="mt-12 text-2xl font-bold text-slate-900">Autonomie réelle estimée</h2>
+      <p className="mt-2 max-w-3xl text-sm text-slate-600">
+        Estimation EVExpert : la consommation de référence ({formatNumber(battCons, 1)} kWh/100 km, côté batterie) est multipliée par des facteurs de vitesse,
+        de température et de type de trajet décrits sur la page{" "}
+        <Link href="/methodologie#autonomie" className="font-medium text-emerald-800 underline">Méthodologie</Link>.
+      </p>
+      <div className="mt-4 overflow-x-auto rounded-2xl border border-slate-200 bg-white">
+        <table className="w-full min-w-[420px] text-left text-sm">
+          <caption className="sr-only">Autonomie estimée selon le scénario</caption>
+          <thead className="bg-slate-50 text-slate-600">
+            <tr>
+              <th scope="col" className="px-5 py-2.5 font-semibold">Scénario</th>
+              <th scope="col" className="px-5 py-2.5 font-semibold">Autonomie estimée</th>
+              <th scope="col" className="px-5 py-2.5 font-semibold">Part du WLTP</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-slate-100">
+            {scenarios.map(({ s, km }) => (
+              <tr key={s.id}>
+                <th scope="row" className="px-5 py-2.5 font-medium text-slate-900">{s.label}</th>
+                <td className="tabular px-5 py-2.5 font-semibold text-slate-900">≈ {formatNumber(Math.round(km / 5) * 5)} km</td>
+                <td className="tabular px-5 py-2.5 text-slate-700">{formatNumber((km / v.rangeWltp) * 100)} %</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
-      {/* Real-world usage */}
-      <section className="mt-12">
-        <h2 className="text-2xl font-bold text-slate-900">Usage réel (estimations)</h2>
-        <p className="mt-2 text-sm text-slate-600">
-          Estimations calculées à titre indicatif. Ce ne sont pas des valeurs officielles.
+      <h2 className="mt-12 text-2xl font-bold text-slate-900">Coût de recharge</h2>
+      <p className="mt-2 max-w-3xl text-sm text-slate-600">
+        Calcul EVExpert sur les conditions WLTP, avec un rendement de charge de {ASSUMPTIONS.chargingEfficiency} % et trois tarifs d&apos;hypothèse.
+        Remplacez-les par vos prix réels dans le{" "}
+        <Link href="/outils/cout-recharge-voiture-electrique" className="font-medium text-emerald-800 underline">calculateur de coût de recharge</Link>.
+      </p>
+      <div className="mt-4 overflow-x-auto rounded-2xl border border-slate-200 bg-white">
+        <table className="w-full min-w-[520px] text-left text-sm">
+          <caption className="sr-only">Coût de recharge selon le tarif</caption>
+          <thead className="bg-slate-50 text-slate-600">
+            <tr>
+              <th scope="col" className="px-5 py-2.5 font-semibold">Tarif (hypothèse)</th>
+              <th scope="col" className="px-5 py-2.5 font-semibold">Aux 100 km</th>
+              <th scope="col" className="px-5 py-2.5 font-semibold">Recharge 10 → 80 %</th>
+              <th scope="col" className="px-5 py-2.5 font-semibold">Plein 0 → 100 %</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-slate-100">
+            {tariffs.map((t) => (
+              <tr key={t.label}>
+                <th scope="row" className="px-5 py-2.5 font-medium text-slate-900">
+                  {t.label} <span className="font-normal text-slate-600">({formatNumber(t.price, 2)} €/kWh)</span>
+                </th>
+                <td className="tabular px-5 py-2.5 font-semibold text-slate-900">{formatEuro(costPer100km(v, t.price), 2)}</td>
+                <td className="tabular px-5 py-2.5 text-slate-700">
+                  {formatEuro(chargeCost(v, t.price, 10, 80).cost, 2)}{" "}
+                  <span className="text-xs text-slate-600">(+{formatNumber(Math.round(chargeCost(v, t.price, 10, 80).rangeAdded / 5) * 5)} km)</span>
+                </td>
+                <td className="tabular px-5 py-2.5 text-slate-700">{formatEuro(chargeCost(v, t.price, 0, 100).cost, 2)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2 className="mt-12 text-2xl font-bold text-slate-900">Temps de recharge</h2>
+      <p className="mt-2 max-w-3xl text-sm text-slate-600">
+        En AC, temps théorique de 10 à 80 % (puissance de la borne plafonnée par le chargeur du véhicule, rendement {ASSUMPTIONS.chargingEfficiency} %).
+        En DC, temps publié par la source : la puissance baisse pendant la charge.
+      </p>
+      <div className="mt-4 overflow-x-auto rounded-2xl border border-slate-200 bg-white">
+        <table className="w-full min-w-[420px] text-left text-sm">
+          <caption className="sr-only">Temps de recharge de 10 à 80 % selon la puissance de la borne</caption>
+          <thead className="bg-slate-50 text-slate-600">
+            <tr>
+              <th scope="col" className="px-5 py-2.5 font-semibold">Borne</th>
+              <th scope="col" className="px-5 py-2.5 font-semibold">Puissance utilisée</th>
+              <th scope="col" className="px-5 py-2.5 font-semibold">Durée 10 → 80 %</th>
+              <th scope="col" className="px-5 py-2.5 font-semibold">Nature</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-slate-100">
+            {acStations.map((kw) => {
+              const r = acChargeMinutes(v, kw);
+              return (
+                <tr key={kw}>
+                  <th scope="row" className="px-5 py-2.5 font-medium text-slate-900">{formatNumber(kw, 1)} kW AC</th>
+                  <td className="tabular px-5 py-2.5 text-slate-700">
+                    {formatNumber(r.effectiveKw, 1)} kW {r.effectiveKw < kw && <span className="text-xs text-amber-800">(limité par le véhicule)</span>}
+                  </td>
+                  <td className="tabular px-5 py-2.5 font-semibold text-slate-900">{minutesToHuman(r.minutes)}</td>
+                  <td className="px-5 py-2.5"><DataBadge type="calculated" /></td>
+                </tr>
+              );
+            })}
+            <tr>
+              <th scope="row" className="px-5 py-2.5 font-medium text-slate-900">Borne DC rapide</th>
+              <td className="tabular px-5 py-2.5 text-slate-700">jusqu&apos;à {fmt(v.chargingDC, "kW")}</td>
+              <td className="tabular px-5 py-2.5 font-semibold text-slate-900">{v.chargingTime10to80 ? `${v.chargingTime10to80} min` : "Non disponible"}</td>
+              <td className="px-5 py-2.5"><DataBadge type={src} /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div className="mt-12 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+        <h2 className="text-lg font-bold text-slate-900">Source des données</h2>
+        <div className="mt-3">
+          <SourceLine source={v.source} />
+        </div>
+        <p className="mt-3 text-sm text-slate-600">
+          Ces données ne sont pas issues d&apos;un document constructeur : vérifiez les points importants (version exacte, année, options) auprès du constructeur avant tout achat.{" "}
+          <Link href="/sources" className="font-medium text-emerald-800 underline">Politique de sources</Link>.
         </p>
-        <div className="mt-4 grid gap-3 sm:grid-cols-3">
-          <Spec icon={Gauge} label="Autonomie mixte (est.)" value={`≈ ${formatNumber(v.realWorldRange)} km`} />
-          <Spec icon={Ruler} label="Autoroute par 0°C (est.)" value={`≈ ${formatNumber(winterRange.estimatedRange)} km`} />
-          <Spec icon={Weight} label="Conso ajustée hiver" value={`≈ ${formatNumber(winterRange.adjustedConsumption, 1)} kWh/100`} />
-        </div>
-      </section>
-
-      {/* Charging */}
-      <section className="mt-12">
-        <h2 className="text-2xl font-bold text-slate-900">Recharge</h2>
-        <div className="mt-4 grid gap-3 sm:grid-cols-3">
-          <Spec icon={Zap} label="AC (chargeur embarqué)" value={`${formatNumber(v.chargingAC)} kW`} />
-          <Spec icon={Zap} label="DC (recharge rapide)" value={`${formatNumber(v.chargingDC)} kW`} />
-          <Spec icon={Timer} label="10-80 % en DC" value={`${formatNumber(v.chargingTime10to80)} min`} />
-        </div>
-        <p className="mt-4 text-sm text-slate-600">
-          Besoin d&apos;estimer votre temps de recharge&nbsp;?{" "}
-          <Link href="/outils/temps-recharge" className="font-medium text-emerald-700 hover:underline">
-            Utilisez le calculateur de temps de recharge
-          </Link>
-          .
-        </p>
-      </section>
-
-      <div className="mt-10">
-        <AdSlot slot="vehicle-inline" format="inline" />
       </div>
 
-      {/* Cost of ownership + per 100km */}
-      <section className="mt-12">
-        <h2 className="text-2xl font-bold text-slate-900">Coûts d&apos;usage (estimations)</h2>
-        <div className="mt-4 grid gap-3 sm:grid-cols-3">
-          <Spec icon={Zap} label="Recharge 20-80 % à domicile" value={formatEuro(homeCharge.cost, 2)} />
-          <Spec icon={Gauge} label="Coût aux 100 km (domicile)" value={formatEuro(per100Home, 2)} />
-          <Spec icon={BatteryCharging} label="km ajoutés (20-80 %)" value={`≈ ${formatNumber(homeCharge.rangeAdded)} km`} />
-        </div>
-        <div className="mt-4 flex flex-wrap gap-3 text-sm">
-          <Link href="/outils/cout-recharge-voiture-electrique" className="font-medium text-emerald-700 hover:underline">
-            Calculateur de coût de recharge →
-          </Link>
-          <Link href="/outils/tco-voiture-electrique" className="font-medium text-emerald-700 hover:underline">
-            Calculateur de TCO →
-          </Link>
-        </div>
-      </section>
+      <Faq items={faq} title={`Questions sur la ${v.brand} ${v.model}`} />
+      <JsonLd data={faqJsonLd(faq)} />
 
-      {/* Compare with similar */}
       {similar.length > 0 && (
-        <section className="mt-12">
-          <h2 className="mb-4 text-2xl font-bold text-slate-900">
-            Comparer avec des modèles proches
-          </h2>
-          <ComparisonTable vehicles={[v, ...similar]} />
+        <section className="mt-12" aria-labelledby="similaires">
+          <h2 id="similaires" className="text-2xl font-bold text-slate-900">Véhicules similaires</h2>
+          <p className="mt-1 text-sm text-slate-600">Même type de carrosserie, capacité de batterie et autonomie proches.</p>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {similar.map((s) => (
+              <VehicleCard key={s.id} vehicle={s} href={vehicleHref(s)} />
+            ))}
+          </div>
         </section>
       )}
 
-      {/* Related guides */}
-      <section className="mt-12">
-        <h2 className="text-2xl font-bold text-slate-900">Guides associés</h2>
-        <ul className="mt-3 space-y-2">
-          {relatedGuides.map((g) => (
-            <li key={g.slug}>
-              <Link href={`/guides/${g.slug}`} className="font-medium text-emerald-700 hover:underline">
-                {g.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      {/* FAQ */}
-      <Faq items={faq} />
-      <JsonLd data={faqJsonLd(faq)} />
-
-      {/* Sources */}
-      <section className="mt-12 rounded-2xl border border-slate-200 bg-slate-50 p-5">
-        <h2 className="text-lg font-bold text-slate-900">Sources et mise à jour</h2>
-        <div className="mt-3 space-y-2">
-          <SourceBadge source={v.source} sourceUrl={v.sourceUrl} isDemo={v.isDemo} />
-          <LastUpdated date={v.lastUpdated} />
-        </div>
-      </section>
-    </Container>
+      <div className="grid gap-4 md:grid-cols-2">
+        <RelatedTools
+          hrefs={[
+            "/outils/cout-100-km",
+            "/outils/cout-recharge-voiture-electrique",
+            "/outils/autonomie-voiture-electrique",
+            "/outils/temps-recharge",
+          ]}
+        />
+        <RelatedGuides slugs={["calculer-autonomie-reelle", "recharge-ac-ou-dc", "batterie-brute-batterie-utile", "choisir-voiture-electrique-selon-usage"]} />
+      </div>
+    </div>
   );
 }

@@ -3,36 +3,45 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Conditions d'utilisation",
-  description: "Conditions générales d'utilisation du site.",
+  description: "Règles d'usage du site EVExpert : contenus informatifs, calculateurs, propriété intellectuelle et limites de responsabilité.",
   path: "/conditions-utilisation",
-  noindex: true,
 });
 
 export default function Page() {
   return (
     <LegalPage
       title="Conditions d'utilisation"
-      description="Les règles d'utilisation du site et de ses outils."
+      description="En utilisant le site, vous acceptez les règles ci-dessous."
       breadcrumb="Conditions d'utilisation"
       href="/conditions-utilisation"
       sections={[
         {
           heading: "Objet",
+          paragraphs: ["Le site propose des contenus informatifs, des calculateurs et des fiches techniques sur les voitures électriques. Il n'est ni un vendeur, ni un conseiller financier, ni un service de prise de décision."],
+        },
+        {
+          heading: "Usage des calculateurs",
           paragraphs: [
-            "Le site fournit des contenus informatifs et des outils de calcul à titre indicatif. Il ne constitue ni un conseil personnalisé, ni une offre commerciale.",
+            "Les résultats sont des estimations produites à partir des valeurs que vous saisissez et d'hypothèses affichées. Ils sont fournis à titre indicatif : vérifiez les points importants (tarifs, aides, caractéristiques exactes) auprès des sources officielles et du constructeur avant tout achat ou investissement.",
           ],
         },
         {
-          heading: "Nature des informations",
+          heading: "Exactitude des données",
           paragraphs: [
-            "Les données véhicules publiées sont actuellement des données d'exemple. Les résultats des calculateurs sont des estimations dépendant des valeurs saisies par l'utilisateur.",
+            "Nous indiquons la source, la nature (sourcée, calculée, estimée) et la date de relevé des données. Elles peuvent devenir obsolètes ou comporter des erreurs ; signalez-les via la page Contact.",
           ],
         },
         {
-          heading: "Responsabilité",
-          paragraphs: [
-            "L'utilisateur reste seul responsable de l'usage qu'il fait des informations et estimations fournies. Nous recommandons de vérifier toute donnée déterminante auprès de sources officielles.",
-          ],
+          heading: "Utilisation acceptable",
+          paragraphs: ["Il est interdit d'utiliser le site pour perturber son fonctionnement, extraire massivement son contenu ou en reproduire le contenu de façon substantielle sans autorisation."],
+        },
+        {
+          heading: "Limitation de responsabilité",
+          paragraphs: ["Dans les limites permises par la loi, l'éditeur ne peut être tenu responsable des dommages résultant de l'utilisation des informations ou de l'indisponibilité du site."],
+        },
+        {
+          heading: "Évolution",
+          paragraphs: ["Ces conditions peuvent évoluer ; la date de mise à jour figure en haut de page. Le droit français s'applique."],
         },
       ]}
     />

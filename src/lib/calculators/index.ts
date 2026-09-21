@@ -57,7 +57,7 @@ export interface RangeResult {
 }
 
 // Temperature factor: consumption increases in cold/heat.
-function temperatureFactor(temp: number): number {
+export function temperatureFactor(temp: number): number {
   if (temp >= 20) return 1;
   if (temp >= 10) return 1.08;
   if (temp >= 0) return 1.2;
@@ -65,7 +65,7 @@ function temperatureFactor(temp: number): number {
   return 1.55;
 }
 
-function drivingFactor(type: DrivingType): number {
+export function drivingFactor(type: DrivingType): number {
   switch (type) {
     case "ville":
       return 0.85;
@@ -77,7 +77,7 @@ function drivingFactor(type: DrivingType): number {
 }
 
 // Aerodynamic penalty above ~110 km/h.
-function speedFactor(speed: number): number {
+export function speedFactor(speed: number): number {
   if (speed <= 90) return 1;
   const over = speed - 90;
   return 1 + over * 0.006;

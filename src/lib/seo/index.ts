@@ -44,7 +44,6 @@ export function buildMetadata({
       card: "summary_large_image",
       title: fullTitle,
       description,
-      site: siteConfig.twitter,
     },
   };
 }
@@ -72,9 +71,8 @@ export function organizationJsonLd() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: siteConfig.organization.name,
-    legalName: siteConfig.organization.legalName,
     url: siteConfig.url,
-    email: siteConfig.email,
+    ...(siteConfig.email ? { email: siteConfig.email } : {}),
   };
 }
 
@@ -113,6 +111,24 @@ export function articleJsonLd(input: {
     datePublished: input.publishedAt,
     dateModified: input.updatedAt,
     inLanguage: "fr-FR",
+  };
+}
+
+export function itemListJsonLd(
+  name: string,
+  items: { name: string; href: string }[],
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    numberOfItems: items.length,
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      url: `${siteConfig.url}${item.href}`,
+    })),
   };
 }
 

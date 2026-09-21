@@ -1,30 +1,22 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  Legend,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
+import { GroupedBars } from "@/components/charts/GroupedBars";
+import { ASSUMPTIONS } from "@/data/assumptions";
 import { computeTco, type TcoInput } from "@/lib/calculators";
 import { formatEuro } from "@/lib/utils";
 import { Field, NumberInput, ResultCard } from "./kit";
 
 const defaultA: TcoInput = {
   price: 40000,
-  bonus: 4000,
+  bonus: 0,
   resaleValue: 18000,
   years: 5,
   annualKm: 15000,
   consumption: 16,
-  energyPrice: 0.25,
+  energyPrice: ASSUMPTIONS.homePrice,
   publicChargingShare: 20,
-  publicChargingPrice: 0.5,
+  publicChargingPrice: ASSUMPTIONS.publicAcPrice,
   insurance: 700,
   maintenance: 250,
   tires: 150,
@@ -37,7 +29,7 @@ const defaultB: TcoInput = {
   bonus: 0,
   resaleValue: 13000,
   consumption: 6.5,
-  energyPrice: 1.85,
+  energyPrice: ASSUMPTIONS.petrolPrice,
   publicChargingShare: 0,
   publicChargingPrice: 0,
   maintenance: 600,
@@ -48,7 +40,7 @@ function TcoForm({ title, state, set }: { title: string; state: TcoInput; set: (
   const upd = (k: keyof TcoInput, v: number) => set({ ...state, [k]: v });
   const fields: { k: keyof TcoInput; label: string; step?: number }[] = [
     { k: "price", label: "Prix (€)", step: 500 },
-    { k: "bonus", label: "Aides / bonus (€)", step: 250 },
+    { k: "bonus", label: "Aides déduites (€)", step: 250 },
     { k: "resaleValue", label: "Revente estimée (€)", step: 500 },
     { k: "years", label: "Durée (ans)", step: 1 },
     { k: "annualKm", label: "Km / an", step: 1000 },
@@ -63,7 +55,7 @@ function TcoForm({ title, state, set }: { title: string; state: TcoInput; set: (
   ];
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-5">
-      <h3 className="text-base font-bold text-slate-900">{title}</h3>
+      <h2 className="text-base font-bold text-slate-900">{title}</h2>
       <div className="mt-4 grid grid-cols-2 gap-3">
         {fields.map((f) => (
           <Field key={String(f.k)} label={f.label} htmlFor={`${title}-${String(f.k)}`}>
@@ -82,10 +74,9 @@ export function TcoCalculator() {
   const rA = useMemo(() => computeTco(a), [a]);
   const rB = useMemo(() => computeTco(b), [b]);
 
-  const chartData = rA.breakdown.map((item, i) => ({
-    name: item.label,
-    "Véhicule A": Math.round(item.value),
-    "Véhicule B": Math.round(rB.breakdown[i].value),
+  const groups = rA.breakdown.map((item, i) => ({
+    label: item.label,
+    values: [Math.round(item.value), Math.round(rB.breakdown[i].value)],
   }));
 
   return (
@@ -111,22 +102,17 @@ export function TcoCalculator() {
       </div>
 
       <div className="rounded-2xl border border-slate-200 bg-white p-5">
-        <h3 className="mb-4 text-base font-bold text-slate-900">
+        <h2 className="mb-4 text-base font-bold text-slate-900">
           Répartition des coûts par poste
-        </h3>
-        <div className="h-80 w-full">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={chartData}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-              <XAxis dataKey="name" tick={{ fontSize: 11 }} interval={0} angle={-15} textAnchor="end" height={60} />
-              <YAxis tick={{ fontSize: 12 }} tickFormatter={(v) => `${v / 1000}k€`} />
-              <Tooltip formatter={(v) => formatEuro(Number(v))} />
-              <Legend />
-              <Bar dataKey="Véhicule A" fill="#059669" radius={[6, 6, 0, 0]} />
-              <Bar dataKey="Véhicule B" fill="#0ea5e9" radius={[6, 6, 0, 0]} />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
+        </h2>
+        <GroupedBars
+          title="Répartition des coûts par poste, véhicule A et véhicule B"
+          groups={groups}
+          series={[
+            { label: "Véhicule A", color: "#047857" },
+            { label: "Véhicule B", color: "#0369a1" },
+          ]}
+        />
       </div>
     </div>
   );

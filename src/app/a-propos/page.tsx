@@ -1,12 +1,15 @@
+import Link from "next/link";
 import { Container, PageHeader } from "@/components/layout/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
-import { ContentSections } from "@/components/ContentSections";
+import { Prose } from "@/components/ui/Prose";
+import { LastUpdated } from "@/components/ui/SourceBadge";
 import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "À propos",
-  description: `${siteConfig.name} est une plateforme d'information et d'outils dédiée à la voiture électrique en France.`,
+  title: "À propos d'EVExpert",
+  description:
+    "EVExpert aide à comprendre, comparer et calculer le coût réel d'une voiture électrique en France : notre mission, nos quatre piliers et nos règles éditoriales.",
   path: "/a-propos",
 });
 
@@ -14,35 +17,63 @@ export default function Page() {
   return (
     <Container className="py-10">
       <Breadcrumbs items={[{ name: "À propos", href: "/a-propos" }]} />
-      <PageHeader
-        title={`À propos de ${siteConfig.name}`}
-        description={siteConfig.tagline}
-      />
-      <article className="mt-8 max-w-3xl">
-        <ContentSections
-          sections={[
-            {
-              heading: "Notre mission",
-              paragraphs: [
-                `${siteConfig.name} a pour objectif d'aider les automobilistes francophones à mieux comprendre la voiture électrique grâce à des outils interactifs, une base de véhicules structurée et des contenus pédagogiques.`,
-                "Nous privilégions l'utilité et la transparence : des calculateurs qui calculent vraiment, des données clairement identifiées et des sources citées.",
-              ],
-            },
-            {
-              heading: "Notre approche des données",
-              paragraphs: [
-                "Nous n'inventons pas de spécifications. Les fiches véhicules actuelles reposent sur des données d'exemple, explicitement signalées, et sont conçues pour être remplacées par des données sourcées et datées.",
-                "Chaque donnée factuelle vise une source et une date de mise à jour.",
-              ],
-            },
-            {
-              heading: "Un nom temporaire",
-              paragraphs: [
-                `« ${siteConfig.name} » est un nom de projet interne temporaire. La marque et le domaine pourront évoluer.`,
-              ],
-            },
-          ]}
+      <article className="max-w-3xl">
+        <PageHeader
+          eyebrow="À propos"
+          title="À propos d'EVExpert"
+          description={`${siteConfig.name} — ${siteConfig.tagline} Une plateforme française pour comprendre, comparer et calculer le coût réel d'une voiture électrique.`}
         />
+        <div className="mt-3">
+          <LastUpdated date="2026-09-21" />
+        </div>
+        <div className="mt-8">
+          <Prose
+            sections={[
+              {
+                heading: "Notre mission",
+                paragraphs: [
+                  "Passer à l'électrique soulève des questions concrètes : quelle autonomie aurai-je vraiment, combien coûtera la recharge, quelle borne choisir, l'électrique revient-elle moins cher ? EVExpert y répond avec des outils dont chaque calcul est visible et des données dont la source est citée.",
+                ],
+              },
+              {
+                heading: "Quatre piliers",
+                paragraphs: [],
+                list: [
+                  "Outils : sept calculateurs (coût de recharge, autonomie, coût aux 100 km, essence vs électrique, TCO, temps de recharge, puissance de borne) avec formules, exemples et limites.",
+                  "Véhicules : un catalogue de fiches techniques sourcées, avec « Non disponible » quand une donnée manque.",
+                  "Recharge : AC, DC, puissances, connecteurs, coûts.",
+                  "Guides et analyses : des contenus pédagogiques et des analyses chiffrées à partir de notre catalogue.",
+                ],
+              },
+              {
+                heading: "Nos règles éditoriales",
+                paragraphs: [],
+                list: [
+                  "Nous n'inventons pas de données : une valeur inconnue reste vide.",
+                  "Nous distinguons données sourcées, calculs et estimations, avec un badge sur les pages concernées.",
+                  "Nous ne publions ni faux avis, ni faux témoignages, ni classement subjectif automatique de « meilleure voiture ».",
+                  "Nous n'acceptons pas de contenu sponsorisé déguisé en avis éditorial. Si des publicités ou des liens commerciaux sont un jour ajoutés, ils seront clairement identifiés.",
+                  "Nous corrigeons les erreurs signalées et mettons à jour les dates.",
+                ],
+              },
+              {
+                heading: "Ce que nous ne sommes pas",
+                paragraphs: [
+                  "EVExpert n'est ni un constructeur, ni un concessionnaire, ni un conseiller financier. Nos estimations éclairent une décision, elles ne la remplacent pas : vérifiez auprès du constructeur et des sources officielles avant d'acheter.",
+                ],
+              },
+              {
+                heading: "Aller plus loin",
+                paragraphs: [],
+              },
+            ]}
+          />
+          <ul className="mt-2 space-y-2 text-sm">
+            <li><Link href="/methodologie" className="font-medium text-emerald-800 underline">Méthodologie : comment nous calculons</Link></li>
+            <li><Link href="/sources" className="font-medium text-emerald-800 underline">Sources des données</Link></li>
+            <li><Link href="/contact" className="font-medium text-emerald-800 underline">Nous contacter ou signaler une erreur</Link></li>
+          </ul>
+        </div>
       </article>
     </Container>
   );

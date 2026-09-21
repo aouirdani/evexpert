@@ -2,6 +2,7 @@
 
 export type BodyType =
   | "citadine"
+  | "compacte"
   | "berline"
   | "SUV"
   | "break"
@@ -11,6 +12,32 @@ export type BodyType =
 
 export type ConnectorType = "Type 2" | "CCS" | "CHAdeMO";
 
+/**
+ * Nature d'une donnée affichée sur EVExpert.
+ * - official    : issue d'un document officiel (constructeur, autorité publique)
+ * - specialized : issue d'une base spécialisée reconnue (ex. EV Database)
+ * - calculated  : calculée par EVExpert à partir de données affichées
+ * - estimated   : estimation EVExpert reposant sur des hypothèses explicites
+ */
+export type DataType = "official" | "specialized" | "calculated" | "estimated";
+
+export interface DataSource {
+  /** Nom lisible de la source. */
+  name: string;
+  /** URL de la fiche source (absolue). */
+  url: string;
+  dataType: DataType;
+  /** Date (ISO) à laquelle EVExpert a relevé les données. */
+  lastUpdated: string;
+}
+
+export type DriveType = "FWD" | "RWD" | "AWD";
+export type BatteryChemistry = "LFP" | "NMC";
+
+/**
+ * Fiche véhicule. Toute valeur inconnue est `null` : on n'invente jamais
+ * une donnée, l'interface affiche « Non disponible ».
+ */
 export interface Vehicle {
   id: string;
   brand: string;
@@ -19,86 +46,69 @@ export interface Vehicle {
   modelSlug: string;
   version: string;
   versionSlug: string;
-  year: number;
+  /** Années de commercialisation telles que publiées par la source. */
+  years: string;
   bodyType: BodyType;
-  /** Prix indicatif en euros (TTC, hors bonus). */
-  price: number;
-  /** Capacité totale de la batterie en kWh. */
-  batteryCapacity: number;
-  /** Capacité utile de la batterie en kWh. */
-  usableBatteryCapacity: number;
-  /** Autonomie WLTP annoncée en km. */
+  drive: DriveType;
+  chemistry: BatteryChemistry | null;
+  /** Capacité brute de la batterie (kWh). */
+  batteryGross: number | null;
+  /** Capacité utile de la batterie (kWh). */
+  batteryUsable: number;
+  /** Autonomie WLTP mixte (km), telle que publiée par la source. */
   rangeWltp: number;
-  /** Consommation WLTP en kWh/100 km. */
-  consumptionWltp: number;
-  /** Estimation d'autonomie réelle (mixte) en km. */
-  realWorldRange: number;
-  /** Puissance de charge AC maximale en kW. */
+  /** Consommation WLTP (kWh/100 km, énergie tirée du réseau) si publiée et cohérente. */
+  consumptionWltp: number | null;
+  /** Puissance maximale (kW). */
+  powerKw: number;
+  /** Puissance maximale (ch). */
+  powerPs: number;
+  torque: number | null;
+  acceleration0to100: number | null;
+  topSpeed: number | null;
+  /** Puissance de charge AC maximale (kW). */
   chargingAC: number;
-  /** Puissance de charge DC maximale en kW. */
-  chargingDC: number;
-  /** Pic de puissance DC observé en kW. */
-  dcPeakPower: number;
-  /** Temps de charge rapide 10-80% en minutes. */
-  chargingTime10to80: number;
-  /** Accélération 0-100 km/h en secondes. */
-  acceleration: number;
-  /** Puissance moteur en ch. */
-  power: number;
-  /** Couple en Nm. */
-  torque: number;
-  /** Poids à vide en kg. */
-  weight: number;
-  /** Volume de coffre en litres. */
-  trunkVolume: number;
-  seats: number;
-  /** Dimensions L x l x h en mm. */
+  /** Puissance de charge DC maximale (kW). */
+  chargingDC: number | null;
+  /** Temps de charge DC 10-80 % (min). */
+  chargingTime10to80: number | null;
   dimensions: { length: number; width: number; height: number };
-  /** Garantie véhicule (texte). */
-  warranty: string;
-  /** Garantie batterie (texte). */
-  batteryWarranty: string;
-  /** Nature/origine de la donnée. */
-  source: string;
-  sourceUrl: string;
-  lastUpdated: string;
-  /** true = données d'exemple non officielles. */
-  isDemo: boolean;
-  /** Description éditoriale. */
-  summary: string;
-}
-
-export interface ChargingStation {
-  id: string;
-  operator: string;
-  network: string;
-  location: string;
-  city: string;
-  department: string;
-  latitude: number;
-  longitude: number;
-  power: number;
-  connector: ConnectorType;
-  price: string;
-  access: string;
-  openingHours: string;
-  source: string;
-  lastUpdated: string;
-  isDemo: boolean;
+  weight: number | null;
+  /** Coffre (L). */
+  trunkVolume: number | null;
+  trunkVolumeMax: number | null;
+  seats: number;
+  /** Garantie batterie, telle que publiée par la source. */
+  batteryWarranty: string | null;
+  /** Garantie véhicule : non collectée à ce stade. */
+  warranty: string | null;
+  /** Prix France TTC : non collecté à ce stade (voir /methodologie). */
+  price: number | null;
+  source: DataSource;
 }
 
 export type ArticleCategory =
-  | "Actualités"
-  | "Guides"
-  | "Comparatifs"
+  | "Nouveautés"
+  | "Marché électrique"
   | "Recharge"
-  | "Batterie"
+  | "Batteries"
+  | "Prix"
   | "Technologie"
-  | "Marché";
+  | "Guides pratiques";
+
+export interface ArticleTable {
+  caption?: string;
+  headers: string[];
+  rows: string[][];
+}
 
 export interface ArticleSection {
   heading?: string;
+  /** Niveau de titre : 2 par défaut, 3 pour une sous-section. */
+  level?: 2 | 3;
   paragraphs: string[];
+  list?: string[];
+  table?: ArticleTable;
 }
 
 export interface FaqItem {
@@ -125,6 +135,7 @@ export interface Article {
   intro: string;
   sections: ArticleSection[];
   relatedTools?: string[];
+  relatedGuides?: string[];
   relatedVehicleIds?: string[];
   faq?: FaqItem[];
   sources?: Source[];
@@ -132,17 +143,22 @@ export interface Article {
 
 export interface Guide {
   slug: string;
-  category: "achat" | "recharge" | "autonomie" | "batterie" | "entretien";
+  category: GuideCategory;
   title: string;
   description: string;
+  publishedAt: string;
   updatedAt: string;
   readingTime: number;
   intro: string;
   sections: ArticleSection[];
   relatedTools?: string[];
+  relatedGuides?: string[];
+  relatedVehicleIds?: string[];
   faq?: FaqItem[];
   sources?: Source[];
 }
+
+export type GuideCategory = "autonomie" | "recharge" | "batterie" | "coûts" | "achat" | "comprendre";
 
 export interface Tool {
   slug: string;

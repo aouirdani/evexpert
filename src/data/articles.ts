@@ -1,336 +1,360 @@
-import type { Article, ArticleCategory } from "@/types";
+import type { Article, ArticleCategory, Vehicle } from "@/types";
+import { SOURCES } from "@/data/sources";
+import { vehicles } from "@/data/vehicles";
+import { averageDcPower, batteryConsumption100 } from "@/lib/vehicle-calcs";
+import { formatNumber } from "@/lib/utils";
+
+/**
+ * Articles du blog. Politique éditoriale : pas d'actualité non vérifiée. Les
+ * analyses reposent sur le catalogue EVExpert et sont recalculées à chaque
+ * build : chaque chiffre publié peut être retrouvé dans les fiches véhicules.
+ */
+
+const DATE = "2026-09-21";
+const N = vehicles.length;
+const name = (v: Vehicle) => `${v.brand} ${v.model} ${v.version}`;
+const median = (a: number[]) => {
+  const s = [...a].sort((x, y) => x - y);
+  const m = Math.floor(s.length / 2);
+  return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+};
+
+const byCons = [...vehicles].sort((a, b) => batteryConsumption100(a) - batteryConsumption100(b));
+const withDc = vehicles.filter((v): v is Vehicle & { chargingTime10to80: number; chargingDC: number } => v.chargingTime10to80 !== null && v.chargingDC !== null);
+const byTime = [...withDc].sort((a, b) => a.chargingTime10to80 - b.chargingTime10to80 || b.chargingDC - a.chargingDC);
+const lfp = vehicles.filter((v) => v.chemistry === "LFP");
+const nmc = vehicles.filter((v) => v.chemistry === "NMC");
+const avg = (a: number[]) => a.reduce((s, x) => s + x, 0) / a.length;
+
+const bodyTypes = ["citadine", "compacte", "berline", "SUV"] as const;
+const bodyStats = bodyTypes.map((b) => {
+  const l = vehicles.filter((v) => v.bodyType === b);
+  return { b, n: l.length, cons: avg(l.map(batteryConsumption100)), range: avg(l.map((v) => v.rangeWltp)) };
+});
+
+const rangeBuckets: [string, (r: number) => boolean][] = [
+  ["Moins de 350 km", (r) => r < 350],
+  ["350 à 449 km", (r) => r >= 350 && r < 450],
+  ["450 à 549 km", (r) => r >= 450 && r < 550],
+  ["550 à 649 km", (r) => r >= 550 && r < 650],
+  ["650 km et plus", (r) => r >= 650],
+];
+
+const acValues = Array.from(new Set(vehicles.map((v) => v.chargingAC))).sort((a, b) => a - b);
 
 export const articles: Article[] = [
   {
-    slug: "combien-coute-recharge-voiture-electrique",
-    title: "Combien coûte la recharge d'une voiture électrique ?",
+    slug: "voitures-electriques-les-plus-sobres",
+    title: "Les voitures électriques les plus sobres de notre catalogue",
     description:
-      "Coût d'une recharge à domicile, sur borne publique et en recharge rapide : méthode de calcul et exemples concrets.",
+      `Consommation calculée de ${N} versions : quelles voitures électriques consomment le moins d'énergie aux 100 km, et ce que cela change pour le coût d'usage.`,
+    category: "Marché électrique",
+    author: "La rédaction EVExpert",
+    publishedAt: DATE,
+    updatedAt: DATE,
+    readingTime: 5,
+    excerpt: `Classement objectif de ${N} versions par consommation calculée (capacité utile ÷ autonomie WLTP), et lecture par type de carrosserie.`,
+    intro: `La consommation détermine votre coût d'énergie et l'autonomie que vous tirez de la batterie. Nous avons calculé, pour chacune des ${N} versions du catalogue, la consommation côté batterie à partir de la capacité utile et de l'autonomie WLTP publiées par la source.`,
+    sections: [
+      {
+        heading: "Les dix consommations calculées les plus basses",
+        paragraphs: [
+          "Consommation calculée = capacité utile ÷ autonomie WLTP × 100 (côté batterie, avant pertes de charge). C'est une valeur d'homologation, qui ne reflète ni l'autoroute ni l'hiver.",
+        ],
+        table: {
+          headers: ["Modèle", "Consommation calculée", "Batterie utile", "Autonomie WLTP", "Poids"],
+          rows: byCons.slice(0, 10).map((v) => [
+            name(v),
+            `${formatNumber(batteryConsumption100(v), 1)} kWh/100 km`,
+            `${formatNumber(v.batteryUsable, 1)} kWh`,
+            `${formatNumber(v.rangeWltp)} km`,
+            v.weight ? `${formatNumber(v.weight)} kg` : "Non disponible",
+          ]),
+        },
+      },
+      {
+        heading: "Par type de carrosserie",
+        paragraphs: [
+          "La moyenne des consommations calculées par type de carrosserie montre l'effet de la taille, du poids et de l'aérodynamique. Ces moyennes portent sur des échantillons de tailles différentes : elles décrivent le catalogue, pas le marché.",
+        ],
+        table: {
+          headers: ["Carrosserie", "Versions", "Consommation moyenne calculée", "Autonomie WLTP moyenne"],
+          rows: bodyStats.map((s) => [s.b, String(s.n), `${formatNumber(s.cons, 1)} kWh/100 km`, `${formatNumber(s.range)} km`]),
+        },
+      },
+      {
+        heading: `Écart entre la plus sobre et la plus gourmande`,
+        paragraphs: [
+          `Dans le catalogue, la consommation calculée va de ${formatNumber(batteryConsumption100(byCons[0]), 1)} kWh/100 km (${name(byCons[0])}) à ${formatNumber(batteryConsumption100(byCons[N - 1]), 1)} kWh/100 km (${name(byCons[N - 1])}). À un même prix du kWh, l'écart de coût d'énergie aux 100 km suit exactement ce rapport de ${formatNumber(batteryConsumption100(byCons[N - 1]) / batteryConsumption100(byCons[0]), 2)}.`,
+        ],
+      },
+      {
+        heading: "Comment utiliser ces chiffres",
+        paragraphs: [
+          "Une consommation plus basse réduit le coût d'énergie, mais ce n'est qu'un critère : la taille, le confort, l'autonomie et la recharge comptent autant. Convertissez la consommation en euros avec le calculateur de coût aux 100 km, en saisissant votre tarif.",
+        ],
+      },
+    ],
+    relatedTools: ["/outils/cout-100-km", "/outils/autonomie-voiture-electrique"],
+    relatedGuides: ["cout-100-km-voiture-electrique", "wltp-definition", "calculer-autonomie-reelle"],
+    relatedVehicleIds: [byCons[0].id, byCons[1].id, byCons[2].id],
+    faq: [
+      { question: "Cette consommation est-elle celle que je verrai au tableau de bord ?", answer: "Non : elle est calculée sur les valeurs d'homologation, côté batterie. Votre consommation réelle dépend de la vitesse, de la température et du trajet." },
+      { question: "Pourquoi certaines grosses voitures consomment-elles peu ?", answer: "Une bonne aérodynamique, un rendement de groupe motopropulseur élevé et une charge de batterie bien exploitée peuvent compenser la taille." },
+    ],
+    sources: [SOURCES.evdb, SOURCES.wltp],
+  },
+  {
+    slug: "recharge-rapide-temps-10-80",
+    title: "Recharge rapide : ce que disent les temps 10-80 % de notre catalogue",
+    description:
+      `Temps de charge 10-80 %, puissance maximale et puissance moyenne : ce que les données de ${N} versions révèlent sur la recharge rapide, et comment les lire.`,
     category: "Recharge",
     author: "La rédaction EVExpert",
-    publishedAt: "2026-01-14",
-    updatedAt: "2026-01-14",
-    readingTime: 8,
-    excerpt:
-      "Le coût de recharge dépend du prix du kWh, de la capacité de la batterie et du rendement de charge. Décryptage avec des exemples.",
-    intro:
-      "Le coût de recharge d'une voiture électrique varie fortement selon le lieu et le tarif de l'électricité. Cet article explique comment le calculer précisément et compare les principaux scénarios.",
+    publishedAt: DATE,
+    updatedAt: DATE,
+    readingTime: 5,
+    excerpt: "La puissance maximale ne dit pas tout : nous comparons les temps de charge 10-80 % et les puissances moyennes déduites.",
+    intro: `Sur ${withDc.length} versions du catalogue, la source publie une puissance DC maximale et un temps de charge de 10 à 80 %. Rapprocher les deux montre pourquoi le pic de puissance est un mauvais critère à lui seul.`,
     sections: [
       {
-        heading: "La formule de base",
+        heading: "Les charges 10-80 % les plus courtes",
         paragraphs: [
-          "Le coût d'une recharge se calcule en multipliant l'énergie réellement tirée du réseau par le prix du kWh.",
-          "L'énergie stockée dans la batterie correspond à la capacité multipliée par l'écart entre l'état de charge de départ et l'état de charge visé. Comme la recharge n'est pas parfaite, l'énergie tirée du réseau est légèrement supérieure : c'est le rendement de charge.",
+          "Puissance moyenne = énergie de la fenêtre 10-80 % (70 % de la capacité utile) ÷ durée. C'est un calcul EVExpert sur des données publiées.",
+        ],
+        table: {
+          headers: ["Modèle", "DC max.", "10-80 %", "Puissance moyenne"],
+          rows: byTime.slice(0, 10).map((v) => [name(v), `${formatNumber(v.chargingDC)} kW`, `${v.chargingTime10to80} min`, `${formatNumber(averageDcPower(v) ?? 0)} kW`]),
+        },
+      },
+      {
+        heading: "Un temps médian autour de la demi-heure",
+        paragraphs: [
+          `Le temps de charge 10-80 % médian du catalogue est de ${formatNumber(median(withDc.map((v) => v.chargingTime10to80)))} minutes, avec des valeurs comprises entre ${byTime[0].chargingTime10to80} et ${byTime[byTime.length - 1].chargingTime10to80} minutes. Une charge dont la durée est proche de la médiane suffit pour une pause sur autoroute.`,
         ],
       },
       {
-        heading: "Recharge à domicile",
+        heading: "Un pic élevé n'est pas un temps court",
         paragraphs: [
-          "À domicile, avec un tarif réglementé, la recharge est généralement le scénario le plus économique. Un plein d'énergie représente souvent quelques euros pour 300 km.",
-          "Utiliser un contrat heures creuses peut réduire encore la facture.",
+          "La puissance moyenne représente en général une fraction du pic. Une petite batterie peut afficher un temps très court avec une puissance modeste, alors qu'une grande batterie a besoin d'une puissance plus élevée pour un temps équivalent. C'est pourquoi le temps 10-80 % est le meilleur indicateur, à condition de le rapporter à la capacité de la batterie.",
         ],
       },
       {
-        heading: "Recharge publique et rapide",
+        heading: "En pratique",
         paragraphs: [
-          "Sur borne publique AC, le tarif est plus élevé qu'à domicile. En recharge rapide DC sur autoroute, le prix au kWh peut être nettement supérieur.",
-          "Pour les longs trajets, la recharge rapide reste néanmoins compétitive face au carburant.",
-        ],
-      },
-    ],
-    relatedTools: [
-      "/outils/cout-recharge-voiture-electrique",
-      "/outils/cout-100-km",
-      "/outils/temps-recharge",
-    ],
-    relatedVehicleIds: ["tesla-model-3-propulsion", "renault-5-e-tech-comfort"],
-    faq: [
-      {
-        question: "Est-il moins cher de recharger à domicile ?",
-        answer:
-          "Dans la grande majorité des cas, oui. La recharge à domicile, surtout en heures creuses, est nettement plus économique que la recharge rapide publique.",
-      },
-      {
-        question: "Le rendement de charge, qu'est-ce que c'est ?",
-        answer:
-          "C'est le rapport entre l'énergie effectivement stockée dans la batterie et l'énergie tirée du réseau. Une partie est perdue en chaleur, généralement 8 à 15 %.",
-      },
-    ],
-    sources: [
-      {
-        label: "Méthodologie de calcul EVExpert",
-        url: "/sources",
-        accessed: "2026-01-14",
-      },
-    ],
-  },
-  {
-    slug: "autonomie-reelle-vs-wltp",
-    title: "Autonomie réelle vs WLTP : à quoi s'attendre ?",
-    description:
-      "Pourquoi l'autonomie réelle diffère de la valeur WLTP et comment estimer une autonomie crédible.",
-    category: "Batterie",
-    author: "La rédaction EVExpert",
-    publishedAt: "2026-01-13",
-    updatedAt: "2026-01-13",
-    readingTime: 7,
-    excerpt:
-      "L'autonomie WLTP est une valeur de laboratoire. Voici comment estimer l'autonomie que vous obtiendrez vraiment.",
-    intro:
-      "La différence entre autonomie WLTP et autonomie réelle est l'une des principales sources d'incompréhension. Cet article clarifie le sujet.",
-    sections: [
-      {
-        heading: "Ce que mesure le cycle WLTP",
-        paragraphs: [
-          "Le cycle WLTP est un protocole normalisé réalisé en conditions contrôlées. Il permet de comparer les modèles entre eux mais ne reflète pas parfaitement un usage réel.",
-        ],
-      },
-      {
-        heading: "Les écarts en conditions réelles",
-        paragraphs: [
-          "Sur autoroute et par temps froid, l'autonomie réelle peut être inférieure de 20 à 35 % à la valeur WLTP.",
-          "En ville, à l'inverse, l'autonomie peut approcher, voire dépasser, la valeur WLTP grâce au freinage régénératif.",
-        ],
-      },
-    ],
-    relatedTools: ["/outils/autonomie-voiture-electrique"],
-    relatedVehicleIds: ["hyundai-kona-electric-64"],
-    faq: [
-      {
-        question: "Peut-on se fier à l'autonomie WLTP ?",
-        answer:
-          "Comme outil de comparaison entre modèles, oui. Comme prévision d'autonomie réelle, il faut appliquer une marge selon l'usage.",
-      },
-    ],
-  },
-  {
-    slug: "essence-vs-electrique-quel-cout-reel",
-    title: "Essence vs électrique : quel coût réel sur 5 ans ?",
-    description:
-      "Comparaison méthodique des coûts d'usage entre une voiture électrique et une voiture essence.",
-    category: "Comparatifs",
-    author: "La rédaction EVExpert",
-    publishedAt: "2026-01-11",
-    updatedAt: "2026-01-11",
-    readingTime: 9,
-    excerpt:
-      "Prix d'achat, énergie, entretien, dépréciation : comment comparer honnêtement électrique et essence.",
-    intro:
-      "Comparer une voiture électrique et une voiture essence demande de prendre en compte plusieurs postes de coûts, pas seulement le prix d'achat.",
-    sections: [
-      {
-        heading: "Les postes à comparer",
-        paragraphs: [
-          "Prix d'achat, énergie, entretien, assurance et dépréciation forment le cœur du calcul.",
-          "L'électrique part souvent avec un prix d'achat plus élevé mais un coût énergétique et d'entretien plus faible.",
-        ],
-      },
-      {
-        heading: "L'importance du kilométrage",
-        paragraphs: [
-          "Plus le kilométrage annuel est élevé, plus l'avantage énergétique de l'électrique se matérialise.",
-        ],
-      },
-    ],
-    relatedTools: [
-      "/outils/essence-vs-electrique",
-      "/outils/tco-voiture-electrique",
-    ],
-  },
-  {
-    slug: "recharge-a-domicile-guide-pratique",
-    title: "Recharge à domicile : le guide pratique",
-    description:
-      "Wallbox, puissance, installation et coûts : tout comprendre sur la recharge à domicile.",
-    category: "Recharge",
-    author: "La rédaction EVExpert",
-    publishedAt: "2026-01-09",
-    updatedAt: "2026-01-09",
-    readingTime: 6,
-    excerpt:
-      "La recharge à domicile est la solution la plus pratique et la plus économique. Voici comment bien s'équiper.",
-    intro:
-      "Recharger à domicile transforme l'usage quotidien d'une voiture électrique. Ce guide couvre l'essentiel.",
-    sections: [
-      {
-        heading: "Prise renforcée ou wallbox ?",
-        paragraphs: [
-          "Une prise renforcée convient pour un petit kilométrage. Une wallbox de 7,4 kW ou 11 kW offre une recharge plus rapide et plus sûre.",
-        ],
-      },
-    ],
-    relatedTools: ["/outils/temps-recharge"],
-  },
-  {
-    slug: "comprendre-courbe-de-charge",
-    title: "Comprendre la courbe de charge d'une voiture électrique",
-    description:
-      "Pourquoi la puissance de recharge diminue au fil de la charge et comment en tenir compte.",
-    category: "Technologie",
-    author: "La rédaction EVExpert",
-    publishedAt: "2026-01-07",
-    updatedAt: "2026-01-07",
-    readingTime: 6,
-    excerpt:
-      "La recharge rapide n'est pas linéaire. Comprendre la courbe de charge permet d'optimiser ses arrêts.",
-    intro:
-      "La courbe de charge décrit l'évolution de la puissance de recharge selon l'état de charge de la batterie.",
-    sections: [
-      {
-        heading: "Une puissance qui varie",
-        paragraphs: [
-          "La puissance est généralement maximale à faible état de charge, puis diminue nettement après 60-80 % pour préserver la batterie.",
-          "C'est pourquoi la recharge de 10 à 80 % est la plus efficace sur un long trajet.",
+          "Sur un long trajet, le temps d'arrêt dépend aussi de la borne, de la température de la batterie et de l'état de charge à l'arrivée. Voir le guide sur la puissance de recharge DC pour comprendre ces limites.",
         ],
       },
     ],
     relatedTools: ["/outils/temps-recharge", "/outils/puissance-borne-recharge"],
+    relatedGuides: ["puissance-recharge-dc", "temps-recharge-voiture-electrique", "recharger-a-80-pourcent"],
+    relatedVehicleIds: [byTime[0].id, byTime[1].id, byTime[2].id],
+    faq: [
+      { question: "Ces temps sont-ils garantis ?", answer: "Non : ce sont des valeurs publiées par la source dans de bonnes conditions (borne assez puissante, batterie à température adaptée)." },
+    ],
+    sources: [SOURCES.evdb],
   },
   {
-    slug: "quelle-autonomie-pour-mes-besoins",
-    title: "Quelle autonomie choisir selon vos besoins ?",
+    slug: "autonomie-wltp-repartition-catalogue",
+    title: "Autonomie WLTP : comment se répartissent les modèles du catalogue ?",
     description:
-      "Trop d'autonomie coûte cher et alourdit la voiture. Comment trouver le bon équilibre.",
-    category: "Guides",
+      `Répartition des autonomies WLTP de ${N} versions par tranche, autonomie médiane et lien avec la taille de la batterie : un panorama chiffré et sourcé.`,
+    category: "Batteries",
     author: "La rédaction EVExpert",
-    publishedAt: "2026-01-06",
-    updatedAt: "2026-01-06",
-    readingTime: 5,
-    excerpt:
-      "Choisir la bonne autonomie, c'est éviter de payer pour des kilomètres que l'on n'utilisera jamais.",
-    intro:
-      "L'autonomie idéale dépend de votre usage réel. Voici comment la déterminer.",
+    publishedAt: DATE,
+    updatedAt: DATE,
+    readingTime: 4,
+    excerpt: "Quelle est l'autonomie WLTP typique d'une voiture électrique du catalogue ? Répartition par tranche et rapport avec la capacité de batterie.",
+    intro: `L'autonomie WLTP est le chiffre le plus cité pour comparer les voitures électriques. Voici comment elle se répartit sur les ${N} versions du catalogue, et ce qu'elle doit à la taille de la batterie.`,
     sections: [
       {
-        heading: "Partir de votre usage",
+        heading: "Répartition par tranche d'autonomie",
+        paragraphs: [`L'autonomie WLTP médiane du catalogue est de ${formatNumber(median(vehicles.map((v) => v.rangeWltp)))} km.`],
+        table: {
+          headers: ["Tranche d'autonomie WLTP", "Nombre de versions"],
+          rows: rangeBuckets.map(([label, f]) => [label, String(vehicles.filter((v) => f(v.rangeWltp)).length)]),
+        },
+      },
+      {
+        heading: "La batterie n'explique pas tout",
         paragraphs: [
-          "Pour un usage urbain et périurbain, 300 km d'autonomie réelle suffisent largement.",
-          "Pour de fréquents longs trajets, privilégier une bonne autonomie et surtout une recharge rapide performante.",
+          "Une batterie plus grande donne plus d'autonomie, mais deux modèles à capacité égale peuvent afficher des autonomies très différentes selon leur consommation. Voici trois versions de capacité utile proche, mais d'autonomie WLTP différente :",
+        ],
+        table: {
+          headers: ["Modèle", "Batterie utile", "Autonomie WLTP", "Consommation calculée"],
+          rows: [...vehicles]
+            .filter((v) => v.batteryUsable >= 74 && v.batteryUsable <= 80)
+            .sort((a, b) => b.rangeWltp - a.rangeWltp)
+            .filter((_, i, arr) => i === 0 || i === Math.floor(arr.length / 2) || i === arr.length - 1)
+            .map((v) => [name(v), `${formatNumber(v.batteryUsable, 1)} kWh`, `${formatNumber(v.rangeWltp)} km`, `${formatNumber(batteryConsumption100(v), 1)} kWh/100 km`]),
+        },
+      },
+      {
+        heading: "Ce qu'il faut en retenir",
+        paragraphs: [
+          "Comparez toujours l'autonomie et la consommation ensemble, et convertissez l'autonomie WLTP en autonomie dans vos conditions avec le calculateur d'autonomie réelle.",
         ],
       },
     ],
     relatedTools: ["/outils/autonomie-voiture-electrique"],
+    relatedGuides: ["wltp-definition", "calculer-autonomie-reelle", "batterie-brute-batterie-utile"],
+    relatedVehicleIds: [],
+    faq: [{ question: "Le catalogue représente-t-il tout le marché ?", answer: `Non : il compte ${N} versions choisies parmi les modèles pertinents en France, pas l'ensemble des véhicules vendus.` }],
+    sources: [SOURCES.evdb, SOURCES.wltp],
   },
   {
-    slug: "marche-voiture-electrique-france",
-    title: "Le marché de la voiture électrique en France : où en est-on ?",
+    slug: "lfp-ou-nmc-ce-que-montrent-les-donnees",
+    title: "Batteries LFP ou NMC : ce que montrent les données du catalogue",
     description:
-      "Panorama éditorial de la dynamique du marché électrique français et de ses tendances.",
-    category: "Marché",
+      "LFP contre NMC : différences de chimie, et comparaison chiffrée des versions du catalogue équipées de l'une ou l'autre, avec les limites de l'exercice.",
+    category: "Technologie",
     author: "La rédaction EVExpert",
-    publishedAt: "2026-01-04",
-    updatedAt: "2026-01-04",
-    readingTime: 6,
-    excerpt:
-      "Offre, prix, recharge : les grandes tendances qui structurent le marché de l'électrique en France.",
-    intro:
-      "Le marché de la voiture électrique évolue rapidement. Ce panorama éditorial en résume les grandes tendances, sans chiffres inventés.",
+    publishedAt: DATE,
+    updatedAt: DATE,
+    readingTime: 5,
+    excerpt: `${lfp.length} versions LFP et ${nmc.length} NMC dans le catalogue : ce que la chimie change en pratique, et ce que les chiffres ne permettent pas de conclure.`,
+    intro: `Les batteries lithium-fer-phosphate (LFP) et lithium nickel-manganèse-cobalt (NMC) se partagent le marché. Dans le catalogue, la source indique la chimie pour ${lfp.length + nmc.length} versions : ${lfp.length} en LFP et ${nmc.length} en NMC.`,
     sections: [
       {
-        heading: "Une offre de plus en plus large",
+        heading: "Deux chimies, deux compromis",
         paragraphs: [
-          "L'offre s'élargit sur tous les segments, de la micro-citadine au grand SUV, avec une baisse progressive des prix d'entrée de gamme.",
+          "Les cellules LFP n'utilisent ni nickel ni cobalt. Elles supportent bien les charges répétées à 100 % et sont réputées robustes, mais elles stockent moins d'énergie à poids égal. Les cellules NMC ont une densité énergétique plus élevée, ce qui favorise les grandes autonomies, et sont plus sensibles à un stockage prolongé à un niveau de charge élevé.",
         ],
       },
       {
-        heading: "Le réseau de recharge se densifie",
+        heading: "Ce que montrent nos données",
         paragraphs: [
-          "Le déploiement des bornes rapides le long des axes majeurs facilite les longs trajets.",
+          "Moyennes calculées sur les versions dont la chimie est indiquée. Les échantillons sont petits et de segments différents : ce sont des constats sur le catalogue, non des lois générales.",
+        ],
+        table: {
+          headers: ["Chimie", "Versions", "Batterie utile moyenne", "Autonomie WLTP moyenne", "Consommation moyenne calculée"],
+          rows: [
+            ["LFP", String(lfp.length), `${formatNumber(avg(lfp.map((v) => v.batteryUsable)), 1)} kWh`, `${formatNumber(avg(lfp.map((v) => v.rangeWltp)))} km`, `${formatNumber(avg(lfp.map(batteryConsumption100)), 1)} kWh/100 km`],
+            ["NMC", String(nmc.length), `${formatNumber(avg(nmc.map((v) => v.batteryUsable)), 1)} kWh`, `${formatNumber(avg(nmc.map((v) => v.rangeWltp)))} km`, `${formatNumber(avg(nmc.map(batteryConsumption100)), 1)} kWh/100 km`],
+          ],
+        },
+      },
+      {
+        heading: "Les versions LFP du catalogue",
+        paragraphs: [],
+        list: lfp.map((v) => `${name(v)} : ${formatNumber(v.batteryUsable, 1)} kWh utiles, ${formatNumber(v.rangeWltp)} km WLTP`),
+      },
+      {
+        heading: "Que conclure ?",
+        paragraphs: [
+          "Le choix de chimie compte pour la façon de charger au quotidien (voir le guide sur la charge à 80 %) et pour le coût de fabrication, mais il ne détermine pas seul l'autonomie ni la qualité d'un modèle. Consultez la notice du constructeur pour la recommandation de charge de votre version.",
         ],
       },
     ],
+    relatedTools: ["/outils/autonomie-voiture-electrique"],
+    relatedGuides: ["recharger-a-80-pourcent", "preserver-batterie-voiture-electrique", "batterie-brute-batterie-utile"],
+    relatedVehicleIds: lfp.slice(0, 3).map((v) => v.id),
+    faq: [{ question: "Comment savoir si ma voiture est LFP ou NMC ?", answer: "La notice ou la fiche constructeur l'indique ; la chimie peut varier selon la version et l'année de production." }],
+    sources: [SOURCES.evdb, SOURCES.avere],
   },
   {
-    slug: "batterie-duree-de-vie-idees-recues",
-    title: "Durée de vie des batteries : les idées reçues",
+    slug: "recharge-ac-puissances-acceptees",
+    title: "Recharge AC : quelles puissances acceptent les voitures du catalogue ?",
     description:
-      "Non, une batterie de voiture électrique ne se remplace pas tous les cinq ans. Le point sur les mythes.",
-    category: "Batterie",
-    author: "La rédaction EVExpert",
-    publishedAt: "2026-01-02",
-    updatedAt: "2026-01-02",
-    readingTime: 6,
-    excerpt:
-      "La longévité des batteries est souvent sous-estimée. Décryptage des idées reçues les plus courantes.",
-    intro:
-      "La durée de vie des batteries fait l'objet de nombreuses idées reçues. Faisons le tri.",
-    sections: [
-      {
-        heading: "Une dégradation progressive",
-        paragraphs: [
-          "Une batterie ne tombe pas en panne du jour au lendemain : sa capacité diminue lentement au fil des années.",
-          "Les garanties batterie de 8 ans témoignent de la confiance des constructeurs dans leur longévité.",
-        ],
-      },
-    ],
-    relatedVehicleIds: ["kia-ev6-grande-autonomie"],
-  },
-  {
-    slug: "type-2-ccs-chademo-connecteurs",
-    title: "Type 2, CCS, CHAdeMO : quel connecteur pour quelle recharge ?",
-    description:
-      "Guide clair des principaux connecteurs de recharge et de leurs usages.",
+      "Répartition des puissances AC maximales (6,6 à 22 kW) des voitures du catalogue et conséquences pour choisir une borne à domicile.",
     category: "Recharge",
     author: "La rédaction EVExpert",
-    publishedAt: "2025-12-30",
-    updatedAt: "2025-12-30",
-    readingTime: 5,
-    excerpt:
-      "Chaque connecteur a son usage. Voici comment ne plus les confondre.",
-    intro:
-      "Les connecteurs de recharge peuvent prêter à confusion. Ce guide les remet en ordre.",
+    publishedAt: DATE,
+    updatedAt: DATE,
+    readingTime: 4,
+    excerpt: "Une wallbox 22 kW ne sert à rien si la voiture accepte 11 kW : voici la répartition des puissances AC acceptées dans le catalogue.",
+    intro: `Avant d'acheter une borne à domicile, il faut savoir ce que la voiture accepte en courant alternatif. Voici les puissances AC maximales relevées sur les ${N} versions du catalogue.`,
     sections: [
       {
-        heading: "AC ou DC",
+        heading: "Répartition des puissances AC maximales",
+        paragraphs: [],
+        table: {
+          headers: ["Puissance AC maximale", "Nombre de versions", "Exemples"],
+          rows: acValues.map((kw) => {
+            const l = vehicles.filter((v) => v.chargingAC === kw);
+            return [`${formatNumber(kw, 1)} kW`, String(l.length), l.slice(0, 3).map((v) => `${v.brand} ${v.model}`).join(", ")];
+          }),
+        },
+      },
+      {
+        heading: "Ce que cela implique",
         paragraphs: [
-          "Le Type 2 gère la recharge en courant alternatif ; le CCS ajoute la recharge rapide en courant continu.",
-          "CHAdeMO, plus ancien, recule au profit du CCS en Europe.",
+          `${formatNumber((vehicles.filter((v) => v.chargingAC === 11).length / N) * 100)} % des versions du catalogue acceptent 11 kW en AC : c'est la valeur la plus répandue. Une borne triphasée 11 kW est donc adaptée à la plupart d'entre elles, alors qu'une borne 22 kW ne profite qu'aux modèles qui l'acceptent.`,
+          "Pour les petites citadines, 7,4 kW peut suffire, voire moins pour un usage occasionnel.",
+        ],
+      },
+      {
+        heading: "Avant de commander une borne",
+        paragraphs: [
+          "Vérifiez la limite AC de votre modèle exact (elle peut varier selon la version ou l'option) et votre puissance souscrite. Simulez ensuite le temps de recharge avec l'outil sur la puissance de borne.",
         ],
       },
     ],
-    relatedTools: ["/outils/puissance-borne-recharge"],
+    relatedTools: ["/outils/puissance-borne-recharge", "/outils/temps-recharge"],
+    relatedGuides: ["puissance-borne-7-11-22-kw", "cout-borne-recharge-domicile", "recharge-ac-ou-dc"],
+    relatedVehicleIds: [],
+    faq: [{ question: "Ces limites peuvent-elles changer avec une option ?", answer: "Oui : certains modèles proposent un chargeur plus puissant en option. Vérifiez la configuration exacte." }],
+    sources: [SOURCES.evdb],
   },
   {
-    slug: "tco-pourquoi-le-prix-affiche-ne-suffit-pas",
-    title: "TCO : pourquoi le prix affiché ne suffit pas",
+    slug: "comment-evexpert-construit-sa-base",
+    title: "Comment EVExpert construit sa base de données véhicules (et ce qu'elle ne contient pas encore)",
     description:
-      "Le coût total de possession révèle le vrai coût d'une voiture, bien au-delà du prix d'achat.",
-    category: "Guides",
+      "Sources, contrôles de cohérence, champs volontairement vides et prochaines étapes : la transparence sur la base de véhicules d'EVExpert.",
+    category: "Nouveautés",
     author: "La rédaction EVExpert",
-    publishedAt: "2025-12-28",
-    updatedAt: "2025-12-28",
-    readingTime: 7,
-    excerpt:
-      "Le TCO agrège tous les coûts d'un véhicule. C'est l'indicateur clé pour comparer honnêtement.",
-    intro:
-      "Le coût total de possession (TCO) est l'indicateur le plus complet pour comparer deux véhicules.",
+    publishedAt: DATE,
+    updatedAt: DATE,
+    readingTime: 4,
+    excerpt: "D'où viennent nos données, comment elles sont contrôlées, et pourquoi le prix en France n'y figure pas encore.",
+    intro: `La base de véhicules d'EVExpert compte aujourd'hui ${N} versions issues de ${new Set(vehicles.map((v) => v.brandSlug)).size} marques. Voici comment elle est construite, et ce qu'elle ne fait pas encore.`,
     sections: [
       {
-        heading: "Ce que le TCO intègre",
+        heading: "D'où viennent les données",
         paragraphs: [
-          "Achat, dépréciation, énergie, entretien, assurance et pneus : le TCO agrège l'ensemble sur une durée donnée.",
-          "La dépréciation est souvent le poste le plus important, devant l'énergie.",
+          "Les caractéristiques techniques proviennent de la base spécialisée EV Database, relevées le 21 septembre 2026. Ce n'est pas une source constructeur : chaque fiche l'indique par la mention « Source spécialisée » et renvoie vers la fiche d'origine.",
+        ],
+      },
+      {
+        heading: "Contrôles de cohérence",
+        paragraphs: [
+          "Un script contrôle chaque ligne du catalogue avant publication : batterie utile inférieure ou égale à la brute, puissances en kW et en chevaux concordantes, consommation cohérente avec la capacité et l'autonomie, temps de charge et vitesses dans des plages plausibles. Une donnée jugée incohérente est mise à vide plutôt que corrigée à la main.",
+        ],
+      },
+      {
+        heading: "Ce qui manque volontairement",
+        paragraphs: [],
+        list: [
+          "Le prix en France : les prix publiés par la source concernent d'autres marchés et ne sont pas transposables. Tant qu'une source française n'est pas intégrée, le prix reste « Non disponible ».",
+          "La garantie véhicule : non collectée à ce stade.",
+          "Certaines consommations WLTP, absentes ou incohérentes dans la source.",
+        ],
+      },
+      {
+        heading: "Et ensuite ?",
+        paragraphs: [
+          "Les prochaines étapes sont l'ajout de sources constructeur pour les points importants, d'un prix France sourcé et daté, et de nouveaux modèles. Chaque évolution sera documentée sur la page Méthodologie.",
         ],
       },
     ],
-    relatedTools: ["/outils/tco-voiture-electrique"],
+    relatedTools: ["/outils/cout-100-km"],
+    relatedGuides: ["wltp-definition", "batterie-brute-batterie-utile"],
+    relatedVehicleIds: [],
+    faq: [{ question: "Puis-je signaler une erreur ?", answer: "Oui : utilisez la page Contact en précisant le modèle, la donnée concernée et la source à l'appui." }],
+    sources: [SOURCES.evdb],
   },
+];
+
+export const articleCategories: ArticleCategory[] = [
+  "Nouveautés",
+  "Marché électrique",
+  "Recharge",
+  "Batteries",
+  "Prix",
+  "Technologie",
+  "Guides pratiques",
 ];
 
 export function getArticle(slug: string): Article | undefined {
   return articles.find((a) => a.slug === slug);
 }
-
-export function getArticlesByCategory(category: ArticleCategory): Article[] {
-  return articles.filter((a) => a.category === category);
-}
-
-export const articleCategories: ArticleCategory[] = [
-  "Actualités",
-  "Guides",
-  "Comparatifs",
-  "Recharge",
-  "Batterie",
-  "Technologie",
-  "Marché",
-];

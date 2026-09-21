@@ -36,7 +36,7 @@ export function SectionHeading({
     <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
       <div className="max-w-2xl">
         {eyebrow && (
-          <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-emerald-600">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-emerald-800">
             {eyebrow}
           </p>
         )}
@@ -56,7 +56,7 @@ type ButtonVariant = "primary" | "secondary" | "outline";
 
 const buttonStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-emerald-600 text-white hover:bg-emerald-700 focus-visible:outline-emerald-600",
+    "bg-emerald-700 text-white hover:bg-emerald-800 focus-visible:outline-emerald-700",
   secondary:
     "bg-slate-900 text-white hover:bg-slate-800 focus-visible:outline-slate-900",
   outline:

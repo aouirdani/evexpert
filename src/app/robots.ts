@@ -7,6 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        // La recherche est aussi en noindex ; on évite en plus qu'elle soit explorée.
         disallow: ["/recherche", "/api/"],
       },
     ],

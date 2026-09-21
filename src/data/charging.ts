@@ -1,172 +1,137 @@
-import type { ChargingStation, FaqItem } from "@/types";
+import type { ArticleSection, FaqItem } from "@/types";
+import { SOURCES } from "@/data/sources";
+import type { Source } from "@/types";
 
 export interface ChargingTopic {
   slug: string;
   title: string;
   shortTitle: string;
-  category: "standard" | "puissance" | "usage";
   description: string;
   intro: string;
-  sections: { heading?: string; paragraphs: string[] }[];
-  faq?: FaqItem[];
+  sections: ArticleSection[];
+  faq: FaqItem[];
+  relatedGuides: string[];
+  sources: Source[];
+  updatedAt: string;
 }
+
+const UPDATED = "2026-09-21";
 
 export const chargingTopics: ChargingTopic[] = [
   {
     slug: "type-2",
-    title: "Prise Type 2 : le standard de la recharge en courant alternatif",
+    title: "Prise Type 2 : le connecteur standard de la recharge en courant alternatif",
     shortTitle: "Type 2",
-    category: "standard",
     description:
-      "Le connecteur Type 2 (Mennekes) est la norme européenne pour la recharge en courant alternatif (AC).",
+      "Le connecteur Type 2 (Mennekes) est le standard européen de la recharge en courant alternatif : où on le trouve, quelles puissances, quel câble.",
     intro:
-      "Le connecteur Type 2 est aujourd'hui le standard européen pour la recharge en courant alternatif, à domicile comme sur la voie publique.",
+      "Le connecteur Type 2 est le standard européen de la recharge en courant alternatif (AC). Il équipe les bornes publiques, les wallbox domestiques et la quasi-totalité des voitures électriques vendues récemment en Europe.",
     sections: [
       {
         heading: "À quoi sert le Type 2 ?",
         paragraphs: [
-          "Le Type 2 gère la recharge en courant alternatif (AC). Il équipe la quasi-totalité des voitures électriques vendues en Europe.",
-          "Selon le chargeur embarqué du véhicule, la puissance AC peut aller de 3,7 kW à 22 kW.",
+          "Il transporte du courant alternatif monophasé ou triphasé, ainsi que les signaux permettant à la borne et à la voiture de dialoguer avant que le courant soit établi. La voiture convertit ensuite ce courant en courant continu grâce à son chargeur embarqué.",
+          "Dans la réglementation européenne sur les infrastructures de carburants alternatifs, le Type 2 est le connecteur de référence pour les points de recharge AC ouverts au public.",
         ],
       },
       {
-        heading: "Où le trouve-t-on ?",
+        heading: "Quelles puissances ?",
         paragraphs: [
-          "On le retrouve sur les bornes publiques AC, les bornes en entreprise et la plupart des wallbox domestiques.",
+          "De 3,7 kW en monophasé à 22 kW en triphasé selon la borne, le câble et le chargeur embarqué du véhicule. La puissance utilisée est toujours la plus faible des trois maillons.",
+        ],
+        table: {
+          headers: ["Puissance", "Courant", "Usage courant"],
+          rows: [
+            ["3,7 kW", "Monophasé 16 A", "Prise renforcée, recharge lente"],
+            ["7,4 kW", "Monophasé 32 A", "Wallbox domestique"],
+            ["11 kW", "Triphasé 16 A", "Wallbox triphasée, travail, voirie"],
+            ["22 kW", "Triphasé 32 A", "Borne AC publique (si le véhicule l'accepte)"],
+          ],
+        },
+      },
+      {
+        heading: "Câble ou prise attachée ?",
+        paragraphs: [
+          "Sur les bornes publiques AC, le câble est en général à apporter soi-même (câble Type 2 vers Type 2). Sur beaucoup de wallbox domestiques, le câble est fixe. Vérifiez la puissance et le type de courant que supporte votre câble.",
         ],
       },
     ],
+    faq: [
+      { question: "Toutes les voitures électriques récentes ont-elles une prise Type 2 ?", answer: "La très grande majorité des voitures électriques vendues récemment en Europe l'ont, soit seule en AC, soit comme partie du connecteur CCS Combo 2." },
+      { question: "Type 2 et Mennekes, est-ce la même chose ?", answer: "Oui : « Mennekes » est le nom du fabricant qui a proposé le connecteur, devenu le standard européen Type 2." },
+    ],
+    relatedGuides: ["recharge-ac-ou-dc", "puissance-borne-7-11-22-kw"],
+    sources: [SOURCES.avere],
+    updatedAt: UPDATED,
   },
   {
     slug: "ccs",
-    title: "CCS Combo : la norme de recharge rapide en Europe",
-    shortTitle: "CCS Combo",
-    category: "standard",
+    title: "CCS Combo 2 : le connecteur standard de la recharge rapide en Europe",
+    shortTitle: "CCS Combo 2",
     description:
-      "Le connecteur CCS Combo ajoute deux broches de puissance au Type 2 pour la recharge rapide en courant continu (DC).",
+      "Le CCS Combo 2 ajoute deux contacts continus à la prise Type 2 : le standard européen de la recharge rapide DC.",
     intro:
-      "Le CCS Combo (Combined Charging System) est le standard de recharge rapide en courant continu en Europe.",
+      "Le CCS (Combined Charging System) Combo 2 est le connecteur européen de la recharge en courant continu. Il reprend la prise Type 2 et ajoute deux contacts de puissance en dessous, ce qui permet à un même port de recevoir de l'AC et du DC.",
     sections: [
       {
-        heading: "Principe",
+        heading: "Un port, deux modes",
         paragraphs: [
-          "Le CCS combine le connecteur Type 2 et deux broches supplémentaires dédiées au courant continu (DC).",
-          "Il permet des puissances élevées, de 50 kW à plus de 350 kW selon la borne et le véhicule.",
+          "Sur la voiture, une seule trappe accueille le connecteur : la partie haute (Type 2) sert à la recharge AC, la partie basse s'ajoute pour la recharge rapide DC. Le même port sert donc à la maison et sur autoroute.",
+        ],
+      },
+      {
+        heading: "Des puissances très variées",
+        paragraphs: [
+          "Les bornes CCS vont d'environ 50 kW à plusieurs centaines de kW. Ce qui compte pour vous est la puissance maximale que votre voiture accepte, pas celle de la borne : voir le guide sur la puissance de recharge DC.",
+        ],
+      },
+      {
+        heading: "Compatibilité",
+        paragraphs: [
+          "Dans l'Union européenne, la réglementation sur les infrastructures de carburants alternatifs retient le CCS Combo 2 comme connecteur DC de référence pour les points de recharge publics. Les voitures récentes le proposent presque toutes ; les modèles plus anciens peuvent utiliser un autre standard.",
         ],
       },
     ],
+    faq: [
+      { question: "CCS et CCS2, est-ce la même chose ?", answer: "En Europe, « CCS » désigne pratiquement toujours le CCS Combo 2, basé sur la prise Type 2. Le Combo 1 existe surtout en Amérique du Nord." },
+      { question: "Peut-on recharger en AC sur une voiture CCS ?", answer: "Oui : la partie haute du port est une prise Type 2 qui accepte les bornes AC." },
+    ],
+    relatedGuides: ["puissance-recharge-dc", "recharge-ac-ou-dc"],
+    sources: [SOURCES.avere],
+    updatedAt: UPDATED,
   },
   {
     slug: "chademo",
-    title: "CHAdeMO : un standard de recharge rapide en déclin",
+    title: "CHAdeMO : le standard japonais de recharge rapide, en recul en Europe",
     shortTitle: "CHAdeMO",
-    category: "standard",
     description:
-      "Le connecteur CHAdeMO, d'origine japonaise, reste présent sur certains modèles mais recule face au CCS.",
+      "Le CHAdeMO est un standard de recharge rapide DC d'origine japonaise, présent sur certains modèles plus anciens : ce qu'il faut savoir avant d'acheter ou de recharger.",
     intro:
-      "CHAdeMO est un standard de recharge rapide en courant continu, historiquement porté par des constructeurs japonais.",
+      "Le CHAdeMO est un standard de recharge rapide en courant continu d'origine japonaise. Il équipe certains modèles plus anciens, en particulier japonais, et perd du terrain en Europe au profit du CCS Combo 2.",
     sections: [
       {
-        heading: "Situation actuelle",
+        heading: "Un port séparé",
         paragraphs: [
-          "En Europe, le CCS s'est imposé comme standard de recharge rapide. CHAdeMO se raréfie sur les nouveaux modèles et sur les nouvelles bornes.",
+          "Contrairement au CCS, le CHAdeMO nécessite une prise dédiée, distincte de la prise Type 2 utilisée en AC. Les voitures CHAdeMO ont donc souvent deux ports : un pour l'AC, un pour la recharge rapide.",
+        ],
+      },
+      {
+        heading: "Ce que cela implique aujourd'hui",
+        paragraphs: [
+          "Le nombre de bornes rapides équipées en CHAdeMO tend à diminuer et de nombreux nouveaux points de recharge ne le proposent pas. Si vous envisagez un véhicule d'occasion équipé de CHAdeMO, vérifiez que votre trajet habituel offre des bornes compatibles.",
         ],
       },
     ],
-  },
-  {
-    slug: "recharge-ac-dc",
-    title: "Recharge AC et DC : quelle différence ?",
-    shortTitle: "AC vs DC",
-    category: "puissance",
-    description:
-      "La recharge AC passe par le chargeur embarqué du véhicule ; la recharge DC alimente directement la batterie.",
-    intro:
-      "Comprendre la différence entre courant alternatif (AC) et courant continu (DC) est essentiel pour bien recharger.",
-    sections: [
-      {
-        heading: "Recharge AC",
-        paragraphs: [
-          "En AC, le courant est converti par le chargeur embarqué du véhicule. La puissance est donc limitée par ce chargeur (souvent 7,4 kW, 11 kW ou 22 kW).",
-        ],
-      },
-      {
-        heading: "Recharge DC",
-        paragraphs: [
-          "En DC, la conversion est réalisée par la borne. Le courant continu alimente directement la batterie, ce qui permet des puissances bien plus élevées.",
-        ],
-      },
+    faq: [
+      { question: "Existe-t-il des adaptateurs ?", answer: "Il existe des adaptateurs de conversion, mais leur disponibilité, leur coût et leur compatibilité varient : renseignez-vous avant de vous y fier." },
+      { question: "Le CHAdeMO disparaît-il ?", answer: "Il est en recul en Europe, mais le parc de véhicules équipés reste en circulation. Vérifiez la couverture de vos trajets habituels." },
     ],
-  },
-  {
-    slug: "puissances-de-recharge",
-    title: "7,4 / 11 / 22 / 50 / 150 / 300+ kW : comprendre les puissances",
-    shortTitle: "Puissances de recharge",
-    category: "puissance",
-    description:
-      "Panorama des principales puissances de recharge et de leur usage : domicile, voirie, autoroute.",
-    intro:
-      "Les puissances de recharge s'échelonnent de quelques kilowatts à domicile à plusieurs centaines de kilowatts sur autoroute.",
-    sections: [
-      {
-        heading: "Recharge lente et normale (AC)",
-        paragraphs: [
-          "7,4 kW : wallbox monophasée domestique typique. 11 kW : wallbox triphasée. 22 kW : bornes AC de voirie (selon chargeur embarqué).",
-        ],
-      },
-      {
-        heading: "Recharge rapide (DC)",
-        paragraphs: [
-          "50 kW : recharge rapide d'entrée de gamme. 150 kW : recharge rapide courante. 300+ kW : recharge ultra-rapide, réservée aux véhicules compatibles.",
-        ],
-      },
-    ],
+    relatedGuides: ["recharge-ac-ou-dc", "choisir-premiere-voiture-electrique"],
+    sources: [SOURCES.avere],
+    updatedAt: UPDATED,
   },
 ];
 
 export function getChargingTopic(slug: string): ChargingTopic | undefined {
   return chargingTopics.find((t) => t.slug === slug);
 }
-
-/**
- * DONNÉES D'EXEMPLE — bornes de recharge (isDemo: true).
- * À remplacer par une source ouverte (ex. data.gouv.fr — IRVE) avec sourceUrl.
- */
-export const chargingStations: ChargingStation[] = [
-  {
-    id: "demo-station-1",
-    operator: "Réseau exemple A",
-    network: "Exemple Charge",
-    location: "Aire de démonstration",
-    city: "Lyon",
-    department: "Rhône (69)",
-    latitude: 45.75,
-    longitude: 4.85,
-    power: 150,
-    connector: "CCS",
-    price: "0,45 €/kWh (exemple)",
-    access: "Public",
-    openingHours: "24h/24",
-    source: "Données d'exemple EVExpert",
-    lastUpdated: "2026-01-15",
-    isDemo: true,
-  },
-  {
-    id: "demo-station-2",
-    operator: "Réseau exemple B",
-    network: "Exemple Power",
-    location: "Parking centre-ville",
-    city: "Paris",
-    department: "Paris (75)",
-    latitude: 48.8566,
-    longitude: 2.3522,
-    power: 22,
-    connector: "Type 2",
-    price: "0,30 €/kWh (exemple)",
-    access: "Public",
-    openingHours: "7h - 22h",
-    source: "Données d'exemple EVExpert",
-    lastUpdated: "2026-01-15",
-    isDemo: true,
-  },
-];

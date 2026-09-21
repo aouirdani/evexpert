@@ -2,6 +2,9 @@
 
 import { useMemo, useState } from "react";
 import { annualCost, costPer100km } from "@/lib/calculators";
+import { ASSUMPTIONS } from "@/data/assumptions";
+import type { VehiclePreset } from "./kit";
+import { VehiclePresetSelect } from "./kit";
 import { formatEuro } from "@/lib/utils";
 import { Field, NumberInput, SelectInput } from "./kit";
 
@@ -16,13 +19,13 @@ interface Row {
 
 const kmOptions = [10000, 15000, 20000, 30000];
 
-export function CostPer100Calculator() {
+export function CostPer100Calculator({ presets = [] }: { presets?: VehiclePreset[] }) {
   const [annualKm, setAnnualKm] = useState(15000);
   const [rows, setRows] = useState<Row[]>([
-    { key: "ev", label: "Électrique", unit: "kWh/100", priceUnit: "€/kWh", consumption: 16, price: 0.25 },
-    { key: "essence", label: "Essence", unit: "L/100", priceUnit: "€/L", consumption: 6.5, price: 1.85 },
-    { key: "diesel", label: "Diesel", unit: "L/100", priceUnit: "€/L", consumption: 5, price: 1.75 },
-    { key: "hybride", label: "Hybride", unit: "L/100", priceUnit: "€/L", consumption: 4.5, price: 1.85 },
+    { key: "ev", label: "Électrique", unit: "kWh/100", priceUnit: "€/kWh", consumption: 16, price: ASSUMPTIONS.homePrice },
+    { key: "essence", label: "Essence", unit: "L/100", priceUnit: "€/L", consumption: 6.5, price: ASSUMPTIONS.petrolPrice },
+    { key: "diesel", label: "Diesel", unit: "L/100", priceUnit: "€/L", consumption: 5, price: ASSUMPTIONS.dieselPrice },
+    { key: "hybride", label: "Hybride", unit: "L/100", priceUnit: "€/L", consumption: 4.5, price: ASSUMPTIONS.petrolPrice },
   ]);
 
   function update(key: string, field: "consumption" | "price", value: number) {
@@ -45,7 +48,14 @@ export function CostPer100Calculator() {
 
   return (
     <div>
-      <div className="mb-6 max-w-xs">
+      <div className="mb-6 grid gap-4 sm:grid-cols-2">
+        <VehiclePresetSelect
+          id="c100-preset"
+          presets={presets}
+          onPick={(p) => update("ev", "consumption", Math.round(p.gridConsumption * 10) / 10)}
+          hint="Préremplit la consommation électrique (énergie tirée du réseau, rendement 90 %)."
+        />
+        <div>
         <Field label="Kilométrage annuel" htmlFor="c100-km">
           <SelectInput
             id="c100-km"
@@ -54,6 +64,7 @@ export function CostPer100Calculator() {
             options={kmOptions.map((k) => ({ value: String(k), label: `${k.toLocaleString("fr-FR")} km/an` }))}
           />
         </Field>
+        </div>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
@@ -63,7 +74,7 @@ export function CostPer100Calculator() {
             className={`rounded-2xl border p-5 ${r.key === cheapest.key ? "border-emerald-300 bg-emerald-50" : "border-slate-200 bg-white"}`}
           >
             <div className="flex items-center justify-between">
-              <h3 className="text-base font-bold text-slate-900">{r.label}</h3>
+              <h2 className="text-base font-bold text-slate-900">{r.label}</h2>
               {r.key === cheapest.key && (
                 <span className="rounded-full bg-emerald-600 px-2.5 py-0.5 text-xs font-semibold text-white">
                   Le moins cher

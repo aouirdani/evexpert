@@ -1,107 +1,41 @@
 # EVExpert
 
-Plateforme française dédiée à la voiture électrique : base de véhicules, comparateur, calculateurs interactifs, informations sur la recharge, guides et blog éditorial.
+Plateforme française pour **comprendre, comparer et calculer le coût réel d'une voiture électrique** : 7 calculateurs, catalogue de fiches techniques sourcées, comparateur, dossier recharge, 20 guides et analyses chiffrées.
 
-> **Comprendre. Comparer. Calculer.**
->
-> `EVExpert` est un nom de projet temporaire, modifiable via un seul fichier de configuration (`src/config/site.ts`).
+Site : https://evexpert.fr
 
-## Stack technique
-
-- **Next.js 16** (App Router) + **React 19** + **TypeScript**
-- **Tailwind CSS v4**
-- **Recharts** (visualisation de données)
-- **Zod** (validation), **Lucide** (icônes)
-- **Drizzle ORM** + **PostgreSQL** (couche base de données prête pour l'avenir)
-- Rendu **serveur par défaut**, composants client uniquement pour l'interactivité
-
-## Politique de données
-
-- Les fiches véhicules et bornes sont des **données d'exemple** (`isDemo: true`), clairement signalées.
-- Chaque donnée factuelle possède `source`, `sourceUrl` et `lastUpdated`.
-- Aucune spécification n'est inventée comme officielle. Les calculs sont des **estimations transparentes**.
-
-## Démarrage local
+## Démarrage
 
 ```bash
-# 1. Installer les dépendances
 npm install
-
-# 2. Configurer l'environnement
-cp .env.example .env.local
-# renseignez NEXT_PUBLIC_SITE_URL (DATABASE_URL est optionnel)
-
-# 3. (Optionnel) Appliquer le schéma Drizzle
-npx drizzle-kit push
-
-# 4. Lancer en développement
+cp .env.example .env.local   # optionnel
 npm run dev
-
-# 5. Build de production
-npm run build && npm run start
 ```
 
-## Scripts
-
-| Commande | Description |
-|----------|-------------|
-| `npm run dev` | Serveur de développement |
-| `npm run build` | Build de production |
-| `npm run start` | Serveur de production |
-| `npm run lint` | ESLint |
-| `npm run typecheck` | Vérification TypeScript |
-
-## Variables d'environnement
-
-| Variable | Rôle | Défaut |
-|----------|------|--------|
-| `NEXT_PUBLIC_SITE_URL` | URL canonique (SEO, sitemap, OG) | `https://evexpert.fr` |
-| `DATABASE_URL` | Connexion PostgreSQL (optionnelle, non requise pour les pages publiques) | — |
-| `ADSENSE_ENABLED` | Active la publicité | `false` |
-| `NEXT_PUBLIC_ADSENSE_CLIENT_ID` | Identifiant AdSense | — |
-| `NEXT_PUBLIC_GA_ID` | Google Analytics 4 (après consentement) | — |
-| `NEXT_PUBLIC_GTM_ID` | Google Tag Manager (après consentement) | — |
+Scripts : `npm run build`, `npm run lint`, `npm run typecheck`, `npm run check:data` (contrôle de cohérence du catalogue).
 
 ## Architecture
 
-```
-src/
-  app/            # Routes App Router (pages, sitemap, robots, RSS)
-  components/     # UI, calculateurs, véhicules, comparaison, layout, ads
-  lib/            # calculateurs, SEO, recherche, comparaison, utils
-  data/           # données d'exemple typées (véhicules, outils, guides, articles, recharge)
-  types/          # interfaces du domaine (Vehicle, ChargingStation, Article…)
-  config/         # configuration de marque et de navigation
-  db/             # client Drizzle + schéma
-public/
-  ads.txt         # placeholder AdSense
-```
+| Dossier | Rôle |
+| --- | --- |
+| `src/data/vehicles.ts` | Catalogue véhicules (lignes positionnelles + source par fiche). Toute donnée inconnue = `null`. |
+| `src/data/guides/`, `articles.ts`, `charging.ts`, `toolContent.ts` | Contenus éditoriaux. Les tableaux chiffrés sont calculés depuis le catalogue. |
+| `src/data/assumptions.ts` | Hypothèses par défaut (prix du kWh, rendement…), modifiables. |
+| `src/data/sources.ts` | Sources externes citées (URLs vérifiées). |
+| `src/lib/calculators`, `vehicle-calcs.ts`, `comparison.ts` | Calculs purs et comparaisons objectives. |
+| `src/db` | Drizzle/PostgreSQL, **optionnel** : pool créé à la demande, jamais à l'import. |
 
-## SEO
+Les données sont structurées pour migrer plus tard vers PostgreSQL/Supabase (véhicules, articles, guides, sources) sans changer les composants.
 
-- Metadata unique par page, canonical, Open Graph, Twitter Cards
-- JSON-LD : `WebSite`, `Organization`, `BreadcrumbList`, `Article`, `FAQPage`
-- `sitemap.xml`, `robots.txt`, flux RSS (`/blog/rss.xml`)
-- Fil d'Ariane, liens internes contextuels, hiérarchie sémantique
-- Pages de recherche / vues filtrées en `noindex`
-- Pages de comparaison **sélectionnées** uniquement (pas de combinaisons vides)
+## Politique de données
 
-## Monétisation (préparée, désactivée)
+- Aucune donnée inventée : une valeur absente s'affiche « Non disponible ».
+- Chaque fiche cite sa source, son URL et sa date de relevé ; nature des données : source officielle / spécialisée / calcul EVExpert / estimation EVExpert.
+- Le prix France n'est pas collecté (les prix de la source concernent d'autres marchés).
+- Ajouter un véhicule : ajouter une ligne dans `vehicles.ts`, vérifier la fiche source, lancer `npm run check:data`.
 
-- Composant `<AdSlot />` avec emplacements réservés (aucune fausse publicité)
-- Activation via `ADSENSE_ENABLED` + `NEXT_PUBLIC_ADSENSE_CLIENT_ID`
-- Bannière de consentement RGPD ; analytics chargés uniquement après accord
+## Variables d'environnement
 
-## Déploiement Vercel
-
-1. Poussez le dépôt sur GitHub.
-2. Importez le projet dans Vercel.
-3. Renseignez les variables d'environnement (voir tableau ci-dessus).
-4. Déployez : la build Next.js est détectée automatiquement.
-
-## Limites connues / prochaines étapes
-
-- Remplacer les données d'exemple par des données sourcées et vérifiées.
-- Brancher la base PostgreSQL/Supabase pour la couche véhicules.
-- Intégrer une source ouverte pour les bornes (IRVE / data.gouv.fr).
-- Étendre la recherche côté serveur et ajouter des images officielles (next/image).
+Voir `.env.example`. Minimum en production : `NEXT_PUBLIC_SITE_URL=https://evexpert.fr` et `ADSENSE_ENABLED=false`.
+Avant une demande AdSense : renseigner `NEXT_PUBLIC_CONTACT_EMAIL` et les champs éditeur (`NEXT_PUBLIC_PUBLISHER_*`).
+`DATABASE_URL` n'est pas nécessaire.

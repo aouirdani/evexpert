@@ -4,6 +4,7 @@ import { ArrowRight, Clock } from "lucide-react";
 import type { Article, Guide, Tool } from "@/types";
 import { formatDateFr } from "@/lib/utils";
 import { Badge } from "@/components/ui/primitives";
+import { guideCategoryLabels } from "@/data/guides";
 
 function DynamicIcon({ name, className }: { name: string; className?: string }) {
   const Icon = (Icons as unknown as Record<string, Icons.LucideIcon>)[name] ??
@@ -34,32 +35,25 @@ export function ToolCard({ tool }: { tool: Tool }) {
 
 export function ArticleCard({ article }: { article: Article }) {
   return (
-    <article className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md">
-      <div
-        className="flex aspect-[16/9] items-center justify-center bg-gradient-to-br from-emerald-50 to-slate-100"
-        aria-hidden
-      >
-        <span className="px-4 text-center text-sm font-semibold text-emerald-700/70">
-          {article.category}
+    <article className="group relative flex flex-col rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-md">
+      <div className="flex items-center gap-2">
+        <Badge tone="emerald">{article.category}</Badge>
+        <span className="inline-flex items-center gap-1 text-xs text-slate-600">
+          <Clock className="h-3 w-3" aria-hidden /> {article.readingTime} min
         </span>
       </div>
-      <div className="flex flex-1 flex-col p-5">
-        <div className="flex items-center gap-2">
-          <Badge tone="emerald">{article.category}</Badge>
-          <span className="inline-flex items-center gap-1 text-xs text-slate-500">
-            <Clock className="h-3 w-3" aria-hidden /> {article.readingTime} min
-          </span>
-        </div>
-        <h3 className="mt-3 text-lg font-bold leading-snug text-slate-900">
-          <Link href={`/blog/${article.slug}`} className="hover:text-emerald-700">
-            {article.title}
-          </Link>
-        </h3>
-        <p className="mt-2 flex-1 text-sm text-slate-600">{article.excerpt}</p>
-        <p className="mt-4 text-xs text-slate-500">
-          {formatDateFr(article.publishedAt)}
-        </p>
-      </div>
+      <h3 className="mt-3 text-lg font-bold leading-snug text-slate-900">
+        <Link
+          href={`/blog/${article.slug}`}
+          className="after:absolute after:inset-0 after:content-[''] group-hover:text-emerald-800"
+        >
+          {article.title}
+        </Link>
+      </h3>
+      <p className="mt-2 flex-1 text-sm text-slate-600">{article.excerpt}</p>
+      <p className="mt-4 text-xs text-slate-600">
+        <time dateTime={article.updatedAt}>Mis à jour le {formatDateFr(article.updatedAt)}</time>
+      </p>
     </article>
   );
 }
@@ -70,7 +64,7 @@ export function GuideCard({ guide }: { guide: Guide }) {
       href={`/guides/${guide.slug}`}
       className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md"
     >
-      <Badge tone="blue">Guide</Badge>
+      <Badge tone="blue">{guideCategoryLabels[guide.category]}</Badge>
       <h3 className="mt-3 text-base font-bold text-slate-900 group-hover:text-emerald-700">
         {guide.title}
       </h3>

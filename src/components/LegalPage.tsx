@@ -1,6 +1,7 @@
 import { Container, PageHeader } from "@/components/layout/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
-import { ContentSections } from "@/components/ContentSections";
+import { Prose } from "@/components/ui/Prose";
+import { LastUpdated } from "@/components/ui/SourceBadge";
 import type { ArticleSection } from "@/types";
 
 export function LegalPage({
@@ -9,20 +10,28 @@ export function LegalPage({
   breadcrumb,
   href,
   sections,
+  updatedAt = "2026-09-21",
+  children,
 }: {
   title: string;
   description: string;
   breadcrumb: string;
   href: string;
   sections: ArticleSection[];
+  updatedAt?: string;
+  children?: React.ReactNode;
 }) {
   return (
     <Container className="py-10">
       <Breadcrumbs items={[{ name: breadcrumb, href }]} />
       <article className="max-w-3xl">
         <PageHeader title={title} description={description} />
+        <div className="mt-3">
+          <LastUpdated date={updatedAt} />
+        </div>
         <div className="mt-8">
-          <ContentSections sections={sections} />
+          <Prose sections={sections} />
+          {children}
         </div>
       </article>
     </Container>

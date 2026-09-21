@@ -1,34 +1,67 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { Container, PageHeader } from "@/components/layout/Container";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { VehicleDetail } from "@/components/vehicles/VehicleDetail";
-import { getAllVehicles, getVehicle, vehicleTitle } from "@/data/vehicles";
+import { ModelOverview } from "@/components/vehicles/ModelOverview";
+import { LastUpdated } from "@/components/ui/SourceBadge";
+import { getModelVersions, getModels, modelTitle, vehicleHref, vehicleTitle } from "@/data/vehicles";
 import { buildMetadata } from "@/lib/seo";
 
+type Params = { brand: string; model: string };
+
 export function generateStaticParams() {
-  return getAllVehicles().map((v) => ({ brand: v.brandSlug, model: v.modelSlug }));
+  return getModels().map((v) => ({ brand: v.brandSlug, model: v.modelSlug }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ brand: string; model: string }>;
-}) {
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { brand, model } = await params;
-  const v = getVehicle(brand, model);
-  if (!v) return {};
+  const versions = getModelVersions(brand, model);
+  if (!versions.length) return {};
+  const v = versions[0];
+  if (versions.length === 1) {
+    return buildMetadata({
+      title: `${modelTitle(v)} ${v.version} : autonomie, recharge et caractéristiques`,
+      description: `Fiche ${vehicleTitle(v)} : ${v.rangeWltp} km WLTP, batterie ${v.batteryUsable} kWh utiles, recharge AC ${v.chargingAC} kW${v.chargingDC ? `, DC ${v.chargingDC} kW` : ""}. Coûts et temps de recharge calculés.`,
+      path: vehicleHref(v, "model"),
+    });
+  }
+  const minR = Math.min(...versions.map((x) => x.rangeWltp));
+  const maxR = Math.max(...versions.map((x) => x.rangeWltp));
   return buildMetadata({
-    title: `${vehicleTitle(v)} : fiche, autonomie, recharge et coûts`,
-    description: `Fiche ${vehicleTitle(v)} : autonomie ${v.rangeWltp} km WLTP, batterie ${v.usableBatteryCapacity} kWh, recharge ${v.chargingDC} kW. Estimations de coûts (données d'exemple).`,
-    path: `/voitures-electriques/${brand}/${model}`,
+    title: `${modelTitle(v)} : versions, autonomie et recharge comparées`,
+    description: `${modelTitle(v)} en ${versions.length} versions : autonomie WLTP de ${minR} à ${maxR} km, puissance de recharge et coût aux 100 km comparés.`,
+    path: vehicleHref(v, "model"),
   });
 }
 
-export default async function ModelPage({
-  params,
-}: {
-  params: Promise<{ brand: string; model: string }>;
-}) {
+export default async function ModelPage({ params }: { params: Promise<Params> }) {
   const { brand, model } = await params;
-  const v = getVehicle(brand, model);
-  if (!v) notFound();
-  return <VehicleDetail vehicle={v} />;
+  const versions = getModelVersions(brand, model);
+  if (!versions.length) notFound();
+  const v = versions[0];
+  const single = versions.length === 1;
+  return (
+    <Container className="py-10">
+      <Breadcrumbs
+        items={[
+          { name: "Voitures électriques", href: "/voitures-electriques" },
+          { name: v.brand, href: vehicleHref(v, "brand") },
+          { name: v.model, href: vehicleHref(v, "model") },
+        ]}
+      />
+      <PageHeader
+        eyebrow={v.brand}
+        title={
+          single
+            ? `${vehicleTitle(v)} : autonomie, recharge et caractéristiques`
+            : `${modelTitle(v)} : versions, autonomie et recharge`
+        }
+      />
+      <div className="mt-3">
+        <LastUpdated date={v.source.lastUpdated} label="Données relevées le" />
+      </div>
+      <div className="mt-8">{single ? <VehicleDetail vehicle={v} /> : <ModelOverview versions={versions} />}</div>
+    </Container>
+  );
 }

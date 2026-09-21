@@ -58,10 +58,10 @@ export const tools: Tool[] = [
   {
     slug: "puissance-borne-recharge",
     href: "/outils/puissance-borne-recharge",
-    title: "Comprendre la puissance des bornes de recharge",
+    title: "Puissance de borne : quel temps de recharge selon 3,7, 7,4, 11, 22 kW ou DC ?",
     shortTitle: "Puissance des bornes",
     description:
-      "Découvrez ce que change la puissance d'une borne sur le temps de recharge réel.",
+      "Comparez le temps de recharge de votre voiture sur chaque puissance de borne, en tenant compte des limites AC et DC du véhicule.",
     icon: "PlugZap",
   },
 ];

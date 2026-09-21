@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { computeChargingTime } from "@/lib/calculators";
 import { formatNumber, minutesToHuman } from "@/lib/utils";
-import { CalcLayout, Field, NumberInput, RangeInputControl, ResultCard, SelectInput } from "./kit";
+import { CalcLayout, Field, NumberInput, RangeInputControl, ResultCard, SelectInput, VehiclePresetSelect, type VehiclePreset } from "./kit";
 
 const powerPresets = [
   { value: "3.7", label: "3,7 kW — prise renforcée" },
@@ -15,7 +15,8 @@ const powerPresets = [
   { value: "250", label: "250 kW — ultra-rapide" },
 ];
 
-export function ChargingTimeCalculator() {
+export function ChargingTimeCalculator({ presets = [] }: { presets?: VehiclePreset[] }) {
+  const [acLimit, setAcLimit] = useState<number | null>(null);
   const [capacity, setCapacity] = useState(60);
   const [current, setCurrent] = useState(20);
   const [target, setTarget] = useState(80);
@@ -44,6 +45,20 @@ export function ChargingTimeCalculator() {
       <CalcLayout
         inputs={
           <>
+            <VehiclePresetSelect
+              id="t-preset"
+              presets={presets}
+              onPick={(p) => {
+                setCapacity(p.usable);
+                setAcLimit(p.acKw);
+              }}
+              hint="Renseigne la capacité utile et rappelle la puissance AC maximale du modèle."
+            />
+            {acLimit !== null && (
+              <p className="rounded-lg bg-amber-50 p-3 text-sm text-amber-900">
+                Ce modèle accepte au plus <strong>{acLimit.toString().replace(".", ",")} kW</strong> en courant alternatif : une borne plus puissante ne charge pas plus vite en AC.
+              </p>
+            )}
             <Field label="Capacité utile (kWh)" htmlFor="t-cap">
               <NumberInput id="t-cap" value={capacity} onChange={setCapacity} min={10} max={200} step={0.5} suffix="kWh" />
             </Field>

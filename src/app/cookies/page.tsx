@@ -2,43 +2,46 @@ import { LegalPage } from "@/components/LegalPage";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Politique cookies",
-  description: "Utilisation des cookies sur le site.",
+  title: "Politique de cookies",
+  description: "Quels cookies et traceurs EVExpert utilise, à quelles conditions, et comment modifier votre choix.",
   path: "/cookies",
-  noindex: true,
 });
 
 export default function Page() {
   return (
     <LegalPage
-      title="Politique cookies"
-      description="Quels cookies nous utilisons et comment les gérer."
+      title="Politique de cookies"
+      description="Aucun cookie non essentiel n'est déposé sans votre accord."
       breadcrumb="Cookies"
       href="/cookies"
       sections={[
         {
-          heading: "Cookies essentiels",
+          heading: "Ce que nous utilisons aujourd'hui",
           paragraphs: [
-            "Certains cookies techniques sont nécessaires au bon fonctionnement du site (mémorisation de votre choix de consentement, par exemple). Ils ne requièrent pas de consentement.",
+            "Le site enregistre uniquement votre choix de consentement dans le stockage local de votre navigateur (clé technique « evscope-consent »), afin de ne pas vous reposer la question à chaque visite. Ce stockage est strictement nécessaire au fonctionnement du bandeau et ne sert à aucun suivi.",
+            "À ce jour, aucun cookie de mesure d'audience ni de publicité n'est déposé.",
           ],
         },
         {
-          heading: "Cookies de mesure d'audience",
+          heading: "Ce qui pourra être activé avec votre accord",
+          paragraphs: [],
+          table: {
+            headers: ["Catégorie", "Outil", "Finalité", "État"],
+            rows: [
+              ["Mesure d'audience", "Google Analytics / Tag Manager", "Statistiques de fréquentation", "Désactivé (chargé seulement après consentement, si configuré)"],
+              ["Publicité", "Google AdSense", "Affichage d'annonces", "Désactivé"],
+            ],
+          },
+        },
+        {
+          heading: "Gérer votre choix",
           paragraphs: [
-            "Ces cookies nous aident à comprendre l'usage du site. Ils ne sont déposés qu'après votre accord via la bannière de consentement.",
+            "Le bandeau vous propose « Accepter » ou « Refuser » avec la même visibilité. Refuser n'affecte pas l'accès au site. Pour modifier votre choix, cliquez sur « Gestion des cookies » en bas de chaque page. Vous pouvez aussi supprimer le stockage du site dans les réglages de votre navigateur.",
           ],
         },
         {
-          heading: "Cookies publicitaires",
-          paragraphs: [
-            "Le site est préparé pour la publicité, désactivée par défaut. Aucun cookie publicitaire n'est déposé tant que la publicité n'est pas activée et acceptée.",
-          ],
-        },
-        {
-          heading: "Gérer votre consentement",
-          paragraphs: [
-            "Vous pouvez modifier votre choix à tout moment via le bouton « Gestion des cookies » présent dans le pied de page.",
-          ],
+          heading: "En savoir plus",
+          paragraphs: ["Consultez notre politique de confidentialité et les informations pédagogiques de la CNIL sur les cookies et traceurs (cnil.fr)."],
         },
       ]}
     />

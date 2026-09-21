@@ -1,97 +1,54 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { X } from "lucide-react";
 import type { Vehicle } from "@/types";
-import { formatEuro } from "@/lib/utils";
 import { ComparisonTable } from "./ComparisonTable";
 
 export function ComparisonBuilder({
-  allVehicles,
-  popular = [],
+  vehicles,
+  defaultIds,
 }: {
-  allVehicles: Vehicle[];
-  popular?: { slug: string; label: string }[];
+  vehicles: Vehicle[];
+  defaultIds: [string, string];
 }) {
-  const [selected, setSelected] = useState<Vehicle[]>([]);
+  const [ids, setIds] = useState<string[]>([defaultIds[0], defaultIds[1], ""]);
+  const selected = ids
+    .map((id) => vehicles.find((v) => v.id === id))
+    .filter((v): v is Vehicle => Boolean(v));
 
-  function toggle(v: Vehicle) {
-    setSelected((prev) => {
-      if (prev.find((x) => x.id === v.id)) return prev.filter((x) => x.id !== v.id);
-      if (prev.length >= 4) return prev;
-      return [...prev, v];
-    });
-  }
-
-  const isSelected = (id: string) => selected.some((v) => v.id === id);
+  const cls =
+    "w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 focus:border-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-600/30";
 
   return (
-    <div className="space-y-8">
-      <div>
-        <h2 className="text-lg font-bold text-slate-900">
-          Sélectionnez jusqu&apos;à 4 véhicules ({selected.length}/4)
-        </h2>
-        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {allVehicles.map((v) => {
-            const active = isSelected(v.id);
-            const disabled = !active && selected.length >= 4;
-            return (
-              <button
-                key={v.id}
-                type="button"
-                onClick={() => toggle(v)}
-                disabled={disabled}
-                aria-pressed={active}
-                className={`flex items-center justify-between rounded-xl border p-4 text-left transition ${
-                  active
-                    ? "border-emerald-400 bg-emerald-50"
-                    : disabled
-                      ? "cursor-not-allowed border-slate-200 bg-slate-50 opacity-50"
-                      : "border-slate-200 bg-white hover:border-emerald-300"
-                }`}
-              >
-                <span>
-                  <span className="block text-sm font-bold text-slate-900">
-                    {v.brand} {v.model}
-                  </span>
-                  <span className="block text-xs text-slate-500">
-                    {v.version} — {formatEuro(v.price)}
-                  </span>
-                </span>
-                {active && <X className="h-4 w-4 text-emerald-700" aria-hidden />}
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      {selected.length >= 2 ? (
-        <div>
-          <h2 className="mb-4 text-lg font-bold text-slate-900">Comparaison</h2>
-          <ComparisonTable vehicles={selected} />
-        </div>
-      ) : (
-        <p className="rounded-xl bg-slate-50 p-6 text-center text-sm text-slate-500">
-          Sélectionnez au moins deux véhicules pour afficher le tableau comparatif.
-        </p>
-      )}
-
-      <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-        <h3 className="text-sm font-semibold text-slate-900">
-          Comparaisons populaires
-        </h3>
-        <div className="mt-3 flex flex-wrap gap-2">
-          {popular.map((item) => (
-            <Link
-              key={item.slug}
-              href={`/comparer/${item.slug}`}
-              className="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 hover:border-emerald-300 hover:text-emerald-700"
+    <div>
+      <div className="grid gap-4 md:grid-cols-3">
+        {[0, 1, 2].map((i) => (
+          <div key={i}>
+            <label htmlFor={`cmp-${i}`} className="mb-1.5 block text-sm font-semibold text-slate-800">
+              Véhicule {i + 1} {i === 2 && <span className="font-normal text-slate-600">(facultatif)</span>}
+            </label>
+            <select
+              id={`cmp-${i}`}
+              value={ids[i]}
+              onChange={(e) => setIds((prev) => prev.map((x, j) => (j === i ? e.target.value : x)))}
+              className={cls}
             >
-              {item.label}
-            </Link>
-          ))}
-        </div>
+              {i === 2 && <option value="">Aucun</option>}
+              {vehicles.map((v) => (
+                <option key={v.id} value={v.id}>
+                  {v.brand} {v.model} {v.version}
+                </option>
+              ))}
+            </select>
+          </div>
+        ))}
+      </div>
+      <div className="mt-8" aria-live="polite">
+        {selected.length >= 2 ? (
+          <ComparisonTable vehicles={selected} />
+        ) : (
+          <p className="rounded-xl bg-slate-50 p-4 text-sm text-slate-700">Sélectionnez au moins deux véhicules différents.</p>
+        )}
       </div>
     </div>
   );
