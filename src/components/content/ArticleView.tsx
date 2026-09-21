@@ -8,7 +8,7 @@ import { Faq } from "@/components/ui/Faq";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { EditorialFigure } from "@/components/content/EditorialFigure";
 import { RelatedGuides, RelatedTools, RelatedVehicles } from "@/components/related";
-import { articleJsonLd, faqJsonLd } from "@/lib/seo";
+import { articleJsonLd, faqJsonLd, shareImageOf } from "@/lib/seo";
 import { formatDateFr } from "@/lib/utils";
 
 /** Mise en page commune aux guides et aux articles de blog. */
@@ -142,7 +142,7 @@ export function ArticleView({
           author: "La rédaction EVExpert",
           publishedAt,
           updatedAt,
-          image: hero ? { src: hero.share ?? hero.src, width: hero.width, height: hero.height } : undefined,
+          image: hero ? shareImageOf(hero) : undefined,
           section,
         })}
       />

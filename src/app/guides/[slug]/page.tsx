@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArticleView } from "@/components/content/ArticleView";
 import { getGuide, getGuides, guideCategoryLabels } from "@/data/guides";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, shareImageOf } from "@/lib/seo";
 
 // Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
 export const revalidate = 86400;
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     ogType: "article",
     publishedTime: g.publishedAt,
     modifiedTime: g.updatedAt,
-    image: g.hero && { src: g.hero.share ?? g.hero.src, width: g.hero.width, height: g.hero.height, alt: g.hero.alt },
+    image: g.hero && shareImageOf(g.hero),
   });
 }
 

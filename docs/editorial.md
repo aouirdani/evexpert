@@ -10,12 +10,26 @@ Tout est rendu côté serveur, indexable, listé dans le sitemap et calculé dep
 | Guides d'autonomie / de recharge / d'usage | `src/data/guides/autonomie.ts`, `recharge.ts`, `usage.ts` |
 | Guides ajoutés (kW/kWh, consommation, prise domestique) | `src/data/guides/nouveaux.ts` |
 | Analyses du blog | `src/data/articles.ts` |
-| Image principale, titre et description SEO, liens | `src/data/editorial/` (`media.ts`, `meta.ts`, `decorate.ts`) |
+| Photos, schémas, titre et description SEO, liens | `src/data/editorial/` (`media.ts`, `meta.ts`, `decorate.ts`) |
 | Moteur de liens internes | `src/lib/editorial-links.ts` |
 | Rendu | `components/content/` (`ArticleView`, `EditorialFigure`, `BarChart`, `Inline`) et `components/ui/Prose.tsx` |
 
 Règle : tout chiffre de véhicule est **calculé depuis les fiches** (`veh(id)` ou `vehicles`) ; une donnée absente
 s'affiche « Non disponible ». Aucun prix n'est inventé.
+
+## Photographies
+
+- 6 photos d'illustration **générées par IA** (véhicules et lieux génériques) : `public/editorial/{recharge-borne-dc-rapide,
+  recharge-station-haute-puissance,recharge-wallbox-garage,recharge-prise-domestique,batterie-pack-technique,
+  batterie-dessous-vehicule}.jpeg`, 1376 × 768, JPEG progressif (~175-235 Ko ; `next/image` sert de l'AVIF de 12 à 64 Ko),
+  chacune avec un dérivé Open Graph `*-og.jpeg` 1200 × 630. Elles sont mentionnées comme images générées dans leur légende.
+- Déclarées dans `EDITORIAL_PHOTOS` (`src/data/editorial/media.ts`) : `image` (alt, légende) et `schemaAfter` (section après
+  laquelle descend le schéma technique du même article). `decorate.ts` place la photo en image principale (sous l'introduction,
+  `priority`, cadrée en 2:1) et le schéma dans le corps ; la construction échoue si la section visée n'existe pas.
+- **Jamais sur une fiche véhicule** : une photo générique pourrait passer pour le modèle concerné.
+- Sources trop lourdes ? Ne pas recompresser à l'aveugle : q88 progressif = ~76 % plus léger, PSNR ≈ 40 dB.
+- Cadrage 2:1 (et non 16:9) : une photo 16:9 pleine largeur devenait l'élément LCP mobile le plus grand (LCP ≈ 2,9 s, Lighthouse 93-96) ;
+  en 2:1, LCP ≈ 2,2 s (99). À garder si vous ajoutez des photos.
 
 ## Images
 

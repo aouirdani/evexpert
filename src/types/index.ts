@@ -110,6 +110,8 @@ export interface EditorialImage {
   height: number;
   /** Copie raster (PNG, mêmes dimensions) pour og:image, twitter:image et JSON-LD : les réseaux sociaux n'affichent pas le SVG. */
   share?: string;
+  /** Hauteur de la copie de partage (largeur toujours 1200) ; 675 par défaut, 630 pour les dérivés Open Graph des photos. */
+  shareHeight?: number;
   /** Légende visible sous l'image (contexte, limites, illustration ou donnée). */
   caption?: string;
 }

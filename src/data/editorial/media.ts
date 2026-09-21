@@ -71,3 +71,71 @@ export const EDITORIAL_HEROES: Record<string, EditorialImage> = {
     "Indice 100 à 90 km/h : environ 149 à 110 km/h et 209 à 130 km/h. La résistance de l'air croît avec le carré de la vitesse ; résistance au roulement non représentée.",
   ),
 };
+
+/**
+ * Photographies éditoriales (public/editorial/*.jpeg, 1376 × 768, JPEG progressif ~180-230 Ko servi
+ * en AVIF/WebP par next/image). Images d'ILLUSTRATION générées par IA, véhicules et lieux
+ * génériques : jamais utilisées sur une fiche véhicule (elles pourraient passer pour le modèle
+ * concerné). `share` = dérivé 1200 × 630 pour og:image, twitter:image et JSON-LD.
+ *
+ * Hiérarchie : la photo est l'image principale (sous l'introduction) ; le schéma technique du même
+ * article (EDITORIAL_HEROES) descend dans le corps, après la section `schemaAfter`, là où il explique.
+ */
+const photo = (file: string, alt: string, caption: string): EditorialImage => ({
+  src: `/editorial/${file}.jpeg`,
+  share: `/editorial/${file}-og.jpeg`,
+  shareHeight: 630,
+  width: 1376,
+  height: 768,
+  alt,
+  caption: `${caption} Image d'illustration générée par IA, véhicule et lieu génériques.`,
+});
+
+export const EDITORIAL_PHOTOS: Record<string, { image: EditorialImage; schemaAfter?: string }> = {
+  "recharge-ac-ou-dc": {
+    image: photo(
+      "recharge-borne-dc-rapide",
+      "Voiture électrique bleu nuit branchée à une borne de recharge rapide sous l'auvent d'une aire de service, en fin de journée.",
+      "En recharge rapide, la conversion du courant se fait dans la borne.",
+    ),
+    schemaAfter: "Recharge DC : le chargeur est dans la borne",
+  },
+  "puissance-recharge-dc": {
+    image: photo(
+      "recharge-station-haute-puissance",
+      "Voiture électrique en recharge sur une station haute puissance, avec plusieurs bornes alignées au second plan.",
+      "Une station haute puissance : la puissance annoncée n'est atteinte que sur une partie de la charge.",
+    ),
+    schemaAfter: "Un pic, pas une constante",
+  },
+  "puissance-borne-7-11-22-kw": {
+    image: photo(
+      "recharge-wallbox-garage",
+      "Voiture électrique branchée à une wallbox murale dans un garage résidentiel, avec un vélo posé contre le mur du fond.",
+      "À domicile, la puissance utilisée est celle du maillon le plus faible entre la wallbox et la voiture.",
+    ),
+    schemaAfter: "Le maillon le plus faible fixe la vitesse",
+  },
+  "recharger-sur-prise-domestique": {
+    image: photo(
+      "recharge-prise-domestique",
+      "Voiture électrique rechargée par un câble relié à une prise extérieure, devant une maison contemporaine.",
+      "Sur une prise ordinaire, la recharge est lente : elle se compte en heures.",
+    ),
+  },
+  "batterie-brute-batterie-utile": {
+    image: photo(
+      "batterie-pack-technique",
+      "Pack batterie haute tension d'une voiture électrique posé sur un support dans un atelier, cellules et câblage orange visibles.",
+      "Un pack batterie : la capacité brute est celle des cellules, la capacité utile est celle que la voiture laisse utiliser.",
+    ),
+    schemaAfter: "Deux capacités, deux définitions",
+  },
+  "preserver-batterie-voiture-electrique": {
+    image: photo(
+      "batterie-dessous-vehicule",
+      "Dessous d'une voiture électrique sur un pont élévateur : le pack batterie occupe le plancher entre les essieux.",
+      "Le pack batterie occupe le plancher de la voiture : ses habitudes de charge et de température déterminent son vieillissement.",
+    ),
+  },
+};

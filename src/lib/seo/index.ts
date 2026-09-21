@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { EditorialImage } from "@/types";
 import { siteConfig } from "@/config/site";
 
 /** Image de partage par défaut (public/brand/og-image.png, 1200 × 630). */
@@ -8,6 +9,13 @@ export const DEFAULT_SHARE_IMAGE = {
   height: 630,
   alt: "EVExpert — Comprendre. Comparer. Calculer.",
 };
+
+/** Image de partage (og:image, twitter:image, JSON-LD) d'une image éditoriale, avec ses vraies dimensions. */
+export function shareImageOf(img: EditorialImage): { src: string; width: number; height: number; alt: string } {
+  return img.share
+    ? { src: img.share, width: 1200, height: img.shareHeight ?? 675, alt: img.alt }
+    : { src: img.src, width: img.width, height: img.height, alt: img.alt };
+}
 
 interface PageMetaInput {
   title: string;

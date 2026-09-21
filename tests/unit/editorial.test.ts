@@ -9,7 +9,7 @@ import { buildUsageGuides } from "@/data/guides/usage";
 import { buildNewGuides } from "@/data/guides/nouveaux";
 import { makeGuideContext } from "@/data/guides/helpers";
 import { decorateArticles, decorateGuides } from "@/data/editorial/decorate";
-import { EDITORIAL_HEROES } from "@/data/editorial/media";
+import { EDITORIAL_HEROES, EDITORIAL_PHOTOS } from "@/data/editorial/media";
 import { EDITORIAL_META } from "@/data/editorial/meta";
 import { linkifySections } from "@/lib/editorial-links";
 import { vehicleHref } from "@/lib/vehicle-utils";
@@ -46,7 +46,7 @@ describe("contenu éditorial", () => {
 
   it("chaque entrée de médias et de méta correspond à un contenu réel (pas de faute de frappe)", () => {
     const slugs = new Set(all.map((x) => x.slug));
-    for (const k of [...Object.keys(EDITORIAL_HEROES), ...Object.keys(EDITORIAL_META)]) expect(slugs.has(k), k).toBe(true);
+    for (const k of [...Object.keys(EDITORIAL_HEROES), ...Object.keys(EDITORIAL_PHOTOS), ...Object.keys(EDITORIAL_META)]) expect(slugs.has(k), k).toBe(true);
   });
 
   it("les images principales existent, ont alt, légende et dimensions cohérentes avec le SVG", () => {
@@ -68,6 +68,48 @@ describe("contenu éditorial", () => {
       const b = readFileSync(file);
       expect([b.readUInt32BE(16), b.readUInt32BE(20)], img.share).toEqual([1200, 675]);
       expect(b.length, img.share).toBeLessThan(90_000);
+    }
+  });
+
+  it("photographies : fichiers JPEG 1376 × 768 légers, dérivé Open Graph 1200 × 630, alt et légende", () => {
+    const jpegSize = (b: Buffer): [number, number] => {
+      let i = 2;
+      while (i < b.length) {
+        const m = b[i + 1];
+        if (m >= 0xc0 && m <= 0xc3) return [b.readUInt16BE(i + 7), b.readUInt16BE(i + 5)];
+        i += 2 + b.readUInt16BE(i + 2);
+      }
+      throw new Error("SOF introuvable");
+    };
+    for (const [slug, { image }] of Object.entries(EDITORIAL_PHOTOS)) {
+      const main = readFileSync(new URL(`../../public${image.src}`, import.meta.url));
+      const og = readFileSync(new URL(`../../public${image.share}`, import.meta.url));
+      expect(jpegSize(main), slug).toEqual([1376, 768]);
+      expect(jpegSize(og), `${slug} og`).toEqual([1200, 630]);
+      expect(main.length, slug).toBeLessThan(300_000);
+      expect(og.length, `${slug} og`).toBeLessThan(200_000);
+      expect(image.alt.length, slug).toBeGreaterThan(50);
+      expect(image.caption, slug).toContain("générée par IA");
+    }
+  });
+
+  it("les photos ne sont utilisées que sur des guides/analyses, jamais sur une fiche véhicule", () => {
+    const pages = new Set(all.map((x) => x.slug));
+    for (const slug of Object.keys(EDITORIAL_PHOTOS)) expect(pages.has(slug), slug).toBe(true);
+  });
+
+  it("avec une photo : elle est l'image principale et le schéma descend dans le corps, jamais collé à la photo", () => {
+    for (const slug of Object.keys(EDITORIAL_PHOTOS)) {
+      const x = all.find((y) => y.slug === slug)!;
+      expect(x.hero?.src, slug).toBe(EDITORIAL_PHOTOS[slug].image.src);
+      const idx = x.sections.findIndex((s) => s.image);
+      if (EDITORIAL_HEROES[slug]) {
+        expect(idx, `${slug} : schéma dans le corps`).toBeGreaterThanOrEqual(0);
+        expect(x.sections[idx].image?.src, slug).toBe(EDITORIAL_HEROES[slug].src);
+        expect(idx, `${slug} : schéma pas dans la toute première section`).toBeGreaterThanOrEqual(0);
+      } else {
+        expect(idx, `${slug} : pas de schéma`).toBe(-1);
+      }
     }
   });
 
