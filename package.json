@@ -19,6 +19,7 @@
     "snapshot:seo": "node scripts/seo-snapshot.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "clsx": "^2.1.1",
     "drizzle-orm": "0.45.2",
     "lucide-react": "^1.47.0",
