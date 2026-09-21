@@ -49,4 +49,22 @@ describe("identité de marque", () => {
     };
     for (const [f, max] of Object.entries(budget)) expect(statSync(brand(f)).size, f).toBeLessThan(max);
   });
+
+  it("photo du hero : JPEG 1376 × 768 de moins de 700 Ko (servie optimisée par next/image)", () => {
+    const b = readFileSync(brand("evexpert-hero.jpeg"));
+    expect([b[0], b[1]]).toEqual([0xff, 0xd8]); // SOI JPEG
+    let i = 2;
+    let dims: [number, number] | null = null;
+    while (i < b.length) {
+      const marker = b[i + 1];
+      const len = b.readUInt16BE(i + 2);
+      if (marker >= 0xc0 && marker <= 0xc3) {
+        dims = [b.readUInt16BE(i + 7), b.readUInt16BE(i + 5)];
+        break;
+      }
+      i += 2 + len;
+    }
+    expect(dims).toEqual([1376, 768]);
+    expect(b.length).toBeLessThan(700_000);
+  });
 });
