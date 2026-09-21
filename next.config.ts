@@ -15,7 +15,13 @@ const nextConfig: NextConfig = {
       { source: "/recharge/recharge-ac-dc", destination: "/guides/recharge-ac-ou-dc", permanent: true },
       { source: "/recharge/puissances-de-recharge", destination: "/guides/puissance-borne-7-11-22-kw", permanent: true },
       { source: "/bornes-recharge", destination: "/recharge", permanent: true },
+      // Ancienne URL de l'image de partage (générée) : les aperçus déjà mis en cache la suivent.
+      { source: "/opengraph-image", destination: "/opengraph-image.png", permanent: true },
     ];
+  },
+  async rewrites() {
+    // Les clients qui demandent /favicon.ico à la racine reçoivent l'icône de marque.
+    return [{ source: "/favicon.ico", destination: "/brand/favicon.ico" }];
   },
   async headers() {
     const security = [
@@ -26,6 +32,11 @@ const nextConfig: NextConfig = {
     ];
     return [
       { source: "/:path*", headers: security },
+      {
+        // Assets de marque : noms stables (non hachés), donc cache d'un jour + revalidation.
+        source: "/brand/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }],
+      },
       {
         // Ressources versionnées de Next : cache immuable.
         source: "/_next/static/:path*",

@@ -1,5 +1,7 @@
 # Design system EVExpert — « Fiche technique »
 
+Identité de marque : voir [brand.md](brand.md).
+
 Source de vérité des tokens : `src/app/globals.css` (`@theme`). Les composants sont dans
 `src/components/ui/`. Tout est Server Component sauf mention contraire.
 

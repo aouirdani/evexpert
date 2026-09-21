@@ -29,6 +29,14 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
+  // Icônes de marque (public/brand). /favicon.ico est servi par une réécriture (next.config.ts).
+  icons: {
+    icon: [
+      { url: "/brand/favicon.svg", type: "image/svg+xml" },
+      { url: "/brand/favicon.ico", sizes: "16x16 32x32 48x48" },
+    ],
+    apple: [{ url: "/brand/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   authors: [{ name: siteConfig.name }],
   openGraph: {
     type: "website",

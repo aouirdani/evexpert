@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { Menu, Zap } from "lucide-react";
+import { Menu } from "lucide-react";
 import { mainNav, siteConfig } from "@/config/site";
+import { Logo } from "@/components/brand/Logo";
 import { SearchBar } from "./SearchBar";
 
 /**
@@ -13,15 +14,10 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3 sm:px-6">
         <Link
           href="/"
-          className="flex shrink-0 items-center gap-2"
+          className="flex shrink-0 items-center"
           aria-label={`${siteConfig.name} — accueil`}
         >
-          <span className="grid h-9 w-9 place-items-center rounded-lg bg-slate-950 text-emerald-400">
-            <Zap className="h-5 w-5" aria-hidden />
-          </span>
-          <span className="text-lg font-extrabold tracking-tight text-slate-900">
-            {siteConfig.name}
-          </span>
+          <Logo />
         </Link>
 
         <nav

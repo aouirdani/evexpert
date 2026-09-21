@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Zap } from "lucide-react";
 import { footerNav, siteConfig } from "@/config/site";
+import { Logo } from "@/components/brand/Logo";
 
 export function Footer() {
   return (
@@ -8,13 +8,8 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_repeat(4,1fr)]">
           <div>
-            <Link href="/" className="flex items-center gap-2" aria-label={`${siteConfig.name} — accueil`}>
-              <span className="grid h-9 w-9 place-items-center rounded-lg bg-emerald-500 text-slate-950">
-                <Zap className="h-5 w-5" aria-hidden />
-              </span>
-              <span className="text-lg font-extrabold tracking-tight text-white">
-                {siteConfig.name}
-              </span>
+            <Link href="/" className="inline-flex items-center" aria-label={`${siteConfig.name} — accueil`}>
+              <Logo tone="dark" />
             </Link>
             <p className="mt-3 text-sm font-medium text-white">{siteConfig.tagline}</p>
             <p className="mt-3 max-w-xs text-sm text-slate-400">
