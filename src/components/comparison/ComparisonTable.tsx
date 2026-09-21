@@ -1,106 +1,128 @@
 import Link from "next/link";
 import type { Vehicle } from "@/types";
-import { METRICS, METRIC_GROUPS, objectiveDifferences } from "@/lib/comparison-metrics";
-import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
+import { METRICS, METRIC_GROUPS } from "@/lib/comparison-metrics";
+import { vehicleHref } from "@/lib/vehicle-utils";
 import { DataBadge } from "@/components/ui/DataBadge";
+import { formatNumber } from "@/lib/utils";
+
+/** Unité et décimales de l'écart chiffré, par critère mesurable. Les autres critères n'ont pas d'écart. */
+const DELTA: Record<string, [unit: string, digits: number]> = {
+  gross: ["kWh", 1],
+  usable: ["kWh", 1],
+  range: ["km", 0],
+  cons: ["kWh/100 km", 1],
+  consw: ["kWh/100 km", 1],
+  ac: ["kW", 1],
+  dc: ["kW", 0],
+  t1080: ["min", 0],
+  power: ["kW", 0],
+  torque: ["Nm", 0],
+  acc: ["s", 1],
+  top: ["km/h", 0],
+  weight: ["kg", 0],
+  boot: ["L", 0],
+  bootmax: ["L", 0],
+  cost: ["€", 2],
+};
+
+const rowGrid = { 2: "max-sm:grid-cols-2", 3: "max-sm:grid-cols-3" } as const;
 
 /**
- * Tableau comparatif par catégories. La mise en évidence signale seulement la
- * valeur la plus haute/basse quand elle est objectivement mesurable : il n'y a
- * ni note globale ni « meilleure voiture ».
+ * Tableau comparatif par catégories. Aucune valeur n'est désignée « meilleure » : la colonne
+ * « Écart » donne seulement la distance entre la valeur la plus haute et la plus basse. Pas de note
+ * globale ni de classement. Sur mobile, chaque critère devient une bande : étiquette, puis les
+ * valeurs côte à côte, puis l'écart.
  */
 export function ComparisonTable({ vehicles }: { vehicles: Vehicle[] }) {
-  const diffs = objectiveDifferences(vehicles);
-
-  function bestOf(key: string): number | null {
-    const m = METRICS.find((x) => x.key === key)!;
-    if (!m.best) return null;
-    const nums = vehicles.map((v) => m.value(v)).filter((n): n is number => n !== null);
-    if (nums.length < 2) return null;
-    const t = m.best === "max" ? Math.max(...nums) : Math.min(...nums);
-    return nums.filter((n) => n === t).length === 1 ? t : null;
-  }
+  const n = vehicles.length as 2 | 3;
+  const priceKnown = vehicles.some((v) => v.price !== null);
+  const groups = METRIC_GROUPS.filter((g) => g !== "Prix" || priceKnown);
+  const cols = n + 2;
 
   return (
     <div>
-      {diffs.length > 0 && (
-        <section aria-labelledby="diffs" className="mb-6 rounded-2xl border border-slate-200 bg-slate-50 p-5">
-          <h2 id="diffs" className="text-lg font-bold text-slate-900">Différences objectives</h2>
-          <p className="mt-1 text-sm text-slate-600">
-            Calculées à partir des données du tableau. Ce ne sont pas des classements : chaque critère compte différemment selon votre usage.
-          </p>
-          <ul className="mt-3 grid gap-2 sm:grid-cols-2">
-            {diffs.map((d) => (
-              <li key={d.label} className="rounded-lg bg-white px-3 py-2 text-sm ring-1 ring-slate-200">
-                <span className="text-slate-600">{d.label} : </span>
-                <span className="font-semibold text-slate-900">{d.vehicle.brand} {d.vehicle.model}</span>{" "}
-                <span className="tabular text-slate-700">({d.display})</span>
-              </li>
+      <table className="w-full text-left">
+        <caption className="sr-only">Comparaison détaillée des véhicules sélectionnés</caption>
+        <thead className="sticky top-(--header-h) z-20 bg-paper">
+          <tr className={`max-sm:grid ${rowGrid[n]} max-sm:gap-x-4`}>
+            <td className="w-[26%] max-sm:hidden">
+              <span className="sr-only">Critère</span>
+            </td>
+            {vehicles.map((v) => (
+              <th key={v.id} scope="col" className="min-w-0 border-b-2 border-ink pb-3 pr-4 pt-4 align-bottom font-normal max-sm:pr-0">
+                <span className="eyebrow block text-signal-deep">{v.brand}</span>
+                <Link href={vehicleHref(v, "model")} className="link-h mt-1 block text-h3 font-bold leading-tight text-ink">
+                  {v.model}
+                </Link>
+                <span className="block truncate text-caption text-muted">{v.version}</span>
+              </th>
             ))}
-          </ul>
-        </section>
-      )}
-
-      <div className="relative overflow-x-auto rounded-2xl border border-slate-200 bg-white">
-        <table className="w-full min-w-[560px] text-left text-sm">
-          <caption className="sr-only">Comparaison détaillée des véhicules sélectionnés</caption>
-          <thead className="bg-slate-950 text-white">
-            <tr>
-              <th scope="col" className="sticky left-0 bg-slate-950 px-4 py-3 font-semibold">Critère</th>
-              {vehicles.map((v) => (
-                <th key={v.id} scope="col" className="px-4 py-3 font-semibold">
-                  <Link href={vehicleHref(v, "model")} className="underline underline-offset-2 hover:text-emerald-300">
-                    {vehicleTitle(v)}
-                  </Link>
-                </th>
-              ))}
+            <th scope="col" className="label w-[12%] border-b-2 border-ink pb-3 pt-4 text-right align-bottom max-sm:hidden">
+              Écart
+            </th>
+          </tr>
+        </thead>
+        {groups.map((g) => (
+          <tbody key={g}>
+            <tr className="max-sm:block">
+              <th colSpan={cols} scope="colgroup" className="label pb-2 pt-9 text-left max-sm:block">
+                {g}
+              </th>
             </tr>
-          </thead>
-          {METRIC_GROUPS.map((g) => (
-            <tbody key={g} className="divide-y divide-slate-100">
-              <tr className="bg-slate-50">
-                <th colSpan={vehicles.length + 1} scope="colgroup" className="px-4 py-2 text-xs font-bold uppercase tracking-wide text-slate-700">
-                  {g}
-                </th>
-              </tr>
-              {METRICS.filter((m) => m.group === g).map((m) => {
-                const best = bestOf(m.key);
-                return (
-                  <tr key={m.key}>
-                    <th scope="row" className="sticky left-0 bg-white px-4 py-2.5 font-medium text-slate-700">
-                      {m.label}
-                      <span className="ml-2 align-middle">
+            {METRICS.filter((m) => m.group === g).map((m) => {
+              const nums = vehicles.map((v) => m.value(v)).filter((x): x is number => x !== null);
+              const d = DELTA[m.key];
+              const diff = d && nums.length >= 2 ? Math.max(...nums) - Math.min(...nums) : null;
+              return (
+                <tr key={m.key} className={`border-t border-line max-sm:grid ${rowGrid[n]} max-sm:gap-x-4`}>
+                  <th scope="row" className="py-3.5 pr-4 text-left align-top text-sm font-semibold text-ink max-sm:col-span-full max-sm:pb-1 max-sm:pt-3.5">
+                    {m.label}
+                    {(m.type === "calculated" || m.type === "estimated") && (
+                      <span className="mt-1 block">
                         <DataBadge type={m.type} />
                       </span>
-                    </th>
-                    {vehicles.map((v) => {
-                      const n = m.value(v);
-                      const isBest = best !== null && n === best;
-                      return (
-                        <td
-                          key={v.id}
-                          className={
-                            isBest
-                              ? "tabular bg-emerald-50 px-4 py-2.5 font-bold text-emerald-900"
-                              : m.format(v) === "Non disponible"
-                                ? "px-4 py-2.5 text-muted"
-                                : "tabular px-4 py-2.5 text-slate-900"
-                          }
-                        >
-                          {m.format(v)}
-                          {isBest && <span className="sr-only"> ({m.highlight})</span>}
-                        </td>
-                      );
-                    })}
-                  </tr>
-                );
-              })}
-            </tbody>
-          ))}
-        </table>
-      </div>
-      <p className="mt-2 text-xs text-slate-600">
-        Fond vert : valeur la plus haute ou la plus basse parmi les véhicules comparés (uniquement pour les critères mesurables). « Non disponible » : donnée absente de la source, jamais estimée.
+                    )}
+                  </th>
+                  {vehicles.map((v) => {
+                    const text = m.format(v);
+                    return (
+                      <td
+                        key={v.id}
+                        className={
+                          text === "Non disponible"
+                            ? "wrap-anywhere py-3.5 pr-4 align-top text-sm text-muted max-sm:pb-3.5 max-sm:pr-0 max-sm:pt-0"
+                            : "num wrap-anywhere py-3.5 pr-4 align-top text-base font-semibold text-ink max-sm:pb-3.5 max-sm:pr-0 max-sm:pt-0"
+                        }
+                      >
+                        {text}
+                      </td>
+                    );
+                  })}
+                  <td className="num py-3.5 text-right align-top text-sm text-muted max-sm:col-span-full max-sm:pb-3.5 max-sm:pt-0 max-sm:text-left">
+                    {diff !== null && (
+                      <>
+                        {diff === 0 ? (
+                          "identique"
+                        ) : (
+                          <>
+                            <span aria-hidden>Δ </span>
+                            <span className="sr-only">écart de </span>
+                            {formatNumber(diff, d[1])}&nbsp;{d[0]}
+                          </>
+                        )}
+                      </>
+                    )}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        ))}
+      </table>
+      <p className="mt-8 max-w-2xl text-caption text-muted">
+        Δ : écart entre la valeur la plus haute et la plus basse, sans jugement : chaque critère compte différemment selon votre usage.
+        Sauf mention « Calcul EVExpert », les caractéristiques proviennent de la source spécialisée. « Non disponible » : donnée absente de la source, jamais estimée.
+        {!priceKnown && " Le prix en France n'est pas encore collecté (aucune source française datée) : consultez le configurateur du constructeur."}
       </p>
     </div>
   );

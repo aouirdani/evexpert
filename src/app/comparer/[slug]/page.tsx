@@ -6,11 +6,11 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ComparisonTable } from "@/components/comparison/ComparisonTable";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { Faq } from "@/components/ui/Faq";
-import { LastUpdated } from "@/components/ui/SourceBadge";
 import { RelatedGuides, RelatedTools } from "@/components/related";
 import { getFeaturedComparisons, parseComparison } from "@/lib/comparison";
 import { objectiveDifferences } from "@/lib/comparison-metrics";
 import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
+import { formatDateFr } from "@/lib/utils";
 import { buildMetadata, faqJsonLd } from "@/lib/seo";
 
 // Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
@@ -63,7 +63,7 @@ export default async function ComparisonPage({ params }: { params: Promise<Param
   ];
 
   return (
-    <Container className="py-10">
+    <Container className="pb-section pt-8">
       <Breadcrumbs
         items={[
           { name: "Comparer", href: "/comparer" },
@@ -75,23 +75,23 @@ export default async function ComparisonPage({ params }: { params: Promise<Param
         title={`${a.brand} ${a.model} vs ${b.brand} ${b.model} : comparatif`}
         description={`${vehicleTitle(a)} et ${vehicleTitle(b)}, critère par critère, avec la nature de chaque donnée.`}
       />
-      <div className="mt-3">
-        <LastUpdated date={a.source.lastUpdated} label="Données relevées le" />
-      </div>
+      <p className="mt-5 text-caption text-muted">
+        Données relevées le <time dateTime={a.source.lastUpdated}>{formatDateFr(a.source.lastUpdated)}</time>
+      </p>
       <div className="mt-8">
         <ComparisonTable vehicles={[a, b]} />
       </div>
 
-      <div className="mt-8 flex flex-wrap gap-4 text-sm">
-        <Link href={vehicleHref(a, "model")} className="font-medium text-emerald-800 underline">Fiche {a.brand} {a.model}</Link>
-        <Link href={vehicleHref(b, "model")} className="font-medium text-emerald-800 underline">Fiche {b.brand} {b.model}</Link>
-        <Link href="/comparer" className="font-medium text-emerald-800 underline">Comparer d&apos;autres modèles</Link>
+      <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-line pt-5 text-sm font-semibold">
+        <Link href={vehicleHref(a, "model")} className="link-u text-signal-deep">Fiche {a.brand} {a.model}</Link>
+        <Link href={vehicleHref(b, "model")} className="link-u text-signal-deep">Fiche {b.brand} {b.model}</Link>
+        <Link href="/comparer" className="link-u text-signal-deep">Comparer d&apos;autres modèles</Link>
       </div>
 
       <Faq items={faq} />
       <JsonLd data={faqJsonLd(faq)} />
 
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="mt-4 grid gap-x-12 md:grid-cols-2">
         <RelatedTools hrefs={["/outils/tco-voiture-electrique", "/outils/cout-100-km"]} />
         <RelatedGuides slugs={["choisir-voiture-electrique-selon-usage", "batterie-brute-batterie-utile"]} />
       </div>
