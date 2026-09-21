@@ -180,7 +180,9 @@ export function CompareSpotlight({ comparisons }: { comparisons: { slug: string;
             </caption>
             <thead>
               <tr className="align-bottom">
-                <td className="w-[30%] pb-5 sm:w-[28%]" />
+                <th scope="col" className="w-[30%] pb-5 sm:w-[28%]">
+                  <span className="sr-only">Critère</span>
+                </th>
                 {[a, b].map((v) => (
                   <th key={v.id} scope="col" className="pb-5 pr-3 font-normal sm:pr-6">
                     <span className="eyebrow block text-signal-deep">{v.brand}</span>

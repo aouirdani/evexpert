@@ -57,7 +57,7 @@ Les textes sont écrits en clair ; `linkifySections` ajoute les liens à la cons
   et 6 par page. L'ancre est le texte tel qu'il est écrit.
 - Lien manuel : `[ancre](/chemin)` dans une chaîne (chemins internes uniquement ; pas dans les FAQ, qui alimentent le JSON-LD).
 - `<Inline>` rend de vrais `<a>` (next/link) côté serveur : liens crawlables sans JavaScript.
-- L'encart latéral (`ArticleView`) ajoute outils, guides et fiches associés, plus « Passer à la pratique » (explorateur, comparateur).
+- Mise en page (`ArticleView`) : rubrique, H1, chapô, `Colophon`, photo d'ouverture pleine largeur (si l'image principale est une photo ; un schéma reste dans la colonne de texte), colonne de texte de 44 rem, sommaire collant à droite (en tête de texte en mobile), outils/guides/fiches associés en pied.
 
 ## SEO
 

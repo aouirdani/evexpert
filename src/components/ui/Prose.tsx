@@ -77,14 +77,17 @@ export function Prose({ sections }: { sections: ArticleSection[] }) {
                   <tbody className="border-t-2 border-ink">
                     {s.table.rows.map((row, r) => (
                       <tr key={r} className="border-t border-line first:border-t-0">
-                        {row.map((cell, c) => (
-                          <td
-                            key={c}
-                            className={c === 0 ? "py-2.5 pr-4 align-top font-semibold text-ink" : "num whitespace-nowrap py-2.5 pr-4 align-top text-body"}
-                          >
-                            <Inline text={cell} />
-                          </td>
-                        ))}
+                        {row.map((cell, c) =>
+                          c === 0 ? (
+                            <th key={c} scope="row" className="py-2.5 pr-4 text-left align-top font-semibold text-ink">
+                              <Inline text={cell} />
+                            </th>
+                          ) : (
+                            <td key={c} className="num whitespace-nowrap py-2.5 pr-4 align-top text-body">
+                              <Inline text={cell} />
+                            </td>
+                          ),
+                        )}
                       </tr>
                     ))}
                   </tbody>

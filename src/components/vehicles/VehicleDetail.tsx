@@ -136,8 +136,8 @@ export function VehicleDetail({
         aside={<BodyDimensions vehicle={v} />}
       />
 
-      <dl className="mt-12 grid gap-x-10 gap-y-8 border-t-2 border-ink pt-6 lg:grid-cols-12">
-        <div className="lg:col-span-5">
+      <div className="mt-12 grid gap-x-10 gap-y-8 border-t-2 border-ink pt-6 lg:grid-cols-12">
+        <dl className="lg:col-span-5">
           <dt className="label">Autonomie WLTP</dt>
           <dd className="num mt-3 text-data-xl font-bold text-ink">
             {formatNumber(v.rangeWltp)}
@@ -150,8 +150,8 @@ export function VehicleDetail({
               <span className="num">{formatNumber(RANGE_SCALE_MAX)} km</span>
             </span>
           </dd>
-        </div>
-        <div className="grid grid-cols-2 gap-x-8 gap-y-8 lg:col-span-7 lg:grid-cols-3 lg:border-l lg:border-line lg:pl-10">
+        </dl>
+        <dl className="grid grid-cols-2 gap-x-8 gap-y-8 lg:col-span-7 lg:grid-cols-3 lg:border-l lg:border-line lg:pl-10">
           <DataFigure
             label="Batterie utile"
             value={formatNumber(v.batteryUsable, 1)}
@@ -171,8 +171,8 @@ export function VehicleDetail({
             unit="€"
             note={`Calcul EVExpert, ${formatNumber(ASSUMPTIONS.homePrice, 2)}\u00a0€/kWh à domicile`}
           />
-        </div>
-      </dl>
+        </dl>
+      </div>
 
       <SectionNav
         items={[

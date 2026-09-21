@@ -1,6 +1,6 @@
 # Plan de refonte UI/UX — EVExpert
 
-Statut : **audit et plan uniquement**. Aucun composant modifié, rien de committé. Ce document est la
+Statut : **plan mis en œuvre (R0 à R11)** ; voir l'annexe « Écarts et bilan » en fin de document. Ce document est la
 référence des étapes R0 à R11 (section 14). Les tokens actuels sont décrits dans
 [design-system.md](design-system.md), la ligne éditoriale dans [editorial.md](editorial.md).
 
@@ -413,3 +413,21 @@ espace), pas une documentation technique ; « le filet remplace la carte » est 
 pas une règle absolue (une boîte reste légitime pour un calcul, une interaction, un formulaire, un état
 ou une mise en évidence éditoriale) ; les budgets de performance sont des garde-fous : tout dépassement
 justifié par un vrai gain UX est mesuré et documenté.
+
+---
+
+## Annexe — Écarts et bilan
+
+Décisions prises en cours de route (le plan a été corrigé par la pratique) :
+
+- **Boîtes conservées où elles servent** : saisie et résultat des calculateurs (résultat en panneau sombre), source d'une fiche,
+  encart « Passer à la pratique ». Le filet n'est pas devenu une règle absolue.
+- **Répartition d'autonomie (SVG)** ajoutée à l'accueil à la place des « tranches » cliquables : le catalogue est filtré côté
+  client sans URL, un lien filtré aurait imposé `useSearchParams` (rendu client, liste absente du HTML).
+- **Comparateur** : pas de bascule « masquer les lignes identiques » (elle aurait ajouté du JS client au tableau serveur) ;
+  la colonne « Écart » indique « identique ». Ligne « Longueur » dupliquée supprimée ; groupe « Prix » masqué tant qu'aucun prix n'existe.
+- **Fiche** : la silhouette est conservée (cote de longueur réelle) ; le badge de provenance n'apparaît plus par bloc.
+- **Coquille « 416 kmd'autonomie »** : non reproductible dans le HTML (espace insécable correcte) ; artefact de capture.
+- **Anciennes classes `slate-*`/`emerald-*`** (guides, blog, outils, recharge, sources…) migrées vers les tokens : l'audit ne les avait pas vues.
+- **Home** : le lien vers le guide « choisir-premiere-voiture-electrique » a été conservé (maillage interne).
+- **Accessibilité** : `label` passé à 80 % du texte (contraste 4,37 → ≥ 4,5), `dl` valides, en-têtes de tableaux complétés.

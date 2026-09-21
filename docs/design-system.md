@@ -105,13 +105,48 @@ de texte déclarée après une taille personnalisée la supprimerait.
 - `NavLink` (seul Client Component de la navigation) lit `usePathname()` : `aria-current="page"` (page exacte) ou `"true"` (même section) + classe active. Ses classes sont désignées par `variant` (`nav`, `compare`, `utility`, `row`, `row-compare`, `sub`) : les passer en props gonflerait la charge utile RSC. Pas de `cn()` dedans (tailwind-merge alourdirait le JS de chaque page).
 - `Footer` : fond `ink`, règle graduée SVG, bandeau éditorial (promesse + CTA Comparer/Explorer), quatre colonnes, mentions et « Gestion des cookies » (`data-cookie-settings`, relié par CookieBanner).
 
-## Cartes véhicule et accueil (étape 4)
+## Direction : publication automobile (refonte R0-R11)
 
-- `VehicleCard` (`vehicles/VehicleCard.tsx`) : type de carrosserie + silhouette, marque, modèle (h3 = lien étiré, `aria-label` = titre complet), **autonomie WLTP en grand** avec `RangeBar`, puis batterie utile / charge DC max / conso. calculée en second plan, temps 10-80 % si connu. Valeur absente → « — » (lue « Non disponible »). Aucun prix : la source n'en fournit pas pour la France, on n'en invente pas.
-- `BodyGlyph` : `<use>` vers le sprite statique `public/brand/body-glyphs.svg` (8 silhouettes, une par `BodyType`, trait `currentColor`). Illustrations génériques, toujours `aria-hidden` ; à annoncer comme telles (note sous les grilles). Le sprite est mis en cache : chaque carte n'ajoute qu'une balise au HTML.
-- `RangeBar` : barre CSS relative à l'échelle commune `RANGE_SCALE_MAX` (800 km, `vehicle-format.ts`, garantie par un test). Une seule couleur : c'est une donnée, pas un classement. `decorative` quand la valeur est écrite à côté ; sinon `role="img"` + `aria-label`.
-- `bodyTypeLabels`, `bodyGlyphId` (`vehicle-format.ts`) : source unique des libellés et identifiants de carrosserie.
-- `ArrowLink`, `SectionHeading tone="ink"` (`ui/primitives.tsx`) : liens fléchés et titres de section sur fond sombre.
-- Hero : photo de voiture `public/brand/evexpert-hero.jpeg` (1376 × 768, 587 Ko ; servie en AVIF/WebP de 6 à 17 Ko par `next/image`), un seul `<Image priority>`, décorative (alt vide). Le studio quasi noir est fondu dans le navy par `mix-blend-lighten` + un fondu technique des bords (haut, bas, gauche) ; desktop : à droite (70 vw, max 1100 px), en dessous de 1024 px : sous les CTA, pleine largeur. Ne pas la recadrer à droite : la voiture y est à 4 % du bord.
-- Accueil : `components/home/` (`Hero`, `sections.tsx`). Rythme : hero ink → démarrer (tuile claire + tuile ink + lignes) → sélection de voitures → comparateur (ink, tableau réel) → données (paper-deep) → recharge (colonnes filetées) → guides et analyses (listes) → outils (ink) → FAQ.
-- Titres : sous un h1, une grille de cartes (h3) est précédée d'un h2 (visible, ou `sr-only` sur l'explorateur et les pages marque).
+Détail des décisions : [ui-redesign-plan.md](ui-redesign-plan.md).
+
+- **Le filet structure, la boîte sert.** Filet fort (`border-t-2 border-ink`) en tête de bloc, filets fins (`line`) entre les lignes.
+  Une boîte (`Card`, `rounded-2xl border bg-surface`) reste réservée aux objets : saisie d'un calculateur, source d'une fiche.
+  Le résultat d'un calcul est un panneau sombre (`CalcLayout`, `on-ink`).
+- **Une donnée est une cote** : `DataFigure` (étiquette `label`, valeur `num` + `text-data-*`, unité `unit`). À placer dans un `<dl>`.
+- **Photos, grands titres, asymétrie** : hero et sections d'accueil en colonnes 7/5 ou 5/7, photographies éditoriales en ouverture d'article et en tête de rubrique.
+- **Sombre** : hero et footer, panneaux de résultats. Le lime ne sert que sur fond sombre (point, bouton, valeur clé).
+- **Provenance par exception** : la source par défaut est dite une fois (en-tête de fiche, section Source) ; un `DataBadge` n'apparaît que pour une autre nature (calcul, estimation).
+- **Aucun classement** : le comparateur affiche un écart chiffré (`Δ`), jamais « meilleur ».
+- **Typographie française** : `frTypo()` (`lib/utils.ts`) place une espace insécable avant `: ; ? ! »` dans les titres ; `fmt()` lie valeur et unité.
+
+### Composants ajoutés
+
+| Composant | Fichier | Rôle |
+|---|---|---|
+| `Section`, `Kicker` | `layout/Section.tsx` | fond, rythme, conteneur ; rubrique + complément |
+| `SectionNav` | `layout/SectionNav.tsx` | sous-navigation collante par ancres (CSS seul) |
+| `DataFigure`, `Delta` | `ui/` | cote de donnée ; écart neutre entre deux valeurs |
+| `Sheet` | `ui/primitives.tsx` | bloc à filet fort |
+| `VehicleCard`, `VehicleRow` (+ `VehicleRowsHead`) | `vehicles/` | fiche (compacte en mobile) et ligne de tableau ; `RangeBar` fine, survol vert |
+| `VehicleHeader`, `BodyDimensions` | `vehicles/` | en-tête de fiche ; silhouette + cote de longueur réelle |
+| `RangeDistribution` | `home/` | répartition des autonomies du catalogue (SVG statique, un point par version) |
+| `Colophon` | `content/` | signature (rédaction, dates, lecture) |
+| `EditorialFigure` | `content/` | photo pleine largeur (`wide`) ou schéma cadré ; légendes numérotées « Fig. n » (compteur CSS dans `.prose-ev`) |
+
+### Utilitaires CSS (globals.css)
+
+`label`, `num`, `unit`, `text-data-xl/lg/md`, `text-dek`, `text-caption`, `link-u` (inline, filet permanent + tracé au survol),
+`link-h` (titre-lien : filet au survol seulement), `rule-strong/fine`, `balance`, `pretty`, `py-block`.
+
+### Pièges
+
+- Un `sr-only` (position absolue) dans un tableau à `overflow-x-auto` élargit la page mobile s'il n'y a pas d'ancêtre `relative` : ajouter `relative` au conteneur.
+- `position: sticky` ne fonctionne pas sous un ancêtre `overflow-x-auto` : le tableau du comparateur n'a pas de conteneur défilant (bandes empilées en mobile).
+- `dl` : ses enfants directs sont des `dt`/`dd` ou des `div` qui en contiennent uniquement.
+
+## Navigation (accueil, catalogue, fiche)
+
+- Accueil : hero ink (photo `evexpert-hero.jpeg`, un seul `<Image priority>`, aucune annotation : l'image est générique) → 01 autonomie (répartition + tranches) → 02 sélection (tableau, cartes en mobile) → 03 comparaison (`Δ`) → 04 recharge (photo) → 05 guides et analyses → 06 outils → 07 méthode → FAQ.
+- Catalogue : filtres collants à gauche (repliables en mobile), tri, bascule fiches/tableau (≥ 1024 px).
+- Fiche : en-tête + cotes clés, `SectionNav`, blocs en `grid-cols-12` (titre dans la marge, contenu sur 9 colonnes).
+- Comparateur : emplacements A/B/C, colonne « Écart », bandes en mobile.

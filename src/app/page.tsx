@@ -67,7 +67,7 @@ export default async function HomePage() {
     .map((id) => withHref.find((v) => v.id === id))
     .filter((v): v is NonNullable<typeof v> => Boolean(v));
   const leadGuide = guides.find((g) => g.slug === "batterie-brute-batterie-utile");
-  const featuredGuides = ["calculer-autonomie-reelle", "recharge-ac-ou-dc", "combien-coute-recharge-domicile", "voiture-electrique-vs-essence"]
+  const featuredGuides = ["calculer-autonomie-reelle", "recharge-ac-ou-dc", "combien-coute-recharge-domicile", "voiture-electrique-vs-essence", "choisir-premiere-voiture-electrique"]
     .map((slug) => guides.find((g) => g.slug === slug))
     .filter((g): g is NonNullable<typeof g> => Boolean(g));
   const latest = [...articles].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt)).slice(0, 3);

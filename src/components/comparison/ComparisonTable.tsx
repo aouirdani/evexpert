@@ -45,9 +45,9 @@ export function ComparisonTable({ vehicles }: { vehicles: Vehicle[] }) {
         <caption className="sr-only">Comparaison détaillée des véhicules sélectionnés</caption>
         <thead className="sticky top-(--header-h) z-20 bg-paper">
           <tr className={`max-sm:grid ${rowGrid[n]} max-sm:gap-x-4`}>
-            <td className="w-[26%] max-sm:hidden">
+            <th scope="col" className="w-[26%] font-normal max-sm:hidden">
               <span className="sr-only">Critère</span>
-            </td>
+            </th>
             {vehicles.map((v) => (
               <th key={v.id} scope="col" className="min-w-0 border-b-2 border-ink pb-3 pr-4 pt-4 align-bottom font-normal max-sm:pr-0">
                 <span className="eyebrow block text-signal-deep">{v.brand}</span>
