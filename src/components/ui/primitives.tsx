@@ -3,6 +3,10 @@ import { ArrowRight } from "lucide-react";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
+/**
+ * Encadré : réservé à ce qui est un objet (résultat de calcul, outil, formulaire, mise en
+ * évidence). Pour structurer du contenu courant, préférer `Sheet` ou un filet.
+ */
 export function Card({
   children,
   className,
@@ -11,12 +15,24 @@ export function Card({
   className?: string;
 }) {
   return (
-    <div
-      className={cn(
-        "rounded-2xl border border-line bg-surface shadow-xs",
-        className,
-      )}
-    >
+    <div className={cn("rounded-2xl border border-line bg-surface", className)}>
+      {children}
+    </div>
+  );
+}
+
+/** Bloc à filet fort en tête : structure éditoriale sans boîte. */
+export function Sheet({
+  children,
+  className,
+  tone = "paper",
+}: {
+  children: ReactNode;
+  className?: string;
+  tone?: "paper" | "ink";
+}) {
+  return (
+    <div className={cn("border-t-2 pt-4", tone === "ink" ? "border-paper" : "border-ink", className)}>
       {children}
     </div>
   );
@@ -24,6 +40,7 @@ export function Card({
 
 export function SectionHeading({
   eyebrow,
+  numeral,
   title,
   description,
   action,
@@ -31,6 +48,8 @@ export function SectionHeading({
   id,
 }: {
   eyebrow?: string;
+  /** Folio de section (« 01 »). */
+  numeral?: string;
   title: string;
   description?: string;
   action?: ReactNode;
@@ -40,15 +59,31 @@ export function SectionHeading({
 }) {
   const onInk = tone === "ink";
   return (
-    <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-      <div className="max-w-2xl">
-        {eyebrow && <p className={cn("eyebrow mb-2", onInk ? "text-signal" : "text-signal-deep")}>{eyebrow}</p>}
-        <h2 id={id} className={cn("text-h2 font-bold", onInk ? "text-paper" : "text-ink")}>{title}</h2>
-        {description && (
-          <p className={cn("mt-2 text-base", onInk ? "text-ink-muted" : "text-muted")}>{description}</p>
+    <div
+      className={cn(
+        "mb-8 grid gap-x-10 gap-y-4 border-t-2 pt-4 md:mb-10 md:grid-cols-12 md:items-end",
+        onInk ? "border-paper" : "border-ink",
+      )}
+    >
+      <div className="md:col-span-7">
+        {(eyebrow || numeral) && (
+          <p className={cn("label mb-3 flex items-center gap-3", onInk ? "text-ink-muted" : "text-muted")}>
+            {numeral && <span className={cn("num", onInk ? "text-signal" : "text-signal-deep")}>{numeral}</span>}
+            {eyebrow}
+          </p>
         )}
+        <h2 id={id} className={cn("balance text-h2 font-bold", onInk ? "text-paper" : "text-ink")}>
+          {title}
+        </h2>
       </div>
-      {action && <div className="shrink-0">{action}</div>}
+      {(description || action) && (
+        <div className="md:col-span-5 md:justify-self-end md:text-right lg:max-w-md">
+          {description && (
+            <p className={cn("pretty text-base md:text-left", onInk ? "text-ink-muted" : "text-muted")}>{description}</p>
+          )}
+          {action && <div className={cn(description && "mt-3")}>{action}</div>}
+        </div>
+      )}
     </div>
   );
 }
@@ -69,13 +104,13 @@ export function ArrowLink({
     <Link
       href={href}
       className={cn(
-        "group inline-flex min-h-10 items-center gap-1.5 rounded-sm text-sm font-semibold underline-offset-4 hover:underline",
+        "group inline-flex min-h-10 items-center gap-1.5 rounded-sm text-sm font-semibold",
         tone === "ink" ? "text-signal" : "text-signal-deep",
         className,
       )}
     >
-      {children}
-      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
+      <span className="link-u">{children}</span>
+      <ArrowRight className="h-4 w-4 transition-transform duration-150 group-hover:translate-x-0.5" aria-hidden />
     </Link>
   );
 }
@@ -91,16 +126,16 @@ const buttonVariants: Record<ButtonVariant, string> = {
   // Action principale sur fond clair.
   primary: "bg-ink text-paper hover:bg-ink-raised",
   // Action principale sur fond sombre (ou mise en avant forte) : lime + encre.
-  signal: "bg-signal text-ink hover:brightness-95",
+  signal: "bg-signal text-ink hover:bg-[#c8f65c]",
   // Alias historique de primary, conservé pour les pages existantes.
   secondary: "bg-ink text-paper hover:bg-ink-raised",
-  outline: "border border-ink/25 bg-transparent text-ink hover:border-ink hover:bg-surface",
+  outline: "border border-ink/30 bg-transparent text-ink hover:border-ink hover:bg-ink hover:text-paper",
   ghost: "text-ink hover:bg-paper-deep",
 };
 
 const buttonSizes: Record<ButtonSize, string> = {
   md: "px-5 py-2.5 text-sm",
-  lg: "px-6 py-3.5 text-base",
+  lg: "px-7 py-4 text-base",
 };
 
 /** Classes d'un bouton : réutilisables pour <Link>, <button> ou <summary>. */
@@ -110,7 +145,7 @@ export function buttonClass(
   className?: string,
 ) {
   return cn(
-    "inline-flex items-center justify-center gap-2 rounded-md font-semibold transition-colors disabled:pointer-events-none disabled:opacity-50",
+    "inline-flex items-center justify-center gap-2 rounded-sm font-semibold transition-[background-color,border-color,color,transform] duration-150 active:translate-y-px disabled:pointer-events-none disabled:opacity-50",
     buttonVariants[variant],
     buttonSizes[size],
     className,
@@ -200,12 +235,12 @@ export function Chip({
     <Link
       href={href}
       className={cn(
-        "inline-flex min-h-10 items-center gap-1.5 rounded-md border border-line bg-surface px-3 text-sm font-medium text-ink transition-colors hover:border-ink",
+        "group/chip inline-flex min-h-10 items-center gap-1.5 rounded-sm border border-line bg-surface px-3 text-sm font-medium text-ink transition-colors duration-150 hover:border-ink hover:bg-ink hover:text-paper",
         className,
       )}
     >
       {children}
-      {count !== undefined && <span className="tabular text-muted">({count})</span>}
+      {count !== undefined && <span className="tabular text-muted group-hover/chip:text-ink-muted">({count})</span>}
     </Link>
   );
 }
