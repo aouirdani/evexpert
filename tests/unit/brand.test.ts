@@ -49,9 +49,4 @@ describe("identité de marque", () => {
     };
     for (const [f, max] of Object.entries(budget)) expect(statSync(brand(f)).size, f).toBeLessThan(max);
   });
-
-  it("la copie servie par Next (opengraph-image.png) est identique à l'asset de marque", () => {
-    const served = readFileSync(new URL("../../src/app/opengraph-image.png", import.meta.url));
-    expect(served.equals(readFileSync(brand("og-image.png")))).toBe(true);
-  });
 });

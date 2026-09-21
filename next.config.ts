@@ -16,7 +16,8 @@ const nextConfig: NextConfig = {
       { source: "/recharge/puissances-de-recharge", destination: "/guides/puissance-borne-7-11-22-kw", permanent: true },
       { source: "/bornes-recharge", destination: "/recharge", permanent: true },
       // Ancienne URL de l'image de partage (générée) : les aperçus déjà mis en cache la suivent.
-      { source: "/opengraph-image", destination: "/opengraph-image.png", permanent: true },
+      { source: "/opengraph-image", destination: "/brand/og-image.png", permanent: true },
+      { source: "/opengraph-image.png", destination: "/brand/og-image.png", permanent: true },
     ];
   },
   async rewrites() {
@@ -35,6 +36,11 @@ const nextConfig: NextConfig = {
       {
         // Assets de marque : noms stables (non hachés), donc cache d'un jour + revalidation.
         source: "/brand/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }],
+      },
+      {
+        // Schémas éditoriaux : noms stables, cache d'un jour + revalidation.
+        source: "/editorial/:path*",
         headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }],
       },
       {

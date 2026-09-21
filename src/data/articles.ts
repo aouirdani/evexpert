@@ -1,7 +1,7 @@
 import type { Article, ArticleCategory, Vehicle } from "@/types";
 import { SOURCES } from "@/data/sources";
-import { averageDcPower, batteryConsumption100 } from "@/lib/vehicle-calcs";
-import { formatNumber } from "@/lib/utils";
+import { acChargeMinutes, averageDcPower, batteryConsumption100 } from "@/lib/vehicle-calcs";
+import { formatNumber, minutesToHuman } from "@/lib/utils";
 
 export function buildArticles(vehicles: Vehicle[]): Article[] {
 
@@ -43,6 +43,28 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
 
   const acValues = Array.from(new Set(vehicles.map((v) => v.chargingAC))).sort((a, b) => a - b);
 
+  const filled = (f: (v: Vehicle) => unknown) => vehicles.filter((v) => f(v) !== null && f(v) !== undefined).length;
+  const coverage = [
+    { label: "Capacité brute de la batterie", filled: filled((v) => v.batteryGross) },
+    { label: "Chimie de la batterie (LFP ou NMC)", filled: filled((v) => v.chemistry) },
+    { label: "Consommation WLTP publiée", filled: filled((v) => v.consumptionWltp) },
+    { label: "Puissance DC et temps de charge 10-80 %", filled: vehicles.filter((v) => v.chargingDC !== null && v.chargingTime10to80 !== null).length },
+    { label: "Couple", filled: filled((v) => v.torque) },
+    { label: "Coffre, banquette rabattue", filled: filled((v) => v.trunkVolumeMax) },
+    { label: "Garantie batterie", filled: filled((v) => v.batteryWarranty) },
+    { label: "Garantie du véhicule", filled: filled((v) => v.warranty) },
+  ];
+
+  // Garantie batterie : la source publie du texte libre (« 8 ans / 160 000 km », « 8 ans », « 100 000 miles »…).
+  const warranty = vehicles.map((v) => {
+    const t = (v.batteryWarranty ?? "").replace(/[\u00a0\u202f]/g, " ").replace(/\s+/g, " ").trim();
+    const years = /(\d+)\s*ans?/i.exec(t);
+    return { v, label: t, years: years ? Number(years[1]) : null, miles: /miles/i.test(t), km: /km/i.test(t) };
+  });
+  const warrantyGroups = [...new Set(warranty.map((w) => w.label))]
+    .map((label) => ({ label, list: warranty.filter((w) => w.label === label) }))
+    .sort((a, b) => b.list.length - a.list.length);
+
   return [
   {
     slug: "voitures-electriques-les-plus-sobres",
@@ -59,6 +81,12 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
     sections: [
       {
         heading: "Les dix consommations calculées les plus basses",
+        chart: {
+          title: "Consommation calculée : les dix versions les plus sobres",
+          unit: "kWh/100 km",
+          bars: byCons.slice(0, 10).map((v) => ({ label: name(v), value: batteryConsumption100(v), display: formatNumber(batteryConsumption100(v), 1) })),
+          caption: "Calcul EVExpert : capacité utile ÷ autonomie WLTP × 100 (côté batterie, valeurs d'homologation).",
+        },
         paragraphs: [
           "Consommation calculée = capacité utile ÷ autonomie WLTP × 100 (côté batterie, avant pertes de charge). C'est une valeur d'homologation, qui ne reflète ni l'autoroute ni l'hiver.",
         ],
@@ -120,6 +148,12 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
     sections: [
       {
         heading: "Les charges 10-80 % les plus courtes",
+        chart: {
+          title: "Temps de charge 10-80 % : les dix versions les plus rapides",
+          unit: "min",
+          bars: byTime.slice(0, 10).map((v) => ({ label: name(v), value: v.chargingTime10to80 })),
+          caption: "Temps publiés par la source spécialisée, en conditions favorables (borne assez puissante, batterie à bonne température).",
+        },
         paragraphs: [
           "Puissance moyenne = énergie de la fenêtre 10-80 % (70 % de la capacité utile) ÷ durée. C'est un calcul EVExpert sur des données publiées.",
         ],
@@ -170,6 +204,12 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
     sections: [
       {
         heading: "Répartition par tranche d'autonomie",
+        chart: {
+          title: "Nombre de versions par tranche d'autonomie WLTP",
+          unit: "versions",
+          bars: rangeBuckets.map(([label, f]) => ({ label, value: vehicles.filter((v) => f(v.rangeWltp)).length })),
+          caption: `Sur les ${N} versions du catalogue ; autonomie WLTP mixte publiée par la source.`,
+        },
         paragraphs: [`L'autonomie WLTP médiane du catalogue est de ${formatNumber(median(vehicles.map((v) => v.rangeWltp)))} km.`],
         table: {
           headers: ["Tranche d'autonomie WLTP", "Nombre de versions"],
@@ -188,6 +228,20 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
             .sort((a, b) => b.rangeWltp - a.rangeWltp)
             .filter((_, i, arr) => i === 0 || i === Math.floor(arr.length / 2) || i === arr.length - 1)
             .map((v) => [name(v), `${formatNumber(v.batteryUsable, 1)} kWh`, `${formatNumber(v.rangeWltp)} km`, `${formatNumber(batteryConsumption100(v), 1)} kWh/100 km`]),
+        },
+      },
+      {
+        heading: "Par type de carrosserie",
+        paragraphs: [
+          "L'autonomie médiane varie avec le format de la voiture, mais les échantillons sont inégaux (quatre types seulement dans le catalogue) : lisez ce tableau comme un aperçu du catalogue.",
+        ],
+        table: {
+          caption: "Autonomie WLTP par carrosserie",
+          headers: ["Carrosserie", "Versions", "Autonomie médiane", "Plus faible", "Plus élevée"],
+          rows: bodyTypes.map((b) => {
+            const r = vehicles.filter((v) => v.bodyType === b).map((v) => v.rangeWltp);
+            return [b, String(r.length), `${formatNumber(median(r))} km`, `${formatNumber(Math.min(...r))} km`, `${formatNumber(Math.max(...r))} km`];
+          }),
         },
       },
       {
@@ -224,6 +278,15 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
       },
       {
         heading: "Ce que montrent nos données",
+        chart: {
+          title: "Autonomie WLTP moyenne selon la chimie de la batterie",
+          unit: "km",
+          bars: [
+            { label: `LFP (${lfp.length} versions)`, value: avg(lfp.map((v) => v.rangeWltp)) },
+            { label: `NMC (${nmc.length} versions)`, value: avg(nmc.map((v) => v.rangeWltp)) },
+          ],
+          caption: "Moyennes sur des échantillons de tailles et de segments différents : un constat sur le catalogue, pas une loi générale.",
+        },
         paragraphs: [
           "Moyennes calculées sur les versions dont la chimie est indiquée. Les échantillons sont petits et de segments différents : ce sont des constats sur le catalogue, non des lois générales.",
         ],
@@ -268,12 +331,18 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
     sections: [
       {
         heading: "Répartition des puissances AC maximales",
+        chart: {
+          title: "Nombre de versions par puissance AC maximale",
+          unit: "versions",
+          bars: acValues.map((kw) => ({ label: `${formatNumber(kw, 1)} kW`, value: vehicles.filter((v) => v.chargingAC === kw).length })),
+          caption: `Sur les ${N} versions du catalogue ; puissance de charge AC maximale publiée par la source.`,
+        },
         paragraphs: [],
         table: {
           headers: ["Puissance AC maximale", "Nombre de versions", "Exemples"],
           rows: acValues.map((kw) => {
             const l = vehicles.filter((v) => v.chargingAC === kw);
-            return [`${formatNumber(kw, 1)} kW`, String(l.length), l.slice(0, 3).map((v) => `${v.brand} ${v.model}`).join(", ")];
+            return [`${formatNumber(kw, 1)} kW`, String(l.length), [...new Set(l.map((v) => `${v.brand} ${v.model}`))].slice(0, 3).join(", ")];
           }),
         },
       },
@@ -283,6 +352,21 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
           `${formatNumber((vehicles.filter((v) => v.chargingAC === 11).length / N) * 100)} % des versions du catalogue acceptent 11 kW en AC : c'est la valeur la plus répandue. Une borne triphasée 11 kW est donc adaptée à la plupart d'entre elles, alors qu'une borne 22 kW ne profite qu'aux modèles qui l'acceptent.`,
           "Pour les petites citadines, 7,4 kW peut suffire, voire moins pour un usage occasionnel.",
         ],
+      },
+      {
+        heading: "Combien de temps de recharge à la maison ?",
+        paragraphs: [
+          `Pour un modèle de chaque niveau de puissance AC, durée d'une recharge de 10 à 80 % (calcul EVExpert, rendement 90 %). La colonne « 22 kW » montre l'intérêt limité d'une borne plus puissante que le chargeur de la voiture : la durée ne diminue pas.`,
+        ],
+        table: {
+          caption: "Recharge de 10 à 80 % selon la puissance de la borne",
+          headers: ["Modèle", "AC maximale", "Sur 7,4 kW", "Sur 11 kW", "Sur 22 kW"],
+          rows: acValues.map((kw) => {
+            const l = vehicles.filter((v) => v.chargingAC === kw).sort((a, b) => a.batteryUsable - b.batteryUsable);
+            const v = l[Math.floor(l.length / 2)];
+            return [name(v), `${formatNumber(kw, 1)} kW`, ...[7.4, 11, 22].map((st) => minutesToHuman(acChargeMinutes(v, st).minutes))];
+          }),
+        },
       },
       {
         heading: "Avant de commander une borne",
@@ -323,6 +407,23 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
         ],
       },
       {
+        heading: "Complétude des données",
+        paragraphs: [
+          `Une donnée absente de la source reste vide et s'affiche « Non disponible » : elle n'est jamais estimée. Voici le nombre de versions renseignées, sur ${N}, pour les champs facultatifs :`,
+        ],
+        chart: {
+          title: "Part des versions dont le champ est renseigné",
+          unit: "%",
+          bars: coverage.map((c) => ({ label: c.label, value: (c.filled / N) * 100, display: formatNumber((c.filled / N) * 100) })),
+          max: 100,
+          caption: `Sur ${N} versions. Les champs obligatoires (autonomie, capacité utile, puissances) sont renseignés pour toutes.`,
+        },
+        table: {
+          headers: ["Donnée", "Versions renseignées", "Non disponible"],
+          rows: coverage.map((c) => [c.label, `${c.filled} sur ${N}`, String(N - c.filled)]),
+        },
+      },
+      {
         heading: "Ce qui manque volontairement",
         paragraphs: [],
         list: [
@@ -342,6 +443,75 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
     relatedGuides: ["wltp-definition", "batterie-brute-batterie-utile"],
     relatedVehicleIds: [],
     faq: [{ question: "Puis-je signaler une erreur ?", answer: "Oui : utilisez la page Contact en précisant le modèle, la donnée concernée et la source à l'appui." }],
+    sources: [SOURCES.evdb],
+  },
+  {
+    slug: "garantie-batterie-ce-que-disent-les-donnees",
+    title: `Garantie batterie : ce que disent les ${N} versions du catalogue`,
+    description: `Durée et kilométrage de la garantie batterie des ${N} versions du catalogue : ce que la source publie, ce qu'elle ne précise pas et comment lire ces chiffres.`,
+    category: "Batteries",
+    author: "La rédaction EVExpert",
+    publishedAt: DATE,
+    updatedAt: DATE,
+    readingTime: 4,
+    excerpt: `${warranty.filter((w) => w.years === 8).length} versions sur ${N} annoncent 8 ans de garantie batterie : ce que cela recouvre, et ce que la source ne dit pas.`,
+    intro: `La garantie de la batterie rassure, mais elle se lit avec précaution. Voici ce que la source publie pour les ${N} versions du catalogue, et les points à vérifier avant de s'y fier.`,
+    sections: [
+      {
+        heading: "Ce que publie la source",
+        paragraphs: [
+          `${warranty.filter((w) => w.years === 8).length} versions sur ${N} sont annoncées avec 8 ans de garantie batterie, ${warranty.filter((w) => w.years === 7).length} avec 7 ans. La durée est le plus souvent accompagnée d'un kilométrage, mais pas toujours : ${warranty.filter((w) => !w.km && !w.miles).length} versions sur ${N} n'en ont pas dans la source.`,
+        ],
+        chart: {
+          title: "Nombre de versions par garantie batterie publiée",
+          unit: "versions",
+          bars: warrantyGroups.map((g) => ({ label: g.label, value: g.list.length })),
+          caption: "Texte de garantie tel que publié par la source spécialisée, regroupé à l'identique.",
+        },
+        table: {
+          caption: "Garantie batterie publiée par la source",
+          headers: ["Garantie publiée", "Versions", "Exemples"],
+          rows: warrantyGroups.map((g) => [g.label, String(g.list.length), [...new Set(g.list.map((w) => `${w.v.brand} ${w.v.model}`))].slice(0, 3).join(", ")]),
+        },
+      },
+      {
+        heading: "Ce que les chiffres ne disent pas",
+        paragraphs: [
+          "La source ne précise ni le seuil de capacité couvert, ni les conditions d'application, ni le transfert au propriétaire suivant. Ces éléments figurent dans la notice de garantie du constructeur, qu'EVExpert ne collecte pas encore. Avant d'acheter, demandez le document exact de la version visée et vérifiez :",
+        ],
+        list: [
+          "le seuil couvert : en général une perte de capacité au-delà d'une valeur exprimée en pourcentage, à lire dans la notice ;",
+          "si la limite est la durée « ou » le kilométrage, c'est-à-dire la première atteinte, ou les deux ;",
+          "les obligations d'entretien et de contrôle exigées pour conserver la garantie ;",
+          "les conditions de transfert en cas de revente.",
+        ],
+      },
+      {
+        heading: "Miles, kilomètres et valeurs manquantes",
+        paragraphs: [
+          `${warranty.filter((w) => w.miles).length} versions sont publiées en miles (100 000 miles, soit environ 160 900 km par simple conversion) : vérifiez la garantie applicable en France. Lorsque le kilométrage est absent de la source, EVExpert n'en invente pas : la donnée reste « Non disponible ».`,
+        ],
+      },
+      {
+        heading: "Comment utiliser ces données",
+        paragraphs: [
+          "La garantie est un critère parmi d'autres : elle ne prédit pas la durée de vie de la batterie, qui dépend aussi des habitudes de charge et de la chaleur. Pour la ménager, voir comment préserver la batterie d'une voiture électrique. Pour comparer deux versions, ouvrez leurs fiches et le comparateur.",
+        ],
+      },
+    ],
+    relatedTools: ["/outils/tco-voiture-electrique"],
+    relatedGuides: ["preserver-batterie-voiture-electrique", "recharger-a-80-pourcent", "batterie-brute-batterie-utile"],
+    relatedVehicleIds: warranty.filter((w) => w.years === 8 && w.km).slice(0, 3).map((w) => w.v.id),
+    faq: [
+      {
+        question: "Que signifie « 8 ans / 160 000 km » ?",
+        answer: "En général, la garantie s'applique jusqu'à la première des deux limites atteinte, mais la formulation exacte est fixée par le constructeur : vérifiez la notice de la version concernée.",
+      },
+      {
+        question: "La garantie couvre-t-elle l'usure normale de la batterie ?",
+        answer: "Elle porte en général sur une perte de capacité au-delà d'un seuil ou sur un défaut, pas sur l'usure normale, mais les conditions varient d'un constructeur à l'autre : la source ne les précise pas.",
+      },
+    ],
     sources: [SOURCES.evdb],
   },
   ];

@@ -59,13 +59,14 @@ point `signal #B8F13C`, mot-symbole `ink` ou `paper`. Le lime n'est jamais du te
 - `layout.tsx` (`metadata.icons`) référence `favicon.svg`, `favicon.ico` et `apple-touch-icon.png`.
 - `src/app/manifest.ts` génère `/manifest.webmanifest` (icônes 192/512, `display: "browser"` : le site n'est pas une PWA).
 - `next.config.ts` : réécriture `/favicon.ico` → `/brand/favicon.ico`, cache d'un jour sur `/brand/*`
-  (noms non hachés), redirection 308 de l'ancienne URL `/opengraph-image` vers `/opengraph-image.png`.
+  (noms non hachés), redirection 308 des anciennes URLs `/opengraph-image` et `/opengraph-image.png` vers `/brand/og-image.png`.
 
 ## Image Open Graph
 
-`public/brand/og-image.png` est la source ; `src/app/opengraph-image.png` en est la copie servie par
-la convention de fichier de Next.js (`og:image` et `twitter:image` de toutes les pages ; le script les
-garde identiques et `tests/unit/brand.test.ts` le vérifie). Le texte alternatif est dans `opengraph-image.alt.txt`.
+`public/brand/og-image.png` est référencée explicitement (`og:image` et `twitter:image`) par `buildMetadata` sur toutes
+les pages ; les articles avec schéma utilisent la copie PNG de leur schéma (voir `docs/editorial.md`). La convention de
+fichier `app/opengraph-image` n'est plus utilisée : un objet `openGraph` propre à une page l'écrasait, ce qui privait
+toutes les pages sauf l'accueil d'image de partage. L'ancienne URL `/opengraph-image` redirige vers le fichier.
 Composition : logo, baseline « Comprendre. Comparer. Calculer. » (points lime), sous-titre, et un panneau
 « fiche technique » de trois jauges croissantes qui reprend les barres du symbole. **Les jauges sont
 illustratives : elles ne représentent aucune valeur réelle.** Le titre reste lisible à 150 px de large.

@@ -20,12 +20,13 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const g = await getGuide(slug);
   if (!g) return {};
   return buildMetadata({
-    title: g.title,
-    description: g.description,
+    title: g.metaTitle ?? g.title,
+    description: g.metaDescription ?? g.description,
     path: `/guides/${g.slug}`,
     ogType: "article",
     publishedTime: g.publishedAt,
     modifiedTime: g.updatedAt,
+    image: g.hero && { src: g.hero.share ?? g.hero.src, width: g.hero.width, height: g.hero.height, alt: g.hero.alt },
   });
 }
 
@@ -53,6 +54,8 @@ export default async function GuidePage({ params }: { params: Promise<Params> })
       relatedTools={g.relatedTools}
       relatedGuides={g.relatedGuides}
       relatedVehicleIds={g.relatedVehicleIds}
+      hero={g.hero}
+      section={guideCategoryLabels[g.category]}
     />
   );
 }

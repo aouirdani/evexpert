@@ -12,6 +12,12 @@ afterAll(() => closeDb());
 
 const params = <T,>(p: T) => ({ params: Promise.resolve(p) });
 
+/** Le titre est un objet { absolute } : le gabarit du layout n'ajoute plus « | EVExpert » une seconde fois. */
+const pageTitle = (md: { title?: unknown }): string => {
+  const t = md.title as string | { absolute?: string } | undefined;
+  return typeof t === "string" ? t : (t?.absolute ?? "");
+};
+
 describe("pages dynamiques alimentées par la base (URLs inchangées)", () => {
   it("/voitures-electriques/[brand] : 22 marques, metadata et indexation", async () => {
     const mod = await import("@/app/voitures-electriques/[brand]/page");
@@ -29,7 +35,7 @@ describe("pages dynamiques alimentées par la base (URLs inchangées)", () => {
     expect(all).toContainEqual({ brand: "renault", model: "5-e-tech" });
     const md = await mod.generateMetadata(params({ brand: "tesla", model: "model-3" }));
     expect(md.alternates?.canonical).toBe("https://evexpert.fr/voitures-electriques/tesla/model-3");
-    expect(String(md.title)).toContain("Tesla Model 3");
+    expect(pageTitle(md)).toContain("Tesla Model 3");
   });
   it("/voitures-electriques/[brand]/[model]/[version] : 47 pages, canonical vers le modèle si version unique", async () => {
     const mod = await import("@/app/voitures-electriques/[brand]/[model]/[version]/page");
@@ -47,17 +53,18 @@ describe("pages dynamiques alimentées par la base (URLs inchangées)", () => {
     const all = await mod.generateStaticParams();
     expect(all).toHaveLength(8);
     const md = await mod.generateMetadata(params({ slug: all[0].slug }));
-    expect(String(md.title)).toContain("comparatif");
+    expect(pageTitle(md)).toContain("comparatif");
   });
-  it("/guides/[slug] et /blog/[slug] : 20 guides, 6 articles", async () => {
-    expect(await (await import("@/app/guides/[slug]/page")).generateStaticParams()).toHaveLength(20);
-    expect(await (await import("@/app/blog/[slug]/page")).generateStaticParams()).toHaveLength(6);
+  it("/guides/[slug] et /blog/[slug] : 23 guides, 7 articles", async () => {
+    // Passe éditoriale : +3 guides (kW/kWh, consommation, prise domestique) et +1 analyse (garantie batterie).
+    expect(await (await import("@/app/guides/[slug]/page")).generateStaticParams()).toHaveLength(23);
+    expect(await (await import("@/app/blog/[slug]/page")).generateStaticParams()).toHaveLength(7);
   });
-  it("sitemap : 120 URLs uniques, toutes sur evexpert.fr", async () => {
+  it("sitemap : 124 URLs uniques, toutes sur evexpert.fr", async () => {
     const sitemap = (await import("@/app/sitemap")).default;
     const urls = (await sitemap()).map((e) => e.url);
-    expect(urls).toHaveLength(120);
-    expect(new Set(urls).size).toBe(120);
+    expect(urls).toHaveLength(124);
+    expect(new Set(urls).size).toBe(124);
     expect(urls.every((u) => u.startsWith("https://evexpert.fr"))).toBe(true);
     expect(urls).toContain("https://evexpert.fr/voitures-electriques/tesla/model-3/long-range-rwd");
     expect(urls).not.toContain("https://evexpert.fr/voitures-electriques/renault/5-e-tech/52-kwh-150-ch");

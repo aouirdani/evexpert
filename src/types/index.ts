@@ -102,6 +102,29 @@ export interface ArticleTable {
   rows: string[][];
 }
 
+/** Image éditoriale (fichier statique de public/editorial). Toujours avec dimensions intrinsèques et alt. */
+export interface EditorialImage {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  /** Copie raster (PNG, mêmes dimensions) pour og:image, twitter:image et JSON-LD : les réseaux sociaux n'affichent pas le SVG. */
+  share?: string;
+  /** Légende visible sous l'image (contexte, limites, illustration ou donnée). */
+  caption?: string;
+}
+
+/** Graphique en barres horizontales calculé depuis le catalogue (HTML + CSS, sans JavaScript). */
+export interface BarChartSpec {
+  title: string;
+  /** Unité affichée après chaque valeur (« km », « min »…). */
+  unit: string;
+  bars: { label: string; value: number; /** Valeur déjà formatée si l'arrondi par défaut ne convient pas. */ display?: string }[];
+  /** Valeur pleine échelle ; par défaut, la plus grande valeur. */
+  max?: number;
+  caption?: string;
+}
+
 export interface ArticleSection {
   heading?: string;
   /** Niveau de titre : 2 par défaut, 3 pour une sous-section. */
@@ -109,6 +132,10 @@ export interface ArticleSection {
   paragraphs: string[];
   list?: string[];
   table?: ArticleTable;
+  /** Schéma statique affiché après les paragraphes de la section. */
+  image?: EditorialImage;
+  /** Graphique calculé affiché après les paragraphes de la section. */
+  chart?: BarChartSpec;
 }
 
 export interface FaqItem {
@@ -139,6 +166,12 @@ export interface Article {
   relatedVehicleIds?: string[];
   faq?: FaqItem[];
   sources?: Source[];
+  /** Image principale (schéma) : sous l'introduction, image `og:image` et du JSON-LD. */
+  hero?: EditorialImage;
+  /** Titre pour la balise <title> et les partages lorsque le H1 est trop long pour une page de résultats. */
+  metaTitle?: string;
+  /** Meta description dédiée lorsque la description éditoriale dépasse ~160 caractères. */
+  metaDescription?: string;
 }
 
 export interface Guide {
@@ -156,6 +189,9 @@ export interface Guide {
   relatedVehicleIds?: string[];
   faq?: FaqItem[];
   sources?: Source[];
+  hero?: EditorialImage;
+  metaTitle?: string;
+  metaDescription?: string;
 }
 
 export type GuideCategory = "autonomie" | "recharge" | "batterie" | "coûts" | "achat" | "comprendre";

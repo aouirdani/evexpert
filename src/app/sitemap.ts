@@ -35,7 +35,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: Date,
     changeFrequency: "weekly" | "monthly" | "yearly",
     priority: number,
-  ) => ({ url: `${base}${path}`, lastModified, changeFrequency, priority });
+    images?: string[],
+  ) => ({ url: `${base}${path}`, lastModified, changeFrequency, priority, ...(images?.length ? { images } : {}) });
+  // Image principale des guides et articles (fichier réel de public/editorial, affiché dans la page).
+  const heroImages = (hero?: { src: string }) => (hero ? [`${base}${hero.src}`] : undefined);
 
   const staticRoutes = [
     entry("", catalogDate, "weekly", 1),
@@ -64,9 +67,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .map((v) => entry(vehicleHref(v, "version"), new Date(v.source.lastUpdated), "monthly", 0.6));
 
   const comparisonRoutes = comparisons.map((c) => entry(`/comparer/${c.slug}`, catalogDate, "monthly", 0.6));
-  const guideRoutes = guides.map((g) => entry(`/guides/${g.slug}`, new Date(g.updatedAt), "monthly", 0.8));
+  const guideRoutes = guides.map((g) => entry(`/guides/${g.slug}`, new Date(g.updatedAt), "monthly", 0.8, heroImages(g.hero)));
   const chargingRoutes = chargingTopics.map((t) => entry(`/recharge/${t.slug}`, new Date(t.updatedAt), "monthly", 0.6));
-  const articleRoutes = articles.map((a) => entry(`/blog/${a.slug}`, new Date(a.updatedAt), "monthly", 0.6));
+  const articleRoutes = articles.map((a) => entry(`/blog/${a.slug}`, new Date(a.updatedAt), "monthly", 0.6, heroImages(a.hero)));
 
   return [
     ...staticRoutes,

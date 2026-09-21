@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 
+/** Image de partage par défaut (public/brand/og-image.png, 1200 × 630). */
+export const DEFAULT_SHARE_IMAGE = {
+  src: "/brand/og-image.png",
+  width: 1200,
+  height: 630,
+  alt: "EVExpert — Comprendre. Comparer. Calculer.",
+};
+
 interface PageMetaInput {
   title: string;
   description: string;
@@ -9,6 +17,8 @@ interface PageMetaInput {
   ogType?: "website" | "article";
   publishedTime?: string;
   modifiedTime?: string;
+  /** Image de partage propre à la page (ex. schéma principal d'un article). */
+  image?: { src: string; width: number; height: number; alt: string };
 }
 
 export function buildMetadata({
@@ -19,12 +29,15 @@ export function buildMetadata({
   ogType = "website",
   publishedTime,
   modifiedTime,
+  image = DEFAULT_SHARE_IMAGE,
 }: PageMetaInput): Metadata {
   const url = `${siteConfig.url}${path}`;
   const fullTitle =
     path === "/" ? title : `${title} | ${siteConfig.name}`;
+  const shareImage = { url: image.src, width: image.width, height: image.height, alt: image.alt };
   return {
-    title: fullTitle,
+    // `absolute` : le gabarit du layout ajouterait sinon « | EVExpert » une seconde fois.
+    title: { absolute: fullTitle },
     description,
     alternates: { canonical: url },
     robots: noindex
@@ -37,6 +50,7 @@ export function buildMetadata({
       siteName: siteConfig.name,
       locale: siteConfig.locale,
       type: ogType,
+      images: [shareImage],
       ...(publishedTime ? { publishedTime } : {}),
       ...(modifiedTime ? { modifiedTime } : {}),
     },
@@ -44,6 +58,7 @@ export function buildMetadata({
       card: "summary_large_image",
       title: fullTitle,
       description,
+      images: [shareImage],
     },
   };
 }
@@ -90,16 +105,22 @@ export function breadcrumbJsonLd(items: { name: string; href: string }[]) {
 }
 
 export function articleJsonLd(input: {
+  /** BlogPosting pour les analyses du blog, Article pour les guides. */
+  type?: "Article" | "BlogPosting";
   title: string;
   description: string;
   path: string;
   author: string;
   publishedAt: string;
   updatedAt: string;
+  /** Image principale, uniquement si elle est réellement affichée dans la page. */
+  image?: { src: string; width: number; height: number };
+  /** Rubrique affichée dans le surtitre de la page. */
+  section?: string;
 }) {
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": input.type ?? "Article",
     headline: input.title,
     description: input.description,
     mainEntityOfPage: `${siteConfig.url}${input.path}`,
@@ -111,6 +132,10 @@ export function articleJsonLd(input: {
     datePublished: input.publishedAt,
     dateModified: input.updatedAt,
     inLanguage: "fr-FR",
+    ...(input.image
+      ? { image: { "@type": "ImageObject", url: `${siteConfig.url}${input.image.src}`, width: input.image.width, height: input.image.height } }
+      : {}),
+    ...(input.section ? { articleSection: input.section } : {}),
   };
 }
 

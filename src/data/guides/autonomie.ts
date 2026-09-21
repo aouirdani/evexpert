@@ -52,6 +52,19 @@ export function buildAutonomieGuides(ctx: GuideContext): Guide[] {
       },
       {
         heading: "Exemple chiffré",
+        chart: {
+          title: `${r5.brand} ${r5.model} ${r5.version} : autonomie selon le scénario`,
+          unit: "km",
+          bars: [
+            { label: "WLTP (source)", value: r5.rangeWltp },
+            ...([["mixte", "Mixte, 15 °C"], ["autoroute", "Autoroute 130 km/h, 20 °C"], ["hiver", "Mixte hivernal, 0 °C"]] as const).map(([id, label]) => ({
+              label,
+              value: Math.round(estimateRange(r5, scen(id)) / 5) * 5,
+            })),
+          ],
+          max: r5.rangeWltp,
+          caption: "Estimations EVExpert (facteurs décrits sur la page Méthodologie), arrondies à 5 km ; l'autonomie WLTP est celle de la source.",
+        },
         paragraphs: [
           `Estimations EVExpert pour trois modèles du catalogue, avec les facteurs décrits sur la page Méthodologie (les valeurs sont arrondies à 5 km) :`,
         ],
@@ -164,7 +177,7 @@ export function buildAutonomieGuides(ctx: GuideContext): Guide[] {
         heading: "La physique en bref",
         paragraphs: [
           "La force de résistance de l'air croît avec le carré de la vitesse. Passer de 110 à 130 km/h multiplie donc par (130 ÷ 110)² ≈ 1,40 l'énergie dépensée par kilomètre pour vaincre l'air, alors que la résistance au roulement ne change presque pas.",
-          "Comme l'aérodynamique représente l'essentiel de la consommation à vitesse d'autoroute, la consommation totale augmente de manière marquée : c'est pourquoi quelques km/h de moins ont un effet visible sur l'autonomie.",
+          "Comme l'aérodynamique représente l'essentiel de la consommation à vitesse d'autoroute, la consommation totale augmente de manière marquée : c'est pourquoi quelques km/h de moins ont un effet visible sur l'autonomie. En prenant 100 comme indice à 90 km/h, la résistance de l'air atteint environ 149 à 110 km/h et 209 à 130 km/h : plus du double entre 90 et 130 km/h.",
         ],
       },
       {
@@ -231,7 +244,7 @@ export function buildAutonomieGuides(ctx: GuideContext): Guide[] {
       {
         heading: "Le cycle WLTC en chiffres",
         paragraphs: [
-          "Le cycle utilisé (WLTC, pour les voitures de classe 3) dure environ 30 minutes pour 23,25 km, à une vitesse moyenne d'environ 46,5 km/h et une pointe à 131,3 km/h. Il enchaîne quatre phases de vitesse croissante : basse, moyenne, haute et très haute.",
+          "Le cycle utilisé (WLTC, pour les voitures de classe 3) dure environ 30 minutes pour 23,25 km, à une vitesse moyenne d'environ 46,5 km/h et une pointe à 131,3 km/h. Il enchaîne quatre phases de vitesse croissante : basse, moyenne, haute et très haute. Elles durent respectivement 589, 433, 455 et 323 secondes (1 800 secondes au total), avec des vitesses maximales de 56,5, 76,6, 97,4 et 131,3 km/h.",
         ],
         table: {
           headers: ["Critère", "NEDC (ancien)", "WLTC classe 3"],

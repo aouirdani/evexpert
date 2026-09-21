@@ -265,8 +265,6 @@ def main() -> int:
     if "--keep-og-svg" in sys.argv:  # utile pour relire la composition ; non versionné
         (BRAND / "og-image.svg").write_text(og, encoding="utf-8")
     save_png(rasterize(og, 1200), BRAND / "og-image.png", colors=48)
-    # Copie servie par la convention de fichier Next.js (og:image + twitter:image).
-    (ROOT / "src" / "app" / "opengraph-image.png").write_bytes((BRAND / "og-image.png").read_bytes())
     for p in sorted(BRAND.iterdir()):
         print(f"{p.stat().st_size:>7}  {p.relative_to(ROOT)}")
     return 0

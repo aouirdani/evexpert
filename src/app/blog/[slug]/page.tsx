@@ -20,12 +20,13 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const a = await getArticle(slug);
   if (!a) return {};
   return buildMetadata({
-    title: a.title,
-    description: a.description,
+    title: a.metaTitle ?? a.title,
+    description: a.metaDescription ?? a.description,
     path: `/blog/${a.slug}`,
     ogType: "article",
     publishedTime: a.publishedAt,
     modifiedTime: a.updatedAt,
+    image: a.hero && { src: a.hero.share ?? a.hero.src, width: a.hero.width, height: a.hero.height, alt: a.hero.alt },
   });
 }
 
@@ -53,6 +54,9 @@ export default async function ArticlePage({ params }: { params: Promise<Params> 
       relatedTools={a.relatedTools}
       relatedGuides={a.relatedGuides}
       relatedVehicleIds={a.relatedVehicleIds}
+      hero={a.hero}
+      jsonLdType="BlogPosting"
+      section={a.category}
     />
   );
 }

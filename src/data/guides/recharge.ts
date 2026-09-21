@@ -241,6 +241,15 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
       },
       {
         heading: "Exemples chiffrés en AC",
+        chart: {
+          title: `${r5.brand} ${r5.model} : durée d'une recharge AC de 10 à 80 %`,
+          unit: "",
+          bars: [3.7, 7.4, 11, 22].map((kw) => {
+            const m = acChargeMinutes(r5, kw).minutes;
+            return { label: `Borne ${formatNumber(kw, 1)} kW`, value: m, display: minutesToHuman(m) };
+          }),
+          caption: `Calcul EVExpert (rendement ${ASSUMPTIONS.chargingEfficiency} %). Au-delà de ${formatNumber(r5.chargingAC, 1)} kW, la durée ne baisse plus : la voiture limite la puissance.`,
+        },
         paragraphs: [`Recharge de 10 à 80 % (calcul EVExpert, rendement ${ASSUMPTIONS.chargingEfficiency} %) :`],
         table: {
           headers: ["Modèle", "Sur 3,7 kW", "Sur 7,4 kW", "Sur 11 kW", "Sur 22 kW"],

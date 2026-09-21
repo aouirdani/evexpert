@@ -2,7 +2,9 @@ import "server-only";
 import type { Guide } from "@/types";
 import { getCatalog, type Catalog } from "@/data/catalog";
 import { buildAutonomieGuides } from "./autonomie";
+import { decorateGuides } from "@/data/editorial/decorate";
 import { makeGuideContext } from "./helpers";
+import { buildNewGuides } from "./nouveaux";
 import { buildRechargeGuides } from "./recharge";
 import { buildUsageGuides } from "./usage";
 
@@ -17,7 +19,10 @@ export async function getGuides(): Promise<Guide[]> {
   let guides = cache.get(catalog);
   if (!guides) {
     const ctx = makeGuideContext(catalog.vehicles);
-    guides = [...buildAutonomieGuides(ctx), ...buildRechargeGuides(ctx), ...buildUsageGuides(ctx)];
+    guides = decorateGuides(
+      [...buildAutonomieGuides(ctx), ...buildRechargeGuides(ctx), ...buildUsageGuides(ctx), ...buildNewGuides(ctx)],
+      catalog.vehicles,
+    );
     cache.set(catalog, guides);
   }
   return guides;

@@ -1,7 +1,7 @@
 import type { Guide } from "@/types";
 import { ASSUMPTIONS } from "@/data/assumptions";
 import { SOURCES } from "@/data/sources";
-import { chargeCost, costPer100km } from "@/lib/vehicle-calcs";
+import { chargeCost, costPer100km, gridConsumption100 } from "@/lib/vehicle-calcs";
 import { annualCost, costPer100km as costPer100 } from "@/lib/calculators";
 import { formatEuro, formatNumber } from "@/lib/utils";
 import type { GuideContext } from "./helpers";
@@ -172,7 +172,7 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
       {
         heading: "Faire un bon choix",
         paragraphs: [
-          "Demandez plusieurs devis à des installateurs qualifiés. Vérifiez la puissance proposée par rapport à la limite AC de votre voiture (voir le guide sur 7,4, 11 et 22 kW) et à votre puissance souscrite. Le gestionnaire du réseau publie les informations sur le compteur et la puissance.",
+          "Demandez plusieurs devis à des installateurs qualifiés. Vérifiez la puissance proposée par rapport à la limite AC de votre voiture (voir [le guide sur 7,4, 11 et 22 kW](/guides/puissance-borne-7-11-22-kw)) et à votre puissance souscrite. Le gestionnaire du réseau publie les informations sur le compteur et la puissance. Pour un faible kilométrage, comparez aussi avec la [recharge sur prise domestique](/guides/recharger-sur-prise-domestique).",
         ],
       },
       {
@@ -185,7 +185,7 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
       {
         heading: "Ce qu'une borne fait économiser",
         paragraphs: [
-          `Rechargée à domicile avec l'hypothèse de ${formatNumber(A.homePrice, 2)} €/kWh, la ${r5.brand} ${r5.model} ajoute environ 10 à 80 % pour ${formatEuro(chargeCost(r5, A.homePrice).cost, 2)}, contre ${formatEuro(chargeCost(r5, A.fastDcPrice).cost, 2)} au tarif de recharge rapide supposé. C'est ce type d'écart, multiplié par vos recharges annuelles, que vous comparez au coût de l'installation.`,
+          `Rechargée à domicile avec l'hypothèse de ${formatNumber(A.homePrice, 2)} €/kWh, la ${r5.brand} ${r5.model} ajoute environ 10 à 80 % pour ${formatEuro(chargeCost(r5, A.homePrice).cost, 2)}, contre ${formatEuro(chargeCost(r5, A.fastDcPrice).cost, 2)} au tarif de recharge rapide supposé. C'est ce type d'écart, multiplié par vos recharges annuelles, que vous comparez au coût de l'installation. Le calcul détaillé est expliqué dans [le guide sur le coût d'une recharge à domicile](/guides/combien-coute-recharge-domicile).`,
         ],
       },
     ],
@@ -366,6 +366,26 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
               ["Par mois", formatEuro((dep + energy + other) / 60, 0)],
             ];
           })(),
+        },
+      },
+      {
+        heading: "Le poste énergie avec des données du catalogue",
+        paragraphs: (() => {
+          const annual = (v: typeof r5) => costPer100km(v, A.homePrice) * 150;
+          const list = [r5, my, elroq].map(annual);
+          return [
+            `Le poste énergie varie d'un modèle à l'autre. Avec les mêmes hypothèses (15 000 km par an, tout à domicile à ${formatNumber(A.homePrice, 2)} €/kWh, rendement ${A.chargingEfficiency} %, conditions WLTP), il va de ${formatEuro(Math.min(...list), 0)} à ${formatEuro(Math.max(...list), 0)} par an pour ces trois modèles. Ce n'est qu'un poste parmi d'autres : il reste à ajouter la dépréciation, l'assurance et l'entretien.`,
+          ];
+        })(),
+        table: {
+          caption: "Énergie sur 15 000 km par an, recharge à domicile (calcul EVExpert)",
+          headers: ["Modèle", "Consommation à la prise", "Énergie par an", "Énergie sur 5 ans"],
+          rows: [r5, my, elroq].map((v) => [
+            `${v.brand} ${v.model}`,
+            `${formatNumber(gridConsumption100(v), 1)} kWh/100 km`,
+            formatEuro(costPer100km(v, A.homePrice) * 150, 0),
+            formatEuro(costPer100km(v, A.homePrice) * 750, 0),
+          ]),
         },
       },
       {
