@@ -1,63 +1,64 @@
 "use client";
 
 import Script from "next/script";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { analyticsConfig } from "@/config/site";
 import { useConsent } from "./CookieBanner";
 
+declare global {
+  interface Window {
+    dataLayer?: unknown[];
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 /**
- * Charge GA4 / GTM uniquement APRÈS consentement de l'utilisateur.
- * Aucun identifiant n'est codé en dur : ils proviennent des variables
- * d'environnement NEXT_PUBLIC_GA_ID / NEXT_PUBLIC_GTM_ID.
- *
- * Architecture retenue : EVExpert → consentement → GTM (`GTM-KTTS9ZLJ`) → balise Google
- * (GA4, `G-1HZPD8J76K`) CONFIGURÉE DANS GTM, pas chargée ici. `NEXT_PUBLIC_GA_ID` doit donc
- * rester VIDE : le bloc ci-dessous charge gtag.js en direct et ne sert qu'à un déploiement sans
- * GTM. Le définir en même temps qu'une balise GA4 dans le conteneur GTM double l'initialisation
- * de GA4 (deux appels `gtag('config', ...)` indépendants) et duplique les pages vues.
+ * Vue de page GA4 sur les navigations App Router. `Analytics` est monté une seule fois dans
+ * `layout.tsx` et ne se démonte jamais entre deux pages : `usePathname()` est donc le bon signal
+ * pour détecter un changement de route sans rien recharger. La configuration ci-dessous désactive
+ * la vue de page automatique de `gtag('config', …)` (`send_page_view: false`) : ce composant est
+ * la SEULE source de l'événement `page_view`, y compris pour la première page — un chargement
+ * initial et une navigation suivent donc exactement le même chemin, sans doublon ni oubli.
+ * N'utilise pas `useSearchParams` (forcerait un rendu dynamique) : la chaîne de requête n'est pas
+ * suivie pour l'instant, cohérent avec « une base GA4 fiable » plutôt que du suivi fin.
+ */
+function GA4PageviewTracker() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (typeof window.gtag !== "function") return;
+    window.gtag("event", "page_view", {
+      page_path: pathname,
+      page_location: window.location.href,
+      page_title: document.title,
+    });
+  }, [pathname]);
+
+  return null;
+}
+
+/**
+ * Charge Google Analytics 4 (gtag.js) uniquement APRÈS consentement accepté. Aucun identifiant
+ * codé en dur : il provient de `NEXT_PUBLIC_GA_ID` (voir `config/site.ts`). Pas de Google Tag
+ * Manager : une seule intégration analytics, chargée une seule fois, jamais avant consentement.
  */
 export function Analytics() {
   const consented = useConsent() === "accepted";
 
-  if (!consented) return null;
+  if (!consented || !analyticsConfig.ga4Id) return null;
 
   return (
     <>
-      {analyticsConfig.ga4Id && (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${analyticsConfig.ga4Id}`}
-            strategy="afterInteractive"
-          />
-          <Script id="ga4-init" strategy="afterInteractive">
-            {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${analyticsConfig.ga4Id}`} strategy="afterInteractive" />
+      <Script id="ga4-init" strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+function gtag(){window.dataLayer.push(arguments);}
+window.gtag = window.gtag || gtag;
 gtag('js', new Date());
-gtag('config', '${analyticsConfig.ga4Id}', { anonymize_ip: true });`}
-          </Script>
-        </>
-      )}
-      {analyticsConfig.gtmId && (
-        <>
-          <Script id="gtm-init" strategy="afterInteractive">
-            {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${analyticsConfig.gtmId}');`}
-          </Script>
-          {/*
-            Filet GTM pour les navigateurs sans JavaScript. Volontairement soumis au même
-            consentement que le script ci-dessus (ce composant entier ne rend rien avant
-            "accepted") : sans JS, la bannière de consentement ne peut ni s'afficher ni être
-            actionnée, donc rien n'est envoyé — cohérent avec « pas de dépôt avant consentement »,
-            même si cela diffère de l'exemple Google (qui place ce tag hors de toute condition).
-            `dangerouslySetInnerHTML` évite l'avertissement d'hydratation React : le navigateur
-            ne parse jamais le contenu d'un <noscript> quand JS est actif, donc React ne doit pas
-            tenter de réconcilier un <iframe> enfant.
-          */}
-          <noscript
-            dangerouslySetInnerHTML={{
-              __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${analyticsConfig.gtmId}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-            }}
-          />
-        </>
-      )}
+gtag('config', '${analyticsConfig.ga4Id}', { anonymize_ip: true, send_page_view: false });`}
+      </Script>
+      <GA4PageviewTracker />
     </>
   );
 }

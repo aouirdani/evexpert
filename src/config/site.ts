@@ -122,8 +122,8 @@ export const adsConfig = {
   clientId: readEnv(process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID) ?? "",
 };
 
-// Analytics (optional, consent-gated).
+// Google Analytics 4 (optionnel, chargé uniquement après consentement — voir Analytics.tsx).
+// Pas de Google Tag Manager : une seule intégration analytics, en direct.
 export const analyticsConfig = {
   ga4Id: readEnv(process.env.NEXT_PUBLIC_GA_ID) ?? "",
-  gtmId: readEnv(process.env.NEXT_PUBLIC_GTM_ID) ?? "",
 };
