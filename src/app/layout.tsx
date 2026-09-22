@@ -9,6 +9,7 @@ import { Analytics } from "@/components/Analytics";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
+import { getGa4MeasurementId } from "@/config/analytics";
 
 // Police unique : Schibsted Grotesk (licence OFL, voir ./fonts/OFL.txt), variable
 // 400-800, sous-ensemble latin français (~36 Ko, un seul fichier). next/font génère
@@ -62,7 +63,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Footer />
         <CookieBanner />
         <GarageBar />
-        <Analytics />
+        <Analytics ga4Id={getGa4MeasurementId()} />
       </body>
     </html>
   );

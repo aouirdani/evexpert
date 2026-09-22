@@ -3,7 +3,6 @@
 import Script from "next/script";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { analyticsConfig } from "@/config/site";
 import { useConsent } from "./CookieBanner";
 
 declare global {
@@ -39,24 +38,30 @@ function GA4PageviewTracker() {
 }
 
 /**
- * Charge Google Analytics 4 (gtag.js) uniquement APRÈS consentement accepté. Aucun identifiant
- * codé en dur : il provient de `NEXT_PUBLIC_GA_ID` (voir `config/site.ts`). Pas de Google Tag
- * Manager : une seule intégration analytics, chargée une seule fois, jamais avant consentement.
+ * Charge Google Analytics 4 (gtag.js) uniquement APRÈS consentement accepté.
+ *
+ * `ga4Id` est transmis en prop par `app/layout.tsx` (Server Component), qui seul lit la variable
+ * serveur `GA_ID` (`config/analytics.ts`, sans préfixe `NEXT_PUBLIC_`). Ce composant ne lit lui-même
+ * aucune variable d'environnement : un identifiant serveur sans préfixe `NEXT_PUBLIC_` vaudrait
+ * `undefined` s'il était lu ici, puisque Next.js ne l'inline pas dans le bundle client.
+ *
+ * Pas de Google Tag Manager : une seule intégration analytics, chargée une seule fois, jamais
+ * avant consentement.
  */
-export function Analytics() {
+export function Analytics({ ga4Id }: { ga4Id: string }) {
   const consented = useConsent() === "accepted";
 
-  if (!consented || !analyticsConfig.ga4Id) return null;
+  if (!consented || !ga4Id) return null;
 
   return (
     <>
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${analyticsConfig.ga4Id}`} strategy="afterInteractive" />
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`} strategy="afterInteractive" />
       <Script id="ga4-init" strategy="afterInteractive">
         {`window.dataLayer = window.dataLayer || [];
 function gtag(){window.dataLayer.push(arguments);}
 window.gtag = window.gtag || gtag;
 gtag('js', new Date());
-gtag('config', '${analyticsConfig.ga4Id}', { anonymize_ip: true, send_page_view: false });`}
+gtag('config', '${ga4Id}', { anonymize_ip: true, send_page_view: false });`}
       </Script>
       <GA4PageviewTracker />
     </>

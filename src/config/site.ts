@@ -122,8 +122,5 @@ export const adsConfig = {
   clientId: readEnv(process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID) ?? "",
 };
 
-// Google Analytics 4 (optionnel, chargé uniquement après consentement — voir Analytics.tsx).
-// Pas de Google Tag Manager : une seule intégration analytics, en direct.
-export const analyticsConfig = {
-  ga4Id: readEnv(process.env.NEXT_PUBLIC_GA_ID) ?? "",
-};
+// Google Analytics 4 : voir `config/analytics.ts` (`getGa4MeasurementId`, variable serveur `GA_ID`,
+// jamais lue directement par un Client Component — transmise en prop depuis `app/layout.tsx`).
