@@ -410,9 +410,10 @@ export function VehicleDetail({
       <div className="mt-4 grid gap-x-12 md:grid-cols-2">
         <RelatedTools
           hrefs={[
-            "/outils/cout-100-km",
-            "/outils/cout-recharge-voiture-electrique",
             "/outils/autonomie-voiture-electrique",
+            "/outils/trajet-longue-distance",
+            "/outils/cout-recharge-voiture-electrique",
+            "/outils/cout-100-km",
             "/outils/temps-recharge",
           ]}
         />

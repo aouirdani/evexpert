@@ -13,7 +13,7 @@ export const revalidate = 86400;
 export const metadata = buildMetadata({
   title: "Trouver la voiture électrique adaptée à votre usage",
   description:
-    "Répondez à quelques questions sur votre trajet quotidien, vos longs trajets et vos besoins : EVExpert indique, pour chaque modèle, les critères objectifs remplis. Aucun classement, aucun critère de budget (prix non disponible).",
+    "Répondez à quelques questions sur votre usage : EVExpert indique, pour chaque modèle, les critères objectifs remplis. Aucun classement, aucun critère de budget.",
   path: "/voitures-electriques/trouver",
 });
 

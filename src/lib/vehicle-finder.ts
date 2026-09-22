@@ -97,7 +97,13 @@ export function matchVehicle<V extends Vehicle>(v: V, a: FinderAnswers): FinderM
 export function matchVehicles<V extends Vehicle>(vehicles: V[], a: FinderAnswers): FinderMatch<V>[] {
   return vehicles
     .map((v) => matchVehicle(v, a))
-    .sort((x, y) => y.matched - x.matched || y.vehicle.rangeWltp - x.vehicle.rangeWltp);
+    // À nombre de critères remplis égal, tri alphabétique (marque puis modèle) : neutre, sans laisser
+    // entendre qu'une autonomie plus grande ferait d'un véhicule un « meilleur » résultat.
+    .sort(
+      (x, y) =>
+        y.matched - x.matched ||
+        `${x.vehicle.brand} ${x.vehicle.model}`.localeCompare(`${y.vehicle.brand} ${y.vehicle.model}`, "fr"),
+    );
 }
 
 export const defaultFinderAnswers: FinderAnswers = {

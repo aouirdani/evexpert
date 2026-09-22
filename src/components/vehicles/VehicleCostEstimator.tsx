@@ -32,11 +32,11 @@ export function VehicleCostEstimator({ gridConsumption }: { gridConsumption: num
           <Field label="Kilométrage annuel" htmlFor="vce-km">
             <NumberInput id="vce-km" value={annualKm} onChange={setAnnualKm} min={0} max={60000} step={500} suffix="km" />
           </Field>
-          <Field label="Prix domicile (€/kWh)" htmlFor="vce-home-price">
+          <Field label="Prix domicile (€/kWh)" htmlFor="vce-home-price" hint="Hypothèse EVExpert, pas un tarif universel : remplacez par votre contrat.">
             <NumberInput id="vce-home-price" value={homePrice} onChange={setHomePrice} min={0} max={1} step={0.01} suffix="€/kWh" />
           </Field>
           <div className="col-span-2 sm:col-span-1">
-            <Field label="Prix public (€/kWh)" htmlFor="vce-public-price">
+            <Field label="Prix public (€/kWh)" htmlFor="vce-public-price" hint="Hypothèse EVExpert : les prix varient fortement selon l'opérateur et la puissance.">
               <NumberInput id="vce-public-price" value={publicPrice} onChange={setPublicPrice} min={0} max={1} step={0.01} suffix="€/kWh" />
             </Field>
           </div>

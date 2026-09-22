@@ -143,7 +143,8 @@ export function VehicleFinder({ vehicles }: { vehicles: (Vehicle & { href: strin
               </>
             );
           })()}
-          {" "}Les 12 mieux classées sont affichées ci-dessous, triées par nombre de critères remplis.
+          {" "}Les 12 versions qui remplissent le plus de critères sont affichées ci-dessous, chacune avec le détail —
+          ce n&apos;est pas un classement : à nombre de critères égal, aucun véhicule n&apos;est présenté comme meilleur qu&apos;un autre.
         </p>
         <ul className="border-t-2 border-ink">
           {top.map((m) => (

@@ -308,6 +308,7 @@ export const toolContent: Record<string, ToolContent> = {
       };
     },
     limits: [
+      "Le trajet est simulé départ à pleine charge (moins la réserve de sécurité) : il n'y a pas de champ pour un niveau de batterie de départ différent. Si vous partez déjà entamé, retranchez le kilométrage déjà parcouru sur cette charge de la distance saisie.",
       "La puissance DC « moyenne réellement atteignable » n'est pas le pic annoncé par le constructeur : c'est une simplification, à ajuster à la baisse pour un modèle dont la courbe de charge chute vite (voir sa fiche).",
       "Chaque arrêt est supposé recharger l'équivalent d'un plein trajet complet : dans la réalité, vous chargerez souvent moins (juste de quoi atteindre le prochain arrêt), ce qui répartit différemment le temps total mais ne le change pas beaucoup.",
       "Aucune donnée de trafic, relief, vent ou disponibilité réelle des bornes n'est prise en compte : ce n'est pas une navigation.",
