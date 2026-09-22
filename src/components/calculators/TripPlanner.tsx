@@ -97,7 +97,7 @@ export function TripPlanner({ presets = [] }: { presets?: VehiclePreset[] }) {
               <ResultCard label="Énergie rechargée en route" value={`${formatNumber(r.totalEnergyKwh, 1)} kWh`} />
               <ResultCard label="Coût de recharge en route" value={formatEuro(r.totalCost, 2)} />
             </div>
-            <p className="text-xs text-muted">
+            <p className="text-xs text-ink-muted">
               Chaque arrêt est simulé comme une recharge complète d&apos;un trajet (après réserve de sécurité), à la puissance DC moyenne indiquée. Le temps de conduite
               lui-même n&apos;est pas compté.
             </p>

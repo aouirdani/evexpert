@@ -88,7 +88,7 @@ export function ChargingTimeCalculator({ presets = [] }: { presets?: VehiclePres
               <ResultCard label="Énergie à recharger" value={`${formatNumber(r.energyToAdd, 1)} kWh`} />
               <ResultCard label="Durée en minutes" value={`≈ ${formatNumber(r.minutes)} min`} />
             </div>
-            <p className="text-xs text-muted">
+            <p className="text-xs text-ink-muted">
               Calcul&nbsp;: énergie à recharger = capacité × (cible − actuel) / 100 ;
               temps = énergie / (puissance × rendement).
             </p>
