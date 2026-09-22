@@ -3,6 +3,14 @@
 
 const DEFAULT_SITE_URL = "https://www.evexpert.fr";
 
+// Domaine canonique de production : evexpert.fr redirige en 308 vers www.evexpert.fr
+// (DNS/Vercel). Si NEXT_PUBLIC_SITE_URL contient encore l'apex nu — par ex. une valeur Vercel
+// historique qu'on ne peut pas modifier dans l'immédiat — on la corrige ici, au seul endroit où
+// l'URL du site est résolue, plutôt que de dupliquer cette règle dans sitemap.ts/robots.ts/
+// layout.tsx/lib/seo. Toute autre valeur (localhost, preview, staging…) n'est pas affectée.
+const APEX_HOST = "evexpert.fr";
+const CANONICAL_ORIGIN = "https://www.evexpert.fr";
+
 /** Reads an env var; empty or whitespace-only values are treated as absent. */
 function readEnv(value: string | undefined): string | undefined {
   const trimmed = value?.trim();
@@ -21,6 +29,10 @@ function resolveSiteUrl(raw: string | undefined): string {
     const url = new URL(value);
     if (url.protocol !== "https:" && url.protocol !== "http:") {
       return DEFAULT_SITE_URL;
+    }
+    // Normalise l'apex nu vers le domaine canonique, quelle que soit sa provenance (env ou défaut).
+    if (url.hostname === APEX_HOST) {
+      return CANONICAL_ORIGIN;
     }
     return url.origin;
   } catch {
