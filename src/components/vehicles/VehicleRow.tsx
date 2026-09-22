@@ -4,6 +4,7 @@ import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 import { bodyTypeLabels } from "@/lib/vehicle-format";
 import { formatNumber } from "@/lib/format";
 import { RangeBar } from "./RangeBar";
+import { GarageToggle } from "@/components/garage/GarageToggle";
 
 const dash = (
   <>
@@ -48,6 +49,9 @@ export function VehicleRow({ vehicle: v, href }: { vehicle: Vehicle; href?: stri
       <td className="num hidden py-3.5 text-right align-middle text-base font-semibold text-ink xl:table-cell">
         {v.chargingTime10to80 === null ? dash : <>{formatNumber(v.chargingTime10to80)}<span className="unit">min</span></>}
       </td>
+      <td className="relative py-3.5 pl-4 text-right align-middle">
+        <GarageToggle id={v.id} className="relative" showLabel />
+      </td>
     </tr>
   );
 }
@@ -64,6 +68,9 @@ export function VehicleRowsHead() {
         <th scope="col" className={`${th} text-right`}>Batterie utile</th>
         <th scope="col" className={`${th} text-right`}>Charge DC</th>
         <th scope="col" className={`${th} hidden pr-0 text-right xl:table-cell`}>10 → 80 %</th>
+        <th scope="col" className={`${th} pl-4 pr-0 text-right`}>
+          <span className="sr-only">Sélection</span>
+        </th>
       </tr>
     </thead>
   );

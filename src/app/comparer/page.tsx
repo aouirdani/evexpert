@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Container, PageHeader } from "@/components/layout/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ComparisonBuilder } from "@/components/comparison/ComparisonBuilder";
-import { getAllVehicles } from "@/data/catalog";
+import { getAllVehicles, getVehiclesForComparison } from "@/data/catalog";
 import { vehicleTitle } from "@/lib/vehicle-utils";
 import { getFeaturedComparisons } from "@/lib/comparison";
 import { buildMetadata } from "@/lib/seo";
@@ -18,9 +18,25 @@ export const metadata = buildMetadata({
   path: "/comparer",
 });
 
-export default async function ComparePage() {
-  const vehicles = await getAllVehicles();
-  const featured = await getFeaturedComparisons();
+const DEFAULT_IDS = ["renault-5-e-tech-52-kwh-150-ch", "peugeot-e-208-50-kwh"];
+
+export default async function ComparePage({
+  searchParams,
+}: {
+  /** `?v=id1,id2,id3` : lien partageable, aussi utilisé pour reprendre « Ma sélection » (localStorage, voir GarageBar). */
+  searchParams: Promise<{ v?: string }>;
+}) {
+  const { v } = await searchParams;
+  const requestedIds = v ? v.split(",").filter(Boolean).slice(0, 3) : [];
+  const [vehicles, featured, preselected] = await Promise.all([
+    getAllVehicles(),
+    getFeaturedComparisons(),
+    requestedIds.length ? getVehiclesForComparison(requestedIds) : Promise.resolve([]),
+  ]);
+  // Les identifiants inconnus (lien copié après une refonte du catalogue) sont ignorés
+  // silencieusement ; en dessous de deux véhicules valides, on retombe sur la paire par défaut.
+  const initialIds = preselected.length >= 2 ? preselected.map((x) => x.id) : DEFAULT_IDS;
+
   return (
     <Container className="pb-section pt-8">
       <Breadcrumbs items={[{ name: "Comparer", href: "/comparer" }]} />
@@ -30,7 +46,7 @@ export default async function ComparePage() {
         description="Choisissez deux ou trois modèles et comparez-les critère par critère. Le comparateur chiffre les écarts mesurables, jamais un classement global : le meilleur choix dépend de votre usage."
       />
       <div className="mt-12">
-        <ComparisonBuilder vehicles={vehicles} defaultIds={["renault-5-e-tech-52-kwh-150-ch", "peugeot-e-208-50-kwh"]} />
+        <ComparisonBuilder vehicles={vehicles} defaultIds={initialIds} />
       </div>
 
       <section className="mt-section grid gap-x-12 gap-y-6 lg:grid-cols-12" aria-labelledby="duels">

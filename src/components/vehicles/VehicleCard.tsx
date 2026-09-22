@@ -7,6 +7,7 @@ import { bodyTypeLabels } from "@/lib/vehicle-format";
 import { formatNumber } from "@/lib/format";
 import { cx } from "@/lib/cx";
 import { RangeBar } from "./RangeBar";
+import { GarageToggle } from "@/components/garage/GarageToggle";
 
 function Spec({
   label,
@@ -51,8 +52,9 @@ function Spec({
 export function VehicleCard({ vehicle: v, href }: { vehicle: Vehicle; href?: string }) {
   return (
     <article className="group relative grid grid-cols-[6.75rem_minmax(0,1fr)] gap-x-4 gap-y-3 border-t-2 border-ink bg-surface px-4 pb-4 pt-3.5 transition-colors duration-200 hover:border-signal-deep sm:block sm:px-5 sm:pb-5 sm:pt-4 has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-offset-2 has-[a:focus-visible]:outline-signal-deep">
+      <GarageToggle id={v.id} className="absolute right-4 top-3 z-10 sm:right-5 sm:top-4" />
       <div className="col-start-2 row-start-1 min-w-0">
-        <p className="flex items-baseline justify-between gap-3">
+        <p className="flex items-baseline justify-between gap-3 pr-9 sm:pr-10">
           <span className="eyebrow truncate text-signal-deep">{v.brand}</span>
           <span className="label hidden sm:inline">{bodyTypeLabels[v.bodyType]}</span>
         </p>

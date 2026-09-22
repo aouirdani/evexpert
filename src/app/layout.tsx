@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
+import { GarageBar } from "@/components/garage/GarageBar";
 import { Analytics } from "@/components/Analytics";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
@@ -60,6 +61,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {children}
         <Footer />
         <CookieBanner />
+        <GarageBar />
         <Analytics />
       </body>
     </html>
