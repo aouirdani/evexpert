@@ -78,14 +78,14 @@ Vercel → **Project** (evexpert) → **Settings** → **Environment Variables**
 | --- | --- | --- |
 | `DATABASE_URL` | l'URL de l'étape 5 | Production (et Preview si souhaité) |
 
-À conserver : `NEXT_PUBLIC_SITE_URL=https://evexpert.fr`, `ADSENSE_ENABLED=false`.
+À conserver : `NEXT_PUBLIC_SITE_URL=https://www.evexpert.fr`, `ADSENSE_ENABLED=false`.
 Ne **pas** ajouter `DATABASE_ADMIN_URL` dans Vercel. Cochez « Sensitive » pour `DATABASE_URL`.
 
 Puis **Deployments → Redeploy** (les variables ne s'appliquent qu'aux nouveaux déploiements). Le build lit la base ; si elle est injoignable, **le build échoue** avec une erreur explicite (il ne retombe pas sur des données locales périmées).
 
 ## 7. Vérifier le déploiement
 
-- `https://evexpert.fr/api/health` → `{"ok":true,"database":"up"}`.
+- `https://www.evexpert.fr/api/health` → `{"ok":true,"database":"up"}`.
 - Les pages véhicules, `/sitemap.xml` (120 URLs) et `/comparer` s'affichent comme avant.
 - Modifier une valeur en base (SQL Editor, rôle admin) : la page se met à jour dans les 24 h (régénération quotidienne), ou immédiatement après un redéploiement.
 

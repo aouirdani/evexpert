@@ -23,7 +23,7 @@ describe("pages dynamiques alimentées par la base (URLs inchangées)", () => {
     const mod = await import("@/app/voitures-electriques/[brand]/page");
     expect(await mod.generateStaticParams()).toHaveLength(22);
     const renault = await mod.generateMetadata(params({ brand: "renault" }));
-    expect(renault.alternates?.canonical).toBe("https://evexpert.fr/voitures-electriques/renault");
+    expect(renault.alternates?.canonical).toBe("https://www.evexpert.fr/voitures-electriques/renault");
     expect(renault.robots).toMatchObject({ index: true });
     const single = await mod.generateMetadata(params({ brand: "porsche" }));
     expect(single.robots).toMatchObject({ index: false }); // 1 seul modèle → non indexable
@@ -34,17 +34,17 @@ describe("pages dynamiques alimentées par la base (URLs inchangées)", () => {
     expect(all).toHaveLength(45);
     expect(all).toContainEqual({ brand: "renault", model: "5-e-tech" });
     const md = await mod.generateMetadata(params({ brand: "tesla", model: "model-3" }));
-    expect(md.alternates?.canonical).toBe("https://evexpert.fr/voitures-electriques/tesla/model-3");
+    expect(md.alternates?.canonical).toBe("https://www.evexpert.fr/voitures-electriques/tesla/model-3");
     expect(pageTitle(md)).toContain("Tesla Model 3");
   });
   it("/voitures-electriques/[brand]/[model]/[version] : 47 pages, canonical vers le modèle si version unique", async () => {
     const mod = await import("@/app/voitures-electriques/[brand]/[model]/[version]/page");
     expect(await mod.generateStaticParams()).toHaveLength(47);
     const single = await mod.generateMetadata(params({ brand: "renault", model: "5-e-tech", version: "52-kwh-150-ch" }));
-    expect(single.alternates?.canonical).toBe("https://evexpert.fr/voitures-electriques/renault/5-e-tech");
+    expect(single.alternates?.canonical).toBe("https://www.evexpert.fr/voitures-electriques/renault/5-e-tech");
     expect(single.robots).toMatchObject({ index: false });
     const multi = await mod.generateMetadata(params({ brand: "tesla", model: "model-3", version: "rwd" }));
-    expect(multi.alternates?.canonical).toBe("https://evexpert.fr/voitures-electriques/tesla/model-3/rwd");
+    expect(multi.alternates?.canonical).toBe("https://www.evexpert.fr/voitures-electriques/tesla/model-3/rwd");
     expect(multi.robots).toMatchObject({ index: true });
     expect(await mod.generateMetadata(params({ brand: "x", model: "y", version: "z" }))).toEqual({});
   });
@@ -60,14 +60,14 @@ describe("pages dynamiques alimentées par la base (URLs inchangées)", () => {
     expect(await (await import("@/app/guides/[slug]/page")).generateStaticParams()).toHaveLength(23);
     expect(await (await import("@/app/blog/[slug]/page")).generateStaticParams()).toHaveLength(7);
   });
-  it("sitemap : 126 URLs uniques, toutes sur evexpert.fr", async () => {
+  it("sitemap : 126 URLs uniques, toutes sur www.evexpert.fr", async () => {
     // +2 depuis la passe fonctionnalités : /outils/trajet-longue-distance, /voitures-electriques/trouver.
     const sitemap = (await import("@/app/sitemap")).default;
     const urls = (await sitemap()).map((e) => e.url);
     expect(urls).toHaveLength(126);
     expect(new Set(urls).size).toBe(126);
-    expect(urls.every((u) => u.startsWith("https://evexpert.fr"))).toBe(true);
-    expect(urls).toContain("https://evexpert.fr/voitures-electriques/tesla/model-3/long-range-rwd");
-    expect(urls).not.toContain("https://evexpert.fr/voitures-electriques/renault/5-e-tech/52-kwh-150-ch");
+    expect(urls.every((u) => u.startsWith("https://www.evexpert.fr"))).toBe(true);
+    expect(urls).toContain("https://www.evexpert.fr/voitures-electriques/tesla/model-3/long-range-rwd");
+    expect(urls).not.toContain("https://www.evexpert.fr/voitures-electriques/renault/5-e-tech/52-kwh-150-ch");
   });
 });

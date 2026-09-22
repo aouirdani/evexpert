@@ -1,7 +1,7 @@
 // Central brand & site configuration.
 // Change these values to rebrand the entire platform.
 
-const DEFAULT_SITE_URL = "https://evexpert.fr";
+const DEFAULT_SITE_URL = "https://www.evexpert.fr";
 
 /** Reads an env var; empty or whitespace-only values are treated as absent. */
 function readEnv(value: string | undefined): string | undefined {
