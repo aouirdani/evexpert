@@ -27,6 +27,8 @@ import { VehicleHeader } from "./VehicleHeader";
 import { BodyDimensions } from "./BodyDimensions";
 import { RangeBar } from "./RangeBar";
 import { RANGE_SCALE_MAX } from "@/lib/vehicle-format";
+import { VehicleCostEstimator } from "./VehicleCostEstimator";
+import { gridConsumption100 } from "@/lib/vehicle-calcs";
 
 const driveLabel = { FWD: "Traction (avant)", RWD: "Propulsion (arrière)", AWD: "4 roues motrices" } as const;
 
@@ -306,6 +308,7 @@ export function VehicleDetail({
             </tbody>
           </table>
         </div>
+        <VehicleCostEstimator gridConsumption={gridConsumption100(v)} />
       </Block>
 
       <Block
