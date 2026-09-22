@@ -31,9 +31,26 @@ gtag('config', '${analyticsConfig.ga4Id}', { anonymize_ip: true });`}
         </>
       )}
       {analyticsConfig.gtmId && (
-        <Script id="gtm-init" strategy="afterInteractive">
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${analyticsConfig.gtmId}');`}
-        </Script>
+        <>
+          <Script id="gtm-init" strategy="afterInteractive">
+            {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${analyticsConfig.gtmId}');`}
+          </Script>
+          {/*
+            Filet GTM pour les navigateurs sans JavaScript. Volontairement soumis au même
+            consentement que le script ci-dessus (ce composant entier ne rend rien avant
+            "accepted") : sans JS, la bannière de consentement ne peut ni s'afficher ni être
+            actionnée, donc rien n'est envoyé — cohérent avec « pas de dépôt avant consentement »,
+            même si cela diffère de l'exemple Google (qui place ce tag hors de toute condition).
+            `dangerouslySetInnerHTML` évite l'avertissement d'hydratation React : le navigateur
+            ne parse jamais le contenu d'un <noscript> quand JS est actif, donc React ne doit pas
+            tenter de réconcilier un <iframe> enfant.
+          */}
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${analyticsConfig.gtmId}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+            }}
+          />
+        </>
       )}
     </>
   );
