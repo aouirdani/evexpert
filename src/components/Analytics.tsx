@@ -8,6 +8,12 @@ import { useConsent } from "./CookieBanner";
  * Charge GA4 / GTM uniquement APRÈS consentement de l'utilisateur.
  * Aucun identifiant n'est codé en dur : ils proviennent des variables
  * d'environnement NEXT_PUBLIC_GA_ID / NEXT_PUBLIC_GTM_ID.
+ *
+ * Architecture retenue : EVExpert → consentement → GTM (`GTM-KTTS9ZLJ`) → balise Google
+ * (GA4, `G-1HZPD8J76K`) CONFIGURÉE DANS GTM, pas chargée ici. `NEXT_PUBLIC_GA_ID` doit donc
+ * rester VIDE : le bloc ci-dessous charge gtag.js en direct et ne sert qu'à un déploiement sans
+ * GTM. Le définir en même temps qu'une balise GA4 dans le conteneur GTM double l'initialisation
+ * de GA4 (deux appels `gtag('config', ...)` indépendants) et duplique les pages vues.
  */
 export function Analytics() {
   const consented = useConsent() === "accepted";
