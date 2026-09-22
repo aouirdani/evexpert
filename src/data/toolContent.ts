@@ -7,6 +7,7 @@ import {
   computeRange,
   computeRunningCost,
   computeTco,
+  computeTripPlan,
   costPer100km,
 } from "@/lib/calculators";
 import { formatEuro, formatNumber, minutesToHuman } from "@/lib/format";
@@ -270,6 +271,55 @@ export const toolContent: Record<string, ToolContent> = {
     relatedTools: ["/outils/puissance-borne-recharge", "/outils/cout-recharge-voiture-electrique", "/outils/autonomie-voiture-electrique"],
     relatedGuides: ["temps-recharge-voiture-electrique", "recharge-ac-ou-dc", "recharger-a-80-pourcent"],
     relatedVehicleIds: ["hyundai-ioniq-5-84-kwh-rwd", "kia-ev6-long-range-awd", "renault-5-e-tech-52-kwh-150-ch"],
+    updatedAt: UPDATED,
+  },
+
+  "trajet-longue-distance": {
+    slug: "trajet-longue-distance",
+    intro: [
+      "Une voiture électrique passe-t-elle un trajet de 500 ou 800 km, et avec combien d'arrêts ? La réponse dépend de l'autonomie réelle à la vitesse choisie (pas de l'autonomie WLTP) et de la puissance de recharge rapide moyenne, pas du pic annoncé.",
+      "C'est une simulation théorique, pas une navigation : elle ne connaît ni le relief, ni le vent, ni les bornes réellement disponibles sur votre itinéraire. Utilisez-la pour évaluer un ordre de grandeur avant de planifier le trajet avec une carte de bornes à jour.",
+    ],
+    formulas: [
+      { label: "Autonomie réelle par trajet", expr: "même modèle que le calculateur d'autonomie (vitesse, température, réserve de sécurité)" },
+      { label: "Nombre d'arrêts", expr: "arrondi supérieur(distance ÷ autonomie réelle) − 1" },
+      { label: "Énergie par arrêt", expr: "énergie utilisable d'une pleine autonomie réelle (après réserve)" },
+      { label: "Durée par arrêt", expr: "énergie par arrêt ÷ puissance DC moyenne réellement atteignable" },
+    ],
+    example: () => {
+      const r = computeTripPlan({
+        distanceKm: 500,
+        avgSpeed: 130,
+        temperature: 10,
+        marginPct: 10,
+        usableCapacityKwh: 60,
+        baseConsumptionKwh100: 15,
+        dcAveragePowerKw: 90,
+        dcPricePerKwh: ASSUMPTIONS.fastDcPrice,
+      });
+      return {
+        title: "Exemple : 500 km à 130 km/h, 10 °C, batterie de 60 kWh utiles",
+        steps: [
+          `Autonomie réelle estimée : ≈ ${formatNumber(r.legRangeKm)} km`,
+          `Arrêts nécessaires : arrondi supérieur(500 ÷ ${formatNumber(r.legRangeKm)}) − 1 = ${r.stops}`,
+          `Durée totale de recharge, à 90 kW en moyenne : ${minutesToHuman(r.totalChargingMinutes)}`,
+          `Coût de recharge en route, à ${formatNumber(ASSUMPTIONS.fastDcPrice, 2)} €/kWh : ${formatEuro(r.totalCost, 2)}`,
+        ],
+      };
+    },
+    limits: [
+      "La puissance DC « moyenne réellement atteignable » n'est pas le pic annoncé par le constructeur : c'est une simplification, à ajuster à la baisse pour un modèle dont la courbe de charge chute vite (voir sa fiche).",
+      "Chaque arrêt est supposé recharger l'équivalent d'un plein trajet complet : dans la réalité, vous chargerez souvent moins (juste de quoi atteindre le prochain arrêt), ce qui répartit différemment le temps total mais ne le change pas beaucoup.",
+      "Aucune donnée de trafic, relief, vent ou disponibilité réelle des bornes n'est prise en compte : ce n'est pas une navigation.",
+    ],
+    faq: [
+      { question: "Pourquoi l'autonomie réelle est-elle plus basse que l'autonomie WLTP ?", answer: "Le WLTP est mesuré à vitesse modérée et température tempérée. À 130 km/h et 10 °C, la résistance de l'air et le chauffage augmentent la consommation : voir le calculateur d'autonomie réelle." },
+      { question: "Pourquoi ne pas utiliser directement le temps 10-80 % publié sur la fiche ?", answer: "Ce temps correspond à une fenêtre de charge fixe (10 à 80 %) ; ce simulateur calcule l'énergie réellement nécessaire pour atteindre le prochain arrêt, qui peut être plus ou moins large." },
+      { question: "Une puissance DC plus élevée réduit-elle toujours le temps de trajet ?", answer: "Elle réduit le temps de recharge par arrêt, mais seulement jusqu'à la puissance que la batterie du véhicule peut réellement encaisser : au-delà, augmenter la puissance de la borne ne change rien." },
+    ],
+    relatedTools: ["/outils/autonomie-voiture-electrique", "/outils/temps-recharge", "/outils/puissance-borne-recharge"],
+    relatedGuides: ["autonomie-autoroute", "puissance-recharge-dc", "autonomie-hiver"],
+    relatedVehicleIds: ["tesla-model-3-long-range-rwd", "hyundai-ioniq-5-84-kwh-rwd", "kia-ev6-long-range-awd"],
     updatedAt: UPDATED,
   },
 

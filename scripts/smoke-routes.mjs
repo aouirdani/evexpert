@@ -6,6 +6,7 @@ const routes = [
   "/", "/outils",
   "/outils/cout-recharge-voiture-electrique", "/outils/autonomie-voiture-electrique", "/outils/cout-100-km",
   "/outils/essence-vs-electrique", "/outils/tco-voiture-electrique", "/outils/temps-recharge", "/outils/puissance-borne-recharge",
+  "/outils/trajet-longue-distance",
   "/voitures-electriques", "/voitures-electriques/renault", "/voitures-electriques/tesla/model-3",
   "/voitures-electriques/tesla/model-3/rwd", "/voitures-electriques/renault/5-e-tech",
   "/comparer", "/comparer/renault-5-e-tech-52-kwh-150-ch-vs-peugeot-e-208-50-kwh",

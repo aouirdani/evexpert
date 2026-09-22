@@ -56,6 +56,15 @@ export const tools: Tool[] = [
     icon: "Timer",
   },
   {
+    slug: "trajet-longue-distance",
+    href: "/outils/trajet-longue-distance",
+    title: "Simulateur de trajet longue distance en voiture électrique",
+    shortTitle: "Trajet longue distance",
+    description:
+      "Simulez un long trajet : autonomie réelle estimée, nombre d'arrêts de recharge et durée théorique selon le véhicule.",
+    icon: "Signpost",
+  },
+  {
     slug: "puissance-borne-recharge",
     href: "/outils/puissance-borne-recharge",
     title: "Puissance de borne : quel temps de recharge selon 3,7, 7,4, 11, 22 kW ou DC ?",
