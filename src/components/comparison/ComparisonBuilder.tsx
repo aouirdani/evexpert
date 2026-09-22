@@ -94,7 +94,10 @@ export function ComparisonBuilder({
               onChange={(e) => setIds((prev) => prev.map((x, j) => (j === i ? e.target.value : x)))}
               className={fieldClass}
             >
-              {i === 2 && <option value="">Aucun</option>}
+              {/* Emplacement facultatif (C) : option vide toujours proposée. A/B : seulement si vide au
+                  chargement (ex. lien partagé avec un seul véhicule) — sinon un <select> sans option
+                  correspondant à sa valeur afficherait un choix arbitraire, jamais une case vide. */}
+              {(i === 2 || ids[i] === "") && <option value="">{i === 2 ? "Aucun" : "Choisir un véhicule"}</option>}
               {vehicles.map((v) => (
                 <option key={v.id} value={v.id}>
                   {v.brand} {v.model} {v.version}

@@ -14,6 +14,12 @@ const noopSubscribe = () => () => {};
  * Barre flottante globale (montée une fois dans `layout.tsx`, jamais dans le header/footer) :
  * visible dès qu'un véhicule est dans « Ma sélection ». Décalée vers le haut tant que le bandeau
  * cookies (bas de page, z-60) n'a pas de réponse, pour ne jamais le recouvrir.
+ *
+ * En bas à GAUCHE dès `sm:` (jamais à droite) : `VehicleRow` place sa colonne « Sélection »
+ * (le même bouton Comparer) au bord droit de chaque tableau. Une barre à droite se superposait
+ * régulièrement à cette colonne selon la position de défilement — clic absorbé par la barre,
+ * bouton de la ligne inatteignable, sans aucun retour pour l'utilisateur. Trouvé en testant le
+ * parcours réel (voir la review avant mise en ligne), pas par un simple contrôle visuel.
  */
 export function GarageBar() {
   const ids = useGarageIds();
@@ -26,7 +32,7 @@ export function GarageBar() {
     <div
       role="status"
       className={cx(
-        "fixed inset-x-4 z-50 sm:inset-x-auto sm:right-4",
+        "fixed inset-x-4 z-50 sm:inset-x-auto sm:left-4",
         consent === null ? "bottom-24 sm:bottom-28" : "bottom-4",
       )}
     >

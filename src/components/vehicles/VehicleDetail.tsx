@@ -127,6 +127,7 @@ export function VehicleDetail({
         eyebrow={eyebrow}
         title={title}
         source={v.source}
+        vehicleId={v.id}
         dek={
           <>
             {vehicleTitle(v)} ({v.years}) : {v.bodyType} électrique {v.seats} places, {driveLabel[v.drive].toLowerCase()}, batterie de{" "}

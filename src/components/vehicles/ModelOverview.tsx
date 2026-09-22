@@ -10,6 +10,7 @@ import { SourceLine } from "@/components/ui/SourceBadge";
 import { RelatedGuides, RelatedTools } from "@/components/related";
 import { RangeBar } from "./RangeBar";
 import { VehicleCard } from "./VehicleCard";
+import { GarageToggle } from "@/components/garage/GarageToggle";
 
 const th = "label whitespace-nowrap pb-2.5 pr-5 text-left font-semibold";
 
@@ -29,7 +30,10 @@ export function ModelOverview({ versions, similar }: { versions: Vehicle[]; simi
               <th scope="col" className={`${th} text-right`}>Charge DC</th>
               <th scope="col" className={`${th} text-right`}>10 → 80 %</th>
               <th scope="col" className={`${th} text-right`}>Puissance</th>
-              <th scope="col" className={`${th} pr-0 text-right`}>Coût /100 km*</th>
+              <th scope="col" className={`${th} text-right`}>Coût /100 km*</th>
+              <th scope="col" className={`${th} pl-4 pr-0 text-right`}>
+                <span className="sr-only">Sélection</span>
+              </th>
             </tr>
           </thead>
           <tbody className="border-t-2 border-ink">
@@ -55,7 +59,10 @@ export function ModelOverview({ versions, similar }: { versions: Vehicle[]; simi
                 <td className="num py-4 pr-5 text-right align-middle font-semibold text-ink">{fmt(v.chargingDC, "kW")}</td>
                 <td className="num py-4 pr-5 text-right align-middle font-semibold text-ink">{fmt(v.chargingTime10to80, "min")}</td>
                 <td className="num py-4 pr-5 text-right align-middle font-semibold text-ink">{fmt(v.powerKw, "kW")}</td>
-                <td className="num py-4 text-right align-middle font-semibold text-ink">{formatEuro(costPer100km(v, ASSUMPTIONS.homePrice), 2)}</td>
+                <td className="num py-4 pr-5 text-right align-middle font-semibold text-ink">{formatEuro(costPer100km(v, ASSUMPTIONS.homePrice), 2)}</td>
+                <td className="relative py-4 pl-4 text-right align-middle">
+                  <GarageToggle id={v.id} className="relative" />
+                </td>
               </tr>
             ))}
           </tbody>

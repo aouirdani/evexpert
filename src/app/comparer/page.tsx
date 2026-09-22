@@ -27,15 +27,20 @@ export default async function ComparePage({
   searchParams: Promise<{ v?: string }>;
 }) {
   const { v } = await searchParams;
-  const requestedIds = v ? v.split(",").filter(Boolean).slice(0, 3) : [];
+  // Dédoublonné (un id répété deux fois ne doit pas comparer un véhicule avec lui-même) et
+  // plafonné à 3 (autant que d'emplacements du comparateur, même sur une URL modifiée à la main).
+  const requestedIds = v ? [...new Set(v.split(",").filter(Boolean))].slice(0, 3) : [];
   const [vehicles, featured, preselected] = await Promise.all([
     getAllVehicles(),
     getFeaturedComparisons(),
     requestedIds.length ? getVehiclesForComparison(requestedIds) : Promise.resolve([]),
   ]);
   // Les identifiants inconnus (lien copié après une refonte du catalogue) sont ignorés
-  // silencieusement ; en dessous de deux véhicules valides, on retombe sur la paire par défaut.
-  const initialIds = preselected.length >= 2 ? preselected.map((x) => x.id) : DEFAULT_IDS;
+  // silencieusement. Un seul identifiant valide est repris tel quel (ex. « Ma sélection » avec un
+  // seul véhicule, ou un lien partagé prématurément) : le formulaire préremplit ce véhicule et
+  // invite à en choisir un second, plutôt que de l'écarter au profit d'une paire sans rapport.
+  // Zéro identifiant valide → paire par défaut.
+  const initialIds = preselected.length > 0 ? preselected.map((x) => x.id) : DEFAULT_IDS;
 
   return (
     <Container className="pb-section pt-8">
