@@ -6,7 +6,7 @@ import type { Vehicle } from "@/types";
 import { ASSUMPTIONS } from "@/data/assumptions";
 import { costPer100km } from "@/lib/vehicle-calcs";
 import { bodyTypeLabels } from "@/lib/vehicle-format";
-import { cn } from "@/lib/utils";
+import { cx } from "@/lib/cx";
 import { fieldClass, labelClass } from "@/components/ui/Field";
 import { VehicleCard } from "./VehicleCard";
 import { VehicleRow, VehicleRowsHead } from "./VehicleRow";
@@ -14,6 +14,8 @@ import { VehicleRow, VehicleRowsHead } from "./VehicleRow";
 type SortKey = "range-desc" | "cost-asc" | "dc-desc" | "battery-desc" | "name";
 type View = "cards" | "table";
 
+// Champ de tri : même style que les autres champs, un peu moins haut (cx ne résout pas py-2.5 / py-2).
+const sortField = fieldClass.replace("py-2.5", "py-2");
 const viewButton =
   "inline-flex h-10 w-10 items-center justify-center rounded-sm border transition-colors duration-150";
 
@@ -97,7 +99,7 @@ export function VehicleExplorer({ vehicles }: { vehicles: (Vehicle & { href: str
           id="v-filters"
           aria-label="Filtres"
           onSubmit={(e) => e.preventDefault()}
-          className={cn("mt-5 space-y-5 border-t-2 border-ink pt-5 lg:block", filtersOpen ? "block" : "hidden")}
+          className={cx("mt-5 space-y-5 border-t-2 border-ink pt-5 lg:block", filtersOpen ? "block" : "hidden")}
         >
           <div>
             <label htmlFor="v-brand" className={labelClass}>Marque</label>
@@ -142,7 +144,7 @@ export function VehicleExplorer({ vehicles }: { vehicles: (Vehicle & { href: str
           <div className="flex items-end gap-3">
             <div>
               <label htmlFor="v-sort" className="label mb-1 block">Trier par</label>
-              <select id="v-sort" value={sort} onChange={(e) => setSort(e.target.value as SortKey)} className={cn(fieldClass, "py-2")}>
+              <select id="v-sort" value={sort} onChange={(e) => setSort(e.target.value as SortKey)} className={sortField}>
                 <option value="range-desc">Autonomie WLTP</option>
                 <option value="cost-asc">Coût aux 100 km (calculé)</option>
                 <option value="dc-desc">Puissance DC</option>
@@ -156,7 +158,7 @@ export function VehicleExplorer({ vehicles }: { vehicles: (Vehicle & { href: str
                 aria-pressed={view === "cards"}
                 aria-label="Affichage en fiches"
                 onClick={() => setView("cards")}
-                className={cn(viewButton, view === "cards" ? "border-ink bg-ink text-paper" : "border-control bg-surface text-ink hover:border-ink")}
+                className={cx(viewButton, view === "cards" ? "border-ink bg-ink text-paper" : "border-control bg-surface text-ink hover:border-ink")}
               >
                 <LayoutGrid className="h-4 w-4" aria-hidden />
               </button>
@@ -165,7 +167,7 @@ export function VehicleExplorer({ vehicles }: { vehicles: (Vehicle & { href: str
                 aria-pressed={view === "table"}
                 aria-label="Affichage en tableau"
                 onClick={() => setView("table")}
-                className={cn(viewButton, view === "table" ? "border-ink bg-ink text-paper" : "border-control bg-surface text-ink hover:border-ink")}
+                className={cx(viewButton, view === "table" ? "border-ink bg-ink text-paper" : "border-control bg-surface text-ink hover:border-ink")}
               >
                 <Rows3 className="h-4 w-4" aria-hidden />
               </button>
@@ -193,7 +195,7 @@ export function VehicleExplorer({ vehicles }: { vehicles: (Vehicle & { href: str
           </table>
         ) : null}
         {filtered.length > 0 && (
-          <div className={cn("mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-3", view === "table" && "lg:hidden")}>
+          <div className={cx("mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-3", view === "table" && "lg:hidden")}>
             {filtered.map((v) => (
               <VehicleCard key={v.id} vehicle={v} href={v.href} />
             ))}

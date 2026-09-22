@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { computeChargingTime } from "@/lib/calculators";
-import { formatNumber, minutesToHuman } from "@/lib/utils";
+import { formatNumber, minutesToHuman } from "@/lib/format";
 import { CalcLayout, Field, NumberInput, RangeInputControl, ResultCard, SelectInput, VehiclePresetSelect, type VehiclePreset } from "./kit";
 
 const powerPresets = [

@@ -1,4 +1,4 @@
-import { formatEuro } from "@/lib/utils";
+import { formatEuro } from "@/lib/format";
 
 export interface BarSeries {
   label: string;

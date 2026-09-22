@@ -1,6 +1,6 @@
 import type { Vehicle } from "@/types";
 import { bodyTypeLabels } from "@/lib/vehicle-format";
-import { formatNumber } from "@/lib/utils";
+import { formatNumber } from "@/lib/format";
 import { BodyGlyph } from "./BodyGlyph";
 
 /**

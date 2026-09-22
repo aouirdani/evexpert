@@ -1,5 +1,5 @@
 import type { BarChartSpec } from "@/types";
-import { formatNumber } from "@/lib/utils";
+import { formatNumber } from "@/lib/format";
 
 /**
  * Graphique en barres horizontales en HTML + CSS : les libellés et les valeurs sont du vrai

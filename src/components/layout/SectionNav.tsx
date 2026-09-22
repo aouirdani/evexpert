@@ -7,7 +7,7 @@ export function SectionNav({ items, label = "Sur cette page" }: { items: { id: s
   return (
     <nav
       aria-label={label}
-      className="sticky top-(--header-h) z-30 -mx-4 mt-10 border-b border-line bg-paper px-4 sm:-mx-6 sm:px-6"
+      className="sticky top-(--header-h) z-30 -mx-4 mt-10 border-b border-line bg-paper px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0"
     >
       <ul className="-mb-px flex gap-7 overflow-x-auto whitespace-nowrap">
         {items.map((it) => (

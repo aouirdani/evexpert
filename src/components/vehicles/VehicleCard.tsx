@@ -4,7 +4,8 @@ import type { Vehicle } from "@/types";
 import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 import { batteryConsumption100 } from "@/lib/vehicle-calcs";
 import { bodyTypeLabels } from "@/lib/vehicle-format";
-import { cn, formatNumber } from "@/lib/utils";
+import { formatNumber } from "@/lib/format";
+import { cx } from "@/lib/cx";
 import { RangeBar } from "./RangeBar";
 
 function Spec({
@@ -19,7 +20,7 @@ function Spec({
   className?: string;
 }) {
   return (
-    <div className={cn("min-w-0", className)}>
+    <div className={cx("min-w-0", className)}>
       <dt className="label whitespace-nowrap">{label}</dt>
       <dd className="num mt-1 text-lg font-semibold text-ink sm:text-data-md">
         {value === null ? (

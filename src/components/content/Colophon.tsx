@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { formatDateFr } from "@/lib/utils";
+import { formatDateFr } from "@/lib/format";
 
 function Item({ label, children }: { label: string; children: ReactNode }) {
   return (

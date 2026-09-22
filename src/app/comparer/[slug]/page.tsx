@@ -10,7 +10,7 @@ import { RelatedGuides, RelatedTools } from "@/components/related";
 import { getFeaturedComparisons, parseComparison } from "@/lib/comparison";
 import { objectiveDifferences } from "@/lib/comparison-metrics";
 import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
-import { formatDateFr } from "@/lib/utils";
+import { formatDateFr } from "@/lib/format";
 import { buildMetadata, faqJsonLd } from "@/lib/seo";
 
 // Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.

@@ -1,5 +1,5 @@
 import type { InputHTMLAttributes, ReactNode, SelectHTMLAttributes } from "react";
-import { cn } from "@/lib/utils";
+import { cx } from "@/lib/cx";
 
 /**
  * Classes partagées des champs de formulaire. Bordure `control` (≥ 3:1 sur
@@ -23,7 +23,7 @@ export function Label({
   className?: string;
 }) {
   return (
-    <label htmlFor={htmlFor} className={cn(labelClass, className)}>
+    <label htmlFor={htmlFor} className={cx(labelClass, className)}>
       {children}
       {hint && <span className="ml-1 font-normal text-muted">{hint}</span>}
     </label>
@@ -31,12 +31,12 @@ export function Label({
 }
 
 export function Input({ className, ...props }: InputHTMLAttributes<HTMLInputElement>) {
-  return <input className={cn(fieldClass, className)} {...props} />;
+  return <input className={cx(fieldClass, className)} {...props} />;
 }
 
 export function Select({ className, children, ...props }: SelectHTMLAttributes<HTMLSelectElement>) {
   return (
-    <select className={cn(fieldClass, className)} {...props}>
+    <select className={cx(fieldClass, className)} {...props}>
       {children}
     </select>
   );
@@ -44,5 +44,5 @@ export function Select({ className, children, ...props }: SelectHTMLAttributes<H
 
 /** Curseur : la couleur d'accent native suit le token signal-deep. */
 export function Range({ className, ...props }: Omit<InputHTMLAttributes<HTMLInputElement>, "type">) {
-  return <input type="range" className={cn("w-full accent-signal-deep", className)} {...props} />;
+  return <input type="range" className={cx("w-full accent-signal-deep", className)} {...props} />;
 }

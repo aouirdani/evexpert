@@ -1,5 +1,5 @@
 import { RANGE_SCALE_MAX } from "@/lib/vehicle-format";
-import { formatNumber } from "@/lib/utils";
+import { formatNumber } from "@/lib/format";
 
 const BIN = 25; // km par colonne de points
 

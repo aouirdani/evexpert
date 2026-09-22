@@ -3,7 +3,7 @@ import type { Vehicle } from "@/types";
 import { METRICS, METRIC_GROUPS } from "@/lib/comparison-metrics";
 import { vehicleHref } from "@/lib/vehicle-utils";
 import { DataBadge } from "@/components/ui/DataBadge";
-import { formatNumber } from "@/lib/utils";
+import { formatNumber } from "@/lib/format";
 
 /** Unité et décimales de l'écart chiffré, par critère mesurable. Les autres critères n'ont pas d'écart. */
 const DELTA: Record<string, [unit: string, digits: number]> = {

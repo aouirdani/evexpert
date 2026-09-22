@@ -10,7 +10,7 @@ import { JsonLd } from "@/components/ui/JsonLd";
 import { EditorialFigure } from "@/components/content/EditorialFigure";
 import { RelatedGuides, RelatedTools, RelatedVehicles } from "@/components/related";
 import { articleJsonLd, faqJsonLd, shareImageOf } from "@/lib/seo";
-import { formatDateFr, frTypo } from "@/lib/utils";
+import { formatDateFr, frTypo } from "@/lib/format";
 
 /** Mise en page commune aux guides et aux articles de blog. */
 export function ArticleView({

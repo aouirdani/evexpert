@@ -1,7 +1,7 @@
 import { ASSUMPTIONS } from "@/data/assumptions";
 import { costPer100km } from "@/lib/vehicle-calcs";
 import { fmt, fmtText } from "@/lib/vehicle-format";
-import { formatEuro, formatNumber } from "@/lib/utils";
+import { formatEuro, formatNumber } from "@/lib/format";
 import type { DataType, Vehicle } from "@/types";
 
 /* ------------------------------ Métriques -------------------------------- */

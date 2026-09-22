@@ -1,5 +1,5 @@
 import type { ArticleSection } from "@/types";
-import { slugify } from "@/lib/utils";
+import { slugify } from "@/lib/format";
 import { Inline } from "@/components/content/Inline";
 import { EditorialFigure } from "@/components/content/EditorialFigure";
 import { BarChart } from "@/components/content/BarChart";

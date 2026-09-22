@@ -3,7 +3,7 @@ import { ASSUMPTIONS } from "@/data/assumptions";
 import { SOURCES } from "@/data/sources";
 import { chargeCost, costPer100km, gridConsumption100 } from "@/lib/vehicle-calcs";
 import { annualCost, costPer100km as costPer100 } from "@/lib/calculators";
-import { formatEuro, formatNumber } from "@/lib/utils";
+import { formatEuro, formatNumber } from "@/lib/format";
 import type { GuideContext } from "./helpers";
 import { GUIDE_DATE } from "./helpers";
 

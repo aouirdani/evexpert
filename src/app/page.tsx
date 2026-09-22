@@ -13,7 +13,7 @@ import { vehicleHref } from "@/lib/vehicle-utils";
 import { ASSUMPTIONS } from "@/data/assumptions";
 import { getFeaturedComparisons } from "@/lib/comparison";
 import { siteConfig } from "@/config/site";
-import { formatDateFr } from "@/lib/utils";
+import { formatDateFr } from "@/lib/format";
 import { buildMetadata, faqJsonLd } from "@/lib/seo";
 
 // Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.

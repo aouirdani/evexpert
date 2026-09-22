@@ -6,7 +6,7 @@ import { LastUpdated } from "@/components/ui/SourceBadge";
 import { SOURCE_ROLES } from "@/data/sources";
 import { getCatalog } from "@/data/catalog";
 import { buildMetadata } from "@/lib/seo";
-import { formatDateFr } from "@/lib/utils";
+import { formatDateFr } from "@/lib/format";
 
 // Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
 export const revalidate = 86400;
@@ -78,7 +78,8 @@ export default async function SourcesPage() {
         <h2 id="corrections" className="text-h2 font-bold text-ink">Corrections</h2>
         <div className="prose-ev">
           <p>
-            Une erreur ? Signalez-la via la <Link href="/contact">page Contact</Link> avec le modèle, la donnée et la source à l&apos;appui : nous corrigeons et mettons la date à jour.
+            Une erreur ? Signalez-la via la <Link href="/contact">page Contact</Link>{" "}
+            avec le modèle, la donnée et la source à l&apos;appui : nous corrigeons et mettons la date à jour.
           </p>
         </div>
       </section>

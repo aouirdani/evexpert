@@ -1,5 +1,5 @@
 import type { BodyType } from "@/types";
-import { formatNumber } from "@/lib/utils";
+import { formatNumber } from "@/lib/format";
 
 export const NA = "Non disponible";
 

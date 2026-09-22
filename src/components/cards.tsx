@@ -3,7 +3,7 @@ import Link from "next/link";
 import * as Icons from "lucide-react";
 import { ArrowRight } from "lucide-react";
 import type { Article, EditorialImage, Guide, Tool } from "@/types";
-import { formatDateFr } from "@/lib/utils";
+import { formatDateFr } from "@/lib/format";
 import { Kicker } from "@/components/layout/Section";
 import { guideCategoryLabels } from "@/data/guides/labels";
 
@@ -96,11 +96,12 @@ export function ArticleCard({ article }: { article: Article }) {
   );
 }
 
-export function GuideCard({ guide }: { guide: Guide }) {
+/** `showImage={false}` : la photo du guide est déjà affichée plus haut sur la page (évite de répéter le même cliché). */
+export function GuideCard({ guide, showImage = true }: { guide: Guide; showImage?: boolean }) {
   return (
     <EditorialCard
       href={`/guides/${guide.slug}`}
-      image={guide.hero}
+      image={showImage ? guide.hero : undefined}
       kicker={guideCategoryLabels[guide.category]}
       aside={`${guide.readingTime} min`}
       title={guide.title}

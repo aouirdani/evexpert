@@ -1,4 +1,4 @@
-import { formatNumber } from "@/lib/utils";
+import { formatNumber } from "@/lib/format";
 
 /**
  * Écart chiffré neutre entre deux valeurs : jamais « meilleur » ou « pire », seulement la

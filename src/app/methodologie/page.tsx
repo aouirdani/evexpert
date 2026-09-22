@@ -8,7 +8,7 @@ import { ASSUMPTIONS, ASSUMPTIONS_UPDATED_AT } from "@/data/assumptions";
 import { getCatalogDate } from "@/data/catalog";
 import { drivingFactor, speedFactor, temperatureFactor } from "@/lib/calculators";
 import { buildMetadata } from "@/lib/seo";
-import { formatNumber } from "@/lib/utils";
+import { formatNumber } from "@/lib/format";
 import type { ArticleSection } from "@/types";
 
 // Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.

@@ -46,6 +46,9 @@ const modes = [
   },
 ];
 
+// Guides dont la photo illustre déjà les deux modes de recharge, plus haut.
+const usedAbove = new Set(["puissance-borne-7-11-22-kw", "recharge-ac-ou-dc"]);
+
 export default async function RechargePage() {
   const rechargeGuides = (await getGuides()).filter((g) => g.category === "recharge").slice(0, 6);
   return (
@@ -142,7 +145,7 @@ export default async function RechargePage() {
         </div>
         <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {rechargeGuides.map((g) => (
-            <GuideCard key={g.slug} guide={g} />
+            <GuideCard key={g.slug} guide={g} showImage={!usedAbove.has(g.slug)} />
           ))}
         </div>
       </section>

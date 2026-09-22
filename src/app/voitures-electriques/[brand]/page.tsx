@@ -7,7 +7,7 @@ import { VehicleCard } from "@/components/vehicles/VehicleCard";
 import { getBrands, getModels, getVehiclesByBrand } from "@/data/catalog";
 import { vehicleHref } from "@/lib/vehicle-utils";
 import { buildMetadata, itemListJsonLd } from "@/lib/seo";
-import { formatNumber } from "@/lib/utils";
+import { formatNumber } from "@/lib/format";
 
 // Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
 export const revalidate = 86400;

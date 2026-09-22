@@ -4,7 +4,7 @@ import { Container } from "@/components/layout/Container";
 import { Kicker } from "@/components/layout/Section";
 import { ButtonLink } from "@/components/ui/primitives";
 import { DataFigure } from "@/components/ui/DataFigure";
-import { frTypo } from "@/lib/utils";
+import { frTypo } from "@/lib/format";
 
 // Fondu technique des bords de la photo (haut, bas, gauche) : le studio n'est pas exactement
 // du navy de marque, sans cela ses bords resteraient visibles. Ce n'est pas un effet décoratif.

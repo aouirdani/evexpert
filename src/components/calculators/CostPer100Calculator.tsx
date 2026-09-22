@@ -5,7 +5,7 @@ import { annualCost, costPer100km } from "@/lib/calculators";
 import { ASSUMPTIONS } from "@/data/assumptions";
 import type { VehiclePreset } from "./kit";
 import { VehiclePresetSelect } from "./kit";
-import { formatEuro } from "@/lib/utils";
+import { formatEuro } from "@/lib/format";
 import { Field, NumberInput, SelectInput } from "./kit";
 
 interface Row {

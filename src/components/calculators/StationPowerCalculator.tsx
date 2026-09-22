@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { formatNumber, minutesToHuman } from "@/lib/utils";
+import { formatNumber, minutesToHuman } from "@/lib/format";
 import { CalcLayout, Field, NumberInput, RangeInputControl, ResultCard, VehiclePresetSelect, type VehiclePreset } from "./kit";
 
 const STATIONS: { kw: number; kind: "AC" | "DC"; label: string }[] = [

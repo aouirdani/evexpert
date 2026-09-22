@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Vehicle } from "@/types";
 import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 import { bodyTypeLabels } from "@/lib/vehicle-format";
-import { formatNumber } from "@/lib/utils";
+import { formatNumber } from "@/lib/format";
 import { RangeBar } from "./RangeBar";
 
 const dash = (

@@ -1,5 +1,5 @@
 import type { DataType } from "@/types";
-import { cn } from "@/lib/utils";
+import { cx } from "@/lib/cx";
 
 const config: Record<DataType, { label: string; hint: string; tone: string }> = {
   official: {
@@ -33,7 +33,7 @@ export function DataBadge({ type, className }: { type: DataType; className?: str
   return (
     <span
       title={c.hint}
-      className={cn(
+      className={cx(
         "inline-flex items-center whitespace-nowrap rounded-sm px-2 py-0.5 text-[11px] font-semibold ring-1 ring-inset",
         c.tone,
         className,
@@ -47,7 +47,7 @@ export function DataBadge({ type, className }: { type: DataType; className?: str
 /** Légende expliquant les quatre natures de données (liste à filets, pas de boîtes). */
 export function DataLegend({ className }: { className?: string }) {
   return (
-    <dl className={cn("grid gap-x-10 text-sm sm:grid-cols-2", className)}>
+    <dl className={cx("grid gap-x-10 text-sm sm:grid-cols-2", className)}>
       {(Object.keys(config) as DataType[]).map((t) => (
         <div key={t} className="border-t border-line py-4">
           <dt>

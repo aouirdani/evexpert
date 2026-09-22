@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import type { DataSource } from "@/types";
 import { Kicker } from "@/components/layout/Section";
 import { dataTypeLabel } from "@/components/ui/DataBadge";
-import { formatDateFr, frTypo } from "@/lib/utils";
+import { formatDateFr, frTypo } from "@/lib/format";
 
 /** En-tête d'une page véhicule (modèle ou version) : rubrique, H1, chapô, source et date de relevé. */
 export function VehicleHeader({

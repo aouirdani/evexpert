@@ -62,7 +62,8 @@ export default async function ComparePage() {
           <p>
             Les chiffres constructeur ne se comparent pas toujours directement : une batterie plus grande ne donne pas forcément plus d&apos;autonomie, et une puissance de
             charge DC élevée n&apos;est tenue que sur une partie de la charge. Regardez la <Link href="/guides/batterie-brute-batterie-utile">batterie utile</Link>, la
-            consommation et le <Link href="/guides/puissance-recharge-dc">temps de charge 10-80 %</Link> plutôt qu&apos;un seul critère.
+            consommation et le <Link href="/guides/puissance-recharge-dc">temps de charge 10-80 %</Link>{" "}
+            plutôt qu&apos;un seul critère.
           </p>
           <p>
             Pour un budget complet, prolongez la comparaison avec le <Link href="/outils/tco-voiture-electrique">calculateur de coût total de possession</Link>.

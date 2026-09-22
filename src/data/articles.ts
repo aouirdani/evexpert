@@ -1,7 +1,7 @@
 import type { Article, ArticleCategory, Vehicle } from "@/types";
 import { SOURCES } from "@/data/sources";
 import { acChargeMinutes, averageDcPower, batteryConsumption100 } from "@/lib/vehicle-calcs";
-import { formatNumber, minutesToHuman } from "@/lib/utils";
+import { formatNumber, minutesToHuman } from "@/lib/format";
 
 export function buildArticles(vehicles: Vehicle[]): Article[] {
 

@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { computeChargingCost } from "@/lib/calculators";
-import { formatEuro, formatNumber } from "@/lib/utils";
+import { formatEuro, formatNumber } from "@/lib/format";
 import { ASSUMPTIONS } from "@/data/assumptions";
 import { CalcLayout, Field, NumberInput, RangeInputControl, ResultCard, VehiclePresetSelect, type VehiclePreset } from "./kit";
 

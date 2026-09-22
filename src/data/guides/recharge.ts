@@ -2,7 +2,7 @@ import type { Guide } from "@/types";
 import { ASSUMPTIONS } from "@/data/assumptions";
 import { SOURCES } from "@/data/sources";
 import { acChargeMinutes, averageDcPower, chargeCost } from "@/lib/vehicle-calcs";
-import { formatEuro, formatNumber, minutesToHuman } from "@/lib/utils";
+import { formatEuro, formatNumber, minutesToHuman } from "@/lib/format";
 import type { GuideContext } from "./helpers";
 import { GUIDE_DATE } from "./helpers";
 

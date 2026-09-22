@@ -1,7 +1,7 @@
 import type { Guide } from "@/types";
 import { SOURCES } from "@/data/sources";
 import { RANGE_SCENARIOS, batteryConsumption100, estimateRange } from "@/lib/vehicle-calcs";
-import { formatNumber } from "@/lib/utils";
+import { formatNumber } from "@/lib/format";
 import type { GuideContext } from "./helpers";
 import { GUIDE_DATE } from "./helpers";
 

@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { computeRange, type DrivingType } from "@/lib/calculators";
-import { formatNumber } from "@/lib/utils";
+import { formatNumber } from "@/lib/format";
 import { CalcLayout, Field, NumberInput, RangeInputControl, ResultCard, SelectInput, VehiclePresetSelect, type VehiclePreset } from "./kit";
 
 export function RangeCalculator({ presets = [] }: { presets?: VehiclePreset[] }) {

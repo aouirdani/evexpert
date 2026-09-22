@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { GroupedBars } from "@/components/charts/GroupedBars";
 import { ASSUMPTIONS } from "@/data/assumptions";
 import { computeTco, type TcoInput } from "@/lib/calculators";
-import { formatEuro } from "@/lib/utils";
+import { formatEuro } from "@/lib/format";
 import { Field, NumberInput, ResultCard } from "./kit";
 
 const defaultA: TcoInput = {

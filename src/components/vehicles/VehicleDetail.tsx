@@ -11,7 +11,7 @@ import {
   estimateRange,
 } from "@/lib/vehicle-calcs";
 import { fmt, fmtText } from "@/lib/vehicle-format";
-import { formatEuro, formatNumber, minutesToHuman } from "@/lib/utils";
+import { formatEuro, formatNumber, minutesToHuman } from "@/lib/format";
 import type { ReactNode } from "react";
 import { Faq } from "@/components/ui/Faq";
 import { JsonLd } from "@/components/ui/JsonLd";

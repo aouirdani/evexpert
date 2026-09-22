@@ -4,7 +4,7 @@ import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 import { fmt } from "@/lib/vehicle-format";
 import { ASSUMPTIONS } from "@/data/assumptions";
 import { costPer100km } from "@/lib/vehicle-calcs";
-import { formatEuro, formatNumber } from "@/lib/utils";
+import { formatEuro, formatNumber } from "@/lib/format";
 import { DataBadge } from "@/components/ui/DataBadge";
 import { SourceLine } from "@/components/ui/SourceBadge";
 import { RelatedGuides, RelatedTools } from "@/components/related";

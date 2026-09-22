@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { cn } from "@/lib/utils";
+import { cx } from "@/lib/cx";
 
 export function Field({
   label,
@@ -143,7 +143,7 @@ export function ResultCard({
   return (
     <div className="border-t border-line-ink pt-4">
       <p className="label text-ink-muted">{label}</p>
-      <p className={cn("num mt-2 font-bold", emphasis ? "text-data-xl text-signal" : "text-data-lg text-paper")}>{value}</p>
+      <p className={cx("num mt-2 font-bold", emphasis ? "text-data-xl text-signal" : "text-data-lg text-paper")}>{value}</p>
       {hint && <p className="num mt-1.5 text-sm text-ink-muted">{hint}</p>}
     </div>
   );

@@ -1,7 +1,7 @@
 import { FileText } from "lucide-react";
 import Link from "next/link";
 import type { DataSource } from "@/types";
-import { formatDateFr } from "@/lib/utils";
+import { formatDateFr } from "@/lib/format";
 import { DataBadge } from "./DataBadge";
 
 export function LastUpdated({ date, label = "Dernière mise à jour" }: { date: string; label?: string }) {

@@ -9,7 +9,7 @@ import {
   computeTco,
   costPer100km,
 } from "@/lib/calculators";
-import { formatEuro, formatNumber, minutesToHuman } from "@/lib/utils";
+import { formatEuro, formatNumber, minutesToHuman } from "@/lib/format";
 
 /** Contenu éditorial d'une page outil (hors composant de calcul). */
 export interface ToolContent {
