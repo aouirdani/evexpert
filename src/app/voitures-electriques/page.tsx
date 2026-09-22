@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Kicker } from "@/components/layout/Section";
+import { ArrowLink } from "@/components/ui/primitives";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { DataFigure } from "@/components/ui/DataFigure";
 import { DataLegend } from "@/components/ui/DataBadge";
@@ -44,6 +45,9 @@ export default async function VehiclesPage() {
           <p className="pretty mt-5 max-w-2xl text-dek text-body">
             Chaque fiche indique sa source et sa date de relevé, et distingue données sourcées, calculs et estimations.
           </p>
+          <div className="mt-5">
+            <ArrowLink href="/voitures-electriques/trouver">Vous ne savez pas par où commencer ? Trouver ma voiture</ArrowLink>
+          </div>
         </div>
         <dl className="grid grid-cols-3 gap-x-6 border-t-2 border-ink pt-4 lg:col-span-4">
           <DataFigure label="Versions" value={String(vehicles.length)} size="lg" />

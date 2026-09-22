@@ -28,8 +28,8 @@ export interface FinderCriterion {
   met: boolean | null;
 }
 
-export interface FinderMatch {
-  vehicle: Vehicle;
+export interface FinderMatch<V extends Vehicle = Vehicle> {
+  vehicle: V;
   criteria: FinderCriterion[];
   /** Nombre de critères applicables remplis. */
   matched: number;
@@ -43,7 +43,8 @@ const autoroute = RANGE_SCENARIOS.find((s) => s.id === "autoroute")!;
 /** Marge de sécurité : on ne vise jamais l'autonomie affichée à 100 %. */
 const SAFETY_MARGIN = 0.85;
 
-export function matchVehicle(v: Vehicle, a: FinderAnswers): FinderMatch {
+/** Générique sur `V` pour laisser passer les champs ajoutés par l'appelant (ex. `href` précalculé). */
+export function matchVehicle<V extends Vehicle>(v: V, a: FinderAnswers): FinderMatch<V> {
   const dailyNeedKm = a.dailyKm * 2;
   const realMixteRange = estimateRange(v, mixte) * SAFETY_MARGIN;
 
@@ -93,7 +94,7 @@ export function matchVehicle(v: Vehicle, a: FinderAnswers): FinderMatch {
   };
 }
 
-export function matchVehicles(vehicles: Vehicle[], a: FinderAnswers): FinderMatch[] {
+export function matchVehicles<V extends Vehicle>(vehicles: V[], a: FinderAnswers): FinderMatch<V>[] {
   return vehicles
     .map((v) => matchVehicle(v, a))
     .sort((x, y) => y.matched - x.matched || y.vehicle.rangeWltp - x.vehicle.rangeWltp);

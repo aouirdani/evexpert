@@ -85,6 +85,13 @@ export function RangeFinder({ vehicles }: { vehicles: WithHref[] }) {
           })}
         </ol>
       </div>
+      <p className="mt-8 border-t border-line pt-5 text-sm text-body">
+        Vous hésitez encore ?{" "}
+        <Link href="/voitures-electriques/trouver" className="link-u font-semibold text-signal-deep">
+          Répondez à quelques questions pour affiner la sélection
+        </Link>
+        .
+      </p>
     </Section>
   );
 }

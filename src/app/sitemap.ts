@@ -47,6 +47,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     entry("", catalogDate, "weekly", 1),
     entry("/outils", catalogDate, "monthly", 0.9),
     entry("/voitures-electriques", catalogDate, "weekly", 0.9),
+    entry("/voitures-electriques/trouver", catalogDate, "monthly", 0.7),
     entry("/comparer", catalogDate, "monthly", 0.8),
     entry("/recharge", catalogDate, "monthly", 0.8),
     entry("/guides", catalogDate, "weekly", 0.8),
