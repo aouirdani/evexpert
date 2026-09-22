@@ -247,3 +247,110 @@ export function computeChargingTime(input: ChargingTimeInput): ChargingTimeResul
   const minutes = effectivePower > 0 ? (energyToAdd / effectivePower) * 60 : 0;
   return { energyToAdd, minutes };
 }
+
+/* -------------------------------------------------------------------------- */
+/*  7. Coût d'usage annuel personnalisé (domicile + public)                  */
+/* -------------------------------------------------------------------------- */
+
+export interface UsageCostInput {
+  /** Consommation réseau (kWh/100 km, pertes de charge comprises). */
+  gridConsumption: number;
+  annualKm: number;
+  /** Part de la recharge faite à domicile (0-100) ; le reste est facturé au tarif public. */
+  homeSharePct: number;
+  homePrice: number;
+  publicPrice: number;
+}
+
+export interface UsageCostResult {
+  /** Prix moyen du kWh, pondéré par la part domicile/public. */
+  blendedPricePerKwh: number;
+  kwhPerYear: number;
+  costPerYear: number;
+  costPerMonth: number;
+  costPer100km: number;
+  costOver3Years: number;
+}
+
+export function computeUsageCost(input: UsageCostInput): UsageCostResult {
+  const homeShare = Math.min(Math.max(input.homeSharePct, 0), 100) / 100;
+  const blendedPricePerKwh = homeShare * input.homePrice + (1 - homeShare) * input.publicPrice;
+  const kwhPerYear = (input.gridConsumption * input.annualKm) / 100;
+  const costPerYear = kwhPerYear * blendedPricePerKwh;
+  return {
+    blendedPricePerKwh,
+    kwhPerYear,
+    costPerYear,
+    costPerMonth: costPerYear / 12,
+    costPer100km: input.gridConsumption * blendedPricePerKwh,
+    costOver3Years: costPerYear * 3,
+  };
+}
+
+/* -------------------------------------------------------------------------- */
+/*  8. Simulateur de trajet longue distance (estimation, pas une navigation) */
+/* -------------------------------------------------------------------------- */
+
+export interface TripPlanInput {
+  distanceKm: number;
+  avgSpeed: number; // km/h
+  temperature: number; // °C
+  /** Réserve de sécurité conservée à chaque arrêt (0-30 %), transmise à `computeRange`. */
+  marginPct: number;
+  usableCapacityKwh: number;
+  baseConsumptionKwh100: number;
+  /** Puissance DC moyenne réellement atteignable (kW), pas le pic annoncé. */
+  dcAveragePowerKw: number;
+  dcPricePerKwh: number;
+  efficiencyPct?: number;
+}
+
+export interface TripPlanResult {
+  drivingType: DrivingType;
+  /** Autonomie réelle estimée par trajet (après réserve), km. */
+  legRangeKm: number;
+  /** Énergie utile rechargée à chaque arrêt (kWh), = autonomie d'un trajet. */
+  energyPerStopKwh: number;
+  legs: number;
+  stops: number;
+  minutesPerStop: number;
+  totalChargingMinutes: number;
+  totalEnergyKwh: number;
+  totalCost: number;
+}
+
+/**
+ * Simule un trajet en estimant l'autonomie réelle (mêmes facteurs que le calculateur
+ * d'autonomie), puis le nombre d'arrêts nécessaires et leur durée théorique. Chaque arrêt
+ * est supposé recharger l'équivalent d'un trajet complet (approximation transparente,
+ * pas une navigation avec bornes réelles).
+ */
+export function computeTripPlan(input: TripPlanInput): TripPlanResult {
+  const efficiencyPct = input.efficiencyPct ?? 90;
+  const drivingType: DrivingType = input.avgSpeed > 100 ? "autoroute" : input.avgSpeed > 70 ? "mixte" : "ville";
+  const range = computeRange({
+    usableCapacity: input.usableCapacityKwh,
+    baseConsumption: input.baseConsumptionKwh100,
+    speed: input.avgSpeed,
+    temperature: input.temperature,
+    drivingType,
+    reserve: input.marginPct,
+  });
+  const legRangeKm = Math.max(1, range.estimatedRange);
+  const legs = Math.max(1, Math.ceil(input.distanceKm / legRangeKm));
+  const stops = legs - 1;
+  const energyPerStopKwh = range.usableEnergy;
+  const minutesPerStop = input.dcAveragePowerKw > 0 ? (energyPerStopKwh / (input.dcAveragePowerKw * (efficiencyPct / 100))) * 60 : 0;
+  const totalEnergyKwh = stops * (energyPerStopKwh / (efficiencyPct / 100));
+  return {
+    drivingType,
+    legRangeKm,
+    energyPerStopKwh,
+    legs,
+    stops,
+    minutesPerStop,
+    totalChargingMinutes: stops * minutesPerStop,
+    totalEnergyKwh,
+    totalCost: totalEnergyKwh * input.dcPricePerKwh,
+  };
+}
