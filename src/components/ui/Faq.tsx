@@ -21,16 +21,16 @@ export function Faq({
         <div className={layout === "split" ? "border-t-2 border-ink lg:col-span-8" : "border-t-2 border-ink"}>
           {items.map((item, i) => (
             <details key={i} className="group border-b border-line">
-              <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-5 text-lg font-bold leading-snug text-ink [&::-webkit-details-marker]:hidden">
+              <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-6 text-lg font-bold leading-snug text-ink [&::-webkit-details-marker]:hidden">
                 <span className="transition-colors duration-150 group-hover:text-signal-deep">{item.question}</span>
                 <span
-                  className="num mt-0.5 text-2xl font-normal leading-none text-signal-deep transition-transform duration-150 group-open:rotate-45"
+                  className="mt-0.5 text-2xl font-normal leading-none text-signal-deep transition-transform duration-150 group-open:rotate-45"
                   aria-hidden
                 >
                   +
                 </span>
               </summary>
-              <p className="pretty pb-6 pr-10 text-body">{item.answer}</p>
+              <p className="pretty pb-7 pr-10 text-body">{item.answer}</p>
             </details>
           ))}
         </div>

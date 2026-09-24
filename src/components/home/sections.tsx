@@ -60,7 +60,7 @@ export function RangeFinder({ vehicles }: { vehicles: WithHref[] }) {
               return true;
             }).slice(0, 3);
             return (
-              <li key={b.label} className="border-t border-line py-4 first:border-t-2 first:border-ink first:pt-4">
+              <li key={b.label} className="border-t border-line py-5 first:border-t-2 first:border-ink first:pt-5">
                 <div className="flex items-baseline justify-between gap-4">
                   <p className="text-base font-bold text-ink">{b.label}</p>
                   <p className="num text-data-md font-bold text-ink">
@@ -85,7 +85,7 @@ export function RangeFinder({ vehicles }: { vehicles: WithHref[] }) {
           })}
         </ol>
       </div>
-      <p className="mt-8 border-t border-line pt-5 text-sm text-body">
+      <p className="mt-10 border-t border-line pt-6 text-sm text-body">
         Vous hésitez encore ?{" "}
         <Link href="/voitures-electriques/trouver" className="link-u font-semibold text-signal-deep">
           Répondez à quelques questions pour affiner la sélection
@@ -135,7 +135,7 @@ export function Selection({
         ))}
       </div>
 
-      <nav aria-label="Marques" className="mt-10 flex flex-wrap items-baseline gap-x-5 gap-y-2 border-t border-line pt-4">
+      <nav aria-label="Marques" className="mt-12 flex flex-wrap items-baseline gap-x-5 gap-y-2 border-t border-line pt-5">
         <span className="label mr-1">Par marque</span>
         {brands.map((b) => (
           <Link key={b.slug} href={`/voitures-electriques/${b.slug}`} className="link-u text-sm font-medium text-ink">
@@ -187,25 +187,25 @@ export function CompareSpotlight({ comparisons }: { comparisons: { slug: string;
             </caption>
             <thead>
               <tr className="align-bottom">
-                <th scope="col" className="w-[30%] pb-5 sm:w-[28%]">
+                <th scope="col" className="w-[30%] pb-6 sm:w-[28%]">
                   <span className="sr-only">Critère</span>
                 </th>
                 {[a, b].map((v) => (
-                  <th key={v.id} scope="col" className="pb-5 pr-3 font-normal sm:pr-6">
+                  <th key={v.id} scope="col" className="pb-6 pr-3 font-normal sm:pr-6">
                     <span className="eyebrow block text-signal-deep">{v.brand}</span>
                     <span className="mt-1 block text-h3 font-bold text-ink sm:text-h2">{v.model}</span>
                     <span className="block text-sm text-muted">{v.version}</span>
                   </th>
                 ))}
-                <th scope="col" className="label hidden w-[14%] pb-5 text-right sm:table-cell">Écart</th>
+                <th scope="col" className="label hidden w-[14%] pb-6 text-right sm:table-cell">Écart</th>
               </tr>
             </thead>
             <tbody>
               {rowsOf(a, b).map((r) => (
                 <tr key={r.label} className="border-t border-ink/15">
-                  <th scope="row" className="label py-4 pr-3 text-left sm:pr-4">{r.label}</th>
+                  <th scope="row" className="label py-5 pr-3 text-left sm:pr-4">{r.label}</th>
                   {[r.a, r.b].map((val, i) => (
-                    <td key={i} className="num wrap-anywhere py-4 pr-3 text-data-md font-bold text-ink sm:pr-6">
+                    <td key={i} className="num wrap-anywhere py-5 pr-3 text-data-md font-bold text-ink sm:pr-6">
                       {val === null ? (
                         <>
                           <span aria-hidden className="text-muted">—</span>
@@ -219,7 +219,7 @@ export function CompareSpotlight({ comparisons }: { comparisons: { slug: string;
                       )}
                     </td>
                   ))}
-                  <td className="hidden py-4 text-right sm:table-cell">
+                  <td className="hidden py-5 text-right sm:table-cell">
                     <Delta a={r.a} b={r.b} unit={r.unit} digits={r.digits} />
                   </td>
                 </tr>
@@ -237,8 +237,8 @@ export function CompareSpotlight({ comparisons }: { comparisons: { slug: string;
         </p>
       )}
 
-      <div className="mt-12">
-        <p className="label mb-1">Autres duels</p>
+      <div className="mt-14">
+        <p className="label mb-2">Autres duels</p>
         <ul className="grid gap-x-10 sm:grid-cols-3">
           {comparisons.slice(0, 3).map((c) => (
             <li key={c.slug}>
@@ -275,10 +275,10 @@ export function ChargingFeature({ photo }: { photo?: EditorialImage }) {
           <h2 id="recharge" className="balance mt-5 text-h1 font-bold text-ink">
             Recharger, c&apos;est une puissance, un lieu et un tarif.
           </h2>
-          <ul className="mt-8">
+          <ul className="mt-10">
             {chargeItems.map((c) => (
               <li key={c.href} className="border-t border-line first:border-ink first:border-t-2">
-                <Link href={c.href} className="group flex items-start gap-4 py-4">
+                <Link href={c.href} className="group flex items-start gap-4 py-5">
                   <span className="flex-1">
                     <span className="text-lg font-bold text-ink">
                       <span className="link-h group-hover:[background-size:100%_2px]">{c.t}</span>
@@ -368,7 +368,7 @@ export function ReadingSection({
           <ul className="border-t-2 border-ink">
             {guides.map((g) => (
               <li key={g.slug} className="border-b border-line">
-                <Link href={`/guides/${g.slug}`} className="group flex items-start gap-4 py-4">
+                <Link href={`/guides/${g.slug}`} className="group flex items-start gap-4 py-5">
                   <span className="flex-1">
                     <span className="eyebrow block text-signal-deep">{guideCategoryLabels[g.category]}</span>
                     <span className="mt-1 block text-base font-bold text-ink">
@@ -380,11 +380,11 @@ export function ReadingSection({
               </li>
             ))}
           </ul>
-          <p className="label mb-1 mt-9">Analyses récentes</p>
+          <p className="label mb-2 mt-10">Analyses récentes</p>
           <ul className="border-t-2 border-ink">
             {articles.map((a) => (
               <li key={a.slug} className="border-b border-line">
-                <Link href={`/blog/${a.slug}`} className="group block py-4">
+                <Link href={`/blog/${a.slug}`} className="group block py-5">
                   <span className="label block">
                     {a.category} · <time dateTime={a.updatedAt}>{formatDateFr(a.updatedAt)}</time>
                   </span>
@@ -422,7 +422,7 @@ export function ToolsLedger({ tools }: { tools: Tool[] }) {
       <ol className="grid gap-x-14 border-t border-ink/15 md:grid-cols-2">
         {tools.map((t, i) => (
           <li key={t.slug} className="border-b border-ink/15">
-            <Link href={t.href} className="group flex items-baseline gap-5 py-5">
+            <Link href={t.href} className="group flex items-baseline gap-5 py-6">
               <span className="num w-7 shrink-0 text-sm font-semibold text-signal-deep">{String(i + 1).padStart(2, "0")}</span>
               <span className="flex-1">
                 <span className="block text-lg font-bold text-ink">
@@ -446,7 +446,7 @@ export function ToolsLedger({ tools }: { tools: Tool[] }) {
 export function DataTrust() {
   return (
     <Section labelledBy="confiance" spacing="none" className="pt-section">
-      <div className="grid gap-x-14 gap-y-8 lg:grid-cols-12">
+      <div className="grid gap-x-14 gap-y-10 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <Kicker aside="07">Méthode</Kicker>
           <h2 id="confiance" className="balance mt-5 text-h1 font-bold text-ink">
