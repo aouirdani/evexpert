@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import localFont from "next/font/local";
+import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
@@ -21,6 +22,20 @@ const brandFont = localFont({
   display: "swap",
   fallback: ["system-ui", "Arial"],
   adjustFontFallback: "Arial",
+});
+
+// Refonte UI (direction hybride, voir .claude/skills/evexpert-ui) : IBM Plex Mono pour les
+// chiffres et les libellés de donnée uniquement (utilitaires `num`/`tabular`/`unit`/`label`/
+// `text-data-*` dans globals.css) — jamais les surtitres `.eyebrow`, qui restent en Schibsted
+// Grotesk. Sous-ensemble latin, 3 graisses (régulier/demi-gras/gras : ce sont exactement les
+// trois poids déjà utilisés avec ces utilitaires sur le site, relevé par grep avant ce choix —
+// pas une de plus). `next/font/google` calcule lui-même un fallback ajusté (size-adjust).
+const monoFont = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  style: ["normal"],
+  variable: "--font-plex-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -50,7 +65,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="fr" className={brandFont.variable}>
+    <html lang="fr" className={`${brandFont.variable} ${monoFont.variable}`}>
       <body className="flex min-h-screen flex-col bg-paper font-sans text-ink antialiased">
         <a
           href="#contenu"

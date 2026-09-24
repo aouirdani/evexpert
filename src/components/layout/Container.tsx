@@ -20,7 +20,7 @@ export function Container({
   width?: keyof typeof containerWidths;
 }) {
   return (
-    <div className={cn("mx-auto w-full px-4 sm:px-6", containerWidths[width], className)}>
+    <div className={cn("mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-14", containerWidths[width], className)}>
       {children}
     </div>
   );

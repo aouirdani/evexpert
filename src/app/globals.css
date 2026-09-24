@@ -11,6 +11,9 @@
 @theme inline {
   /* Police unique : Schibsted Grotesk (variable, auto-hébergée via next/font). */
   --font-sans: var(--font-brand), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  /* Refonte UI (direction hybride) : IBM Plex Mono pour les chiffres et les libellés de donnée
+     uniquement (utilitaires `num`/`tabular`/`unit`/`label` ci-dessous) — jamais `.eyebrow`. */
+  --font-mono: var(--font-plex-mono), ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 }
 
 @theme {
@@ -44,16 +47,20 @@
   --color-danger: #9b1c1c;
   --color-danger-bg: #fbe4e4;
 
-  /* Échelle typographique fluide (mobile-first) */
-  --text-display: clamp(2.5rem, 1.55rem + 4.4vw, 4.75rem);
+  /* Échelle typographique fluide (mobile-first). Hiérarchie plus affirmée (refonte hybride) :
+     --text-display (44→88 px) est réservé au hero de l'accueil, un titre éditorial court et
+     maîtrisé. --text-h1 (32→64 px) sert tous les autres gabarits, dont des titres réels de plus
+     de 90 caractères (fiches véhicule, guides) : plafonné nettement sous le display, testé avec
+     le H1 le plus long du site à 375 px et 1440 px avant validation. */
+  --text-display: clamp(2.75rem, 1.6rem + 5.2vw, 5.5rem);
   --text-display--line-height: 1;
-  --text-display--letter-spacing: -0.038em;
-  --text-h1: clamp(1.875rem, 1.45rem + 2.4vw, 3.5rem);
-  --text-h1--line-height: 1.04;
-  --text-h1--letter-spacing: -0.03em;
-  --text-h2: clamp(1.5rem, 1.3rem + 0.9vw, 2rem);
+  --text-display--letter-spacing: -0.042em;
+  --text-h1: clamp(2rem, 1.5rem + 2.8vw, 4rem);
+  --text-h1--line-height: 1.05;
+  --text-h1--letter-spacing: -0.032em;
+  --text-h2: clamp(1.625rem, 1.35rem + 1.3vw, 2.25rem);
   --text-h2--line-height: 1.15;
-  --text-h2--letter-spacing: -0.02em;
+  --text-h2--letter-spacing: -0.022em;
   --text-h3: clamp(1.125rem, 1.08rem + 0.2vw, 1.25rem);
   --text-h3--line-height: 1.3;
   --text-h3--letter-spacing: -0.01em;
@@ -96,9 +103,11 @@
   --container-wide: 80rem;
   --container-reading: 44rem;
 
-  /* Rythme vertical entre sections */
-  --spacing-section: clamp(3.5rem, 2.4rem + 5vw, 7rem);
-  --spacing-block: clamp(2.5rem, 1.9rem + 2.4vw, 4rem);
+  /* Rythme vertical entre sections. Plus généreux (refonte hybride) : 64→144 px entre sections
+     (était 56→112), 44→80 px entre blocs d'une section (était 40→64) — sans aller jusqu'aux
+     80-160 px du skill tel quel. */
+  --spacing-section: clamp(4rem, 2.8rem + 6vw, 9rem);
+  --spacing-block: clamp(2.75rem, 2rem + 3vw, 5rem);
 }
 
 @layer base {
@@ -146,32 +155,39 @@
   text-transform: uppercase;
 }
 
-/* Étiquette de donnée : plus sobre que l'eyebrow, pensée pour être répétée. */
+/* Étiquette de donnée : plus sobre que l'eyebrow, pensée pour être répétée.
+   IBM Plex Mono (refonte hybride) : une donnée est un objet mono, de son étiquette à son unité. */
 @utility label {
+  font-family: var(--font-mono);
   font-size: 0.6875rem;
   line-height: 1.2;
   font-weight: 600;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: color-mix(in srgb, currentColor 80%, transparent);
 }
 
 /* Chiffres alignés (tableaux, grands chiffres). */
 @utility tabular {
+  font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.01em;
 }
 
 /* Valeur de donnée : tabulaire, sans changer l'interlettrage de la taille choisie. */
 @utility num {
+  font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
   font-feature-settings: "tnum" 1;
 }
 
-/* Unité qui suit une valeur : petite, discrète, sur la ligne de base. */
+/* Unité qui suit une valeur : petite, discrète, sur la ligne de base.
+   Poids 400 : c'est l'une des 3 graisses IBM Plex Mono chargées (400/600/700) — 500 forcerait
+   le navigateur à synthétiser un faux gras plutôt que d'afficher une vraie graisse variable. */
 @utility unit {
+  font-family: var(--font-mono);
   font-size: max(0.4em, 0.75rem);
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.01em;
   color: color-mix(in srgb, currentColor 66%, transparent);
   margin-inline-start: 0.28em;
