@@ -9,6 +9,42 @@ Objectif : donner à EVExpert l'allure d'un constructeur haut de gamme (esprit T
 
 On s'inspire d'un *esprit*, on ne copie jamais les logos, visuels, polices propriétaires ou mises en page exactes d'une marque existante.
 
+## Décision de direction pour EVExpert (refonte du 24/09/2026) — ne pas rouvrir sans le demander
+
+Le site prévaut sur ce skill à chaque conflit. Direction retenue pour EVExpert : **hybride**, pas
+refonte complète. Ne réappliquer les tokens du skill tels quels (palette, rayons pilule) qu'à la
+demande explicite d'une refonte complète.
+
+- **Conservé de l'identité actuelle** : police unique Schibsted Grotesk (pas de Manrope), rayons
+  4/8 px (pas 12-28 px ni pilule), encre `#0B1626`, accent `#0F6B4F`/`#B8F13C` (pas de changement de
+  palette).
+- **Repris du skill** : IBM Plex Mono pour les chiffres et les libellés de données uniquement (pas
+  les surtitres de section `.eyebrow`, qui restent en Schibsted Grotesk — ce sont des rubriques
+  éditoriales, pas des données) ; une échelle d'espacement plus généreuse ; une hiérarchie
+  typographique plus affirmée (le H1 le plus grand est réservé au hero de l'accueil ; les autres
+  gabarits ont un H1 plafonné, pensé pour des titres longs) ; le polissage des composants (cartes,
+  tableaux, blocs de résultats, header, footer) sans changer leur système de rayons/couleurs.
+- **Écarts entre le skill et le site EVExpert réel**, tranchés en faveur du site — ne jamais les
+  réintroduire sans validation explicite :
+  1. **Pas de prix.** EVExpert n'a aucune donnée de prix (`Non disponible` partout, voir
+     `/methodologie`). Ne jamais ajouter de ligne « Prix » sur une carte véhicule, une fiche ou un
+     comparateur, ni inventer un `[—]` qui laisserait deviner un prix à venir : omettre la ligne.
+  2. **Pas de « meilleure valeur ».** Le comparateur EVExpert affiche un écart chiffré (`Δ`) entre
+     deux véhicules, jamais un verdict. Ne jamais ajouter le point accent « meilleure valeur d'une
+     rangée » du composant Comparateur.
+  3. **Pas de newsletter.** EVExpert n'a aucune infrastructure de collecte d'e-mail. Ne jamais
+     ajouter le bloc newsletter du Footer (formulaire non fonctionnel = pire qu'une absence).
+  4. **Pas de nouveau lien dans le header.** Le header est rendu sur toutes les pages : y ajouter un
+     lien (ex. un CTA vers le Finder) change le jeu de liens internes de tout le site et casse
+     l'invariant SEO « aucun changement de lien interne » vérifié par `seo:audit --compare`. Le
+     bouton d'action du header doit toujours pointer vers un lien déjà présent dans la navigation
+     actuelle.
+  5. **Comparateur mobile.** Le choix actuel (bandes empilées plutôt que colonnes en défilement
+     horizontal avec en-tête collant) vient d'une contrainte technique réelle : `position: sticky`
+     ne fonctionne pas sous un ancêtre `overflow-x-auto`. Ne pas copier le défilement horizontal du
+     skill sans résoudre proprement ce piège (conteneur dédié pour le sticky) ; sinon garder les
+     bandes empilées et le signaler plutôt que livrer un sticky cassé.
+
 ## Workflow obligatoire
 
 1. **Audite avant de toucher.** Identifie le stack (Next.js, Vite, WordPress, etc.), le système de style en place (Tailwind, CSS Modules, SCSS, styled-components…), la liste des pages et composants partagés. Résume ce que tu as trouvé en quelques lignes.

@@ -2,6 +2,11 @@
 
 Les exemples utilisent du HTML + classes utilitaires `ev-*` de `tokens.css`. Adapte-les au framework du projet (JSX, Vue, Blade…) sans changer les valeurs.
 
+> **Sur EVExpert (voir SKILL.md, « Décision de direction »), direction hybride retenue** : ces
+> specs servent de référence pour l'espacement, la hiérarchie typo et le polissage général, mais
+> **pas** pour la palette, les rayons pilule, ni les cinq points marqués ⚠️ ci-dessous (prix,
+> meilleure valeur, newsletter, lien header, comparateur mobile).
+
 ## Sommaire
 1. Header
 2. Boutons
@@ -21,7 +26,8 @@ Les exemples utilisent du HTML + classes utilitaires `ev-*` de `tokens.css`. Ada
 
 ## 1. Header
 
-- Hauteur 80 px, marges `--ev-gutter`. Logo à gauche, 5 liens max au centre (14 px, poids 500), actions à droite (bouton-icône recherche 44 px rond bordé + bouton pilule « Trouver mon VE »).
+- ⚠️ Sur EVExpert : le bouton d'action ne doit pas être un nouveau lien « Trouver mon VE » — il changerait le jeu de liens internes de toutes les pages (voir SKILL.md, point 4). Pointer vers un lien déjà présent dans `mainNav` (ex. Comparer, déjà mis en avant).
+- Hauteur 80 px, marges `--ev-gutter`. Logo à gauche, 5 liens max au centre (14 px, poids 500), actions à droite (bouton-icône recherche 44 px rond bordé + bouton d'action).
 - Sur le hero sombre : transparent, texte `--ev-on-dark`. Au scroll (> 40 px) : fond `--ev-bg` à 85 % d'opacité + `backdrop-filter: blur(12px)`, texte encre, bordure basse 1 px `--ev-line`. Transition 350 ms.
 - Se masque en scrollant vers le bas, réapparaît en remontant.
 - Lien actif : soulignement 1 px sous le texte, pas de couleur.
@@ -66,10 +72,12 @@ Hauteur 52 px (44 px en petit), padding horizontal 28 px, rayon pilule, 15 px po
     <div class="ev-card__head">
       <h3>Nom du modèle</h3><span class="ev-mono ev-muted">SUV compact</span>
     </div>
+    <!-- ⚠️ Sur EVExpert : pas de ligne Prix, aucune donnée de prix n'existe (voir SKILL.md, point 1).
+         Remplacer par une 3e spec réellement disponible (ex. batterie utile, puissance DC). -->
     <dl class="ev-specs ev-specs--compact">
       <div><dt>Autonomie WLTP</dt><dd class="ev-mono">412 km</dd></div>
       <div><dt>Recharge 10–80 %</dt><dd class="ev-mono">28 min</dd></div>
-      <div><dt>Prix de départ</dt><dd class="ev-mono">34 990 €</dd></div>
+      <div><dt>Batterie utile</dt><dd class="ev-mono">60,0 kWh</dd></div>
     </dl>
   </div>
 </a>
@@ -105,7 +113,7 @@ Mise en page éditoriale en liste plutôt qu'en cartes.
 
 ## 9. Fiche véhicule
 
-1. En-tête : fil d'Ariane mono 12 px, nom du modèle en H1, marque et catégorie en surtitre, prix de départ à droite.
+1. En-tête : fil d'Ariane mono 12 px, nom du modèle en H1, marque et catégorie en surtitre. ⚠️ Pas de prix à droite (voir SKILL.md, point 1) — laisser cet espace à une autre cote clé (autonomie) ou rien.
 2. Visuel large (galerie : image principale + miniatures, pas de carrousel auto).
 3. Bloc de specs héros (autonomie, recharge 10–80 %, puissance, prix).
 4. Navigation d'ancres collante (Autonomie · Recharge · Dimensions · Prix & aides · Avis), fond `--ev-bg` flouté, onglet actif souligné.
@@ -117,9 +125,9 @@ Mise en page éditoriale en liste plutôt qu'en cartes.
 
 - Colonnes de véhicules (2 à 4) avec en-tête collant : photo réduite, nom, bouton retirer (icône, `aria-label`).
 - Rangées de critères groupées par thème avec surtitre mono.
-- La meilleure valeur d'une rangée est mise en évidence par un point accent 8 px à côté du chiffre (jamais un fond coloré).
+- ⚠️ Sur EVExpert : pas de point accent « meilleure valeur » (voir SKILL.md, point 2). Le principe du site est « aucun classement » : afficher l'écart chiffré (`Δ`) entre les véhicules, jamais désigner un gagnant.
 - Option « Afficher uniquement les différences » (interrupteur).
-- Mobile : 2 véhicules max côte à côte, défilement horizontal au-delà.
+- Mobile : ⚠️ le défilement horizontal avec en-têtes collants suppose que `position: sticky` fonctionne sous un ancêtre `overflow-x-auto` — ce n'est pas le cas nativement (voir SKILL.md, point 5). Prévoir un conteneur dédié pour le sticky avant de l'implémenter, sinon garder des bandes empilées.
 
 ## 11. Formulaires et simulateurs
 
@@ -132,7 +140,7 @@ Mise en page éditoriale en liste plutôt qu'en cartes.
 ## 12. Footer
 
 - `.ev-dark`, padding 96 px haut / 48 px bas, `margin-top: --ev-section-gap`.
-- Gauche : accroche newsletter en H2 40 px (deuxième ligne en `--ev-on-dark-muted`) + champ e-mail pilule bordé + bouton accent.
+- ⚠️ Sur EVExpert : pas de bloc newsletter (voir SKILL.md, point 3) — aucune infrastructure de collecte d'e-mail n'existe. Garder l'espace pour l'accroche éditoriale (promesse du site) sans formulaire.
 - Droite : 3 colonnes de liens (titre en surtitre mono gris, liens 14 px).
 - Bas : ligne 1 px `--ev-dark-line`, logo géant (120 px, `line-height: 0.8`) à gauche, mentions mono 12 px à droite.
 
