@@ -13,8 +13,10 @@
 //   node scripts/seo-audit.mjs --compare docs/seo/audit/baseline.json docs/seo/audit/apres-a.json
 //
 // Écarts signalés : URL disparue du sitemap, statut != 200, canonical ou robots modifié,
-// H1 absent ou multiple, title (> 60 caractères) ou meta description (> 160 caractères) trop
-// longs, title ou meta description dupliqués entre pages, JSON-LD invalide, lien interne cassé.
+// title/meta/H1 dont le TEXTE a changé (comparaison exacte, pas seulement la longueur), liens
+// internes ajoutés ou retirés sur une page, H1 absent ou multiple, title (> 60 caractères) ou
+// meta description (> 160 caractères) trop longs, title ou meta description dupliqués entre
+// pages, JSON-LD invalide, lien interne cassé.
 
 import { readFileSync, writeFileSync } from "node:fs";
 
@@ -176,6 +178,22 @@ function compare(beforePath, afterPath) {
       }
       if (b.robots !== a.robots) {
         issues.push({ type: "robots-modifie", path, before: b.robots, after: a.robots });
+      }
+      if (b.title !== a.title) {
+        issues.push({ type: "title-texte-modifie", path, before: b.title, after: a.title });
+      }
+      if (b.description !== a.description) {
+        issues.push({ type: "meta-texte-modifiee", path, before: b.description, after: a.description });
+      }
+      if (JSON.stringify(b.h1) !== JSON.stringify(a.h1)) {
+        issues.push({ type: "h1-texte-modifie", path, before: b.h1, after: a.h1 });
+      }
+      const beforeLinks = new Set(b.internalLinks);
+      const afterLinks = new Set(a.internalLinks);
+      const added = a.internalLinks.filter((l) => !beforeLinks.has(l));
+      const removed = b.internalLinks.filter((l) => !afterLinks.has(l));
+      if (added.length || removed.length) {
+        issues.push({ type: "liens-internes-modifies", path, added, removed });
       }
     }
     if (a.h1Count === 0) issues.push({ type: "h1-absent", path });
