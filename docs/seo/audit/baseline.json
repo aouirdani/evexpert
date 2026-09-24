@@ -1,6 +1,6 @@
 {
- "capturedAt": "2026-09-24T11:12:52.806Z",
- "base": "http://localhost:3950",
+ "capturedAt": "2026-09-24T11:15:00.376Z",
+ "base": "http://localhost:3952",
  "pageCount": 126,
  "internalLinkCount": 151,
  "brokenLinkCount": 0,
@@ -8,17 +8,17 @@
  "pages": [
   {
    "path": "/",
-   "url": "http://localhost:3950/",
+   "url": "http://localhost:3952/",
    "status": 200,
-   "title": "Voiture électrique : comparez l&#x27;autonomie, la recharge et le coût réel",
-   "titleLength": 75,
-   "description": "Comprenez, comparez et calculez le coût réel d&#x27;une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l&#x27;autonomie.",
-   "descriptionLength": 175,
+   "title": "Voiture électrique : comparez l'autonomie, la recharge et le coût réel",
+   "titleLength": 70,
+   "description": "Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.",
+   "descriptionLength": 165,
    "canonical": "https://www.evexpert.fr",
    "robots": "index, follow",
    "h1Count": 1,
    "h1": [
-    "Voiture électrique : comparez l&#x27;autonomie, la recharge et le coût réel"
+    "Voiture électrique : comparez l'autonomie, la recharge et le coût réel"
    ],
    "internalLinks": [
     "/manifest.webmanifest",
@@ -116,7 +116,7 @@
   },
   {
    "path": "/outils",
-   "url": "http://localhost:3950/outils",
+   "url": "http://localhost:3952/outils",
    "status": 200,
    "title": "Calculateurs pour voiture électrique | EVExpert",
    "titleLength": 47,
@@ -172,7 +172,7 @@
   },
   {
    "path": "/voitures-electriques",
-   "url": "http://localhost:3950/voitures-electriques",
+   "url": "http://localhost:3952/voitures-electriques",
    "status": 200,
    "title": "Voitures électriques : autonomie, recharge et fiches techniques | EVExpert",
    "titleLength": 74,
@@ -299,7 +299,7 @@
   },
   {
    "path": "/voitures-electriques/trouver",
-   "url": "http://localhost:3950/voitures-electriques/trouver",
+   "url": "http://localhost:3952/voitures-electriques/trouver",
    "status": 200,
    "title": "Trouver la voiture électrique adaptée à votre usage | EVExpert",
    "titleLength": 62,
@@ -365,7 +365,7 @@
   },
   {
    "path": "/comparer",
-   "url": "http://localhost:3950/comparer",
+   "url": "http://localhost:3952/comparer",
    "status": 200,
    "title": "Comparateur de voitures électriques | EVExpert",
    "titleLength": 46,
@@ -431,17 +431,17 @@
   },
   {
    "path": "/recharge",
-   "url": "http://localhost:3950/recharge",
+   "url": "http://localhost:3952/recharge",
    "status": 200,
-   "title": "Recharge d&#x27;une voiture électrique : puissances, connecteurs, coûts | EVExpert",
-   "titleLength": 82,
+   "title": "Recharge d'une voiture électrique : puissances, connecteurs, coûts | EVExpert",
+   "titleLength": 77,
    "description": "Tout comprendre sur la recharge : AC ou DC, 7,4, 11, 22 kW, connecteurs Type 2 et CCS, recharge à domicile ou sur borne publique, temps et coûts avec calculateurs.",
    "descriptionLength": 163,
    "canonical": "https://www.evexpert.fr/recharge",
    "robots": "index, follow",
    "h1Count": 1,
    "h1": [
-    "Recharge d&#x27;une voiture électrique : puissances, connecteurs, coûts"
+    "Recharge d'une voiture électrique : puissances, connecteurs, coûts"
    ],
    "internalLinks": [
     "/manifest.webmanifest",
@@ -498,12 +498,12 @@
   },
   {
    "path": "/guides",
-   "url": "http://localhost:3950/guides",
+   "url": "http://localhost:3952/guides",
    "status": 200,
    "title": "Guides voiture électrique : recharge, autonomie, batterie et coûts | EVExpert",
    "titleLength": 77,
-   "description": "Guides pratiques sur la voiture électrique : calculer l&#x27;autonomie réelle, comprendre la recharge AC et DC, préserver la batterie, estimer le coût réel et choisir son modèle.",
-   "descriptionLength": 178,
+   "description": "Guides pratiques sur la voiture électrique : calculer l'autonomie réelle, comprendre la recharge AC et DC, préserver la batterie, estimer le coût réel et choisir son modèle.",
+   "descriptionLength": 173,
    "canonical": "https://www.evexpert.fr/guides",
    "robots": "index, follow",
    "h1Count": 1,
@@ -577,12 +577,12 @@
   },
   {
    "path": "/blog",
-   "url": "http://localhost:3950/blog",
+   "url": "http://localhost:3952/blog",
    "status": 200,
    "title": "Blog EVExpert : analyses chiffrées sur la voiture électrique | EVExpert",
    "titleLength": 71,
-   "description": "Analyses sourcées et recalculées sur les données du catalogue EVExpert : consommation, recharge rapide, batteries. Pas d&#x27;actualité non vérifiée.",
-   "descriptionLength": 149,
+   "description": "Analyses sourcées et recalculées sur les données du catalogue EVExpert : consommation, recharge rapide, batteries. Pas d'actualité non vérifiée.",
+   "descriptionLength": 144,
    "canonical": "https://www.evexpert.fr/blog",
    "robots": "index, follow",
    "h1Count": 1,
@@ -641,12 +641,12 @@
   },
   {
    "path": "/methodologie",
-   "url": "http://localhost:3950/methodologie",
+   "url": "http://localhost:3952/methodologie",
    "status": 200,
    "title": "Méthodologie : sources, calculs et limites | EVExpert",
    "titleLength": 53,
-   "description": "Comment EVExpert collecte ses données, calcule les coûts, estime l&#x27;autonomie et distingue données sourcées, calculs et estimations. Hypothèses et limites détaillées.",
-   "descriptionLength": 170,
+   "description": "Comment EVExpert collecte ses données, calcule les coûts, estime l'autonomie et distingue données sourcées, calculs et estimations. Hypothèses et limites détaillées.",
+   "descriptionLength": 165,
    "canonical": "https://www.evexpert.fr/methodologie",
    "robots": "index, follow",
    "h1Count": 1,
@@ -695,12 +695,12 @@
   },
   {
    "path": "/sources",
-   "url": "http://localhost:3950/sources",
+   "url": "http://localhost:3952/sources",
    "status": 200,
    "title": "Sources des données | EVExpert",
    "titleLength": 30,
-   "description": "D&#x27;où viennent les données d&#x27;EVExpert : source des fiches véhicules, références externes citées, date de relevé et politique de correction.",
-   "descriptionLength": 148,
+   "description": "D'où viennent les données d'EVExpert : source des fiches véhicules, références externes citées, date de relevé et politique de correction.",
+   "descriptionLength": 138,
    "canonical": "https://www.evexpert.fr/sources",
    "robots": "index, follow",
    "h1Count": 1,
@@ -749,17 +749,17 @@
   },
   {
    "path": "/a-propos",
-   "url": "http://localhost:3950/a-propos",
+   "url": "http://localhost:3952/a-propos",
    "status": 200,
-   "title": "À propos d&#x27;EVExpert | EVExpert",
-   "titleLength": 35,
-   "description": "EVExpert aide à comprendre, comparer et calculer le coût réel d&#x27;une voiture électrique en France : notre mission, nos quatre piliers et nos règles éditoriales.",
-   "descriptionLength": 164,
+   "title": "À propos d'EVExpert | EVExpert",
+   "titleLength": 30,
+   "description": "EVExpert aide à comprendre, comparer et calculer le coût réel d'une voiture électrique en France : notre mission, nos quatre piliers et nos règles éditoriales.",
+   "descriptionLength": 159,
    "canonical": "https://www.evexpert.fr/a-propos",
    "robots": "index, follow",
    "h1Count": 1,
    "h1": [
-    "À propos d&#x27;EVExpert"
+    "À propos d'EVExpert"
    ],
    "internalLinks": [
     "/manifest.webmanifest",
@@ -803,7 +803,7 @@
   },
   {
    "path": "/contact",
-   "url": "http://localhost:3950/contact",
+   "url": "http://localhost:3952/contact",
    "status": 200,
    "title": "Contact | EVExpert",
    "titleLength": 18,
@@ -857,17 +857,17 @@
   },
   {
    "path": "/outils/cout-recharge-voiture-electrique",
-   "url": "http://localhost:3950/outils/cout-recharge-voiture-electrique",
+   "url": "http://localhost:3952/outils/cout-recharge-voiture-electrique",
    "status": 200,
-   "title": "Calculateur de coût de recharge d&#x27;une voiture électrique | EVExpert",
-   "titleLength": 72,
-   "description": "Estimez le coût d&#x27;une recharge selon la capacité de batterie, le prix du kWh et le rendement.",
-   "descriptionLength": 98,
+   "title": "Calculateur de coût de recharge d'une voiture électrique | EVExpert",
+   "titleLength": 67,
+   "description": "Estimez le coût d'une recharge selon la capacité de batterie, le prix du kWh et le rendement.",
+   "descriptionLength": 93,
    "canonical": "https://www.evexpert.fr/outils/cout-recharge-voiture-electrique",
    "robots": "index, follow",
    "h1Count": 1,
    "h1": [
-    "Calculateur de coût de recharge d&#x27;une voiture électrique"
+    "Calculateur de coût de recharge d'une voiture électrique"
    ],
    "internalLinks": [
     "/manifest.webmanifest",
@@ -920,17 +920,17 @@
   },
   {
    "path": "/outils/autonomie-voiture-electrique",
-   "url": "http://localhost:3950/outils/autonomie-voiture-electrique",
+   "url": "http://localhost:3952/outils/autonomie-voiture-electrique",
    "status": 200,
-   "title": "Calculateur d&#x27;autonomie d&#x27;une voiture électrique | EVExpert",
-   "titleLength": 69,
-   "description": "Obtenez une estimation d&#x27;autonomie selon la vitesse, la température et le type de conduite.",
-   "descriptionLength": 96,
+   "title": "Calculateur d'autonomie d'une voiture électrique | EVExpert",
+   "titleLength": 59,
+   "description": "Obtenez une estimation d'autonomie selon la vitesse, la température et le type de conduite.",
+   "descriptionLength": 91,
    "canonical": "https://www.evexpert.fr/outils/autonomie-voiture-electrique",
    "robots": "index, follow",
    "h1Count": 1,
    "h1": [
-    "Calculateur d&#x27;autonomie d&#x27;une voiture électrique"
+    "Calculateur d'autonomie d'une voiture électrique"
    ],
    "internalLinks": [
     "/manifest.webmanifest",
@@ -984,7 +984,7 @@
   },
   {
    "path": "/outils/cout-100-km",
-   "url": "http://localhost:3950/outils/cout-100-km",
+   "url": "http://localhost:3952/outils/cout-100-km",
    "status": 200,
    "title": "Calculateur de coût aux 100 km | EVExpert",
    "titleLength": 41,
@@ -1047,12 +1047,12 @@
   },
   {
    "path": "/outils/essence-vs-electrique",
-   "url": "http://localhost:3950/outils/essence-vs-electrique",
+   "url": "http://localhost:3952/outils/essence-vs-electrique",
    "status": 200,
    "title": "Comparateur essence vs électrique | EVExpert",
    "titleLength": 44,
-   "description": "Comparez le coût annuel et pluriannuel d&#x27;une voiture électrique et d&#x27;une voiture essence.",
-   "descriptionLength": 99,
+   "description": "Comparez le coût annuel et pluriannuel d'une voiture électrique et d'une voiture essence.",
+   "descriptionLength": 89,
    "canonical": "https://www.evexpert.fr/outils/essence-vs-electrique",
    "robots": "index, follow",
    "h1Count": 1,
@@ -1110,7 +1110,7 @@
   },
   {
    "path": "/outils/tco-voiture-electrique",
-   "url": "http://localhost:3950/outils/tco-voiture-electrique",
+   "url": "http://localhost:3952/outils/tco-voiture-electrique",
    "status": 200,
    "title": "Calculateur de coût total de possession (TCO) | EVExpert",
    "titleLength": 56,
@@ -1173,12 +1173,12 @@
   },
   {
    "path": "/outils/temps-recharge",
-   "url": "http://localhost:3950/outils/temps-recharge",
+   "url": "http://localhost:3952/outils/temps-recharge",
    "status": 200,
    "title": "Calculateur de temps de recharge | EVExpert",
    "titleLength": 43,
-   "description": "Estimez le temps de recharge théorique selon la puissance et l&#x27;état de charge.",
-   "descriptionLength": 83,
+   "description": "Estimez le temps de recharge théorique selon la puissance et l'état de charge.",
+   "descriptionLength": 78,
    "canonical": "https://www.evexpert.fr/outils/temps-recharge",
    "robots": "index, follow",
    "h1Count": 1,
@@ -1237,12 +1237,12 @@
   },
   {
    "path": "/outils/trajet-longue-distance",
-   "url": "http://localhost:3950/outils/trajet-longue-distance",
+   "url": "http://localhost:3952/outils/trajet-longue-distance",
    "status": 200,
    "title": "Simulateur de trajet longue distance en voiture électrique | EVExpert",
    "titleLength": 69,
-   "description": "Simulez un long trajet : autonomie réelle estimée, nombre d&#x27;arrêts de recharge et durée théorique selon le véhicule.",
-   "descriptionLength": 121,
+   "description": "Simulez un long trajet : autonomie réelle estimée, nombre d'arrêts de recharge et durée théorique selon le véhicule.",
+   "descriptionLength": 116,
    "canonical": "https://www.evexpert.fr/outils/trajet-longue-distance",
    "robots": "index, follow",
    "h1Count": 1,
@@ -1301,7 +1301,7 @@
   },
   {
    "path": "/outils/puissance-borne-recharge",
-   "url": "http://localhost:3950/outils/puissance-borne-recharge",
+   "url": "http://localhost:3952/outils/puissance-borne-recharge",
    "status": 200,
    "title": "Puissance de borne : quel temps de recharge selon 3,7, 7,4, 11, 22 kW ou DC ? | EVExpert",
    "titleLength": 88,
@@ -1364,7 +1364,7 @@
   },
   {
    "path": "/voitures-electriques/bmw",
-   "url": "http://localhost:3950/voitures-electriques/bmw",
+   "url": "http://localhost:3952/voitures-electriques/bmw",
    "status": 200,
    "title": "BMW électriques : modèles, autonomie et recharge | EVExpert",
    "titleLength": 59,
@@ -1424,7 +1424,7 @@
   },
   {
    "path": "/voitures-electriques/byd",
-   "url": "http://localhost:3950/voitures-electriques/byd",
+   "url": "http://localhost:3952/voitures-electriques/byd",
    "status": 200,
    "title": "BYD électriques : modèles, autonomie et recharge | EVExpert",
    "titleLength": 59,
@@ -1484,7 +1484,7 @@
   },
   {
    "path": "/voitures-electriques/citroen",
-   "url": "http://localhost:3950/voitures-electriques/citroen",
+   "url": "http://localhost:3952/voitures-electriques/citroen",
    "status": 200,
    "title": "Citroën électriques : modèles, autonomie et recharge | EVExpert",
    "titleLength": 63,
@@ -1543,7 +1543,7 @@
   },
   {
    "path": "/voitures-electriques/fiat",
-   "url": "http://localhost:3950/voitures-electriques/fiat",
+   "url": "http://localhost:3952/voitures-electriques/fiat",
    "status": 200,
    "title": "Fiat électriques : modèles, autonomie et recharge | EVExpert",
    "titleLength": 60,
@@ -1602,7 +1602,7 @@
   },
   {
    "path": "/voitures-electriques/ford",
-   "url": "http://localhost:3950/voitures-electriques/ford",
+   "url": "http://localhost:3952/voitures-electriques/ford",
    "status": 200,
    "title": "Ford électriques : modèles, autonomie et recharge | EVExpert",
    "titleLength": 60,
@@ -1661,7 +1661,7 @@
   },
   {
    "path": "/voitures-electriques/hyundai",
-   "url": "http://localhost:3950/voitures-electriques/hyundai",
+   "url": "http://localhost:3952/voitures-electriques/hyundai",
    "status": 200,
    "title": "Hyundai électriques : modèles, autonomie et recharge | EVExpert",
    "titleLength": 63,
@@ -1721,7 +1721,7 @@
   },
   {
    "path": "/voitures-electriques/kia",
-   "url": "http://localhost:3950/voitures-electriques/kia",
+   "url": "http://localhost:3952/voitures-electriques/kia",
    "status": 200,
    "title": "Kia électriques : modèles, autonomie et recharge | EVExpert",
    "titleLength": 59,
@@ -1780,7 +1780,7 @@
   },
   {
    "path": "/voitures-electriques/mercedes-benz",
-   "url": "http://localhost:3950/voitures-electriques/mercedes-benz",
+   "url": "http://localhost:3952/voitures-electriques/mercedes-benz",
    "status": 200,
    "title": "Mercedes-Benz électriques : modèles, autonomie et recharge | EVExpert",
    "titleLength": 69,
@@ -1839,7 +1839,7 @@
   },
   {
    "path": "/voitures-electriques/mg",
-   "url": "http://localhost:3950/voitures-electriques/mg",
+   "url": "http://localhost:3952/voitures-electriques/mg",
    "status": 200,
    "title": "MG électriques : modèles, autonomie et recharge | EVExpert",
    "titleLength": 58,
@@ -1898,7 +1898,7 @@
   },
   {
    "path": "/voitures-electriques/opel",
-   "url": "http://localhost:3950/voitures-electriques/opel",
+   "url": "http://localhost:3952/voitures-electriques/opel",
    "status": 200,
    "title": "Opel électriques : modèles, autonomie et recharge | EVExpert",
    "titleLength": 60,
@@ -1957,7 +1957,7 @@
   },
   {
    "path": "/voitures-electriques/peugeot",
-   "url": "http://localhost:3950/voitures-electriques/peugeot",
+   "url": "http://localhost:3952/voitures-electriques/peugeot",
    "status": 200,
    "title": "Peugeot électriques : modèles, autonomie et recharge | EVExpert",
    "titleLength": 63,
@@ -2017,7 +2017,7 @@
   },
   {
    "path": "/voitures-electriques/renault",
-   "url": "http://localhost:3950/voitures-electriques/renault",
+   "url": "http://localhost:3952/voitures-electriques/renault",
    "status": 200,
    "title": "Renault électriques : modèles, autonomie et recharge | EVExpert",
    "titleLength": 63,
@@ -2079,7 +2079,7 @@
   },
   {
    "path": "/voitures-electriques/skoda",
-   "url": "http://localhost:3950/voitures-electriques/skoda",
+   "url": "http://localhost:3952/voitures-electriques/skoda",
    "status": 200,
    "title": "Škoda électriques : modèles, autonomie et recharge | EVExpert",
    "titleLength": 61,
@@ -2138,7 +2138,7 @@
   },
   {
    "path": "/voitures-electriques/tesla",
-   "url": "http://localhost:3950/voitures-electriques/tesla",
+   "url": "http://localhost:3952/voitures-electriques/tesla",
    "status": 200,
    "title": "Tesla électriques : modèles, autonomie et recharge | EVExpert",
    "titleLength": 61,
@@ -2199,7 +2199,7 @@
   },
   {
    "path": "/voitures-electriques/volkswagen",
-   "url": "http://localhost:3950/voitures-electriques/volkswagen",
+   "url": "http://localhost:3952/voitures-electriques/volkswagen",
    "status": 200,
    "title": "Volkswagen électriques : modèles, autonomie et recharge | EVExpert",
    "titleLength": 66,
@@ -2258,7 +2258,7 @@
   },
   {
    "path": "/voitures-electriques/volvo",
-   "url": "http://localhost:3950/voitures-electriques/volvo",
+   "url": "http://localhost:3952/voitures-electriques/volvo",
    "status": 200,
    "title": "Volvo électriques : modèles, autonomie et recharge | EVExpert",
    "titleLength": 61,
@@ -2317,7 +2317,7 @@
   },
   {
    "path": "/voitures-electriques/tesla/model-3",
-   "url": "http://localhost:3950/voitures-electriques/tesla/model-3",
+   "url": "http://localhost:3952/voitures-electriques/tesla/model-3",
    "status": 200,
    "title": "Tesla Model 3 : versions, autonomie et recharge comparées | EVExpert",
    "titleLength": 68,
@@ -2380,7 +2380,7 @@
   },
   {
    "path": "/voitures-electriques/tesla/model-y",
-   "url": "http://localhost:3950/voitures-electriques/tesla/model-y",
+   "url": "http://localhost:3952/voitures-electriques/tesla/model-y",
    "status": 200,
    "title": "Tesla Model Y : versions, autonomie et recharge comparées | EVExpert",
    "titleLength": 68,
@@ -2443,7 +2443,7 @@
   },
   {
    "path": "/voitures-electriques/renault/5-e-tech",
-   "url": "http://localhost:3950/voitures-electriques/renault/5-e-tech",
+   "url": "http://localhost:3952/voitures-electriques/renault/5-e-tech",
    "status": 200,
    "title": "Renault 5 E-Tech 52 kWh 150 ch : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 83,
@@ -2509,7 +2509,7 @@
   },
   {
    "path": "/voitures-electriques/renault/4-e-tech",
-   "url": "http://localhost:3950/voitures-electriques/renault/4-e-tech",
+   "url": "http://localhost:3952/voitures-electriques/renault/4-e-tech",
    "status": 200,
    "title": "Renault 4 E-Tech 52 kWh 150 ch : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 83,
@@ -2575,7 +2575,7 @@
   },
   {
    "path": "/voitures-electriques/renault/twingo-e-tech",
-   "url": "http://localhost:3950/voitures-electriques/renault/twingo-e-tech",
+   "url": "http://localhost:3952/voitures-electriques/renault/twingo-e-tech",
    "status": 200,
    "title": "Renault Twingo E-Tech 27,5 kWh : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 83,
@@ -2641,7 +2641,7 @@
   },
   {
    "path": "/voitures-electriques/renault/scenic-e-tech",
-   "url": "http://localhost:3950/voitures-electriques/renault/scenic-e-tech",
+   "url": "http://localhost:3952/voitures-electriques/renault/scenic-e-tech",
    "status": 200,
    "title": "Renault Scénic E-Tech EV87 220 ch : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 86,
@@ -2707,7 +2707,7 @@
   },
   {
    "path": "/voitures-electriques/renault/megane-e-tech",
-   "url": "http://localhost:3950/voitures-electriques/renault/megane-e-tech",
+   "url": "http://localhost:3952/voitures-electriques/renault/megane-e-tech",
    "status": 200,
    "title": "Renault Mégane E-Tech EV60 220 ch : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 86,
@@ -2773,7 +2773,7 @@
   },
   {
    "path": "/voitures-electriques/citroen/e-c3",
-   "url": "http://localhost:3950/voitures-electriques/citroen/e-c3",
+   "url": "http://localhost:3952/voitures-electriques/citroen/e-c3",
    "status": 200,
    "title": "Citroën ë-C3 Standard Range 44 kWh : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 87,
@@ -2839,7 +2839,7 @@
   },
   {
    "path": "/voitures-electriques/citroen/e-c3-aircross",
-   "url": "http://localhost:3950/voitures-electriques/citroen/e-c3-aircross",
+   "url": "http://localhost:3952/voitures-electriques/citroen/e-c3-aircross",
    "status": 200,
    "title": "Citroën ë-C3 Aircross Extended Range 54 kWh : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 96,
@@ -2905,7 +2905,7 @@
   },
   {
    "path": "/voitures-electriques/peugeot/e-208",
-   "url": "http://localhost:3950/voitures-electriques/peugeot/e-208",
+   "url": "http://localhost:3952/voitures-electriques/peugeot/e-208",
    "status": 200,
    "title": "Peugeot e-208 50 kWh : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 73,
@@ -2971,7 +2971,7 @@
   },
   {
    "path": "/voitures-electriques/peugeot/e-2008",
-   "url": "http://localhost:3950/voitures-electriques/peugeot/e-2008",
+   "url": "http://localhost:3952/voitures-electriques/peugeot/e-2008",
    "status": 200,
    "title": "Peugeot e-2008 54 kWh : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 74,
@@ -3037,7 +3037,7 @@
   },
   {
    "path": "/voitures-electriques/peugeot/e-3008",
-   "url": "http://localhost:3950/voitures-electriques/peugeot/e-3008",
+   "url": "http://localhost:3952/voitures-electriques/peugeot/e-3008",
    "status": 200,
    "title": "Peugeot e-3008 97 kWh Long Range : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 85,
@@ -3103,7 +3103,7 @@
   },
   {
    "path": "/voitures-electriques/dacia/spring",
-   "url": "http://localhost:3950/voitures-electriques/dacia/spring",
+   "url": "http://localhost:3952/voitures-electriques/dacia/spring",
    "status": 200,
    "title": "Dacia Spring Electric 70 : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 77,
@@ -3169,7 +3169,7 @@
   },
   {
    "path": "/voitures-electriques/fiat/grande-panda",
-   "url": "http://localhost:3950/voitures-electriques/fiat/grande-panda",
+   "url": "http://localhost:3952/voitures-electriques/fiat/grande-panda",
    "status": 200,
    "title": "Fiat Grande Panda 44 kWh : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 77,
@@ -3235,7 +3235,7 @@
   },
   {
    "path": "/voitures-electriques/fiat/500e",
-   "url": "http://localhost:3950/voitures-electriques/fiat/500e",
+   "url": "http://localhost:3952/voitures-electriques/fiat/500e",
    "status": 200,
    "title": "Fiat 500e Hatchback 42 kWh : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 79,
@@ -3301,7 +3301,7 @@
   },
   {
    "path": "/voitures-electriques/opel/corsa-electric",
-   "url": "http://localhost:3950/voitures-electriques/opel/corsa-electric",
+   "url": "http://localhost:3952/voitures-electriques/opel/corsa-electric",
    "status": 200,
    "title": "Opel Corsa Electric 51 kWh : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 79,
@@ -3367,7 +3367,7 @@
   },
   {
    "path": "/voitures-electriques/opel/mokka-electric",
-   "url": "http://localhost:3950/voitures-electriques/opel/mokka-electric",
+   "url": "http://localhost:3952/voitures-electriques/opel/mokka-electric",
    "status": 200,
    "title": "Opel Mokka Electric 54 kWh : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 79,
@@ -3433,7 +3433,7 @@
   },
   {
    "path": "/voitures-electriques/ford/puma-gen-e",
-   "url": "http://localhost:3950/voitures-electriques/ford/puma-gen-e",
+   "url": "http://localhost:3952/voitures-electriques/ford/puma-gen-e",
    "status": 200,
    "title": "Ford Puma Gen-E Gen-E : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 74,
@@ -3499,7 +3499,7 @@
   },
   {
    "path": "/voitures-electriques/ford/explorer",
-   "url": "http://localhost:3950/voitures-electriques/ford/explorer",
+   "url": "http://localhost:3952/voitures-electriques/ford/explorer",
    "status": 200,
    "title": "Ford Explorer Extended Range RWD : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 85,
@@ -3565,7 +3565,7 @@
   },
   {
    "path": "/voitures-electriques/volkswagen/id-4",
-   "url": "http://localhost:3950/voitures-electriques/volkswagen/id-4",
+   "url": "http://localhost:3952/voitures-electriques/volkswagen/id-4",
    "status": 200,
    "title": "Volkswagen ID.4 Pro : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 72,
@@ -3631,7 +3631,7 @@
   },
   {
    "path": "/voitures-electriques/volkswagen/id-7",
-   "url": "http://localhost:3950/voitures-electriques/volkswagen/id-7",
+   "url": "http://localhost:3952/voitures-electriques/volkswagen/id-7",
    "status": 200,
    "title": "Volkswagen ID.7 86 kWh : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 75,
@@ -3697,7 +3697,7 @@
   },
   {
    "path": "/voitures-electriques/skoda/elroq",
-   "url": "http://localhost:3950/voitures-electriques/skoda/elroq",
+   "url": "http://localhost:3952/voitures-electriques/skoda/elroq",
    "status": 200,
    "title": "Škoda Elroq 85 : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 67,
@@ -3763,7 +3763,7 @@
   },
   {
    "path": "/voitures-electriques/skoda/enyaq",
-   "url": "http://localhost:3950/voitures-electriques/skoda/enyaq",
+   "url": "http://localhost:3952/voitures-electriques/skoda/enyaq",
    "status": 200,
    "title": "Škoda Enyaq 85 : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 67,
@@ -3829,7 +3829,7 @@
   },
   {
    "path": "/voitures-electriques/cupra/born",
-   "url": "http://localhost:3950/voitures-electriques/cupra/born",
+   "url": "http://localhost:3952/voitures-electriques/cupra/born",
    "status": 200,
    "title": "CUPRA Born 170 kW 79 kWh : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 77,
@@ -3895,7 +3895,7 @@
   },
   {
    "path": "/voitures-electriques/audi/q4-e-tron",
-   "url": "http://localhost:3950/voitures-electriques/audi/q4-e-tron",
+   "url": "http://localhost:3952/voitures-electriques/audi/q4-e-tron",
    "status": 200,
    "title": "Audi Q4 e-tron 40 : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 70,
@@ -3961,7 +3961,7 @@
   },
   {
    "path": "/voitures-electriques/bmw/ix1",
-   "url": "http://localhost:3950/voitures-electriques/bmw/ix1",
+   "url": "http://localhost:3952/voitures-electriques/bmw/ix1",
    "status": 200,
    "title": "BMW iX1 eDrive20 : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 69,
@@ -4027,7 +4027,7 @@
   },
   {
    "path": "/voitures-electriques/bmw/i4",
-   "url": "http://localhost:3950/voitures-electriques/bmw/i4",
+   "url": "http://localhost:3952/voitures-electriques/bmw/i4",
    "status": 200,
    "title": "BMW i4 eDrive40 : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 68,
@@ -4093,7 +4093,7 @@
   },
   {
    "path": "/voitures-electriques/bmw/ix3",
-   "url": "http://localhost:3950/voitures-electriques/bmw/ix3",
+   "url": "http://localhost:3952/voitures-electriques/bmw/ix3",
    "status": 200,
    "title": "BMW iX3 40 : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 63,
@@ -4159,7 +4159,7 @@
   },
   {
    "path": "/voitures-electriques/mercedes-benz/cla",
-   "url": "http://localhost:3950/voitures-electriques/mercedes-benz/cla",
+   "url": "http://localhost:3952/voitures-electriques/mercedes-benz/cla",
    "status": 200,
    "title": "Mercedes-Benz CLA 250+ : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 75,
@@ -4225,7 +4225,7 @@
   },
   {
    "path": "/voitures-electriques/mercedes-benz/gla",
-   "url": "http://localhost:3950/voitures-electriques/mercedes-benz/gla",
+   "url": "http://localhost:3952/voitures-electriques/mercedes-benz/gla",
    "status": 200,
    "title": "Mercedes-Benz GLA 250+ : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 75,
@@ -4291,7 +4291,7 @@
   },
   {
    "path": "/voitures-electriques/hyundai/kona-electric",
-   "url": "http://localhost:3950/voitures-electriques/hyundai/kona-electric",
+   "url": "http://localhost:3952/voitures-electriques/hyundai/kona-electric",
    "status": 200,
    "title": "Hyundai Kona Electric 65 kWh : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 81,
@@ -4357,7 +4357,7 @@
   },
   {
    "path": "/voitures-electriques/hyundai/ioniq-5",
-   "url": "http://localhost:3950/voitures-electriques/hyundai/ioniq-5",
+   "url": "http://localhost:3952/voitures-electriques/hyundai/ioniq-5",
    "status": 200,
    "title": "Hyundai IONIQ 5 84 kWh RWD : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 79,
@@ -4423,7 +4423,7 @@
   },
   {
    "path": "/voitures-electriques/hyundai/inster",
-   "url": "http://localhost:3950/voitures-electriques/hyundai/inster",
+   "url": "http://localhost:3952/voitures-electriques/hyundai/inster",
    "status": 200,
    "title": "Hyundai INSTER Long Range : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 78,
@@ -4489,7 +4489,7 @@
   },
   {
    "path": "/voitures-electriques/kia/ev3",
-   "url": "http://localhost:3950/voitures-electriques/kia/ev3",
+   "url": "http://localhost:3952/voitures-electriques/kia/ev3",
    "status": 200,
    "title": "Kia EV3 Long Range : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 71,
@@ -4555,7 +4555,7 @@
   },
   {
    "path": "/voitures-electriques/kia/ev6",
-   "url": "http://localhost:3950/voitures-electriques/kia/ev6",
+   "url": "http://localhost:3952/voitures-electriques/kia/ev6",
    "status": 200,
    "title": "Kia EV6 Long Range AWD : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 75,
@@ -4621,7 +4621,7 @@
   },
   {
    "path": "/voitures-electriques/volvo/ex30",
-   "url": "http://localhost:3950/voitures-electriques/volvo/ex30",
+   "url": "http://localhost:3952/voitures-electriques/volvo/ex30",
    "status": 200,
    "title": "Volvo EX30 Single Motor Extended Range : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 91,
@@ -4687,7 +4687,7 @@
   },
   {
    "path": "/voitures-electriques/volvo/ex40",
-   "url": "http://localhost:3950/voitures-electriques/volvo/ex40",
+   "url": "http://localhost:3952/voitures-electriques/volvo/ex40",
    "status": 200,
    "title": "Volvo EX40 P5 Long Range : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 77,
@@ -4753,7 +4753,7 @@
   },
   {
    "path": "/voitures-electriques/byd/dolphin-surf",
-   "url": "http://localhost:3950/voitures-electriques/byd/dolphin-surf",
+   "url": "http://localhost:3952/voitures-electriques/byd/dolphin-surf",
    "status": 200,
    "title": "BYD Dolphin Surf 43,2 kWh Comfort : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 86,
@@ -4819,7 +4819,7 @@
   },
   {
    "path": "/voitures-electriques/byd/atto-3-evo",
-   "url": "http://localhost:3950/voitures-electriques/byd/atto-3-evo",
+   "url": "http://localhost:3952/voitures-electriques/byd/atto-3-evo",
    "status": 200,
    "title": "BYD Atto 3 Evo RWD Design : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 78,
@@ -4885,7 +4885,7 @@
   },
   {
    "path": "/voitures-electriques/byd/seal",
-   "url": "http://localhost:3950/voitures-electriques/byd/seal",
+   "url": "http://localhost:3952/voitures-electriques/byd/seal",
    "status": 200,
    "title": "BYD Seal 82,5 kWh AWD Excellence : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 85,
@@ -4951,7 +4951,7 @@
   },
   {
    "path": "/voitures-electriques/mg/mg4",
-   "url": "http://localhost:3950/voitures-electriques/mg/mg4",
+   "url": "http://localhost:3952/voitures-electriques/mg/mg4",
    "status": 200,
    "title": "MG MG4 Urban Comfort Long Range : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 84,
@@ -5017,7 +5017,7 @@
   },
   {
    "path": "/voitures-electriques/mg/mgs5",
-   "url": "http://localhost:3950/voitures-electriques/mg/mgs5",
+   "url": "http://localhost:3952/voitures-electriques/mg/mgs5",
    "status": 200,
    "title": "MG MGS5 EV 64 kWh : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 70,
@@ -5083,7 +5083,7 @@
   },
   {
    "path": "/voitures-electriques/nissan/leaf",
-   "url": "http://localhost:3950/voitures-electriques/nissan/leaf",
+   "url": "http://localhost:3952/voitures-electriques/nissan/leaf",
    "status": 200,
    "title": "Nissan Leaf Extended Range 75 kWh : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 86,
@@ -5149,7 +5149,7 @@
   },
   {
    "path": "/voitures-electriques/smart/smart-1",
-   "url": "http://localhost:3950/voitures-electriques/smart/smart-1",
+   "url": "http://localhost:3952/voitures-electriques/smart/smart-1",
    "status": 200,
    "title": "smart #1 Pro+ : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 66,
@@ -5215,7 +5215,7 @@
   },
   {
    "path": "/voitures-electriques/porsche/macan",
-   "url": "http://localhost:3950/voitures-electriques/porsche/macan",
+   "url": "http://localhost:3952/voitures-electriques/porsche/macan",
    "status": 200,
    "title": "Porsche Macan 4 Electric : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 77,
@@ -5281,7 +5281,7 @@
   },
   {
    "path": "/voitures-electriques/tesla/model-3/rwd",
-   "url": "http://localhost:3950/voitures-electriques/tesla/model-3/rwd",
+   "url": "http://localhost:3952/voitures-electriques/tesla/model-3/rwd",
    "status": 200,
    "title": "Tesla Model 3 RWD : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 70,
@@ -5348,7 +5348,7 @@
   },
   {
    "path": "/voitures-electriques/tesla/model-3/long-range-rwd",
-   "url": "http://localhost:3950/voitures-electriques/tesla/model-3/long-range-rwd",
+   "url": "http://localhost:3952/voitures-electriques/tesla/model-3/long-range-rwd",
    "status": 200,
    "title": "Tesla Model 3 Long Range RWD : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 81,
@@ -5415,7 +5415,7 @@
   },
   {
    "path": "/voitures-electriques/tesla/model-y/rwd",
-   "url": "http://localhost:3950/voitures-electriques/tesla/model-y/rwd",
+   "url": "http://localhost:3952/voitures-electriques/tesla/model-y/rwd",
    "status": 200,
    "title": "Tesla Model Y RWD : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 70,
@@ -5482,7 +5482,7 @@
   },
   {
    "path": "/voitures-electriques/tesla/model-y/long-range-awd",
-   "url": "http://localhost:3950/voitures-electriques/tesla/model-y/long-range-awd",
+   "url": "http://localhost:3952/voitures-electriques/tesla/model-y/long-range-awd",
    "status": 200,
    "title": "Tesla Model Y Long Range AWD : autonomie, recharge et caractéristiques | EVExpert",
    "titleLength": 81,
@@ -5549,7 +5549,7 @@
   },
   {
    "path": "/comparer/renault-5-e-tech-52-kwh-150-ch-vs-peugeot-e-208-50-kwh",
-   "url": "http://localhost:3950/comparer/renault-5-e-tech-52-kwh-150-ch-vs-peugeot-e-208-50-kwh",
+   "url": "http://localhost:3952/comparer/renault-5-e-tech-52-kwh-150-ch-vs-peugeot-e-208-50-kwh",
    "status": 200,
    "title": "Renault 5 E-Tech vs Peugeot e-208 : comparatif | EVExpert",
    "titleLength": 57,
@@ -5610,7 +5610,7 @@
   },
   {
    "path": "/comparer/citroen-e-c3-standard-range-44-kwh-vs-fiat-grande-panda-44-kwh",
-   "url": "http://localhost:3950/comparer/citroen-e-c3-standard-range-44-kwh-vs-fiat-grande-panda-44-kwh",
+   "url": "http://localhost:3952/comparer/citroen-e-c3-standard-range-44-kwh-vs-fiat-grande-panda-44-kwh",
    "status": 200,
    "title": "Citroën ë-C3 vs Fiat Grande Panda : comparatif | EVExpert",
    "titleLength": 57,
@@ -5671,7 +5671,7 @@
   },
   {
    "path": "/comparer/tesla-model-y-rwd-vs-skoda-elroq-85",
-   "url": "http://localhost:3950/comparer/tesla-model-y-rwd-vs-skoda-elroq-85",
+   "url": "http://localhost:3952/comparer/tesla-model-y-rwd-vs-skoda-elroq-85",
    "status": 200,
    "title": "Tesla Model Y vs Škoda Elroq : comparatif | EVExpert",
    "titleLength": 52,
@@ -5732,7 +5732,7 @@
   },
   {
    "path": "/comparer/tesla-model-3-long-range-rwd-vs-bmw-i4-edrive40",
-   "url": "http://localhost:3950/comparer/tesla-model-3-long-range-rwd-vs-bmw-i4-edrive40",
+   "url": "http://localhost:3952/comparer/tesla-model-3-long-range-rwd-vs-bmw-i4-edrive40",
    "status": 200,
    "title": "Tesla Model 3 vs BMW i4 : comparatif | EVExpert",
    "titleLength": 47,
@@ -5793,7 +5793,7 @@
   },
   {
    "path": "/comparer/renault-scenic-e-tech-ev87-220-ch-vs-volkswagen-id-4-pro",
-   "url": "http://localhost:3950/comparer/renault-scenic-e-tech-ev87-220-ch-vs-volkswagen-id-4-pro",
+   "url": "http://localhost:3952/comparer/renault-scenic-e-tech-ev87-220-ch-vs-volkswagen-id-4-pro",
    "status": 200,
    "title": "Renault Scénic E-Tech vs Volkswagen ID.4 : comparatif | EVExpert",
    "titleLength": 64,
@@ -5854,7 +5854,7 @@
   },
   {
    "path": "/comparer/kia-ev3-long-range-vs-hyundai-kona-electric-65-kwh",
-   "url": "http://localhost:3950/comparer/kia-ev3-long-range-vs-hyundai-kona-electric-65-kwh",
+   "url": "http://localhost:3952/comparer/kia-ev3-long-range-vs-hyundai-kona-electric-65-kwh",
    "status": 200,
    "title": "Kia EV3 vs Hyundai Kona Electric : comparatif | EVExpert",
    "titleLength": 56,
@@ -5915,7 +5915,7 @@
   },
   {
    "path": "/comparer/mg-mg4-urban-comfort-long-range-vs-cupra-born-170-kw-79-kwh",
-   "url": "http://localhost:3950/comparer/mg-mg4-urban-comfort-long-range-vs-cupra-born-170-kw-79-kwh",
+   "url": "http://localhost:3952/comparer/mg-mg4-urban-comfort-long-range-vs-cupra-born-170-kw-79-kwh",
    "status": 200,
    "title": "MG MG4 vs CUPRA Born : comparatif | EVExpert",
    "titleLength": 44,
@@ -5976,7 +5976,7 @@
   },
   {
    "path": "/comparer/byd-atto-3-evo-rwd-design-vs-mg-mgs5-ev-64-kwh",
-   "url": "http://localhost:3950/comparer/byd-atto-3-evo-rwd-design-vs-mg-mgs5-ev-64-kwh",
+   "url": "http://localhost:3952/comparer/byd-atto-3-evo-rwd-design-vs-mg-mgs5-ev-64-kwh",
    "status": 200,
    "title": "BYD Atto 3 Evo vs MG MGS5 : comparatif | EVExpert",
    "titleLength": 49,
@@ -6037,17 +6037,17 @@
   },
   {
    "path": "/guides/calculer-autonomie-reelle",
-   "url": "http://localhost:3950/guides/calculer-autonomie-reelle",
+   "url": "http://localhost:3952/guides/calculer-autonomie-reelle",
    "status": 200,
-   "title": "Calculer l&#x27;autonomie réelle d&#x27;une voiture électrique | EVExpert",
-   "titleLength": 73,
-   "description": "Méthode pas à pas pour estimer l&#x27;autonomie réelle : capacité utile, consommation, vitesse et température, avec des exemples chiffrés.",
-   "descriptionLength": 138,
+   "title": "Calculer l'autonomie réelle d'une voiture électrique | EVExpert",
+   "titleLength": 63,
+   "description": "Méthode pas à pas pour estimer l'autonomie réelle : capacité utile, consommation, vitesse et température, avec des exemples chiffrés.",
+   "descriptionLength": 133,
    "canonical": "https://www.evexpert.fr/guides/calculer-autonomie-reelle",
    "robots": "index, follow",
    "h1Count": 1,
    "h1": [
-    "Comment calculer l&#x27;autonomie réelle d&#x27;une voiture électrique ?"
+    "Comment calculer l'autonomie réelle d'une voiture électrique ?"
    ],
    "internalLinks": [
     "/manifest.webmanifest",
@@ -6104,17 +6104,17 @@
   },
   {
    "path": "/guides/autonomie-hiver",
-   "url": "http://localhost:3950/guides/autonomie-hiver",
+   "url": "http://localhost:3952/guides/autonomie-hiver",
    "status": 200,
-   "title": "Autonomie en hiver d&#x27;une voiture électrique | EVExpert",
-   "titleLength": 59,
-   "description": "Chauffage, batterie froide, air plus dense : pourquoi l&#x27;autonomie baisse en hiver, comment la limiter, et une estimation chiffrée pour trois modèles.",
-   "descriptionLength": 154,
+   "title": "Autonomie en hiver d'une voiture électrique | EVExpert",
+   "titleLength": 54,
+   "description": "Chauffage, batterie froide, air plus dense : pourquoi l'autonomie baisse en hiver, comment la limiter, et une estimation chiffrée pour trois modèles.",
+   "descriptionLength": 149,
    "canonical": "https://www.evexpert.fr/guides/autonomie-hiver",
    "robots": "index, follow",
    "h1Count": 1,
    "h1": [
-    "Pourquoi l&#x27;autonomie d&#x27;une voiture électrique baisse-t-elle en hiver ?"
+    "Pourquoi l'autonomie d'une voiture électrique baisse-t-elle en hiver ?"
    ],
    "internalLinks": [
     "/manifest.webmanifest",
@@ -6170,12 +6170,12 @@
   },
   {
    "path": "/guides/autonomie-autoroute",
-   "url": "http://localhost:3950/guides/autonomie-autoroute",
+   "url": "http://localhost:3952/guides/autonomie-autoroute",
    "status": 200,
-   "title": "Autonomie d&#x27;une voiture électrique sur autoroute | EVExpert",
-   "titleLength": 64,
-   "description": "Pourquoi l&#x27;autonomie chute à 130 km/h, une estimation pour trois modèles et comment planifier ses arrêts de recharge sur un long trajet.",
-   "descriptionLength": 141,
+   "title": "Autonomie d'une voiture électrique sur autoroute | EVExpert",
+   "titleLength": 59,
+   "description": "Pourquoi l'autonomie chute à 130 km/h, une estimation pour trois modèles et comment planifier ses arrêts de recharge sur un long trajet.",
+   "descriptionLength": 136,
    "canonical": "https://www.evexpert.fr/guides/autonomie-autoroute",
    "robots": "index, follow",
    "h1Count": 1,
@@ -6240,17 +6240,17 @@
   },
   {
    "path": "/guides/wltp-definition",
-   "url": "http://localhost:3950/guides/wltp-definition",
+   "url": "http://localhost:3952/guides/wltp-definition",
    "status": 200,
    "title": "WLTP : définition et ce que mesure le cycle | EVExpert",
    "titleLength": 54,
-   "description": "Le WLTP, la procédure d&#x27;homologation des autonomies : le cycle en chiffres, la différence avec l&#x27;usage réel et avec la consommation.",
-   "descriptionLength": 142,
+   "description": "Le WLTP, la procédure d'homologation des autonomies : le cycle en chiffres, la différence avec l'usage réel et avec la consommation.",
+   "descriptionLength": 132,
    "canonical": "https://www.evexpert.fr/guides/wltp-definition",
    "robots": "index, follow",
    "h1Count": 1,
    "h1": [
-    "WLTP : qu&#x27;est-ce que c&#x27;est et que mesure-t-il vraiment ?"
+    "WLTP : qu'est-ce que c'est et que mesure-t-il vraiment ?"
    ],
    "internalLinks": [
     "/editorial/cycle-wltc-quatre-phases.svg",
@@ -6309,12 +6309,12 @@
   },
   {
    "path": "/guides/batterie-brute-batterie-utile",
-   "url": "http://localhost:3950/guides/batterie-brute-batterie-utile",
+   "url": "http://localhost:3952/guides/batterie-brute-batterie-utile",
    "status": 200,
    "title": "Batterie brute ou utile : la différence | EVExpert",
    "titleLength": 50,
-   "description": "Capacité brute, capacité utile : ce que chacune mesure, laquelle utiliser pour calculer l&#x27;autonomie, avec les modèles du catalogue.",
-   "descriptionLength": 136,
+   "description": "Capacité brute, capacité utile : ce que chacune mesure, laquelle utiliser pour calculer l'autonomie, avec les modèles du catalogue.",
+   "descriptionLength": 131,
    "canonical": "https://www.evexpert.fr/guides/batterie-brute-batterie-utile",
    "robots": "index, follow",
    "h1Count": 1,
@@ -6380,12 +6380,12 @@
   },
   {
    "path": "/guides/combien-coute-recharge-domicile",
-   "url": "http://localhost:3950/guides/combien-coute-recharge-domicile",
+   "url": "http://localhost:3952/guides/combien-coute-recharge-domicile",
    "status": 200,
-   "title": "Coût d&#x27;une recharge à domicile : le calcul | EVExpert",
-   "titleLength": 58,
-   "description": "Comment calculer le prix d&#x27;une recharge à la maison : énergie, rendement, tarif du kWh, heures creuses. Exemples chiffrés pour plusieurs modèles.",
-   "descriptionLength": 150,
+   "title": "Coût d'une recharge à domicile : le calcul | EVExpert",
+   "titleLength": 53,
+   "description": "Comment calculer le prix d'une recharge à la maison : énergie, rendement, tarif du kWh, heures creuses. Exemples chiffrés pour plusieurs modèles.",
+   "descriptionLength": 145,
    "canonical": "https://www.evexpert.fr/guides/combien-coute-recharge-domicile",
    "robots": "index, follow",
    "h1Count": 1,
@@ -6449,7 +6449,7 @@
   },
   {
    "path": "/guides/puissance-borne-7-11-22-kw",
-   "url": "http://localhost:3950/guides/puissance-borne-7-11-22-kw",
+   "url": "http://localhost:3952/guides/puissance-borne-7-11-22-kw",
    "status": 200,
    "title": "Borne 7,4, 11 ou 22 kW : laquelle choisir ? | EVExpert",
    "titleLength": 54,
@@ -6518,12 +6518,12 @@
   },
   {
    "path": "/guides/recharge-ac-ou-dc",
-   "url": "http://localhost:3950/guides/recharge-ac-ou-dc",
+   "url": "http://localhost:3952/guides/recharge-ac-ou-dc",
    "status": 200,
    "title": "Recharge AC ou DC : la différence | EVExpert",
    "titleLength": 44,
-   "description": "Courant alternatif ou continu : où s&#x27;effectue la conversion, pourquoi la recharge rapide est en DC, et l&#x27;effet sur la puissance et le prix.",
-   "descriptionLength": 149,
+   "description": "Courant alternatif ou continu : où s'effectue la conversion, pourquoi la recharge rapide est en DC, et l'effet sur la puissance et le prix.",
+   "descriptionLength": 139,
    "canonical": "https://www.evexpert.fr/guides/recharge-ac-ou-dc",
    "robots": "index, follow",
    "h1Count": 1,
@@ -6588,10 +6588,10 @@
   },
   {
    "path": "/guides/temps-recharge-voiture-electrique",
-   "url": "http://localhost:3950/guides/temps-recharge-voiture-electrique",
+   "url": "http://localhost:3952/guides/temps-recharge-voiture-electrique",
    "status": 200,
-   "title": "Temps de recharge d&#x27;une voiture électrique | EVExpert",
-   "titleLength": 58,
+   "title": "Temps de recharge d'une voiture électrique | EVExpert",
+   "titleLength": 53,
    "description": "Temps de recharge selon la puissance de borne : formule, exemples chiffrés en AC, temps 10-80 % en DC et pourquoi la fin de charge est plus lente.",
    "descriptionLength": 146,
    "canonical": "https://www.evexpert.fr/guides/temps-recharge-voiture-electrique",
@@ -6658,12 +6658,12 @@
   },
   {
    "path": "/guides/fonctionnement-borne-de-recharge",
-   "url": "http://localhost:3950/guides/fonctionnement-borne-de-recharge",
+   "url": "http://localhost:3952/guides/fonctionnement-borne-de-recharge",
    "status": 200,
    "title": "Comment fonctionne une borne de recharge | EVExpert",
    "titleLength": 51,
-   "description": "Ce que fait réellement une borne de recharge : dialogue avec la voiture, sécurité, comptage, paiement et supervision par l&#x27;opérateur.",
-   "descriptionLength": 138,
+   "description": "Ce que fait réellement une borne de recharge : dialogue avec la voiture, sécurité, comptage, paiement et supervision par l'opérateur.",
+   "descriptionLength": 133,
    "canonical": "https://www.evexpert.fr/guides/fonctionnement-borne-de-recharge",
    "robots": "index, follow",
    "h1Count": 1,
@@ -6726,7 +6726,7 @@
   },
   {
    "path": "/guides/puissance-recharge-dc",
-   "url": "http://localhost:3950/guides/puissance-recharge-dc",
+   "url": "http://localhost:3952/guides/puissance-recharge-dc",
    "status": 200,
    "title": "Puissance de recharge DC : pic ou moyenne ? | EVExpert",
    "titleLength": 54,
@@ -6736,7 +6736,7 @@
    "robots": "index, follow",
    "h1Count": 1,
    "h1": [
-    "Que signifie la puissance de recharge DC d&#x27;une voiture électrique ?"
+    "Que signifie la puissance de recharge DC d'une voiture électrique ?"
    ],
    "internalLinks": [
     "/manifest.webmanifest",
@@ -6798,12 +6798,12 @@
   },
   {
    "path": "/guides/recharger-a-80-pourcent",
-   "url": "http://localhost:3950/guides/recharger-a-80-pourcent",
+   "url": "http://localhost:3952/guides/recharger-a-80-pourcent",
    "status": 200,
    "title": "Faut-il charger à 80 % une voiture électrique ? | EVExpert",
    "titleLength": 58,
-   "description": "Charger à 80 % ou à 100 % : ce que recommandent la logique de la batterie et la recharge rapide, selon la chimie (NMC ou LFP) et l&#x27;usage quotidien.",
-   "descriptionLength": 152,
+   "description": "Charger à 80 % ou à 100 % : ce que recommandent la logique de la batterie et la recharge rapide, selon la chimie (NMC ou LFP) et l'usage quotidien.",
+   "descriptionLength": 147,
    "canonical": "https://www.evexpert.fr/guides/recharger-a-80-pourcent",
    "robots": "index, follow",
    "h1Count": 1,
@@ -6865,17 +6865,17 @@
   },
   {
    "path": "/guides/preserver-batterie-voiture-electrique",
-   "url": "http://localhost:3950/guides/preserver-batterie-voiture-electrique",
+   "url": "http://localhost:3952/guides/preserver-batterie-voiture-electrique",
    "status": 200,
-   "title": "Préserver la batterie d&#x27;une voiture électrique | EVExpert",
-   "titleLength": 62,
+   "title": "Préserver la batterie d'une voiture électrique | EVExpert",
+   "titleLength": 57,
    "description": "Les bons réflexes pour ralentir le vieillissement de la batterie : niveaux de charge, chaleur, recharge rapide, selon la chimie.",
    "descriptionLength": 128,
    "canonical": "https://www.evexpert.fr/guides/preserver-batterie-voiture-electrique",
    "robots": "index, follow",
    "h1Count": 1,
    "h1": [
-    "Comment préserver la batterie d&#x27;une voiture électrique ?"
+    "Comment préserver la batterie d'une voiture électrique ?"
    ],
    "internalLinks": [
     "/manifest.webmanifest",
@@ -6932,7 +6932,7 @@
   },
   {
    "path": "/guides/recharge-domicile-ou-borne-publique",
-   "url": "http://localhost:3950/guides/recharge-domicile-ou-borne-publique",
+   "url": "http://localhost:3952/guides/recharge-domicile-ou-borne-publique",
    "status": 200,
    "title": "Recharge à domicile ou borne publique | EVExpert",
    "titleLength": 48,
@@ -6998,12 +6998,12 @@
   },
   {
    "path": "/guides/cout-borne-recharge-domicile",
-   "url": "http://localhost:3950/guides/cout-borne-recharge-domicile",
+   "url": "http://localhost:3952/guides/cout-borne-recharge-domicile",
    "status": 200,
-   "title": "Prix d&#x27;une borne de recharge à domicile | EVExpert",
-   "titleLength": 55,
-   "description": "Ce qui compose le prix d&#x27;une borne à domicile, les éléments qui font varier le devis, les aides à vérifier et les questions à poser à l&#x27;installateur.",
-   "descriptionLength": 159,
+   "title": "Prix d'une borne de recharge à domicile | EVExpert",
+   "titleLength": 50,
+   "description": "Ce qui compose le prix d'une borne à domicile, les éléments qui font varier le devis, les aides à vérifier et les questions à poser à l'installateur.",
+   "descriptionLength": 149,
    "canonical": "https://www.evexpert.fr/guides/cout-borne-recharge-domicile",
    "robots": "index, follow",
    "h1Count": 1,
@@ -7066,12 +7066,12 @@
   },
   {
    "path": "/guides/cout-100-km-voiture-electrique",
-   "url": "http://localhost:3950/guides/cout-100-km-voiture-electrique",
+   "url": "http://localhost:3952/guides/cout-100-km-voiture-electrique",
    "status": 200,
-   "title": "Coût aux 100 km d&#x27;une voiture électrique | EVExpert",
-   "titleLength": 56,
-   "description": "Calculer le coût aux 100 km d&#x27;une électrique selon le tarif de recharge, avec exemples chiffrés pour plusieurs modèles et comparaison à l&#x27;essence.",
-   "descriptionLength": 156,
+   "title": "Coût aux 100 km d'une voiture électrique | EVExpert",
+   "titleLength": 51,
+   "description": "Calculer le coût aux 100 km d'une électrique selon le tarif de recharge, avec exemples chiffrés pour plusieurs modèles et comparaison à l'essence.",
+   "descriptionLength": 146,
    "canonical": "https://www.evexpert.fr/guides/cout-100-km-voiture-electrique",
    "robots": "index, follow",
    "h1Count": 1,
@@ -7136,12 +7136,12 @@
   },
   {
    "path": "/guides/voiture-electrique-vs-essence",
-   "url": "http://localhost:3950/guides/voiture-electrique-vs-essence",
+   "url": "http://localhost:3952/guides/voiture-electrique-vs-essence",
    "status": 200,
    "title": "Voiture électrique ou essence : coût réel | EVExpert",
    "titleLength": 52,
-   "description": "Électrique ou essence : comparer l&#x27;énergie, l&#x27;entretien, l&#x27;assurance et la dépréciation, avec un exemple chiffré et les hypothèses à ajuster.",
-   "descriptionLength": 156,
+   "description": "Électrique ou essence : comparer l'énergie, l'entretien, l'assurance et la dépréciation, avec un exemple chiffré et les hypothèses à ajuster.",
+   "descriptionLength": 141,
    "canonical": "https://www.evexpert.fr/guides/voiture-electrique-vs-essence",
    "robots": "index, follow",
    "h1Count": 1,
@@ -7203,17 +7203,17 @@
   },
   {
    "path": "/guides/calculer-tco-voiture-electrique",
-   "url": "http://localhost:3950/guides/calculer-tco-voiture-electrique",
+   "url": "http://localhost:3952/guides/calculer-tco-voiture-electrique",
    "status": 200,
-   "title": "Calculer le TCO d&#x27;une voiture électrique | EVExpert",
-   "titleLength": 56,
+   "title": "Calculer le TCO d'une voiture électrique | EVExpert",
+   "titleLength": 51,
    "description": "Le coût total de possession expliqué : postes à inclure, formule, exemple chiffré sur 5 ans et erreurs fréquentes à éviter.",
    "descriptionLength": 123,
    "canonical": "https://www.evexpert.fr/guides/calculer-tco-voiture-electrique",
    "robots": "index, follow",
    "h1Count": 1,
    "h1": [
-    "Comment calculer le TCO d&#x27;une voiture électrique ?"
+    "Comment calculer le TCO d'une voiture électrique ?"
    ],
    "internalLinks": [
     "/editorial/tco-postes-de-cout.svg",
@@ -7271,7 +7271,7 @@
   },
   {
    "path": "/guides/choisir-voiture-electrique-selon-usage",
-   "url": "http://localhost:3950/guides/choisir-voiture-electrique-selon-usage",
+   "url": "http://localhost:3952/guides/choisir-voiture-electrique-selon-usage",
    "status": 200,
    "title": "Choisir sa voiture électrique selon son usage | EVExpert",
    "titleLength": 56,
@@ -7358,12 +7358,12 @@
   },
   {
    "path": "/guides/choisir-premiere-voiture-electrique",
-   "url": "http://localhost:3950/guides/choisir-premiere-voiture-electrique",
+   "url": "http://localhost:3952/guides/choisir-premiere-voiture-electrique",
    "status": 200,
    "title": "Choisir sa première voiture électrique | EVExpert",
    "titleLength": 49,
-   "description": "Recharge, trajets, budget total, lecture d&#x27;une fiche technique, neuf ou occasion : les six questions à se poser avant d&#x27;acheter.",
-   "descriptionLength": 138,
+   "description": "Recharge, trajets, budget total, lecture d'une fiche technique, neuf ou occasion : les six questions à se poser avant d'acheter.",
+   "descriptionLength": 128,
    "canonical": "https://www.evexpert.fr/guides/choisir-premiere-voiture-electrique",
    "robots": "index, follow",
    "h1Count": 1,
@@ -7428,12 +7428,12 @@
   },
   {
    "path": "/guides/kw-kwh-difference-voiture-electrique",
-   "url": "http://localhost:3950/guides/kw-kwh-difference-voiture-electrique",
+   "url": "http://localhost:3952/guides/kw-kwh-difference-voiture-electrique",
    "status": 200,
    "title": "kW ou kWh : la différence en voiture électrique | EVExpert",
    "titleLength": 58,
-   "description": "Le kWh mesure l&#x27;énergie de la batterie, le kW la puissance de charge ou du moteur : la différence expliquée avec des exemples chiffrés tirés du catalogue.",
-   "descriptionLength": 159,
+   "description": "Le kWh mesure l'énergie de la batterie, le kW la puissance de charge ou du moteur : la différence expliquée avec des exemples chiffrés tirés du catalogue.",
+   "descriptionLength": 154,
    "canonical": "https://www.evexpert.fr/guides/kw-kwh-difference-voiture-electrique",
    "robots": "index, follow",
    "h1Count": 1,
@@ -7498,17 +7498,17 @@
   },
   {
    "path": "/guides/consommation-voiture-electrique-kwh-100-km",
-   "url": "http://localhost:3950/guides/consommation-voiture-electrique-kwh-100-km",
+   "url": "http://localhost:3952/guides/consommation-voiture-electrique-kwh-100-km",
    "status": 200,
-   "title": "Consommation d&#x27;une voiture électrique (kWh/100 km) | EVExpert",
-   "titleLength": 66,
+   "title": "Consommation d'une voiture électrique (kWh/100 km) | EVExpert",
+   "titleLength": 61,
    "description": "Ce que mesure la consommation en kWh/100 km, la différence entre consommation à la batterie et à la prise, et les valeurs des 47 versions du catalogue.",
    "descriptionLength": 151,
    "canonical": "https://www.evexpert.fr/guides/consommation-voiture-electrique-kwh-100-km",
    "robots": "index, follow",
    "h1Count": 1,
    "h1": [
-    "Consommation d&#x27;une voiture électrique : combien de kWh aux 100 km ?"
+    "Consommation d'une voiture électrique : combien de kWh aux 100 km ?"
    ],
    "internalLinks": [
     "/manifest.webmanifest",
@@ -7573,7 +7573,7 @@
   },
   {
    "path": "/guides/recharger-sur-prise-domestique",
-   "url": "http://localhost:3950/guides/recharger-sur-prise-domestique",
+   "url": "http://localhost:3952/guides/recharger-sur-prise-domestique",
    "status": 200,
    "title": "Recharger sur une prise domestique : durée et limites | EVExpert",
    "titleLength": 64,
@@ -7644,7 +7644,7 @@
   },
   {
    "path": "/recharge/type-2",
-   "url": "http://localhost:3950/recharge/type-2",
+   "url": "http://localhost:3952/recharge/type-2",
    "status": 200,
    "title": "Prise Type 2 : le connecteur standard de la recharge en courant alternatif | EVExpert",
    "titleLength": 85,
@@ -7707,7 +7707,7 @@
   },
   {
    "path": "/recharge/ccs",
-   "url": "http://localhost:3950/recharge/ccs",
+   "url": "http://localhost:3952/recharge/ccs",
    "status": 200,
    "title": "CCS Combo 2 : le connecteur standard de la recharge rapide en Europe | EVExpert",
    "titleLength": 79,
@@ -7770,12 +7770,12 @@
   },
   {
    "path": "/recharge/chademo",
-   "url": "http://localhost:3950/recharge/chademo",
+   "url": "http://localhost:3952/recharge/chademo",
    "status": 200,
    "title": "CHAdeMO : le standard japonais de recharge rapide, en recul en Europe | EVExpert",
    "titleLength": 80,
-   "description": "Le CHAdeMO est un standard de recharge rapide DC d&#x27;origine japonaise, présent sur certains modèles plus anciens : ce qu&#x27;il faut savoir avant d&#x27;acheter ou de recharger.",
-   "descriptionLength": 182,
+   "description": "Le CHAdeMO est un standard de recharge rapide DC d'origine japonaise, présent sur certains modèles plus anciens : ce qu'il faut savoir avant d'acheter ou de recharger.",
+   "descriptionLength": 167,
    "canonical": "https://www.evexpert.fr/recharge/chademo",
    "robots": "index, follow",
    "h1Count": 1,
@@ -7833,12 +7833,12 @@
   },
   {
    "path": "/blog/voitures-electriques-les-plus-sobres",
-   "url": "http://localhost:3950/blog/voitures-electriques-les-plus-sobres",
+   "url": "http://localhost:3952/blog/voitures-electriques-les-plus-sobres",
    "status": 200,
    "title": "Voitures électriques les plus sobres du catalogue | EVExpert",
    "titleLength": 60,
-   "description": "Consommation calculée de chaque version du catalogue : quelles électriques consomment le moins aux 100 km, et l&#x27;effet sur le coût d&#x27;usage.",
-   "descriptionLength": 148,
+   "description": "Consommation calculée de chaque version du catalogue : quelles électriques consomment le moins aux 100 km, et l'effet sur le coût d'usage.",
+   "descriptionLength": 138,
    "canonical": "https://www.evexpert.fr/blog/voitures-electriques-les-plus-sobres",
    "robots": "index, follow",
    "h1Count": 1,
@@ -7908,7 +7908,7 @@
   },
   {
    "path": "/blog/recharge-rapide-temps-10-80",
-   "url": "http://localhost:3950/blog/recharge-rapide-temps-10-80",
+   "url": "http://localhost:3952/blog/recharge-rapide-temps-10-80",
    "status": 200,
    "title": "Recharge rapide : les temps 10-80 % du catalogue | EVExpert",
    "titleLength": 59,
@@ -7984,7 +7984,7 @@
   },
   {
    "path": "/blog/autonomie-wltp-repartition-catalogue",
-   "url": "http://localhost:3950/blog/autonomie-wltp-repartition-catalogue",
+   "url": "http://localhost:3952/blog/autonomie-wltp-repartition-catalogue",
    "status": 200,
    "title": "Autonomie WLTP : répartition des modèles | EVExpert",
    "titleLength": 51,
@@ -8050,12 +8050,12 @@
   },
   {
    "path": "/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
-   "url": "http://localhost:3950/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
+   "url": "http://localhost:3952/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
    "status": 200,
    "title": "Batteries LFP ou NMC : ce que montrent les données | EVExpert",
    "titleLength": 61,
-   "description": "LFP contre NMC : les différences de chimie et une comparaison chiffrée des versions du catalogue, avec les limites de l&#x27;exercice.",
-   "descriptionLength": 134,
+   "description": "LFP contre NMC : les différences de chimie et une comparaison chiffrée des versions du catalogue, avec les limites de l'exercice.",
+   "descriptionLength": 129,
    "canonical": "https://www.evexpert.fr/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
    "robots": "index, follow",
    "h1Count": 1,
@@ -8125,7 +8125,7 @@
   },
   {
    "path": "/blog/recharge-ac-puissances-acceptees",
-   "url": "http://localhost:3950/blog/recharge-ac-puissances-acceptees",
+   "url": "http://localhost:3952/blog/recharge-ac-puissances-acceptees",
    "status": 200,
    "title": "Recharge AC : puissances acceptées par les voitures | EVExpert",
    "titleLength": 62,
@@ -8203,17 +8203,17 @@
   },
   {
    "path": "/blog/comment-evexpert-construit-sa-base",
-   "url": "http://localhost:3950/blog/comment-evexpert-construit-sa-base",
+   "url": "http://localhost:3952/blog/comment-evexpert-construit-sa-base",
    "status": 200,
    "title": "Comment EVExpert construit sa base de véhicules | EVExpert",
    "titleLength": 58,
-   "description": "Sources, contrôles de cohérence, champs volontairement vides et prochaines étapes : la transparence sur la base de véhicules d&#x27;EVExpert.",
-   "descriptionLength": 141,
+   "description": "Sources, contrôles de cohérence, champs volontairement vides et prochaines étapes : la transparence sur la base de véhicules d'EVExpert.",
+   "descriptionLength": 136,
    "canonical": "https://www.evexpert.fr/blog/comment-evexpert-construit-sa-base",
    "robots": "index, follow",
    "h1Count": 1,
    "h1": [
-    "Comment EVExpert construit sa base de données véhicules (et ce qu&#x27;elle ne contient pas encore)"
+    "Comment EVExpert construit sa base de données véhicules (et ce qu'elle ne contient pas encore)"
    ],
    "internalLinks": [
     "/manifest.webmanifest",
@@ -8266,12 +8266,12 @@
   },
   {
    "path": "/blog/garantie-batterie-ce-que-disent-les-donnees",
-   "url": "http://localhost:3950/blog/garantie-batterie-ce-que-disent-les-donnees",
+   "url": "http://localhost:3952/blog/garantie-batterie-ce-que-disent-les-donnees",
    "status": 200,
    "title": "Garantie batterie : ce que disent les données | EVExpert",
    "titleLength": 56,
-   "description": "Durée et kilométrage de la garantie batterie des 47 versions du catalogue : ce que la source publie, ce qu&#x27;elle ne précise pas et comment lire ces chiffres.",
-   "descriptionLength": 161,
+   "description": "Durée et kilométrage de la garantie batterie des 47 versions du catalogue : ce que la source publie, ce qu'elle ne précise pas et comment lire ces chiffres.",
+   "descriptionLength": 156,
    "canonical": "https://www.evexpert.fr/blog/garantie-batterie-ce-que-disent-les-donnees",
    "robots": "index, follow",
    "h1Count": 1,

@@ -33,6 +33,7 @@ function stripTags(html) {
     .replace(/&amp;/g, "&")
     .replace(/&apos;/g, "'")
     .replace(/&#39;/g, "'")
+    .replace(/&#x27;/gi, "'")
     .replace(/&quot;/g, '"')
     .replace(/&nbsp;/g, " ")
     .replace(/\s+/g, " ")
@@ -44,13 +45,26 @@ function pick(re, html) {
   return m ? m[1] : null;
 }
 
+/** Décode les entités HTML : la longueur d'un title/meta doit compter les caractères
+ * rendus (Google, un lecteur), pas la source HTML — `&#x27;` (7 car.) est un `'` (1 car.). */
+function decodeEntities(text) {
+  if (text == null) return text;
+  return text
+    .replace(/&#x27;/gi, "'")
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&");
+}
+
 async function capturePage(base, path) {
   const res = await fetch(`${base}${path}`);
   const status = res.status;
   const html = status === 200 ? await res.text() : "";
 
-  const title = pick(/<title>([^<]*)<\/title>/, html);
-  const description = pick(/<meta name="description" content="([^"]*)"/, html);
+  const title = decodeEntities(pick(/<title>([^<]*)<\/title>/, html));
+  const description = decodeEntities(pick(/<meta name="description" content="([^"]*)"/, html));
   const canonical = pick(/<link rel="canonical" href="([^"]*)"/, html);
   const robots = pick(/<meta name="robots" content="([^"]*)"/, html);
 
