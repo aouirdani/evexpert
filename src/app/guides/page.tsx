@@ -17,7 +17,8 @@ export const metadata = buildMetadata({
   path: "/guides",
 });
 
-const order: GuideCategory[] = ["autonomie", "recharge", "batterie", "coûts", "achat"];
+// "comprendre" en tête : ce sont les bases (kW vs kWh...), avant les rubriques pratiques.
+const order: GuideCategory[] = ["comprendre", "autonomie", "recharge", "batterie", "coûts", "achat"];
 
 export default async function GuidesPage() {
   const guides = await getGuides();
