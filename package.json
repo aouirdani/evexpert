@@ -16,7 +16,8 @@
     "db:import": "node --env-file-if-exists=.env.local node_modules/tsx/dist/cli.mjs --conditions=react-server scripts/migrate-vehicles.ts",
     "test": "vitest run",
     "test:routes": "node scripts/smoke-routes.mjs",
-    "snapshot:seo": "node scripts/seo-snapshot.mjs"
+    "snapshot:seo": "node scripts/seo-snapshot.mjs",
+    "seo:audit": "node scripts/seo-audit.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

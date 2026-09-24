@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
@@ -16,12 +17,19 @@ import { formatNumber } from "@/lib/format";
 // Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
 export const revalidate = 86400;
 
-export const metadata = buildMetadata({
-  title: "Voitures électriques : autonomie, recharge et fiches techniques",
-  description:
-    "Base de voitures électriques vendues en France : autonomie WLTP, batterie, puissance de recharge et coût aux 100 km, avec source et date de relevé pour chaque fiche.",
-  path: "/voitures-electriques",
-});
+/**
+ * generateMetadata (pas un export statique) : le nombre de versions vient du catalogue,
+ * jamais en dur — il doit rester exact si le catalogue change sans que quelqu'un se souvienne
+ * de mettre à jour ce texte à la main.
+ */
+export async function generateMetadata(): Promise<Metadata> {
+  const count = (await getAllVehicles()).length;
+  return buildMetadata({
+    title: "Liste des voitures électriques par autonomie",
+    description: `${count} versions de voitures électriques, triables par autonomie WLTP, avec batterie, puissance de recharge, source et date de relevé pour chaque fiche.`,
+    path: "/voitures-electriques",
+  });
+}
 
 export default async function VehiclesPage() {
   const all = await getAllVehicles();
@@ -44,6 +52,7 @@ export default async function VehiclesPage() {
           </h1>
           <p className="pretty mt-5 max-w-2xl text-dek text-body">
             Chaque fiche indique sa source et sa date de relevé, et distingue données sourcées, calculs et estimations.
+            Triable par autonomie WLTP — le classement par défaut —, coût aux 100 km calculé, puissance DC ou capacité de batterie.
           </p>
           <div className="mt-5">
             <ArrowLink href="/voitures-electriques/trouver">Vous ne savez pas par où commencer ? Trouver ma voiture</ArrowLink>

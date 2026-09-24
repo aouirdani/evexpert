@@ -1,11 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { annualCost, costPer100km } from "@/lib/calculators";
+import { annualCost, costPer100km, costPerKmCents } from "@/lib/calculators";
 import { ASSUMPTIONS } from "@/data/assumptions";
 import type { VehiclePreset } from "./kit";
 import { VehiclePresetSelect } from "./kit";
-import { formatEuro } from "@/lib/format";
+import { formatEuro, formatNumber } from "@/lib/format";
 import { Field, NumberInput, SelectInput } from "./kit";
 
 interface Row {
@@ -90,6 +90,10 @@ export function CostPer100Calculator({ presets = [] }: { presets?: VehiclePreset
               </Field>
             </div>
             <dl className="mt-4 space-y-1 text-sm">
+              <div className="flex justify-between">
+                <dt className="text-muted">Coût au km</dt>
+                <dd className="font-semibold text-ink">{formatNumber(costPerKmCents(r.per100), 1)} c/km</dd>
+              </div>
               <div className="flex justify-between">
                 <dt className="text-muted">Coût aux 100 km</dt>
                 <dd className="font-semibold text-ink">{formatEuro(r.per100, 2)}</dd>

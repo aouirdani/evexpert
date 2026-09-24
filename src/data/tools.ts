@@ -4,7 +4,8 @@ export const tools: Tool[] = [
   {
     slug: "cout-recharge-voiture-electrique",
     href: "/outils/cout-recharge-voiture-electrique",
-    title: "Calculateur de coût de recharge d'une voiture électrique",
+    title: "Coût de recharge d'une voiture électrique : simulateur",
+    metaTitle: "Simulateur de coût de recharge voiture électrique",
     shortTitle: "Coût de recharge",
     description:
       "Estimez le coût d'une recharge selon la capacité de batterie, le prix du kWh et le rendement.",
@@ -13,16 +14,18 @@ export const tools: Tool[] = [
   {
     slug: "autonomie-voiture-electrique",
     href: "/outils/autonomie-voiture-electrique",
-    title: "Calculateur d'autonomie d'une voiture électrique",
+    title: "Simulateur d'autonomie d'une voiture électrique",
     shortTitle: "Autonomie réelle",
     description:
       "Obtenez une estimation d'autonomie selon la vitesse, la température et le type de conduite.",
+    metaDescription:
+      "Simulez l'autonomie réelle d'une voiture électrique selon la vitesse, la température et le type de conduite, avec la formule et les hypothèses affichées.",
     icon: "Gauge",
   },
   {
     slug: "cout-100-km",
     href: "/outils/cout-100-km",
-    title: "Calculateur de coût aux 100 km",
+    title: "Coût au km et aux 100 km d'une voiture électrique",
     shortTitle: "Coût aux 100 km",
     description:
       "Comparez le coût énergétique aux 100 km entre électrique, essence, diesel et hybride.",
@@ -49,7 +52,7 @@ export const tools: Tool[] = [
   {
     slug: "temps-recharge",
     href: "/outils/temps-recharge",
-    title: "Calculateur de temps de recharge",
+    title: "Simulateur de temps de recharge voiture électrique",
     shortTitle: "Temps de recharge",
     description:
       "Estimez le temps de recharge théorique selon la puissance et l'état de charge.",
@@ -68,6 +71,7 @@ export const tools: Tool[] = [
     slug: "puissance-borne-recharge",
     href: "/outils/puissance-borne-recharge",
     title: "Puissance de borne : quel temps de recharge selon 3,7, 7,4, 11, 22 kW ou DC ?",
+    metaTitle: "Temps de recharge à 7,4, 11 ou 22 kW",
     shortTitle: "Puissance des bornes",
     description:
       "Comparez le temps de recharge de votre voiture sur chaque puissance de borne, en tenant compte des limites AC et DC du véhicule.",

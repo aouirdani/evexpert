@@ -15,9 +15,9 @@ import { buildMetadata, itemListJsonLd } from "@/lib/seo";
 export const revalidate = 86400;
 
 export const metadata = buildMetadata({
-  title: "Recharge d'une voiture électrique : puissances, connecteurs, coûts",
+  title: "Recharge d'une voiture électrique",
   description:
-    "Tout comprendre sur la recharge : AC ou DC, 7,4, 11, 22 kW, connecteurs Type 2 et CCS, recharge à domicile ou sur borne publique, temps et coûts avec calculateurs.",
+    "Recharge AC ou DC, puissances (7,4, 11, 22 kW), connecteurs Type 2 et CCS, à domicile ou sur borne publique : temps et coûts avec calculateurs.",
   path: "/recharge",
 });
 

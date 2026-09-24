@@ -14,7 +14,11 @@ import { buildMetadata } from "@/lib/seo";
 /** Métadonnées d'une page outil, dérivées de data/tools.ts. */
 export function toolMetadata(slug: string) {
   const tool = getTool(slug)!;
-  return buildMetadata({ title: tool.title, description: tool.description, path: tool.href });
+  return buildMetadata({
+    title: tool.metaTitle ?? tool.title,
+    description: tool.metaDescription ?? tool.description,
+    path: tool.href,
+  });
 }
 
 export function ToolPageShell({

@@ -115,6 +115,16 @@ export function annualCost(costPer100: number, annualKm: number): number {
   return (costPer100 * annualKm) / 100;
 }
 
+/**
+ * Coût au kilomètre, en centimes, à partir du coût aux 100 km (en euros).
+ * Identité d'unité : diviser par 100 km puis multiplier par 100 centimes/€ s'annule
+ * — X €/100 km vaut toujours X centime(s)/km. La fonction existe pour rendre cette
+ * conversion explicite et testée plutôt que refaite en ligne dans chaque calculateur.
+ */
+export function costPerKmCents(costPer100: number): number {
+  return costPer100;
+}
+
 /* -------------------------------------------------------------------------- */
 /*  4. EV vs Petrol running cost                                              */
 /* -------------------------------------------------------------------------- */
