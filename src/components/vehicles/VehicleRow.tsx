@@ -20,7 +20,7 @@ const dash = (
 export function VehicleRow({ vehicle: v, href }: { vehicle: Vehicle; href?: string }) {
   return (
     <tr className="group relative border-t border-line transition-colors duration-150 hover:bg-surface">
-      <th scope="row" className="py-3.5 pr-4 text-left align-middle font-normal">
+      <th scope="row" className="py-4 pr-4 text-left align-middle font-normal">
         <span className="eyebrow block text-signal-deep">{v.brand}</span>
         <Link
           href={href ?? vehicleHref(v)}
@@ -31,25 +31,25 @@ export function VehicleRow({ vehicle: v, href }: { vehicle: Vehicle; href?: stri
         </Link>
         <span className="ml-2 text-sm text-muted">{v.version}</span>
       </th>
-      <td className="hidden py-3.5 pr-4 align-middle text-sm text-muted xl:table-cell">{bodyTypeLabels[v.bodyType]}</td>
-      <td className="w-44 py-3.5 pr-4 align-middle">
+      <td className="hidden py-4 pr-4 align-middle text-sm text-muted xl:table-cell">{bodyTypeLabels[v.bodyType]}</td>
+      <td className="w-44 py-4 pr-4 align-middle">
         <span className="num block text-data-md font-bold text-ink">
           {formatNumber(v.rangeWltp)}
           <span className="unit">km</span>
         </span>
         <RangeBar value={v.rangeWltp} decorative className="mt-1.5" />
       </td>
-      <td className="num py-3.5 pr-4 text-right align-middle text-base font-semibold text-ink">
+      <td className="num py-4 pr-4 text-right align-middle text-base font-semibold text-ink">
         {formatNumber(v.batteryUsable, 1)}
         <span className="unit">kWh</span>
       </td>
-      <td className="num py-3.5 pr-4 text-right align-middle text-base font-semibold text-ink xl:pr-4">
+      <td className="num py-4 pr-4 text-right align-middle text-base font-semibold text-ink xl:pr-4">
         {v.chargingDC === null ? dash : <>{formatNumber(v.chargingDC)}<span className="unit">kW</span></>}
       </td>
-      <td className="num hidden py-3.5 text-right align-middle text-base font-semibold text-ink xl:table-cell">
+      <td className="num hidden py-4 text-right align-middle text-base font-semibold text-ink xl:table-cell">
         {v.chargingTime10to80 === null ? dash : <>{formatNumber(v.chargingTime10to80)}<span className="unit">min</span></>}
       </td>
-      <td className="relative py-3.5 pl-4 text-right align-middle">
+      <td className="relative py-4 pl-4 text-right align-middle">
         <GarageToggle id={v.id} className="relative" showLabel />
       </td>
     </tr>

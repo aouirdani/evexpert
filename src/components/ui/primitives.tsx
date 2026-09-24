@@ -61,7 +61,7 @@ export function SectionHeading({
   return (
     <div
       className={cn(
-        "mb-8 grid gap-x-10 gap-y-3 border-t-2 pt-4 md:mb-12 md:grid-cols-12 md:gap-y-4",
+        "mb-10 grid gap-x-10 gap-y-3 border-t-2 pt-5 md:mb-14 md:grid-cols-12 md:gap-y-4",
         onInk ? "border-paper" : "border-ink",
       )}
     >
@@ -107,7 +107,7 @@ export function ArrowLink({
     <Link
       href={href}
       className={cn(
-        "group inline-flex min-h-10 items-center gap-1.5 rounded-sm text-sm font-semibold",
+        "group inline-flex min-h-11 items-center gap-1.5 rounded-sm text-sm font-semibold",
         tone === "ink" ? "text-signal" : "text-signal-deep",
         className,
       )}
@@ -137,8 +137,8 @@ const buttonVariants: Record<ButtonVariant, string> = {
 };
 
 const buttonSizes: Record<ButtonSize, string> = {
-  md: "px-5 py-2.5 text-sm",
-  lg: "px-7 py-4 text-base",
+  md: "min-h-11 px-6 py-3 text-sm",
+  lg: "min-h-12 px-8 py-5 text-base",
 };
 
 /** Classes d'un bouton : réutilisables pour <Link>, <button> ou <summary>. */
@@ -238,7 +238,7 @@ export function Chip({
     <Link
       href={href}
       className={cn(
-        "group/chip inline-flex min-h-10 items-center gap-1.5 rounded-sm border border-line bg-surface px-3 text-sm font-medium text-ink transition-colors duration-150 hover:border-ink hover:bg-ink hover:text-paper",
+        "group/chip inline-flex min-h-11 items-center gap-1.5 rounded-sm border border-line bg-surface px-3 text-sm font-medium text-ink transition-colors duration-150 hover:border-ink hover:bg-ink hover:text-paper",
         className,
       )}
     >
