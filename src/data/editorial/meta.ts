@@ -32,7 +32,7 @@ export const EDITORIAL_META: Record<string, { metaTitle?: string; metaDescriptio
     metaDescription: "Courant alternatif ou continu : où s'effectue la conversion, pourquoi la recharge rapide est en DC, et l'effet sur la puissance et le prix.",
   },
   "temps-recharge-voiture-electrique": { metaTitle: "Temps de recharge d'une voiture électrique" },
-  "fonctionnement-borne-de-recharge": { metaTitle: "Comment fonctionne une borne de recharge" },
+  "fonctionnement-borne-de-recharge": { metaTitle: "Comment fonctionnent les bornes de recharge ?" },
   "puissance-recharge-dc": { metaTitle: "Puissance de recharge DC : pic ou moyenne ?" },
   "recharger-a-80-pourcent": { metaTitle: "Faut-il charger à 80 % une voiture électrique ?" },
   "preserver-batterie-voiture-electrique": {
@@ -73,7 +73,7 @@ export const EDITORIAL_META: Record<string, { metaTitle?: string; metaDescriptio
   "comment-evexpert-construit-sa-base": { metaTitle: "Comment EVExpert construit sa base de véhicules" },
   // Nouveaux contenus
   "kw-kwh-difference-voiture-electrique": { metaTitle: "kW ou kWh : la différence en voiture électrique" },
-  "consommation-voiture-electrique-kwh-100-km": { metaTitle: "Consommation d'une voiture électrique (kWh/100 km)" },
+  "consommation-voiture-electrique-kwh-100-km": { metaTitle: "Consommation d'une voiture électrique en kWh/100 km" },
   "recharger-sur-prise-domestique": { metaTitle: "Recharger sur une prise domestique : durée et limites" },
   "garantie-batterie-ce-que-disent-les-donnees": { metaTitle: "Garantie batterie : ce que disent les données" },
 };

@@ -21,11 +21,11 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
   {
     slug: "combien-coute-recharge-domicile",
     category: "coûts",
-    title: "Combien coûte une recharge à domicile ?",
+    title: "Combien coûte la recharge d'une voiture électrique à la maison ?",
     description:
       "Comment calculer le prix d'une recharge à la maison : énergie, rendement, tarif du kWh, heures creuses. Exemples chiffrés pour plusieurs modèles.",
     publishedAt: GUIDE_DATE,
-    updatedAt: GUIDE_DATE,
+    updatedAt: "2026-09-24",
     readingTime: 6,
     intro:
       "Recharger chez soi est en général la solution la moins chère. Son coût se calcule simplement, à condition de connaître le prix de votre kWh et de compter les pertes de charge : voici la méthode, avec des exemples.",
@@ -67,7 +67,9 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
       },
       {
         heading: "Ce qui peut changer le résultat",
-        paragraphs: [],
+        paragraphs: [
+          "Remplacez ces hypothèses par les vôtres dans le [simulateur de coût de recharge](/outils/cout-recharge-voiture-electrique), pour un résultat propre à votre tarif et à votre véhicule. Ce qui fait varier le résultat par rapport aux exemples ci-dessus :",
+        ],
         list: [
           "Le rendement de charge : plus faible avec une petite puissance sur une batterie froide.",
           "La puissance souscrite : une recharge simultanée avec d'autres appareils peut imposer de limiter la puissance.",
@@ -294,7 +296,7 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
   {
     slug: "fonctionnement-borne-de-recharge",
     category: "recharge",
-    title: "Comment fonctionne une borne de recharge ?",
+    title: "Comment fonctionnent les bornes de recharge ?",
     description:
       "Ce que fait réellement une borne de recharge : dialogue avec la voiture, sécurité, comptage, paiement et supervision par l'opérateur.",
     publishedAt: GUIDE_DATE,

@@ -139,7 +139,7 @@ export function buildNewGuides(ctx: GuideContext): Guide[] {
       title: "Consommation d'une voiture électrique : combien de kWh aux 100 km ?",
       description: `Ce que mesure la consommation en kWh/100 km, la différence entre consommation à la batterie et à la prise, et les valeurs des ${N} versions du catalogue.`,
       publishedAt: GUIDE_DATE,
-      updatedAt: GUIDE_DATE,
+      updatedAt: "2026-09-24",
       readingTime: 6,
       intro:
         "La consommation d'une voiture électrique se lit en kWh aux 100 km. Selon qu'elle est mesurée à la batterie ou à la prise, le chiffre n'est pas le même : c'est la source de bien des comparaisons faussées.",
@@ -149,6 +149,13 @@ export function buildNewGuides(ctx: GuideContext): Guide[] {
           paragraphs: [
             "La consommation est l'énergie utilisée pour parcourir 100 km. Plus elle est basse, moins la voiture demande d'énergie, donc d'argent, pour la même distance. Elle ne dépend pas que du véhicule : la vitesse, la température, le relief et le style de conduite la font varier fortement.",
             "Les valeurs publiées sont des valeurs d'homologation, mesurées dans des conditions normalisées. Elles servent à comparer des voitures entre elles, pas à prévoir votre consommation.",
+          ],
+        },
+        {
+          heading: "Convertir kWh/km, kWh/100 km et km/kWh",
+          paragraphs: [
+            "Ces trois unités décrivent la même consommation, seulement exprimée différemment : diviser des kWh/100 km par 100 donne des kWh/km ; prendre l'inverse (1 ÷ valeur) donne des km/kWh, l'unité qui répond directement à « combien de kilomètres avec un kWh ? ».",
+            `Exemple avec la ${full(r5)} : sa consommation calculée côté batterie est de ${formatNumber(batteryConsumption100(r5), 1)} kWh/100 km (calcul EVExpert : capacité utile ÷ autonomie WLTP × 100), soit ${formatNumber(batteryConsumption100(r5) / 100, 3)} kWh/km, soit encore ${formatNumber(100 / batteryConsumption100(r5), 2)} km/kWh. Pour la différence entre le kW et le kWh eux-mêmes, voir [kW ou kWh : la différence](/guides/kw-kwh-difference-voiture-electrique).`,
           ],
         },
         {
@@ -205,7 +212,7 @@ export function buildNewGuides(ctx: GuideContext): Guide[] {
         },
       ],
       relatedTools: ["/outils/cout-100-km", "/outils/autonomie-voiture-electrique", "/outils/cout-recharge-voiture-electrique"],
-      relatedGuides: ["cout-100-km-voiture-electrique", "autonomie-autoroute", "autonomie-hiver", "wltp-definition", "calculer-autonomie-reelle"],
+      relatedGuides: ["kw-kwh-difference-voiture-electrique", "cout-100-km-voiture-electrique", "autonomie-autoroute", "autonomie-hiver", "wltp-definition", "calculer-autonomie-reelle"],
       relatedVehicleIds: [byCons[0].id, byCons[1].id, byCons[2].id],
       faq: [
         {
