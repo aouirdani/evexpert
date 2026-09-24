@@ -201,8 +201,15 @@ export type GuideCategory = "autonomie" | "recharge" | "batterie" | "coûts" | "
 export interface Tool {
   slug: string;
   href: string;
+  /** Aussi le H1 (`PageHeader`) et le libellé des liens « outils utiles » (`RelatedTools`). */
   title: string;
+  /** Libellé court : carte `/outils`, fil d'Ariane. Ne change pas avec `title`/`metaTitle`. */
   shortTitle: string;
+  /** Description visible (carte `/outils`) ; sert aussi de meta description si `metaDescription` est absent. */
   description: string;
   icon: string;
+  /** Balise <title>/Open Graph, si plus courte que `title` (H1). Absent : repli sur `title`. */
+  metaTitle?: string;
+  /** Meta description, si différente de `description`. Absent : repli sur `description`. */
+  metaDescription?: string;
 }
