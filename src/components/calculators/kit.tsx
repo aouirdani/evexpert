@@ -53,10 +53,10 @@ export function NumberInput({
         max={max}
         step={step}
         onChange={(e) => onChange(parseFloat(e.target.value))}
-        className="w-full rounded-md border border-control bg-surface px-3 py-2.5 text-base text-ink focus-visible:border-signal-deep"
+        className="w-full rounded-md border border-control bg-surface px-4 py-3 text-base text-ink focus-visible:border-signal-deep"
       />
       {suffix && (
-        <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-muted">
+        <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm text-muted">
           {suffix}
         </span>
       )}
@@ -117,7 +117,7 @@ export function SelectInput<T extends string>({
       id={id}
       value={value}
       onChange={(e) => onChange(e.target.value as T)}
-      className="w-full rounded-md border border-control bg-surface px-3 py-2.5 text-base text-ink focus-visible:border-signal-deep"
+      className="w-full rounded-md border border-control bg-surface px-4 py-3 text-base text-ink focus-visible:border-signal-deep"
     >
       {options.map((o) => (
         <option key={o.value} value={o.value}>
@@ -141,10 +141,10 @@ export function ResultCard({
   hint?: string;
 }) {
   return (
-    <div className="border-t border-line-ink pt-4">
+    <div className="border-t border-line-ink pt-5">
       <p className="label text-ink-muted">{label}</p>
-      <p className={cx("num mt-2 font-bold", emphasis ? "text-data-xl text-signal" : "text-data-lg text-paper")}>{value}</p>
-      {hint && <p className="num mt-1.5 text-sm text-ink-muted">{hint}</p>}
+      <p className={cx("num mt-2.5 font-bold", emphasis ? "text-data-xl text-signal" : "text-data-lg text-paper")}>{value}</p>
+      {hint && <p className="num mt-2 text-sm text-ink-muted">{hint}</p>}
     </div>
   );
 }
@@ -159,13 +159,13 @@ export function CalcLayout({
 }) {
   return (
     <div className="grid gap-6 lg:grid-cols-2">
-      <div className="rounded-2xl border border-line bg-surface p-6 sm:p-8">
+      <div className="rounded-2xl border border-line bg-surface p-7 sm:p-9">
         <h2 className="label">Vos paramètres</h2>
-        <div className="mt-6 space-y-5">{inputs}</div>
+        <div className="mt-6 space-y-6">{inputs}</div>
       </div>
-      <div className="on-ink rounded-2xl bg-ink p-6 text-paper sm:p-8" aria-live="polite">
+      <div className="on-ink rounded-2xl bg-ink p-7 text-paper sm:p-9" aria-live="polite">
         <h2 className="label text-ink-muted">Résultats</h2>
-        <div className="mt-6 space-y-5">{results}</div>
+        <div className="mt-6 space-y-6">{results}</div>
       </div>
     </div>
   );
@@ -208,7 +208,7 @@ export function VehiclePresetSelect({
           const p = presets.find((x) => x.id === e.target.value);
           if (p) onPick(p);
         }}
-        className="w-full rounded-md border border-control bg-surface px-3 py-2.5 text-base text-ink focus-visible:border-signal-deep   "
+        className="w-full rounded-md border border-control bg-surface px-4 py-3 text-base text-ink focus-visible:border-signal-deep"
       >
         <option value="">Saisie manuelle</option>
         {presets.map((p) => (

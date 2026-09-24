@@ -46,9 +46,9 @@ export function ToolPageShell({
         <LastUpdated date={c.updatedAt} />
       </div>
 
-      <div className="mt-10">{calculator}</div>
+      <div className="mt-12">{calculator}</div>
 
-      <div className="mt-section grid gap-x-16 gap-y-10 lg:grid-cols-[minmax(0,44rem)_1fr]">
+      <div className="mt-section grid gap-x-16 gap-y-12 lg:grid-cols-[minmax(0,44rem)_1fr]">
         <div className="prose-ev min-w-0">
           {c.intro.slice(1).map((p) => (
             <p key={p}>{p}</p>
@@ -58,7 +58,7 @@ export function ToolPageShell({
           <p>Chaque étape est visible : aucune hypothèse n&apos;est cachée.</p>
           <dl className="mt-5 border-t-2 border-ink">
             {c.formulas.map((f) => (
-              <div key={f.label} className="border-b border-line py-3.5">
+              <div key={f.label} className="border-b border-line py-4">
                 <dt className="text-sm font-bold text-ink">{f.label}</dt>
                 <dd className="num mt-1 text-sm text-body">{f.expr}</dd>
               </div>

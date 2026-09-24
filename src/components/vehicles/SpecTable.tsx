@@ -33,7 +33,7 @@ export function SpecTable({
       </h3>
       <dl>
         {rows.map((r) => (
-          <div key={r.label} className="grid grid-cols-[1fr_auto] gap-x-4 gap-y-0.5 border-t border-line py-2.5 text-sm first:border-t-0">
+          <div key={r.label} className="grid grid-cols-[1fr_auto] gap-x-4 gap-y-1 border-t border-line py-3 text-sm first:border-t-0">
             <dt className="text-muted">{r.label}</dt>
             <dd className={r.value === "Non disponible" ? "num text-right text-muted" : "num text-right font-semibold text-ink"}>
               {r.value}

@@ -34,7 +34,7 @@ export function DataBadge({ type, className }: { type: DataType; className?: str
     <span
       title={c.hint}
       className={cx(
-        "inline-flex items-center whitespace-nowrap rounded-sm px-2 py-0.5 text-[11px] font-semibold ring-1 ring-inset",
+        "inline-flex items-center whitespace-nowrap rounded-sm px-2.5 py-1 text-xs font-semibold ring-1 ring-inset",
         c.tone,
         className,
       )}
