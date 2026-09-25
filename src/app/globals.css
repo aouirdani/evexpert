@@ -52,7 +52,10 @@
      maîtrisé. --text-h1 (32→64 px) sert tous les autres gabarits, dont des titres réels de plus
      de 90 caractères (fiches véhicule, guides) : plafonné nettement sous le display, testé avec
      le H1 le plus long du site à 375 px et 1440 px avant validation. */
-  --text-display: clamp(2.75rem, 1.6rem + 5.2vw, 5.5rem);
+  /* Plafonné à 4rem (64px) : c'est la taille exacte du H1 du hero sur desktop (voir Hero.tsx),
+     auparavant forcée en dur (`lg:text-[4rem]`) faute d'un token qui s'arrête au bon endroit.
+     Le plafond est atteint dès 738px de large ; en dessous, la courbe est inchangée (min 2.75rem). */
+  --text-display: clamp(2.75rem, 1.6rem + 5.2vw, 4rem);
   --text-display--line-height: 1;
   --text-display--letter-spacing: -0.042em;
   --text-h1: clamp(2rem, 1.5rem + 2.8vw, 4rem);

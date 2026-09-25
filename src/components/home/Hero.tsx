@@ -42,12 +42,12 @@ export function Hero({
         <div className="relative z-10 max-w-[44rem] lg:min-h-[26rem]">
           <Kicker tone="ink">Expertise électrique</Kicker>
           {/* Espace insécable avant « : » (typographie française) : le deux-points ne passe jamais en début de ligne. */}
-          <h1 className="balance mt-6 text-display font-bold text-paper lg:text-[4rem]">{frTypo(h1)}</h1>
+          <h1 className="balance mt-6 text-display font-bold text-paper">{frTypo(h1)}</h1>
           <p className="pretty mt-7 max-w-xl text-dek text-ink-muted">
             Autonomie, batterie, recharge et coût d&apos;usage de chaque modèle, comparés côte à côte à partir de
             données sourcées. La nature de chaque chiffre est toujours indiquée.
           </p>
-          <div className="mt-9 flex flex-col gap-x-8 gap-y-4 sm:flex-row sm:items-center">
+          <div className="mt-7 flex flex-col gap-x-8 gap-y-4 sm:flex-row sm:items-center sm:mt-9">
             <ButtonLink href="/comparer" variant="signal" size="lg">
               Comparer des voitures
             </ButtonLink>
@@ -60,7 +60,7 @@ export function Hero({
           </div>
         </div>
 
-        <div className="pointer-events-none relative -mx-4 -mb-6 mt-8 aspect-[5/4] sm:-mx-6 sm:-mb-10 sm:aspect-[16/9] lg:absolute lg:right-0 lg:top-2 lg:mx-0 lg:mb-0 lg:mt-0 lg:aspect-[1376/768] lg:w-[68vw] lg:max-w-[1100px]">
+        <div className="pointer-events-none relative -mx-4 -mb-6 mt-6 aspect-[5/4] sm:-mx-6 sm:-mb-10 sm:mt-8 sm:aspect-[16/9] lg:absolute lg:right-0 lg:top-2 lg:mx-0 lg:mb-0 lg:mt-0 lg:aspect-[1376/768] lg:w-[68vw] lg:max-w-[1100px]">
           <Image
             src="/brand/evexpert-hero.jpeg"
             alt=""
@@ -75,7 +75,7 @@ export function Hero({
 
         <dl
           aria-label="Le catalogue en chiffres"
-          className="relative z-10 mt-12 grid grid-cols-2 gap-x-6 gap-y-6 border-t border-line-ink pt-6 sm:grid-cols-4 lg:mt-16"
+          className="relative z-10 mt-9 grid grid-cols-2 gap-x-6 gap-y-6 border-t border-line-ink pt-6 sm:mt-12 sm:grid-cols-4 lg:mt-16"
         >
           {stats.map((s) => (
             <DataFigure key={s.label} tone="ink" size="lg" label={s.label} value={s.value} />
