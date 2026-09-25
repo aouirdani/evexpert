@@ -11,6 +11,7 @@ import { JsonLd } from "@/components/ui/JsonLd";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 import { getGa4MeasurementId } from "@/config/analytics";
+import { buildConsentScript } from "@/lib/consent-script";
 
 // Police unique : Schibsted Grotesk (licence OFL, voir ./fonts/OFL.txt), variable
 // 400-800, sous-ensemble latin français (~36 Ko, un seul fichier).
@@ -82,22 +83,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         >
           Aller au contenu
         </a>
-        {/* Google Consent Mode v2 : tout refusé par défaut, AVANT GA4 et AdSense (l'ordre est
-            impératif — un signal déclaré après le chargement des scripts n'a aucun effet). Ce sont
-            le message de consentement Google (« Réglementations européennes », publié dans
-            AdSense) qui met ensuite ces signaux à jour via l'API googlefc : EVExpert ne gère plus
-            son propre bandeau, un seul dialogue est affiché au visiteur. `beforeInteractive` : ce
+        {/* Google Consent Mode v2, implémentation « basique » (voir lib/consent-script.ts) : tout
+            refusé par défaut, AVANT GA4 et AdSense (l'ordre est impératif). GA4 (gtag.js lui-même)
+            n'est chargé qu'une fois analytics_storage passé à « granted » par le message Google
+            (« Réglementations européennes », publié dans AdSense) — EVExpert ne gère plus son
+            propre bandeau, un seul dialogue est affiché au visiteur. `beforeInteractive` : ce
             script est injecté dans le HTML initial, avant l'hydratation — donc avant tout autre
             script, y compris `afterInteractive`. */}
         <Script id="consent-default" strategy="beforeInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-function gtag(){window.dataLayer.push(arguments);}
-gtag('consent', 'default', {
-  'ad_storage': 'denied',
-  'ad_user_data': 'denied',
-  'ad_personalization': 'denied',
-  'analytics_storage': 'denied'
-});`}
+          {buildConsentScript(getGa4MeasurementId())}
         </Script>
         <JsonLd data={[websiteJsonLd(), organizationJsonLd()]} />
         {/* Google AdSense : validation du site uniquement (voir public/ads.txt et la balise
@@ -114,7 +108,7 @@ gtag('consent', 'default', {
         {children}
         <Footer />
         <GarageBar />
-        <Analytics ga4Id={getGa4MeasurementId()} />
+        <Analytics />
       </body>
     </html>
   );
