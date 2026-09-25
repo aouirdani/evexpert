@@ -5,7 +5,6 @@ import { IBM_Plex_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
-import { CookieBanner } from "@/components/CookieBanner";
 import { GarageBar } from "@/components/garage/GarageBar";
 import { Analytics } from "@/components/Analytics";
 import { JsonLd } from "@/components/ui/JsonLd";
@@ -83,11 +82,29 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         >
           Aller au contenu
         </a>
+        {/* Google Consent Mode v2 : tout refusé par défaut, AVANT GA4 et AdSense (l'ordre est
+            impératif — un signal déclaré après le chargement des scripts n'a aucun effet). Ce sont
+            le message de consentement Google (« Réglementations européennes », publié dans
+            AdSense) qui met ensuite ces signaux à jour via l'API googlefc : EVExpert ne gère plus
+            son propre bandeau, un seul dialogue est affiché au visiteur. `beforeInteractive` : ce
+            script est injecté dans le HTML initial, avant l'hydratation — donc avant tout autre
+            script, y compris `afterInteractive`. */}
+        <Script id="consent-default" strategy="beforeInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){window.dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied'
+});`}
+        </Script>
         <JsonLd data={[websiteJsonLd(), organizationJsonLd()]} />
         {/* Google AdSense : validation du site uniquement (voir public/ads.txt et la balise
             google-adsense-account ci-dessus). Aucun emplacement publicitaire ni annonce
-            automatique dans ce script — c'est aussi lui qui affiche, le cas échéant, le message
-            de consentement Google (indépendant du bandeau cookies interne, voir CookieBanner). */}
+            automatique dans ce script — c'est aussi lui qui affiche le message de consentement
+            Google, seul dialogue de consentement du site (voir le commentaire Consent Mode
+            au-dessus). */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248"
@@ -96,7 +113,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
         {children}
         <Footer />
-        <CookieBanner />
         <GarageBar />
         <Analytics ga4Id={getGa4MeasurementId()} />
       </body>

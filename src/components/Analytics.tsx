@@ -3,7 +3,6 @@
 import Script from "next/script";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { useConsent } from "./CookieBanner";
 
 declare global {
   interface Window {
@@ -38,20 +37,25 @@ function GA4PageviewTracker() {
 }
 
 /**
- * Charge Google Analytics 4 (gtag.js) uniquement APRÈS consentement accepté.
+ * Charge Google Analytics 4 (gtag.js) — toujours, dès le chargement de la page.
+ *
+ * Ce n'est plus un bandeau interne qui décide si GA4 se charge : c'est le mode de consentement
+ * Google (Consent Mode v2, valeurs par défaut « denied » déclarées dans `layout.tsx` avant ce
+ * script — l'ordre est impératif) qui décide si gtag.js écrit réellement un cookie ou envoie des
+ * données identifiantes. Tant que le visiteur n'a pas répondu au message de consentement Google
+ * (« Réglementations européennes »), gtag.js reste chargé mais silencieux : aucun cookie `_ga`,
+ * aucune donnée envoyée avec des identifiants. C'est le comportement documenté par Google pour
+ * Consent Mode — pas une hypothèse : voir developers.google.com/tag-platform/security/guides/consent.
  *
  * `ga4Id` est transmis en prop par `app/layout.tsx` (Server Component), qui seul lit la variable
  * serveur `GA_ID` (`config/analytics.ts`, sans préfixe `NEXT_PUBLIC_`). Ce composant ne lit lui-même
  * aucune variable d'environnement : un identifiant serveur sans préfixe `NEXT_PUBLIC_` vaudrait
  * `undefined` s'il était lu ici, puisque Next.js ne l'inline pas dans le bundle client.
  *
- * Pas de Google Tag Manager : une seule intégration analytics, chargée une seule fois, jamais
- * avant consentement.
+ * Pas de Google Tag Manager : une seule intégration analytics, chargée une seule fois.
  */
 export function Analytics({ ga4Id }: { ga4Id: string }) {
-  const consented = useConsent() === "accepted";
-
-  if (!consented || !ga4Id) return null;
+  if (!ga4Id) return null;
 
   return (
     <>

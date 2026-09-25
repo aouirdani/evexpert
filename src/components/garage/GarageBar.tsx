@@ -5,15 +5,12 @@ import { useSyncExternalStore } from "react";
 import { X } from "lucide-react";
 import { clearGarage } from "./garage-store";
 import { useGarageIds } from "./useGarage";
-import { useConsent } from "@/components/CookieBanner";
-import { cx } from "@/lib/cx";
 
 const noopSubscribe = () => () => {};
 
 /**
  * Barre flottante globale (montée une fois dans `layout.tsx`, jamais dans le header/footer) :
- * visible dès qu'un véhicule est dans « Ma sélection ». Décalée vers le haut tant que le bandeau
- * cookies (bas de page, z-60) n'a pas de réponse, pour ne jamais le recouvrir.
+ * visible dès qu'un véhicule est dans « Ma sélection ».
  *
  * En bas à GAUCHE dès `sm:` (jamais à droite) : `VehicleRow` place sa colonne « Sélection »
  * (le même bouton Comparer) au bord droit de chaque tableau. Une barre à droite se superposait
@@ -24,18 +21,11 @@ const noopSubscribe = () => () => {};
 export function GarageBar() {
   const ids = useGarageIds();
   const hydrated = useSyncExternalStore(noopSubscribe, () => true, () => false);
-  const consent = useConsent();
 
   if (!hydrated || ids.length === 0) return null;
 
   return (
-    <div
-      role="status"
-      className={cx(
-        "fixed inset-x-4 z-50 sm:inset-x-auto sm:left-4",
-        consent === null ? "bottom-24 sm:bottom-28" : "bottom-4",
-      )}
-    >
+    <div role="status" className="fixed inset-x-4 bottom-4 z-50 sm:inset-x-auto sm:left-4">
       <div className="on-ink flex items-center gap-4 rounded-sm bg-ink px-4 py-3 text-paper shadow-lg">
         <p className="text-sm font-semibold">
           <span className="num">{ids.length}</span>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/brand/Logo";
 import { ButtonLink } from "@/components/ui/primitives";
+import { ConsentRevocationButton } from "@/components/ConsentRevocationButton";
 import { footerNav, siteConfig } from "@/config/site";
 
 /** Règle graduée (écho de l'image de partage) : SVG statique, purement décoratif. */
@@ -83,13 +84,7 @@ export function Footer() {
             </Link>
             .
           </p>
-          <button
-            type="button"
-            data-cookie-settings
-            className="min-h-10 shrink-0 rounded-md border border-line-ink px-3 text-sm font-medium text-paper transition-colors hover:bg-ink-raised"
-          >
-            Gestion des cookies
-          </button>
+          <ConsentRevocationButton className="min-h-10 shrink-0 rounded-md border border-line-ink px-3 text-sm font-medium text-paper transition-colors hover:bg-ink-raised" />
         </div>
       </div>
     </footer>

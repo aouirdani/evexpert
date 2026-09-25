@@ -29,7 +29,7 @@ export default function Page() {
           list: [
             "Journaux techniques de l'hébergeur (adresse IP, date et heure, page demandée, type de navigateur) : nécessaires à la sécurité et au fonctionnement du service.",
             "Termes saisis dans la recherche du site : ils apparaissent dans l'adresse de la page de résultats et donc dans les journaux techniques.",
-            "Votre choix de consentement aux cookies, stocké dans le navigateur (stockage local) pour ne pas vous le redemander.",
+            "Votre choix de consentement, géré et conservé par le message de Google (le site ne stocke plus lui-même ce choix).",
             siteConfig.email ? "Les messages que vous nous envoyez par courrier électronique, utilisés uniquement pour vous répondre." : "Les messages que vous nous envoyez, le cas échéant, utilisés uniquement pour vous répondre.",
           ],
         },
@@ -42,8 +42,8 @@ export default function Page() {
         {
           heading: "Mesure d'audience et publicité",
           paragraphs: [
-            "Le site utilise Google Analytics pour la mesure d'audience : ces cookies ne sont déposés qu'après votre accord explicite via le bandeau de consentement en bas de page.",
-            "Le site est également inscrit auprès de Google AdSense (régie publicitaire), en cours de validation par Google : aucune annonce n'est affichée à ce jour. Le script Google chargé sur chaque page peut néanmoins déposer certains cookies ou identifiants techniques indépendamment de l'affichage d'une publicité, notamment à des fins de détection de fraude et de mesure de la qualité du trafic publicitaire. Les cookies utilisés pour des annonces personnalisées, eux, ne seront déposés qu'après votre consentement explicite, recueilli via le message de consentement affiché par Google (distinct du bandeau de ce site). Vous pouvez à tout moment modifier ou retirer ce consentement depuis ce message.",
+            "Le site utilise Google Analytics pour la mesure d'audience : ces cookies ne sont déposés qu'après votre accord explicite via le message de consentement de Google (« Réglementations européennes »).",
+            "Le site est également inscrit auprès de Google AdSense (régie publicitaire), en cours de validation par Google : aucune annonce n'est affichée à ce jour. Le script Google chargé sur chaque page peut néanmoins déposer certains cookies ou identifiants techniques indépendamment de l'affichage d'une publicité, notamment à des fins de détection de fraude et de mesure de la qualité du trafic publicitaire. Avant votre réponse au message de consentement, Google Consent Mode refuse ces usages par défaut. Les cookies utilisés pour des annonces personnalisées, eux, ne seront déposés qu'après votre consentement explicite, recueilli via ce même message. Vous pouvez à tout moment modifier ou retirer ce consentement en le rouvrant depuis le bouton « Gérer mes cookies » en bas de page.",
             "Google et ses partenaires publicitaires peuvent utiliser les données ainsi collectées conformément à leurs propres politiques. Pour en savoir plus sur l'usage des données par les partenaires de Google, consultez policies.google.com/technologies/partner-sites.",
           ],
         },
