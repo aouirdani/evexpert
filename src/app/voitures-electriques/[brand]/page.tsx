@@ -4,10 +4,12 @@ import { Container, PageHeader } from "@/components/layout/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { VehicleCard } from "@/components/vehicles/VehicleCard";
+import { BrandOverview } from "@/components/vehicles/BrandOverview";
 import { getBrands, getModels, getVehiclesByBrand } from "@/data/catalog";
 import { vehicleHref } from "@/lib/vehicle-utils";
 import { buildMetadata, itemListJsonLd } from "@/lib/seo";
 import { formatNumber } from "@/lib/format";
+import { getFeaturedComparisons } from "@/lib/comparison";
 
 // Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
 export const revalidate = 86400;
@@ -45,6 +47,10 @@ export default async function BrandPage({ params }: { params: Promise<Params> })
   const name = list[0].brand;
   const models = await modelsOf(brand);
   const ranges = list.map((v) => v.rangeWltp);
+  // Une marque à un seul modèle n'apporte rien de plus que la fiche modèle (noindex, follow,
+  // hors sitemap — voir generateMetadata et sitemap.ts) : elle garde la grille de cartes simple,
+  // sans le contenu enrichi ci-dessous.
+  const indexable = models.length >= 2;
   return (
     <Container className="pb-section pt-8">
       <Breadcrumbs
@@ -58,12 +64,18 @@ export default async function BrandPage({ params }: { params: Promise<Params> })
         title={`${name} électriques : modèles, autonomie et recharge`}
         description={`${models.length} modèle${models.length > 1 ? "s" : ""} et ${list.length} version${list.length > 1 ? "s" : ""} dans notre base. Autonomie WLTP de ${formatNumber(Math.min(...ranges))} à ${formatNumber(Math.max(...ranges))} km selon la source.`}
       />
-      <h2 className="sr-only">Versions {name}</h2>
-      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {list.map((v) => (
-          <VehicleCard key={v.id} vehicle={v} href={vehicleHref(v, list.filter((x) => x.modelSlug === v.modelSlug).length > 1 ? "version" : "model")} />
-        ))}
-      </div>
+      {indexable ? (
+        <BrandOverview brandSlug={brand} vehicles={list} comparisons={await getFeaturedComparisons()} />
+      ) : (
+        <>
+          <h2 className="sr-only">Versions {name}</h2>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {list.map((v) => (
+              <VehicleCard key={v.id} vehicle={v} href={vehicleHref(v, list.filter((x) => x.modelSlug === v.modelSlug).length > 1 ? "version" : "model")} />
+            ))}
+          </div>
+        </>
+      )}
       <JsonLd
         data={itemListJsonLd(
           `${name} électriques`,

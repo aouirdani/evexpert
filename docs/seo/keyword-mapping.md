@@ -167,14 +167,15 @@ Constat : une page marque = H1, une phrase de synthèse, des cartes versions. Si
 
 Enrichissement proposé, avec uniquement des données du catalogue :
 
-- introduction éditoriale propre à la marque (gamme électrique, positionnement), sans reformuler le site constructeur ;
-- tableau des versions : autonomie WLTP, batterie utile, DC max, 10-80 %, consommation calculée ;
+- introduction éditoriale propre à la marque (gamme électrique, positionnement), rédigée individuellement par marque (pas de gabarit de phrase commun), sans reformuler le site constructeur ;
+- tableau des versions : autonomie WLTP, batterie utile, DC max, 10-80 %, consommation calculée (avec son badge de nature « calculée ») ;
 - ce qui distingue les versions entre elles (écarts chiffrés) ;
-- liens vers les outils avec le véhicule présélectionné, si les outils le permettent **[À VÉRIFIER]** ;
-- liens vers les duels du comparateur impliquant la marque ;
-- FAQ courte basée sur les données.
+- section « Pour quel usage ? » individuelle par marque (urbain / longs trajets / famille selon ce que la gamme permet réellement, chiffres à l'appui, aucun classement ni « meilleure » version ; si la gamme ne permet pas de distinguer les usages, l'écrire simplement) ;
+- liens vers les outils sans présélection du véhicule : vérifié, aucun calculateur ne lit de paramètre d'URL aujourd'hui (`VehiclePresetSelect` est un `<select>` client sans `useSearchParams`) — implémenter la présélection toucherait 6 composants et sort du périmètre d'un lot SEO sans changement de logique métier ;
+- liens vers les duels du comparateur impliquant la marque, uniquement depuis `FEATURED_PAIRS` (pas de duel inventé) ;
+- FAQ remplacée par la section « Pour quel usage ? » ci-dessus.
 
-Pour les marques à une seule version : décision à prendre par le propriétaire du site entre enrichir quand même ou `noindex, follow` temporaire. Ne pas appliquer sans validation.
+**Pages marque à une seule version (`noindex, follow`, hors sitemap)** : Audi, CUPRA, Dacia, Nissan, Porsche, smart — implémenté via `models.length >= 2` (nombre de *modèles*, pas de versions) dans `page.tsx` et `sitemap.ts`. Le déblocage se fait quand la marque atteint **au moins 2 modèles distincts** : une marque avec deux versions d'un même modèle dupliquerait encore la fiche modèle et ne justifie pas une page marque à part. Ces pages ne sont pas enrichies (grille de cartes existante conservée) tant qu'elles restent en noindex.
 
 ## 5. Ordre des lots
 

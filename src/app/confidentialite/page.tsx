@@ -15,11 +15,12 @@ export default function Page() {
       description="Ce que le site fait — et ne fait pas — de vos données."
       breadcrumb="Confidentialité"
       href="/confidentialite"
+      updatedAt="2026-09-25"
       sections={[
         {
           heading: "En résumé",
           paragraphs: [
-            "Les calculateurs fonctionnent dans votre navigateur : les valeurs que vous saisissez ne sont pas envoyées à nos serveurs. Le site ne demande ni compte, ni inscription. Aucun cookie de mesure d'audience ou de publicité n'est déposé à ce jour.",
+            "Les calculateurs fonctionnent dans votre navigateur : les valeurs que vous saisissez ne sont pas envoyées à nos serveurs. Le site ne demande ni compte, ni inscription. Les cookies de mesure d'audience et de publicité ne sont déposés qu'avec votre consentement (voir « Mesure d'audience et publicité » ci-dessous).",
           ],
         },
         {
@@ -35,19 +36,21 @@ export default function Page() {
         {
           heading: "Finalités et bases légales",
           paragraphs: [
-            "Le fonctionnement et la sécurité du site reposent sur l'intérêt légitime de l'éditeur. La mesure d'audience et la publicité, si elles sont activées un jour, ne le seront qu'avec votre consentement préalable.",
+            "Le fonctionnement et la sécurité du site reposent sur l'intérêt légitime de l'éditeur. La mesure d'audience et la publicité ne s'exécutent qu'avec votre consentement préalable.",
           ],
         },
         {
           heading: "Mesure d'audience et publicité",
           paragraphs: [
-            "Le site est prêt à charger des outils de mesure d'audience (Google Analytics / Tag Manager) ou de publicité (Google AdSense), mais ils sont désactivés et ne s'exécuteront qu'après votre accord explicite via le bandeau de consentement. Vous pouvez modifier votre choix à tout moment avec le bouton « Gestion des cookies » en bas de page.",
+            "Le site utilise Google Analytics pour la mesure d'audience : ces cookies ne sont déposés qu'après votre accord explicite via le bandeau de consentement en bas de page.",
+            "Le site est également inscrit auprès de Google AdSense (régie publicitaire), en cours de validation par Google : aucune annonce n'est affichée à ce jour. Le script Google chargé sur chaque page peut néanmoins déposer certains cookies ou identifiants techniques indépendamment de l'affichage d'une publicité, notamment à des fins de détection de fraude et de mesure de la qualité du trafic publicitaire. Les cookies utilisés pour des annonces personnalisées, eux, ne seront déposés qu'après votre consentement explicite, recueilli via le message de consentement affiché par Google (distinct du bandeau de ce site). Vous pouvez à tout moment modifier ou retirer ce consentement depuis ce message.",
+            "Google et ses partenaires publicitaires peuvent utiliser les données ainsi collectées conformément à leurs propres politiques. Pour en savoir plus sur l'usage des données par les partenaires de Google, consultez policies.google.com/technologies/partner-sites.",
           ],
         },
         {
           heading: "Destinataires et transferts",
           paragraphs: [
-            "Les données techniques sont traitées par l'hébergeur Vercel Inc., qui peut opérer hors de l'Union européenne. Aucune donnée n'est vendue. En cas d'activation ultérieure de services Google, la présente politique sera mise à jour avant l'activation.",
+            "Les données techniques sont traitées par l'hébergeur Vercel Inc., qui peut opérer hors de l'Union européenne. Une fois votre consentement donné, Google (Google Analytics, Google AdSense et leurs partenaires publicitaires) traite également certaines données, selon les finalités décrites ci-dessus. Aucune donnée n'est vendue.",
           ],
         },
         {
