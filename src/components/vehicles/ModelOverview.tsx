@@ -12,7 +12,7 @@ import { RangeBar } from "./RangeBar";
 import { VehicleCard } from "./VehicleCard";
 import { GarageToggle } from "@/components/garage/GarageToggle";
 
-const th = "label whitespace-nowrap pb-2.5 pr-5 text-left font-semibold";
+const th = "label whitespace-nowrap pb-3 pr-5 text-left font-semibold";
 
 /** Page modèle à plusieurs versions : tableau comparatif des versions. */
 export function ModelOverview({ versions, similar }: { versions: Vehicle[]; similar: Vehicle[] }) {

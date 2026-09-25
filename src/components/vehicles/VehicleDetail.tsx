@@ -60,7 +60,7 @@ export function vehicleFaq(v: Vehicle): FaqItem[] {
 
 /* Aides de mise en page ------------------------------------------------ */
 
-const th = "label whitespace-nowrap pb-2.5 pr-4 text-left font-semibold";
+const th = "label whitespace-nowrap pb-3 pr-4 text-left font-semibold";
 const tdRow = "py-3 pr-4 text-left align-top font-semibold text-ink";
 const tdNum = "num py-3 pr-4 align-top";
 

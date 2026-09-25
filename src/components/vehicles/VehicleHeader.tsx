@@ -32,9 +32,9 @@ export function VehicleHeader({
           <Kicker>{eyebrow}</Kicker>
           {vehicleId && <GarageToggle id={vehicleId} className="relative shrink-0" showLabel />}
         </div>
-        <h1 className="balance mt-4 text-h1 font-bold text-ink">{frTypo(title)}</h1>
-        {dek && <p className="pretty mt-5 max-w-2xl text-lg text-body">{dek}</p>}
-        <p className="mt-5 text-caption text-muted">
+        <h1 className={`balance mt-5 font-bold text-ink ${aside ? "text-h1-compact" : "text-h1"}`}>{frTypo(title)}</h1>
+        {dek && <p className="pretty mt-6 max-w-2xl text-lg text-body">{dek}</p>}
+        <p className="mt-6 text-caption text-muted">
           Données relevées le <time dateTime={source.lastUpdated}>{formatDateFr(source.lastUpdated)}</time> · {dataTypeLabel(source.dataType)}
         </p>
       </div>

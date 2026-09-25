@@ -25,7 +25,7 @@ export function VehicleCostEstimator({ gridConsumption }: { gridConsumption: num
   );
 
   return (
-    <div className="mt-8 border-t-2 border-ink pt-5">
+    <div className="mt-9 border-t-2 border-ink pt-6">
       <p className="label">Votre coût annuel personnalisé</p>
       <div className="mt-4 grid gap-x-10 gap-y-5 lg:grid-cols-[minmax(0,22rem)_1fr]">
         <div className="grid grid-cols-2 gap-x-5 gap-y-4">

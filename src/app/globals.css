@@ -61,6 +61,13 @@
   --text-h1: clamp(2rem, 1.5rem + 2.8vw, 4rem);
   --text-h1--line-height: 1.05;
   --text-h1--letter-spacing: -0.032em;
+  /* Même courbe que --text-h1 (identique jusqu'à 714 px de large), plafonnée à 2,75rem au lieu de
+     4rem : réservée aux gabarits où le H1 partage sa colonne avec un aside (fiche véhicule avec
+     silhouette). Sans ce plafond, un titre réel long (ex. « Citroën ë-C3 Aircross Extended Range
+     54 kWh ») passe sur 6 lignes à 1440 px et écrase visuellement l'aside. */
+  --text-h1-compact: clamp(2rem, 1.5rem + 2.8vw, 2.75rem);
+  --text-h1-compact--line-height: 1.05;
+  --text-h1-compact--letter-spacing: -0.032em;
   --text-h2: clamp(1.625rem, 1.35rem + 1.3vw, 2.25rem);
   --text-h2--line-height: 1.15;
   --text-h2--letter-spacing: -0.022em;
