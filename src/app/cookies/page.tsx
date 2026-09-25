@@ -14,12 +14,13 @@ export default function Page() {
       description="Aucun cookie non essentiel n'est déposé sans votre accord."
       breadcrumb="Cookies"
       href="/cookies"
+      updatedAt="2026-09-25"
       sections={[
         {
           heading: "Ce que nous utilisons aujourd'hui",
           paragraphs: [
             "Le site enregistre uniquement votre choix de consentement dans le stockage local de votre navigateur (clé technique « evscope-consent »), afin de ne pas vous reposer la question à chaque visite. Ce stockage est strictement nécessaire au fonctionnement du bandeau et ne sert à aucun suivi.",
-            "À ce jour, aucun cookie de mesure d'audience ni de publicité n'est déposé.",
+            "Google Analytics n'est chargé qu'après votre accord via le bandeau ci-dessous. Le site est par ailleurs inscrit auprès de Google AdSense (compte en cours de validation par Google) : aucune annonce n'est affichée à ce jour, mais le script correspondant est actif sur chaque page et peut déposer certains cookies techniques indépendamment de l'affichage d'une publicité (détection de fraude, mesure de la qualité du trafic). Les cookies publicitaires liés à des annonces personnalisées ne seront déposés qu'après votre consentement, recueilli séparément via le message affiché par Google.",
           ],
         },
         {
@@ -28,8 +29,8 @@ export default function Page() {
           table: {
             headers: ["Catégorie", "Outil", "Finalité", "État"],
             rows: [
-              ["Mesure d'audience", "Google Analytics / Tag Manager", "Statistiques de fréquentation", "Désactivé (chargé seulement après consentement, si configuré)"],
-              ["Publicité", "Google AdSense", "Affichage d'annonces", "Désactivé"],
+              ["Mesure d'audience", "Google Analytics", "Statistiques de fréquentation", "Chargé seulement après consentement (bandeau ci-dessous)"],
+              ["Publicité", "Google AdSense", "Affichage d'annonces", "Compte en cours de validation — script actif, aucune annonce affichée ; consentement publicitaire géré par le message de Google"],
             ],
           },
         },

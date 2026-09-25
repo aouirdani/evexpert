@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
@@ -40,6 +41,10 @@ export const metadata: Metadata = {
     apple: [{ url: "/brand/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   authors: [{ name: siteConfig.name }],
+  // Validation de propriété Google AdSense (compte ca-pub-7903460199253248) : aucun emplacement
+  // publicitaire n'est ajouté par cette balise, elle sert uniquement à prouver la propriété du
+  // site auprès de Google, comme public/ads.txt ci-dessous.
+  other: { "google-adsense-account": "ca-pub-7903460199253248" },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
@@ -59,6 +64,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           Aller au contenu
         </a>
         <JsonLd data={[websiteJsonLd(), organizationJsonLd()]} />
+        {/* Google AdSense : validation du site uniquement (voir public/ads.txt et la balise
+            google-adsense-account ci-dessus). Aucun emplacement publicitaire ni annonce
+            automatique dans ce script — c'est aussi lui qui affiche, le cas échéant, le message
+            de consentement Google (indépendant du bandeau cookies interne, voir CookieBanner). */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+        />
         {children}
         <Footer />
         <CookieBanner />
