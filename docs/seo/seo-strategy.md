@@ -1033,3 +1033,70 @@ EVExpert doit devenir progressivement un site combinant :
 > **Données véhicules + outils pratiques + comparateurs + guides spécialisés**
 
 et non un simple blog automobile généré automatiquement.
+
+---
+
+# 27. SEO à l'ère des moteurs de réponse IA
+
+Section ajoutée en septembre 2026. Elle complète les sections 12 à 26 et ne les remplace pas. En cas de conflit, les principes du site (données sourcées, aucun classement, rien d'inventé) prévalent.
+
+### 27.1 Constat
+
+Les résumés IA de Google (AI Overviews) et les assistants (ChatGPT, Perplexity) répondent directement aux questions purement informatives. Des études sectorielles de 2025 indiquent une forte baisse des clics sur le premier résultat quand un résumé IA s'affiche, des sources citées très différentes d'un assistant à l'autre, et une corrélation marquée entre les mentions d'une marque sur le web et sa visibilité dans ces résumés. Ce sont des tendances et des corrélations, à prendre comme ordres de grandeur, pas comme des règles.
+
+Conséquence pour EVExpert : la stratégie « données + outils + comparateurs + guides » est la bonne. Un calculateur, un simulateur ou un tableau filtrable ne peut pas être entièrement remplacé par un résumé IA ; une définition peut l'être.
+
+### 27.2 Filtre « action ou information » avant toute nouvelle page
+
+À ajouter à l'étape 4 du processus (section 23) : pour chaque intention, se demander si une IA peut satisfaire entièrement l'utilisateur seule.
+
+- **Oui** (définition, question simple) : ne créer une page que si EVExpert apporte quelque chose d'impossible à résumer : données du catalogue, calcul, tableau, exemple chiffré. Sinon, traiter la question comme une section d'un guide existant.
+- **Non** (calculer, comparer, simuler, choisir selon sa situation) : priorité haute. Construire autour de l'outil ou du tableau, le texte venant en appui.
+
+Pour le tri des mots-clés dans OpenSEO, prioriser les requêtes contenant « calculateur », « simulateur », « calcul », « tableau », « comparatif », « vs », « coût », « temps de », et les requêtes transactionnelles ou commerciales.
+
+### 27.3 Règles de rédaction
+
+- **Réponse directe d'abord.** Sous chaque H2 et H3, commencer par 2 ou 3 phrases qui répondent à la question du titre, avec le chiffre clé s'il existe, avant de développer.
+- **Intertitres formulés comme de vraies questions** d'utilisateurs, quand c'est naturel (« Combien de temps pour recharger à 11 kW ? »).
+- **Tableaux** dès qu'il y a une comparaison de caractéristiques ou de coûts, avec la nature de chaque donnée.
+- **Entités explicites** : noms exacts des modèles et versions, des standards (Type 2, CCS, WLTP), des sources. Pas de formulations vagues (« certains modèles », « de nombreux experts »).
+- **Chaque chiffre reste sourcé et daté**, avec son badge de nature, comme partout ailleurs sur le site.
+
+### 27.4 Comparaisons « vs »
+
+Les pages de duels du comparateur sont le format « vs » d'EVExpert. Pour en ajouter aux duels pré-calculés existants :
+
+- la comparaison doit avoir une demande de recherche vérifiée dans OpenSEO ;
+- les deux versions doivent être au catalogue, avec des données complètes ;
+- la page doit apporter un contenu propre (écarts chiffrés, orientation par usage), pas seulement le tableau générique ;
+- aucune génération automatique de toutes les combinaisons possibles (rappel de la section 19). Les duels non retenus restent accessibles dans le comparateur, sans URL indexable dédiée.
+
+### 27.5 Orientation par usage plutôt que « meilleur »
+
+Les requêtes du type « meilleure voiture électrique pour… » se traitent avec des sections « Pour quel usage ? », comme sur les pages marques : une orientation par usage justifiée par les chiffres du catalogue, jamais un classement.
+
+### 27.6 Interdits
+
+- Intertitres ou titres « meilleur », « top », « classement » qui désignent un gagnant.
+- « Avis », « test », « essai » : EVExpert ne teste pas les véhicules. Ces termes ne s'utilisent que pour un essai réellement réalisé par EVExpert.
+- Preuve sociale non vérifiable : aucune citation de discussions Reddit, de vidéos YouTube ou d'« avis d'experts » sans source identifiable et lien.
+- Génération d'articles en série. Chaque nouvel article doit s'appuyer sur les données d'EVExpert, apporter un angle propre et être relu avant publication. Google sanctionne le contenu produit en masse pour capter des requêtes.
+- Blocs répétés à l'identique sur de nombreuses pages (FAQ gabarit, introductions à trous).
+
+### 27.7 Mentions de marque (hors site)
+
+Ce levier se joue surtout en dehors du site, par le propriétaire du site : faire connaître les analyses de données auprès de médias spécialisés, de forums et de communautés de conducteurs, et participer sincèrement aux discussions, sans spam.
+
+Ce que le site peut faire pour faciliter ces mentions :
+
+- chaque analyse de blog met en avant un chiffre clé citable, un graphique et un lien vers la méthodologie, avec la date des données ;
+- un bloc « Citer cette analyse » en fin d'article, avec une formule de citation prête à copier (titre, EVExpert, date, URL).
+
+### 27.8 Lots futurs proposés (après le lot consentement)
+
+1. **Réponses directes dans les 23 guides** : ajouter ou reformuler le premier paragraphe de chaque section selon la règle 27.3, sans changer titles, H1 ni URL.
+2. **Bloc « Citer cette analyse »** sur les articles de blog.
+3. **Duels supplémentaires** : liste des comparaisons recherchées (OpenSEO), puis création des seules pages qui respectent la section 27.4.
+
+Chaque lot suit le protocole habituel : plan validé d'abord, contrôles automatiques, preview, validation avant merge.
