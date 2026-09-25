@@ -40,6 +40,10 @@ export const metadata: Metadata = {
     apple: [{ url: "/brand/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   authors: [{ name: siteConfig.name }],
+  // Validation de propriété Google AdSense (compte ca-pub-7903460199253248) : aucun emplacement
+  // publicitaire ni script chargé par cette balise, elle sert uniquement à prouver la propriété
+  // du site auprès de Google, comme public/ads.txt ci-dessous.
+  other: { "google-adsense-account": "ca-pub-7903460199253248" },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
