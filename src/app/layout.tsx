@@ -13,13 +13,18 @@ import { siteConfig } from "@/config/site";
 import { getGa4MeasurementId } from "@/config/analytics";
 
 // Police unique : Schibsted Grotesk (licence OFL, voir ./fonts/OFL.txt), variable
-// 400-800, sous-ensemble latin français (~36 Ko, un seul fichier). next/font génère
-// le fallback ajusté (size-adjust) : pas de décalage de mise en page au swap.
+// 400-800, sous-ensemble latin français (~36 Ko, un seul fichier).
+// `display: "optional"` (pas "swap") : malgré le fallback ajusté (size-adjust), un texte en
+// `balance`/`pretty` (H1, chapô du hero) reste assez sensible aux écarts de métrique résiduels
+// pour que le swap change parfois le nombre de lignes et décale ce qui suit (CLS non nul,
+// confirmé en production avant toute refonte — bissection commit par commit, voir historique de
+// la branche). "optional" supprime le swap après le premier rendu : jamais de décalage, au prix
+// (rare, connexion très lente) d'un premier rendu en police de repli sur cette page précise.
 const brandFont = localFont({
   src: "./fonts/SchibstedGrotesk-latin-var.woff2",
   weight: "400 800",
   variable: "--font-brand",
-  display: "swap",
+  display: "optional",
   fallback: ["system-ui", "Arial"],
   adjustFontFallback: "Arial",
 });
@@ -29,13 +34,13 @@ const brandFont = localFont({
 // `text-data-*` dans globals.css) — jamais les surtitres `.eyebrow`, qui restent en Schibsted
 // Grotesk. Sous-ensemble latin, 3 graisses (régulier/demi-gras/gras : ce sont exactement les
 // trois poids déjà utilisés avec ces utilitaires sur le site, relevé par grep avant ce choix —
-// pas une de plus). `next/font/google` calcule lui-même un fallback ajusté (size-adjust).
+// pas une de plus). `display: "optional"` pour la même raison que `brandFont` ci-dessus.
 const monoFont = IBM_Plex_Mono({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   style: ["normal"],
   variable: "--font-plex-mono",
-  display: "swap",
+  display: "optional",
 });
 
 export const metadata: Metadata = {
