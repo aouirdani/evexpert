@@ -4,6 +4,8 @@ import { formatNumber } from "@/lib/format";
 import type { GuideContext } from "./helpers";
 
 const DATE = "2026-10-02";
+/** Date de la reformulation « réponses directes » (changement réel de contenu). */
+const UPDATED = "2026-10-03";
 
 /** Perte annuelle moyenne mesurée par Geotab (étude de janvier 2026), puis valeurs extrêmes citées par l'étude. */
 const RATES = [
@@ -49,7 +51,7 @@ export function buildBatteryGuides(ctx: GuideContext): Guide[] {
       metaDescription:
         "Une batterie perd de la capacité, lentement : taux mesuré sur plus de 22 700 véhicules, facteurs qui l'accélèrent, ce que couvre la garantie et bons réflexes.",
       publishedAt: DATE,
-      updatedAt: DATE,
+      updatedAt: UPDATED,
       readingTime: 7,
       intro:
         "Une batterie de voiture électrique ne s'arrête pas un jour : elle perd progressivement de la capacité. Le rythme moyen mesuré en 2026 sur plus de 22 700 véhicules est de 2,3 % par an, avec des écarts selon la façon de recharger, le climat et l'usage. Ce guide explique ce que ce chiffre veut dire, ce qui le fait varier et ce qu'une garantie garantit réellement.",
@@ -71,7 +73,8 @@ export function buildBatteryGuides(ctx: GuideContext): Guide[] {
         {
           heading: "Ce que représente 2,3 % par an",
           paragraphs: [
-            "Pour donner un ordre de grandeur, le tableau applique les taux cités par Geotab à une perte supposée régulière dans le temps (extrapolation linéaire EVExpert). C'est une simplification : l'étude ne dit pas que la perte est linéaire, et chaque batterie évolue différemment. Ce n'est pas une prévision.",
+            `Au rythme moyen de 2,3 % par an, il resterait environ ${formatNumber(retained(2.3, 5))} % de la capacité après 5 ans et ${formatNumber(retained(2.3, 8))} % après 8 ans (extrapolation linéaire EVExpert). Ce n'est pas une prévision : l'étude ne dit pas que la perte est linéaire, et chaque batterie évolue différemment.`,
+            "Le tableau applique les trois rythmes cités par Geotab à une perte supposée régulière dans le temps.",
           ],
           table: {
             caption: "Capacité restante après 5, 8 et 10 ans selon le rythme annuel de perte (calcul illustratif EVExpert)",
@@ -137,7 +140,7 @@ export function buildBatteryGuides(ctx: GuideContext): Guide[] {
         {
           heading: "Les bons réflexes",
           paragraphs: [
-            "Ils découlent directement des facteurs mesurés, sans demander de contrainte excessive :",
+            "Quatre réflexes découlent directement des facteurs mesurés et ne demandent pas de contrainte excessive : limiter la recharge rapide à forte puissance, éviter les niveaux de charge extrêmes prolongés, limiter la chaleur, et demander un rapport d'état de santé à l'achat d'occasion.",
           ],
           list: [
             "Réserver la recharge rapide à forte puissance aux trajets longs, plutôt que d'en faire le mode de recharge courant (détails dans [comment préserver la batterie](/guides/preserver-batterie-voiture-electrique)).",
@@ -190,7 +193,7 @@ export function buildBatteryGuides(ctx: GuideContext): Guide[] {
       metaDescription:
         "Prix du pack au kWh, prix de remplacement publiés par les constructeurs, réparation par modules : ce que coûte une batterie et ce qui reste inconnu.",
       publishedAt: DATE,
-      updatedAt: DATE,
+      updatedAt: UPDATED,
       readingTime: 7,
       intro:
         "Deux prix coexistent et il ne faut pas les confondre : celui d'un pack de batterie sortant d'usine, publié en dollars par kWh, et celui qu'un propriétaire se voit facturer pour un remplacement. Le premier baisse ; le second dépend du modèle, du réseau et de la possibilité de réparer. Ce guide sépare les deux, avec des sources datées.",
@@ -224,7 +227,7 @@ export function buildBatteryGuides(ctx: GuideContext): Guide[] {
           heading: "Ce que facturent les marques",
           noAutoLinks: true,
           paragraphs: [
-            "L'argus compile les prix de batterie publiés par les constructeurs. Le tableau reprend les prix TTC de remplacement de la batterie des modèles 100 % électriques Renault et Dacia, tels que publiés (dernière mise à jour de la page : 13 juin 2026). Les libellés sont ceux de la source, sans rattachement aux versions du catalogue EVExpert ; la page ne précise pas si la pose est comprise. Le prix par kWh est calculé par EVExpert.",
+            "Chez Renault Group, les prix de remplacement publiés vont de 7 000 € TTC (Dacia Spring 65 ch) à 25 000 € TTC (Renault Scénic E-Tech Grande Autonomie 220 ch), selon L'argus, qui compile les prix de batterie publiés par les constructeurs. Le tableau reprend les prix TTC de remplacement de la batterie des modèles 100 % électriques Renault et Dacia, tels que publiés (dernière mise à jour de la page : 13 juin 2026). Les libellés sont ceux de la source, sans rattachement aux versions du catalogue EVExpert ; la page ne précise pas si la pose est comprise. Le prix par kWh est calculé par EVExpert.",
           ],
           table: {
             caption: "Prix TTC de la batterie de remplacement publiés par Renault Group (source : L'argus) et prix par kWh calculé",
@@ -266,7 +269,7 @@ export function buildBatteryGuides(ctx: GuideContext): Guide[] {
         {
           heading: "Remplacement complet, modules ou cellules",
           paragraphs: [
-            "Une batterie défaillante n'est pas toujours à remplacer entièrement. À titre anecdotique : en décembre 2024, Mac4Ever a recueilli des propos de commerciaux et d'ateliers, non vérifiés et hors main-d'œuvre, selon lesquels le diagnostic coûterait entre 150 et 250 € et un rééquilibrage ou une petite réparation moins de 500 €. Ces montants n'engagent aucune marque et ne remplacent pas un devis.",
+            "Non : selon la conception du pack, un défaut localisé peut se traiter par un module ou une cellule plutôt que par un remplacement complet, mais ce n'est pas possible sur tous les modèles. À titre anecdotique : en décembre 2024, Mac4Ever a recueilli des propos de commerciaux et d'ateliers, non vérifiés et hors main-d'œuvre, selon lesquels le diagnostic coûterait entre 150 et 250 € et un rééquilibrage ou une petite réparation moins de 500 €. Ces montants n'engagent aucune marque et ne remplacent pas un devis.",
             "Tout dépend de la conception du pack : d'après les mêmes propos, le remplacement par module serait possible sur certains modèles (Mini, Audi, Volkswagen série ID, BMW, Renault Zoé), mais pas sur d'autres, comme Tesla (conception cell-to-vehicle) ou la Dacia Spring (batterie non modulaire).",
           ],
           list: [

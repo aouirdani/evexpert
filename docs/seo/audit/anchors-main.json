@@ -1,0 +1,1917 @@
+{
+ "autonomie-autoroute": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Quelle autonomie sur autoroute avec une voiture électrique ?"
+  },
+  {
+   "level": 2,
+   "id": "la-physique-en-bref",
+   "text": "La physique en bref"
+  },
+  {
+   "level": 2,
+   "id": "estimation-pour-trois-modeles",
+   "text": "Estimation pour trois modèles"
+  },
+  {
+   "level": 2,
+   "id": "planifier-un-long-trajet",
+   "text": "Planifier un long trajet"
+  },
+  {
+   "level": 2,
+   "id": "combien-de-temps-s-arreter",
+   "text": "Combien de temps s'arrêter ?"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "autonomie-hiver": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Pourquoi l'autonomie d'une voiture électrique baisse-t-elle en hiver ?"
+  },
+  {
+   "level": 2,
+   "id": "les-causes-principales",
+   "text": "Les causes principales"
+  },
+  {
+   "level": 2,
+   "id": "quel-ordre-de-grandeur",
+   "text": "Quel ordre de grandeur ?"
+  },
+  {
+   "level": 2,
+   "id": "comment-limiter-la-baisse",
+   "text": "Comment limiter la baisse"
+  },
+  {
+   "level": 2,
+   "id": "ce-que-cela-change-pour-la-recharge",
+   "text": "Ce que cela change pour la recharge"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "batterie-brute-batterie-utile": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Batterie brute et batterie utile : quelle différence ?"
+  },
+  {
+   "level": 2,
+   "id": "deux-capacites-deux-definitions",
+   "text": "Deux capacités, deux définitions"
+  },
+  {
+   "level": 2,
+   "id": "ce-que-montrent-les-modeles-du-catalogue",
+   "text": "Ce que montrent les modèles du catalogue"
+  },
+  {
+   "level": 2,
+   "id": "laquelle-utiliser",
+   "text": "Laquelle utiliser ?"
+  },
+  {
+   "level": 2,
+   "id": "un-point-de-vigilance",
+   "text": "Un point de vigilance"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "calculer-autonomie-reelle": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Comment calculer l'autonomie réelle d'une voiture électrique ?"
+  },
+  {
+   "level": 2,
+   "id": "la-formule-de-base",
+   "text": "La formule de base"
+  },
+  {
+   "level": 2,
+   "id": "partir-de-la-consommation-wltp",
+   "text": "Partir de la consommation WLTP"
+  },
+  {
+   "level": 2,
+   "id": "les-facteurs-qui-font-varier-la-consommation",
+   "text": "Les facteurs qui font varier la consommation"
+  },
+  {
+   "level": 2,
+   "id": "exemple-chiffre",
+   "text": "Exemple chiffré"
+  },
+  {
+   "level": 2,
+   "id": "affiner-avec-votre-propre-consommation",
+   "text": "Affiner avec votre propre consommation"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "calculer-tco-voiture-electrique": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Comment calculer le TCO d'une voiture électrique ?"
+  },
+  {
+   "level": 2,
+   "id": "la-formule",
+   "text": "La formule"
+  },
+  {
+   "level": 2,
+   "id": "exemple-sur-5-ans",
+   "text": "Exemple sur 5 ans"
+  },
+  {
+   "level": 2,
+   "id": "le-poste-energie-avec-des-donnees-du-catalogue",
+   "text": "Le poste énergie avec des données du catalogue"
+  },
+  {
+   "level": 2,
+   "id": "les-erreurs-a-eviter",
+   "text": "Les erreurs à éviter"
+  },
+  {
+   "level": 2,
+   "id": "faire-varier-les-hypotheses",
+   "text": "Faire varier les hypothèses"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "choisir-premiere-voiture-electrique": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Comment choisir sa première voiture électrique ?"
+  },
+  {
+   "level": 2,
+   "id": "1-ou-allez-vous-recharger",
+   "text": "1. Où allez-vous recharger ?"
+  },
+  {
+   "level": 2,
+   "id": "2-quels-trajets",
+   "text": "2. Quels trajets ?"
+  },
+  {
+   "level": 2,
+   "id": "3-quel-budget-total",
+   "text": "3. Quel budget total ?"
+  },
+  {
+   "level": 2,
+   "id": "4-comment-lire-une-fiche-technique",
+   "text": "4. Comment lire une fiche technique ?"
+  },
+  {
+   "level": 2,
+   "id": "5-neuve-ou-d-occasion",
+   "text": "5. Neuve ou d'occasion ?"
+  },
+  {
+   "level": 2,
+   "id": "6-essayer-avant-de-choisir",
+   "text": "6. Essayer avant de choisir"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "choisir-voiture-electrique-selon-usage": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Quelle voiture électrique choisir selon son usage ?"
+  },
+  {
+   "level": 2,
+   "id": "ville-et-petits-trajets",
+   "text": "Ville et petits trajets"
+  },
+  {
+   "level": 2,
+   "id": "famille-et-coffre",
+   "text": "Famille et coffre"
+  },
+  {
+   "level": 2,
+   "id": "longs-trajets-reguliers",
+   "text": "Longs trajets réguliers"
+  },
+  {
+   "level": 2,
+   "id": "le-critere-qui-prime-la-recharge-a-la-maison",
+   "text": "Le critère qui prime : la recharge à la maison"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "combien-coute-recharge-domicile": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Combien coûte la recharge d'une voiture électrique à la maison ?"
+  },
+  {
+   "level": 2,
+   "id": "le-calcul-en-trois-etapes",
+   "text": "Le calcul en trois étapes"
+  },
+  {
+   "level": 2,
+   "id": "quel-prix-du-kwh-utiliser",
+   "text": "Quel prix du kWh utiliser ?"
+  },
+  {
+   "level": 2,
+   "id": "exemples-chiffres",
+   "text": "Exemples chiffrés"
+  },
+  {
+   "level": 2,
+   "id": "ce-qui-peut-changer-le-resultat",
+   "text": "Ce qui peut changer le résultat"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "consommation-voiture-electrique-kwh-100-km": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Consommation d'une voiture électrique : combien de kWh aux 100 km ?"
+  },
+  {
+   "level": 2,
+   "id": "ce-que-mesure-la-consommation-en-kwh-100-km",
+   "text": "Ce que mesure la consommation en kWh/100 km"
+  },
+  {
+   "level": 2,
+   "id": "convertir-kwh-km-kwh-100-km-et-km-kwh",
+   "text": "Convertir kWh/km, kWh/100 km et km/kWh"
+  },
+  {
+   "level": 2,
+   "id": "consommation-a-la-batterie-ou-a-la-prise",
+   "text": "Consommation à la batterie ou à la prise"
+  },
+  {
+   "level": 2,
+   "id": "ce-que-montre-l-ecart-sur-tout-le-catalogue",
+   "text": "Ce que montre l'écart sur tout le catalogue"
+  },
+  {
+   "level": 2,
+   "id": "les-valeurs-du-catalogue",
+   "text": "Les valeurs du catalogue"
+  },
+  {
+   "level": 2,
+   "id": "ce-qui-fait-varier-votre-consommation",
+   "text": "Ce qui fait varier votre consommation"
+  },
+  {
+   "level": 2,
+   "id": "convertir-la-consommation-en-euros",
+   "text": "Convertir la consommation en euros"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "cout-100-km-voiture-electrique": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Combien coûte 100 km en voiture électrique ?"
+  },
+  {
+   "level": 2,
+   "id": "la-formule",
+   "text": "La formule"
+  },
+  {
+   "level": 2,
+   "id": "exemples-selon-le-tarif",
+   "text": "Exemples selon le tarif"
+  },
+  {
+   "level": 2,
+   "id": "comparaison-avec-l-essence",
+   "text": "Comparaison avec l'essence"
+  },
+  {
+   "level": 2,
+   "id": "pourquoi-votre-cout-reel-differe",
+   "text": "Pourquoi votre coût réel diffère"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "cout-borne-recharge-domicile": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Combien coûte une borne de recharge à domicile ?"
+  },
+  {
+   "level": 2,
+   "id": "les-postes-d-un-devis",
+   "text": "Les postes d'un devis"
+  },
+  {
+   "level": 2,
+   "id": "ce-qui-fait-varier-le-prix",
+   "text": "Ce qui fait varier le prix"
+  },
+  {
+   "level": 2,
+   "id": "faire-un-bon-choix",
+   "text": "Faire un bon choix"
+  },
+  {
+   "level": 2,
+   "id": "aides-et-demarches",
+   "text": "Aides et démarches"
+  },
+  {
+   "level": 2,
+   "id": "ce-qu-une-borne-fait-economiser",
+   "text": "Ce qu'une borne fait économiser"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "duree-de-vie-batterie-voiture-electrique": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Durée de vie d'une batterie de voiture électrique : ce que disent les données"
+  },
+  {
+   "level": 2,
+   "id": "la-reponse-courte",
+   "text": "La réponse courte"
+  },
+  {
+   "level": 2,
+   "id": "ce-que-mesure-la-degradation",
+   "text": "Ce que mesure la dégradation"
+  },
+  {
+   "level": 2,
+   "id": "ce-que-represente-2-3-par-an",
+   "text": "Ce que représente 2,3 % par an"
+  },
+  {
+   "level": 3,
+   "id": "traduction-en-kwh-et-en-kilometres",
+   "text": "Traduction en kWh et en kilomètres"
+  },
+  {
+   "level": 2,
+   "id": "ce-qui-accelere-ou-ralentit-la-degradation",
+   "text": "Ce qui accélère ou ralentit la dégradation"
+  },
+  {
+   "level": 2,
+   "id": "vieillissement-calendaire-et-vieillissement-cyclique",
+   "text": "Vieillissement calendaire et vieillissement cyclique"
+  },
+  {
+   "level": 2,
+   "id": "lfp-ou-nmc-une-chimie-plus-durable",
+   "text": "LFP ou NMC : une chimie plus durable ?"
+  },
+  {
+   "level": 2,
+   "id": "garantie-et-duree-de-vie-deux-choses-differentes",
+   "text": "Garantie et durée de vie : deux choses différentes"
+  },
+  {
+   "level": 2,
+   "id": "les-bons-reflexes",
+   "text": "Les bons réflexes"
+  },
+  {
+   "level": 2,
+   "id": "limites-de-ces-donnees",
+   "text": "Limites de ces données"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "fonctionnement-borne-de-recharge": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Comment fonctionnent les bornes de recharge ?"
+  },
+  {
+   "level": 2,
+   "id": "le-dialogue-avec-la-voiture",
+   "text": "Le dialogue avec la voiture"
+  },
+  {
+   "level": 2,
+   "id": "en-ac-un-interrupteur-intelligent",
+   "text": "En AC : un interrupteur intelligent"
+  },
+  {
+   "level": 2,
+   "id": "en-dc-un-convertisseur-puissant",
+   "text": "En DC : un convertisseur puissant"
+  },
+  {
+   "level": 2,
+   "id": "du-badge-au-paiement",
+   "text": "Du badge au paiement"
+  },
+  {
+   "level": 2,
+   "id": "ou-trouver-les-bornes",
+   "text": "Où trouver les bornes ?"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "kw-kwh-difference-voiture-electrique": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "kW ou kWh : quelle différence pour une voiture électrique ?"
+  },
+  {
+   "level": 2,
+   "id": "le-kwh-une-quantite-d-energie",
+   "text": "Le kWh : une quantité d'énergie"
+  },
+  {
+   "level": 2,
+   "id": "le-kw-une-puissance",
+   "text": "Le kW : une puissance"
+  },
+  {
+   "level": 2,
+   "id": "relier-les-deux-la-duree-de-charge",
+   "text": "Relier les deux : la durée de charge"
+  },
+  {
+   "level": 2,
+   "id": "les-confusions-a-eviter",
+   "text": "Les confusions à éviter"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "preserver-batterie-voiture-electrique": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Comment préserver la batterie d'une voiture électrique ?"
+  },
+  {
+   "level": 2,
+   "id": "ce-qui-use-une-batterie",
+   "text": "Ce qui use une batterie"
+  },
+  {
+   "level": 2,
+   "id": "les-bons-reflexes",
+   "text": "Les bons réflexes"
+  },
+  {
+   "level": 2,
+   "id": "la-recharge-rapide-est-elle-un-probleme",
+   "text": "La recharge rapide est-elle un problème ?"
+  },
+  {
+   "level": 2,
+   "id": "que-dit-la-garantie",
+   "text": "Que dit la garantie ?"
+  },
+  {
+   "level": 2,
+   "id": "suivre-l-etat-de-sa-batterie",
+   "text": "Suivre l'état de sa batterie"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "prix-batterie-voiture-electrique": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Prix d'une batterie de voiture électrique : pack, remplacement et réparation"
+  },
+  {
+   "level": 2,
+   "id": "la-reponse-courte",
+   "text": "La réponse courte"
+  },
+  {
+   "level": 2,
+   "id": "le-prix-du-pack-au-kwh",
+   "text": "Le prix du pack, au kWh"
+  },
+  {
+   "level": 2,
+   "id": "ce-que-facturent-les-marques",
+   "text": "Ce que facturent les marques"
+  },
+  {
+   "level": 3,
+   "id": "un-autre-constructeur-pour-comparaison",
+   "text": "Un autre constructeur pour comparaison"
+  },
+  {
+   "level": 3,
+   "id": "pourquoi-l-ecart-entre-le-pack-et-la-facture",
+   "text": "Pourquoi l'écart entre le pack et la facture"
+  },
+  {
+   "level": 2,
+   "id": "remplacement-complet-modules-ou-cellules",
+   "text": "Remplacement complet, modules ou cellules"
+  },
+  {
+   "level": 2,
+   "id": "garantie-qui-paie",
+   "text": "Garantie : qui paie ?"
+  },
+  {
+   "level": 2,
+   "id": "ce-qui-n-est-pas-disponible",
+   "text": "Ce qui n'est pas disponible"
+  },
+  {
+   "level": 2,
+   "id": "comment-s-en-servir-pour-decider",
+   "text": "Comment s'en servir pour décider"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "puissance-borne-7-11-22-kw": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Quelle puissance de borne choisir : 7,4, 11 ou 22 kW ?"
+  },
+  {
+   "level": 2,
+   "id": "d-ou-viennent-3-7-7-4-11-et-22-kw",
+   "text": "D'où viennent 3,7, 7,4, 11 et 22 kW ?"
+  },
+  {
+   "level": 2,
+   "id": "le-maillon-le-plus-faible-fixe-la-vitesse",
+   "text": "Le maillon le plus faible fixe la vitesse"
+  },
+  {
+   "level": 2,
+   "id": "ce-que-dit-votre-installation",
+   "text": "Ce que dit votre installation"
+  },
+  {
+   "level": 2,
+   "id": "comment-decider",
+   "text": "Comment décider"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "puissance-recharge-dc": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Que signifie la puissance de recharge DC d'une voiture électrique ?"
+  },
+  {
+   "level": 2,
+   "id": "un-pic-pas-une-constante",
+   "text": "Un pic, pas une constante"
+  },
+  {
+   "level": 2,
+   "id": "la-puissance-moyenne-un-meilleur-indicateur",
+   "text": "La puissance moyenne, un meilleur indicateur"
+  },
+  {
+   "level": 2,
+   "id": "ce-qui-limite-la-puissance-en-pratique",
+   "text": "Ce qui limite la puissance en pratique"
+  },
+  {
+   "level": 2,
+   "id": "faut-il-viser-la-puissance-la-plus-elevee",
+   "text": "Faut-il viser la puissance la plus élevée ?"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "recharge-ac-ou-dc": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Recharge AC ou DC : quelle différence ?"
+  },
+  {
+   "level": 2,
+   "id": "recharge-ac-le-chargeur-est-dans-la-voiture",
+   "text": "Recharge AC : le chargeur est dans la voiture"
+  },
+  {
+   "level": 2,
+   "id": "recharge-dc-le-chargeur-est-dans-la-borne",
+   "text": "Recharge DC : le chargeur est dans la borne"
+  },
+  {
+   "level": 2,
+   "id": "comparaison",
+   "text": "Comparaison"
+  },
+  {
+   "level": 2,
+   "id": "les-modeles-du-catalogue",
+   "text": "Les modèles du catalogue"
+  },
+  {
+   "level": 2,
+   "id": "quand-utiliser-quoi",
+   "text": "Quand utiliser quoi ?"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "recharge-domicile-ou-borne-publique": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Voiture électrique : recharge à domicile ou borne publique ?"
+  },
+  {
+   "level": 2,
+   "id": "trois-grands-cas-de-figure",
+   "text": "Trois grands cas de figure"
+  },
+  {
+   "level": 2,
+   "id": "comparaison-des-couts",
+   "text": "Comparaison des coûts"
+  },
+  {
+   "level": 2,
+   "id": "au-dela-du-prix",
+   "text": "Au-delà du prix"
+  },
+  {
+   "level": 2,
+   "id": "combiner-plusieurs-modes",
+   "text": "Combiner plusieurs modes"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "recharger-a-80-pourcent": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Faut-il charger une voiture électrique à 80 % ?"
+  },
+  {
+   "level": 2,
+   "id": "deux-raisons-differentes-de-s-arreter-a-80",
+   "text": "Deux raisons différentes de s'arrêter à 80 %"
+  },
+  {
+   "level": 2,
+   "id": "cela-depend-de-la-chimie-de-la-batterie",
+   "text": "Cela dépend de la chimie de la batterie"
+  },
+  {
+   "level": 2,
+   "id": "une-regle-pratique",
+   "text": "Une règle pratique"
+  },
+  {
+   "level": 2,
+   "id": "ce-que-dit-la-garantie",
+   "text": "Ce que dit la garantie"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "recharger-sur-prise-domestique": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Recharger sur une prise domestique : combien de temps, et à quelles conditions ?"
+  },
+  {
+   "level": 2,
+   "id": "quelle-puissance-sur-une-prise-ordinaire",
+   "text": "Quelle puissance sur une prise ordinaire ?"
+  },
+  {
+   "level": 2,
+   "id": "combien-de-temps-pour-recharger",
+   "text": "Combien de temps pour recharger ?"
+  },
+  {
+   "level": 2,
+   "id": "ce-qu-une-nuit-permet-de-recuperer",
+   "text": "Ce qu'une nuit permet de récupérer"
+  },
+  {
+   "level": 2,
+   "id": "a-quelles-conditions",
+   "text": "À quelles conditions ?"
+  },
+  {
+   "level": 2,
+   "id": "quand-la-prise-suffit-et-quand-passer-a-une-borne",
+   "text": "Quand la prise suffit, et quand passer à une borne"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "temps-recharge-voiture-electrique": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Combien de temps faut-il pour recharger une voiture électrique ?"
+  },
+  {
+   "level": 2,
+   "id": "la-formule-en-ac",
+   "text": "La formule en AC"
+  },
+  {
+   "level": 2,
+   "id": "exemples-chiffres-en-ac",
+   "text": "Exemples chiffrés en AC"
+  },
+  {
+   "level": 2,
+   "id": "en-recharge-rapide-dc",
+   "text": "En recharge rapide (DC)"
+  },
+  {
+   "level": 2,
+   "id": "pourquoi-80",
+   "text": "Pourquoi 80 % ?"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "voiture-electrique-vs-essence": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Voiture électrique vs essence : quel est le coût réel ?"
+  },
+  {
+   "level": 2,
+   "id": "les-postes-a-comparer",
+   "text": "Les postes à comparer"
+  },
+  {
+   "level": 2,
+   "id": "un-exemple-illustratif",
+   "text": "Un exemple illustratif"
+  },
+  {
+   "level": 2,
+   "id": "lire-le-resultat-avec-prudence",
+   "text": "Lire le résultat avec prudence"
+  },
+  {
+   "level": 2,
+   "id": "trois-questions-avant-de-conclure",
+   "text": "Trois questions avant de conclure"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "wltp-definition": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "WLTP : qu'est-ce que c'est et que mesure-t-il vraiment ?"
+  },
+  {
+   "level": 2,
+   "id": "une-procedure-d-essai-harmonisee",
+   "text": "Une procédure d'essai harmonisée"
+  },
+  {
+   "level": 2,
+   "id": "le-cycle-wltc-en-chiffres",
+   "text": "Le cycle WLTC en chiffres"
+  },
+  {
+   "level": 2,
+   "id": "pourquoi-l-autonomie-reelle-differe",
+   "text": "Pourquoi l'autonomie réelle diffère"
+  },
+  {
+   "level": 2,
+   "id": "autonomie-wltp-et-consommation-wltp",
+   "text": "Autonomie WLTP et consommation WLTP"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ]
+}

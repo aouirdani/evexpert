@@ -4,10 +4,11 @@ import { SOURCES } from "@/data/sources";
 import { acChargeMinutes, averageDcPower, chargeCost } from "@/lib/vehicle-calcs";
 import { formatEuro, formatNumber, minutesToHuman } from "@/lib/format";
 import type { GuideContext } from "./helpers";
-import { GUIDE_DATE } from "./helpers";
+import { GUIDE_DATE, extent, fullName } from "./helpers";
 
 export function buildRechargeGuides(ctx: GuideContext): Guide[] {
-  const { veh } = ctx;
+  const { veh, vehicles } = ctx;
+  const N = vehicles.length;
   const r5 = veh("renault-5-e-tech-52-kwh-150-ch");
   const my = veh("tesla-model-y-rwd");
   const ioniq5 = veh("hyundai-ioniq-5-84-kwh-rwd");
@@ -16,6 +17,18 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
   const bmw = veh("bmw-i4-edrive40");
   const twingo = veh("renault-twingo-e-tech-27-5-kwh");
   const home = ASSUMPTIONS.homePrice;
+  // Exemples des réponses directes (un modèle différent par guide) et grandeurs lues dans le catalogue.
+  const id4 = veh("volkswagen-id-4-pro");
+  const m3 = veh("tesla-model-3-rwd");
+  const m3lr = veh("tesla-model-3-long-range-rwd");
+  const homeCost = extent(vehicles, (v) => chargeCost(v, home, 10, 80).cost);
+  const acPower = extent(vehicles, (v) => v.chargingAC);
+  const dcPower = extent(vehicles, (v) => v.chargingDC);
+  const dcMinutes = extent(vehicles, (v) => v.chargingTime10to80);
+  const dcAverage = extent(vehicles, (v) => averageDcPower(v));
+  const ac11 = extent(vehicles, (v) => acChargeMinutes(v, 11).minutes);
+  const lfp = vehicles.filter((v) => v.chemistry === "LFP").length;
+  const nmc = vehicles.filter((v) => v.chemistry === "NMC").length;
 
   return [
   {
@@ -25,14 +38,16 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
     description:
       "Comment calculer le prix d'une recharge à la maison : énergie, rendement, tarif du kWh, heures creuses. Exemples chiffrés pour plusieurs modèles.",
     publishedAt: GUIDE_DATE,
-    updatedAt: "2026-09-24",
+    updatedAt: "2026-10-03",
     readingTime: 6,
     intro:
       "Recharger chez soi est en général la solution la moins chère. Son coût se calcule simplement, à condition de connaître le prix de votre kWh et de compter les pertes de charge : voici la méthode, avec des exemples.",
     sections: [
       {
         heading: "Le calcul en trois étapes",
-        paragraphs: [],
+        paragraphs: [
+          "Le coût d'une recharge à domicile est l'énergie tirée du compteur multipliée par le prix de votre kWh ; l'énergie au compteur est l'énergie stockée dans la batterie divisée par le rendement de charge.",
+        ],
         list: [
           "Énergie stockée = capacité utile × (état de charge visé − état de charge de départ).",
           "Énergie au compteur = énergie stockée ÷ rendement de charge (souvent proche de 90 % en AC).",
@@ -49,7 +64,8 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
       {
         heading: "Exemples chiffrés",
         paragraphs: [
-          `Coût d'une recharge de 10 à 80 % à ${formatNumber(home, 2)} €/kWh et ${ASSUMPTIONS.chargingEfficiency} % de rendement (calcul EVExpert) :`,
+          `À ${formatNumber(home, 2)} €/kWh, une recharge de 10 à 80 % coûte de ${formatEuro(homeCost.minValue, 2)} à ${formatEuro(homeCost.maxValue, 2)} sur les ${N} versions du catalogue (calcul EVExpert, rendement ${ASSUMPTIONS.chargingEfficiency} %). Exemple : ${fullName(id4)}, dont ${id4.source.name} publie une batterie utile de ${formatNumber(id4.batteryUsable, 1)} kWh, pour ${formatEuro(chargeCost(id4, home, 10, 80).cost, 2)}.`,
+          "Le tableau détaille quatre modèles du catalogue :",
         ],
         table: {
           headers: ["Modèle", "Batterie utile", "Énergie au compteur", "Coût", "Autonomie ajoutée"],
@@ -68,6 +84,7 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
       {
         heading: "Ce qui peut changer le résultat",
         paragraphs: [
+          "Le résultat dépend surtout du prix de votre kWh, du rendement de charge et de la puissance disponible : les exemples ci-dessus reposent sur des hypothèses, à remplacer par les vôtres.",
           "Remplacez ces hypothèses par les vôtres dans le [simulateur de coût de recharge](/outils/cout-recharge-voiture-electrique), pour un résultat propre à votre tarif et à votre véhicule. Ce qui fait varier le résultat par rapport aux exemples ci-dessus :",
         ],
         list: [
@@ -94,7 +111,7 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
     description:
       "Wallbox 7,4, 11 ou 22 kW : ce que change la puissance, les limites du véhicule et du réseau, et comment choisir selon votre voiture et votre usage.",
     publishedAt: GUIDE_DATE,
-    updatedAt: GUIDE_DATE,
+    updatedAt: "2026-10-03",
     readingTime: 6,
     intro:
       "Choisir la puissance d'une borne à domicile ne consiste pas à prendre la plus élevée. La vitesse de charge est plafonnée par la voiture, par l'installation électrique et par votre besoin réel : souvent, une puissance modérée suffit.",
@@ -136,7 +153,9 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
       },
       {
         heading: "Comment décider",
-        paragraphs: [],
+        paragraphs: [
+          `Choisissez la puissance de la borne d'après la limite AC de votre voiture, votre besoin quotidien et votre installation : au-delà de ce que la voiture accepte, plus de puissance n'apporte rien. Dans le catalogue, cette limite va de ${formatNumber(acPower.minValue, 1)} kW à ${formatNumber(acPower.maxValue, 1)} kW, selon ${acPower.min.source.name}.`,
+        ],
         list: [
           "Regardez la limite AC de votre voiture : investir dans plus de puissance que ce qu'elle accepte est inutile.",
           "Estimez votre besoin : la voiture reste souvent branchée toute la nuit ; quelques kW suffisent pour recharger l'énergie d'un trajet quotidien.",
@@ -161,7 +180,7 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
     description:
       "Courant alternatif ou continu : où s'effectue la conversion, pourquoi la recharge rapide est en DC, et ce que cela change pour la puissance, le prix et l'usage.",
     publishedAt: GUIDE_DATE,
-    updatedAt: GUIDE_DATE,
+    updatedAt: "2026-10-03",
     readingTime: 5,
     intro:
       "Le réseau électrique fournit du courant alternatif (AC), alors qu'une batterie stocke du courant continu (DC). La différence entre recharge AC et DC tient à l'endroit où s'effectue la conversion, et cela explique presque tout : la puissance, la vitesse et le prix.",
@@ -182,7 +201,9 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
       },
       {
         heading: "Comparaison",
-        paragraphs: [],
+        paragraphs: [
+          "La différence tient à l'endroit où le courant alternatif est converti en courant continu : dans la voiture en AC, dans la borne en DC. Cela fixe la puissance, l'usage typique et, en général, le prix du kWh.",
+        ],
         table: {
           headers: ["", "Recharge AC", "Recharge DC"],
           rows: [
@@ -196,7 +217,10 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
       },
       {
         heading: "Les modèles du catalogue",
-        paragraphs: ["Les puissances maximales varient beaucoup d'un modèle à l'autre :"],
+        paragraphs: [
+          `Dans le catalogue, la charge AC maximale va de ${formatNumber(acPower.minValue, 1)} kW à ${formatNumber(acPower.maxValue, 1)} kW, et la charge DC maximale de ${formatNumber(dcPower.minValue)} kW à ${formatNumber(dcPower.maxValue)} kW, selon ${acPower.min.source.name}.`,
+          "Quatre modèles en détail :",
+        ],
         table: {
           headers: ["Modèle", "AC max.", "DC max.", "10-80 % en DC"],
           rows: [twingo, r5, ev3, ioniq5].map((v) => [
@@ -230,7 +254,7 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
     description:
       "Temps de recharge selon la puissance de borne : formule, exemples chiffrés en AC, temps 10-80 % en DC et pourquoi la fin de charge est plus lente.",
     publishedAt: GUIDE_DATE,
-    updatedAt: GUIDE_DATE,
+    updatedAt: "2026-10-03",
     readingTime: 6,
     intro:
       "Il n'y a pas de temps de recharge unique : tout dépend de l'énergie à ajouter et de la puissance réellement disponible. On peut pourtant l'estimer facilement en AC, et s'appuyer sur des valeurs publiées pour la recharge rapide.",
@@ -252,7 +276,10 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
           }),
           caption: `Calcul EVExpert (rendement ${ASSUMPTIONS.chargingEfficiency} %). Au-delà de ${formatNumber(r5.chargingAC, 1)} kW, la durée ne baisse plus : la voiture limite la puissance.`,
         },
-        paragraphs: [`Recharge de 10 à 80 % (calcul EVExpert, rendement ${ASSUMPTIONS.chargingEfficiency} %) :`],
+        paragraphs: [
+          `Sur une borne AC de 11 kW, une recharge de 10 à 80 % dure de ${minutesToHuman(ac11.minValue)} à ${minutesToHuman(ac11.maxValue)} sur les ${N} versions du catalogue (calcul EVExpert, rendement ${ASSUMPTIONS.chargingEfficiency} %). La voiture peut limiter la puissance : sur une borne de 22 kW, la ${fullName(ioniq5)} recharge de 10 à 80 % en ${minutesToHuman(acChargeMinutes(ioniq5, 22).minutes)}, car son chargeur embarqué plafonne à ${formatNumber(ioniq5.chargingAC, 1)} kW et une borne plus puissante n'accélère plus la charge.`,
+          "Le tableau compare plusieurs puissances et modèles :",
+        ],
         table: {
           headers: ["Modèle", "Sur 3,7 kW", "Sur 7,4 kW", "Sur 11 kW", "Sur 22 kW"],
           rows: [twingo, r5, my, ioniq5].map((v) => [
@@ -264,7 +291,8 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
       {
         heading: "En recharge rapide (DC)",
         paragraphs: [
-          "En DC, la puissance n'est pas constante : elle atteint un pic puis diminue à mesure que la batterie se remplit. C'est pourquoi les constructeurs publient un temps de 10 à 80 % plutôt qu'un simple rapport énergie/puissance.",
+          `Dans le catalogue, la recharge rapide de 10 à 80 % dure de ${formatNumber(dcMinutes.minValue)} min à ${formatNumber(dcMinutes.maxValue)} min, selon ${dcMinutes.min.source.name}. Exemple : ${fullName(ioniq5)}, ${ioniq5.source.name} publie ${ioniq5.chargingTime10to80} min sur une borne rapide (jusqu'à ${formatNumber(ioniq5.chargingDC ?? 0)} kW).`,
+          `La puissance réelle n'est pas constante : elle atteint un pic puis diminue à mesure que la batterie se remplit, c'est pourquoi les constructeurs publient ce temps plutôt qu'un simple rapport énergie/puissance.`,
         ],
         table: {
           caption: "Temps 10-80 % en DC publié par la source, et puissance moyenne déduite (calcul EVExpert)",
@@ -352,7 +380,7 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
     description:
       "Puissance maximale, puissance moyenne, courbe de charge : comment lire un chiffre de recharge DC et pourquoi le temps 10-80 % est un meilleur repère.",
     publishedAt: GUIDE_DATE,
-    updatedAt: GUIDE_DATE,
+    updatedAt: "2026-10-03",
     readingTime: 5,
     intro:
       "« 250 kW en recharge rapide » : le chiffre impressionne, mais il décrit un pic, pas une moyenne. Pour comparer deux voitures, il vaut mieux regarder le temps de charge 10-80 % et la puissance moyenne qu'il implique.",
@@ -385,7 +413,9 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
       },
       {
         heading: "Ce qui limite la puissance en pratique",
-        paragraphs: [],
+        paragraphs: [
+          `La puissance reçue est plafonnée par la borne, par la température de la batterie, par le niveau de charge de départ et par la tension du système : elle reste en général bien en dessous du pic annoncé. À partir du temps 10-80 % publié, la puissance moyenne déduite va de ${formatNumber(dcAverage.minValue)} kW à ${formatNumber(dcAverage.maxValue)} kW sur les ${dcAverage.n} versions concernées (calcul EVExpert d'après ${dcAverage.min.source.name}).`,
+        ],
         list: [
           "La puissance de la borne, qui peut être partagée entre deux véhicules.",
           "La température de la batterie, trop froide ou trop chaude.",
@@ -416,7 +446,7 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
     description:
       "Charger à 80 % ou à 100 % : ce que recommandent la logique de la batterie et la recharge rapide, selon la chimie (NMC ou LFP) et l'usage quotidien.",
     publishedAt: GUIDE_DATE,
-    updatedAt: GUIDE_DATE,
+    updatedAt: "2026-10-03",
     readingTime: 5,
     intro:
       "La règle des 80 % circule beaucoup. Elle est pertinente dans deux cas — la préservation de certaines batteries et la recharge rapide — mais elle n'est pas universelle. Voici comment décider.",
@@ -437,7 +467,9 @@ export function buildRechargeGuides(ctx: GuideContext): Guide[] {
       },
       {
         heading: "Une règle pratique",
-        paragraphs: [],
+        paragraphs: [
+          `Au quotidien, viser un niveau modéré (par exemple 80 %) convient à une batterie NMC, tandis qu'une batterie LFP accepte souvent 100 %. Selon ${m3.source.name}, le catalogue compte ${lfp} versions LFP et ${nmc} versions NMC : la ${fullName(m3)} est en ${m3.chemistry}, la ${fullName(m3lr)} en ${m3lr.chemistry}.`,
+        ],
         list: [
           "Usage quotidien : viser un niveau modéré (par exemple 80 %) sur une batterie NMC, sauf besoin de l'autonomie complète.",
           "Long trajet : charger à 100 % avant de partir si nécessaire, puis s'arrêter à 80 % aux bornes rapides.",
