@@ -17,7 +17,8 @@
     "test": "vitest run",
     "test:routes": "node scripts/smoke-routes.mjs",
     "snapshot:seo": "node scripts/seo-snapshot.mjs",
-    "seo:audit": "node scripts/seo-audit.mjs"
+    "seo:audit": "node scripts/seo-audit.mjs",
+    "verify": "node scripts/verify.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
