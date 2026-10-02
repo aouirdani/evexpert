@@ -66,7 +66,7 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
       },
     ],
     relatedTools: ["/outils/cout-recharge-voiture-electrique"],
-    relatedGuides: ["recharger-a-80-pourcent", "batterie-brute-batterie-utile", "autonomie-hiver"],
+    relatedGuides: ["recharger-a-80-pourcent", "batterie-brute-batterie-utile", "duree-de-vie-batterie-voiture-electrique", "autonomie-hiver"],
     relatedVehicleIds: [r5.id, twingo.id, "tesla-model-3-rwd"],
     faq: [
       { question: "Combien de temps dure une batterie de voiture électrique ?", answer: "Elle perd lentement de la capacité avec le temps. Les garanties constructeur, souvent de 8 ans, donnent un repère minimum mais pas une durée de vie maximale." },

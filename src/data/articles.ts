@@ -503,7 +503,7 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
       },
     ],
     relatedTools: ["/outils/tco-voiture-electrique"],
-    relatedGuides: ["preserver-batterie-voiture-electrique", "recharger-a-80-pourcent", "batterie-brute-batterie-utile"],
+    relatedGuides: ["preserver-batterie-voiture-electrique", "duree-de-vie-batterie-voiture-electrique", "prix-batterie-voiture-electrique", "batterie-brute-batterie-utile"],
     relatedVehicleIds: warranty.filter((w) => w.years === 8 && w.km).slice(0, 3).map((w) => w.v.id),
     faq: [
       {

@@ -7,6 +7,7 @@ import { buildAutonomieGuides } from "@/data/guides/autonomie";
 import { buildRechargeGuides } from "@/data/guides/recharge";
 import { buildUsageGuides } from "@/data/guides/usage";
 import { buildNewGuides } from "@/data/guides/nouveaux";
+import { buildBatteryGuides } from "@/data/guides/batterie";
 import { makeGuideContext } from "@/data/guides/helpers";
 import { decorateArticles, decorateGuides } from "@/data/editorial/decorate";
 import { EDITORIAL_HEROES, EDITORIAL_PHOTOS } from "@/data/editorial/media";
@@ -16,7 +17,7 @@ import { vehicleHref } from "@/lib/vehicle-utils";
 import type { ArticleSection } from "@/types";
 
 const ctx = makeGuideContext(vehicles);
-const guides = decorateGuides([...buildAutonomieGuides(ctx), ...buildRechargeGuides(ctx), ...buildUsageGuides(ctx), ...buildNewGuides(ctx)], vehicles);
+const guides = decorateGuides([...buildAutonomieGuides(ctx), ...buildRechargeGuides(ctx), ...buildUsageGuides(ctx), ...buildNewGuides(ctx), ...buildBatteryGuides(ctx)], vehicles);
 const articles = decorateArticles(buildArticles(vehicles), vehicles);
 const all = [
   ...guides.map((g) => ({ ...g, path: `/guides/${g.slug}` })),
@@ -39,7 +40,7 @@ describe("contenu éditorial", () => {
   it("les slugs sont uniques et les nouveaux contenus existent", () => {
     const slugs = all.map((x) => x.slug);
     expect(new Set(slugs).size).toBe(slugs.length);
-    for (const s of ["kw-kwh-difference-voiture-electrique", "consommation-voiture-electrique-kwh-100-km", "recharger-sur-prise-domestique", "garantie-batterie-ce-que-disent-les-donnees"]) {
+    for (const s of ["kw-kwh-difference-voiture-electrique", "consommation-voiture-electrique-kwh-100-km", "recharger-sur-prise-domestique", "garantie-batterie-ce-que-disent-les-donnees", "duree-de-vie-batterie-voiture-electrique", "prix-batterie-voiture-electrique"]) {
       expect(slugs, s).toContain(s);
     }
   });
