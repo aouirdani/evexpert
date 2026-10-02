@@ -77,6 +77,16 @@ export const SOURCES = {
     url: "https://about.bnef.com/insights/clean-transport/new-record-lows-for-battery-prices/",
     accessed: "2026-10-02",
   },
+  largusBatterieRenault: {
+    label: "L'argus — Renault : combien coûtent les batteries des modèles électriques et hybrides ? (publié le 19 août 2024, mis à jour le 13 juin 2026)",
+    url: "https://www.largus.fr/actualite-automobile/renault-combien-coutent-les-batteries-des-modeles-electriques-et-hybrides-30035537.html",
+    accessed: "2026-10-02",
+  },
+  largusBatteriePeugeot: {
+    label: "L'argus — Peugeot : combien coûte la batterie des modèles électriques et hybrides ? (27 novembre 2024)",
+    url: "https://www.largus.fr/actualite-automobile/peugeot-combien-coute-la-batterie-des-modeles-electriques-et-hybrides-30037408.html",
+    accessed: "2026-10-02",
+  },
   mac4everBatterie: {
     label: "Mac4Ever Auto — Combien coûte le remplacement d'une batterie de voiture électrique ? Enquête auprès des marques (8 décembre 2024)",
     url: "https://www.mac4ever.com/auto/184682-combien-coute-le-remplacement-d-une-batterie-de-voiture-electrique-on-a-enquete-aupres-des-marques",
@@ -104,6 +114,8 @@ export const SOURCE_ROLES: { source: Source; usage: string }[] = [
   { source: SOURCES.gtr22, usage: "Seuils minimaux de capacité restante du GTR 22 de l'ONU, référence de la durabilité des batteries." },
   { source: SOURCES.euro7, usage: "Existence et calendrier des exigences européennes de durabilité des batteries (Euro 7)." },
   { source: SOURCES.bnefBatteryPrice2025, usage: "Prix moyen des packs de batterie, par région (guide sur le prix d'une batterie)." },
-  { source: SOURCES.mac4everBatterie, usage: "Relevé journalistique de devis de remplacement de batterie auprès de marques et de concessions." },
+  { source: SOURCES.largusBatterieRenault, usage: "Prix de remplacement de la batterie publiés par Renault et Dacia, par modèle, TTC (guide sur le prix d'une batterie)." },
+  { source: SOURCES.largusBatteriePeugeot, usage: "Prix de la batterie des modèles Peugeot et mention de l'obligation de publication des prix par les constructeurs." },
+  { source: SOURCES.mac4everBatterie, usage: "Propos de commerciaux et d'ateliers sur les réparations de batterie (décembre 2024), à titre anecdotique." },
   { source: SOURCES.cnil, usage: "Règles sur les cookies et le consentement." },
 ];

@@ -185,10 +185,10 @@ export function buildBatteryGuides(ctx: GuideContext): Guide[] {
       category: "batterie",
       title: "Prix d'une batterie de voiture électrique : pack, remplacement et réparation",
       description:
-        "Combien coûte une batterie de voiture électrique ? Prix du pack au kWh, devis de remplacement relevés auprès des marques, réparation par modules et ce qui n'est pas publié.",
+        "Combien coûte une batterie de voiture électrique ? Prix du pack au kWh, prix de remplacement publiés par les constructeurs, réparation par modules et ce qui n'est pas publié.",
       metaTitle: "Prix d'une batterie de voiture électrique",
       metaDescription:
-        "Prix du pack au kWh, devis de remplacement relevés auprès des marques, réparation par modules ou cellules : ce que coûte une batterie et ce qui reste inconnu.",
+        "Prix du pack au kWh, prix de remplacement publiés par les constructeurs, réparation par modules : ce que coûte une batterie et ce qui reste inconnu.",
       publishedAt: DATE,
       updatedAt: DATE,
       readingTime: 7,
@@ -199,7 +199,7 @@ export function buildBatteryGuides(ctx: GuideContext): Guide[] {
           heading: "La réponse courte",
           paragraphs: [
             `Selon BloombergNEF, le prix moyen d'un pack de batterie lithium-ion a atteint ${formatNumber(BNEF.global)} $/kWh en 2025 (moyenne pondérée, en baisse de 8 % sur un an). Ce n'est pas le prix payé par un conducteur : BloombergNEF précise qu'il s'agit du prix du pack, pas de celui des véhicules ou de leur entretien.`,
-            "Pour un remplacement chez un constructeur ou en concession, les devis relevés par la presse en 2024 vont de environ 5 000 à 20 000 € selon le modèle et la capacité. Aucun tarif officiel unique n'existe : EVExpert n'en publie donc pas de moyenne.",
+            "Les constructeurs publient en France le prix de remplacement de leurs batteries : L'argus relève par exemple 7 000 € TTC pour la batterie de la Dacia Spring (26,8 kWh), 14 400 € pour celle de la Renault 5 E-Tech 52 kWh et 25 000 € pour celle du Scénic E-Tech de 87 kWh. Ces prix varient fortement d'un modèle à l'autre : EVExpert n'en publie pas de moyenne.",
           ],
         },
         {
@@ -222,37 +222,49 @@ export function buildBatteryGuides(ctx: GuideContext): Guide[] {
         {
           heading: "Ce que facturent les marques",
           paragraphs: [
-            "En décembre 2024, Mac4Ever Auto a interrogé des marques et des concessions sur le prix d'un remplacement. Les montants ci-dessous proviennent de commerciaux et d'ateliers, hors main-d'œuvre et transport : ce sont des fourchettes annoncées, non contractuelles, qui n'engagent aucune marque. Le prix par kWh est calculé par EVExpert avec la capacité citée par la source.",
+            "Les constructeurs de voitures électrifiées doivent rendre publics les prix de leurs batteries en France, selon L'argus, qui les compile. Le tableau reprend les prix TTC de remplacement de la batterie des modèles 100 % électriques Renault et Dacia, tels que publiés (dernière mise à jour de la page : 13 juin 2026). Les libellés sont ceux de la source, parfois abrégés ; la page ne précise pas si la pose est comprise. Le prix par kWh est calculé par EVExpert.",
           ],
           table: {
-            caption: "Devis de remplacement annoncés (relevé de décembre 2024) et prix par kWh calculé",
-            headers: ["Modèle", "Capacité citée", "Prix annoncé", "Soit par kWh"],
+            caption: "Prix TTC de la batterie de remplacement publiés par Renault Group (source : L'argus) et prix par kWh calculé",
+            headers: ["Modèle (libellé de la source, abrégé)", "Capacité", "Prix TTC", "Soit par kWh"],
             rows: [
-              ["Dacia Spring", 27.4, 5000, 7000],
-              ["Kia e-Niro", 39.2, 7000, 12000],
-              ["Hyundai Kona électrique", 39.2, 10000, 15000],
-              ["Kia e-Niro", 64, 12000, 20000],
-            ].map(([m, kwh, lo, hi]) => [
+              ["Dacia Spring 65 ch", 26.8, 7000],
+              ["Renault Twingo E-Tech 81 ch", 22, 12000],
+              ["Mégane E-Tech Autonomie Urbaine 130 ch", 40, 12000],
+              ["Renault Kangoo E-Tech 120 ch", 45, 15000],
+              ["Renault 5 E-Tech EV52 150 ch", 52, 14400],
+              ["Renault Zoe R110 / R135", 52, 15000],
+              ["Mégane E-Tech Autonomie Confort 130 / 220 ch", 60, 17000],
+              ["Scénic E-Tech Autonomie Confort 170 ch", 60, 22000],
+              ["Scénic E-Tech Grande Autonomie 220 ch", 87, 25000],
+            ].map(([m, kwh, price]) => [
               String(m),
               `${formatNumber(kwh as number, 1)} kWh`,
-              `${formatNumber(lo as number)} à ${formatNumber(hi as number)} €`,
-              `${formatNumber(Math.round((lo as number) / (kwh as number)))} à ${formatNumber(Math.round((hi as number) / (kwh as number)))} €/kWh`,
+              `${formatNumber(price as number)} €`,
+              `${formatNumber(Math.round((price as number) / (kwh as number)))} €/kWh`,
             ]),
           },
+        },
+        {
+          heading: "Un autre constructeur pour comparaison",
+          level: 3,
+          paragraphs: [
+            "Chez Peugeot, L'argus relève 23 600 € TTC pour la batterie de 97 kWh des e-3008 et e-5008 Grande Autonomie, soit environ 243 €/kWh (calcul EVExpert). Les prix publiés ne se comparent pas modèle à modèle sans précaution : capacités, chimies et politiques de prix diffèrent, et les libellés ne correspondent pas toujours aux versions du catalogue EVExpert. Les prix des autres marques du catalogue n'ont pas été relevés : Non disponible.",
+          ],
         },
         {
           heading: "Pourquoi l'écart entre le pack et la facture",
           level: 3,
           paragraphs: [
-            "Le prix par kWh facturé au propriétaire est supérieur à celui du pack d'usine, et les deux ne sont pas exprimés dans la même devise : on ne peut pas en déduire un coefficient précis. Les sources consultées ne détaillent pas la décomposition de la facture (marge, logistique, diagnostic, main-d'œuvre, reprise de l'ancienne batterie). EVExpert ne la chiffre donc pas.",
+            "Le prix par kWh publié par les constructeurs (de l'ordre de 240 à 550 €/kWh dans le tableau) est supérieur au prix moyen du pack d'usine selon BloombergNEF, et les deux ne sont pas exprimés dans la même devise ni au même périmètre : on ne peut pas en déduire un coefficient précis. Les sources consultées ne détaillent pas la décomposition du prix (marge, logistique, diagnostic, main-d'œuvre, reprise de l'ancienne batterie). EVExpert ne la chiffre donc pas.",
             "Ce qu'on peut dire : le coût de fabrication du pack baisse, mais la facture d'un remplacement dépend d'abord du modèle, de la disponibilité de la pièce et de la politique de la marque.",
           ],
         },
         {
           heading: "Remplacement complet, modules ou cellules",
           paragraphs: [
-            "Une batterie défaillante n'est pas toujours à remplacer entièrement. Selon les marques interrogées par Mac4Ever, le diagnostic coûte entre 150 et 250 €, et un rééquilibrage ou une petite réparation reste sous 500 €. Pour une réparation au niveau des cellules, la presse relève environ 500 à 1 000 € sur une Nissan Leaf et environ 1 000 € sur un modèle Volkswagen.",
-            "Tout dépend de la conception du pack : le remplacement par module est possible sur certains modèles (Mini, Audi, Volkswagen série ID, BMW, Renault Zoé d'après la source), mais pas sur d'autres, comme Tesla (conception cell-to-vehicle, pas de remplacement de cellule isolée) ou la Dacia Spring (batterie non modulaire).",
+            "Une batterie défaillante n'est pas toujours à remplacer entièrement. À titre anecdotique : en décembre 2024, Mac4Ever a recueilli des propos de commerciaux et d'ateliers, non vérifiés et hors main-d'œuvre, selon lesquels le diagnostic coûterait entre 150 et 250 € et un rééquilibrage ou une petite réparation moins de 500 €. Ces montants n'engagent aucune marque et ne remplacent pas un devis.",
+            "Tout dépend de la conception du pack : d'après les mêmes propos, le remplacement par module serait possible sur certains modèles (Mini, Audi, Volkswagen série ID, BMW, Renault Zoé), mais pas sur d'autres, comme Tesla (conception cell-to-vehicle) ou la Dacia Spring (batterie non modulaire).",
           ],
           list: [
             "Défaut localisé et pack modulaire : réparation par module ou cellule, souvent beaucoup moins chère qu'un pack complet.",
@@ -271,7 +283,7 @@ export function buildBatteryGuides(ctx: GuideContext): Guide[] {
             "Faute de source fiable, EVExpert ne publie pas les valeurs suivantes :",
           ],
           list: [
-            "prix de remplacement officiel des modèles récents du catalogue, constructeur par constructeur : Non disponible ;",
+            "prix de remplacement publiés par les marques autres que Renault, Dacia et Peugeot : Non disponible ;",
             "prix d'un pack reconditionné ou d'un échange standard : Non disponible ;",
             "décomposition de la facture entre pièce, main-d'œuvre et marge : Non disponible ;",
             "prix d'une batterie d'occasion : Non disponible.",
@@ -280,7 +292,7 @@ export function buildBatteryGuides(ctx: GuideContext): Guide[] {
         {
           heading: "Comment s'en servir pour décider",
           paragraphs: [
-            "Le risque d'un remplacement hors garantie pèse dans le coût total d'un véhicule gardé longtemps ou acheté d'occasion. Pour un neuf, comparer les conditions de garantie ; pour une occasion, demander un rapport d'état de santé de la batterie avant l'achat, et demander le devis de la marque pour le modèle visé. Le [calculateur de coût total de possession](/outils/tco-voiture-electrique) permet d'intégrer ces postes dans un scénario, et le guide pour [calculer le TCO](/guides/calculer-tco-voiture-electrique) détaille la méthode.",
+            "Le risque d'un remplacement hors garantie pèse dans le coût total d'un véhicule gardé longtemps ou acheté d'occasion. Pour un neuf, comparer les conditions de garantie ; pour une occasion, demander un rapport d'état de santé de la batterie avant l'achat, et consulter le prix de remplacement publié par la marque pour le modèle visé. Le [calculateur de coût total de possession](/outils/tco-voiture-electrique) permet d'intégrer ces postes dans un scénario, et le guide pour [calculer le TCO](/guides/calculer-tco-voiture-electrique) détaille la méthode.",
           ],
         },
       ],
@@ -296,7 +308,7 @@ export function buildBatteryGuides(ctx: GuideContext): Guide[] {
         {
           question: "Combien coûte le remplacement d'une batterie de voiture électrique ?",
           answer:
-            "Il n'existe pas de tarif unique. Les devis relevés par la presse en décembre 2024 vont d'environ 5 000 € à 20 000 € selon le modèle et la capacité, hors main-d'œuvre et transport. Demandez un devis à la marque pour le modèle visé.",
+            "Cela dépend du modèle : chez Renault Group, L'argus relève des prix TTC publiés allant de 7 000 € (Dacia Spring) à 25 000 € (Scénic E-Tech 87 kWh). Consultez le prix publié par la marque pour votre modèle.",
         },
         {
           question: "Le prix de 108 $/kWh est-il le prix que je paierais ?",
@@ -309,7 +321,7 @@ export function buildBatteryGuides(ctx: GuideContext): Guide[] {
             "Parfois : certaines batteries permettent de remplacer un module, d'autres non. Cela dépend du constructeur et du modèle.",
         },
       ],
-      sources: [SOURCES.bnefBatteryPrice2025, SOURCES.mac4everBatterie, SOURCES.evdb],
+      sources: [SOURCES.bnefBatteryPrice2025, SOURCES.largusBatterieRenault, SOURCES.largusBatteriePeugeot, SOURCES.mac4everBatterie, SOURCES.evdb],
     },
   ];
 }
