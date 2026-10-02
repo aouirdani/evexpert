@@ -24,7 +24,7 @@ export interface BrandUsage {
   note?: string;
 }
 
-/** Lien vers un guide EVExpert, affiché sous « Prix et coût d'usage ». */
+/** Lien vers un guide EVExpert, affiché sous « Coût d'usage ». */
 export interface BrandGuideLink {
   href: string;
   label: string;
@@ -34,9 +34,9 @@ export interface BrandContent {
   intro: (vs: Vehicle[]) => string;
   usage: (vs: Vehicle[]) => BrandUsage;
   /**
-   * Bloc « Prix et coût d'usage », uniquement pour les marques dont les requêtes de prix et d'autonomie
+   * Bloc « Coût d'usage » (avec la mention que les prix ne sont pas disponibles), uniquement pour les marques dont les requêtes de prix et d'autonomie
    * sont observées en Search Console. Le prix d'achat n'étant pas collecté, `priceNote` le dit
-   * explicitement ; les chiffres de coût d'usage sont calculés depuis le catalogue.
+   * explicitement ; le coût d'usage est calculé depuis le catalogue avec `ASSUMPTIONS.homePrice`, la même hypothèse que les calculateurs.
    */
   pricing?: { priceNote: string; guides: BrandGuideLink[] };
 }
@@ -276,8 +276,7 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
       };
     },
     pricing: {
-      priceNote:
-        "Prix d'achat : non disponible. EVExpert ne publie pas de prix pour les Renault électriques : les tarifs de notre source concernent d'autres marchés et ne sont pas transposables en France. Pour un prix à jour, consultez le configurateur Renault ou une concession.",
+      priceNote: "Les prix d'achat ne sont pas disponibles dans notre base.",
       guides: [
         { href: "/guides/calculer-autonomie-reelle", label: "Calculer l'autonomie réelle d'une voiture électrique" },
         { href: "/guides/autonomie-autoroute", label: "Autonomie d'une voiture électrique sur autoroute" },

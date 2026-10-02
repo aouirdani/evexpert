@@ -108,14 +108,14 @@ export function BrandOverview({
       </section>
 
       {content?.pricing && (
-        <section className="mt-section" aria-labelledby="prix-titre">
-          <h2 id="prix-titre" className="text-h2 font-bold text-ink">Prix et coût d&apos;usage</h2>
+        <section className="mt-section" aria-labelledby="cout-usage-titre">
+          <h2 id="cout-usage-titre" className="text-h2 font-bold text-ink">Coût d&apos;usage</h2>
           <p className="pretty mt-6 max-w-3xl text-body">{content.pricing.priceNote}</p>
           <p className="pretty mt-4 max-w-3xl text-body">
-            Côté coût d&apos;usage, l&apos;énergie coûte de{" "}
+            L&apos;énergie coûte de{" "}
             <span className="num font-semibold text-ink">{formatEuro(Math.min(...costs), 2)}</span> à{" "}
             <span className="num font-semibold text-ink">{formatEuro(Math.max(...costs), 2)}</span> aux 100 km selon la version, avec
-            une recharge à domicile à {formatNumber(ASSUMPTIONS.homePrice, 2)} €/kWh (<DataBadge type="calculated" /> hypothèse EVExpert,
+            une recharge à domicile à {formatNumber(ASSUMPTIONS.homePrice, 2)} €/kWh (<DataBadge type="calculated" /> hypothèse commune aux calculateurs,
             à remplacer par votre tarif dans le{" "}
             <Link href="/outils/cout-100-km" className="link-u font-semibold text-signal-deep">calculateur de coût aux 100 km</Link>).
           </p>
