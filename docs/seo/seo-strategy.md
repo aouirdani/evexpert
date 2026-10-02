@@ -1100,3 +1100,70 @@ Ce que le site peut faire pour faciliter ces mentions :
 3. **Duels supplémentaires** : liste des comparaisons recherchées (OpenSEO), puis création des seules pages qui respectent la section 27.4.
 
 Chaque lot suit le protocole habituel : plan validé d'abord, contrôles automatiques, preview, validation avant merge.
+
+---
+
+# 28. Expérience, autorité et durée
+
+Section ajoutée en septembre 2026. Elle complète les sections 12 à 27. En cas de conflit, les principes du site (données sourcées, aucun classement, rien d'inventé) prévalent.
+
+### 28.1 Constat
+
+Le site est solide sur l'expertise et la fiabilité (sources, méthodologie, dates, nature de chaque donnée). Son point faible est l'expérience directe : EVExpert ne teste pas les véhicules. Cette section définit comment la renforcer honnêtement, comment gagner de l'autorité hors du site, et comment conserver les positions dans le temps.
+
+### 28.2 Auteur identifié
+
+- Chaque guide et chaque analyse de blog affiche un auteur réel : nom, photo, courte biographie liée au sujet, date de publication et date de mise à jour.
+- L'auteur dispose d'une page (ou d'une section de /a-propos) qui présente son parcours et sa démarche.
+- Données structurées : l'auteur est déclaré dans le JSON-LD des articles (type Person, lien vers sa page).
+- Les nom, photo et biographie sont fournis par le propriétaire du site. **Jamais d'auteur fictif ni de persona inventée.** S'il n'y a pas d'auteur nommé, l'auteur reste « La rédaction EVExpert », lié à /a-propos et /methodologie.
+
+### 28.3 Retours de propriétaires
+
+Objectif : apporter de l'expérience réelle là où EVExpert ne peut pas tester lui-même.
+
+- Uniquement des retours recueillis auprès de vraies personnes, avec leur accord écrit pour la publication (prénom ou anonymat au choix de la personne).
+- Chaque retour précise : véhicule et version, durée de possession, contexte d'usage (trajets, recharge à domicile ou non, région), date du recueil.
+- Les chiffres donnés par un propriétaire (consommation réelle, temps de recharge constaté) sont présentés comme des **données déclaratives**, visuellement distinctes des données sourcées du catalogue. Décision à prendre avant le premier retour publié : créer une cinquième nature de donnée (« Retour de propriétaire ») ou un bloc séparé. Ne jamais les mélanger aux données officielles.
+- Pas de liste de « pour / contre » ni de note qui laisserait croire à un essai EVExpert.
+- **Jamais de témoignage inventé, reformulé au point d'en changer le sens, ou généré.**
+
+Le recueil des retours est fait par le propriétaire du site. Claude Code prépare seulement le format d'affichage et son intégration.
+
+### 28.4 Pages « alternatives à… »
+
+Requêtes visées : « alternative à [modèle] », « voiture électrique comme [modèle] ».
+
+Conditions pour créer une page :
+
+- demande de recherche vérifiée dans OpenSEO pour ce modèle précis ;
+- modèle présent au catalogue avec des données complètes ;
+- critères de sélection des alternatives explicites et identiques pour toutes les pages (carrosserie, dimensions, fourchette d'autonomie, puissance de recharge), documentés sur /methodologie ;
+- pour chaque alternative, les écarts chiffrés avec le modèle de départ, présentés de façon neutre ;
+- une introduction et une orientation par usage rédigées pour chaque page, pas un gabarit à trous ;
+- aucune formulation « meilleure alternative » ni classement.
+
+Aucune génération pour tous les modèles : seulement ceux qui remplissent les conditions. L'arborescence d'URL est à proposer dans le plan du lot et à valider avant création.
+
+### 28.5 Liens externes et maillage vers les pages stratégiques
+
+- Les liens externes s'obtiennent plus facilement vers des analyses originales que vers des outils. Chaque analyse de blog renvoie donc clairement vers les outils, tableaux et guides correspondants, pour que la valeur de ces liens profite aux pages stratégiques.
+- L'obtention de liens et de mentions se fait hors du site, par le propriétaire : médias spécialisés, forums, communautés, partenaires, en proposant des analyses et des chiffres citables (voir 27.7).
+- Interdits : achat de liens, échanges de liens organisés, réseaux de sites, commentaires ou messages de forum promotionnels. Google les sanctionne.
+
+### 28.6 Rafraîchissement du contenu
+
+- **Catalogue** : revue régulière (au minimum chaque trimestre) des nouvelles versions, des versions retirées et des changements de caractéristiques, à partir de la source actuelle. Chaque mise à jour garde sa date de relevé.
+- **Guides et analyses** : revue au moins annuelle. Priorité aux pages dont les impressions ou la position baissent dans Search Console.
+- La date « mis à jour » ne change que pour un vrai changement de contenu visible (règle déjà appliquée).
+
+### 28.7 Lots futurs proposés
+
+À programmer après les lots de la section 27.8, dans cet ordre :
+
+1. **Auteur identifié** : état des lieux de ce qui existe (auteur, dates, JSON-LD), puis affichage et données structurées. Nécessite les informations réelles du propriétaire.
+2. **Enrichissement du catalogue** : ajout des modèles manquants identifiés au lot SEO 2, en priorité pour les 6 marques en noindex, puis mise en place de la revue trimestrielle.
+3. **Pages « alternatives »** : liste des modèles avec une demande vérifiée dans OpenSEO, critères de sélection, arborescence d'URL, puis création des seules pages qui remplissent les conditions de 28.4.
+4. **Format des retours de propriétaires** : décision sur la nature de donnée, composant d'affichage. La publication dépend des retours réellement recueillis.
+
+Chaque lot suit le protocole habituel : plan validé d'abord, contrôles automatiques, preview, validation avant merge, aucun test lourd sur le domaine de production.
