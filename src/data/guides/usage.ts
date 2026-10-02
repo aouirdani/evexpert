@@ -5,16 +5,26 @@ import { chargeCost, costPer100km, gridConsumption100 } from "@/lib/vehicle-calc
 import { annualCost, costPer100km as costPer100 } from "@/lib/calculators";
 import { formatEuro, formatNumber } from "@/lib/format";
 import type { GuideContext } from "./helpers";
-import { GUIDE_DATE } from "./helpers";
+import { GUIDE_DATE, extent, fullName } from "./helpers";
 
 export function buildUsageGuides(ctx: GuideContext): Guide[] {
-  const { veh } = ctx;
+  const { veh, vehicles } = ctx;
+  const N = vehicles.length;
   const r5 = veh("renault-5-e-tech-52-kwh-150-ch");
   const my = veh("tesla-model-y-rwd");
   const ev3 = veh("kia-ev3-long-range");
   const twingo = veh("renault-twingo-e-tech-27-5-kwh");
   const elroq = veh("skoda-elroq-85");
   const A = ASSUMPTIONS;
+  // Exemples des réponses directes (un modèle différent par guide) et grandeurs lues dans le catalogue.
+  const corsa = veh("opel-corsa-electric-51-kwh");
+  const enyaq = veh("skoda-enyaq-85");
+  const f500 = veh("fiat-500e-hatchback-42-kwh");
+  const homeCost = extent(vehicles, (v) => chargeCost(v, A.homePrice).cost);
+  const fastCost = extent(vehicles, (v) => chargeCost(v, A.fastDcPrice).cost);
+  const savingFastVsHome = extent(vehicles, (v) => chargeCost(v, A.fastDcPrice).cost - chargeCost(v, A.homePrice).cost);
+  const home100 = extent(vehicles, (v) => costPer100km(v, A.homePrice));
+  const fast100 = extent(vehicles, (v) => costPer100km(v, A.fastDcPrice));
 
   return [
   {
@@ -24,7 +34,7 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
     description:
       "Les bons réflexes pour ralentir le vieillissement de la batterie : niveaux de charge, chaleur, recharge rapide, stockage, en tenant compte de la chimie de la batterie.",
     publishedAt: GUIDE_DATE,
-    updatedAt: GUIDE_DATE,
+    updatedAt: "2026-10-03",
     readingTime: 6,
     intro:
       "Une batterie lithium-ion vieillit : c'est inévitable. On peut en revanche ralentir cette usure par quelques habitudes simples, sans contrainte excessive. L'essentiel tient en trois idées : éviter les extrêmes, éviter la chaleur, ne pas abuser de la recharge rapide.",
@@ -37,7 +47,9 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
       },
       {
         heading: "Les bons réflexes",
-        paragraphs: [],
+        paragraphs: [
+          "Trois réflexes ralentissent l'usure : éviter de laisser la batterie longtemps à un niveau de charge extrême, éviter la chaleur, et réserver la recharge rapide aux longs trajets plutôt que d'en faire le mode de recharge habituel.",
+        ],
         list: [
           "Éviter de laisser la voiture longtemps à un niveau de charge très élevé ou très bas.",
           "Pour une batterie NMC, viser un niveau modéré au quotidien, et charger plus haut seulement quand l'autonomie est nécessaire.",
@@ -81,14 +93,16 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
     description:
       "Domicile, travail, voirie ou rapide : comparaison des modes de recharge selon le coût, la commodité et le logement, avec des coûts calculés.",
     publishedAt: GUIDE_DATE,
-    updatedAt: GUIDE_DATE,
+    updatedAt: "2026-10-03",
     readingTime: 6,
     intro:
       "La meilleure solution dépend d'abord de votre logement et de vos habitudes : quand on peut brancher sa voiture chez soi, la recharge à domicile est en général la plus économique et la plus pratique. Sans accès à une prise, les bornes publiques doivent faire partie du calcul.",
     sections: [
       {
         heading: "Trois grands cas de figure",
-        paragraphs: [],
+        paragraphs: [
+          "Votre logement décide : avec une place de stationnement équipée, la recharge à domicile est la solution la plus simple ; en immeuble, elle passe par une procédure de copropriété ; sans prise, il faut compter sur les bornes publiques.",
+        ],
         list: [
           "Maison individuelle avec place de stationnement : recharge à domicile, la solution la plus simple.",
           "Immeuble avec parking : possible avec une installation en copropriété, qui suit une procédure spécifique (droit à la prise) ; renseignez-vous auprès du syndic et sur Service-public.fr.",
@@ -98,6 +112,7 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
       {
         heading: "Comparaison des coûts",
         paragraphs: [
+          `Une recharge de 10 à 80 % coûte de ${formatEuro(homeCost.minValue, 2)} à ${formatEuro(homeCost.maxValue, 2)} à domicile, et de ${formatEuro(fastCost.minValue, 2)} à ${formatEuro(fastCost.maxValue, 2)} en recharge rapide, sur les ${N} versions du catalogue (calcul EVExpert, tarifs d'hypothèse). Exemple : ${fullName(corsa)}, dont ${corsa.source.name} publie une batterie utile de ${formatNumber(corsa.batteryUsable, 1)} kWh, pour ${formatEuro(chargeCost(corsa, A.homePrice).cost, 2)} à domicile, ${formatEuro(chargeCost(corsa, A.fastDcPrice).cost, 2)} en recharge rapide.`,
           `Coût d'une recharge de 10 à 80 % pour trois modèles, avec les hypothèses EVExpert de ${formatNumber(A.homePrice, 2)} €/kWh à domicile, ${formatNumber(A.publicAcPrice, 2)} € sur borne AC publique et ${formatNumber(A.fastDcPrice, 2)} € en recharge rapide. Ces prix sont des hypothèses : relevez ceux de vos bornes habituelles.`,
         ],
         table: {
@@ -112,7 +127,9 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
       },
       {
         heading: "Au-delà du prix",
-        paragraphs: [],
+        paragraphs: [
+          "Au-delà du prix, la recharge à domicile l'emporte par la commodité et la prévisibilité du tarif ; la recharge rapide l'emporte par la vitesse, avec un prix et une disponibilité qui varient selon l'opérateur.",
+        ],
         list: [
           "Commodité : à domicile, la voiture est pleine chaque matin sans détour.",
           "Vitesse : les bornes rapides sont plus rapides mais plus chères.",
@@ -143,14 +160,16 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
     description:
       "Ce qui compose le prix d'une borne à domicile, les éléments qui font varier le devis, les aides à vérifier et les questions à poser à l'installateur.",
     publishedAt: GUIDE_DATE,
-    updatedAt: GUIDE_DATE,
+    updatedAt: "2026-10-03",
     readingTime: 6,
     intro:
       "Le prix d'une borne de recharge à domicile ne se résume pas à celui de l'appareil. Il dépend surtout de l'installation : distance au tableau électrique, protections à ajouter, type de raccordement. Aucun chiffre unique n'est fiable : voici comment lire un devis.",
     sections: [
       {
         heading: "Les postes d'un devis",
-        paragraphs: [],
+        paragraphs: [
+          "Un devis de borne additionne l'appareil, la pose, les protections électriques, d'éventuels travaux de raccordement et les frais de mise en service ; la pose et les protections dépendent de votre installation existante.",
+        ],
         list: [
           "La borne (ou wallbox) : son prix varie selon la puissance, la connectivité et les options (délestage, pilotage, comptage).",
           "La pose : main-d'œuvre, câblage entre le tableau et l'emplacement, percement, goulottes.",
@@ -161,7 +180,9 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
       },
       {
         heading: "Ce qui fait varier le prix",
-        paragraphs: [],
+        paragraphs: [
+          "Le prix varie surtout avec la distance entre le tableau électrique et la place de stationnement, la puissance choisie, l'état de l'installation existante et le contexte (maison, copropriété, parking collectif).",
+        ],
         list: [
           "La distance entre le tableau électrique et la place de stationnement.",
           "La puissance : monophasé 7,4 kW ou triphasé 11-22 kW.",
@@ -185,7 +206,7 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
       {
         heading: "Ce qu'une borne fait économiser",
         paragraphs: [
-          `Rechargée à domicile avec l'hypothèse de ${formatNumber(A.homePrice, 2)} €/kWh, la ${r5.brand} ${r5.model} ajoute environ 10 à 80 % pour ${formatEuro(chargeCost(r5, A.homePrice).cost, 2)}, contre ${formatEuro(chargeCost(r5, A.fastDcPrice).cost, 2)} au tarif de recharge rapide supposé. C'est ce type d'écart, multiplié par vos recharges annuelles, que vous comparez au coût de l'installation. Le calcul détaillé est expliqué dans [le guide sur le coût d'une recharge à domicile](/guides/combien-coute-recharge-domicile).`,
+          `Recharger à domicile plutôt qu'en recharge rapide économise de ${formatEuro(savingFastVsHome.minValue, 2)} à ${formatEuro(savingFastVsHome.maxValue, 2)} par recharge de 10 à 80 %, selon les ${N} versions du catalogue, avec les hypothèses de ${formatNumber(A.homePrice, 2)} et ${formatNumber(A.fastDcPrice, 2)} €/kWh (calcul EVExpert). Exemple : ${fullName(enyaq)}, écart de ${formatEuro(chargeCost(enyaq, A.fastDcPrice).cost - chargeCost(enyaq, A.homePrice).cost, 2)} (${formatEuro(chargeCost(enyaq, A.homePrice).cost, 2)} à domicile contre ${formatEuro(chargeCost(enyaq, A.fastDcPrice).cost, 2)} en rapide). C'est ce type d'écart, multiplié par vos recharges annuelles, que vous comparez au coût de l'installation ; le calcul détaillé est expliqué dans [le guide sur le coût d'une recharge à domicile](/guides/combien-coute-recharge-domicile).`,
         ],
       },
     ],
@@ -205,7 +226,7 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
     description:
       "Comment calculer le coût aux 100 km d'une voiture électrique, avec exemples chiffrés pour plusieurs modèles selon le tarif de recharge, et comparaison avec l'essence.",
     publishedAt: GUIDE_DATE,
-    updatedAt: GUIDE_DATE,
+    updatedAt: "2026-10-03",
     readingTime: 6,
     intro:
       "Le coût aux 100 km d'une électrique est simple à calculer : il suffit de multiplier la consommation par le prix du kWh, en n'oubliant pas les pertes de charge. Il change beaucoup selon l'endroit où l'on recharge, plus encore que d'un modèle à l'autre.",
@@ -219,6 +240,7 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
       {
         heading: "Exemples selon le tarif",
         paragraphs: [
+          `À domicile (${formatNumber(A.homePrice, 2)} €/kWh), le coût aux 100 km va de ${formatEuro(home100.minValue, 2)} à ${formatEuro(home100.maxValue, 2)} sur les ${N} versions du catalogue ; en recharge rapide (${formatNumber(A.fastDcPrice, 2)} €/kWh), de ${formatEuro(fast100.minValue, 2)} à ${formatEuro(fast100.maxValue, 2)} (calcul EVExpert). Exemple : ${fullName(f500)}, dont ${f500.source.name} publie ${formatNumber(f500.rangeWltp)} km WLTP pour ${formatNumber(f500.batteryUsable, 1)} kWh utiles : ${formatEuro(costPer100km(f500, A.homePrice), 2)} aux 100 km à domicile.`,
           `Conditions WLTP, rendement ${A.chargingEfficiency} %, tarifs d'hypothèse : ${formatNumber(A.homePrice, 2)} €/kWh (domicile), ${formatNumber(A.publicAcPrice, 2)} € (AC public), ${formatNumber(A.fastDcPrice, 2)} € (rapide).`,
         ],
         table: {
@@ -241,7 +263,9 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
       },
       {
         heading: "Pourquoi votre coût réel diffère",
-        paragraphs: [],
+        paragraphs: [
+          "Votre coût réel diffère du calcul parce que votre consommation s'écarte du WLTP, que votre tarif du kWh dépend de votre contrat et que la part de recharge à domicile, publique ou rapide change fortement la moyenne.",
+        ],
         list: [
           "Votre consommation réelle est différente du WLTP (vitesse, froid, relief).",
           "Votre tarif du kWh dépend de votre contrat et de vos habitudes de recharge.",
@@ -265,14 +289,16 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
     description:
       "Comparer une électrique et une essence sur l'énergie, l'entretien, l'assurance et la dépréciation : la méthode, un exemple chiffré et les hypothèses à ajuster.",
     publishedAt: GUIDE_DATE,
-    updatedAt: GUIDE_DATE,
+    updatedAt: "2026-10-03",
     readingTime: 7,
     intro:
       "Comparer deux voitures uniquement sur le prix d'achat ou sur le plein est trompeur. Le coût réel additionne l'énergie, l'entretien, l'assurance, la dépréciation et, selon les cas, quelques taxes. La méthode compte plus que le résultat d'un exemple : voici comment la construire.",
     sections: [
       {
         heading: "Les postes à comparer",
-        paragraphs: [],
+        paragraphs: [
+          "Comparez l'énergie, la dépréciation, l'entretien, l'assurance et les taxes, ainsi que les aides à l'achat et le coût d'une borne à domicile : le prix d'achat seul ne suffit pas à connaître le coût réel.",
+        ],
         list: [
           "Énergie : électricité contre carburant, selon votre consommation et vos prix.",
           "Dépréciation : différence entre prix d'achat et valeur de revente.",
@@ -310,7 +336,9 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
       },
       {
         heading: "Trois questions avant de conclure",
-        paragraphs: [],
+        paragraphs: [
+          "Avant de conclure, trois réponses changent le résultat : pouvez-vous recharger à domicile, combien de temps comptez-vous garder la voiture, et combien de kilomètres roulez-vous par an.",
+        ],
         list: [
           "Puis-je recharger à domicile ? Cela change le coût moyen du kWh.",
           "Quelle durée de détention est réaliste ? La dépréciation pèse d'autant plus que la durée est courte.",
@@ -334,7 +362,7 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
     description:
       "Le coût total de possession expliqué : postes à inclure, formule, exemple chiffré sur 5 ans et erreurs fréquentes à éviter.",
     publishedAt: GUIDE_DATE,
-    updatedAt: GUIDE_DATE,
+    updatedAt: "2026-10-03",
     readingTime: 6,
     intro:
       "Le coût total de possession, ou TCO, est ce qu'une voiture vous coûte sur toute la période où vous la gardez, ramené par mois ou par kilomètre. C'est l'outil le plus fiable pour comparer des véhicules dont les prix d'achat et les coûts d'usage diffèrent.",
@@ -390,7 +418,9 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
       },
       {
         heading: "Les erreurs à éviter",
-        paragraphs: [],
+        paragraphs: [
+          "Les erreurs les plus fréquentes sont d'oublier la valeur de revente, d'ignorer le coût d'une borne à domicile, d'utiliser un prix moyen du kWh sans part de recharge publique, de compter des aides périmées et de comparer sur une durée trop courte.",
+        ],
         list: [
           "Oublier la valeur de revente : elle est souvent le premier poste du TCO.",
           "Ignorer le coût d'une borne à domicile quand on compare avec une thermique.",
@@ -511,7 +541,7 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
     description:
       "Les questions à se poser avant d'acheter sa première électrique : recharge, budget total, autonomie, occasion ou neuve, et une check-list pour lire une fiche technique.",
     publishedAt: GUIDE_DATE,
-    updatedAt: GUIDE_DATE,
+    updatedAt: "2026-10-03",
     readingTime: 7,
     intro:
       "Passer à l'électrique change surtout une chose : la façon de faire le « plein ». Plutôt que de partir des modèles, partez de votre situation : où recharger, combien rouler, quel budget global. Cette check-list vous y aide.",
@@ -536,7 +566,9 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
       },
       {
         heading: "4. Comment lire une fiche technique ?",
-        paragraphs: [],
+        paragraphs: [
+          "Lisez d'abord la capacité utile, l'autonomie WLTP comme repère de comparaison, les puissances de charge AC et DC, la garantie batterie et le volume de coffre : ces cinq lignes disent l'essentiel.",
+        ],
         list: [
           "Capacité utile de la batterie plutôt que brute.",
           "Autonomie WLTP comme repère de comparaison, pas comme promesse.",

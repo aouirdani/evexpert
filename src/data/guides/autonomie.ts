@@ -1,17 +1,28 @@
-import type { Guide } from "@/types";
+import type { Guide, Vehicle } from "@/types";
 import { SOURCES } from "@/data/sources";
 import { RANGE_SCENARIOS, batteryConsumption100, estimateRange } from "@/lib/vehicle-calcs";
 import { formatNumber } from "@/lib/format";
 import type { GuideContext } from "./helpers";
-import { GUIDE_DATE } from "./helpers";
+import { GUIDE_DATE, extent, fullName } from "./helpers";
 
 export function buildAutonomieGuides(ctx: GuideContext): Guide[] {
-  const { veh } = ctx;
+  const { veh, vehicles } = ctx;
+  const N = vehicles.length;
   const r5 = veh("renault-5-e-tech-52-kwh-150-ch");
   const my = veh("tesla-model-y-rwd");
   const ev3 = veh("kia-ev3-long-range");
   const scen = (id: string) => RANGE_SCENARIOS.find((s) => s.id === id)!;
   const km = (v: typeof r5, id: string) => formatNumber(Math.round(estimateRange(v, scen(id)) / 5) * 5);
+  /** Estimation EVExpert arrondie à 5 km, pour une version et un scénario. */
+  const est = (v: Vehicle, id: string) => Math.round(estimateRange(v, scen(id)) / 5) * 5;
+  // Exemples des réponses directes (un modèle différent par guide).
+  const e208 = veh("peugeot-e-208-50-kwh");
+  const megane = veh("renault-megane-e-tech-ev60-220-ch");
+  const model3 = veh("tesla-model-3-long-range-rwd");
+  const hwy = extent(vehicles, (v) => est(v, "autoroute"));
+  const winterLoss = extent(vehicles, (v) => est(v, "mixte") - est(v, "hiver"));
+  const dcMinutes = extent(vehicles, (v) => v.chargingTime10to80);
+  const grossGap = extent(vehicles, (v) => (v.batteryGross ? ((v.batteryGross - v.batteryUsable) / v.batteryGross) * 100 : null));
 
   return [
   {
@@ -21,7 +32,7 @@ export function buildAutonomieGuides(ctx: GuideContext): Guide[] {
     description:
       "Méthode pas à pas pour estimer l'autonomie réelle d'une voiture électrique : capacité utile, consommation, vitesse, température, avec exemples chiffrés.",
     publishedAt: GUIDE_DATE,
-    updatedAt: GUIDE_DATE,
+    updatedAt: "2026-10-03",
     readingTime: 7,
     intro:
       "L'autonomie annoncée par un constructeur est une valeur d'homologation. Pour savoir ce que vous parcourrez vraiment, il faut partir de deux données simples — l'énergie disponible dans la batterie et votre consommation — puis les corriger de ce qui change vos conditions réelles.",
@@ -66,6 +77,7 @@ export function buildAutonomieGuides(ctx: GuideContext): Guide[] {
           caption: "Estimations EVExpert (facteurs décrits sur la page Méthodologie), arrondies à 5 km ; l'autonomie WLTP est celle de la source.",
         },
         paragraphs: [
+          `À 130 km/h par 20 °C, l'estimation EVExpert va de ${formatNumber(hwy.minValue)} km à ${formatNumber(hwy.maxValue)} km sur les ${N} versions du catalogue, nettement moins que l'autonomie WLTP. Exemple : ${fullName(e208)}, ${e208.source.name} publie ${formatNumber(e208.rangeWltp)} km WLTP ; l'estimation EVExpert est d'environ ${formatNumber(est(e208, "autoroute"))} km à 130 km/h.`,
           `Estimations EVExpert pour trois modèles du catalogue, avec les facteurs décrits sur la page Méthodologie (les valeurs sont arrondies à 5 km) :`,
         ],
         table: {
@@ -103,14 +115,16 @@ export function buildAutonomieGuides(ctx: GuideContext): Guide[] {
     description:
       "Chauffage, batterie froide, air plus dense : les causes de la baisse d'autonomie en hiver, comment la limiter, et une estimation chiffrée pour trois modèles.",
     publishedAt: GUIDE_DATE,
-    updatedAt: GUIDE_DATE,
+    updatedAt: "2026-10-03",
     readingTime: 6,
     intro:
       "En hiver, une voiture électrique consomme davantage : l'autonomie diminue, parfois de manière sensible. Ce n'est ni un défaut ni une usure de la batterie, mais la conséquence de plusieurs effets physiques qu'on peut en partie maîtriser.",
     sections: [
       {
         heading: "Les causes principales",
-        paragraphs: ["Plusieurs mécanismes se cumulent quand la température baisse :"],
+        paragraphs: [
+          "L'autonomie baisse en hiver surtout parce que la batterie fournit l'énergie du chauffage et fonctionne moins efficacement au froid ; l'air plus dense et les pneus y ajoutent un effet plus faible. Quatre mécanismes se cumulent quand la température baisse :",
+        ],
         list: [
           "Le chauffage de l'habitacle : sans moteur thermique pour fournir de la chaleur gratuite, il faut la produire avec l'énergie de la batterie (résistance ou pompe à chaleur).",
           "La batterie elle-même : à basse température, ses réactions chimiques sont moins efficaces et sa résistance interne augmente ; le véhicule la réchauffe aussi pour la protéger.",
@@ -121,6 +135,7 @@ export function buildAutonomieGuides(ctx: GuideContext): Guide[] {
       {
         heading: "Quel ordre de grandeur ?",
         paragraphs: [
+          `Selon l'estimation EVExpert, l'autonomie mixte perd de ${formatNumber(winterLoss.minValue)} km à ${formatNumber(winterLoss.maxValue)} km entre 15 °C et 0 °C sur les ${N} versions du catalogue : la proportion est la même pour chacune, car le modèle applique un seul facteur de consommation. Exemple : ${fullName(megane)}, ${megane.source.name} publie ${formatNumber(megane.rangeWltp)} km WLTP ; l'estimation passe de ${formatNumber(est(megane, "mixte"))} km à ${formatNumber(est(megane, "hiver"))} km.`,
           "La baisse dépend du modèle, du chauffage (pompe à chaleur ou non), du trajet et de la vitesse. Sur de courts trajets, où l'on chauffe une habitacle froid à chaque départ, l'effet est le plus fort ; sur un long trajet stabilisé, il est plus modéré.",
           "Le modèle EVExpert applique un facteur de consommation de ×1,20 à 0 °C par rapport à la température douce : ce n'est pas une mesure mais un ordre de grandeur, à remplacer par votre propre consommation observée.",
         ],
@@ -136,7 +151,9 @@ export function buildAutonomieGuides(ctx: GuideContext): Guide[] {
       },
       {
         heading: "Comment limiter la baisse",
-        paragraphs: [],
+        paragraphs: [
+          "Trois gestes limitent l'énergie prélevée sur la batterie : préconditionner la voiture quand elle est branchée, chauffer les sièges et le volant plutôt que tout l'habitacle, et rouler un peu moins vite.",
+        ],
         list: [
           "Préconditionner la voiture branchée : chauffer l'habitacle et la batterie avec l'énergie du réseau plutôt que celle de la batterie.",
           "Utiliser les sièges et le volant chauffants, moins gourmands que chauffer tout l'habitacle.",
@@ -168,7 +185,7 @@ export function buildAutonomieGuides(ctx: GuideContext): Guide[] {
     description:
       "Pourquoi l'autonomie chute à 130 km/h, comment le calculer et quelle stratégie de recharge adopter sur un long trajet. Estimations chiffrées pour trois modèles.",
     publishedAt: GUIDE_DATE,
-    updatedAt: GUIDE_DATE,
+    updatedAt: "2026-10-03",
     readingTime: 6,
     intro:
       "L'autoroute est le terrain le moins favorable à une voiture électrique : vitesse constante et élevée, aucune récupération d'énergie. L'autonomie réelle y est nettement inférieure à l'autonomie WLTP, et il vaut mieux le planifier que le découvrir en route.",
@@ -183,7 +200,8 @@ export function buildAutonomieGuides(ctx: GuideContext): Guide[] {
       {
         heading: "Estimation pour trois modèles",
         paragraphs: [
-          "Estimations EVExpert à 130 km/h par 20 °C, puis par 0 °C, comparées à l'autonomie WLTP publiée par la source :",
+          `À 130 km/h par 20 °C, l'estimation EVExpert va de ${formatNumber(hwy.minValue)} km à ${formatNumber(hwy.maxValue)} km sur les ${N} versions du catalogue. Exemple : ${fullName(model3)}, ${model3.source.name} publie ${formatNumber(model3.rangeWltp)} km WLTP ; l'estimation EVExpert est d'environ ${formatNumber(est(model3, "autoroute"))} km à 130 km/h par 20 °C, et de ${formatNumber(est(model3, "hiver-autoroute"))} km par 0 °C.`,
+          "Le tableau compare trois modèles à l'autonomie WLTP (estimations EVExpert à 130 km/h par 20 °C, puis par 0 °C) :",
         ],
         table: {
           caption: "Autonomie sur autoroute (estimation EVExpert, valeurs arrondies à 5 km)",
@@ -198,7 +216,9 @@ export function buildAutonomieGuides(ctx: GuideContext): Guide[] {
       },
       {
         heading: "Planifier un long trajet",
-        paragraphs: [],
+        paragraphs: [
+          "Pour un long trajet, partez de l'autonomie autoroutière estimée plutôt que du WLTP, prévoyez des arrêts fréquents mais courts et gardez une marge à l'arrivée.",
+        ],
         list: [
           "Comptez sur l'autonomie autoroutière estimée, pas sur le WLTP, et gardez une marge à l'arrivée.",
           "Privilégiez des arrêts plus fréquents mais plus courts : la recharge est la plus rapide entre 10 et 80 %.",
@@ -209,7 +229,8 @@ export function buildAutonomieGuides(ctx: GuideContext): Guide[] {
       {
         heading: "Combien de temps s'arrêter ?",
         paragraphs: [
-          "Le temps d'arrêt dépend de la puissance DC acceptée par la voiture et de la borne. La fiche de chaque modèle du catalogue indique le temps de charge de 10 à 80 % publié par la source : c'est un bon repère pour comparer, sans le prendre pour une garantie.",
+          `Dans le catalogue, la recharge de 10 à 80 % en DC dure de ${formatNumber(dcMinutes.minValue)} min à ${formatNumber(dcMinutes.maxValue)} min, selon ${dcMinutes.min.source.name}. Un arrêt dépend de la puissance DC acceptée par la voiture et de celle de la borne.`,
+          "La fiche de chaque modèle indique le temps de charge de 10 à 80 % : c'est un bon repère pour comparer, sans le prendre pour une garantie.",
         ],
       },
     ],
@@ -286,7 +307,7 @@ export function buildAutonomieGuides(ctx: GuideContext): Guide[] {
     description:
       "Capacité brute, capacité utile, réserve : pourquoi les deux chiffres diffèrent, lequel utiliser pour calculer autonomie et coût de recharge, avec des écarts réels observés.",
     publishedAt: GUIDE_DATE,
-    updatedAt: GUIDE_DATE,
+    updatedAt: "2026-10-03",
     readingTime: 5,
     intro:
       "Une même voiture peut être annoncée avec deux capacités de batterie. Ces deux nombres ne se contredisent pas : ils ne mesurent pas la même chose, et pour la plupart des calculs, un seul des deux vous intéresse.",
@@ -301,7 +322,8 @@ export function buildAutonomieGuides(ctx: GuideContext): Guide[] {
       {
         heading: "Ce que montrent les modèles du catalogue",
         paragraphs: [
-          "L'écart n'est pas identique d'un constructeur à l'autre. Voici quelques exemples relevés dans la source du catalogue (écart calculé par EVExpert) :",
+          `Dans le catalogue, l'écart entre capacité brute et capacité utile va de ${formatNumber(grossGap.minValue, 1)} % à ${formatNumber(grossGap.maxValue, 1)} % sur les ${grossGap.n} versions pour lesquelles ${grossGap.min.source.name} publie les deux valeurs (calcul EVExpert).`,
+          "L'écart n'est donc pas identique d'un constructeur à l'autre. Quelques exemples relevés dans la même source :",
         ],
         table: {
           caption: "Capacité brute et capacité utile, quelques modèles",
@@ -323,7 +345,9 @@ export function buildAutonomieGuides(ctx: GuideContext): Guide[] {
       },
       {
         heading: "Laquelle utiliser ?",
-        paragraphs: [],
+        paragraphs: [
+          "Pour calculer l'autonomie, le coût d'une recharge ou le temps de charge, utilisez la capacité utile : c'est l'énergie réellement échangée avec le conducteur.",
+        ],
         list: [
           "Pour l'autonomie, le coût d'une recharge ou le temps de charge : la capacité utile, car c'est l'énergie réellement échangée avec le conducteur.",
           "Pour comparer des technologies de cellules ou des packs : la capacité brute peut servir, mais elle dit peu de l'usage.",

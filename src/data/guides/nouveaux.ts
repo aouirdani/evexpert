@@ -4,7 +4,7 @@ import { SOURCES } from "@/data/sources";
 import { acChargeMinutes, averageDcPower, batteryConsumption100, chargeCost, costPer100km } from "@/lib/vehicle-calcs";
 import { formatEuro, formatNumber, minutesToHuman } from "@/lib/format";
 import type { GuideContext } from "./helpers";
-import { GUIDE_DATE } from "./helpers";
+import { GUIDE_DATE, extent } from "./helpers";
 
 const median = (a: number[]) => {
   const s = [...a].sort((x, y) => x - y);
@@ -45,6 +45,7 @@ export function buildNewGuides(ctx: GuideContext): Guide[] {
 
   /* --------------------------- prise domestique -------------------------- */
   const socketModels = [ec3, r5, my, elroq];
+  const socketMinutes = extent(vehicles, (v) => acChargeMinutes(v, 2.3).minutes);
   const nightKwh = 2.3 * (A.chargingEfficiency / 100) * 10;
   const nightKm = (v: Vehicle) => (nightKwh / batteryConsumption100(v)) * 100;
   const eightHourKm = (v: Vehicle) => ((2.3 * (A.chargingEfficiency / 100) * 8) / batteryConsumption100(v)) * 100;
@@ -57,7 +58,7 @@ export function buildNewGuides(ctx: GuideContext): Guide[] {
       description:
         "Le kWh mesure l'énergie de la batterie, le kW la puissance de charge ou du moteur : la différence expliquée avec des exemples chiffrés tirés du catalogue.",
       publishedAt: GUIDE_DATE,
-      updatedAt: GUIDE_DATE,
+      updatedAt: "2026-10-03",
       readingTime: 5,
       intro:
         "Les fiches techniques alignent deux unités qui se ressemblent : le kWh et le kW. Le premier décrit ce que la batterie peut contenir, le second la vitesse à laquelle l'énergie circule. Bien les distinguer évite de mal lire une autonomie ou un temps de charge.",
@@ -108,7 +109,9 @@ export function buildNewGuides(ctx: GuideContext): Guide[] {
         },
         {
           heading: "Les confusions à éviter",
-          paragraphs: [],
+          paragraphs: [
+            "Quatre confusions reviennent : parler de « kW par heure », croire qu'une borne puissante charge plus vite que ne le permet le chargeur de la voiture, mesurer une batterie en kW, et confondre puissance maximale et puissance moyenne.",
+          ],
           list: [
             "« kW par heure » n'a pas de sens ici : la puissance ne s'accumule pas. C'est l'énergie (kWh) qui résulte d'une puissance maintenue pendant une durée.",
             "Une borne de 22 kW ne charge pas à 22 kW une voiture limitée à 11 kW : la puissance utilisée est la plus faible des deux, comme l'explique le guide sur la puissance de borne.",
@@ -139,7 +142,7 @@ export function buildNewGuides(ctx: GuideContext): Guide[] {
       title: "Consommation d'une voiture électrique : combien de kWh aux 100 km ?",
       description: `Ce que mesure la consommation en kWh/100 km, la différence entre consommation à la batterie et à la prise, et les valeurs des ${N} versions du catalogue.`,
       publishedAt: GUIDE_DATE,
-      updatedAt: "2026-09-24",
+      updatedAt: "2026-10-03",
       readingTime: 6,
       intro:
         "La consommation d'une voiture électrique se lit en kWh aux 100 km. Selon qu'elle est mesurée à la batterie ou à la prise, le chiffre n'est pas le même : c'est la source de bien des comparaisons faussées.",
@@ -154,8 +157,8 @@ export function buildNewGuides(ctx: GuideContext): Guide[] {
         {
           heading: "Convertir kWh/km, kWh/100 km et km/kWh",
           paragraphs: [
-            "Ces trois unités décrivent la même consommation, seulement exprimée différemment : diviser des kWh/100 km par 100 donne des kWh/km ; prendre l'inverse (1 ÷ valeur) donne des km/kWh, l'unité qui répond directement à « combien de kilomètres avec un kWh ? ».",
-            `Exemple avec la ${full(r5)} : sa consommation calculée côté batterie est de ${formatNumber(batteryConsumption100(r5), 1)} kWh/100 km (calcul EVExpert : capacité utile ÷ autonomie WLTP × 100), soit ${formatNumber(batteryConsumption100(r5) / 100, 3)} kWh/km, soit encore ${formatNumber(100 / batteryConsumption100(r5), 2)} km/kWh. Pour la différence entre le kW et le kWh eux-mêmes, voir [kW ou kWh : la différence](/guides/kw-kwh-difference-voiture-electrique).`,
+            `Pour la ${full(r5)}, la consommation calculée côté batterie (${formatNumber(batteryConsumption100(r5), 1)} kWh/100 km) équivaut à ${formatNumber(100 / batteryConsumption100(r5), 2)} km/kWh : c'est l'unité qui répond directement à « combien de kilomètres avec un kWh ? ». Ces trois unités décrivent la même consommation, seulement exprimée différemment : diviser des kWh/100 km par 100 donne des kWh/km ; en prendre l'inverse (1 ÷ valeur) donne des km/kWh.`,
+            "Pour la différence entre le kW et le kWh eux-mêmes, voir [kW ou kWh : la différence](/guides/kw-kwh-difference-voiture-electrique).",
           ],
         },
         {
@@ -196,7 +199,9 @@ export function buildNewGuides(ctx: GuideContext): Guide[] {
         },
         {
           heading: "Ce qui fait varier votre consommation",
-          paragraphs: [],
+          paragraphs: [
+            "Plusieurs facteurs, cumulés, expliquent l'essentiel de l'écart entre la consommation homologuée et votre consommation réelle : la vitesse en est le principal, suivie de la température, du type de trajet et, à la marge, du poids et des équipements.",
+          ],
           list: [
             "La vitesse : la résistance de l'air augmente avec le carré de la vitesse (voir l'autonomie sur autoroute).",
             "La température : le chauffage et une batterie froide augmentent la consommation en hiver.",
@@ -234,7 +239,7 @@ export function buildNewGuides(ctx: GuideContext): Guide[] {
       description:
         "Durée de recharge sur une prise ordinaire pour quatre modèles du catalogue, kilomètres récupérés par nuit et précautions avant un usage régulier.",
       publishedAt: GUIDE_DATE,
-      updatedAt: GUIDE_DATE,
+      updatedAt: "2026-10-03",
       readingTime: 6,
       intro:
         "Recharger sur une prise ordinaire est possible et parfois suffisant, mais c'est lent et cela sollicite l'installation pendant des heures. Voici les durées réelles pour quelques modèles du catalogue, et les précautions à prendre.",
@@ -250,7 +255,8 @@ export function buildNewGuides(ctx: GuideContext): Guide[] {
         {
           heading: "Combien de temps pour recharger ?",
           paragraphs: [
-            `Recharge de 10 à 80 % (calcul EVExpert, rendement ${A.chargingEfficiency} %). La puissance utilisée est la plus faible entre la borne et le chargeur du véhicule :`,
+            `Sur une prise ordinaire à 2,3 kW, une recharge de 10 à 80 % dure de ${minutesToHuman(socketMinutes.minValue)} à ${minutesToHuman(socketMinutes.maxValue)} sur les ${N} versions du catalogue (calcul EVExpert, rendement ${A.chargingEfficiency} %). Exemple : ${full(ec3)}, ${ec3.source.name} publie ${formatNumber(ec3.batteryUsable, 1)} kWh utiles, soit ${minutesToHuman(acChargeMinutes(ec3, 2.3).minutes)} de charge à cette puissance.`,
+            "La puissance utilisée est la plus faible entre la borne et le chargeur du véhicule ; le tableau compare quatre modèles :",
           ],
           chart: {
             title: `${full(r5)} : durée d'une recharge de 10 à 80 %`,
@@ -281,7 +287,7 @@ export function buildNewGuides(ctx: GuideContext): Guide[] {
         {
           heading: "À quelles conditions ?",
           paragraphs: [
-            "Une recharge dure des heures à courant élevé : une prise ancienne, un branchement usé ou une rallonge inadaptée peuvent chauffer. Avant d'en faire un usage régulier :",
+            "Un usage régulier suppose une installation contrôlée par un électricien, un câble adapté et aucune rallonge ni multiprise : la charge dure des heures à courant élevé, et une prise ancienne, un branchement usé ou une rallonge inadaptée peuvent chauffer. Quatre précautions :",
           ],
           list: [
             "Faites contrôler l'installation par un électricien qualifié : circuit, protection, état de la prise.",
