@@ -332,7 +332,25 @@
   background-size: 100% 2px, 100% 1px;
 }
 
+/* Vidéo du Hero : transparente tant qu'elle ne joue pas (la photo reste seule visible), puis fondu
+   enchaîné photo → vidéo ; la photo est masquée dessous pour qu'elle ne transparaisse pas dans les fondus. */
+.hero-media video {
+  opacity: 0;
+  transition: opacity 700ms ease-out;
+}
+.hero-media video[data-playing] {
+  opacity: 1;
+}
+.hero-media:has(video[data-playing]) .hero-poster {
+  opacity: 0;
+  transition: opacity 700ms ease-out;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  /* Vidéo du Hero : on garde la photo statique (voir Hero.tsx). */
+  .hero-video {
+    display: none;
+  }
   html {
     scroll-behavior: auto;
   }
