@@ -2,12 +2,19 @@
 
 import { useEffect, useRef } from "react";
 
+/** Durée maximale de mouvement automatique (seuil de WCAG 2.2.2). */
+const MAX_PLAY_SECONDS = 5;
+
 /**
  * Vidéo décorative du Hero. Un `<video autoplay>` télécharge son fichier dès le chargement, même
  * masqué en CSS (mesuré : 648 Ko sur mobile émulé) : la source n'est donc attribuée qu'une fois la
  * page chargée, à partir de 1024 px (là où le Hero affiche la voiture à droite) et sans
  * `prefers-reduced-motion`. Avant cela, ou si la lecture échoue, la vidéo reste transparente et la
  * photo du Hero (LCP) reste seule visible.
+ *
+ * WCAG 2.2.2 (pause, arrêt, masquage) : un mouvement qui démarre seul et dure plus de 5 secondes doit
+ * pouvoir être arrêté. La vidéo ne joue donc qu'une fois, sans boucle, et s'arrête d'elle-même après
+ * 5 secondes sur son image courante : aucun mouvement automatique ne dépasse cette limite, sans bouton.
  */
 export function HeroVideo({ src, className }: { src: string; className?: string }) {
   const ref = useRef<HTMLVideoElement>(null);
@@ -21,6 +28,14 @@ export function HeroVideo({ src, className }: { src: string; className?: string 
     // Une fois la lecture réellement lancée : fondu vers la vidéo (voir `.hero-media` dans globals.css).
     const onPlaying = () => video.setAttribute("data-playing", "");
     video.addEventListener("playing", onPlaying, { once: true });
+
+    const stopAfterLimit = () => {
+      if (video.currentTime >= MAX_PLAY_SECONDS - 0.2) {
+        video.pause();
+        video.removeEventListener("timeupdate", stopAfterLimit);
+      }
+    };
+    video.addEventListener("timeupdate", stopAfterLimit);
 
     const start = () => {
       video.src = src;
@@ -39,6 +54,7 @@ export function HeroVideo({ src, className }: { src: string; className?: string 
       window.removeEventListener("load", later);
       window.clearTimeout(timer);
       video.removeEventListener("playing", onPlaying);
+      video.removeEventListener("timeupdate", stopAfterLimit);
     };
   }, [src]);
 
@@ -46,7 +62,6 @@ export function HeroVideo({ src, className }: { src: string; className?: string 
     <video
       ref={ref}
       muted
-      loop
       playsInline
       preload="none"
       aria-hidden="true"
