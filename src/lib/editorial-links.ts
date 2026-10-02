@@ -130,6 +130,7 @@ export function linkifySections(sections: ArticleSection[], vehicles: Vehicle[],
   };
 
   return sections.map((s) => {
+    if (s.noAutoLinks) return s;
     inSection = 0;
     return {
     ...s,

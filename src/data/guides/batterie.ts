@@ -197,9 +197,10 @@ export function buildBatteryGuides(ctx: GuideContext): Guide[] {
       sections: [
         {
           heading: "La réponse courte",
+          noAutoLinks: true,
           paragraphs: [
             `Selon BloombergNEF, le prix moyen d'un pack de batterie lithium-ion a atteint ${formatNumber(BNEF.global)} $/kWh en 2025 (moyenne pondérée, en baisse de 8 % sur un an). Ce n'est pas le prix payé par un conducteur : BloombergNEF précise qu'il s'agit du prix du pack, pas de celui des véhicules ou de leur entretien.`,
-            "Les constructeurs publient en France le prix de remplacement de leurs batteries : L'argus relève par exemple 7 000 € TTC pour la batterie de la Dacia Spring (26,8 kWh), 14 400 € pour celle de la Renault 5 E-Tech 52 kWh et 25 000 € pour celle du Scénic E-Tech de 87 kWh. Ces prix varient fortement d'un modèle à l'autre : EVExpert n'en publie pas de moyenne.",
+            "L'argus relève les prix de remplacement de batterie publiés par les constructeurs, par exemple 7 000 € TTC pour la Dacia Spring 65 ch (26,8 kWh), 14 400 € pour la Renault 5 E-Tech EV52 150 ch (52 kWh) et 25 000 € pour le Renault Scénic E-Tech Grande Autonomie 220 ch (87 kWh). Ces prix varient fortement d'un modèle à l'autre : EVExpert n'en publie pas de moyenne.",
           ],
         },
         {
@@ -221,22 +222,23 @@ export function buildBatteryGuides(ctx: GuideContext): Guide[] {
         },
         {
           heading: "Ce que facturent les marques",
+          noAutoLinks: true,
           paragraphs: [
-            "Les constructeurs de voitures électrifiées doivent rendre publics les prix de leurs batteries en France, selon L'argus, qui les compile. Le tableau reprend les prix TTC de remplacement de la batterie des modèles 100 % électriques Renault et Dacia, tels que publiés (dernière mise à jour de la page : 13 juin 2026). Les libellés sont ceux de la source, parfois abrégés ; la page ne précise pas si la pose est comprise. Le prix par kWh est calculé par EVExpert.",
+            "L'argus compile les prix de batterie publiés par les constructeurs. Le tableau reprend les prix TTC de remplacement de la batterie des modèles 100 % électriques Renault et Dacia, tels que publiés (dernière mise à jour de la page : 13 juin 2026). Les libellés sont ceux de la source, sans rattachement aux versions du catalogue EVExpert ; la page ne précise pas si la pose est comprise. Le prix par kWh est calculé par EVExpert.",
           ],
           table: {
             caption: "Prix TTC de la batterie de remplacement publiés par Renault Group (source : L'argus) et prix par kWh calculé",
-            headers: ["Modèle (libellé de la source, abrégé)", "Capacité", "Prix TTC", "Soit par kWh"],
+            headers: ["Modèle (libellé de la source)", "Capacité", "Prix TTC", "Soit par kWh"],
             rows: [
               ["Dacia Spring 65 ch", 26.8, 7000],
               ["Renault Twingo E-Tech 81 ch", 22, 12000],
-              ["Mégane E-Tech Autonomie Urbaine 130 ch", 40, 12000],
+              ["Renault Mégane E-Tech Autonomie Urbaine 130 ch", 40, 12000],
               ["Renault Kangoo E-Tech 120 ch", 45, 15000],
               ["Renault 5 E-Tech EV52 150 ch", 52, 14400],
               ["Renault Zoe R110 / R135", 52, 15000],
-              ["Mégane E-Tech Autonomie Confort 130 / 220 ch", 60, 17000],
-              ["Scénic E-Tech Autonomie Confort 170 ch", 60, 22000],
-              ["Scénic E-Tech Grande Autonomie 220 ch", 87, 25000],
+              ["Renault Mégane E-Tech Autonomie Confort 130 / 220 ch", 60, 17000],
+              ["Renault Scénic E-Tech Autonomie Confort 170 ch", 60, 22000],
+              ["Renault Scénic E-Tech Grande Autonomie 220 ch", 87, 25000],
             ].map(([m, kwh, price]) => [
               String(m),
               `${formatNumber(kwh as number, 1)} kWh`,
@@ -247,9 +249,10 @@ export function buildBatteryGuides(ctx: GuideContext): Guide[] {
         },
         {
           heading: "Un autre constructeur pour comparaison",
+          noAutoLinks: true,
           level: 3,
           paragraphs: [
-            "Chez Peugeot, L'argus relève 23 600 € TTC pour la batterie de 97 kWh des e-3008 et e-5008 Grande Autonomie, soit environ 243 €/kWh (calcul EVExpert). Les prix publiés ne se comparent pas modèle à modèle sans précaution : capacités, chimies et politiques de prix diffèrent, et les libellés ne correspondent pas toujours aux versions du catalogue EVExpert. Les prix des autres marques du catalogue n'ont pas été relevés : Non disponible.",
+            "Chez Peugeot, L'argus relève 23 600 € TTC pour la batterie de 97 kWh des e-3008 et e-5008 Grande Autonomie, soit environ 243 €/kWh (calcul EVExpert). Les prix publiés ne se comparent pas modèle à modèle sans précaution : capacités, chimies et politiques de prix diffèrent, et ils ne sont rattachés à aucune version du catalogue EVExpert. Les prix des autres marques du catalogue n'ont pas été relevés : Non disponible.",
           ],
         },
         {
@@ -308,7 +311,7 @@ export function buildBatteryGuides(ctx: GuideContext): Guide[] {
         {
           question: "Combien coûte le remplacement d'une batterie de voiture électrique ?",
           answer:
-            "Cela dépend du modèle : chez Renault Group, L'argus relève des prix TTC publiés allant de 7 000 € (Dacia Spring) à 25 000 € (Scénic E-Tech 87 kWh). Consultez le prix publié par la marque pour votre modèle.",
+            "Cela dépend du modèle : chez Renault Group, L'argus relève des prix TTC publiés allant de 7 000 € (Dacia Spring 65 ch) à 25 000 € (Renault Scénic E-Tech Grande Autonomie 220 ch, 87 kWh). Consultez le prix publié par la marque pour votre modèle.",
         },
         {
           question: "Le prix de 108 $/kWh est-il le prix que je paierais ?",

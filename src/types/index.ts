@@ -138,6 +138,8 @@ export interface ArticleSection {
   image?: EditorialImage;
   /** Graphique calculé affiché après les paragraphes de la section. */
   chart?: BarChartSpec;
+  /** Désactive les liens automatiques (modèles du catalogue, expressions) : pour les libellés d'une source externe. */
+  noAutoLinks?: boolean;
 }
 
 export interface FaqItem {

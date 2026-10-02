@@ -115,7 +115,7 @@ export const SOURCE_ROLES: { source: Source; usage: string }[] = [
   { source: SOURCES.euro7, usage: "Existence et calendrier des exigences européennes de durabilité des batteries (Euro 7)." },
   { source: SOURCES.bnefBatteryPrice2025, usage: "Prix moyen des packs de batterie, par région (guide sur le prix d'une batterie)." },
   { source: SOURCES.largusBatterieRenault, usage: "Prix de remplacement de la batterie publiés par Renault et Dacia, par modèle, TTC (guide sur le prix d'une batterie)." },
-  { source: SOURCES.largusBatteriePeugeot, usage: "Prix de la batterie des modèles Peugeot et mention de l'obligation de publication des prix par les constructeurs." },
+  { source: SOURCES.largusBatteriePeugeot, usage: "Prix publiés de la batterie des modèles Peugeot (e-3008, e-5008 Grande Autonomie)." },
   { source: SOURCES.mac4everBatterie, usage: "Propos de commerciaux et d'ateliers sur les réparations de batterie (décembre 2024), à titre anecdotique." },
   { source: SOURCES.cnil, usage: "Règles sur les cookies et le consentement." },
 ];

@@ -154,6 +154,13 @@ describe("contenu éditorial", () => {
     }
   });
 
+  it("les prix publiés par une source externe ne sont jamais liés à une fiche du catalogue", () => {
+    const g = guides.find((x) => x.slug === "prix-batterie-voiture-electrique")!;
+    const flagged = g.sections.filter((s) => s.noAutoLinks);
+    expect(flagged.length).toBeGreaterThanOrEqual(3);
+    for (const s of flagged) expect(linksOf([s]), s.heading).toEqual([]);
+  });
+
   it("les FAQ (JSON-LD) sont du texte brut : aucun balisage de lien", () => {
     for (const x of all) for (const f of x.faq ?? []) expect(`${f.question} ${f.answer}`, x.path).not.toMatch(/\]\(\//);
   });
