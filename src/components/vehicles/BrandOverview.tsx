@@ -2,8 +2,9 @@ import Link from "next/link";
 import type { Vehicle } from "@/types";
 import { vehicleHref } from "@/lib/vehicle-utils";
 import { fmt } from "@/lib/vehicle-format";
-import { batteryConsumption100 } from "@/lib/vehicle-calcs";
-import { formatNumber } from "@/lib/format";
+import { batteryConsumption100, costPer100km } from "@/lib/vehicle-calcs";
+import { ASSUMPTIONS } from "@/data/assumptions";
+import { formatEuro, formatNumber } from "@/lib/format";
 import { DataBadge } from "@/components/ui/DataBadge";
 import { DataFigure } from "@/components/ui/DataFigure";
 import { SourceLine } from "@/components/ui/SourceBadge";
@@ -40,6 +41,7 @@ export function BrandOverview({
   const bodySet = [...new Set(vehicles.map((v) => bodyTypeLabels[v.bodyType]))];
   const driveSet = [...new Set(vehicles.map((v) => v.drive))];
   const batteries = vehicles.map((v) => v.batteryUsable);
+  const costs = vehicles.map((v) => costPer100km(v, ASSUMPTIONS.homePrice));
   const battSpread = Math.max(...batteries) - Math.min(...batteries);
 
   return (
@@ -104,6 +106,28 @@ export function BrandOverview({
           <DataBadge type={first.source.dataType} /> autres colonnes ·<DataBadge type="calculated" /> consommation calculée (capacité utile ÷ autonomie WLTP × 100).
         </p>
       </section>
+
+      {content?.pricing && (
+        <section className="mt-section" aria-labelledby="prix-titre">
+          <h2 id="prix-titre" className="text-h2 font-bold text-ink">Prix et coût d&apos;usage</h2>
+          <p className="pretty mt-6 max-w-3xl text-body">{content.pricing.priceNote}</p>
+          <p className="pretty mt-4 max-w-3xl text-body">
+            Côté coût d&apos;usage, l&apos;énergie coûte de{" "}
+            <span className="num font-semibold text-ink">{formatEuro(Math.min(...costs), 2)}</span> à{" "}
+            <span className="num font-semibold text-ink">{formatEuro(Math.max(...costs), 2)}</span> aux 100 km selon la version, avec
+            une recharge à domicile à {formatNumber(ASSUMPTIONS.homePrice, 2)} €/kWh (<DataBadge type="calculated" /> hypothèse EVExpert,
+            à remplacer par votre tarif dans le{" "}
+            <Link href="/outils/cout-100-km" className="link-u font-semibold text-signal-deep">calculateur de coût aux 100 km</Link>).
+          </p>
+          <ul className="mt-6 border-t-2 border-ink">
+            {content.pricing.guides.map((g) => (
+              <li key={g.href} className="border-b border-line py-4">
+                <Link href={g.href} className="link-h text-base font-bold text-ink">{g.label}</Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {usage && (
         <section className="mt-section" aria-labelledby="usage-titre">
