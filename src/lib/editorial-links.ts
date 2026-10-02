@@ -20,6 +20,8 @@ export const PHRASE_RULES: PhraseRule[] = [
   { re: /calculateur (?:de )?coût de recharge/i, href: "/outils/cout-recharge-voiture-electrique" },
   { re: /calculateur TCO/i, href: "/outils/tco-voiture-electrique" },
   { re: /(?:l'outil|calculateur) (?:sur|de) la puissance de borne/i, href: "/outils/puissance-borne-recharge" },
+  { re: /durée de vie (?:de la |d'une |de sa |des )?batteries?/i, href: "/guides/duree-de-vie-batterie-voiture-electrique" },
+  { re: /(?:prix|coût) (?:de la |d'une |de sa |des )?batteries?|remplacement (?:de la |d'une |de sa )?batterie/i, href: "/guides/prix-batterie-voiture-electrique" },
   { re: /capacité utile|batterie utile/i, href: "/guides/batterie-brute-batterie-utile" },
   { re: /autonomie réelle/i, href: "/guides/calculer-autonomie-reelle" },
   { re: /\bWLTP\b/, href: "/guides/wltp-definition" },
@@ -128,6 +130,7 @@ export function linkifySections(sections: ArticleSection[], vehicles: Vehicle[],
   };
 
   return sections.map((s) => {
+    if (s.noAutoLinks) return s;
     inSection = 0;
     return {
     ...s,

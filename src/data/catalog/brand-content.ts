@@ -24,9 +24,21 @@ export interface BrandUsage {
   note?: string;
 }
 
+/** Lien vers un guide EVExpert, affiché sous « Coût d'usage ». */
+export interface BrandGuideLink {
+  href: string;
+  label: string;
+}
+
 export interface BrandContent {
   intro: (vs: Vehicle[]) => string;
   usage: (vs: Vehicle[]) => BrandUsage;
+  /**
+   * Bloc « Coût d'usage » (avec la mention que les prix ne sont pas disponibles), uniquement pour les marques dont les requêtes de prix et d'autonomie
+   * sont observées en Search Console. Le prix d'achat n'étant pas collecté, `priceNote` le dit
+   * explicitement ; le coût d'usage est calculé depuis le catalogue avec `ASSUMPTIONS.homePrice`, la même hypothèse que les calculateurs.
+   */
+  pricing?: { priceNote: string; guides: BrandGuideLink[] };
 }
 
 const driveLabel = { FWD: "traction avant", RWD: "propulsion arrière", AWD: "4 roues motrices" } as const;
@@ -262,6 +274,15 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
         ],
         note: "Le 4 E-Tech et le Mégane E-Tech couvrent l'intermédiaire, entre citadine et Scénic E-Tech.",
       };
+    },
+    pricing: {
+      priceNote: "Les prix d'achat ne sont pas disponibles dans notre base.",
+      guides: [
+        { href: "/guides/calculer-autonomie-reelle", label: "Calculer l'autonomie réelle d'une voiture électrique" },
+        { href: "/guides/autonomie-autoroute", label: "Autonomie d'une voiture électrique sur autoroute" },
+        { href: "/guides/autonomie-hiver", label: "Autonomie en hiver" },
+        { href: "/guides/cout-100-km-voiture-electrique", label: "Coût aux 100 km d'une voiture électrique" },
+      ],
     },
   },
 

@@ -13,7 +13,7 @@ export const revalidate = 86400;
 export const metadata = buildMetadata({
   title: "Guides voiture électrique : recharge, autonomie, batterie et coûts",
   description:
-    "Guides pratiques sur la voiture électrique : calculer l'autonomie réelle, comprendre la recharge AC et DC, préserver la batterie, estimer le coût réel et choisir son modèle.",
+    "Guides pratiques sur la voiture électrique : autonomie réelle, recharge AC et DC, durée de vie et prix de la batterie, coût réel. Sources citées.",
   path: "/guides",
 });
 

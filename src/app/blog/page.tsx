@@ -26,6 +26,8 @@ export default async function BlogPage() {
         title="Blog : analyses chiffrées sur la voiture électrique"
         description="Nous privilégions la qualité au volume : chaque article s'appuie sur des données du catalogue ou sur des sources citées, et indique sa date de mise à jour. Nous ne publions pas d'actualité que nous ne pouvons pas vérifier."
       />
+      {/* Les cartes portent des H3 : ce H2 évite le saut H1 → H3, sans changer le rendu. */}
+      <h2 className="sr-only">Tous les articles</h2>
       <div className="mt-12 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
         {sorted.map((a) => (
           <ArticleCard key={a.slug} article={a} />

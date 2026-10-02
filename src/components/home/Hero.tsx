@@ -5,6 +5,7 @@ import { Kicker } from "@/components/layout/Section";
 import { ButtonLink } from "@/components/ui/primitives";
 import { DataFigure } from "@/components/ui/DataFigure";
 import { frTypo } from "@/lib/format";
+import { HeroVideo } from "./HeroVideo";
 
 // Fondu technique des bords de la photo (haut, bas, gauche) : le studio n'est pas exactement
 // du navy de marque, sans cela ses bords resteraient visibles. Ce n'est pas un effet décoratif.
@@ -60,7 +61,7 @@ export function Hero({
           </div>
         </div>
 
-        <div className="pointer-events-none relative -mx-4 -mb-6 mt-6 aspect-[5/4] sm:-mx-6 sm:-mb-10 sm:mt-8 sm:aspect-[16/9] lg:absolute lg:right-0 lg:top-2 lg:mx-0 lg:mb-0 lg:mt-0 lg:aspect-[1376/768] lg:w-[68vw] lg:max-w-[1100px]">
+        <div className="hero-media pointer-events-none relative -mx-4 -mb-6 mt-6 aspect-[5/4] sm:-mx-6 sm:-mb-10 sm:mt-8 sm:aspect-[16/9] lg:absolute lg:right-0 lg:top-2 lg:mx-0 lg:mb-0 lg:mt-0 lg:aspect-[1376/768] lg:w-[68vw] lg:max-w-[1100px]">
           <Image
             src="/brand/evexpert-hero.jpeg"
             alt=""
@@ -69,8 +70,14 @@ export function Hero({
             priority
             sizes="(min-width: 1024px) min(68vw, 1100px), 100vw"
             style={photoMask}
-            className="h-full w-full object-cover object-right mix-blend-lighten"
+            className="hero-poster h-full w-full object-cover object-right mix-blend-lighten"
           />
+          {/* Vidéo décorative par-dessus la photo, qui reste le premier rendu (LCP) et le repli : sans
+              lecture (mobile, prefers-reduced-motion, échec réseau), seule la photo est visible. Muet, sans
+              contrôle ; recouvre la photo sans dimension propre, donc aucun CLS. Voir HeroVideo. */}
+          <div className="hero-video absolute inset-0 hidden lg:block" style={photoMask}>
+            <HeroVideo src="/brand/video.mp4" className="h-full w-full object-cover object-right" />
+          </div>
         </div>
 
         <dl

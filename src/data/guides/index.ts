@@ -2,6 +2,7 @@ import "server-only";
 import type { Guide } from "@/types";
 import { getCatalog, type Catalog } from "@/data/catalog";
 import { buildAutonomieGuides } from "./autonomie";
+import { buildBatteryGuides } from "./batterie";
 import { decorateGuides } from "@/data/editorial/decorate";
 import { makeGuideContext } from "./helpers";
 import { buildNewGuides } from "./nouveaux";
@@ -20,7 +21,7 @@ export async function getGuides(): Promise<Guide[]> {
   if (!guides) {
     const ctx = makeGuideContext(catalog.vehicles);
     guides = decorateGuides(
-      [...buildAutonomieGuides(ctx), ...buildRechargeGuides(ctx), ...buildUsageGuides(ctx), ...buildNewGuides(ctx)],
+      [...buildAutonomieGuides(ctx), ...buildRechargeGuides(ctx), ...buildUsageGuides(ctx), ...buildNewGuides(ctx), ...buildBatteryGuides(ctx)],
       catalog.vehicles,
     );
     cache.set(catalog, guides);
