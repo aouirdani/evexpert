@@ -5,7 +5,7 @@ import { Container, PageHeader } from "@/components/layout/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ComparisonBuilder, ComparisonSkeleton } from "@/components/comparison/ComparisonBuilder";
 import { getAllVehicles } from "@/data/catalog";
-import { vehicleTitle } from "@/lib/vehicle-utils";
+import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 import { toCompareVehicle } from "@/lib/vehicle-lite";
 import { getFeaturedComparisons } from "@/lib/comparison";
 import { buildMetadata } from "@/lib/seo";
@@ -27,6 +27,9 @@ const DEFAULT_IDS = ["renault-5-e-tech-52-kwh-150-ch", "peugeot-e-208-50-kwh"];
 // et ferait interroger la base à chaque requête.
 export default async function ComparePage() {
   const [vehicles, featured] = await Promise.all([getAllVehicles(), getFeaturedComparisons()]);
+  // Paire par défaut, en liens dans le HTML serveur : le tableau du comparateur n'est plus rendu
+  // côté serveur (squelette), ces liens vers les fiches y restent donc présents sans JavaScript.
+  const defaults = DEFAULT_IDS.map((id) => vehicles.find((x) => x.id === id)).filter((x): x is NonNullable<typeof x> => Boolean(x));
 
   return (
     <Container className="pb-section pt-8">
@@ -40,6 +43,14 @@ export default async function ComparePage() {
         <Suspense fallback={<ComparisonSkeleton />}>
           <ComparisonBuilder vehicles={vehicles.map(toCompareVehicle)} defaultIds={DEFAULT_IDS} />
         </Suspense>
+        {defaults.length === 2 && (
+          <p className="mt-6 text-muted">
+            Comparaison proposée par défaut :{" "}
+            <Link href={vehicleHref(defaults[0], "model")} className="link-u font-semibold text-signal-deep">{vehicleTitle(defaults[0])}</Link>
+            {" "}contre{" "}
+            <Link href={vehicleHref(defaults[1], "model")} className="link-u font-semibold text-signal-deep">{vehicleTitle(defaults[1])}</Link>.
+          </p>
+        )}
       </div>
 
       <section className="mt-section grid gap-x-12 gap-y-6 lg:grid-cols-12" aria-labelledby="duels">
