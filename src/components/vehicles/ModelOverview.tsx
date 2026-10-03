@@ -95,7 +95,7 @@ export function ModelOverview({ versions, similar }: { versions: Vehicle[]; simi
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {similar.map((s) => (
-              <VehicleCard key={s.id} vehicle={s} />
+              <VehicleCard key={s.id} vehicle={s} href={vehicleHref(s)} />
             ))}
           </div>
         </section>

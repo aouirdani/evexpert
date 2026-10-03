@@ -1,7 +1,6 @@
 import Link from "next/link";
-import type { Vehicle } from "@/types";
+import type { CompareVehicle } from "@/lib/vehicle-lite";
 import { METRICS, METRIC_GROUPS } from "@/lib/comparison-metrics";
-import { vehicleHref } from "@/lib/vehicle-utils";
 import { DataBadge } from "@/components/ui/DataBadge";
 import { formatNumber } from "@/lib/format";
 
@@ -33,7 +32,7 @@ const rowGrid = { 2: "max-sm:grid-cols-2", 3: "max-sm:grid-cols-3" } as const;
  * globale ni de classement. Sur mobile, chaque critère devient une bande : étiquette, puis les
  * valeurs côte à côte, puis l'écart.
  */
-export function ComparisonTable({ vehicles }: { vehicles: Vehicle[] }) {
+export function ComparisonTable({ vehicles }: { vehicles: CompareVehicle[] }) {
   const n = vehicles.length as 2 | 3;
   const priceKnown = vehicles.some((v) => v.price !== null);
   const groups = METRIC_GROUPS.filter((g) => g !== "Prix" || priceKnown);
@@ -51,7 +50,7 @@ export function ComparisonTable({ vehicles }: { vehicles: Vehicle[] }) {
             {vehicles.map((v) => (
               <th key={v.id} scope="col" className="min-w-0 border-b-2 border-ink pb-3 pr-4 pt-4 align-bottom font-normal max-sm:pr-0">
                 <span className="eyebrow block text-signal-deep">{v.brand}</span>
-                <Link href={vehicleHref(v, "model")} className="link-h mt-1 block text-h3 font-bold leading-tight text-ink">
+                <Link href={v.href} className="link-h mt-1 block text-h3 font-bold leading-tight text-ink">
                   {v.model}
                 </Link>
                 <span className="block truncate text-caption text-muted">{v.version}</span>

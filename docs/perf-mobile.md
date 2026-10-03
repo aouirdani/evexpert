@@ -58,3 +58,28 @@ Pour trancher il faut les valeurs **observées** (FCP/LCP avant simulation) et l
 - Piste 1 (AdSense et message de consentement différés) : **refusée tant que l'examen AdSense est en cours** — le robot d'examen pourrait ne pas voir le script s'il n'est chargé qu'après un geste. À réévaluer après l'approbation, avec un chargement **au premier geste de l'utilisateur ou après quelques secondes d'inactivité** (pas seulement `lazyOnload`), en vérifiant que le message de consentement Google s'affiche toujours et que le mode par défaut « tout refusé » reste posé avant.
 - Piste 2 (réduire les données RSC, 2 polices préchargées au lieu de 4) : validée, branche `perf/rsc-polices`.
 - Piste 3 (retrait des polyfills) : refusée.
+
+## 7. Lot `perf/rsc-polices` — données RSC et polices (3 octobre 2026)
+
+### Données RSC : d'où viennent les 145 Ko de l'accueil
+
+Mesuré sur le build de production (flux RSC en ligne dans le HTML) : l'accueil ne passe **aucune donnée** à un composant client. Les ~125 Ko de flux sont le rendu des composants serveur (la même arborescence que le HTML, sérialisée une seconde fois pour l'hydratation et la navigation) : 106 `<Link>` représentent 36 Ko (classes et enfants répétés), 37 autres éléments clients 10 Ko, le reste est du balisage. Réduire cela suppose de simplifier le balisage (par exemple ne pas rendre en double la sélection « Six modèles » en cartes mobiles et en tableau, ~10 Ko bruts) : non fait, c'est un choix de design.
+
+Les vraies données envoyées aux composants clients sont sur d'autres pages. Avant, ces pages envoyaient les 47 `Vehicle` complets (~0,8 Ko chacun : slugs, années, transmission, objet `source`…) alors que les composants n'en lisent qu'une partie. `src/lib/vehicle-lite.ts` définit maintenant, pour chaque composant, la liste exacte des champs lus (types `Pick`, vérifiés par le compilateur et par `tests/unit/vehicle-lite.test.ts`) :
+
+| Page | Composant client | Données client avant → après | HTML avant → après | Flux RSC avant → après |
+|---|---|---|---|---|
+| `/voitures-electriques` | `VehicleExplorer` | 38 → 10 Ko | 310 → 279 Ko | 84 → 57 Ko |
+| `/voitures-electriques/trouver` | `VehicleFinder` | 38 → 10 Ko | 156 → 125 Ko | 70 → 43 Ko |
+| `/comparer` | `ComparisonBuilder` | 35 → 25 Ko | 153 → 141 Ko | 76 → 66 Ko |
+| `/outils/*` | calculateurs (`VehiclePreset`) | déjà compacts (~8 Ko) | inchangé | inchangé |
+
+Tailles non compressées. Le comparateur lit presque toute la fiche : on n'y retire que slugs, années, transmission et source. `VehicleCard` et `VehicleRow` exigent maintenant un `href` (plus de repli sur `vehicleHref`, qui demandait les slugs).
+
+Lighthouse local (3 passages, mobile simulé) : scores inchangés (95–96), pas de régression de FCP/LCP sur les 4 pages.
+
+### Polices : 2 préchargements au lieu de 4 — essai abandonné
+
+`next/font` précharge toutes les graisses de IBM Plex Mono (400, 600, 700) en plus de Schibsted Grotesk : 4 préchargements. Essai : auto-héberger Plex Mono (`public/fonts`, `@font-face` avec les sous-ensembles latin et latin-ext) et ne précharger que la graisse 700 (grands chiffres du hero) : 2 préchargements, ~20 Ko de moins en priorité haute.
+
+Résultat (3 passages, accueil et 3 autres pages) : **FCP simulé 0,91 s → 1,21 s**, LCP et score inchangés (96). Les graisses 400 et 600, plus préchargées, ne sont découvertes qu'après l'analyse de la CSS : dans la simulation de Lighthouse, la chaîne CSS → police s'ajoute au chemin critique. Le préchargement « coûte » des octets mais gagne un aller-retour. Essai annulé : on garde les 4 préchargements de `next/font`. Pour vraiment réduire, il faudrait supprimer une graisse (par exemple fusionner 600 et 700), ce qui change le rendu des libellés.

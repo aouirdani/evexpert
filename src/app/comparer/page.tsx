@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ComparisonBuilder } from "@/components/comparison/ComparisonBuilder";
 import { getAllVehicles, getVehiclesForComparison } from "@/data/catalog";
 import { vehicleTitle } from "@/lib/vehicle-utils";
+import { toCompareVehicle } from "@/lib/vehicle-lite";
 import { getFeaturedComparisons } from "@/lib/comparison";
 import { buildMetadata } from "@/lib/seo";
 
@@ -51,7 +52,7 @@ export default async function ComparePage({
         description="Choisissez deux ou trois modèles et comparez-les critère par critère. Le comparateur chiffre les écarts mesurables, jamais un classement global : le meilleur choix dépend de votre usage."
       />
       <div className="mt-12">
-        <ComparisonBuilder vehicles={vehicles} defaultIds={initialIds} />
+        <ComparisonBuilder vehicles={vehicles.map(toCompareVehicle)} defaultIds={initialIds} />
       </div>
 
       <section className="mt-section grid gap-x-12 gap-y-6 lg:grid-cols-12" aria-labelledby="duels">

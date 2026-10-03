@@ -16,7 +16,7 @@ export function slugify(input: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
-export function vehicleTitle(v: Vehicle): string {
+export function vehicleTitle(v: Pick<Vehicle, "brand" | "model" | "version">): string {
   return `${v.brand} ${v.model} ${v.version}`;
 }
 
