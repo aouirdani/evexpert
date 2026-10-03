@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const indexable = models.length >= 2;
   return buildMetadata({
     title: `${name} électriques : modèles, autonomie et recharge`,
-    description: `Les ${name} électriques de notre base : ${models.map((m) => m.model).join(", ")}. Autonomie WLTP, batterie et puissance de recharge comparées.`,
+    description: `Les ${name} électriques de notre base : ${models.map((m) => m.model).join(", ")}. Autonomie WLTP, batterie et recharge comparées.`,
     path: `/voitures-electriques/${brand}`,
     noindex: !indexable,
   });

@@ -5,6 +5,8 @@ import type { Source } from "@/types";
 export interface ChargingTopic {
   slug: string;
   title: string;
+  /** Balise <title>/Open Graph, plus courte que `title` (H1). Absent : repli sur `title`. */
+  metaTitle?: string;
   shortTitle: string;
   description: string;
   intro: string;
@@ -21,6 +23,7 @@ export const chargingTopics: ChargingTopic[] = [
   {
     slug: "type-2",
     title: "Prise Type 2 : le connecteur standard de la recharge en courant alternatif",
+    metaTitle: "Prise Type 2 : connecteur standard de recharge AC",
     shortTitle: "Type 2",
     description:
       "Le connecteur Type 2 (Mennekes) est le standard européen de la recharge en courant alternatif : où on le trouve, quelles puissances, quel câble.",
@@ -67,6 +70,7 @@ export const chargingTopics: ChargingTopic[] = [
   {
     slug: "ccs",
     title: "CCS Combo 2 : le connecteur standard de la recharge rapide en Europe",
+    metaTitle: "CCS Combo 2 : connecteur de recharge rapide en Europe",
     shortTitle: "CCS Combo 2",
     description:
       "Le CCS Combo 2 ajoute deux contacts continus à la prise Type 2 : le standard européen de la recharge rapide DC.",
@@ -103,9 +107,10 @@ export const chargingTopics: ChargingTopic[] = [
   {
     slug: "chademo",
     title: "CHAdeMO : le standard japonais de recharge rapide, en recul en Europe",
+    metaTitle: "CHAdeMO : standard japonais de recharge rapide",
     shortTitle: "CHAdeMO",
     description:
-      "Le CHAdeMO est un standard de recharge rapide DC d'origine japonaise, présent sur certains modèles plus anciens : ce qu'il faut savoir avant d'acheter ou de recharger.",
+      "Le CHAdeMO est un standard de recharge rapide DC d'origine japonaise, présent sur des modèles anciens : ce qu'il faut savoir avant d'acheter ou de recharger.",
     intro:
       "Le CHAdeMO est un standard de recharge rapide en courant continu d'origine japonaise. Il équipe certains modèles plus anciens, en particulier japonais, et perd du terrain en Europe au profit du CCS Combo 2.",
     sections: [

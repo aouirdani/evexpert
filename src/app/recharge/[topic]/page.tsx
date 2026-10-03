@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const t = getChargingTopic(topic);
   if (!t) return {};
   return buildMetadata({
-    title: t.title,
+    title: t.metaTitle ?? t.title,
     description: t.description,
     path: `/recharge/${t.slug}`,
     ogType: "article",

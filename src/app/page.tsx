@@ -20,8 +20,10 @@ import { buildMetadata, faqJsonLd } from "@/lib/seo";
 export const revalidate = 86400;
 
 export const metadata = buildMetadata({
-  title: "Voiture électrique : comparez l'autonomie, la recharge et le coût réel",
-  description: siteConfig.description,
+  // Titre de la balise <title> : plus court que le H1 (« … comparez l'autonomie, la recharge et le coût réel »).
+  title: "Voiture électrique : autonomie, recharge et coût réel",
+  description:
+    "Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches sourcées, guides sur la recharge et l'autonomie.",
   path: "/",
 });
 

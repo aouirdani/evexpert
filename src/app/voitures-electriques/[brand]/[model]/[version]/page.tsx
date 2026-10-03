@@ -6,6 +6,7 @@ import { VehicleDetail } from "@/components/vehicles/VehicleDetail";
 import { getAllVehicles, getSimilarVehicles, getVehicleBySlug, isVersionPageIndexable } from "@/data/catalog";
 import { modelTitle, vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 import { buildMetadata } from "@/lib/seo";
+import { vehicleTitleText } from "@/lib/seo/titles";
 
 // Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
 export const revalidate = 86400;
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   // Elle reste accessible mais pointe vers la page modèle et n'est pas indexée.
   const indexable = await isVersionPageIndexable(v);
   const base = buildMetadata({
-    title: `${vehicleTitle(v)} : autonomie, recharge et caractéristiques`,
+    title: vehicleTitleText(v),
     description: `Fiche ${vehicleTitle(v)} : ${v.rangeWltp} km WLTP, batterie ${v.batteryUsable} kWh utiles, recharge AC ${v.chargingAC} kW${v.chargingDC ? `, DC ${v.chargingDC} kW` : ""}. Coûts et temps de recharge calculés.`,
     path: indexable ? vehicleHref(v, "version") : vehicleHref(v, "model"),
     noindex: !indexable,
