@@ -3,7 +3,9 @@
 //   2. serveur de production local (port 3101, jamais le domaine de production) ;
 //   3. seo:audit --compare contre une baseline de main générée en local ;
 //   4. intertitres H1/H2/H3 des guides inchangés ;
-//   5. avertissement : nombres ajoutés en dur dans les guides (non bloquant).
+//   5. AdSense : balise google-adsense-account unique dans le <head>, adsbygoogle.js chargé une fois,
+//      public/ads.txt exact (scripts/check-adsense.mjs) ;
+//   6. avertissement : nombres ajoutés en dur dans les guides (non bloquant).
 //
 // Baselines (générées sur un build local de main, voir docs/seo/audit/) :
 //   --seo-baseline docs/seo/audit/baseline-main.json   --anchors-baseline docs/seo/audit/anchors-main.json
@@ -127,6 +129,10 @@ if (build.ok) {
       const anc = spawnSync("node", ["scripts/check-guide-anchors.mjs", "--compare", anchorsBaseline, "--base", base], { encoding: "utf8" });
       console.log((anc.stdout + anc.stderr).trim().split("\n").map((l) => `  ${l}`).join("\n"));
       step("intertitres H1/H2/H3 des guides, articles et connecteurs inchangés", gate(anc.status === 0));
+      const ads = spawnSync("node", ["scripts/check-adsense.mjs", "--base", base], { encoding: "utf8" });
+      console.log("\n▶ AdSense (balise, script, ads.txt)");
+      console.log((ads.stdout + ads.stderr).trim().split("\n").map((l) => `  ${l}`).join("\n"));
+      step("AdSense : balise unique dans le <head>, script chargé une fois, ads.txt exact", gate(ads.status === 0));
     }
   } finally {
     server.kill();
