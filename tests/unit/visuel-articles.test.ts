@@ -176,7 +176,8 @@ describe("ligne de crédit sous les photos", () => {
       expect(out, slug).toContain(c.author);
       expect(out, slug).toContain(c.license);
       expect(out, slug).toContain(`href="${c.licenseUrl}"`);
-      expect(out, slug).toContain("image recadrée");
+      expect(out, slug).toMatch(/image (recadrée|modifiée)/);
+      if (!["ccs", "chademo"].includes(slug)) expect(out, slug).toContain("image recadrée");
     }
   });
 

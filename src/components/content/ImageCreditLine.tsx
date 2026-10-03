@@ -23,7 +23,7 @@ export function ImageCreditLine({ credit }: { credit: ImageCredit }) {
       <a href={credit.licenseUrl} target="_blank" rel={rel} className="link-u font-semibold text-signal-deep">
         {credit.license}
       </a>
-      {credit.attributionRequired && " · image recadrée"}
+      {credit.attributionRequired && ` · ${credit.modificationLabel ?? "image recadrée"}`}
     </p>
   );
 }

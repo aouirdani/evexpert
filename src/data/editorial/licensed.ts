@@ -52,8 +52,15 @@ function unsplash(a: Base & { id: string }): EditorialImage {
   };
 }
 
+function modificationsOf(license: string, shareAlike: boolean, letterboxed?: boolean): string {
+  const base = letterboxed
+    ? "Photo carrée placée entière sur un fond flouté de la même photo pour obtenir le format 16:9 (aucun recadrage) ; dérivé Open Graph 1200 × 630 ; recompression JPEG."
+    : CROP;
+  return shareAlike ? `${base} Image modifiée, diffusée ici sous la même licence (${license}).` : base;
+}
+
 /** Fichier de Wikimedia Commons : licence relevée sur la page du fichier. CC BY / BY-SA : crédit obligatoire ; BY-SA : l'image recadrée reste sous la même licence. */
-function commons(a: Base & { commonsFile: string; license: string; licenseUrl: string }): EditorialImage {
+function commons(a: Base & { commonsFile: string; license: string; licenseUrl: string; letterboxed?: boolean }): EditorialImage {
   const shareAlike = a.license.includes("BY-SA");
   const attributionRequired = a.license.includes("BY");
   return {
@@ -73,7 +80,8 @@ function commons(a: Base & { commonsFile: string; license: string; licenseUrl: s
       licenseUrl: a.licenseUrl,
       retrievedAt: RETRIEVED_AT,
       attributionRequired,
-      modifications: shareAlike ? `${CROP} Image modifiée, diffusée ici sous la même licence (${a.license}).` : CROP,
+      modifications: modificationsOf(a.license, shareAlike, a.letterboxed),
+      ...(a.letterboxed ? { modificationLabel: "image modifiée (fond flouté ajouté)" } : {}),
     },
   };
 }
@@ -304,6 +312,7 @@ export const EDITORIAL_LICENSED: Record<string, { image: EditorialImage; schemaA
   "ccs": {
     image: commons({
       file: "ccs",
+      letterboxed: true,
       commonsFile: "CCS_(Type2_Combo)_Charging_Plug.jpg",
       author: "Danilo Bargen",
       user: "Dbrgn",
@@ -316,6 +325,7 @@ export const EDITORIAL_LICENSED: Record<string, { image: EditorialImage; schemaA
   "chademo": {
     image: commons({
       file: "chademo",
+      letterboxed: true,
       commonsFile: "CHAdeMO_Charging_Plug.jpg",
       author: "Danilo Bargen",
       user: "Dbrgn",

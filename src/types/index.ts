@@ -135,6 +135,8 @@ export interface ImageCredit {
   attributionRequired: boolean;
   /** Retouches appliquées (recadrage, redimensionnement). */
   modifications: string;
+  /** Mention courte affichée sous l'image quand la licence impose un crédit ; « image recadrée » par défaut. */
+  modificationLabel?: string;
 }
 
 /** Graphique en barres horizontales calculé depuis le catalogue (HTML + CSS, sans JavaScript). */
