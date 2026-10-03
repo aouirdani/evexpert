@@ -17,7 +17,7 @@ export const revalidate = 86400;
 export const metadata = buildMetadata({
   title: "Méthodologie : sources, calculs et limites",
   description:
-    "Comment EVExpert collecte ses données, calcule les coûts, estime l'autonomie et distingue données sourcées, calculs et estimations. Hypothèses et limites détaillées.",
+    "Comment EVExpert collecte ses données, calcule les coûts, estime l'autonomie et distingue sources, calculs et estimations. Hypothèses et limites détaillées.",
   path: "/methodologie",
 });
 

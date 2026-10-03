@@ -9,7 +9,7 @@ import { buildMetadata, itemListJsonLd } from "@/lib/seo";
 export const revalidate = 86400;
 
 export const metadata = buildMetadata({
-  title: "Blog EVExpert : analyses chiffrées sur la voiture électrique",
+  title: "Blog : analyses chiffrées sur la voiture électrique",
   description:
     "Analyses sourcées et recalculées sur les données du catalogue EVExpert : consommation, recharge rapide, batteries. Pas d'actualité non vérifiée.",
   path: "/blog",

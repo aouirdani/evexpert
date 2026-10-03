@@ -11,7 +11,7 @@ import { buildMetadata } from "@/lib/seo";
 export const revalidate = 86400;
 
 export const metadata = buildMetadata({
-  title: "Trouver la voiture électrique adaptée à votre usage",
+  title: "Trouver sa voiture électrique selon son usage",
   description:
     "Répondez à quelques questions sur votre usage : EVExpert indique, pour chaque modèle, les critères objectifs remplis. Aucun classement, aucun critère de budget.",
   path: "/voitures-electriques/trouver",

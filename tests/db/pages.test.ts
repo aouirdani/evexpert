@@ -71,3 +71,57 @@ describe("pages dynamiques alimentées par la base (URLs inchangées)", () => {
     expect(urls).not.toContain("https://www.evexpert.fr/voitures-electriques/renault/5-e-tech/52-kwh-150-ch");
   });
 });
+
+describe("titles et metas (lot titles-metas)", () => {
+  const desc = (md: { description?: unknown }) => String(md.description ?? "");
+
+  it("fiches modèle et version : le nom et « autonomie » tiennent dans les 55 premiers caractères", async () => {
+    const { queryEnd, TITLE_QUERY_LIMIT } = await import("@/lib/seo/titles");
+    const modelPage = await import("@/app/voitures-electriques/[brand]/[model]/page");
+    const versionPage = await import("@/app/voitures-electriques/[brand]/[model]/[version]/page");
+    const models = await modelPage.generateStaticParams();
+    for (const p of models) {
+      const t = pageTitle(await modelPage.generateMetadata(params(p)));
+      expect(queryEnd(t), t).toBeLessThanOrEqual(TITLE_QUERY_LIMIT);
+    }
+    const versions = await versionPage.generateStaticParams();
+    for (const p of versions) {
+      const t = pageTitle(await versionPage.generateMetadata(params(p)));
+      expect(queryEnd(t), t).toBeLessThanOrEqual(TITLE_QUERY_LIMIT);
+    }
+    const m3 = pageTitle(await modelPage.generateMetadata(params({ brand: "tesla", model: "model-3" })));
+    expect(m3).toBe("Tesla Model 3 : autonomie, recharge et versions | EVExpert");
+    const lr = pageTitle(await versionPage.generateMetadata(params({ brand: "tesla", model: "model-3", version: "long-range-rwd" })));
+    expect(lr).toBe("Tesla Model 3 Long Range RWD : autonomie, recharge, fiche technique | EVExpert");
+  });
+
+  it("metas des marques : 160 caractères maximum (gabarit), Renault compris", async () => {
+    const mod = await import("@/app/voitures-electriques/[brand]/page");
+    for (const p of await mod.generateStaticParams()) {
+      const md = await mod.generateMetadata(params(p));
+      expect(desc(md).length, p.brand).toBeLessThanOrEqual(160);
+    }
+    const renault = await mod.generateMetadata(params({ brand: "renault" }));
+    expect(pageTitle(renault)).toBe("Renault électriques : modèles, autonomie et recharge | EVExpert");
+    expect(desc(renault)).toContain("Autonomie WLTP, batterie et recharge comparées.");
+  });
+
+  it("metas de l'accueil, de la méthodologie et du CHAdeMO : 160 caractères maximum", async () => {
+    const home = (await import("@/app/page")).metadata;
+    const methodo = (await import("@/app/methodologie/page")).metadata;
+    const chademo = await (await import("@/app/recharge/[topic]/page")).generateMetadata(params({ topic: "chademo" }));
+    for (const md of [home, methodo, chademo]) expect(desc(md).length).toBeLessThanOrEqual(160);
+    expect(pageTitle(home)).toBe("Voiture électrique : autonomie, recharge et coût réel");
+  });
+
+  it("titles réécrits à la main et connecteurs", async () => {
+    expect(pageTitle((await import("@/app/guides/page")).metadata)).toBe("Guides voiture électrique : autonomie, recharge, batterie | EVExpert");
+    expect(pageTitle((await import("@/app/blog/page")).metadata)).toBe("Blog : analyses chiffrées sur la voiture électrique | EVExpert");
+    expect(pageTitle((await import("@/app/voitures-electriques/trouver/page")).metadata)).toBe("Trouver sa voiture électrique selon son usage | EVExpert");
+    const topic = (await import("@/app/recharge/[topic]/page")).generateMetadata;
+    expect(pageTitle(await topic(params({ topic: "type-2" })))).toBe("Prise Type 2 : connecteur standard de recharge AC | EVExpert");
+    expect(pageTitle(await topic(params({ topic: "ccs" })))).toBe("CCS Combo 2 : connecteur de recharge rapide en Europe | EVExpert");
+    expect(pageTitle(await topic(params({ topic: "chademo" })))).toBe("CHAdeMO : standard japonais de recharge rapide | EVExpert");
+  });
+});
+

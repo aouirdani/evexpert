@@ -62,6 +62,7 @@ export const tools: Tool[] = [
     slug: "trajet-longue-distance",
     href: "/outils/trajet-longue-distance",
     title: "Simulateur de trajet longue distance en voiture électrique",
+    metaTitle: "Simulateur de trajet longue distance électrique",
     shortTitle: "Trajet longue distance",
     description:
       "Simulez un long trajet : autonomie réelle estimée, nombre d'arrêts de recharge et durée théorique selon le véhicule.",

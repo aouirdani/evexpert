@@ -8,6 +8,7 @@ import { VehicleHeader } from "@/components/vehicles/VehicleHeader";
 import { getModelVersions, getModels, getSimilarVehicles } from "@/data/catalog";
 import { modelTitle, vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 import { buildMetadata } from "@/lib/seo";
+import { modelVersionsTitleText, vehicleTitleText } from "@/lib/seo/titles";
 
 // Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
 export const revalidate = 86400;
@@ -25,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const v = versions[0];
   if (versions.length === 1) {
     return buildMetadata({
-      title: `${modelTitle(v)} ${v.version} : autonomie, recharge et caractéristiques`,
+      title: vehicleTitleText(v),
       description: `Fiche ${vehicleTitle(v)} : ${v.rangeWltp} km WLTP, batterie ${v.batteryUsable} kWh utiles, recharge AC ${v.chargingAC} kW${v.chargingDC ? `, DC ${v.chargingDC} kW` : ""}. Coûts et temps de recharge calculés.`,
       path: vehicleHref(v, "model"),
     });
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const minR = Math.min(...versions.map((x) => x.rangeWltp));
   const maxR = Math.max(...versions.map((x) => x.rangeWltp));
   return buildMetadata({
-    title: `${modelTitle(v)} : versions, autonomie et recharge comparées`,
+    title: modelVersionsTitleText(v),
     description: `${modelTitle(v)} en ${versions.length} versions : autonomie WLTP de ${minR} à ${maxR} km, puissance de recharge et coût aux 100 km comparés.`,
     path: vehicleHref(v, "model"),
   });
