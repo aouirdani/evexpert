@@ -1,5 +1,8 @@
 import { existsSync, readFileSync, statSync } from "node:fs";
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
+import { ImageCreditLine } from "@/components/content/ImageCreditLine";
 import { EDITORIAL_LICENSED } from "@/data/editorial/licensed";
 import { EDITORIAL_PHOTOS } from "@/data/editorial/media";
 import { chargingTopics } from "@/data/charging";
@@ -158,5 +161,27 @@ describe("couverture des images (35 contenus)", () => {
         expect(c.modifications, slug).toMatch(/modifi/i);
       }
     }
+  });
+});
+
+describe("ligne de crédit sous les photos", () => {
+  const html = (slug: string) => renderToStaticMarkup(createElement(ImageCreditLine, { credit: EDITORIAL_LICENSED[slug].image.credit! }));
+
+  it("CC BY-SA : auteur, licence avec son lien et « image recadrée »", () => {
+    const sa = Object.entries(EDITORIAL_LICENSED).filter(([, e]) => /BY-SA/.test(e.image.credit!.license));
+    expect(sa.map(([slug]) => slug).sort()).toEqual(["ccs", "chademo", "lfp-ou-nmc-ce-que-montrent-les-donnees", "prix-batterie-voiture-electrique"]);
+    for (const [slug, e] of sa) {
+      const c = e.image.credit!;
+      const out = html(slug);
+      expect(out, slug).toContain(c.author);
+      expect(out, slug).toContain(c.license);
+      expect(out, slug).toContain(`href="${c.licenseUrl}"`);
+      expect(out, slug).toContain("image recadrée");
+    }
+  });
+
+  it("Unsplash et CC0 : crédit affiché, sans mention de modification obligatoire", () => {
+    expect(html("temps-recharge-voiture-electrique")).not.toContain("image recadrée");
+    expect(html("type-2")).toContain("CC0");
   });
 });
