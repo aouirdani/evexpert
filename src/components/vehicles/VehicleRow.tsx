@@ -1,6 +1,6 @@
 import Link from "next/link";
-import type { Vehicle } from "@/types";
-import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
+import type { VehicleCardData } from "@/lib/vehicle-lite";
+import { vehicleTitle } from "@/lib/vehicle-utils";
 import { bodyTypeLabels } from "@/lib/vehicle-format";
 import { formatNumber } from "@/lib/format";
 import { RangeBar } from "./RangeBar";
@@ -17,13 +17,13 @@ const dash = (
  * Ligne de tableau (vue « Tableau » du catalogue, sélection d'accueil) : une version par ligne,
  * lisible d'un coup d'œil. À placer dans un `<tbody>` ; la première cellule porte le lien étiré.
  */
-export function VehicleRow({ vehicle: v, href }: { vehicle: Vehicle; href?: string }) {
+export function VehicleRow({ vehicle: v, href }: { vehicle: VehicleCardData; href: string }) {
   return (
     <tr className="group relative border-t border-line transition-colors duration-150 hover:bg-surface">
       <th scope="row" className="py-4 pr-4 text-left align-middle font-normal">
         <span className="eyebrow block text-signal-deep">{v.brand}</span>
         <Link
-          href={href ?? vehicleHref(v)}
+          href={href}
           aria-label={vehicleTitle(v)}
           className="link-h mt-0.5 inline text-base font-bold text-ink after:absolute after:inset-0 after:content-[''] focus-visible:outline-none group-hover:[background-size:100%_2px]"
         >

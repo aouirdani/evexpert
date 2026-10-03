@@ -28,7 +28,10 @@ export interface FinderCriterion {
   met: boolean | null;
 }
 
-export interface FinderMatch<V extends Vehicle = Vehicle> {
+/** Champs lus par l'assistant : autonomie, batterie, recharge DC, coffre, places, carrosserie, nom. */
+export type FinderInput = Pick<Vehicle, "rangeWltp" | "batteryUsable" | "chargingDC" | "trunkVolume" | "seats" | "bodyType" | "brand" | "model">;
+
+export interface FinderMatch<V extends FinderInput = FinderInput> {
   vehicle: V;
   criteria: FinderCriterion[];
   /** Nombre de critères applicables remplis. */
@@ -44,7 +47,7 @@ const autoroute = RANGE_SCENARIOS.find((s) => s.id === "autoroute")!;
 const SAFETY_MARGIN = 0.85;
 
 /** Générique sur `V` pour laisser passer les champs ajoutés par l'appelant (ex. `href` précalculé). */
-export function matchVehicle<V extends Vehicle>(v: V, a: FinderAnswers): FinderMatch<V> {
+export function matchVehicle<V extends FinderInput>(v: V, a: FinderAnswers): FinderMatch<V> {
   const dailyNeedKm = a.dailyKm * 2;
   const realMixteRange = estimateRange(v, mixte) * SAFETY_MARGIN;
 
@@ -94,7 +97,7 @@ export function matchVehicle<V extends Vehicle>(v: V, a: FinderAnswers): FinderM
   };
 }
 
-export function matchVehicles<V extends Vehicle>(vehicles: V[], a: FinderAnswers): FinderMatch<V>[] {
+export function matchVehicles<V extends FinderInput>(vehicles: V[], a: FinderAnswers): FinderMatch<V>[] {
   return vehicles
     .map((v) => matchVehicle(v, a))
     // À nombre de critères remplis égal, tri alphabétique (marque puis modèle) : neutre, sans laisser

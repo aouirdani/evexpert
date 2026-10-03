@@ -2,7 +2,8 @@
 
 import { useMemo, useState } from "react";
 import { Check, Minus, X } from "lucide-react";
-import type { BodyType, Vehicle } from "@/types";
+import type { BodyType } from "@/types";
+import type { FinderVehicle } from "@/lib/vehicle-lite";
 import { defaultFinderAnswers, matchVehicles, type FinderAnswers } from "@/lib/vehicle-finder";
 import { bodyTypeLabels } from "@/lib/vehicle-format";
 
@@ -50,7 +51,7 @@ function ToggleYesNo({ id, label, value, onChange }: { id: string; label: string
  * encore collecté (voir /methodologie et /sources). Le calcul (`matchVehicle`) tourne entièrement
  * côté client sur les données déjà envoyées à la page (même volume que le catalogue/comparateur).
  */
-export function VehicleFinder({ vehicles }: { vehicles: (Vehicle & { href: string })[] }) {
+export function VehicleFinder({ vehicles }: { vehicles: FinderVehicle[] }) {
   const [answers, setAnswers] = useState<FinderAnswers>(defaultFinderAnswers);
   const set = <K extends keyof FinderAnswers>(key: K, value: FinderAnswers[K]) =>
     setAnswers((a) => ({ ...a, [key]: value }));

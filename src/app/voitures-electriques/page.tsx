@@ -11,6 +11,7 @@ import { VehicleExplorer } from "@/components/vehicles/VehicleExplorer";
 import { getAllVehicles, getBrands, getModels } from "@/data/catalog";
 import { versionsOf } from "@/data/catalog/selectors";
 import { vehicleHref } from "@/lib/vehicle-utils";
+import { toExplorerVehicle } from "@/lib/vehicle-lite";
 import { buildMetadata, itemListJsonLd } from "@/lib/seo";
 import { formatNumber } from "@/lib/format";
 
@@ -75,7 +76,7 @@ export default async function VehiclesPage() {
       </nav>
 
       <div className="mt-10">
-        <VehicleExplorer vehicles={vehicles} />
+        <VehicleExplorer vehicles={vehicles.map(toExplorerVehicle)} />
       </div>
 
       <section className="mt-section grid gap-x-12 gap-y-6 lg:grid-cols-12" aria-labelledby="lire-fiches">

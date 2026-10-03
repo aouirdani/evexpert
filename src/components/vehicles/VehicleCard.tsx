@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import type { Vehicle } from "@/types";
-import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
+import type { VehicleCardData } from "@/lib/vehicle-lite";
+import { vehicleTitle } from "@/lib/vehicle-utils";
 import { batteryConsumption100 } from "@/lib/vehicle-calcs";
 import { bodyTypeLabels } from "@/lib/vehicle-format";
 import { formatNumber } from "@/lib/format";
@@ -49,7 +49,7 @@ function Spec({
  * Toute la fiche est cliquable via un vrai lien HTML (lien étiré) ; l'anneau de focus entoure
  * la fiche entière. Server Component (aussi rendu dans l'explorateur client).
  */
-export function VehicleCard({ vehicle: v, href }: { vehicle: Vehicle; href?: string }) {
+export function VehicleCard({ vehicle: v, href }: { vehicle: VehicleCardData; href: string }) {
   return (
     <article className="group relative grid grid-cols-[6.75rem_minmax(0,1fr)] gap-x-5 gap-y-4 border-t-2 border-ink bg-surface px-5 pb-5 pt-4 transition-colors duration-200 hover:border-signal-deep sm:block sm:px-6 sm:pb-6 sm:pt-5 has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-offset-2 has-[a:focus-visible]:outline-signal-deep">
       <GarageToggle id={v.id} className="absolute right-5 top-4 z-10 sm:right-6 sm:top-5" />
@@ -60,7 +60,7 @@ export function VehicleCard({ vehicle: v, href }: { vehicle: Vehicle; href?: str
         </p>
         <h3 className="mt-1.5 text-h3 font-bold text-ink">
           <Link
-            href={href ?? vehicleHref(v)}
+            href={href}
             aria-label={vehicleTitle(v)}
             className="link-h after:absolute after:inset-0 after:content-[''] focus-visible:outline-none group-hover:[background-size:100%_2px]"
           >

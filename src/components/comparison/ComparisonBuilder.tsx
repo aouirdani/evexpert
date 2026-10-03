@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Check, Link2 } from "lucide-react";
-import type { Vehicle } from "@/types";
+import type { CompareVehicle } from "@/lib/vehicle-lite";
 import { fieldClass } from "@/components/ui/Field";
 import { ComparisonTable } from "./ComparisonTable";
 
@@ -57,7 +57,7 @@ export function ComparisonBuilder({
   vehicles,
   defaultIds,
 }: {
-  vehicles: Vehicle[];
+  vehicles: CompareVehicle[];
   /** 1 à 3 identifiants ; reflète l'URL `?v=...` au chargement (lien partagé ou « Ma sélection »). */
   defaultIds: string[];
 }) {
@@ -65,7 +65,7 @@ export function ComparisonBuilder({
   const [ids, setIds] = useState<string[]>([defaultIds[0] ?? "", defaultIds[1] ?? "", defaultIds[2] ?? ""]);
   const selected = ids
     .map((id) => vehicles.find((v) => v.id === id))
-    .filter((v): v is Vehicle => Boolean(v));
+    .filter((v): v is CompareVehicle => Boolean(v));
 
   // Le sélecteur est la source de vérité de l'URL : toute sélection tient l'adresse à jour,
   // pour qu'elle reste copiable et partageable à tout moment (pas seulement au clic sur « Copier »).

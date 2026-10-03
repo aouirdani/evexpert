@@ -9,20 +9,20 @@ import { computeRange, type DrivingType } from "@/lib/calculators";
  */
 
 /** Énergie utile consommée aux 100 km (côté batterie) = capacité utile ÷ autonomie WLTP × 100. */
-export function batteryConsumption100(v: Vehicle): number {
+export function batteryConsumption100(v: Pick<Vehicle, "batteryUsable" | "rangeWltp">): number {
   return (v.batteryUsable / v.rangeWltp) * 100;
 }
 
 /** Énergie tirée du réseau aux 100 km, pertes de charge comprises. */
 export function gridConsumption100(
-  v: Vehicle,
+  v: Pick<Vehicle, "batteryUsable" | "rangeWltp">,
   efficiencyPct: number = ASSUMPTIONS.chargingEfficiency,
 ): number {
   return batteryConsumption100(v) / (Math.max(1, efficiencyPct) / 100);
 }
 
 export function costPer100km(
-  v: Vehicle,
+  v: Pick<Vehicle, "batteryUsable" | "rangeWltp">,
   pricePerKwh: number,
   efficiencyPct: number = ASSUMPTIONS.chargingEfficiency,
 ): number {
@@ -74,7 +74,8 @@ export const RANGE_SCENARIOS: RangeScenario[] = [
 ];
 
 /** Estimation EVExpert de l'autonomie selon un scénario (modèle multiplicatif documenté sur /methodologie). */
-export function estimateRange(v: Vehicle, s: RangeScenario): number {
+export function estimateRange(
+  v: Pick<Vehicle, "batteryUsable" | "rangeWltp">, s: RangeScenario): number {
   return computeRange({
     usableCapacity: v.batteryUsable,
     baseConsumption: batteryConsumption100(v),

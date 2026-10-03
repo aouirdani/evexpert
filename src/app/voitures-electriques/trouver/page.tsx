@@ -3,6 +3,7 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Kicker } from "@/components/layout/Section";
 import { VehicleFinder } from "@/components/finder/VehicleFinder";
 import { getAllVehicles } from "@/data/catalog";
+import { toFinderVehicle } from "@/lib/vehicle-lite";
 import { versionsOf } from "@/data/catalog/selectors";
 import { vehicleHref } from "@/lib/vehicle-utils";
 import { buildMetadata } from "@/lib/seo";
@@ -42,7 +43,7 @@ export default async function FinderPage() {
       </p>
 
       <div className="mt-12">
-        <VehicleFinder vehicles={vehicles} />
+        <VehicleFinder vehicles={vehicles.map(toFinderVehicle)} />
       </div>
     </Container>
   );

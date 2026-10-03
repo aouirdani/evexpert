@@ -10,6 +10,7 @@ import { RelatedGuides, RelatedTools } from "@/components/related";
 import { getFeaturedComparisons, parseComparison } from "@/lib/comparison";
 import { objectiveDifferences } from "@/lib/comparison-metrics";
 import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
+import { toCompareVehicle } from "@/lib/vehicle-lite";
 import { formatDateFr } from "@/lib/format";
 import { buildMetadata, faqJsonLd } from "@/lib/seo";
 
@@ -42,7 +43,8 @@ export default async function ComparisonPage({ params }: { params: Promise<Param
   const pair = await parseComparison(slug);
   if (!pair) notFound();
   const [a, b] = pair;
-  const diffs = objectiveDifferences([a, b]);
+  const compared = [toCompareVehicle(a), toCompareVehicle(b)];
+  const diffs = objectiveDifferences(compared);
   const range = diffs.find((d) => d.label.startsWith("Autonomie"));
   const dc = diffs.find((d) => d.label.startsWith("Puissance DC"));
 
@@ -79,7 +81,7 @@ export default async function ComparisonPage({ params }: { params: Promise<Param
         Données relevées le <time dateTime={a.source.lastUpdated}>{formatDateFr(a.source.lastUpdated)}</time>
       </p>
       <div className="mt-8">
-        <ComparisonTable vehicles={[a, b]} />
+        <ComparisonTable vehicles={compared} />
       </div>
 
       <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-line pt-5 text-sm font-semibold">

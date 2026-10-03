@@ -2,7 +2,8 @@ import { ASSUMPTIONS } from "@/data/assumptions";
 import { costPer100km } from "@/lib/vehicle-calcs";
 import { fmt, fmtText } from "@/lib/vehicle-format";
 import { formatEuro, formatNumber } from "@/lib/format";
-import type { DataType, Vehicle } from "@/types";
+import type { DataType } from "@/types";
+import type { CompareVehicle } from "@/lib/vehicle-lite";
 
 /* ------------------------------ Métriques -------------------------------- */
 
@@ -12,8 +13,8 @@ export interface Metric {
   group: string;
   type: DataType;
   /** Valeur numérique comparable ; null si non disponible. */
-  value: (v: Vehicle) => number | null;
-  format: (v: Vehicle) => string;
+  value: (v: CompareVehicle) => number | null;
+  format: (v: CompareVehicle) => string;
   /** Sens de la mise en évidence : plus haut / plus bas ; absent = aucune mise en évidence. */
   best?: "max" | "min";
   /** Libellé de la différence objective, ex. « Autonomie WLTP la plus élevée ». */
@@ -51,7 +52,7 @@ export const METRIC_GROUPS = Array.from(new Set(METRICS.map((m) => m.group)));
 
 export interface Difference {
   label: string;
-  vehicle: Vehicle;
+  vehicle: CompareVehicle;
   display: string;
 }
 
@@ -60,11 +61,11 @@ export interface Difference {
  * meilleure valeur, uniquement si elle est strictement meilleure que les autres
  * et calculée à partir des données affichées. Aucun classement global.
  */
-export function objectiveDifferences(vehicles: Vehicle[]): Difference[] {
+export function objectiveDifferences(vehicles: CompareVehicle[]): Difference[] {
   const out: Difference[] = [];
   for (const m of METRICS) {
     if (!m.best || !m.highlight) continue;
-    const vals = vehicles.map((v) => ({ v, n: m.value(v) })).filter((x): x is { v: Vehicle; n: number } => x.n !== null);
+    const vals = vehicles.map((v) => ({ v, n: m.value(v) })).filter((x): x is { v: CompareVehicle; n: number } => x.n !== null);
     if (vals.length < 2) continue;
     const target = m.best === "max" ? Math.max(...vals.map((x) => x.n)) : Math.min(...vals.map((x) => x.n));
     const winners = vals.filter((x) => x.n === target);

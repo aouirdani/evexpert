@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { LayoutGrid, Rows3, SlidersHorizontal } from "lucide-react";
-import type { Vehicle } from "@/types";
+import type { ExplorerVehicle } from "@/lib/vehicle-lite";
 import { ASSUMPTIONS } from "@/data/assumptions";
 import { costPer100km } from "@/lib/vehicle-calcs";
 import { bodyTypeLabels } from "@/lib/vehicle-format";
@@ -20,7 +20,7 @@ const viewButton =
   "inline-flex h-10 w-10 items-center justify-center rounded-sm border transition-colors duration-150";
 
 /** Filtres côté client uniquement : aucune combinaison de filtres ne crée d'URL indexable. */
-export function VehicleExplorer({ vehicles }: { vehicles: (Vehicle & { href: string })[] }) {
+export function VehicleExplorer({ vehicles }: { vehicles: ExplorerVehicle[] }) {
   const [query, setQuery] = useState("");
   const [brand, setBrand] = useState("all");
   const [body, setBody] = useState("all");
