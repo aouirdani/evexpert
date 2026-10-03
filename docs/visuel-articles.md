@@ -65,6 +65,6 @@ Photos sous licence : **23** (18 Unsplash, 5 Wikimedia Commons). Illustrations I
 | blog | `comment-evexpert-construit-sa-base` | **aucune photo** — contenu méthodologique : aucune photo libre pertinente | — | — |
 | blog | `garantie-batterie-ce-que-disent-les-donnees` | **aucune photo** — aucune photo libre convenable | — | — |
 
-Crédit : affiché sous chaque photo (auteur, source, licence, avec leurs liens). Les trois photos Wikimedia sous CC BY-SA (CCS, CHAdeMO ; pack Nissan Leaf ; pack BMW i3 — soit 4 fichiers) imposent le crédit **et** le partage de l'image recadrée sous la même licence : c'est indiqué dans la mention de modification. Les deux photos CC0 (connecteurs Type 2 / CCS côte à côte) et les photos Unsplash n'imposent pas de crédit, mais il est affiché.
+Crédit : affiché sous chaque photo (auteur, source, licence, avec leurs liens). Les quatre photos Wikimedia sous CC BY-SA (CCS, CHAdeMO, pack Nissan Leaf, pack BMW i3) imposent le crédit **et** le partage de l'image recadrée sous la même licence : c'est indiqué dans la mention de modification. La photo CC0 (Type 2 et CCS côte à côte) et les photos Unsplash n'imposent pas de crédit, mais il est affiché.
 
 Pexels et Pixabay refusent l'accès automatisé depuis l'environnement de travail (HTTP 403) : aucune photo n'en provient.
