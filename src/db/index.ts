@@ -49,7 +49,7 @@ export function buildPoolConfig(connectionString: string, env: NodeJS.ProcessEnv
     ssl: useSsl ? { rejectUnauthorized: false } : false,
     max: Number.isFinite(max) && max > 0 ? max : 3,
     idleTimeoutMillis: 10_000,
-    connectionTimeoutMillis: 10_000,
+    connectionTimeoutMillis: 4_000,
     application_name: "evexpert-web",
   };
 }

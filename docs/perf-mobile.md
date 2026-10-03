@@ -83,3 +83,15 @@ Lighthouse local (3 passages, mobile simulé) : scores inchangés (95–96), pas
 `next/font` précharge toutes les graisses de IBM Plex Mono (400, 600, 700) en plus de Schibsted Grotesk : 4 préchargements. Essai : auto-héberger Plex Mono (`public/fonts`, `@font-face` avec les sous-ensembles latin et latin-ext) et ne précharger que la graisse 700 (grands chiffres du hero) : 2 préchargements, ~20 Ko de moins en priorité haute.
 
 Résultat (3 passages, accueil et 3 autres pages) : **FCP simulé 0,91 s → 1,21 s**, LCP et score inchangés (96). Les graisses 400 et 600, plus préchargées, ne sont découvertes qu'après l'analyse de la CSS : dans la simulation de Lighthouse, la chaîne CSS → police s'ajoute au chemin critique. Le préchargement « coûte » des octets mais gagne un aller-retour. Essai annulé : on garde les 4 préchargements de `next/font`. Pour vraiment réduire, il faudrait supprimer une graisse (par exemple fusionner 600 et 700), ce qui change le rendu des libellés.
+
+## 8. `/comparer` statique et base de données (3 octobre 2026)
+
+- `/comparer` lisait `searchParams` (`?v=`) : page dynamique, donc 3 requêtes SQL à chaque requête
+  sur instance froide, et un 500 intermittent observé une fois. Elle est désormais statique
+  (`revalidate = 86400`) ; `?v=` est lu côté client dans un `<Suspense>` (squelette). Les liens
+  vers les fiches de la paire par défaut restent dans le HTML serveur.
+- `getCatalog` : une nouvelle tentative, journalisation des échecs, dernier catalogue connu servi
+  si la base ne répond pas (jamais de repli sur `src/data/vehicles.ts`). `connectionTimeoutMillis` : 4 s.
+- `@vercel/functions` (`attachDatabasePool`) : **non adopté**, la base n'étant plus interrogée à
+  chaque requête. À reconsidérer si une page dynamique (lecture de `searchParams`, `cookies()`,
+  `force-dynamic`) interrogeant la base réapparaît.

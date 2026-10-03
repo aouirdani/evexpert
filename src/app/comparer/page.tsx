@@ -1,10 +1,11 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Container, PageHeader } from "@/components/layout/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
-import { ComparisonBuilder } from "@/components/comparison/ComparisonBuilder";
-import { getAllVehicles, getVehiclesForComparison } from "@/data/catalog";
-import { vehicleTitle } from "@/lib/vehicle-utils";
+import { ComparisonBuilder, ComparisonSkeleton } from "@/components/comparison/ComparisonBuilder";
+import { getAllVehicles } from "@/data/catalog";
+import { vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 import { toCompareVehicle } from "@/lib/vehicle-lite";
 import { getFeaturedComparisons } from "@/lib/comparison";
 import { buildMetadata } from "@/lib/seo";
@@ -21,27 +22,14 @@ export const metadata = buildMetadata({
 
 const DEFAULT_IDS = ["renault-5-e-tech-52-kwh-150-ch", "peugeot-e-208-50-kwh"];
 
-export default async function ComparePage({
-  searchParams,
-}: {
-  /** `?v=id1,id2,id3` : lien partageable, aussi utilisé pour reprendre « Ma sélection » (localStorage, voir GarageBar). */
-  searchParams: Promise<{ v?: string }>;
-}) {
-  const { v } = await searchParams;
-  // Dédoublonné (un id répété deux fois ne doit pas comparer un véhicule avec lui-même) et
-  // plafonné à 3 (autant que d'emplacements du comparateur, même sur une URL modifiée à la main).
-  const requestedIds = v ? [...new Set(v.split(",").filter(Boolean))].slice(0, 3) : [];
-  const [vehicles, featured, preselected] = await Promise.all([
-    getAllVehicles(),
-    getFeaturedComparisons(),
-    requestedIds.length ? getVehiclesForComparison(requestedIds) : Promise.resolve([]),
-  ]);
-  // Les identifiants inconnus (lien copié après une refonte du catalogue) sont ignorés
-  // silencieusement. Un seul identifiant valide est repris tel quel (ex. « Ma sélection » avec un
-  // seul véhicule, ou un lien partagé prématurément) : le formulaire préremplit ce véhicule et
-  // invite à en choisir un second, plutôt que de l'écarter au profit d'une paire sans rapport.
-  // Zéro identifiant valide → paire par défaut.
-  const initialIds = preselected.length > 0 ? preselected.map((x) => x.id) : DEFAULT_IDS;
+// Page statique : `?v=id1,id2,id3` (lien partagé, « Ma sélection » du GarageBar) est lu côté client
+// par ComparisonBuilder, dans un <Suspense>. Lire `searchParams` ici rendrait la page dynamique
+// et ferait interroger la base à chaque requête.
+export default async function ComparePage() {
+  const [vehicles, featured] = await Promise.all([getAllVehicles(), getFeaturedComparisons()]);
+  // Paire par défaut, en liens dans le HTML serveur : le tableau du comparateur n'est plus rendu
+  // côté serveur (squelette), ces liens vers les fiches y restent donc présents sans JavaScript.
+  const defaults = DEFAULT_IDS.map((id) => vehicles.find((x) => x.id === id)).filter((x): x is NonNullable<typeof x> => Boolean(x));
 
   return (
     <Container className="pb-section pt-8">
@@ -52,7 +40,17 @@ export default async function ComparePage({
         description="Choisissez deux ou trois modèles et comparez-les critère par critère. Le comparateur chiffre les écarts mesurables, jamais un classement global : le meilleur choix dépend de votre usage."
       />
       <div className="mt-12">
-        <ComparisonBuilder vehicles={vehicles.map(toCompareVehicle)} defaultIds={initialIds} />
+        <Suspense fallback={<ComparisonSkeleton />}>
+          <ComparisonBuilder vehicles={vehicles.map(toCompareVehicle)} defaultIds={DEFAULT_IDS} />
+        </Suspense>
+        {defaults.length === 2 && (
+          <p className="mt-6 text-muted">
+            Comparaison proposée par défaut :{" "}
+            <Link href={vehicleHref(defaults[0], "model")} className="link-u font-semibold text-signal-deep">{vehicleTitle(defaults[0])}</Link>
+            {" "}contre{" "}
+            <Link href={vehicleHref(defaults[1], "model")} className="link-u font-semibold text-signal-deep">{vehicleTitle(defaults[1])}</Link>.
+          </p>
+        )}
       </div>
 
       <section className="mt-section grid gap-x-12 gap-y-6 lg:grid-cols-12" aria-labelledby="duels">
