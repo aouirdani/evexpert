@@ -73,11 +73,8 @@ export function Hero({
             className="hero-poster h-full w-full object-cover object-right mix-blend-lighten"
           />
           {/* Vidéo décorative par-dessus la photo, qui reste le premier rendu (LCP) et le repli : sans
-              lecture (mobile, prefers-reduced-motion, échec réseau), seule la photo est visible. Muet, sans
-              contrôle ; recouvre la photo sans dimension propre, donc aucun CLS. Voir HeroVideo. */}
-          <div className="hero-video absolute inset-0 hidden lg:block" style={photoMask}>
-            <HeroVideo src="/brand/video.mp4" className="h-full w-full object-cover object-right" />
-          </div>
+              lecture (mobile, prefers-reduced-motion, échec réseau), seule la photo est visible. Muet, avec un bouton pause / lecture (WCAG 2.2.2) ; recouvre la photo sans dimension propre, donc aucun CLS. Voir HeroVideo. */}
+          <HeroVideo src="/brand/video.mp4" videoClassName="h-full w-full object-cover object-right" maskStyle={photoMask} />
         </div>
 
         <dl
