@@ -110,7 +110,7 @@ export function Selection({
   total: number;
 }) {
   return (
-    <Section labelledBy="selection" spacing="none" className="pb-section">
+    <Section tone="deep" labelledBy="selection">
       <SectionHeading
         id="selection"
         numeral="02"
@@ -165,7 +165,7 @@ export function CompareSpotlight({ comparisons }: { comparisons: { slug: string;
   const duel = comparisons[0];
   const [a, b] = duel?.vehicles ?? [];
   return (
-    <Section tone="deep" labelledBy="compare">
+    <Section labelledBy="compare">
       <SectionHeading
         id="compare"
         numeral="03"
@@ -268,7 +268,7 @@ const chargeItems = [
 
 export function ChargingFeature({ photo }: { photo?: EditorialImage }) {
   return (
-    <Section labelledBy="recharge" spacing="none" className="py-section">
+    <Section tone="deep" labelledBy="recharge" spacing="none" className="py-section">
       <div className="grid items-start gap-x-14 gap-y-10 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <Kicker aside="04">Recharge</Kicker>
@@ -329,7 +329,7 @@ export function ReadingSection({
   guideTotal: number;
 }) {
   return (
-    <Section labelledBy="lire" spacing="none" className="pb-section">
+    <Section labelledBy="lire">
       <SectionHeading
         id="lire"
         numeral="05"

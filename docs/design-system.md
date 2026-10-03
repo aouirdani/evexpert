@@ -14,26 +14,36 @@ Source de vérité des tokens : `src/app/globals.css` (`@theme`). Les composants
 
 ## Couleurs
 
+Palette « Cobalt & volt » (choisie le 03/10/2026, remplace « Revue technique » verte et lime).
+
 | Token | Valeur | Usage | Contraste |
 |---|---|---|---|
-| `paper` | `#F6F5F1` | fond de page | — |
-| `paper-deep` | `#EDEBE4` | surfaces enfoncées, badges neutres | — |
+| `paper` | `#F3F6FC` | fond de page (bleuté) | — |
+| `paper-deep` | `#E1E9F8` | bandes de sections teintées, surfaces enfoncées | muted 5,4 |
 | `surface` | `#FFFFFF` | cartes, champs | — |
-| `ink` | `#0B1626` | titres, fonds sombres, bouton principal | 16,6 sur paper |
-| `body` | `#33415A` | texte courant | 9,4 sur paper |
-| `muted` | `#556174` | texte secondaire | 5,8 sur paper |
-| `ink-muted` | `#A8B4C6` | texte secondaire sur fond `ink` | 8,7 sur ink |
-| `line` | `#D9D6CC` | filets décoratifs | décoratif |
-| `control` | `#7B8494` | bordure des champs | 3,5 sur paper |
-| `signal` | `#B8F13C` | accent sur fond sombre, bouton `signal` | 13,6 sur ink |
-| `signal-deep` | `#0F6B4F` | accent, liens, eyebrow sur fond clair | 6,0 sur paper |
-| `signal-tint` | `#E3F3B5` | surlignage (meilleure valeur, badge officiel) | ink 15,3 |
+| `ink` | `#071A3A` | titres, fonds sombres (hero, encadrés) | 15,9 sur paper |
+| `ink-raised` | `#10294F` | surfaces relevées sur fond `ink` | — |
+| `body` | `#2C3A57` | texte courant | 10,5 sur paper |
+| `muted` | `#4F5D78` | texte secondaire | 6,1 sur paper |
+| `ink-muted` | `#A9B8D4` | texte secondaire sur fond `ink` | 8,6 sur ink |
+| `line` / `line-ink` | `#D3DBEC` / `#233A63` | filets décoratifs | décoratif |
+| `control` | `#74809A` | bordure des champs | 3,7 sur paper |
+| `brand` | `#1448C8` | **couleur principale** : fond du header et du footer | brand-fg 7,0 |
+| `brand-raised` | `#0F3AA5` | survol sur fond `brand` | brand-fg 8,9 |
+| `brand-fg` / `brand-muted` | `#F3F6FC` / `#CDDAFB` | texte et texte secondaire sur `brand` | 7,0 / 5,4 |
+| `brand-line` | `#4A74D8` | filets sur fond `brand` | décoratif |
+| `signal` | `#C8FF2E` | **volt, accent de mise en valeur** : boutons principaux, chiffres clés (soulignement), encadré « L'essentiel », focus sur fond sombre | ink 14,6 ; sur brand 6,4 |
+| `signal-deep` | `#1448C8` | liens, numéros et eyebrow sur fond clair | 7,0 sur paper |
+| `signal-tint` | `#E8F7B0` | fond de l'encadré « L'essentiel », surlignage | ink 15,1 |
 | `info` / `info-bg` | `#1B4F8A` / `#E1EAF5` | source spécialisée | 6,8 |
 | `warn` / `warn-bg` | `#7A4A00` / `#FAE8C2` | estimation | 6,2 |
 | `danger` / `danger-bg` | `#9B1C1C` / `#FBE4E4` | erreurs | — |
 
-Règle : **`signal` (lime) n'est jamais du texte ni une bordure sur fond clair** (1,2:1). Sur fond
-clair on utilise `signal-deep` ; le lime sert de remplissage avec du texte `ink`.
+Règle : **`signal` (volt) n'est jamais du texte ni une bordure sur fond clair** (1,1:1). Sur fond
+clair on utilise `signal-deep` (cobalt) ; le volt sert de remplissage avec du texte `ink`, ou de
+soulignement des chiffres clés. Header et footer sont en `brand` (texte `brand-fg`/`brand-muted`) ;
+le bandeau du haut et le hero restent en `ink`. Les contrastes sont testés dans
+`tests/unit/visuel-articles.test.ts` à partir des jetons de `globals.css`.
 
 ## Typographie
 

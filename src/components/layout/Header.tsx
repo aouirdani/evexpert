@@ -16,13 +16,13 @@ import { SearchBar } from "./SearchBar";
 
 // --- Classes partagées (les liens de navigation sont dans NavLink) ------------
 const iconButton =
-  "flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-md text-ink transition-colors hover:bg-paper-deep group-open:bg-paper-deep [&::-webkit-details-marker]:hidden";
+  "flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-md text-brand-fg transition-colors hover:bg-brand-raised group-open:bg-brand-raised [&::-webkit-details-marker]:hidden";
 
 const panel =
-  "absolute inset-x-0 top-full max-h-[calc(100dvh-var(--header-h))] overflow-y-auto overscroll-contain border-b border-line bg-paper shadow-md";
+  "on-paper absolute inset-x-0 top-full max-h-[calc(100dvh-var(--header-h))] overflow-y-auto overscroll-contain border-b border-line bg-paper shadow-md";
 
 function SignalDot() {
-  return <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full bg-signal" />;
+  return <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full bg-current" />;
 }
 
 function DesktopNavItem({ item }: { item: NavItem }) {
@@ -89,14 +89,14 @@ export function Header() {
         </div>
       </div>
 
-      <header className="sticky top-0 z-50 border-b border-line bg-paper">
+      <header className="on-brand sticky top-0 z-50 border-b border-brand-line bg-brand">
         <div className="mx-auto flex h-(--header-h) w-full max-w-page items-center gap-2 px-4 sm:px-6 lg:gap-6">
           <Link
             href="/"
             className="flex shrink-0 items-center rounded-md"
             aria-label={`${siteConfig.name} — accueil`}
           >
-            <Logo />
+            <Logo tone="dark" />
           </Link>
 
           {/* Desktop */}

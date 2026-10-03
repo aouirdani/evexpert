@@ -8,7 +8,7 @@ import { frTypo } from "@/lib/format";
 export function EssentialBox({ items }: { items: Essential[] }) {
   if (!items.length) return null;
   return (
-    <aside aria-labelledby="essentiel-label" className="mb-10 rounded-md bg-signal-tint p-5 sm:p-6">
+    <aside aria-labelledby="essentiel-label" className="mb-10 rounded-md border-t-4 border-signal bg-signal-tint p-5 sm:p-6">
       <p id="essentiel-label" className="eyebrow text-signal-deep">L&apos;essentiel</p>
       <ul className="mt-4 space-y-4">
         {items.map((it) => (

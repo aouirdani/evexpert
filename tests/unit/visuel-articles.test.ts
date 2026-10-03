@@ -2,7 +2,6 @@ import { existsSync, readFileSync, statSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { EDITORIAL_LICENSED } from "@/data/editorial/licensed";
 import { buildEssentials, firstSentence } from "@/lib/essentials";
-import { PALETTES } from "@/components/PalettePreview";
 
 const jpegSize = (b: Buffer): [number, number] => {
   let i = 2;
@@ -81,18 +80,29 @@ const ratio = (a: string, b: string) => {
   return (x + 0.05) / (y + 0.05);
 };
 
-describe("palettes d'aperçu : contraste WCAG AA", () => {
-  const pairs: [string, string, number][] = [
-    ["ink", "paper", 4.5], ["body", "paper", 4.5], ["muted", "paper", 4.5], ["muted", "paper-deep", 4.5],
-    ["signal-deep", "paper", 4.5], ["signal-deep", "signal-tint", 4.5], ["ink", "signal", 4.5], ["signal", "ink", 4.5],
-    ["ink-muted", "ink", 4.5], ["ink-muted", "ink-raised", 4.5], ["paper", "ink", 4.5], ["control", "paper", 3],
-  ];
-  for (const [key, p] of Object.entries(PALETTES)) {
-    it(`${p.label}`, () => {
-      for (const [fg, bg, min] of pairs) {
-        expect(ratio(p.tokens[fg], p.tokens[bg]), `${fg} sur ${bg}`).toBeGreaterThanOrEqual(min);
-      }
-      expect(key).toMatch(/^[abc]$/);
-    });
-  }
+describe("palette « Cobalt & volt » : contraste WCAG AA (jetons de globals.css)", () => {
+  const css = readFileSync(new URL("../../src/app/globals.css", import.meta.url), "utf8");
+  const theme = css.slice(css.indexOf("@theme {"), css.indexOf("@layer base"));
+  const t = (name: string) => {
+    const m = new RegExp(`--color-${name}:\\s*(#[0-9a-fA-F]{6})`).exec(theme);
+    if (!m) throw new Error(`jeton --color-${name} introuvable`);
+    return m[1];
+  };
+
+  it("texte et contrôles sur les fonds clairs, teintés et sombres", () => {
+    const pairs: [string, string, number][] = [
+      ["ink", "paper", 4.5], ["body", "paper", 4.5], ["muted", "paper", 4.5], ["muted", "surface", 4.5],
+      ["ink", "paper-deep", 4.5], ["body", "paper-deep", 4.5], ["muted", "paper-deep", 4.5],
+      ["signal-deep", "paper", 4.5], ["signal-deep", "paper-deep", 4.5], ["signal-deep", "surface", 4.5], ["signal-deep", "signal-tint", 4.5],
+      ["body", "signal-tint", 4.5], ["ink", "signal-tint", 4.5],
+      ["ink", "signal", 4.5], ["signal", "ink", 4.5], ["ink-muted", "ink", 4.5], ["ink-muted", "ink-raised", 4.5], ["paper", "ink", 4.5],
+      ["brand-fg", "brand", 4.5], ["brand-muted", "brand", 4.5], ["brand-fg", "brand-raised", 4.5], ["brand-muted", "brand-raised", 4.5],
+      ["signal", "brand", 3], ["control", "paper", 3],
+    ];
+    for (const [fg, bg, min] of pairs) expect(ratio(t(fg), t(bg)), `${fg} sur ${bg}`).toBeGreaterThanOrEqual(min);
+  });
+
+  it("le volt n'est jamais un texte sur fond clair (contraste < 3 : réservé aux fonds et aux soulignements)", () => {
+    expect(ratio(t("signal"), t("paper"))).toBeLessThan(3);
+  });
 });

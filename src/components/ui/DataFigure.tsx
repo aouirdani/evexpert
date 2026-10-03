@@ -32,7 +32,9 @@ export function DataFigure({
   const onInk = tone === "ink";
   const missing = value === null || value === undefined || value === "";
   const labelCls = cn("label", onInk ? "text-ink-muted" : "text-muted");
-  const valueCls = cn("num mt-2.5 font-bold", sizes[size], onInk ? "text-paper" : "text-ink");
+  // Chiffre clé sur fond clair : souligné au volt (accent de mise en valeur, jamais en couleur de texte).
+  const marker = !onInk && size !== "md" ? "underline decoration-signal decoration-[0.14em] underline-offset-[0.06em] [text-decoration-skip-ink:none]" : "";
+  const valueCls = cn("num mt-2.5 font-bold", sizes[size], onInk ? "text-paper" : "text-ink", marker);
   const content = missing ? (
     <>
       <span aria-hidden>—</span>

@@ -12,7 +12,6 @@ import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 import { getGa4MeasurementId } from "@/config/analytics";
 import { buildConsentScript } from "@/lib/consent-script";
-import { PalettePreview } from "@/components/PalettePreview";
 
 // Police unique : Schibsted Grotesk (licence OFL, voir ./fonts/OFL.txt), variable
 // 400-800, sous-ensemble latin français (~36 Ko, un seul fichier).
@@ -78,7 +77,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="fr" className={`${brandFont.variable} ${monoFont.variable}`}>
       <body className="flex min-h-screen flex-col bg-paper font-sans text-ink antialiased">
-        <PalettePreview part="head" />
         <a
           href="#contenu"
           className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg"
@@ -110,7 +108,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {children}
         <Footer />
         <GarageBar />
-        <PalettePreview part="switcher" />
         <Analytics />
       </body>
     </html>

@@ -14,18 +14,14 @@ Chaque image est enregistrée dans `src/data/editorial/licensed.ts` : URL source
 
 Wikimedia Commons : une licence CC BY-SA impose le crédit **et** le partage de l'image adaptée (recadrage compris) sous la même licence ; CC0 et domaine public n'imposent rien.
 
-## 2. Palettes d'aperçu
+## 2. Palette retenue : « Cobalt & volt » (A), version marquée
 
-Activées **uniquement** sur les déploiements de prévisualisation Vercel (`VERCEL_ENV=preview`) ou en local avec `PALETTE_PREVIEW=1`. Ajouter `?palette=a|b|c` à une URL (`?palette=0` pour revenir à l'actuelle) ; le choix est mémorisé pour la session et un petit sélecteur s'affiche en bas à gauche. En production, `PalettePreview` ne rend rien (ni style, ni script). Seuls les jetons de couleur de `globals.css` changent.
+Choisie le 03/10/2026 après comparaison de trois variantes en prévisualisation (le sélecteur et les variantes B « Forêt & ambre » et C « Graphite & cyan » sont retirés). Jetons et contrastes : `docs/design-system.md`.
 
-| Palette | Idée | Paper | Ink | Accent (signal) | Lien / chiffre (signal-deep) |
-|---|---|---|---|---|---|
-| Actuelle | Revue technique | #F6F5F1 | #0B1626 | #B8F13C lime | #0F6B4F vert |
-| A · Cobalt & volt | Encre bleu nuit, liens cobalt | #F3F6FC | #071A3A | #C8FF2E | #1448C8 |
-| B · Forêt & ambre | Vert forêt, accent ambre | #F6F3EA | #0C2A21 | #FFB21E | #0A6B45 |
-| C · Graphite & cyan | Graphite, accent cyan | #F2F4F4 | #10161C | #2EE6D2 | #00695F |
-
-Contrastes WCAG (calculés, testés dans `visuel-articles.test.ts`) : texte principal sur fond ≥ 13,8:1, texte secondaire (`muted`) ≥ 5,5:1 sur fond et sur `paper-deep`, `signal-deep` ≥ 5,5:1 sur fond et sur la teinte d'accent, encre sur accent ≥ 8,5:1, accent sur encre ≥ 8,5:1, contrôles ≥ 3:1. Toutes passent AA.
+- **Header et footer en cobalt** (`brand`), bandeau supérieur et hero en encre ; le bouton « Comparer » du header est en volt.
+- **Fonds de sections teintés** : `paper-deep` plus bleuté, alternance sur l'accueil (sélection, recharge, outils).
+- **Volt réservé à la mise en valeur** : boutons principaux (`primary` et `signal`), chiffres clés soulignés (`DataFigure` lg/xl sur fond clair), encadré « L'essentiel » (fond teinté + filet volt). Jamais en couleur de texte sur fond clair.
+- Contraste WCAG AA partout, testé automatiquement.
 
 ## 3. Inventaire (35 contenus)
 
