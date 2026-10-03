@@ -8,6 +8,9 @@
 // Baselines (générées sur un build local de main, voir docs/seo/audit/) :
 //   --seo-baseline docs/seo/audit/baseline-main.json   --anchors-baseline docs/seo/audit/anchors-main.json
 //   --base-ref main   --port 3101   --skip-tests
+//   --allow <type>=<motif>[,<motif>…]   écarts attendus du lot (répétable), ex.
+//     --allow title-texte-modifie=/,/guides,/voitures-electriques/*/*   (« * » = un segment d'URL)
+//   Un écart autorisé est compté à part ; tout autre écart de ce type reste une erreur.
 // Régénérer les baselines : node scripts/seo-audit.mjs --base <url> --out … et
 // node scripts/check-guide-anchors.mjs --capture --base <url> --out … sur un build de main.
 
@@ -25,6 +28,17 @@ const anchorsBaseline = arg("anchors-baseline", "docs/seo/audit/anchors-main.jso
 const baseRef = arg("base-ref", "main");
 const port = arg("port", "3101");
 const skipTests = process.argv.includes("--skip-tests");
+/** Écarts SEO attendus : { type: [RegExp] }. */
+const allowed = {};
+process.argv.forEach((a, i) => {
+  if (a !== "--allow") return;
+  const [type, patterns = ""] = process.argv[i + 1].split(/=(.*)/s);
+  for (const p of patterns.split(",").filter(Boolean)) {
+    const re = new RegExp(`^${p.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^/]+")}$`);
+    (allowed[type] ??= []).push(re);
+  }
+});
+const isAllowed = (x) => (allowed[x.type] ?? []).some((re) => re.test(x.path));
 const base = `http://localhost:${port}`;
 
 const results = [];
@@ -102,12 +116,13 @@ if (build.ok) {
         gate(readable);
         // Longueurs de title/meta : constat historique présent dans la baseline, hors périmètre d'un lot.
         const info = new Set(["title-trop-long", "meta-trop-longue"]);
-        const warn = new Set(["liens-internes-modifies", "meta-texte-modifiee"]);
-        const errors = issues.filter((x) => !info.has(x.type) && !warn.has(x.type));
+        const warn = new Set(["liens-internes-modifies"]);
+        const expected = issues.filter(isAllowed);
+        const errors = issues.filter((x) => !info.has(x.type) && !warn.has(x.type) && !isAllowed(x));
         const warnings = issues.filter((x) => warn.has(x.type));
         for (const w of warnings) console.log(`  ⚠ ${w.type} ${w.path}`);
         for (const e of errors) console.log(`  ✘ ${e.type} ${e.path} ${JSON.stringify(e).slice(0, 200)}`);
-        step("seo:audit --compare", gate(errors.length === 0), `${errors.length} erreur(s), ${warnings.length} avertissement(s), ${issues.filter((x) => info.has(x.type)).length} longueurs historiques ignorées`);
+        step("seo:audit --compare", gate(errors.length === 0), `${errors.length} erreur(s), ${expected.length} écart(s) attendu(s), ${warnings.length} avertissement(s), ${issues.filter((x) => info.has(x.type)).length} longueurs historiques ignorées`);
       }
       const anc = spawnSync("node", ["scripts/check-guide-anchors.mjs", "--compare", anchorsBaseline, "--base", base], { encoding: "utf8" });
       console.log((anc.stdout + anc.stderr).trim().split("\n").map((l) => `  ${l}`).join("\n"));
