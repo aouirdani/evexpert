@@ -23,28 +23,48 @@ Choisie le 03/10/2026 après comparaison de trois variantes en prévisualisation
 - **Volt réservé à la mise en valeur** : boutons principaux (`primary` et `signal`), chiffres clés soulignés (`DataFigure` lg/xl sur fond clair), encadré « L'essentiel » (fond teinté + filet volt). Jamais en couleur de texte sur fond clair.
 - Contraste WCAG AA partout, testé automatiquement.
 
-## 3. Inventaire (35 contenus)
+## 3. Inventaire final (35 contenus : 25 guides, 7 articles, 3 connecteurs)
 
-25 guides, 7 articles de blog, 3 pages connecteurs (`/recharge/type-2`, `ccs`, `chademo`).
+Photos sous licence : **23** (18 Unsplash, 5 Wikimedia Commons). Illustrations IA conservées : **6**. Sans photo, signalés plutôt que forcés : **6**. Chaque photo est utilisée pour un seul contenu. La provenance complète (URL de la page, auteur, licence, date de récupération, retouches) est dans `src/data/editorial/licensed.ts` ; `tests/unit/visuel-articles.test.ts` vérifie qu'aucun contenu n'échappe à l'inventaire.
 
-État actuel : 6 guides ont une illustration **générée par IA** (légende « générée par IA »), 16 ont un schéma SVG, **aucun** n'a de photo sous licence avant ce chantier. Le prototype (`temps-recharge-voiture-electrique`) est la première.
+| Type | Contenu | État | Source | Licence |
+|---|---|---|---|---|
+| guide | `temps-recharge-voiture-electrique` | photo | Unsplash — Joel Heyd (compte Zaptec) | Licence Unsplash |
+| guide | `calculer-autonomie-reelle` | photo | Unsplash — Daniel Tafjord | Licence Unsplash |
+| guide | `autonomie-hiver` | photo | Unsplash — Renato Mitra | Licence Unsplash |
+| guide | `autonomie-autoroute` | photo | Unsplash — Hyundai Motor Group | Licence Unsplash |
+| guide | `combien-coute-recharge-domicile` | photo | Unsplash — dcbel | Licence Unsplash |
+| guide | `fonctionnement-borne-de-recharge` | photo | Unsplash — CHUTTERSNAP | Licence Unsplash |
+| guide | `recharger-a-80-pourcent` | photo | Unsplash — JUICE | Licence Unsplash |
+| guide | `recharge-domicile-ou-borne-publique` | photo | Unsplash — Precious Madubuike | Licence Unsplash |
+| guide | `cout-borne-recharge-domicile` | photo | Unsplash — Joel Heyd (compte Zaptec) | Licence Unsplash |
+| guide | `kw-kwh-difference-voiture-electrique` | photo | Unsplash — Jon Moore | Licence Unsplash |
+| guide | `calculer-tco-voiture-electrique` | photo | Unsplash — StellrWeb | Licence Unsplash |
+| guide | `choisir-voiture-electrique-selon-usage` | photo | Unsplash — Mehmet Talha Onuk | Licence Unsplash |
+| guide | `choisir-premiere-voiture-electrique` | photo | Unsplash — Vitalii Khodzinskyi | Licence Unsplash |
+| guide | `duree-de-vie-batterie-voiture-electrique` | photo | Unsplash — Bernd Dittrich | Licence Unsplash |
+| guide | `prix-batterie-voiture-electrique` | photo | Wikimedia Commons — Mariordo (Mario Roberto Duran Ortiz) | CC BY-SA 3.0 |
+| blog | `voitures-electriques-les-plus-sobres` | photo | Unsplash — Madeline Liu | Licence Unsplash |
+| blog | `recharge-rapide-temps-10-80` | photo | Unsplash — YRKA PICTURED | Licence Unsplash |
+| blog | `recharge-ac-puissances-acceptees` | photo | Unsplash — Zaptec | Licence Unsplash |
+| blog | `autonomie-wltp-repartition-catalogue` | photo | Unsplash — Dennis Cortés | Licence Unsplash |
+| blog | `lfp-ou-nmc-ce-que-montrent-les-donnees` | photo | Wikimedia Commons — RudolfSimon | CC BY-SA 3.0 |
+| connecteur | `type-2` | photo | Wikimedia Commons — Paul Sladen | CC0 1.0 |
+| connecteur | `ccs` | photo | Wikimedia Commons — Danilo Bargen | CC BY-SA 4.0 |
+| connecteur | `chademo` | photo | Wikimedia Commons — Danilo Bargen | CC BY-SA 4.0 |
+| guide | `batterie-brute-batterie-utile` | illustration générée par IA (existante, conservée) | — (créée pour EVExpert) | — |
+| guide | `puissance-borne-7-11-22-kw` | illustration générée par IA (existante, conservée) | — (créée pour EVExpert) | — |
+| guide | `recharge-ac-ou-dc` | illustration générée par IA (existante, conservée) | — (créée pour EVExpert) | — |
+| guide | `puissance-recharge-dc` | illustration générée par IA (existante, conservée) | — (créée pour EVExpert) | — |
+| guide | `preserver-batterie-voiture-electrique` | illustration générée par IA (existante, conservée) | — (créée pour EVExpert) | — |
+| guide | `recharger-sur-prise-domestique` | illustration générée par IA (existante, conservée) | — (créée pour EVExpert) | — |
+| guide | `wltp-definition` | **aucune photo** — schéma seul : aucune photo libre n'illustre un cycle d'homologation | — | — |
+| guide | `consommation-voiture-electrique-kwh-100-km` | **aucune photo** — aucune photo libre convenable | — | — |
+| guide | `cout-100-km-voiture-electrique` | **aucune photo** — aucune photo libre convenable | — | — |
+| guide | `voiture-electrique-vs-essence` | **aucune photo** — aucune photo libre convenable | — | — |
+| blog | `comment-evexpert-construit-sa-base` | **aucune photo** — contenu méthodologique : aucune photo libre pertinente | — | — |
+| blog | `garantie-batterie-ce-que-disent-les-donnees` | **aucune photo** — aucune photo libre convenable | — | — |
 
-Candidats = résultats de recherche Unsplash (photo non Unsplash+). Seule l'image du prototype est **vérifiée** (page ouverte, licence lue, fichier téléchargé) ; les autres sont à ouvrir et à contrôler (licence, absence de marque lisible, cadrage 16:9) avant tout téléchargement. Pexels et Pixabay refusent l'accès automatisé depuis cet environnement (HTTP 403) : à consulter à la main.
+Crédit : affiché sous chaque photo (auteur, source, licence, avec leurs liens). Les trois photos Wikimedia sous CC BY-SA (CCS, CHAdeMO ; pack Nissan Leaf ; pack BMW i3 — soit 4 fichiers) imposent le crédit **et** le partage de l'image recadrée sous la même licence : c'est indiqué dans la mention de modification. Les deux photos CC0 (connecteurs Type 2 / CCS côte à côte) et les photos Unsplash n'imposent pas de crédit, mais il est affiché.
 
-| Thème | Contenus concernés | Candidats (unsplash.com/photos/…) |
-|---|---|---|
-| Branchement / charge | temps-recharge (**prototype**), fonctionnement-borne, recharger-a-80, kw-kwh, recharge-ac-ou-dc*, blog recharge-ac-puissances | `2jRNVr0ac7s` Zaptec ✔ vérifiée ; `xJLsHl0hIik`, `xfaYAsMV1p8` CHUTTERSNAP ; `JkTjKEVcckg` JUICE ; `oz7enr450Kw` Haberdoedas |
-| Recharge rapide | puissance-recharge-dc*, blog recharge-rapide-temps-10-80 | `5hbzWe6ens4` Stephen Mease (logo Tesla bien visible : à éviter en générique) ; `N2Td7KpIvYc` Precious Madubuike (rue) |
-| Wallbox / domicile | combien-coute-recharge-domicile, cout-borne, recharger-sur-prise*, puissance-borne*, recharge-domicile-ou-borne | `LP9D8zD4Xmw` dcbel ; `2n7ugRl1YsQ`, `9QzxkWxMUik`, `AbjcC_stuXs` Zaptec ; `9RZlFXzrANI` Evnex Ltd |
-| Route / autoroute | autonomie-autoroute, blog sobres, blog autonomie-wltp | `J06f5D8i5d0` Hyundai Motor Group ; `3GbF9_BU5l8` Madeline Liu ; `KHtUMbpyHdg` Jose Losada (Tesla identifiable) |
-| Hiver | autonomie-hiver | `FpF3kSekM20` Yannik Zimmermann ; `Og1UPq-1cZw`, `X3QxnbU5-HE` Renato Mitra |
-| Batterie | durée de vie, prix, preserver*, batterie-brute*, blog lfp-nmc, blog garantie-batterie | `lGrYPbLF4p4` Bernd Dittrich ; `CH7kRmyBQ4I` Vanya Smythe ; `E4Oz0TZUDe8` Wesley Tingey |
-| Tableau de bord / consommation | calculer-autonomie-reelle, wltp, consommation | `MbiSXN8u8q4` Dennis Eusebio ; `d0VoImxkPQg` Daniel Tafjord ; `RQjqjGggt6M` Šimom Caban |
-| Achat | choisir-selon-usage, choisir-premiere | `3sF03nuyIS8` Mehmet Talha Onuk (salle d'exposition) ; `WnDC9k1aiZ8` I'M ZION |
-| Coûts, TCO, comparaisons | cout-100-km, voiture-electrique-vs-essence, tco | **à rechercher** (aucun candidat pertinent encore trouvé) |
-| Méthode / données | blog comment-evexpert-construit-sa-base | **à rechercher** |
-| Connecteurs (modèle précis) | Type 2, CCS Combo 2, CHAdeMO | Wikimedia Commons : `File:Iec-type2-ccs-combo2-and-iec-type2-charging-connectors-side-by-side…` (Paul Sladen, **CC0**) ; `File:CCS (Type2 Combo) Charging Plug.jpg` et `File:CHAdeMO Charging Plug.jpg` (Danilo Bargen, **CC BY-SA 4.0**) |
-
-\* = a déjà une illustration générée par IA : la remplacer par une photo licenciée est une décision à prendre.
-
-Aucune image libre convenable n'a été trouvée pour « coûts / TCO / comparaisons » et « méthode » : à signaler plutôt qu'à forcer (un schéma ou aucune photo).
+Pexels et Pixabay refusent l'accès automatisé depuis l'environnement de travail (HTTP 403) : aucune photo n'en provient.

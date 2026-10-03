@@ -3,11 +3,14 @@ import Link from "next/link";
 import { frTypo } from "@/lib/format";
 
 export interface GuideCardData {
-  slug: string;
+  /** Adresse de la page (guide ou article). */
+  href: string;
   title: string;
   excerpt: string;
   categoryLabel: string;
   readingTime: number;
+  /** « Mis à jour le » (guides) ou « Publié le » (articles). */
+  dateLabel?: string;
   updatedAtIso: string;
   updatedAtLabel: string;
   image?: { src: string; width: number; height: number };
@@ -41,13 +44,13 @@ export function GuideCardVisual({ guide, priority = false }: { guide: GuideCardD
         <span>{guide.readingTime}&nbsp;min</span>
       </p>
       <h3 className="mt-3 text-h3 font-bold text-ink">
-        <Link href={`/guides/${guide.slug}`} className="link-h after:absolute after:inset-0 after:content-[''] group-hover:[background-size:100%_2px]">
+        <Link href={guide.href} className="link-h after:absolute after:inset-0 after:content-[''] group-hover:[background-size:100%_2px]">
           {frTypo(guide.title)}
         </Link>
       </h3>
       <p className="pretty mt-2 flex-1 text-sm text-muted">{guide.excerpt}</p>
       <p className="mt-4 text-caption text-muted">
-        Mis à jour le <time dateTime={guide.updatedAtIso}>{guide.updatedAtLabel}</time>
+        {guide.dateLabel ?? "Mis à jour le"} <time dateTime={guide.updatedAtIso}>{guide.updatedAtLabel}</time>
       </p>
     </article>
   );

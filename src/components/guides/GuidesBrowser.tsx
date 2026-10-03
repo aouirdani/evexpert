@@ -50,7 +50,7 @@ export function GuidesBrowser({ groups }: { groups: GuideGroup[] }) {
           </div>
           <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:col-span-9 xl:grid-cols-3">
             {g.guides.map((guide, i) => (
-              <GuideCardVisual key={guide.slug} guide={guide} priority={gi === 0 && i < 3} />
+              <GuideCardVisual key={guide.href} guide={guide} priority={gi === 0 && i < 3} />
             ))}
           </div>
         </section>

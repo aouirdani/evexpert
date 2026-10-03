@@ -31,7 +31,7 @@ export function Footer() {
               className="inline-flex rounded-md"
               aria-label={`${siteConfig.name} — accueil`}
             >
-              <Logo tone="dark" />
+              <Logo tone="brand" />
             </Link>
             <p className="mt-6 text-h2 font-bold text-paper">{siteConfig.tagline}</p>
             <p className="mt-3 text-base leading-relaxed">
@@ -47,7 +47,7 @@ export function Footer() {
               href="/voitures-electriques"
               variant="outline"
               size="lg"
-              className="border-brand-line text-paper hover:border-paper hover:bg-transparent"
+              className="border-brand-muted text-paper hover:border-paper hover:bg-brand-raised"
             >
               Explorer les voitures
             </ButtonLink>
@@ -84,7 +84,7 @@ export function Footer() {
             </Link>
             .
           </p>
-          <ConsentRevocationButton className="min-h-10 shrink-0 rounded-md border border-line-ink px-3 text-sm font-medium text-paper transition-colors hover:bg-ink-raised" />
+          <ConsentRevocationButton className="min-h-10 shrink-0 rounded-md border border-brand-muted px-3 text-sm font-medium text-paper transition-colors hover:border-paper hover:bg-brand-raised" />
         </div>
       </div>
     </footer>

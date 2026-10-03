@@ -30,7 +30,7 @@ export default async function GuidesPage() {
       guides: guides
         .filter((g) => g.category === c)
         .map((g) => ({
-          slug: g.slug,
+          href: `/guides/${g.slug}`,
           title: g.title,
           excerpt: g.description,
           categoryLabel: guideCategoryLabels[c],

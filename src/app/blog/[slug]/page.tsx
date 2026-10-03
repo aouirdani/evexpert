@@ -57,6 +57,7 @@ export default async function ArticlePage({ params }: { params: Promise<Params> 
       hero={a.hero}
       jsonLdType="BlogPosting"
       section={a.category}
+      visual
     />
   );
 }

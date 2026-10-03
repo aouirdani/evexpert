@@ -96,7 +96,7 @@ export function Header() {
             className="flex shrink-0 items-center rounded-md"
             aria-label={`${siteConfig.name} — accueil`}
           >
-            <Logo tone="dark" />
+            <Logo tone="brand" />
           </Link>
 
           {/* Desktop */}

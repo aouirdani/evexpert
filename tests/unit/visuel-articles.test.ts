@@ -1,6 +1,16 @@
 import { existsSync, readFileSync, statSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { EDITORIAL_LICENSED } from "@/data/editorial/licensed";
+import { EDITORIAL_PHOTOS } from "@/data/editorial/media";
+import { chargingTopics } from "@/data/charging";
+import { vehicles } from "@/data/vehicles";
+import { buildArticles } from "@/data/articles";
+import { buildAutonomieGuides } from "@/data/guides/autonomie";
+import { buildRechargeGuides } from "@/data/guides/recharge";
+import { buildUsageGuides } from "@/data/guides/usage";
+import { buildNewGuides } from "@/data/guides/nouveaux";
+import { buildBatteryGuides } from "@/data/guides/batterie";
+import { makeGuideContext } from "@/data/guides/helpers";
 import { buildEssentials, firstSentence } from "@/lib/essentials";
 
 const jpegSize = (b: Buffer): [number, number] => {
@@ -104,5 +114,49 @@ describe("palette « Cobalt & volt » : contraste WCAG AA (jetons de globals.css
 
   it("le volt n'est jamais un texte sur fond clair (contraste < 3 : réservé aux fonds et aux soulignements)", () => {
     expect(ratio(t("signal"), t("paper"))).toBeLessThan(3);
+  });
+});
+
+describe("couverture des images (35 contenus)", () => {
+  const ctx = makeGuideContext(vehicles);
+  const slugs = [
+    ...[...buildAutonomieGuides(ctx), ...buildRechargeGuides(ctx), ...buildUsageGuides(ctx), ...buildNewGuides(ctx), ...buildBatteryGuides(ctx)].map((g) => g.slug),
+    ...buildArticles(vehicles).map((a) => a.slug),
+    ...chargingTopics.map((t) => t.slug),
+  ];
+
+  /** Contenus sans photo, et pourquoi : aucune image libre convenable n'a été trouvée (on ne force pas). */
+  const SANS_PHOTO: Record<string, string> = {
+    "wltp-definition": "schéma seul : aucune photo libre n'illustre un cycle d'homologation",
+    "consommation-voiture-electrique-kwh-100-km": "aucune photo libre convenable",
+    "cout-100-km-voiture-electrique": "aucune photo libre convenable",
+    "voiture-electrique-vs-essence": "aucune photo libre convenable (comparaison électrique / essence)",
+    "comment-evexpert-construit-sa-base": "contenu méthodologique : aucune photo libre pertinente",
+    "garantie-batterie-ce-que-disent-les-donnees": "aucune photo libre convenable",
+  };
+
+  it("chaque contenu a une photo sous licence, une illustration existante, ou une raison documentée", () => {
+    expect(slugs).toHaveLength(35);
+    for (const slug of slugs) {
+      const has = Boolean(EDITORIAL_LICENSED[slug] || EDITORIAL_PHOTOS[slug]);
+      expect(has || slug in SANS_PHOTO, slug).toBe(true);
+      if (slug in SANS_PHOTO) expect(EDITORIAL_LICENSED[slug], `${slug} : ne plus lister dans SANS_PHOTO`).toBeUndefined();
+    }
+    for (const slug of Object.keys(EDITORIAL_LICENSED)) expect(slugs, slug).toContain(slug);
+  });
+
+  it("une photo n'est jamais utilisée pour deux contenus (fichier unique par entrée)", () => {
+    const files = Object.values(EDITORIAL_LICENSED).map((e) => e.image.src);
+    expect(new Set(files).size).toBe(files.length);
+  });
+
+  it("licence CC BY / BY-SA : crédit obligatoire marqué, avec mention de la modification", () => {
+    for (const [slug, { image }] of Object.entries(EDITORIAL_LICENSED)) {
+      const c = image.credit!;
+      if (/CC BY/.test(c.license)) {
+        expect(c.attributionRequired, slug).toBe(true);
+        expect(c.modifications, slug).toMatch(/modifi/i);
+      }
+    }
   });
 });
