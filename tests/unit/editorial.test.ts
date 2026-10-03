@@ -11,9 +11,11 @@ import { buildBatteryGuides } from "@/data/guides/batterie";
 import { makeGuideContext } from "@/data/guides/helpers";
 import { decorateArticles, decorateGuides } from "@/data/editorial/decorate";
 import { EDITORIAL_HEROES, EDITORIAL_PHOTOS } from "@/data/editorial/media";
+import { EDITORIAL_LICENSED } from "@/data/editorial/licensed";
 import { EDITORIAL_META } from "@/data/editorial/meta";
 import { linkifySections } from "@/lib/editorial-links";
 import { vehicleHref } from "@/lib/vehicle-utils";
+import { chargingTopics } from "@/data/charging";
 import type { ArticleSection } from "@/types";
 
 const ctx = makeGuideContext(vehicles);
@@ -46,8 +48,8 @@ describe("contenu éditorial", () => {
   });
 
   it("chaque entrée de médias et de méta correspond à un contenu réel (pas de faute de frappe)", () => {
-    const slugs = new Set(all.map((x) => x.slug));
-    for (const k of [...Object.keys(EDITORIAL_HEROES), ...Object.keys(EDITORIAL_PHOTOS), ...Object.keys(EDITORIAL_META)]) expect(slugs.has(k), k).toBe(true);
+    const slugs = new Set([...all.map((x) => x.slug), ...chargingTopics.map((t) => t.slug)]);
+    for (const k of [...Object.keys(EDITORIAL_HEROES), ...Object.keys(EDITORIAL_PHOTOS), ...Object.keys(EDITORIAL_LICENSED), ...Object.keys(EDITORIAL_META)]) expect(slugs.has(k), k).toBe(true);
   });
 
   it("les images principales existent, ont alt, légende et dimensions cohérentes avec le SVG", () => {

@@ -1,23 +1,25 @@
 import { cn } from "@/lib/utils";
 import { MARK } from "./geometry";
 
-type Tone = "light" | "dark";
+type Tone = "light" | "dark" | "brand";
 
 /**
  * Symbole EVExpert en SVG inline (~300 octets, aucune requête réseau).
  * `tone="light"` : plaque encre, pour fonds clairs. `tone="dark"` : plaque relevée
- * + filet, pour fonds encre. Le lime « signal » reste le même sur les deux.
+ * + filet, pour fonds encre. `tone="brand"` : plaque claire, « E » encre et point cobalt, pour les fonds
+ * cobalt (header et footer) où la plaque sombre se confondait avec le fond (1,9:1) ; le lime « signal »
+ * reste le même sur light et dark.
  */
 export function LogoMark({ tone = "light", className }: { tone?: Tone; className?: string }) {
   return (
     <svg viewBox="0 0 64 64" aria-hidden focusable="false" className={cn("shrink-0", className)}>
       <path
         d={MARK.plate}
-        className={tone === "dark" ? "fill-ink-raised stroke-line-ink" : "fill-ink"}
+        className={tone === "dark" ? "fill-ink-raised stroke-line-ink" : tone === "brand" ? "fill-paper" : "fill-ink"}
         strokeWidth={tone === "dark" ? 1 : 0}
       />
-      <path d={MARK.e} className="fill-paper" />
-      <circle cx={MARK.dot.cx} cy={MARK.dot.cy} r={MARK.dot.r} className="fill-signal" />
+      <path d={MARK.e} className={tone === "brand" ? "fill-ink" : "fill-paper"} />
+      <circle cx={MARK.dot.cx} cy={MARK.dot.cy} r={MARK.dot.r} className={tone === "brand" ? "fill-brand" : "fill-signal"} />
     </svg>
   );
 }
@@ -34,7 +36,7 @@ export function Logo({ tone = "light", className }: { tone?: Tone; className?: s
       <span
         className={cn(
           "text-[1.375rem] leading-none tracking-[-0.02em]",
-          tone === "dark" ? "text-paper" : "text-ink",
+          tone === "light" ? "text-ink" : "text-paper",
         )}
       >
         <span className="font-extrabold">EV</span>

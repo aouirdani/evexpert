@@ -17,13 +17,13 @@ import type { ReactNode } from "react";
 const variants = {
   // Desktop, entrées courantes : filet inférieur signal-deep quand actif.
   nav: {
-    base: "inline-flex h-full items-center border-b-2 border-transparent px-3 text-sm font-medium text-body transition-colors hover:text-ink",
-    active: "border-signal-deep! text-ink!",
+    base: "inline-flex h-full items-center border-b-2 border-transparent px-3 text-sm font-medium text-brand-muted transition-colors hover:text-brand-fg",
+    active: "border-signal! text-brand-fg!",
   },
-  // Desktop, Comparer : seule entrée pleine. Actif = liseré lime intérieur (≠ anneau de focus).
+  // Desktop, Comparer : seule entrée pleine, en volt sur le header cobalt. Actif = liseré encre intérieur (≠ anneau de focus).
   compare: {
-    base: "inline-flex items-center gap-2 rounded-md bg-ink px-3.5 py-2 text-sm font-semibold text-paper transition-colors hover:bg-ink-raised",
-    active: "shadow-[inset_0_-3px_0_0_var(--color-signal)]",
+    base: "inline-flex items-center gap-2 rounded-md bg-signal px-3.5 py-2 text-sm font-semibold text-ink transition-colors hover:bg-[#bff223]",
+    active: "shadow-[inset_0_-3px_0_0_var(--color-ink)]",
   },
   // Bandeau secondaire desktop (fond encre).
   utility: {

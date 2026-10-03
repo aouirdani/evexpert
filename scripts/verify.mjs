@@ -126,7 +126,7 @@ if (build.ok) {
       }
       const anc = spawnSync("node", ["scripts/check-guide-anchors.mjs", "--compare", anchorsBaseline, "--base", base], { encoding: "utf8" });
       console.log((anc.stdout + anc.stderr).trim().split("\n").map((l) => `  ${l}`).join("\n"));
-      step("intertitres H1/H2/H3 des guides inchangés", gate(anc.status === 0));
+      step("intertitres H1/H2/H3 des guides, articles et connecteurs inchangés", gate(anc.status === 0));
     }
   } finally {
     server.kill();

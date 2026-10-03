@@ -114,6 +114,27 @@ export interface EditorialImage {
   shareHeight?: number;
   /** Légende visible sous l'image (contexte, limites, illustration ou donnée). */
   caption?: string;
+  /** Provenance et licence, pour une photographie sous licence libre (voir data/editorial/licensed.ts). */
+  credit?: ImageCredit;
+}
+
+/** Provenance et licence d'une image sous licence compatible avec un usage commercial. */
+export interface ImageCredit {
+  /** Nom de la source (« Unsplash », « Wikimedia Commons »…). */
+  sourceName: string;
+  /** Page de l'image chez la source. */
+  sourceUrl: string;
+  author: string;
+  authorUrl: string;
+  /** Nom de la licence (« Licence Unsplash », « CC BY-SA 4.0 »…). */
+  license: string;
+  licenseUrl: string;
+  /** Date de récupération (ISO). */
+  retrievedAt: string;
+  /** La licence impose-t-elle un crédit ? Le crédit est de toute façon affiché sous l'image. */
+  attributionRequired: boolean;
+  /** Retouches appliquées (recadrage, redimensionnement). */
+  modifications: string;
 }
 
 /** Graphique en barres horizontales calculé depuis le catalogue (HTML + CSS, sans JavaScript). */

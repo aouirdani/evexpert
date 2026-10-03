@@ -1,5 +1,499 @@
 {
- "autonomie-autoroute": [
+ "/blog/autonomie-wltp-repartition-catalogue": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Autonomie WLTP : comment se répartissent les modèles du catalogue ?"
+  },
+  {
+   "level": 2,
+   "id": "repartition-par-tranche-d-autonomie",
+   "text": "Répartition par tranche d'autonomie"
+  },
+  {
+   "level": 2,
+   "id": "la-batterie-n-explique-pas-tout",
+   "text": "La batterie n'explique pas tout"
+  },
+  {
+   "level": 2,
+   "id": "par-type-de-carrosserie",
+   "text": "Par type de carrosserie"
+  },
+  {
+   "level": 2,
+   "id": "ce-qu-il-faut-en-retenir",
+   "text": "Ce qu'il faut en retenir"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "/blog/comment-evexpert-construit-sa-base": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Comment EVExpert construit sa base de données véhicules (et ce qu'elle ne contient pas encore)"
+  },
+  {
+   "level": 2,
+   "id": "d-ou-viennent-les-donnees",
+   "text": "D'où viennent les données"
+  },
+  {
+   "level": 2,
+   "id": "controles-de-coherence",
+   "text": "Contrôles de cohérence"
+  },
+  {
+   "level": 2,
+   "id": "completude-des-donnees",
+   "text": "Complétude des données"
+  },
+  {
+   "level": 2,
+   "id": "ce-qui-manque-volontairement",
+   "text": "Ce qui manque volontairement"
+  },
+  {
+   "level": 2,
+   "id": "et-ensuite",
+   "text": "Et ensuite ?"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "/blog/garantie-batterie-ce-que-disent-les-donnees": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Garantie batterie : ce que disent les 47 versions du catalogue"
+  },
+  {
+   "level": 2,
+   "id": "ce-que-publie-la-source",
+   "text": "Ce que publie la source"
+  },
+  {
+   "level": 2,
+   "id": "ce-que-les-chiffres-ne-disent-pas",
+   "text": "Ce que les chiffres ne disent pas"
+  },
+  {
+   "level": 2,
+   "id": "miles-kilometres-et-valeurs-manquantes",
+   "text": "Miles, kilomètres et valeurs manquantes"
+  },
+  {
+   "level": 2,
+   "id": "comment-utiliser-ces-donnees",
+   "text": "Comment utiliser ces données"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "/blog/lfp-ou-nmc-ce-que-montrent-les-donnees": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Batteries LFP ou NMC : ce que montrent les données du catalogue"
+  },
+  {
+   "level": 2,
+   "id": "deux-chimies-deux-compromis",
+   "text": "Deux chimies, deux compromis"
+  },
+  {
+   "level": 2,
+   "id": "ce-que-montrent-nos-donnees",
+   "text": "Ce que montrent nos données"
+  },
+  {
+   "level": 2,
+   "id": "les-versions-lfp-du-catalogue",
+   "text": "Les versions LFP du catalogue"
+  },
+  {
+   "level": 2,
+   "id": "que-conclure",
+   "text": "Que conclure ?"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "/blog/recharge-ac-puissances-acceptees": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Recharge AC : quelles puissances acceptent les voitures du catalogue ?"
+  },
+  {
+   "level": 2,
+   "id": "repartition-des-puissances-ac-maximales",
+   "text": "Répartition des puissances AC maximales"
+  },
+  {
+   "level": 2,
+   "id": "ce-que-cela-implique",
+   "text": "Ce que cela implique"
+  },
+  {
+   "level": 2,
+   "id": "combien-de-temps-de-recharge-a-la-maison",
+   "text": "Combien de temps de recharge à la maison ?"
+  },
+  {
+   "level": 2,
+   "id": "avant-de-commander-une-borne",
+   "text": "Avant de commander une borne"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "/blog/recharge-rapide-temps-10-80": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Recharge rapide : ce que disent les temps 10-80 % de notre catalogue"
+  },
+  {
+   "level": 2,
+   "id": "les-charges-10-80-les-plus-courtes",
+   "text": "Les charges 10-80 % les plus courtes"
+  },
+  {
+   "level": 2,
+   "id": "un-temps-median-autour-de-la-demi-heure",
+   "text": "Un temps médian autour de la demi-heure"
+  },
+  {
+   "level": 2,
+   "id": "un-pic-eleve-n-est-pas-un-temps-court",
+   "text": "Un pic élevé n'est pas un temps court"
+  },
+  {
+   "level": 2,
+   "id": "en-pratique",
+   "text": "En pratique"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "/blog/voitures-electriques-les-plus-sobres": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Les voitures électriques les plus sobres de notre catalogue"
+  },
+  {
+   "level": 2,
+   "id": "les-dix-consommations-calculees-les-plus-basses",
+   "text": "Les dix consommations calculées les plus basses"
+  },
+  {
+   "level": 2,
+   "id": "par-type-de-carrosserie",
+   "text": "Par type de carrosserie"
+  },
+  {
+   "level": 2,
+   "id": "ecart-entre-la-plus-sobre-et-la-plus-gourmande",
+   "text": "Écart entre la plus sobre et la plus gourmande"
+  },
+  {
+   "level": 2,
+   "id": "comment-utiliser-ces-chiffres",
+   "text": "Comment utiliser ces chiffres"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "/guides/autonomie-autoroute": [
   {
    "level": 1,
    "id": null,
@@ -71,7 +565,7 @@
    "text": "Informations"
   }
  ],
- "autonomie-hiver": [
+ "/guides/autonomie-hiver": [
   {
    "level": 1,
    "id": null,
@@ -143,7 +637,7 @@
    "text": "Informations"
   }
  ],
- "batterie-brute-batterie-utile": [
+ "/guides/batterie-brute-batterie-utile": [
   {
    "level": 1,
    "id": null,
@@ -215,7 +709,7 @@
    "text": "Informations"
   }
  ],
- "calculer-autonomie-reelle": [
+ "/guides/calculer-autonomie-reelle": [
   {
    "level": 1,
    "id": null,
@@ -292,7 +786,7 @@
    "text": "Informations"
   }
  ],
- "calculer-tco-voiture-electrique": [
+ "/guides/calculer-tco-voiture-electrique": [
   {
    "level": 1,
    "id": null,
@@ -369,7 +863,7 @@
    "text": "Informations"
   }
  ],
- "choisir-premiere-voiture-electrique": [
+ "/guides/choisir-premiere-voiture-electrique": [
   {
    "level": 1,
    "id": null,
@@ -451,7 +945,7 @@
    "text": "Informations"
   }
  ],
- "choisir-voiture-electrique-selon-usage": [
+ "/guides/choisir-voiture-electrique-selon-usage": [
   {
    "level": 1,
    "id": null,
@@ -523,7 +1017,7 @@
    "text": "Informations"
   }
  ],
- "combien-coute-recharge-domicile": [
+ "/guides/combien-coute-recharge-domicile": [
   {
    "level": 1,
    "id": null,
@@ -595,7 +1089,7 @@
    "text": "Informations"
   }
  ],
- "consommation-voiture-electrique-kwh-100-km": [
+ "/guides/consommation-voiture-electrique-kwh-100-km": [
   {
    "level": 1,
    "id": null,
@@ -682,7 +1176,7 @@
    "text": "Informations"
   }
  ],
- "cout-100-km-voiture-electrique": [
+ "/guides/cout-100-km-voiture-electrique": [
   {
    "level": 1,
    "id": null,
@@ -754,7 +1248,7 @@
    "text": "Informations"
   }
  ],
- "cout-borne-recharge-domicile": [
+ "/guides/cout-borne-recharge-domicile": [
   {
    "level": 1,
    "id": null,
@@ -831,7 +1325,7 @@
    "text": "Informations"
   }
  ],
- "duree-de-vie-batterie-voiture-electrique": [
+ "/guides/duree-de-vie-batterie-voiture-electrique": [
   {
    "level": 1,
    "id": null,
@@ -933,7 +1427,7 @@
    "text": "Informations"
   }
  ],
- "fonctionnement-borne-de-recharge": [
+ "/guides/fonctionnement-borne-de-recharge": [
   {
    "level": 1,
    "id": null,
@@ -1010,7 +1504,7 @@
    "text": "Informations"
   }
  ],
- "kw-kwh-difference-voiture-electrique": [
+ "/guides/kw-kwh-difference-voiture-electrique": [
   {
    "level": 1,
    "id": null,
@@ -1082,7 +1576,7 @@
    "text": "Informations"
   }
  ],
- "preserver-batterie-voiture-electrique": [
+ "/guides/preserver-batterie-voiture-electrique": [
   {
    "level": 1,
    "id": null,
@@ -1159,7 +1653,7 @@
    "text": "Informations"
   }
  ],
- "prix-batterie-voiture-electrique": [
+ "/guides/prix-batterie-voiture-electrique": [
   {
    "level": 1,
    "id": null,
@@ -1256,7 +1750,7 @@
    "text": "Informations"
   }
  ],
- "puissance-borne-7-11-22-kw": [
+ "/guides/puissance-borne-7-11-22-kw": [
   {
    "level": 1,
    "id": null,
@@ -1328,7 +1822,7 @@
    "text": "Informations"
   }
  ],
- "puissance-recharge-dc": [
+ "/guides/puissance-recharge-dc": [
   {
    "level": 1,
    "id": null,
@@ -1400,7 +1894,7 @@
    "text": "Informations"
   }
  ],
- "recharge-ac-ou-dc": [
+ "/guides/recharge-ac-ou-dc": [
   {
    "level": 1,
    "id": null,
@@ -1477,7 +1971,7 @@
    "text": "Informations"
   }
  ],
- "recharge-domicile-ou-borne-publique": [
+ "/guides/recharge-domicile-ou-borne-publique": [
   {
    "level": 1,
    "id": null,
@@ -1549,7 +2043,7 @@
    "text": "Informations"
   }
  ],
- "recharger-a-80-pourcent": [
+ "/guides/recharger-a-80-pourcent": [
   {
    "level": 1,
    "id": null,
@@ -1621,7 +2115,7 @@
    "text": "Informations"
   }
  ],
- "recharger-sur-prise-domestique": [
+ "/guides/recharger-sur-prise-domestique": [
   {
    "level": 1,
    "id": null,
@@ -1698,7 +2192,7 @@
    "text": "Informations"
   }
  ],
- "temps-recharge-voiture-electrique": [
+ "/guides/temps-recharge-voiture-electrique": [
   {
    "level": 1,
    "id": null,
@@ -1770,7 +2264,7 @@
    "text": "Informations"
   }
  ],
- "voiture-electrique-vs-essence": [
+ "/guides/voiture-electrique-vs-essence": [
   {
    "level": 1,
    "id": null,
@@ -1842,7 +2336,7 @@
    "text": "Informations"
   }
  ],
- "wltp-definition": [
+ "/guides/wltp-definition": [
   {
    "level": 1,
    "id": null,
@@ -1892,6 +2386,187 @@
    "level": 2,
    "id": null,
    "text": "Fiches véhicules"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "/recharge/ccs": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "CCS Combo 2 : le connecteur standard de la recharge rapide en Europe"
+  },
+  {
+   "level": 2,
+   "id": "un-port-deux-modes",
+   "text": "Un port, deux modes"
+  },
+  {
+   "level": 2,
+   "id": "des-puissances-tres-variees",
+   "text": "Des puissances très variées"
+  },
+  {
+   "level": 2,
+   "id": "compatibilite",
+   "text": "Compatibilité"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "/recharge/chademo": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "CHAdeMO : le standard japonais de recharge rapide, en recul en Europe"
+  },
+  {
+   "level": 2,
+   "id": "un-port-separe",
+   "text": "Un port séparé"
+  },
+  {
+   "level": 2,
+   "id": "ce-que-cela-implique-aujourd-hui",
+   "text": "Ce que cela implique aujourd'hui"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Explorer"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Calculateurs"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Informations"
+  }
+ ],
+ "/recharge/type-2": [
+  {
+   "level": 1,
+   "id": null,
+   "text": "Prise Type 2 : le connecteur standard de la recharge en courant alternatif"
+  },
+  {
+   "level": 2,
+   "id": "a-quoi-sert-le-type-2",
+   "text": "À quoi sert le Type 2 ?"
+  },
+  {
+   "level": 2,
+   "id": "quelles-puissances",
+   "text": "Quelles puissances ?"
+  },
+  {
+   "level": 2,
+   "id": "cable-ou-prise-attachee",
+   "text": "Câble ou prise attachée ?"
+  },
+  {
+   "level": 2,
+   "id": "faq-heading",
+   "text": "Questions fréquentes"
+  },
+  {
+   "level": 2,
+   "id": "sources-titre",
+   "text": "Sources"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Outils utiles"
+  },
+  {
+   "level": 2,
+   "id": null,
+   "text": "Guides associés"
   },
   {
    "level": 2,

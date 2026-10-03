@@ -2,6 +2,7 @@ import type { Article, Guide, Vehicle } from "@/types";
 import { linkifySections } from "@/lib/editorial-links";
 import type { ArticleSection, EditorialImage } from "@/types";
 import { EDITORIAL_HEROES, EDITORIAL_PHOTOS } from "./media";
+import { EDITORIAL_LICENSED } from "./licensed";
 import { EDITORIAL_META } from "./meta";
 
 /**
@@ -12,7 +13,7 @@ import { EDITORIAL_META } from "./meta";
  */
 function placeImages(slug: string, sections: ArticleSection[]): { hero?: EditorialImage; sections: ArticleSection[] } {
   const schema = EDITORIAL_HEROES[slug];
-  const photo = EDITORIAL_PHOTOS[slug];
+  const photo = EDITORIAL_LICENSED[slug] ?? EDITORIAL_PHOTOS[slug];
   if (!photo) return { hero: schema, sections };
   if (!schema) return { hero: photo.image, sections };
   const target = photo.schemaAfter;

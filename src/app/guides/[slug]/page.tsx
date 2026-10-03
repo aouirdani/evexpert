@@ -15,6 +15,7 @@ export async function generateStaticParams() {
 
 export const dynamicParams = false;
 
+
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { slug } = await params;
   const g = await getGuide(slug);
@@ -56,6 +57,7 @@ export default async function GuidePage({ params }: { params: Promise<Params> })
       relatedVehicleIds={g.relatedVehicleIds}
       hero={g.hero}
       section={guideCategoryLabels[g.category]}
+      visual
     />
   );
 }

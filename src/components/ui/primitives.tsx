@@ -126,10 +126,10 @@ export type ButtonVariant = "primary" | "signal" | "secondary" | "outline" | "gh
 export type ButtonSize = "md" | "lg";
 
 const buttonVariants: Record<ButtonVariant, string> = {
-  // Action principale sur fond clair.
-  primary: "bg-ink text-paper hover:bg-ink-raised",
+  // Action principale : volt + encre (jamais le volt en couleur de texte sur fond clair).
+  primary: "bg-signal text-ink hover:bg-[#bff223]",
   // Action principale sur fond sombre (ou mise en avant forte) : lime + encre.
-  signal: "bg-signal text-ink hover:bg-[#c8f65c]",
+  signal: "bg-signal text-ink hover:bg-[#bff223]",
   // Alias historique de primary, conservé pour les pages existantes.
   secondary: "bg-ink text-paper hover:bg-ink-raised",
   outline: "border border-ink/30 bg-transparent text-ink hover:border-ink hover:bg-ink hover:text-paper",

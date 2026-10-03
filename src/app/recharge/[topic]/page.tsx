@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArticleView } from "@/components/content/ArticleView";
 import { chargingTopics, getChargingTopic } from "@/data/charging";
-import { buildMetadata } from "@/lib/seo";
+import { EDITORIAL_LICENSED } from "@/data/editorial/licensed";
+import { buildMetadata, shareImageOf } from "@/lib/seo";
 
 type Params = { topic: string };
 
@@ -22,6 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     path: `/recharge/${t.slug}`,
     ogType: "article",
     modifiedTime: t.updatedAt,
+    image: EDITORIAL_LICENSED[t.slug] && shareImageOf(EDITORIAL_LICENSED[t.slug].image),
   });
 }
 
@@ -48,6 +50,8 @@ export default async function TopicPage({ params }: { params: Promise<Params> })
       readingTime={3}
       relatedTools={["/outils/puissance-borne-recharge", "/outils/temps-recharge"]}
       relatedGuides={t.relatedGuides}
+      hero={EDITORIAL_LICENSED[t.slug]?.image}
+      visual
     />
   );
 }

@@ -4,9 +4,10 @@
  * EVExpert — design system « Fiche technique ».
  * Tokens uniquement ici ; la référence d'usage est dans docs/design-system.md.
  * Contrastes WCAG vérifiés (texte ≥ 4,5:1, bordures de champs ≥ 3:1) :
- *   ink/paper 16,6 · body/paper 9,4 · muted/paper 5,8 · signal-deep/paper 6,0
- *   ink/signal 13,6 · signal/ink 13,6 · ink-muted/ink 8,7 · control/paper 3,5
- * Le lime « signal » ne sert JAMAIS de texte ni de bordure sur fond clair (1,2:1).
+ *   ink/paper 15,9 · body/paper 10,5 · muted/paper 6,1 · muted/paper-deep 5,4 · signal-deep/paper 7,0
+ *   ink/signal 14,6 · signal/ink 14,6 · ink-muted/ink 8,6 · control/paper 3,7
+ *   brand-fg/brand 7,0 · brand-muted/brand 5,4 · signal/brand 6,4 (focus clavier)
+ * Le volt « signal » ne sert JAMAIS de texte ni de bordure sur fond clair (1,1:1).
  */
 @theme inline {
   /* Police unique : Schibsted Grotesk (variable, auto-hébergée via next/font). */
@@ -17,27 +18,34 @@
 }
 
 @theme {
-  /* Surfaces */
-  --color-paper: #f6f5f1;
-  --color-paper-deep: #edebe4;
+  /* Surfaces (palette « Cobalt & volt », choisie le 03/10/2026) */
+  --color-paper: #f3f6fc;
+  --color-paper-deep: #e1e9f8;
   --color-surface: #ffffff;
-  --color-ink: #0b1626;
-  --color-ink-raised: #16263b;
+  --color-ink: #071a3a;
+  --color-ink-raised: #10294f;
 
   /* Texte */
-  --color-body: #33415a;
-  --color-muted: #556174;
-  --color-ink-muted: #a8b4c6;
+  --color-body: #2c3a57;
+  --color-muted: #4f5d78;
+  --color-ink-muted: #a9b8d4;
 
   /* Filets et contrôles */
-  --color-line: #d9d6cc;
-  --color-line-ink: #2a3a52;
-  --color-control: #7b8494;
+  --color-line: #d3dbec;
+  --color-line-ink: #233a63;
+  --color-control: #74809a;
 
-  /* Signal (énergie / charge) */
-  --color-signal: #b8f13c;
-  --color-signal-deep: #0f6b4f;
-  --color-signal-tint: #e3f3b5;
+  /* Couleur principale : cobalt. Fond du header et du footer, liens et chiffres sur fond clair
+     (« signal-deep »). Le volt « signal » est un accent de mise en valeur (boutons principaux,
+     chiffres clés soulignés, encadré « L'essentiel ») : jamais une couleur de texte sur fond clair. */
+  --color-brand: #1448c8;
+  --color-brand-raised: #0f3aa5;
+  --color-brand-fg: #f3f6fc;
+  --color-brand-muted: #cddafb;
+  --color-brand-line: #4a74d8;
+  --color-signal: #c8ff2e;
+  --color-signal-deep: #1448c8;
+  --color-signal-tint: #e8f7b0;
 
   /* Sémantique des données */
   --color-info: #1b4f8a;
@@ -151,8 +159,13 @@
     outline: 2px solid var(--color-signal-deep);
     outline-offset: 2px;
   }
-  .on-ink :focus-visible {
+  .on-ink :focus-visible,
+  .on-brand :focus-visible {
     outline-color: var(--color-signal);
+  }
+  /* Panneau clair posé dans une zone sombre (menu mobile sous le header cobalt). */
+  .on-brand .on-paper :focus-visible {
+    outline-color: var(--color-signal-deep);
   }
 }
 
