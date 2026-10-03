@@ -6,6 +6,10 @@ import { Colophon } from "@/components/content/Colophon";
 import { Breadcrumbs, type Crumb } from "@/components/layout/Breadcrumbs";
 import { Prose, TableOfContents } from "@/components/ui/Prose";
 import { Faq } from "@/components/ui/Faq";
+import { EssentialBox } from "@/components/content/EssentialBox";
+import { AdReserve } from "@/components/ads/AdReserve";
+import { tools } from "@/data/tools";
+import { buildEssentials } from "@/lib/essentials";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { EditorialFigure } from "@/components/content/EditorialFigure";
 import { RelatedGuides, RelatedTools, RelatedVehicles } from "@/components/related";
@@ -32,6 +36,7 @@ export function ArticleView({
   hero,
   jsonLdType = "Article",
   section,
+  visual = false,
 }: {
   crumbs: Crumb[];
   path: string;
@@ -53,8 +58,16 @@ export function ArticleView({
   jsonLdType?: "Article" | "BlogPosting";
   /** Rubrique (articleSection du JSON-LD), identique à celle affichée dans le surtitre. */
   section?: string;
+  /**
+   * Mise en page « visuelle » (prototype) : photo 16:9 en tête de la colonne de lecture, encadré
+   * « L'essentiel », outils liés et emplacement publicitaire réservé dans la barre latérale. Les textes,
+   * intertitres et ancres de l'article sont ceux de la mise en page standard.
+   */
+  visual?: boolean;
 }) {
   const heroIsPhoto = hero && !hero.src.endsWith(".svg");
+  const essentials = visual ? buildEssentials(sections) : [];
+  const sidebarTools = visual && relatedTools ? tools.filter((t) => relatedTools.includes(t.href) || relatedTools.includes(t.slug)) : [];
   return (
     <Container className="pb-section pt-8">
       <Breadcrumbs items={crumbs} />
@@ -66,10 +79,14 @@ export function ArticleView({
       </header>
       <Colophon publishedAt={publishedAt} updatedAt={updatedAt} readingTime={readingTime} />
 
-      {heroIsPhoto && <EditorialFigure image={hero} priority wide className="mb-0 mt-10" />}
+      {heroIsPhoto && !visual && <EditorialFigure image={hero} priority wide className="mb-0 mt-10" />}
 
       <div className="mt-12 grid gap-x-16 gap-y-10 lg:grid-cols-[minmax(0,44rem)_minmax(0,1fr)]">
         <article className="min-w-0">
+          {visual && heroIsPhoto && (
+            <EditorialFigure image={hero} priority ratio="16/9" sizes="(min-width: 1024px) 704px, 100vw" className="mb-10 mt-0" />
+          )}
+          {visual && <EssentialBox items={essentials} />}
           {hero && !heroIsPhoto && <EditorialFigure image={hero} priority className="mb-8 mt-0" />}
 
           <TableOfContents sections={sections} className="mb-10 lg:hidden" />
@@ -107,6 +124,20 @@ export function ArticleView({
         <aside className="hidden lg:block">
           <div className="sticky top-[calc(var(--header-h)+2rem)]">
             <TableOfContents sections={sections} />
+            {sidebarTools.length > 0 && (
+              <nav aria-label="Outils liés" className="mt-8">
+                <p className="label mb-2">Outils liés</p>
+                <ul className="border-t-2 border-ink">
+                  {sidebarTools.map((t) => (
+                    <li key={t.href} className="border-b border-line">
+                      <Link href={t.href} className="link-h block py-3 text-sm font-semibold text-ink">
+                        {t.shortTitle}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )}
             <div className="on-ink mt-8 rounded-2xl bg-ink p-6 text-paper">
               <p className="eyebrow text-signal">Passer à la pratique</p>
               <ul className="mt-4 space-y-3 text-sm font-semibold">
@@ -122,13 +153,18 @@ export function ArticleView({
                 </li>
               </ul>
             </div>
+            {visual && <AdReserve slot="guide-sidebar" className="mt-8" />}
           </div>
         </aside>
       </div>
 
       {(relatedTools || relatedGuides || relatedVehicleIds) && (
         <div className="mt-section grid gap-x-12 md:grid-cols-2 lg:grid-cols-3">
-          {relatedTools && <RelatedTools hrefs={relatedTools} />}
+          {relatedTools && (
+            <div className={visual ? "lg:hidden" : undefined}>
+              <RelatedTools hrefs={relatedTools} />
+            </div>
+          )}
           {relatedGuides && <RelatedGuides slugs={relatedGuides} />}
           {relatedVehicleIds && <RelatedVehicles ids={relatedVehicleIds} title="Fiches véhicules" />}
         </div>

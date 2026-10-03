@@ -15,6 +15,9 @@ export async function generateStaticParams() {
 
 export const dynamicParams = false;
 
+/** Guides déjà passés à la mise en page visuelle (prototype), avant extension aux autres contenus. */
+const VISUAL_GUIDES = new Set(["temps-recharge-voiture-electrique"]);
+
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { slug } = await params;
   const g = await getGuide(slug);
@@ -56,6 +59,7 @@ export default async function GuidePage({ params }: { params: Promise<Params> })
       relatedVehicleIds={g.relatedVehicleIds}
       hero={g.hero}
       section={guideCategoryLabels[g.category]}
+      visual={VISUAL_GUIDES.has(g.slug)}
     />
   );
 }
