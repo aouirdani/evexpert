@@ -11,8 +11,9 @@ import * as sel from "./selectors";
  *   Pages / composants serveur → catalog (ici) → Drizzle → PostgreSQL (Supabase)
  *
  * Source des données :
- * - DATABASE_URL définie  → PostgreSQL. En cas d'échec, l'erreur remonte : on ne
- *   retombe JAMAIS en silence sur des données locales périmées.
+ * - DATABASE_URL définie  → PostgreSQL. Une nouvelle tentative est faite après un échec ; si elle
+ *   échoue aussi, le DERNIER CATALOGUE CONNU (en mémoire, même expiré) est servi avec un
+ *   console.error, sinon l'erreur remonte. On ne retombe JAMAIS sur des données locales périmées.
  * - DATABASE_URL absente  → données locales (src/data/vehicles.ts), uniquement
  *   pour le développement et les builds sans base (phase de transition).
  * - EVEXPERT_DATA_SOURCE=local force les données locales même si DATABASE_URL existe.
@@ -31,6 +32,31 @@ export interface Catalog {
 
 const TTL_MS = 5 * 60 * 1000;
 let memo: { at: number; promise: Promise<Catalog> } | undefined;
+/** Dernier catalogue chargé avec succès depuis la base, gardé pour survivre à une panne passagère. */
+let lastGood: Catalog | undefined;
+const RETRY_DELAY_MS = 300;
+
+function describe(err: unknown): string {
+  return err instanceof Error ? `${err.name}: ${err.message}` : String(err);
+}
+
+/** Charge depuis la base avec une seule nouvelle tentative, et journalise chaque échec. */
+async function loadFromDbWithRetry(): ReturnType<typeof loadCatalogFromDb> {
+  const started = Date.now();
+  try {
+    return await loadCatalogFromDb();
+  } catch (first) {
+    console.error(`[catalog] échec du chargement (${Date.now() - started} ms), nouvelle tentative : ${describe(first)}`);
+    await new Promise((r) => setTimeout(r, RETRY_DELAY_MS));
+    const retryStarted = Date.now();
+    try {
+      return await loadCatalogFromDb();
+    } catch (second) {
+      console.error(`[catalog] échec de la nouvelle tentative (${Date.now() - retryStarted} ms) : ${describe(second)}`);
+      throw second;
+    }
+  }
+}
 
 export function resolveCatalogSource(env: NodeJS.ProcessEnv = process.env): CatalogSource {
   if (env.EVEXPERT_DATA_SOURCE === "local") return "local";
@@ -41,26 +67,46 @@ async function load(): Promise<Catalog> {
   if (resolveCatalogSource() === "local") {
     return { source: "local", vehicles: localVehicles, checkedAt: sel.latestVerification(localVehicles), skipped: [] };
   }
-  const { vehicles, skipped } = await loadCatalogFromDb();
+  const { vehicles, skipped } = await loadFromDbWithRetry();
   if (skipped.length) {
     console.warn(`[catalog] ${skipped.length} version(s) active(s) non publiable(s), ignorée(s) : ${skipped.join(", ")}`);
   }
   if (vehicles.length === 0) {
     throw new Error("[catalog] La base est joignable mais ne contient aucune version publiable. Lancez `npm run db:import`.");
   }
-  return { source: "database", vehicles, checkedAt: sel.latestVerification(vehicles), skipped };
+  const catalog: Catalog = { source: "database", vehicles, checkedAt: sel.latestVerification(vehicles), skipped };
+  lastGood = catalog;
+  return catalog;
+}
+
+/** `load()`, avec repli sur le dernier catalogue connu si la base ne répond pas. */
+async function loadOrLastKnown(): Promise<{ catalog: Catalog; stale: boolean }> {
+  try {
+    return { catalog: await load(), stale: false };
+  } catch (err) {
+    if (!lastGood) throw err;
+    console.error(`[catalog] base indisponible : dernier catalogue connu servi (${lastGood.vehicles.length} versions) : ${describe(err)}`);
+    return { catalog: lastGood, stale: true };
+  }
 }
 
 /** Charge le catalogue complet (mis en cache quelques minutes par processus). */
 export function getCatalog(): Promise<Catalog> {
   const now = Date.now();
   if (!memo || now - memo.at > TTL_MS) {
-    const promise = load();
+    const loading = loadOrLastKnown();
+    const promise = loading.then((r) => r.catalog);
     memo = { at: now, promise };
-    // Un échec ne doit pas rester en cache.
-    promise.catch(() => {
-      if (memo?.promise === promise) memo = undefined;
-    });
+    // Un échec, ou un repli sur le dernier catalogue connu, ne reste pas en cache : la requête
+    // suivante retente la base.
+    loading.then(
+      (r) => {
+        if (r.stale && memo?.promise === promise) memo = undefined;
+      },
+      () => {
+        if (memo?.promise === promise) memo = undefined;
+      },
+    );
   }
   return memo.promise;
 }
@@ -68,6 +114,7 @@ export function getCatalog(): Promise<Catalog> {
 /** Vide le cache (tests). */
 export function resetCatalogCache(): void {
   memo = undefined;
+  lastGood = undefined;
 }
 
 /* ------------------------------ API publique ------------------------------ */

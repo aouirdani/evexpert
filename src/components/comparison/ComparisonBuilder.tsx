@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Check, Link2 } from "lucide-react";
 import type { CompareVehicle } from "@/lib/vehicle-lite";
 import { fieldClass } from "@/components/ui/Field";
+import { resolveInitialIds } from "@/lib/comparison-url";
 import { ComparisonTable } from "./ComparisonTable";
 
 const letters = ["A", "B", "C"];
@@ -58,11 +59,15 @@ export function ComparisonBuilder({
   defaultIds,
 }: {
   vehicles: CompareVehicle[];
-  /** 1 à 3 identifiants ; reflète l'URL `?v=...` au chargement (lien partagé ou « Ma sélection »). */
+  /** Paire proposée quand l'URL ne porte aucun `?v=` valide. La page est statique : `?v=` est lu ici, côté client. */
   defaultIds: string[];
 }) {
   const router = useRouter();
-  const [ids, setIds] = useState<string[]>([defaultIds[0] ?? "", defaultIds[1] ?? "", defaultIds[2] ?? ""]);
+  const searchParams = useSearchParams();
+  const [ids, setIds] = useState<string[]>(() => {
+    const start = resolveInitialIds(searchParams.get("v"), vehicles.map((x) => x.id), defaultIds);
+    return [start[0] ?? "", start[1] ?? "", start[2] ?? ""];
+  });
   const selected = ids
     .map((id) => vehicles.find((v) => v.id === id))
     .filter((v): v is CompareVehicle => Boolean(v));
@@ -118,6 +123,31 @@ export function ComparisonBuilder({
         ) : (
           <p className="border-t border-line pt-5 text-body">Sélectionnez au moins deux véhicules différents.</p>
         )}
+      </div>
+    </div>
+  );
+}
+
+/** Squelette de la zone du comparateur, servi dans le HTML statique avant la lecture de `?v=`. */
+export function ComparisonSkeleton() {
+  return (
+    <div aria-hidden>
+      <div className="grid gap-x-8 gap-y-5 border-t-2 border-ink pt-5 md:grid-cols-3">
+        {[0, 1, 2].map((i) => (
+          <div key={i}>
+            <div className="mb-2 flex items-baseline gap-3">
+              <span className="num text-data-lg font-bold text-ink">{letters[i]}</span>
+              <span className="label">
+                Véhicule {letters[i]}
+                {i === 2 && " (facultatif)"}
+              </span>
+            </div>
+            <div className="h-11 animate-pulse rounded border border-line bg-paper" />
+          </div>
+        ))}
+      </div>
+      <div className="mt-6 h-[34rem] border-t border-line pt-5">
+        <div className="h-full animate-pulse rounded bg-paper" />
       </div>
     </div>
   );

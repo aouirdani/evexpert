@@ -1,4 +1,4 @@
-import { afterAll, beforeAll, describe, expect, it } from "vitest";
+import { afterAll, beforeAll, describe, expect, it, vi } from "vitest";
 import { closeDb } from "@/db";
 import { vehicles as seed } from "@/data/vehicles";
 import {
@@ -128,6 +128,27 @@ describe("échec explicite (pas de repli silencieux)", () => {
     process.env.DATABASE_URL = "postgresql://evexpert_app:x@127.0.0.1:59999/none";
     resetCatalogCache();
     await expect(getCatalog()).rejects.toThrow();
+    await closeDb();
+    process.env.DATABASE_URL = TEST_APP_URL;
+    resetCatalogCache();
+  });
+  it("base devenue injoignable après un chargement réussi → dernier catalogue connu, journalisé, jamais le seed", async () => {
+    const good = await getCatalog();
+    expect(good.source).toBe("database");
+    await closeDb();
+    process.env.DATABASE_URL = "postgresql://evexpert_app:x@127.0.0.1:59999/none";
+    const err = vi.spyOn(console, "error").mockImplementation(() => {});
+    const realNow = Date.now();
+    const now = vi.spyOn(Date, "now").mockReturnValue(realNow + 60 * 60 * 1000); // TTL dépassé
+    try {
+      const stale = await getCatalog();
+      expect(stale.source).toBe("database");
+      expect(stale.vehicles).toHaveLength(good.vehicles.length);
+      expect(err.mock.calls.some((c) => String(c[0]).includes("dernier catalogue connu"))).toBe(true);
+    } finally {
+      now.mockRestore();
+      err.mockRestore();
+    }
     await closeDb();
     process.env.DATABASE_URL = TEST_APP_URL;
     resetCatalogCache();
