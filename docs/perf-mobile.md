@@ -48,7 +48,13 @@ Pour trancher il faut les valeurs **observées** (FCP/LCP avant simulation) et l
 
 ## 5. Pistes classées par gain attendu (non appliquées : elles touchent AdSense ou ne sont pas mesurées)
 
-1. **Charger AdSense et le message de consentement après l'interaction ou en `lazyOnload`**, et supprimer le `<link rel="preload" as="script">` qu'`afterInteractive` ajoute dans le `<head>` : ~413 Kio et deux tâches longues sortent de la fenêtre de chargement. Effet sur le consentement : le mode par défaut « tout refusé » (Consent Mode v2) est posé avant, rien n'est collecté sans accord ; en revanche le message Google s'afficherait plus tard (après l'inactivité ou au premier geste), et les annonces/vérifications d'AdSense aussi. **À valider avant toute modification.**
+1. **(Refusée pour l'instant — à réévaluer après l'approbation AdSense.)** **Charger AdSense et le message de consentement après l'interaction ou en `lazyOnload`**, et supprimer le `<link rel="preload" as="script">` qu'`afterInteractive` ajoute dans le `<head>` : ~413 Kio et deux tâches longues sortent de la fenêtre de chargement. Effet sur le consentement : le mode par défaut « tout refusé » (Consent Mode v2) est posé avant, rien n'est collecté sans accord ; en revanche le message Google s'afficherait plus tard (après l'inactivité ou au premier geste), et les annonces/vérifications d'AdSense aussi. **À valider avant toute modification.**
 2. Alléger ce qui précède le premier rendu : réduire à 2 le nombre de polices préchargées (les 3 graisses de Plex Mono pèsent 30 Ko ; effet visuel à la première visite : chiffres un instant en police de repli avec `display: optional`), réduire le HTML (145 Ko de données RSC).
 3. Retirer les polyfills (13,8 Kio) par un alias Turbopack de `polyfill-module` : risque (`URL.canParse` est polyfillé pour Chrome < 120), gain limité (≈ 3 % des octets).
 4. Clé API PageSpeed + `scripts/psi-runs.mjs` : 10 passages par page, avant/après, pour juger tout changement sur des statistiques et non sur un passage isolé.
+
+## 6. Décisions du 3 octobre 2026
+
+- Piste 1 (AdSense et message de consentement différés) : **refusée tant que l'examen AdSense est en cours** — le robot d'examen pourrait ne pas voir le script s'il n'est chargé qu'après un geste. À réévaluer après l'approbation, avec un chargement **au premier geste de l'utilisateur ou après quelques secondes d'inactivité** (pas seulement `lazyOnload`), en vérifiant que le message de consentement Google s'affiche toujours et que le mode par défaut « tout refusé » reste posé avant.
+- Piste 2 (réduire les données RSC, 2 polices préchargées au lieu de 4) : validée, branche `perf/rsc-polices`.
+- Piste 3 (retrait des polyfills) : refusée.
