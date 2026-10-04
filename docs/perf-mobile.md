@@ -95,3 +95,57 @@ Résultat (3 passages, accueil et 3 autres pages) : **FCP simulé 0,91 s → 1,2
 - `@vercel/functions` (`attachDatabasePool`) : **non adopté**, la base n'étant plus interrogée à
   chaque requête. À reconsidérer si une page dynamique (lecture de `searchParams`, `cookies()`,
   `force-dynamic`) interrogeant la base réapparaît.
+
+## 9. Lot `perf/js-client` — JavaScript côté client (4 octobre 2026)
+
+Mesures locales : Lighthouse mobile, CPU ×4, médiane de 3 passages, `node scripts/js-audit.mjs`
+(serveur local uniquement). Détail par script : `--label` + `--out`.
+
+**Diagnostic (avant).**
+
+| Page | Score | TBT | Exécution JS (nos fichiers / Google) | Thread principal | JS transféré (nos fichiers) |
+|---|---|---|---|---|---|
+| Accueil | 95 | 21 ms | 179 / 114 ms | 704 ms | 438 Ko (187 Ko) |
+| Fiche version | 96 | 18 ms | 145 / 117 ms | 692 ms | 438 Ko (187 Ko) |
+| Guide | 96 | 18 ms | 132 / 112 ms | 631 ms | 438 Ko (186 Ko) |
+
+- **Notre code applicatif est petit.** Sur ~580 Ko non compressés de « premier chargement » par route,
+  ~480 Ko sont le runtime : React DOM (226 Ko), client Next (150 Ko), routeur App Router (≈ 120 Ko).
+  Le code EVExpert partagé (barre « Ma sélection », liens de navigation, analytics, icônes) tient dans
+  un chunk de 20 Ko ; le code propre à une route fait 12 à 18 Ko (accueil : vidéo du Hero ; fiche :
+  estimateur de coût ; guide : 14 Ko). JS inutilisé dans nos fichiers : 27 Ko (React DOM) ; chez
+  Google (AdSense) : ≈ 148 Ko.
+- **Le gros du travail est l'hydratation de l'arbre serveur**, pas des composants client coûteux :
+  le flux RSC embarqué pèse 145 Ko (accueil), 105 Ko (fiche), 76 Ko (guide) — c'est le DOM de la page
+  sérialisé une seconde fois, que React doit lire et réconcilier. Convertir un composant client en
+  composant serveur ne l'enlève pas de ce flux. Thread principal (accueil) : évaluation de scripts
+  348 ms, analyse/compilation 112 ms, style et mise en page 74 ms, divers 124 ms.
+- **Les composants client hydratés** sur ces pages : `NavLink` (en-tête), `Analytics`, `GarageBar`,
+  `ConsentRevocationButton` (pied de page) sur toutes ; `HeroVideo` (accueil) ; `GarageToggle` et
+  `VehicleCostEstimator` (fiche). Aucun n'est lourd ; `Analytics` et le consentement ne sont pas touchés.
+- **Écart avec PageSpeed** (1,4 s d'exécution JS, 2,9 s de thread principal) : non reproduit. Dans
+  PageSpeed les scripts Google font ≈ 140 ms, soit 1,2× nos 114 ms locaux ; si la machine de test
+  était simplement plus lente, notre part (locale : 130–180 ms) ne pourrait pas être 7× plus élevée
+  pendant que celle de Google ne l'est que 1,2×. La ventilation par script d'un passage PageSpeed
+  (tableau « Réduire le temps d'exécution JavaScript ») ou `scripts/psi-runs.mjs` avec une clé API
+  est nécessaire pour trancher.
+
+**Essai abandonné (4 octobre 2026).** Chargement différé de la barre « Ma sélection » et de la vidéo du
+Hero (import après `load` + inactivité ; vidéo jamais téléchargée sur mobile) : −2,3 Ko non compressés
+(accueil et guide), −0,7 Ko (fiche) ; score (95–96) et TBT (16–21 ms) identiques, écarts d'exécution
+(−26 / −4 / 0 ms sur nos fichiers) dans le bruit de mesure (les scripts Google varient de ±30 ms d'une
+série à l'autre). Gain non mesurable pour du code en plus : **non retenu**, rien n'a été fusionné.
+
+**Autres pistes écartées.**
+
+- `VehicleCostEstimator` en import différé : le composant est rendu côté serveur (contenu indexé,
+  pas de CLS) ; le différer exigerait un hydratant au défilement. Gain ≤ 12 Ko.
+- `NavLink` en composant serveur : il sert `aria-current` d'après l'URL ; gain négligeable.
+
+**Piste future (non engagée) : réduire le flux RSC de l'accueil (≈ 145 Ko).** C'est la seule piste à
+effet attendu sur l'hydratation, car le flux contient le DOM de la page sérialisé une seconde fois.
+Exemple concret : la section « Six modèles pour commencer » est rendue deux fois dans le HTML, en
+tableau (`hidden sm:table`, 6 lignes) et en cartes mobiles (`sm:hidden`, 4 cartes) ; chaque variante
+est masquée en CSS mais reste dans le HTML et dans le flux. Un rendu unique (par exemple des cartes
+qui se présentent en lignes de tableau à partir de `sm`) retirerait l'un des deux jeux de balises.
+À mesurer (taille du flux, TBT) avant tout choix, et à valider côté design : l'affichage change.
