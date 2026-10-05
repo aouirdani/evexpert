@@ -7,6 +7,7 @@ import { getAllVehicles, getSimilarVehicles, getVehicleBySlug, isVersionPageInde
 import { modelTitle, vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 import { buildMetadata } from "@/lib/seo";
 import { vehicleTitleText } from "@/lib/seo/titles";
+import { modelText } from "@/data/catalog/model-content";
 
 // Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
 export const revalidate = 86400;
@@ -42,6 +43,12 @@ export default async function VersionPage({ params }: { params: Promise<Params> 
   const v = await getVehicleBySlug(brand, model, version);
   if (!v) notFound();
   const similar = await getSimilarVehicles(v, 3);
+  const allVehicles = await getAllVehicles();
+  const siblings = allVehicles.filter((x) => x.brandSlug === v.brandSlug && x.modelSlug === v.modelSlug);
+  // Un modèle à plusieurs versions a déjà ce texte sur sa page modèle (ModelOverview) : l'y
+  // répéter dupliquerait un même bloc entre plusieurs pages indexées. Seul un modèle à version
+  // unique — dont cette page n'est qu'un doublon noindex de la page modèle — le reprend ici.
+  const text = siblings.length === 1 ? modelText(v.brandSlug, v.modelSlug, siblings, allVehicles) : undefined;
   return (
     <Container className="pb-section pt-8">
       <Breadcrumbs
@@ -57,6 +64,7 @@ export default async function VersionPage({ params }: { params: Promise<Params> 
         similar={similar}
         eyebrow={modelTitle(v)}
         title={`${vehicleTitle(v)} : autonomie, recharge et caractéristiques`}
+        modelText={text}
       />
     </Container>
   );

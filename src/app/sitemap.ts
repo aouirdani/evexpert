@@ -55,6 +55,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     entry("/politique-editoriale", catalogDate, "yearly", 0.4),
     entry("/sources", catalogDate, "yearly", 0.5),
     entry("/a-propos", catalogDate, "yearly", 0.4),
+    entry("/auteur", catalogDate, "yearly", 0.4),
     entry("/contact", catalogDate, "yearly", 0.3),
   ];
 

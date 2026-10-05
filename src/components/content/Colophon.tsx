@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
+import Link from "next/link";
 import { formatDateFr } from "@/lib/format";
+import { author } from "@/config/author";
 
 function Item({ label, children }: { label: string; children: ReactNode }) {
   return (
@@ -22,7 +24,9 @@ export function Colophon({
 }) {
   return (
     <dl className="mt-8 grid grid-cols-2 gap-x-10 gap-y-4 border-y border-line py-4 sm:flex sm:flex-wrap">
-      <Item label="Rédaction">La rédaction EVExpert</Item>
+      <Item label="Rédaction">
+        <Link href={author.href} className="link-u">{author.name}</Link>
+      </Item>
       <Item label="Publié le">
         <time dateTime={publishedAt}>{formatDateFr(publishedAt)}</time>
       </Item>

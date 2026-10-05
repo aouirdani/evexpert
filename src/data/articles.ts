@@ -72,7 +72,7 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
     description:
       `Consommation calculée de ${N} versions : quelles voitures électriques consomment le moins d'énergie aux 100 km, et ce que cela change pour le coût d'usage.`,
     category: "Marché électrique",
-    author: "La rédaction EVExpert",
+    author: "Aymane Ouirdani",
     publishedAt: DATE,
     updatedAt: "2026-09-24",
     readingTime: 5,
@@ -140,7 +140,7 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
     description:
       `Temps de charge 10-80 %, puissance maximale et puissance moyenne : ce que les données de ${N} versions révèlent sur la recharge rapide, et comment les lire.`,
     category: "Recharge",
-    author: "La rédaction EVExpert",
+    author: "Aymane Ouirdani",
     publishedAt: DATE,
     updatedAt: "2026-09-24",
     readingTime: 5,
@@ -197,7 +197,7 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
     description:
       `Répartition des autonomies WLTP de ${N} versions par tranche, autonomie médiane et lien avec la taille de la batterie : un panorama chiffré et sourcé.`,
     category: "Batteries",
-    author: "La rédaction EVExpert",
+    author: "Aymane Ouirdani",
     publishedAt: DATE,
     updatedAt: "2026-09-24",
     readingTime: 4,
@@ -266,7 +266,7 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
     description:
       "LFP contre NMC : différences de chimie, et comparaison chiffrée des versions du catalogue équipées de l'une ou l'autre, avec les limites de l'exercice.",
     category: "Technologie",
-    author: "La rédaction EVExpert",
+    author: "Aymane Ouirdani",
     publishedAt: DATE,
     updatedAt: DATE,
     readingTime: 5,
@@ -325,7 +325,7 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
     description:
       "Répartition des puissances AC maximales (6,6 à 22 kW) des voitures du catalogue et conséquences pour choisir une borne à domicile.",
     category: "Recharge",
-    author: "La rédaction EVExpert",
+    author: "Aymane Ouirdani",
     publishedAt: DATE,
     updatedAt: DATE,
     readingTime: 4,
@@ -390,7 +390,7 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
     description:
       "Sources, contrôles de cohérence, champs volontairement vides et prochaines étapes : la transparence sur la base de véhicules d'EVExpert.",
     category: "Nouveautés",
-    author: "La rédaction EVExpert",
+    author: "Aymane Ouirdani",
     publishedAt: DATE,
     updatedAt: DATE,
     readingTime: 4,
@@ -453,7 +453,7 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
     title: `Garantie batterie : ce que disent les ${N} versions du catalogue`,
     description: `Durée et kilométrage de la garantie batterie des ${N} versions du catalogue : ce que la source publie, ce qu'elle ne précise pas et comment lire ces chiffres.`,
     category: "Batteries",
-    author: "La rédaction EVExpert",
+    author: "Aymane Ouirdani",
     publishedAt: DATE,
     updatedAt: DATE,
     readingTime: 4,

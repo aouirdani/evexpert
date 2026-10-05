@@ -5,10 +5,11 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { VehicleDetail } from "@/components/vehicles/VehicleDetail";
 import { ModelOverview } from "@/components/vehicles/ModelOverview";
 import { VehicleHeader } from "@/components/vehicles/VehicleHeader";
-import { getModelVersions, getModels, getSimilarVehicles } from "@/data/catalog";
+import { getAllVehicles, getModelVersions, getModels, getSimilarVehicles } from "@/data/catalog";
 import { modelTitle, vehicleHref, vehicleTitle } from "@/lib/vehicle-utils";
 import { buildMetadata } from "@/lib/seo";
 import { modelVersionsTitleText, vehicleTitleText } from "@/lib/seo/titles";
+import { modelText } from "@/data/catalog/model-content";
 
 // Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
 export const revalidate = 86400;
@@ -50,6 +51,8 @@ export default async function ModelPage({ params }: { params: Promise<Params> })
   const title = single
     ? `${vehicleTitle(v)} : autonomie, recharge et caractéristiques`
     : `${modelTitle(v)} : versions, autonomie et recharge`;
+  const allVehicles = await getAllVehicles();
+  const text = modelText(v.brandSlug, v.modelSlug, versions, allVehicles);
   return (
     <Container className="pb-section pt-8">
       <Breadcrumbs
@@ -60,7 +63,7 @@ export default async function ModelPage({ params }: { params: Promise<Params> })
         ]}
       />
       {single ? (
-        <VehicleDetail vehicle={v} similar={similar} eyebrow={v.brand} title={title} />
+        <VehicleDetail vehicle={v} similar={similar} eyebrow={v.brand} title={title} modelText={text} />
       ) : (
         <>
           <VehicleHeader
@@ -70,7 +73,7 @@ export default async function ModelPage({ params }: { params: Promise<Params> })
             dek={`Le ${v.brand} ${v.model} est présent dans notre base en ${versions.length} versions. Le tableau les compare sur les critères principaux ; chaque version dispose de sa fiche complète (coûts de recharge, temps de charge, autonomie estimée par scénario).`}
           />
           <div className="mt-12 border-t-2 border-ink pt-8">
-            <ModelOverview versions={versions} similar={similar} />
+            <ModelOverview versions={versions} similar={similar} modelText={text} />
           </div>
         </>
       )}

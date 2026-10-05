@@ -104,11 +104,14 @@ export function VehicleDetail({
   similar,
   eyebrow,
   title,
+  modelText,
 }: {
   vehicle: Vehicle;
   similar: Vehicle[];
   eyebrow: string;
   title: string;
+  /** Texte rédigé propre au modèle (lot enrichissement), affiché sous l'en-tête. */
+  modelText?: string;
 }) {
   const src = v.source.dataType;
   const battCons = batteryConsumption100(v);
@@ -138,6 +141,16 @@ export function VehicleDetail({
         }
         aside={<BodyDimensions vehicle={v} />}
       />
+
+      {modelText && (
+        <div className="mt-8 max-w-3xl">
+          {modelText.split("\n\n").map((p, i) => (
+            <p key={i} className="pretty text-body [&:not(:first-child)]:mt-4">
+              {p}
+            </p>
+          ))}
+        </div>
+      )}
 
       <div className="mt-12 grid gap-x-10 gap-y-8 border-t-2 border-ink pt-6 lg:grid-cols-12">
         <dl className="lg:col-span-5">

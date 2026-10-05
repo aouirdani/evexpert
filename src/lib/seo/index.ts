@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { EditorialImage } from "@/types";
 import { siteConfig } from "@/config/site";
+import { author } from "@/config/author";
 
 /** Image de partage par défaut (public/brand/og-image.png, 1200 × 630). */
 export const DEFAULT_SHARE_IMAGE = {
@@ -132,7 +133,7 @@ export function articleJsonLd(input: {
     headline: input.title,
     description: input.description,
     mainEntityOfPage: `${siteConfig.url}${input.path}`,
-    author: { "@type": "Organization", name: input.author },
+    author: { "@type": "Person", name: input.author, url: `${siteConfig.url}${author.href}` },
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
@@ -162,6 +163,18 @@ export function itemListJsonLd(
       name: item.name,
       url: `${siteConfig.url}${item.href}`,
     })),
+  };
+}
+
+export function personJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: author.name,
+    url: `${siteConfig.url}${author.href}`,
+    jobTitle: author.role,
+    description: author.bio,
+    worksFor: { "@type": "Organization", name: siteConfig.name, url: siteConfig.url },
   };
 }
 

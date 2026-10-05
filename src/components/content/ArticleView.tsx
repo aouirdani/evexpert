@@ -15,6 +15,7 @@ import { EditorialFigure } from "@/components/content/EditorialFigure";
 import { RelatedGuides, RelatedTools, RelatedVehicles } from "@/components/related";
 import { articleJsonLd, faqJsonLd, shareImageOf } from "@/lib/seo";
 import { formatDateFr, frTypo } from "@/lib/format";
+import { author } from "@/config/author";
 
 /** Mise en page commune aux guides et aux articles de blog. */
 export function ArticleView({
@@ -175,7 +176,7 @@ export function ArticleView({
           title,
           description,
           path,
-          author: "La rédaction EVExpert",
+          author: author.name,
           publishedAt,
           updatedAt,
           image: hero ? shareImageOf(hero) : undefined,

@@ -15,10 +15,28 @@ import { GarageToggle } from "@/components/garage/GarageToggle";
 const th = "label whitespace-nowrap pb-3 pr-5 text-left font-semibold";
 
 /** Page modèle à plusieurs versions : tableau comparatif des versions. */
-export function ModelOverview({ versions, similar }: { versions: Vehicle[]; similar: Vehicle[] }) {
+export function ModelOverview({
+  versions,
+  similar,
+  modelText,
+}: {
+  versions: Vehicle[];
+  similar: Vehicle[];
+  /** Texte rédigé propre au modèle (lot enrichissement), affiché avant le tableau. */
+  modelText?: string;
+}) {
   const first = versions[0];
   return (
     <div>
+      {modelText && (
+        <div className="mb-10 max-w-3xl">
+          {modelText.split("\n\n").map((p, i) => (
+            <p key={i} className="pretty text-body [&:not(:first-child)]:mt-4">
+              {p}
+            </p>
+          ))}
+        </div>
+      )}
       <div className="relative overflow-x-auto">
         <table className="w-full min-w-[46rem] text-left">
           <caption className="sr-only">Comparaison des versions du {first.brand} {first.model}</caption>

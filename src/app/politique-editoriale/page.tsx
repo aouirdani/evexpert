@@ -46,7 +46,7 @@ const sections: ArticleSection[] = [
   {
     heading: "Usage de l'intelligence artificielle",
     paragraphs: [
-      "Les textes de ce site sont rédigés avec l'aide d'outils d'intelligence artificielle. Chaque chiffre provient du catalogue de données ou d'une source nommée et vérifiable : aucun fait n'est généré sans cette base, et chaque contenu est relu par l'auteur avant publication.",
+      "Les textes de ce site sont rédigés avec l'aide d'outils d'intelligence artificielle. Chaque chiffre provient du catalogue de données ou d'une source nommée et vérifiable : aucun fait n'est généré sans cette base, et chaque contenu est relu par [l'auteur](/auteur) avant publication.",
       "Les illustrations générées par IA sont signalées comme telles sur la page où elles apparaissent.",
     ],
   },

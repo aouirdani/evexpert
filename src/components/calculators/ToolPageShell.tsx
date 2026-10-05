@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Link from "next/link";
 import { Container, PageHeader } from "@/components/layout/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Faq } from "@/components/ui/Faq";
@@ -10,6 +11,7 @@ import { getTool } from "@/data/tools";
 import { toolContent } from "@/data/toolContent";
 import { faqJsonLd } from "@/lib/seo";
 import { buildMetadata } from "@/lib/seo";
+import { author } from "@/config/author";
 
 /** Métadonnées d'une page outil, dérivées de data/tools.ts. */
 export function toolMetadata(slug: string) {
@@ -44,6 +46,9 @@ export function ToolPageShell({
       <div className="mt-5 flex flex-wrap items-center gap-3">
         <DataBadge type="estimated" />
         <LastUpdated date={c.updatedAt} />
+        <span className="text-sm text-muted">
+          Par <Link href={author.href} className="link-u font-semibold text-ink">{author.name}</Link>
+        </span>
       </div>
 
       <div className="mt-12">{calculator}</div>
