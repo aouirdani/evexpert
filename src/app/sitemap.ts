@@ -6,7 +6,6 @@ import { isVersionIndexable, versionsOf } from "@/data/catalog/selectors";
 import { getGuides } from "@/data/guides";
 import { getArticles } from "@/data/blog";
 import { chargingTopics } from "@/data/charging";
-import { getFeaturedComparisons } from "@/lib/comparison";
 import { vehicleHref } from "@/lib/vehicle-utils";
 
 // Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
@@ -16,17 +15,17 @@ export const revalidate = 86400;
  * Seules les pages indexables figurent dans le sitemap :
  * - pas de recherche (noindex), pas de pages légales secondaires sans valeur SEO ;
  * - pages marque uniquement si la marque a au moins 2 modèles ;
- * - pages version uniquement si le modèle a plusieurs versions.
+ * - pages version uniquement si le modèle a plusieurs versions ;
+ * - pas de duels (/comparer/[slug], noindex) en attendant une analyse rédigée par paire.
  */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = siteConfig.url;
-  const [allVehicles, brands, models, guides, articles, comparisons, checkedAt] = await Promise.all([
+  const [allVehicles, brands, models, guides, articles, checkedAt] = await Promise.all([
     getAllVehicles(),
     getBrands(),
     getModels(),
     getGuides(),
     getArticles(),
-    getFeaturedComparisons(),
     getCatalogDate(),
   ]);
   const catalogDate = new Date(checkedAt);
@@ -53,6 +52,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     entry("/guides", catalogDate, "weekly", 0.8),
     entry("/blog", catalogDate, "weekly", 0.7),
     entry("/methodologie", catalogDate, "yearly", 0.6),
+    entry("/politique-editoriale", catalogDate, "yearly", 0.4),
     entry("/sources", catalogDate, "yearly", 0.5),
     entry("/a-propos", catalogDate, "yearly", 0.4),
     entry("/contact", catalogDate, "yearly", 0.3),
@@ -70,7 +70,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .filter((v) => isVersionIndexable(allVehicles, v) && versionsOf(allVehicles, v.brandSlug, v.modelSlug).length > 1)
     .map((v) => entry(vehicleHref(v, "version"), new Date(v.source.lastUpdated), "monthly", 0.6));
 
-  const comparisonRoutes = comparisons.map((c) => entry(`/comparer/${c.slug}`, catalogDate, "monthly", 0.6));
   const guideRoutes = guides.map((g) => entry(`/guides/${g.slug}`, new Date(g.updatedAt), "monthly", 0.8, heroImages(g)));
   const chargingRoutes = chargingTopics.map((t) => entry(`/recharge/${t.slug}`, new Date(t.updatedAt), "monthly", 0.6));
   const articleRoutes = articles.map((a) => entry(`/blog/${a.slug}`, new Date(a.updatedAt), "monthly", 0.6, heroImages(a)));
@@ -81,7 +80,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...brandRoutes,
     ...modelRoutes,
     ...versionRoutes,
-    ...comparisonRoutes,
     ...guideRoutes,
     ...chargingRoutes,
     ...articleRoutes,

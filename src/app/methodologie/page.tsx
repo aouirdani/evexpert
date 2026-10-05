@@ -35,7 +35,7 @@ function buildSections(checkedAt: string): ArticleSection[] {
     heading: "Les données véhicules",
     paragraphs: [
       `Les caractéristiques techniques du catalogue proviennent de la base spécialisée EV Database (source spécialisée, non constructeur), relevées le ${checkedAt}. Chaque fiche cite sa source, son lien et sa date de relevé.`,
-      "Un script de contrôle vérifie la cohérence de chaque ligne avant publication : batterie utile ≤ brute, kW et chevaux concordants, consommation cohérente avec capacité et autonomie, temps de charge et performances dans des plages plausibles. Une donnée jugée incohérente ou absente est laissée vide (« Non disponible ») : elle n'est jamais corrigée ni complétée à la main.",
+      "Un script de contrôle vérifie la cohérence de chaque ligne avant publication : batterie utile ≤ brute, kW et chevaux concordants, consommation cohérente avec capacité et autonomie, temps de charge et performances dans des plages plausibles. Une donnée jugée incohérente ou absente est laissée vide — la ligne correspondante n'apparaît pas sur la fiche — et n'est jamais corrigée ni complétée à la main.",
       "Le prix en France, la garantie véhicule et certaines consommations WLTP ne sont pas collectés à ce stade. Les prix publiés par notre source concernent d'autres marchés et ne sont pas présentés comme des prix français.",
     ],
     list: [

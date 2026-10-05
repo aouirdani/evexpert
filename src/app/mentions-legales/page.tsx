@@ -35,7 +35,9 @@ export default function Page() {
         },
         {
           heading: "Hébergement",
-          paragraphs: ["Le site est hébergé par Vercel Inc. (https://vercel.com). Les journaux techniques de connexion (adresse IP, date, page demandée) sont traités par l'hébergeur pour assurer la sécurité et le bon fonctionnement du service."],
+          paragraphs: [
+            "Le site est hébergé par Vercel Inc., société de droit américain, 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis (https://vercel.com). Les journaux techniques de connexion (adresse IP, date, page demandée) sont traités par l'hébergeur pour assurer la sécurité et le bon fonctionnement du service.",
+          ],
         },
         {
           heading: "Propriété intellectuelle",

@@ -35,6 +35,9 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     title: `${a.brand} ${a.model} vs ${b.brand} ${b.model} : comparatif`,
     description: `${vehicleTitle(a)} contre ${vehicleTitle(b)} : batterie, autonomie WLTP, recharge, performances, dimensions et coût aux 100 km comparés.`,
     path: `/comparer/${slug}`,
+    // Noindex en attendant une analyse rédigée par paire (voir docs/seo/audit) : le tableau seul,
+    // avec ses chiffres en direct, recoupe trop les fiches pour apporter une valeur distincte.
+    noindex: true,
   });
 }
 

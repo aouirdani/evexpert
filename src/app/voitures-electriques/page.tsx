@@ -14,6 +14,7 @@ import { vehicleHref } from "@/lib/vehicle-utils";
 import { toExplorerVehicle } from "@/lib/vehicle-lite";
 import { buildMetadata, itemListJsonLd } from "@/lib/seo";
 import { formatNumber } from "@/lib/format";
+import { bodyTypeLabels } from "@/lib/vehicle-format";
 
 // Régénération quotidienne : une donnée modifiée en base apparaît sans redéploiement.
 export const revalidate = 86400;
@@ -41,6 +42,15 @@ export default async function VehiclesPage() {
   const brands = await getBrands();
   const models = await getModels();
   const ranges = vehicles.map((v) => v.rangeWltp);
+  const batteries = vehicles.map((v) => v.batteryUsable);
+  const bodyCounts = Object.entries(
+    vehicles.reduce<Record<string, number>>((acc, v) => {
+      const label = bodyTypeLabels[v.bodyType];
+      acc[label] = (acc[label] ?? 0) + 1;
+      return acc;
+    }, {}),
+  ).sort((a, b) => b[1] - a[1]);
+  const dcCapable = vehicles.filter((v) => v.chargingDC !== null).length;
   return (
     <Container className="pb-section pt-8">
       <Breadcrumbs items={[{ name: "Voitures électriques", href: "/voitures-electriques" }]} />
@@ -79,17 +89,25 @@ export default async function VehiclesPage() {
         <VehicleExplorer vehicles={vehicles.map(toExplorerVehicle)} />
       </div>
 
-      <section className="mt-section grid gap-x-12 gap-y-6 lg:grid-cols-12" aria-labelledby="lire-fiches">
+      <section className="mt-section grid gap-x-12 gap-y-6 lg:grid-cols-12" aria-labelledby="couverture">
         <div className="lg:col-span-4">
-          <h2 id="lire-fiches" className="text-h2 font-bold text-ink">Comment lire les fiches</h2>
+          <h2 id="couverture" className="text-h2 font-bold text-ink">Ce que couvre le catalogue</h2>
           <p className="label mt-3">
             Autonomie de {formatNumber(Math.min(...ranges))} à {formatNumber(Math.max(...ranges))} km WLTP
           </p>
         </div>
         <div className="lg:col-span-8">
           <p className="pretty max-w-2xl text-body">
-            Les caractéristiques techniques proviennent de la base spécialisée EV Database, sans complément manuel : une donnée absente est affichée « Non disponible ».
-            Le prix en France n&apos;est pas encore collecté. Les coûts et temps de recharge sont des calculs EVExpert dont les hypothèses sont modifiables dans les{" "}
+            {bodyCounts.length} carrosseries sont représentées : {bodyCounts.map(([label, count], i) => (
+              <span key={label}>
+                {i > 0 && (i === bodyCounts.length - 1 ? " et " : ", ")}
+                {label.toLowerCase()} ({count})
+              </span>
+            ))}. La batterie utile s&apos;étend de {formatNumber(Math.min(...batteries), 1)} à {formatNumber(Math.max(...batteries), 1)}&nbsp;kWh selon la version,
+            et {dcCapable} versions sur {vehicles.length} publient une puissance de charge rapide DC.
+          </p>
+          <p className="pretty mt-4 max-w-2xl text-body">
+            Les caractéristiques techniques proviennent de la base spécialisée EV Database. Les coûts et temps de recharge sont des calculs EVExpert dont les hypothèses sont modifiables dans les{" "}
             <Link href="/outils" className="link-u font-medium text-signal-deep">outils</Link> ; le détail figure sur la page{" "}
             <Link href="/methodologie" className="link-u font-medium text-signal-deep">Méthodologie</Link>.
           </p>

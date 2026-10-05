@@ -111,6 +111,7 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
       { label: "Guides", href: "/guides" },
       { label: "Blog", href: "/blog" },
       { label: "Méthodologie", href: "/methodologie" },
+      { label: "Politique éditoriale", href: "/politique-editoriale" },
       { label: "Sources des données", href: "/sources" },
       { label: "Flux RSS du blog", href: "/blog/rss.xml" },
     ],

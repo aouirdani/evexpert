@@ -316,7 +316,7 @@ export function VehicleDetail({
         id="fiche"
         numeral="04"
         title="Fiche technique"
-        intro="Une donnée absente est indiquée « Non disponible » : elle n'est jamais estimée. Le prix en France n'est pas encore collecté : consultez le configurateur du constructeur."
+        intro="Une donnée absente de la source n'est jamais estimée : la ligne correspondante n'apparaît pas."
       >
         <div className="grid gap-x-10 gap-y-9 md:grid-cols-2">
           <SpecTable
@@ -371,7 +371,6 @@ export function VehicleDetail({
             id="spec-garanties"
             type={src}
             rows={[
-              { label: "Garantie véhicule", value: fmtText(v.warranty) },
               { label: "Garantie batterie", value: fmtText(v.batteryWarranty), note: "Telle que publiée par la source ; les conditions françaises peuvent différer." },
             ]}
           />

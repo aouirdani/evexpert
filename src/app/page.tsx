@@ -34,7 +34,7 @@ const homeFaq = [
   },
   {
     question: "Les données des véhicules sont-elles officielles ?",
-    answer: "Elles proviennent de la base spécialisée EV Database, pas d'un document constructeur : chaque fiche l'indique avec un badge « Source spécialisée », un lien vers la source et la date du relevé. Une donnée absente est affichée « Non disponible », jamais estimée.",
+    answer: "Elles proviennent de la base spécialisée EV Database, pas d'un document constructeur : chaque fiche l'indique avec un badge « Source spécialisée », un lien vers la source et la date du relevé. Une donnée absente n'est jamais estimée : la ligne correspondante n'apparaît simplement pas sur la fiche.",
   },
   {
     question: "Quelle différence entre autonomie WLTP et autonomie réelle ?",
@@ -42,7 +42,7 @@ const homeFaq = [
   },
   {
     question: "Pourquoi le prix des voitures n'apparaît-il pas ?",
-    answer: "Les prix disponibles dans notre source concernent d'autres marchés. Plutôt que d'afficher un prix non transposable en France, nous laissons le champ « Non disponible » jusqu'à l'intégration d'une source française datée.",
+    answer: "Les prix disponibles dans notre source concernent d'autres marchés et ne sont pas transposables en France. Plutôt que d'afficher un prix non fiable, nous n'affichons aucun champ prix jusqu'à l'intégration d'une source française datée.",
   },
   {
     question: "Faut-il une borne à domicile pour posséder une voiture électrique ?",

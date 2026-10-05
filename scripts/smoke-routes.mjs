@@ -11,7 +11,7 @@ const routes = [
   "/voitures-electriques/tesla/model-3/rwd", "/voitures-electriques/renault/5-e-tech",
   "/comparer", "/comparer/renault-5-e-tech-52-kwh-150-ch-vs-peugeot-e-208-50-kwh",
   "/recharge", "/recharge/ccs", "/guides", "/guides/wltp-definition", "/blog", "/blog/recharge-rapide-temps-10-80",
-  "/a-propos", "/contact", "/sources", "/methodologie", "/mentions-legales", "/confidentialite", "/cookies", "/conditions-utilisation",
+  "/a-propos", "/contact", "/sources", "/methodologie", "/politique-editoriale", "/mentions-legales", "/confidentialite", "/cookies", "/conditions-utilisation",
   "/sitemap.xml", "/robots.txt", "/blog/rss.xml", "/api/health",
 ];
 let failed = 0;

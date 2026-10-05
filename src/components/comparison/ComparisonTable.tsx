@@ -3,6 +3,7 @@ import type { CompareVehicle } from "@/lib/vehicle-lite";
 import { METRICS, METRIC_GROUPS } from "@/lib/comparison-metrics";
 import { DataBadge } from "@/components/ui/DataBadge";
 import { formatNumber } from "@/lib/format";
+import { NA } from "@/lib/vehicle-format";
 
 /** Unité et décimales de l'écart chiffré, par critère mesurable. Les autres critères n'ont pas d'écart. */
 const DELTA: Record<string, [unit: string, digits: number]> = {
@@ -34,8 +35,10 @@ const rowGrid = { 2: "max-sm:grid-cols-2", 3: "max-sm:grid-cols-3" } as const;
  */
 export function ComparisonTable({ vehicles }: { vehicles: CompareVehicle[] }) {
   const n = vehicles.length as 2 | 3;
-  const priceKnown = vehicles.some((v) => v.price !== null);
-  const groups = METRIC_GROUPS.filter((g) => g !== "Prix" || priceKnown);
+  // Un critère vide pour tous les véhicules comparés n'est pas affiché, plutôt que de montrer
+  // une ligne « Non disponible » répétée sur chaque duel.
+  const visible = (g: string) => METRICS.filter((m) => m.group === g && vehicles.some((v) => m.format(v) !== NA));
+  const groups = METRIC_GROUPS.filter((g) => visible(g).length > 0);
   const cols = n + 2;
 
   return (
@@ -68,7 +71,7 @@ export function ComparisonTable({ vehicles }: { vehicles: CompareVehicle[] }) {
                 {g}
               </th>
             </tr>
-            {METRICS.filter((m) => m.group === g).map((m) => {
+            {visible(g).map((m) => {
               const nums = vehicles.map((v) => m.value(v)).filter((x): x is number => x !== null);
               const d = DELTA[m.key];
               const diff = d && nums.length >= 2 ? Math.max(...nums) - Math.min(...nums) : null;
@@ -88,7 +91,7 @@ export function ComparisonTable({ vehicles }: { vehicles: CompareVehicle[] }) {
                       <td
                         key={v.id}
                         className={
-                          text === "Non disponible"
+                          text === NA
                             ? "wrap-anywhere py-3.5 pr-4 align-top text-sm text-muted max-sm:pb-3.5 max-sm:pr-0 max-sm:pt-0"
                             : "num wrap-anywhere py-3.5 pr-4 align-top text-base font-semibold text-ink max-sm:pb-3.5 max-sm:pr-0 max-sm:pt-0"
                         }
@@ -121,7 +124,6 @@ export function ComparisonTable({ vehicles }: { vehicles: CompareVehicle[] }) {
       <p className="mt-8 max-w-2xl text-caption text-muted">
         Δ : écart entre la valeur la plus haute et la plus basse, sans jugement : chaque critère compte différemment selon votre usage.
         Sauf mention « Calcul EVExpert », les caractéristiques proviennent de la source spécialisée. « Non disponible » : donnée absente de la source, jamais estimée.
-        {!priceKnown && " Le prix en France n'est pas encore collecté (aucune source française datée) : consultez le configurateur du constructeur."}
       </p>
     </div>
   );

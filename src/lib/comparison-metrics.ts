@@ -43,7 +43,6 @@ export const METRICS: Metric[] = [
   { key: "boot", label: "Coffre", group: "Coffre", type: "specialized", value: (v) => v.trunkVolume, format: (v) => fmt(v.trunkVolume, "L"), best: "max", highlight: "Plus grand coffre" },
   { key: "bootmax", label: "Coffre, banquette rabattue", group: "Coffre", type: "specialized", value: (v) => v.trunkVolumeMax, format: (v) => fmt(v.trunkVolumeMax, "L") },
   { key: "seats", label: "Places", group: "Coffre", type: "specialized", value: (v) => v.seats, format: (v) => String(v.seats) },
-  { key: "wv", label: "Garantie véhicule", group: "Garanties", type: "official", value: () => null, format: (v) => fmtText(v.warranty) },
   { key: "wb", label: "Garantie batterie", group: "Garanties", type: "specialized", value: () => null, format: (v) => fmtText(v.batteryWarranty) },
   { key: "cost", label: `Coût aux 100 km (${formatNumber(home, 2)} €/kWh)`, group: "Coût d'utilisation", type: "calculated", value: (v) => costPer100km(v, home), format: (v) => formatEuro(costPer100km(v, home), 2), best: "min", highlight: "Coût estimé aux 100 km le plus faible" },
 ];

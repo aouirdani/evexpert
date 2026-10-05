@@ -454,7 +454,7 @@ export function DataTrust() {
           </h2>
           <p className="pretty mt-5 max-w-md text-body">
             Chaque fiche renvoie à sa source et à sa date de relevé. Les formules et hypothèses sont affichées,
-            et une donnée absente est écrite « Non disponible », jamais estimée.
+            et une donnée absente n&apos;est jamais estimée : elle n&apos;apparaît pas sur la fiche.
           </p>
           <div className="mt-4">
             <ArrowLink href="/methodologie">Lire la méthodologie</ArrowLink>

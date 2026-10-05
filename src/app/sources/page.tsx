@@ -42,7 +42,8 @@ export default async function SourcesPage() {
             {formatDateFr(catalog.checkedAt)}. Ce n&apos;est pas une source constructeur : chaque fiche l&apos;indique (« Source spécialisée ») et renvoie vers la fiche d&apos;origine.
           </p>
           <p>
-            Une donnée absente de la source est affichée « Non disponible ». Le prix en France et la garantie véhicule ne sont pas collectés à ce stade. Notre priorité future est
+            Une donnée absente de la source n&apos;est jamais estimée : la ligne correspondante n&apos;apparaît pas sur la fiche. La liste des champs non collectés à ce stade
+            figure sur la page <Link href="/methodologie" className="link-u font-semibold text-signal-deep">Méthodologie</Link>. Notre priorité future est
             d&apos;ajouter des sources constructeur pour les points importants.
           </p>
         </div>

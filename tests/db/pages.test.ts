@@ -48,24 +48,26 @@ describe("pages dynamiques alimentées par la base (URLs inchangées)", () => {
     expect(multi.robots).toMatchObject({ index: true });
     expect(await mod.generateMetadata(params({ brand: "x", model: "y", version: "z" }))).toEqual({});
   });
-  it("/comparer/[slug] : 8 comparaisons", async () => {
+  it("/comparer/[slug] : 8 comparaisons, noindex en attendant une analyse rédigée par paire", async () => {
     const mod = await import("@/app/comparer/[slug]/page");
     const all = await mod.generateStaticParams();
     expect(all).toHaveLength(8);
     const md = await mod.generateMetadata(params({ slug: all[0].slug }));
     expect(pageTitle(md)).toContain("comparatif");
+    expect(md.robots).toMatchObject({ index: false });
   });
   it("/guides/[slug] et /blog/[slug] : 25 guides, 7 articles", async () => {
     // Passe éditoriale : +3 guides (kW/kWh, consommation, prise domestique) et +1 analyse (garantie batterie) ; puis +2 guides batterie (durée de vie, prix).
     expect(await (await import("@/app/guides/[slug]/page")).generateStaticParams()).toHaveLength(25);
     expect(await (await import("@/app/blog/[slug]/page")).generateStaticParams()).toHaveLength(7);
   });
-  it("sitemap : 128 URLs uniques, toutes sur www.evexpert.fr", async () => {
+  it("sitemap : 121 URLs uniques, toutes sur www.evexpert.fr", async () => {
     // +2 depuis la passe fonctionnalités : /outils/trajet-longue-distance, /voitures-electriques/trouver ; +2 avec les guides batterie.
+    // Lot confiance-catalogue : -8 duels (/comparer/[slug], retirés en attendant une analyse rédigée par paire) ; +1 /politique-editoriale.
     const sitemap = (await import("@/app/sitemap")).default;
     const urls = (await sitemap()).map((e) => e.url);
-    expect(urls).toHaveLength(128);
-    expect(new Set(urls).size).toBe(128);
+    expect(urls).toHaveLength(121);
+    expect(new Set(urls).size).toBe(121);
     expect(urls.every((u) => u.startsWith("https://www.evexpert.fr"))).toBe(true);
     expect(urls).toContain("https://www.evexpert.fr/voitures-electriques/tesla/model-3/long-range-rwd");
     expect(urls).not.toContain("https://www.evexpert.fr/voitures-electriques/renault/5-e-tech/52-kwh-150-ch");
