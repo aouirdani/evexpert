@@ -56,14 +56,14 @@ export default async function ComparisonPage({ params }: { params: Promise<Param
     {
       question: `Quelle voiture a la plus grande autonomie WLTP, ${a.model} ou ${b.model} ?`,
       answer: range
-        ? `Selon la source, la ${range.vehicle.brand} ${range.vehicle.model} affiche l'autonomie WLTP la plus élevée (${range.display}) contre ${(range.vehicle.id === a.id ? b : a).rangeWltp} km. L'autonomie réelle varie avec la vitesse et la température.`
-        : `Les deux modèles affichent la même autonomie WLTP dans notre source.`,
+        ? `Selon EV Database, la ${range.vehicle.brand} ${range.vehicle.model} affiche l'autonomie WLTP la plus élevée (${range.display}) contre ${(range.vehicle.id === a.id ? b : a).rangeWltp} km. L'autonomie réelle varie avec la vitesse et la température.`
+        : `Les deux modèles affichent la même autonomie WLTP selon EV Database.`,
     },
     {
       question: `Laquelle se recharge le plus vite en courant continu ?`,
       answer: dc
         ? `La ${dc.vehicle.brand} ${dc.vehicle.model} accepte la puissance DC maximale la plus élevée (${dc.display}). Le temps de charge 10-80 % publié figure dans le tableau ; la puissance maximale n'est tenue que sur une partie de la charge.`
-        : `Les puissances DC de ces modèles ne permettent pas d'établir une différence dans notre source.`,
+        : `Les puissances DC de ces modèles ne permettent pas d'établir une différence selon EV Database.`,
     },
   ];
 

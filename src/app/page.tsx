@@ -42,7 +42,7 @@ const homeFaq = [
   },
   {
     question: "Pourquoi le prix des voitures n'apparaît-il pas ?",
-    answer: "Les prix disponibles dans notre source concernent d'autres marchés et ne sont pas transposables en France. Plutôt que d'afficher un prix non fiable, nous n'affichons aucun champ prix jusqu'à l'intégration d'une source française datée.",
+    answer: "Les prix disponibles dans EV Database concernent d'autres marchés et ne sont pas transposables en France. Plutôt que d'afficher un prix non fiable, nous n'affichons aucun champ prix jusqu'à l'intégration d'une source française datée.",
   },
   {
     question: "Faut-il une borne à domicile pour posséder une voiture électrique ?",

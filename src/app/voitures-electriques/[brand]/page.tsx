@@ -62,7 +62,7 @@ export default async function BrandPage({ params }: { params: Promise<Params> })
       <PageHeader
         eyebrow="Marque"
         title={`${name} électriques : modèles, autonomie et recharge`}
-        description={`${models.length} modèle${models.length > 1 ? "s" : ""} et ${list.length} version${list.length > 1 ? "s" : ""} dans notre base. Autonomie WLTP de ${formatNumber(Math.min(...ranges))} à ${formatNumber(Math.max(...ranges))} km selon la source.`}
+        description={`${models.length} modèle${models.length > 1 ? "s" : ""} et ${list.length} version${list.length > 1 ? "s" : ""} dans notre base. Autonomie WLTP de ${formatNumber(Math.min(...ranges))} à ${formatNumber(Math.max(...ranges))} km selon EV Database.`}
       />
       {indexable ? (
         <BrandOverview brandSlug={brand} vehicles={list} comparisons={await getFeaturedComparisons()} />

@@ -34,11 +34,12 @@ export interface BrandContent {
   intro: (vs: Vehicle[]) => string;
   usage: (vs: Vehicle[]) => BrandUsage;
   /**
-   * Bloc « Coût d'usage » (avec la mention que les prix ne sont pas disponibles), uniquement pour les marques dont les requêtes de prix et d'autonomie
-   * sont observées en Search Console. Le prix d'achat n'étant pas collecté, `priceNote` le dit
-   * explicitement ; le coût d'usage est calculé depuis le catalogue avec `ASSUMPTIONS.homePrice`, la même hypothèse que les calculateurs.
+   * Bloc « Coût d'usage », uniquement pour les marques dont les requêtes de coût et d'autonomie
+   * sont observées en Search Console. Le coût d'usage (énergie, pas prix d'achat — sujet réservé à
+   * /methodologie) est calculé depuis le catalogue avec `ASSUMPTIONS.homePrice`, la même hypothèse
+   * que les calculateurs ; `costIntro` introduit cette section sans mentionner le prix d'achat.
    */
-  pricing?: { priceNote: string; guides: BrandGuideLink[] };
+  pricing?: { costIntro: string; guides: BrandGuideLink[] };
 }
 
 const driveLabel = { FWD: "traction avant", RWD: "propulsion arrière", AWD: "4 roues motrices" } as const;
@@ -53,23 +54,37 @@ const km = (n: number) => `${formatNumber(n)} km`;
 const kwh = (n: number) => `${formatNumber(n, 1)} kWh`;
 const L = (n: number | null) => (n === null ? "non disponible" : `${formatNumber(n)} L`);
 
+/** Vrai seulement si `v` est l'extremum du groupe — un superlatif n'est jamais affirmé sans ce contrôle. */
+function isMax(v: number, group: number[]): boolean {
+  return v === Math.max(...group);
+}
+function isMin(v: number, group: number[]): boolean {
+  return v === Math.min(...group);
+}
+
 export const BRAND_CONTENT: Record<string, BrandContent> = {
   bmw: {
     intro: (vs) => {
       const ix1 = byModel(vs, "iX1");
       const i4 = byModel(vs, "i4");
       const ix3 = byModel(vs, "iX3");
-      return `Chez BMW, l'offre électrique de notre base se répartit sur deux carrosseries : SUV (iX1, iX3) et berline (i4). L'iX1 (${driveLabel[ix1.drive]}) affiche ${km(ix1.rangeWltp)} d'autonomie WLTP pour ${kwh(ix1.batteryUsable)} utiles ; l'i4 (${driveLabel[i4.drive]}) monte à ${km(i4.rangeWltp)} ; l'iX3 (${driveLabel[ix3.drive]}) est la plus autonome à ${km(ix3.rangeWltp)}, avec la charge DC la plus rapide de la gamme (${formatNumber(ix3.chargingDC ?? 0)} kW, 10 → 80 % en ${formatNumber(ix3.chargingTime10to80 ?? 0)} min selon la source).`;
+      const ranges = [ix1.rangeWltp, i4.rangeWltp, ix3.rangeWltp];
+      const dcs = [ix1.chargingDC ?? 0, i4.chargingDC ?? 0, ix3.chargingDC ?? 0];
+      const ix3Range = isMax(ix3.rangeWltp, ranges) ? "affiche l'autonomie la plus élevée des trois" : "s'intercale entre les deux autres en autonomie";
+      const ix3Dc = isMax(ix3.chargingDC ?? 0, dcs) ? ", avec également la charge DC la plus rapide de la gamme" : "";
+      return `Chez BMW, l'offre électrique de notre base se répartit sur deux carrosseries : SUV (iX1, iX3) et berline (i4). L'iX1 (${driveLabel[ix1.drive]}) affiche ${km(ix1.rangeWltp)} d'autonomie WLTP pour ${kwh(ix1.batteryUsable)} utiles ; l'i4 (${driveLabel[i4.drive]}) monte à ${km(i4.rangeWltp)} ; l'iX3 (${driveLabel[ix3.drive]}) ${ix3Range}, à ${km(ix3.rangeWltp)}${ix3Dc} (${formatNumber(ix3.chargingDC ?? 0)} kW, 10 → 80 % en ${formatNumber(ix3.chargingTime10to80 ?? 0)} min selon EV Database).`;
     },
     usage: (vs) => {
       const ix1 = byModel(vs, "iX1");
       const i4 = byModel(vs, "i4");
       const ix3 = byModel(vs, "iX3");
+      const lengths = [ix1.dimensions.length, i4.dimensions.length, ix3.dimensions.length];
+      const trunks = [ix1.trunkVolume ?? 0, i4.trunkVolume ?? 0, ix3.trunkVolume ?? 0];
       return {
         points: [
-          { usage: "Ville et trajets courts", text: `L'iX1 est le plus compact des trois (${formatNumber(ix1.dimensions.length)} mm), pour ${km(ix1.rangeWltp)} d'autonomie WLTP.` },
-          { usage: "Longs trajets", text: `L'iX3 combine la plus grande autonomie (${km(ix3.rangeWltp)}) et la charge DC la plus rapide (${formatNumber(ix3.chargingDC ?? 0)} kW, 10 → 80 % en ${formatNumber(ix3.chargingTime10to80 ?? 0)} min).` },
-          { usage: "Coffre et usage familial", text: `L'iX3 a aussi le plus grand coffre (${L(ix3.trunkVolume)}) ; l'i4, en berline, en propose ${L(i4.trunkVolume)}.` },
+          { usage: "Ville et trajets courts", text: `L'iX1${isMin(ix1.dimensions.length, lengths) ? " est le plus compact des trois" : ""} (${formatNumber(ix1.dimensions.length)} mm), pour ${km(ix1.rangeWltp)} d'autonomie WLTP.` },
+          { usage: "Longs trajets", text: `L'iX3 combine une autonomie et une charge DC élevées (${km(ix3.rangeWltp)}, ${formatNumber(ix3.chargingDC ?? 0)} kW, 10 → 80 % en ${formatNumber(ix3.chargingTime10to80 ?? 0)} min).` },
+          { usage: "Coffre et usage familial", text: `L'iX3${isMax(ix3.trunkVolume ?? 0, trunks) ? " a le plus grand coffre des trois" : " offre un grand coffre"} (${L(ix3.trunkVolume)}) ; l'i4, en berline, en propose ${L(i4.trunkVolume)}.` },
         ],
       };
     },
@@ -80,17 +95,22 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
       const ds = byModel(vs, "Dolphin Surf");
       const atto3 = byModel(vs, "Atto 3 Evo");
       const seal = byModel(vs, "Seal");
-      return `BYD est la seule marque de notre base à couvrir trois carrosseries différentes avec trois transmissions différentes : la citadine Dolphin Surf (${driveLabel[ds.drive]}, ${km(ds.rangeWltp)}), le SUV Atto 3 Evo (${driveLabel[atto3.drive]}, ${km(atto3.rangeWltp)}) et la berline Seal (${driveLabel[seal.drive]}, ${km(seal.rangeWltp)}) — cette dernière la plus autonome des trois selon la source.`;
+      const ranges = [ds.rangeWltp, atto3.rangeWltp, seal.rangeWltp];
+      const sealLead = isMax(seal.rangeWltp, ranges) ? " — cette dernière affiche l'autonomie la plus élevée des trois selon EV Database" : "";
+      return `BYD est la seule marque de notre base à couvrir trois carrosseries différentes avec trois transmissions différentes : la citadine Dolphin Surf (${driveLabel[ds.drive]}, ${km(ds.rangeWltp)}), le SUV Atto 3 Evo (${driveLabel[atto3.drive]}, ${km(atto3.rangeWltp)}) et la berline Seal (${driveLabel[seal.drive]}, ${km(seal.rangeWltp)})${sealLead}.`;
     },
     usage: (vs) => {
       const ds = byModel(vs, "Dolphin Surf");
       const atto3 = byModel(vs, "Atto 3 Evo");
       const seal = byModel(vs, "Seal");
+      const lengths = [ds.dimensions.length, atto3.dimensions.length, seal.dimensions.length];
+      const batteries = [ds.batteryUsable, atto3.batteryUsable, seal.batteryUsable];
+      const trunks = [ds.trunkVolume ?? 0, atto3.trunkVolume ?? 0, seal.trunkVolume ?? 0];
       return {
         points: [
-          { usage: "Ville", text: `La Dolphin Surf est la plus courte (${formatNumber(ds.dimensions.length)} mm) et la moins chère à recharger, avec ${km(ds.rangeWltp)} d'autonomie.` },
-          { usage: "Usage familial", text: `L'Atto 3 Evo, SUV, offre le plus grand coffre du trio (${L(atto3.trunkVolume)}).` },
-          { usage: "Longs trajets", text: `La Seal, à 4 roues motrices, cumule l'autonomie la plus élevée (${km(seal.rangeWltp)}) — sa charge DC (${formatNumber(seal.chargingDC ?? 0)} kW) reste toutefois en retrait de l'Atto 3 Evo (${formatNumber(atto3.chargingDC ?? 0)} kW).` },
+          { usage: "Ville", text: `La Dolphin Surf${isMin(ds.dimensions.length, lengths) ? " est la plus courte des trois" : ""} (${formatNumber(ds.dimensions.length)} mm)${isMin(ds.batteryUsable, batteries) ? ", avec aussi la plus petite batterie à recharger" : ""}, pour ${km(ds.rangeWltp)} d'autonomie.` },
+          { usage: "Usage familial", text: `L'Atto 3 Evo, SUV, offre${isMax(atto3.trunkVolume ?? 0, trunks) ? " le plus grand coffre du trio" : " un grand coffre"} (${L(atto3.trunkVolume)}).` },
+          { usage: "Longs trajets", text: `La Seal, à 4 roues motrices, cumule une autonomie élevée (${km(seal.rangeWltp)}) — sa charge DC (${formatNumber(seal.chargingDC ?? 0)} kW) reste toutefois en retrait de l'Atto 3 Evo (${formatNumber(atto3.chargingDC ?? 0)} kW).` },
         ],
       };
     },
@@ -100,7 +120,7 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
     intro: (vs) => {
       const c3 = byModel(vs, "ë-C3");
       const aircross = byModel(vs, "ë-C3 Aircross");
-      return `Citroën décline sa citadine ë-C3 (${km(c3.rangeWltp)} d'autonomie WLTP, ${kwh(c3.batteryUsable)} utiles) en version SUV avec l'ë-C3 Aircross (${km(aircross.rangeWltp)}, ${kwh(aircross.batteryUsable)}) : les deux partagent la même transmission (${driveLabel[c3.drive]}) et un écart d'autonomie de ${formatNumber(aircross.rangeWltp - c3.rangeWltp)} km selon la source.`;
+      return `Citroën décline sa citadine ë-C3 (${km(c3.rangeWltp)} d'autonomie WLTP, ${kwh(c3.batteryUsable)} utiles) en version SUV avec l'ë-C3 Aircross (${km(aircross.rangeWltp)}, ${kwh(aircross.batteryUsable)}) : les deux partagent la même transmission (${driveLabel[c3.drive]}) et un écart d'autonomie de ${formatNumber(aircross.rangeWltp - c3.rangeWltp)} km selon EV Database.`;
     },
     usage: (vs) => {
       const c3 = byModel(vs, "ë-C3");
@@ -150,16 +170,21 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
       const inster = byModel(vs, "INSTER");
       const kona = byModel(vs, "Kona Electric");
       const ioniq5 = byModel(vs, "IONIQ 5");
-      return `Trois SUV électriques chez Hyundai dans notre base, du plus compact au plus autonome : l'INSTER (${formatNumber(inster.dimensions.length)} mm, ${km(inster.rangeWltp)}), le Kona Electric (${km(kona.rangeWltp)}) et l'IONIQ 5 (${km(ioniq5.rangeWltp)}), ce dernier chargeant en DC jusqu'à ${formatNumber(ioniq5.chargingDC ?? 0)} kW selon la source — la puissance la plus élevée des trois.`;
+      const dcs = [inster.chargingDC ?? 0, kona.chargingDC ?? 0, ioniq5.chargingDC ?? 0];
+      const dcLead = isMax(ioniq5.chargingDC ?? 0, dcs) ? " — la puissance la plus élevée des trois" : "";
+      return `Trois SUV électriques chez Hyundai dans notre base, du plus compact au plus autonome : l'INSTER (${formatNumber(inster.dimensions.length)} mm, ${km(inster.rangeWltp)}), le Kona Electric (${km(kona.rangeWltp)}) et l'IONIQ 5 (${km(ioniq5.rangeWltp)}), ce dernier chargeant en DC jusqu'à ${formatNumber(ioniq5.chargingDC ?? 0)} kW selon EV Database${dcLead}.`;
     },
     usage: (vs) => {
       const inster = byModel(vs, "INSTER");
       const kona = byModel(vs, "Kona Electric");
       const ioniq5 = byModel(vs, "IONIQ 5");
+      const lengths = [inster.dimensions.length, kona.dimensions.length, ioniq5.dimensions.length];
+      const ranges = [inster.rangeWltp, kona.rangeWltp, ioniq5.rangeWltp];
+      const t1080s = [inster.chargingTime10to80 ?? Infinity, kona.chargingTime10to80 ?? Infinity, ioniq5.chargingTime10to80 ?? Infinity];
       return {
         points: [
-          { usage: "Ville", text: `L'INSTER est le plus court (${formatNumber(inster.dimensions.length)} mm) avec ${km(inster.rangeWltp)} d'autonomie, suffisants pour un usage quotidien.` },
-          { usage: "Longs trajets", text: `L'IONIQ 5 associe la plus grande autonomie (${km(ioniq5.rangeWltp)}) et la charge la plus rapide (10 → 80 % en ${formatNumber(ioniq5.chargingTime10to80 ?? 0)} min).` },
+          { usage: "Ville", text: `L'INSTER${isMin(inster.dimensions.length, lengths) ? " est le plus court" : ""} (${formatNumber(inster.dimensions.length)} mm) avec ${km(inster.rangeWltp)} d'autonomie, suffisants pour un usage quotidien.` },
+          { usage: "Longs trajets", text: `L'IONIQ 5 associe${isMax(ioniq5.rangeWltp, ranges) ? " la plus grande autonomie" : " une autonomie élevée"} (${km(ioniq5.rangeWltp)}) et${isMin(ioniq5.chargingTime10to80 ?? Infinity, t1080s) ? " la charge la plus rapide" : " une charge rapide"} (10 → 80 % en ${formatNumber(ioniq5.chargingTime10to80 ?? 0)} min).` },
           { usage: "Usage familial", text: `Le Kona Electric (${L(kona.trunkVolume)} de coffre) se situe entre les deux, pour un usage plus généraliste.` },
         ],
       };
@@ -170,7 +195,7 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
     intro: (vs) => {
       const ev3 = byModel(vs, "EV3");
       const ev6 = byModel(vs, "EV6");
-      return `Kia propose deux SUV électriques dans notre base : l'EV3 (${driveLabel[ev3.drive]}, ${km(ev3.rangeWltp)} d'autonomie WLTP) et l'EV6 (${driveLabel[ev6.drive]}, ${km(ev6.rangeWltp)}), ce dernier plus rapide à recharger malgré une autonomie plus courte : 10 → 80 % en ${formatNumber(ev6.chargingTime10to80 ?? 0)} min contre ${formatNumber(ev3.chargingTime10to80 ?? 0)} min pour l'EV3, selon la source.`;
+      return `Kia propose deux SUV électriques dans notre base : l'EV3 (${driveLabel[ev3.drive]}, ${km(ev3.rangeWltp)} d'autonomie WLTP) et l'EV6 (${driveLabel[ev6.drive]}, ${km(ev6.rangeWltp)}), ce dernier plus rapide à recharger malgré une autonomie plus courte : 10 → 80 % en ${formatNumber(ev6.chargingTime10to80 ?? 0)} min contre ${formatNumber(ev3.chargingTime10to80 ?? 0)} min pour l'EV3, selon EV Database.`;
     },
     usage: (vs) => {
       const ev3 = byModel(vs, "EV3");
@@ -189,7 +214,7 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
     intro: (vs) => {
       const cla = byModel(vs, "CLA");
       const gla = byModel(vs, "GLA");
-      return `La CLA (berline) et le GLA (SUV) partagent chez Mercedes-Benz la même transmission (${driveLabel[cla.drive]}) et la même puissance de charge DC (${formatNumber(cla.chargingDC ?? 0)} kW, 10 → 80 % en ${formatNumber(cla.chargingTime10to80 ?? 0)} min selon la source) ; seule l'autonomie WLTP les distingue nettement, ${km(cla.rangeWltp)} pour la CLA contre ${km(gla.rangeWltp)} pour le GLA.`;
+      return `La CLA (berline) et le GLA (SUV) partagent chez Mercedes-Benz la même transmission (${driveLabel[cla.drive]}) et la même puissance de charge DC (${formatNumber(cla.chargingDC ?? 0)} kW, 10 → 80 % en ${formatNumber(cla.chargingTime10to80 ?? 0)} min selon EV Database) ; seule l'autonomie WLTP les distingue nettement, ${km(cla.rangeWltp)} pour la CLA contre ${km(gla.rangeWltp)} pour le GLA.`;
     },
     usage: (vs) => {
       const cla = byModel(vs, "CLA");
@@ -204,7 +229,7 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
     intro: (vs) => {
       const mg4 = byModel(vs, "MG4");
       const mgs5 = byModel(vs, "MGS5");
-      return `La MG4 (compacte, ${driveLabel[mg4.drive]}) et la MGS5 (SUV, ${driveLabel[mgs5.drive]}) affichent respectivement ${km(mg4.rangeWltp)} et ${km(mgs5.rangeWltp)} d'autonomie WLTP ; la MG4, malgré son format plus compact, a le plus grand coffre des deux selon la source (${L(mg4.trunkVolume)} contre ${L(mgs5.trunkVolume)}).`;
+      return `La MG4 (compacte, ${driveLabel[mg4.drive]}) et la MGS5 (SUV, ${driveLabel[mgs5.drive]}) affichent respectivement ${km(mg4.rangeWltp)} et ${km(mgs5.rangeWltp)} d'autonomie WLTP ; la MG4, malgré son format plus compact, a le plus grand coffre des deux selon EV Database (${L(mg4.trunkVolume)} contre ${L(mgs5.trunkVolume)}).`;
     },
     usage: (vs) => {
       const mg4 = byModel(vs, "MG4");
@@ -228,7 +253,7 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
       const corsa = byModel(vs, "Corsa Electric");
       const mokka = byModel(vs, "Mokka Electric");
       return {
-        note: `L'autonomie WLTP (${km(corsa.rangeWltp)} et ${km(mokka.rangeWltp)}) et la charge DC (10 → 80 % en ${formatNumber(corsa.chargingTime10to80 ?? 0)} min pour les deux, selon la source) sont trop proches pour distinguer un usage ville/longs trajets : le choix entre Corsa Electric et Mokka Electric tient au format (citadine ou SUV) et au coffre, pas à l'autonomie.`,
+        note: `L'autonomie WLTP (${km(corsa.rangeWltp)} et ${km(mokka.rangeWltp)}) et la charge DC (10 → 80 % en ${formatNumber(corsa.chargingTime10to80 ?? 0)} min pour les deux, selon EV Database) sont trop proches pour distinguer un usage ville/longs trajets : le choix entre Corsa Electric et Mokka Electric tient au format (citadine ou SUV) et au coffre, pas à l'autonomie.`,
       };
     },
   },
@@ -238,17 +263,20 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
       const e208 = byModel(vs, "e-208");
       const e2008 = byModel(vs, "e-2008");
       const e3008 = byModel(vs, "e-3008");
-      return `Peugeot couvre trois gabarits électriques dans notre base : la citadine e-208 (${km(e208.rangeWltp)}), le SUV compact e-2008 (${km(e2008.rangeWltp)}) et le grand SUV e-3008 (${km(e3008.rangeWltp)}, ${kwh(e3008.batteryUsable)} utiles) — sa version « Long Range » explique l'écart d'autonomie de ${formatNumber(e3008.rangeWltp - e208.rangeWltp)} km avec l'e-208, selon la source.`;
+      return `Peugeot couvre trois gabarits électriques dans notre base : la citadine e-208 (${km(e208.rangeWltp)}), le SUV compact e-2008 (${km(e2008.rangeWltp)}) et le grand SUV e-3008 (${km(e3008.rangeWltp)}, ${kwh(e3008.batteryUsable)} utiles) — sa version « Long Range » explique l'écart d'autonomie de ${formatNumber(e3008.rangeWltp - e208.rangeWltp)} km avec l'e-208, selon EV Database.`;
     },
     usage: (vs) => {
       const e208 = byModel(vs, "e-208");
       const e2008 = byModel(vs, "e-2008");
       const e3008 = byModel(vs, "e-3008");
+      const lengths = [e208.dimensions.length, e2008.dimensions.length, e3008.dimensions.length];
+      const ranges = [e208.rangeWltp, e2008.rangeWltp, e3008.rangeWltp];
+      const trunks = [e208.trunkVolume ?? 0, e2008.trunkVolume ?? 0, e3008.trunkVolume ?? 0];
       return {
         points: [
-          { usage: "Ville", text: `L'e-208 est la plus compacte (${formatNumber(e208.dimensions.length)} mm) pour ${km(e208.rangeWltp)} d'autonomie.` },
+          { usage: "Ville", text: `L'e-208${isMin(e208.dimensions.length, lengths) ? " est la plus compacte" : ""} (${formatNumber(e208.dimensions.length)} mm) pour ${km(e208.rangeWltp)} d'autonomie.` },
           { usage: "Usage familial courant", text: `L'e-2008, SUV, ajoute du coffre (${L(e2008.trunkVolume)}) pour une autonomie proche de l'e-208.` },
-          { usage: "Longs trajets et grandes familles", text: `L'e-3008 « Long Range » cumule la plus grande autonomie (${km(e3008.rangeWltp)}) et le plus grand coffre (${L(e3008.trunkVolume)}).` },
+          { usage: "Longs trajets et grandes familles", text: `L'e-3008 « Long Range » cumule${isMax(e3008.rangeWltp, ranges) ? " la plus grande autonomie" : " une autonomie élevée"} (${km(e3008.rangeWltp)}) et${isMax(e3008.trunkVolume ?? 0, trunks) ? " le plus grand coffre" : " un grand coffre"} (${L(e3008.trunkVolume)}).` },
         ],
       };
     },
@@ -261,7 +289,7 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
       const citadines = vs.filter((v) => v.bodyType === "citadine").map((v) => v.model);
       const suvs = vs.filter((v) => v.bodyType === "SUV").map((v) => v.model);
       const compactes = vs.filter((v) => v.bodyType === "compacte").map((v) => v.model);
-      return `Renault propose ${vs.length} modèles électriques dans notre base : des citadines (${citadines.join(", ")}), des SUV (${suvs.join(", ")}) et une compacte (${compactes.join(", ")}), tous à ${driveLabel.FWD}. L'autonomie WLTP s'étend de ${km(twingo.rangeWltp)} pour la Twingo E-Tech, la plus compacte (${formatNumber(twingo.dimensions.length)} mm), à ${km(scenic.rangeWltp)} pour le Scénic E-Tech, pour des batteries utiles de ${kwh(twingo.batteryUsable)} à ${kwh(scenic.batteryUsable)} selon la source.`;
+      return `Renault propose ${vs.length} modèles électriques dans notre base : des citadines (${citadines.join(", ")}), des SUV (${suvs.join(", ")}) et une compacte (${compactes.join(", ")}), tous à ${driveLabel.FWD}. L'autonomie WLTP s'étend de ${km(twingo.rangeWltp)} pour la Twingo E-Tech, la plus compacte (${formatNumber(twingo.dimensions.length)} mm), à ${km(scenic.rangeWltp)} pour le Scénic E-Tech, pour des batteries utiles de ${kwh(twingo.batteryUsable)} à ${kwh(scenic.batteryUsable)} selon EV Database.`;
     },
     usage: (vs) => {
       const twingo = byModel(vs, "Twingo E-Tech");
@@ -276,7 +304,7 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
       };
     },
     pricing: {
-      priceNote: "Les prix d'achat ne sont pas disponibles dans notre base.",
+      costIntro: "Le coût d'usage dépend surtout de la consommation et du tarif de recharge, pas du modèle choisi dans l'absolu.",
       guides: [
         { href: "/guides/calculer-autonomie-reelle", label: "Calculer l'autonomie réelle d'une voiture électrique" },
         { href: "/guides/autonomie-autoroute", label: "Autonomie d'une voiture électrique sur autoroute" },
@@ -306,17 +334,24 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
       const m3rwd = vs.find((v) => v.model === "Model 3" && v.version === "RWD")!;
       const m3lr = vs.find((v) => v.model === "Model 3" && v.version === "Long Range RWD")!;
       const myrwd = vs.find((v) => v.model === "Model Y" && v.version === "RWD")!;
-      return `Tesla est la seule marque de notre base à proposer deux versions par modèle : Model 3 (berline) et Model Y (SUV), chacun en propulsion « RWD » ou en version longue autonomie. Le Model 3 RWD affiche ${km(m3rwd.rangeWltp)}, sa version longue autonomie ${km(m3lr.rangeWltp)} — la plus élevée des quatre versions ; le Model Y RWD (${km(myrwd.rangeWltp)}) a lui le plus grand coffre, ${L(myrwd.trunkVolume)}, selon la source.`;
+      const mylr = vs.find((v) => v.model === "Model Y" && v.version === "Long Range AWD")!;
+      const ranges = [m3rwd.rangeWltp, m3lr.rangeWltp, myrwd.rangeWltp, mylr.rangeWltp];
+      const trunks = [m3rwd.trunkVolume ?? 0, m3lr.trunkVolume ?? 0, myrwd.trunkVolume ?? 0, mylr.trunkVolume ?? 0];
+      const m3lrLead = isMax(m3lr.rangeWltp, ranges) ? " — la plus élevée des quatre versions" : "";
+      const myLead = isMax(myrwd.trunkVolume ?? 0, trunks) ? " a lui le plus grand coffre des quatre versions" : " offre, lui, un grand coffre";
+      return `Tesla est la seule marque de notre base à proposer deux versions par modèle : Model 3 (berline) et Model Y (SUV), chacun en propulsion « RWD » ou en version longue autonomie. Le Model 3 RWD affiche ${km(m3rwd.rangeWltp)}, sa version longue autonomie ${km(m3lr.rangeWltp)}${m3lrLead} ; le Model Y RWD (${km(myrwd.rangeWltp)})${myLead}, ${L(myrwd.trunkVolume)}, selon EV Database.`;
     },
     usage: (vs) => {
       const m3lr = vs.find((v) => v.model === "Model 3" && v.version === "Long Range RWD")!;
       const myrwd = vs.find((v) => v.model === "Model Y" && v.version === "RWD")!;
       const mylr = vs.find((v) => v.model === "Model Y" && v.version === "Long Range AWD")!;
       const m3rwd = vs.find((v) => v.model === "Model 3" && v.version === "RWD")!;
+      const ranges = [m3rwd.rangeWltp, m3lr.rangeWltp, myrwd.rangeWltp, mylr.rangeWltp];
+      const trunks = [m3rwd.trunkVolume ?? 0, m3lr.trunkVolume ?? 0, myrwd.trunkVolume ?? 0, mylr.trunkVolume ?? 0];
       return {
         points: [
-          { usage: "Longs trajets", text: `Le Model 3 Long Range RWD a l'autonomie la plus élevée de la gamme (${km(m3lr.rangeWltp)}).` },
-          { usage: "Usage familial", text: `Le Model Y, quelle que soit la version, a le plus grand coffre (${L(myrwd.trunkVolume)}) ; sa version Long Range AWD (${km(mylr.rangeWltp)}) ajoute la traction intégrale.` },
+          { usage: "Longs trajets", text: `Le Model 3 Long Range RWD a${isMax(m3lr.rangeWltp, ranges) ? " l'autonomie la plus élevée de la gamme" : " une autonomie élevée"} (${km(m3lr.rangeWltp)}).` },
+          { usage: "Usage familial", text: `Le Model Y, quelle que soit la version, a${isMax(myrwd.trunkVolume ?? 0, trunks) ? " le plus grand coffre" : " un grand coffre"} (${L(myrwd.trunkVolume)}) ; sa version Long Range AWD (${km(mylr.rangeWltp)}) ajoute la traction intégrale.` },
           { usage: "Usage quotidien", text: `Les versions RWD de base (Model 3 : ${km(m3rwd.rangeWltp)}, Model Y : ${km(myrwd.rangeWltp)}) rechargent 10 → 80 % en ${formatNumber(m3rwd.chargingTime10to80 ?? 0)} min, plus vite que les versions longue autonomie (${formatNumber(m3lr.chargingTime10to80 ?? 0)} min).` },
         ],
       };
@@ -327,7 +362,9 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
     intro: (vs) => {
       const id4 = byModel(vs, "ID.4");
       const id7 = byModel(vs, "ID.7");
-      return `L'ID.4 (SUV, ${km(id4.rangeWltp)}) et l'ID.7 (berline, ${km(id7.rangeWltp)}) partagent la même transmission (${driveLabel[id4.drive]}) chez Volkswagen ; l'ID.7 a l'autonomie WLTP la plus élevée des deux, avec ${formatNumber(id7.rangeWltp - id4.rangeWltp)} km d'écart selon la source, pour une batterie utile plus grande (${kwh(id7.batteryUsable)} contre ${kwh(id4.batteryUsable)}).`;
+      const ecart = formatNumber(Math.abs(id7.rangeWltp - id4.rangeWltp));
+      const lead = id7.rangeWltp > id4.rangeWltp ? `l'ID.7 a l'autonomie WLTP la plus élevée des deux, avec ${ecart} km d'écart` : `l'ID.4 a l'autonomie WLTP la plus élevée des deux, avec ${ecart} km d'écart`;
+      return `L'ID.4 (SUV, ${km(id4.rangeWltp)}) et l'ID.7 (berline, ${km(id7.rangeWltp)}) partagent la même transmission (${driveLabel[id4.drive]}) chez Volkswagen ; ${lead} selon EV Database, pour une batterie utile ${id7.batteryUsable > id4.batteryUsable ? "plus grande" : "plus petite"} (${kwh(id7.batteryUsable)} contre ${kwh(id4.batteryUsable)}).`;
     },
     usage: (vs) => {
       const id4 = byModel(vs, "ID.4");
@@ -335,7 +372,7 @@ export const BRAND_CONTENT: Record<string, BrandContent> = {
       return {
         points: [
           { usage: "Usage quotidien et familial", text: `L'ID.4, SUV, offre ${L(id4.trunkVolume)} de coffre pour ${km(id4.rangeWltp)} d'autonomie.` },
-          { usage: "Longs trajets", text: `L'ID.7, berline, atteint ${km(id7.rangeWltp)} d'autonomie WLTP, la plus élevée des deux.` },
+          { usage: "Longs trajets", text: `L'ID.7, berline, atteint ${km(id7.rangeWltp)} d'autonomie WLTP${isMax(id7.rangeWltp, [id4.rangeWltp, id7.rangeWltp]) ? ", la plus élevée des deux" : ""}.` },
         ],
       };
     },

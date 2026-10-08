@@ -37,14 +37,14 @@ export function vehicleFaq(v: Vehicle): FaqItem[] {
   const items: FaqItem[] = [
     {
       question: `Quelle est l'autonomie WLTP de la ${vehicleTitle(v)} ?`,
-      answer: `La source indique ${formatNumber(v.rangeWltp)} km en cycle WLTP mixte pour une batterie de ${formatNumber(v.batteryUsable, 1)} kWh utiles. L'autonomie réelle dépend de la vitesse, de la température et du type de trajet : les estimations EVExpert par scénario figurent plus haut sur cette page.`,
+      answer: `EV Database indique ${formatNumber(v.rangeWltp)} km en cycle WLTP mixte pour une batterie de ${formatNumber(v.batteryUsable, 1)} kWh utiles. L'autonomie réelle dépend de la vitesse, de la température et du type de trajet : les estimations EVExpert par scénario figurent plus haut sur cette page.`,
     },
     {
       question: `Quelle puissance de recharge accepte la ${vehicleTitle(v)} ?`,
       answer:
         v.chargingDC !== null
-          ? `Elle accepte jusqu'à ${formatNumber(v.chargingAC, 1)} kW en courant alternatif (AC) et jusqu'à ${formatNumber(v.chargingDC)} kW en courant continu (DC)${v.chargingTime10to80 ? `, avec un temps de charge de 10 à 80 % de ${formatNumber(v.chargingTime10to80)} minutes selon la source` : ""}.`
-          : `Elle accepte jusqu'à ${formatNumber(v.chargingAC, 1)} kW en courant alternatif (AC). La puissance DC maximale n'est pas disponible dans notre source.`,
+          ? `Elle accepte jusqu'à ${formatNumber(v.chargingAC, 1)} kW en courant alternatif (AC) et jusqu'à ${formatNumber(v.chargingDC)} kW en courant continu (DC)${v.chargingTime10to80 ? `, avec un temps de charge de 10 à 80 % de ${formatNumber(v.chargingTime10to80)} minutes selon EV Database` : ""}.`
+          : `Elle accepte jusqu'à ${formatNumber(v.chargingAC, 1)} kW en courant alternatif (AC). La puissance DC maximale n'est pas disponible dans notre base.`,
     },
     {
       question: `Combien coûte 100 km en ${v.brand} ${v.model} ?`,
@@ -134,7 +134,7 @@ export function VehicleDetail({
         dek={
           <>
             {vehicleTitle(v)} ({v.years}) : {v.bodyType} électrique {v.seats} places, {driveLabel[v.drive].toLowerCase()}, batterie de{" "}
-            {fmt(v.batteryUsable, "kWh", 1)} utiles pour {fmt(v.rangeWltp, "km")} d&apos;autonomie WLTP selon la source, recharge AC jusqu&apos;à{" "}
+            {fmt(v.batteryUsable, "kWh", 1)} utiles pour {fmt(v.rangeWltp, "km")} d&apos;autonomie WLTP selon EV Database, recharge AC jusqu&apos;à{" "}
             {fmt(v.chargingAC, "kW", 1)}
             {v.chargingDC ? ` et DC jusqu'à ${fmt(v.chargingDC, "kW")}` : ""}.
           </>

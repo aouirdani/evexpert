@@ -110,7 +110,7 @@ export function BrandOverview({
       {content?.pricing && (
         <section className="mt-section" aria-labelledby="cout-usage-titre">
           <h2 id="cout-usage-titre" className="text-h2 font-bold text-ink">Coût d&apos;usage</h2>
-          <p className="pretty mt-6 max-w-3xl text-body">{content.pricing.priceNote}</p>
+          <p className="pretty mt-6 max-w-3xl text-body">{content.pricing.costIntro}</p>
           <p className="pretty mt-4 max-w-3xl text-body">
             L&apos;énergie coûte de{" "}
             <span className="num font-semibold text-ink">{formatEuro(Math.min(...costs), 2)}</span> à{" "}
