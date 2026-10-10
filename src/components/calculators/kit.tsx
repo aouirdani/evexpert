@@ -2,6 +2,8 @@
 
 import type { ReactNode } from "react";
 import { cx } from "@/lib/cx";
+import { comfortableFieldClass, numberFieldClass, numberFieldFrameClass, rangeFieldClass } from "@/components/ui/Field";
+import { inputPanelClass, resultPanelClass } from "@/components/ui/componentStyles";
 
 export function Field({
   label,
@@ -15,12 +17,12 @@ export function Field({
   children: ReactNode;
 }) {
   return (
-    <div className="flex flex-col gap-1.5">
+    <div className="flex min-w-0 flex-col gap-1.5">
       <label htmlFor={htmlFor} className="text-sm font-semibold text-ink">
         {label}
       </label>
       {children}
-      {hint && <p className="text-caption text-muted">{hint}</p>}
+      {hint && <p id={`${htmlFor}-hint`} className="text-caption text-muted">{hint}</p>}
     </div>
   );
 }
@@ -33,6 +35,7 @@ export function NumberInput({
   max,
   step = 1,
   suffix,
+  "aria-describedby": describedBy,
 }: {
   id: string;
   value: number;
@@ -41,11 +44,13 @@ export function NumberInput({
   max?: number;
   step?: number;
   suffix?: string;
+  "aria-describedby"?: string;
 }) {
   return (
-    <div className="relative">
+    <div className={numberFieldFrameClass}>
       <input
         id={id}
+        aria-describedby={describedBy}
         type="number"
         inputMode="decimal"
         value={Number.isFinite(value) ? value : ""}
@@ -53,10 +58,10 @@ export function NumberInput({
         max={max}
         step={step}
         onChange={(e) => onChange(parseFloat(e.target.value))}
-        className="w-full rounded-md border border-control bg-surface px-4 py-3 text-base text-ink focus-visible:border-signal-deep"
+        className={numberFieldClass}
       />
       {suffix && (
-        <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm text-muted">
+        <span className="num pointer-events-none mr-3 whitespace-nowrap text-caption text-muted">
           {suffix}
         </span>
       )}
@@ -72,6 +77,7 @@ export function RangeInputControl({
   max,
   step = 1,
   suffix,
+  "aria-describedby": describedBy,
 }: {
   id: string;
   value: number;
@@ -80,20 +86,22 @@ export function RangeInputControl({
   max: number;
   step?: number;
   suffix?: string;
+  "aria-describedby"?: string;
 }) {
   return (
     <div>
       <input
         id={id}
+        aria-describedby={describedBy}
         type="range"
         value={value}
         min={min}
         max={max}
         step={step}
         onChange={(e) => onChange(parseFloat(e.target.value))}
-        className="w-full accent-signal-deep"
+        className={rangeFieldClass}
       />
-      <div className="mt-1 text-sm font-semibold text-ink">
+      <div className="num mt-1 text-sm font-semibold text-ink">
         {value}
         {suffix ? ` ${suffix}` : ""}
       </div>
@@ -117,7 +125,7 @@ export function SelectInput<T extends string>({
       id={id}
       value={value}
       onChange={(e) => onChange(e.target.value as T)}
-      className="w-full rounded-md border border-control bg-surface px-4 py-3 text-base text-ink focus-visible:border-signal-deep"
+      className={comfortableFieldClass}
     >
       {options.map((o) => (
         <option key={o.value} value={o.value}>
@@ -141,7 +149,7 @@ export function ResultCard({
   hint?: string;
 }) {
   return (
-    <div className="border-t border-line-ink pt-5">
+    <div className="min-w-0 border-t border-line-ink pt-5">
       <p className="label text-ink-muted">{label}</p>
       <p className={cx("num mt-2.5 font-bold", emphasis ? "text-data-xl text-signal" : "text-data-lg text-paper")}>{value}</p>
       {hint && <p className="num mt-2 text-sm text-ink-muted">{hint}</p>}
@@ -159,11 +167,11 @@ export function CalcLayout({
 }) {
   return (
     <div className="grid gap-6 lg:grid-cols-2">
-      <div className="rounded-2xl border border-line bg-surface p-7 sm:p-9">
+      <div className={inputPanelClass}>
         <h2 className="label">Vos paramètres</h2>
         <div className="mt-6 space-y-6">{inputs}</div>
       </div>
-      <div className="on-ink rounded-2xl bg-ink p-7 text-paper sm:p-9" aria-live="polite">
+      <div className={resultPanelClass} aria-live="polite">
         <h2 className="label text-ink-muted">Résultats</h2>
         <div className="mt-6 space-y-6">{results}</div>
       </div>
@@ -203,12 +211,13 @@ export function VehiclePresetSelect({
     <Field label="Préremplir avec un modèle (facultatif)" htmlFor={id} hint={hint}>
       <select
         id={id}
+        aria-describedby={hint ? `${id}-hint` : undefined}
         defaultValue=""
         onChange={(e) => {
           const p = presets.find((x) => x.id === e.target.value);
           if (p) onPick(p);
         }}
-        className="w-full rounded-md border border-control bg-surface px-4 py-3 text-base text-ink focus-visible:border-signal-deep"
+        className={comfortableFieldClass}
       >
         <option value="">Saisie manuelle</option>
         {presets.map((p) => (

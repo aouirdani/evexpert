@@ -6,6 +6,7 @@ import { buildBatteryGuides } from "./batterie";
 import { decorateGuides } from "@/data/editorial/decorate";
 import { makeGuideContext } from "./helpers";
 import { buildNewGuides } from "./nouveaux";
+import { buildOccasionGuides } from "./occasion";
 import { buildRechargeGuides } from "./recharge";
 import { buildUsageGuides } from "./usage";
 
@@ -21,7 +22,7 @@ export async function getGuides(): Promise<Guide[]> {
   if (!guides) {
     const ctx = makeGuideContext(catalog.vehicles);
     guides = decorateGuides(
-      [...buildAutonomieGuides(ctx), ...buildRechargeGuides(ctx), ...buildUsageGuides(ctx), ...buildNewGuides(ctx), ...buildBatteryGuides(ctx)],
+      [...buildAutonomieGuides(ctx), ...buildRechargeGuides(ctx), ...buildUsageGuides(ctx), ...buildNewGuides(ctx), ...buildBatteryGuides(ctx), ...buildOccasionGuides(ctx)],
       catalog.vehicles,
     );
     cache.set(catalog, guides);

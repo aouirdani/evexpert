@@ -1,0 +1,746 @@
+[
+  {
+    "path": "/",
+    "device": "mobile",
+    "metrics": {
+      "score": {
+        "before": 95,
+        "after": 95,
+        "rangeBefore": [
+          95,
+          95
+        ],
+        "rangeAfter": [
+          95,
+          95
+        ]
+      },
+      "fcp": {
+        "before": 908.1649,
+        "after": 905.3094000000001,
+        "rangeBefore": [
+          906.9483999999998,
+          909.3443
+        ],
+        "rangeAfter": [
+          905.1315,
+          905.3643999999999
+        ]
+      },
+      "lcp": {
+        "before": 2939.0233499999995,
+        "after": 2933.0434499999997,
+        "rangeBefore": [
+          2935.4985,
+          3012.2473500000006
+        ],
+        "rangeAfter": [
+          2932.6972499999993,
+          2933.4260999999997
+        ]
+      },
+      "tbt": {
+        "before": 19,
+        "after": 10.5,
+        "rangeBefore": [
+          16.5,
+          26
+        ],
+        "rangeAfter": [
+          7.5,
+          13.5
+        ]
+      },
+      "cls": {
+        "before": 0,
+        "after": 0,
+        "rangeBefore": [
+          0,
+          0
+        ],
+        "rangeAfter": [
+          0,
+          0
+        ]
+      },
+      "accessibility": {
+        "before": 100,
+        "after": 100,
+        "rangeBefore": [
+          100,
+          100
+        ],
+        "rangeAfter": [
+          100,
+          100
+        ]
+      }
+    },
+    "localScriptTransfers": {
+      "before": 192312,
+      "after": 193175,
+      "delta": 863
+    },
+    "scoresBefore": [
+      95,
+      95,
+      95
+    ],
+    "scoresAfter": [
+      95,
+      95,
+      95
+    ]
+  },
+  {
+    "path": "/",
+    "device": "desktop",
+    "metrics": {
+      "score": {
+        "before": 100,
+        "after": 100,
+        "rangeBefore": [
+          94,
+          100
+        ],
+        "rangeAfter": [
+          100,
+          100
+        ]
+      },
+      "fcp": {
+        "before": 245.80519999999996,
+        "after": 243.58209999999997,
+        "rangeBefore": [
+          245.75089999999997,
+          246.638
+        ],
+        "rangeAfter": [
+          243.05650000000003,
+          244.02059999999994
+        ]
+      },
+      "lcp": {
+        "before": 628.753925,
+        "after": 625.408025,
+        "rangeBefore": [
+          628.6762249999999,
+          1677.9761749999998
+        ],
+        "rangeAfter": [
+          624.621875,
+          626.30315
+        ]
+      },
+      "tbt": {
+        "before": 0,
+        "after": 0,
+        "rangeBefore": [
+          0,
+          0
+        ],
+        "rangeAfter": [
+          0,
+          0
+        ]
+      },
+      "cls": {
+        "before": 0,
+        "after": 0,
+        "rangeBefore": [
+          0,
+          0
+        ],
+        "rangeAfter": [
+          0,
+          0
+        ]
+      },
+      "accessibility": {
+        "before": 100,
+        "after": 100,
+        "rangeBefore": [
+          100,
+          100
+        ],
+        "rangeAfter": [
+          100,
+          100
+        ]
+      }
+    },
+    "localScriptTransfers": {
+      "before": 213747,
+      "after": 214610,
+      "delta": 863
+    },
+    "scoresBefore": [
+      100,
+      100,
+      94
+    ],
+    "scoresAfter": [
+      100,
+      100,
+      100
+    ]
+  },
+  {
+    "path": "/voitures-electriques",
+    "device": "mobile",
+    "metrics": {
+      "score": {
+        "before": 96,
+        "after": 96,
+        "rangeBefore": [
+          96,
+          96
+        ],
+        "rangeAfter": [
+          96,
+          96
+        ]
+      },
+      "fcp": {
+        "before": 904.6116000000001,
+        "after": 902.7492,
+        "rangeBefore": [
+          903.7828,
+          905.3184999999999
+        ],
+        "rangeAfter": [
+          902.4740999999999,
+          903.0474000000002
+        ]
+      },
+      "lcp": {
+        "before": 2708.14925,
+        "after": 2854.1881500000004,
+        "rangeBefore": [
+          2706.9593999999997,
+          2855.7335999999996
+        ],
+        "rangeAfter": [
+          2853.71115,
+          2854.9043999999994
+        ]
+      },
+      "tbt": {
+        "before": 22,
+        "after": 11,
+        "rangeBefore": [
+          11,
+          23.5
+        ],
+        "rangeAfter": [
+          10.5,
+          12
+        ]
+      },
+      "cls": {
+        "before": 0,
+        "after": 0,
+        "rangeBefore": [
+          0,
+          0
+        ],
+        "rangeAfter": [
+          0,
+          0
+        ]
+      },
+      "accessibility": {
+        "before": 100,
+        "after": 100,
+        "rangeBefore": [
+          100,
+          100
+        ],
+        "rangeAfter": [
+          100,
+          100
+        ]
+      }
+    },
+    "localScriptTransfers": {
+      "before": 193039,
+      "after": 193884,
+      "delta": 845
+    },
+    "scoresBefore": [
+      96,
+      96,
+      96
+    ],
+    "scoresAfter": [
+      96,
+      96,
+      96
+    ]
+  },
+  {
+    "path": "/comparer",
+    "device": "mobile",
+    "metrics": {
+      "score": {
+        "before": 95,
+        "after": 96,
+        "rangeBefore": [
+          95,
+          99
+        ],
+        "rangeAfter": [
+          96,
+          96
+        ]
+      },
+      "fcp": {
+        "before": 906.4208,
+        "after": 903.3184999999999,
+        "rangeBefore": [
+          905.8307,
+          908.5788
+        ],
+        "rangeAfter": [
+          903.2848,
+          905.1004
+        ]
+      },
+      "lcp": {
+        "before": 2860.0535999999997,
+        "after": 2855.3556,
+        "rangeBefore": [
+          2258.8017,
+          2863.0266
+        ],
+        "rangeAfter": [
+          2854.983300000001,
+          2857.70505
+        ]
+      },
+      "tbt": {
+        "before": 19.5,
+        "after": 8,
+        "rangeBefore": [
+          11,
+          20
+        ],
+        "rangeAfter": [
+          7.5,
+          9.499999999999545
+        ]
+      },
+      "cls": {
+        "before": 0,
+        "after": 0,
+        "rangeBefore": [
+          0,
+          0
+        ],
+        "rangeAfter": [
+          0,
+          0
+        ]
+      },
+      "accessibility": {
+        "before": 100,
+        "after": 100,
+        "rangeBefore": [
+          100,
+          100
+        ],
+        "rangeAfter": [
+          100,
+          100
+        ]
+      }
+    },
+    "localScriptTransfers": {
+      "before": 190027,
+      "after": 190045,
+      "delta": 18
+    },
+    "scoresBefore": [
+      95,
+      95,
+      99
+    ],
+    "scoresAfter": [
+      96,
+      96,
+      96
+    ]
+  },
+  {
+    "path": "/outils/tco-voiture-electrique",
+    "device": "mobile",
+    "metrics": {
+      "score": {
+        "before": 95,
+        "after": 96,
+        "rangeBefore": [
+          95,
+          96
+        ],
+        "rangeAfter": [
+          96,
+          96
+        ]
+      },
+      "fcp": {
+        "before": 908.2421999999999,
+        "after": 905.115,
+        "rangeBefore": [
+          906.3136999999998,
+          908.6976999999999
+        ],
+        "rangeAfter": [
+          904.4935,
+          905.3389
+        ]
+      },
+      "lcp": {
+        "before": 2859.4875999999995,
+        "after": 2858.0146000000004,
+        "rangeBefore": [
+          2713.04655,
+          2862.3633000000004
+        ],
+        "rangeAfter": [
+          2856.74025,
+          2858.3977499999996
+        ]
+      },
+      "tbt": {
+        "before": 17.5,
+        "after": 11.5,
+        "rangeBefore": [
+          16,
+          23
+        ],
+        "rangeAfter": [
+          10.5,
+          13
+        ]
+      },
+      "cls": {
+        "before": 0,
+        "after": 0,
+        "rangeBefore": [
+          0,
+          0
+        ],
+        "rangeAfter": [
+          0,
+          0
+        ]
+      },
+      "accessibility": {
+        "before": 100,
+        "after": 100,
+        "rangeBefore": [
+          100,
+          100
+        ],
+        "rangeAfter": [
+          100,
+          100
+        ]
+      }
+    },
+    "localScriptTransfers": {
+      "before": 188807,
+      "after": 188807,
+      "delta": 0
+    },
+    "scoresBefore": [
+      96,
+      95,
+      95
+    ],
+    "scoresAfter": [
+      96,
+      96,
+      96
+    ]
+  },
+  {
+    "path": "/voitures-electriques",
+    "device": "desktop",
+    "metrics": {
+      "score": {
+        "before": 100,
+        "after": 100,
+        "rangeBefore": [
+          100,
+          100
+        ],
+        "rangeAfter": [
+          100,
+          100
+        ]
+      },
+      "fcp": {
+        "before": 245.4678,
+        "after": 242.68529999999998,
+        "rangeBefore": [
+          243.6979,
+          245.4851
+        ],
+        "rangeAfter": [
+          242.53170000000006,
+          243.2504
+        ]
+      },
+      "lcp": {
+        "before": 608.2276499999999,
+        "after": 604.274,
+        "rangeBefore": [
+          605.76525,
+          608.4767999999999
+        ],
+        "rangeAfter": [
+          603.8353500000001,
+          604.90395
+        ]
+      },
+      "tbt": {
+        "before": 0,
+        "after": 0,
+        "rangeBefore": [
+          0,
+          0
+        ],
+        "rangeAfter": [
+          0,
+          0
+        ]
+      },
+      "cls": {
+        "before": 0,
+        "after": 0,
+        "rangeBefore": [
+          0,
+          0
+        ],
+        "rangeAfter": [
+          0,
+          0
+        ]
+      },
+      "accessibility": {
+        "before": 100,
+        "after": 100,
+        "rangeBefore": [
+          100,
+          100
+        ],
+        "rangeAfter": [
+          100,
+          100
+        ]
+      }
+    },
+    "localScriptTransfers": {
+      "before": 227429,
+      "after": 228292,
+      "delta": 863
+    },
+    "scoresBefore": [
+      100,
+      100,
+      100
+    ],
+    "scoresAfter": [
+      100,
+      100,
+      100
+    ]
+  },
+  {
+    "path": "/voitures-electriques/renault",
+    "device": "mobile",
+    "metrics": {
+      "score": {
+        "before": 95,
+        "after": 96,
+        "rangeBefore": [
+          95,
+          96
+        ],
+        "rangeAfter": [
+          96,
+          96
+        ]
+      },
+      "fcp": {
+        "before": 908.3866999999999,
+        "after": 904.4984,
+        "rangeBefore": [
+          907.1662000000001,
+          908.9060999999997
+        ],
+        "rangeAfter": [
+          904.3303000000001,
+          905.9138
+        ]
+      },
+      "lcp": {
+        "before": 2861.1354,
+        "after": 2856.801499999999,
+        "rangeBefore": [
+          2712.6325500000003,
+          2863.7655999999997
+        ],
+        "rangeAfter": [
+          2856.5762999999997,
+          2858.91525
+        ]
+      },
+      "tbt": {
+        "before": 17.5,
+        "after": 12,
+        "rangeBefore": [
+          17,
+          20
+        ],
+        "rangeAfter": [
+          7,
+          12.5
+        ]
+      },
+      "cls": {
+        "before": 0,
+        "after": 0,
+        "rangeBefore": [
+          0,
+          0
+        ],
+        "rangeAfter": [
+          0,
+          0
+        ]
+      },
+      "accessibility": {
+        "before": 100,
+        "after": 100,
+        "rangeBefore": [
+          100,
+          100
+        ],
+        "rangeAfter": [
+          100,
+          100
+        ]
+      }
+    },
+    "localScriptTransfers": {
+      "before": 192146,
+      "after": 187426,
+      "delta": -4720
+    },
+    "scoresBefore": [
+      95,
+      95,
+      96
+    ],
+    "scoresAfter": [
+      96,
+      96,
+      96
+    ]
+  },
+  {
+    "path": "/voitures-electriques/tesla/model-3",
+    "device": "mobile",
+    "metrics": {
+      "score": {
+        "before": 95,
+        "after": 96,
+        "rangeBefore": [
+          95,
+          96
+        ],
+        "rangeAfter": [
+          96,
+          96
+        ]
+      },
+      "fcp": {
+        "before": 907.1896,
+        "after": 904.8217999999999,
+        "rangeBefore": [
+          906.4523000000002,
+          907.2257
+        ],
+        "rangeAfter": [
+          904.0304000000001,
+          905.1460000000001
+        ]
+      },
+      "lcp": {
+        "before": 2859.7477500000005,
+        "after": 2857.2327000000005,
+        "rangeBefore": [
+          2710.8173999999995,
+          2860.9161
+        ],
+        "rangeAfter": [
+          2856.10005,
+          2857.7751
+        ]
+      },
+      "tbt": {
+        "before": 18.5,
+        "after": 10.5,
+        "rangeBefore": [
+          17.5,
+          21
+        ],
+        "rangeAfter": [
+          8.999999999999545,
+          11.5
+        ]
+      },
+      "cls": {
+        "before": 0,
+        "after": 0,
+        "rangeBefore": [
+          0,
+          0
+        ],
+        "rangeAfter": [
+          0,
+          0
+        ]
+      },
+      "accessibility": {
+        "before": 100,
+        "after": 100,
+        "rangeBefore": [
+          100,
+          100
+        ],
+        "rangeAfter": [
+          100,
+          100
+        ]
+      }
+    },
+    "localScriptTransfers": {
+      "before": 192146,
+      "after": 192991,
+      "delta": 845
+    },
+    "scoresBefore": [
+      96,
+      95,
+      95
+    ],
+    "scoresAfter": [
+      96,
+      96,
+      96
+    ]
+  }
+]

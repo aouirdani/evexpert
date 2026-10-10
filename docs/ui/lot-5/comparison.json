@@ -1,0 +1,21 @@
+{
+  "seo": true,
+  "assetsAndRedirects": true,
+  "calculators": true,
+  "accessibleTables": true,
+  "interactions": true,
+  "heroBehavior": true,
+  "responsiveNoOverflow": true,
+  "otherPagesGeometry": true,
+  "adReservations": true,
+  "browserErrors": [],
+  "homeInteractions": true,
+  "homeBrowserErrors": [],
+  "semanticStructure": true,
+  "heroGeometryIdentical": true,
+  "internal-links-check": true,
+  "editorial-toc-settled": true,
+  "hero-geometry": true,
+  "footerKeyboardFunctionAndDimensions": true,
+  "footerViewportYVariationPx": 2.0
+}

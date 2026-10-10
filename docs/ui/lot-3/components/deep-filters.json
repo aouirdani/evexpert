@@ -1,0 +1,128 @@
+[
+  {
+    "width": 320,
+    "height": 640,
+    "before": {
+      "y": 107,
+      "expanded": "false"
+    },
+    "after": {
+      "expanded": "true",
+      "buttonY": -4592.703125,
+      "buttonVisible": false,
+      "formY": -4524.703125,
+      "formH": 381,
+      "panelH": 509,
+      "panelClient": 507,
+      "panelScroll": 507,
+      "global": 320,
+      "inner": 320,
+      "url": "/voitures-electriques"
+    }
+  },
+  {
+    "width": 320,
+    "height": 900,
+    "before": {
+      "y": 107,
+      "expanded": "false"
+    },
+    "after": {
+      "expanded": "true",
+      "buttonY": -4462.703125,
+      "buttonVisible": false,
+      "formY": -4394.703125,
+      "formH": 381,
+      "panelH": 509,
+      "panelClient": 507,
+      "panelScroll": 507,
+      "global": 320,
+      "inner": 320,
+      "url": "/voitures-electriques"
+    }
+  },
+  {
+    "width": 390,
+    "height": 640,
+    "before": {
+      "y": 107,
+      "expanded": "false"
+    },
+    "after": {
+      "expanded": "true",
+      "buttonY": -4302.5625,
+      "buttonVisible": false,
+      "formY": -4234.5625,
+      "formH": 381,
+      "panelH": 509,
+      "panelClient": 507,
+      "panelScroll": 507,
+      "global": 390,
+      "inner": 390,
+      "url": "/voitures-electriques"
+    }
+  },
+  {
+    "width": 390,
+    "height": 900,
+    "before": {
+      "y": 107,
+      "expanded": "false"
+    },
+    "after": {
+      "expanded": "true",
+      "buttonY": -4172.5625,
+      "buttonVisible": false,
+      "formY": -4104.5625,
+      "formH": 381,
+      "panelH": 509,
+      "panelClient": 507,
+      "panelScroll": 507,
+      "global": 390,
+      "inner": 390,
+      "url": "/voitures-electriques"
+    }
+  },
+  {
+    "width": 768,
+    "height": 640,
+    "before": {
+      "y": 107,
+      "expanded": "false"
+    },
+    "after": {
+      "expanded": "true",
+      "buttonY": -2332.578125,
+      "buttonVisible": false,
+      "formY": -2264.578125,
+      "formH": 381,
+      "panelH": 509,
+      "panelClient": 507,
+      "panelScroll": 507,
+      "global": 768,
+      "inner": 768,
+      "url": "/voitures-electriques"
+    }
+  },
+  {
+    "width": 768,
+    "height": 900,
+    "before": {
+      "y": 107,
+      "expanded": "false"
+    },
+    "after": {
+      "expanded": "true",
+      "buttonY": -2202.578125,
+      "buttonVisible": false,
+      "formY": -2134.578125,
+      "formH": 381,
+      "panelH": 509,
+      "panelClient": 507,
+      "panelScroll": 507,
+      "global": 768,
+      "inner": 768,
+      "url": "/voitures-electriques"
+    }
+  }
+]

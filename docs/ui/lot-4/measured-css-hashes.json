@@ -1,0 +1,12 @@
+{
+  "measured_assets": {
+    "12iwg6uklehze.css": 71725
+  },
+  "final_assets": {
+    "12iwg6uklehze.css": {
+      "bytes": 71725,
+      "sha256": "53548e13bd31cca53745d16fd8bace12dfa1d79aea7af53d58ca7bfaa2668c5e"
+    }
+  },
+  "same_filenames_and_sizes": true
+}

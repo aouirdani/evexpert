@@ -1,0 +1,2206 @@
+[
+  {
+    "repeat": 1,
+    "pair": 1,
+    "path": "/",
+    "device": "desktop",
+    "buildId": "vOyU91A6qh5gw4aZqf0pg",
+    "score": 93,
+    "accessibility": 100,
+    "fcp": 246.28559999999996,
+    "lcp": 1714.8385749999993,
+    "cls": 0,
+    "tbt": 0,
+    "lcpElement": "<video muted=\"\" loop=\"\" playsinline=\"\" preload=\"none\" aria-hidden=\"true\" tabindex=\"-1\" disablepictureinpicture=\"\" disableremoteplayback=\"\" class=\"h-full w-full object-cover object-right\" src=\"/brand/video.mp4\" data-playing=\"\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "desktop",
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": false,
+        "width": 1350,
+        "height": 940,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "network": [
+      {
+        "url": "http://localhost:3102/",
+        "resourceType": "Document",
+        "transferSize": 35098,
+        "resourceSize": 262047
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/23b7a97ae3b5c134-s.p.0o14nraug8u5s.woff2",
+        "resourceType": "Font",
+        "transferSize": 10594,
+        "resourceSize": 10120
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/99e609270109b47d-s.p.16-z~2sp29ex6.woff2",
+        "resourceType": "Font",
+        "transferSize": 10526,
+        "resourceSize": 10052
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/SchibstedGrotesk_latin_var-s.p.0magfa.1.zbwp.woff2",
+        "resourceType": "Font",
+        "transferSize": 36590,
+        "resourceSize": 36116
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/a7e15459c1805da0-s.p.15mmg7gamto4l.woff2",
+        "resourceType": "Font",
+        "transferSize": 10602,
+        "resourceSize": 10128
+      },
+      {
+        "url": "http://localhost:3102/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&w=1080&q=75",
+        "resourceType": "Image",
+        "transferSize": 43286,
+        "resourceSize": 42683
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/07kb922s295wf.css",
+        "resourceType": "Stylesheet",
+        "transferSize": 15214,
+        "resourceSize": 75070
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "resourceType": "Script",
+        "transferSize": 8379,
+        "resourceSize": 24965
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "resourceType": "Script",
+        "transferSize": 9809,
+        "resourceSize": 44394
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "resourceType": "Script",
+        "transferSize": 71347,
+        "resourceSize": 226343
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "resourceType": "Script",
+        "transferSize": 41018,
+        "resourceSize": 150336
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "resourceType": "Script",
+        "transferSize": 4715,
+        "resourceSize": 10580
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "resourceType": "Script",
+        "transferSize": 8096,
+        "resourceSize": 20481
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "resourceType": "Script",
+        "transferSize": 13439,
+        "resourceSize": 54624
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "resourceType": "Script",
+        "transferSize": 1953,
+        "resourceSize": 3027
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "resourceType": "Script",
+        "transferSize": 9346,
+        "resourceSize": 28484
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "resourceType": "Script",
+        "transferSize": 1276,
+        "resourceSize": 1605
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "resourceType": "Script",
+        "transferSize": 7694,
+        "resourceSize": 18426
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "resourceType": "Script",
+        "transferSize": 57256,
+        "resourceSize": 166269
+      },
+      {
+        "url": "http://localhost:3102/manifest.webmanifest",
+        "resourceType": "Manifest",
+        "transferSize": 1211,
+        "resourceSize": 694
+      },
+      {
+        "url": "http://localhost:3102/brand/favicon.ico",
+        "resourceType": "Other",
+        "transferSize": 1697,
+        "resourceSize": 1167
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/getconfig/abg_config?client=ca-pub-7903460199253248&plah=localhost&ama_t=adsense&bust=122881439",
+        "resourceType": "Fetch",
+        "transferSize": 30,
+        "resourceSize": 3
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610060101/show_ads_impl_fy2021.js?bust=122881439",
+        "resourceType": "Script",
+        "transferSize": 168485,
+        "resourceSize": 512049
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 1018,
+        "resourceSize": 906
+      },
+      {
+        "url": "http://localhost:3102/voitures-electriques?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 984,
+        "resourceSize": 794
+      },
+      {
+        "url": "http://localhost:3102/comparer?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 974,
+        "resourceSize": 782
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 972,
+        "resourceSize": 778
+      },
+      {
+        "url": "http://localhost:3102/guides?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 973,
+        "resourceSize": 780
+      },
+      {
+        "url": "http://localhost:3102/recharge?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 974,
+        "resourceSize": 782
+      },
+      {
+        "url": "http://localhost:3102/a-propos?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 944,
+        "resourceSize": 782
+      },
+      {
+        "url": "http://localhost:3102/sources?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 973,
+        "resourceSize": 781
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/html/r20261007/r20190131/zrt_lookup_fy2021.html",
+        "resourceType": "Document",
+        "transferSize": 3912,
+        "resourceSize": 8586
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-7903460199253248&output=html&adk=1812271804&adf=3025194257&abgtt=6&lmt=1791629716&plat=3%3A16%2C4%3A16%2C9%3A134250504%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32%2C44%3A32&format=0x0&url=http%3A%2F%2Flocalhost%3A3102%2F&pra=5&aiof=14&asro=0&itsi=-1&aimartd=4&aieuf=1&aicrs=1&uach=WyJtYWNPUyIsIjEwLjE1LjciLCJ4ODYiLCIiLCIxMzYuMC4wLjAiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxNTQuMC44MDM3Ljk4Il0sWyJHb29nbGUgQ2hyb21lIiwiMTU0LjAuODAzNy45OCJdLFsiTm90IEEoQnJhbmQiLCI5OS4wLjAuMCJdXSwwXQ..&dt=1791629716504&bpp=1&bdt=126&idt=40&shv=r20261007&mjsv=m202610060101&ptt=9&saldr=aa&abxe=1&eoidce=1&nras=1&correlator=3991402005903&frm=20&pv=2&u_tz=120&u_his=2&u_h=600&u_w=800&u_ah=600&u_aw=800&u_cd=24&u_sd=1&dmc=32&adx=-12245933&ady=-12245933&biw=1350&bih=940&scr_x=0&scr_y=0&eid=95404823%2C95404845%2C95405492%2C122881439&oid=2&pvsid=8829037925250372&tmod=749961318&uas=0&nvt=1&fsapi=1&fc=1920&brdim=22%2C22%2C22%2C22%2C800%2C0%2C756%2C556%2C1350%2C940&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=0.56&pgls=CAk.&ifi=1&uci=a!1&fsb=1&dtd=56",
+        "resourceType": "Document",
+        "transferSize": 65,
+        "resourceSize": 603
+      },
+      {
+        "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261007&st=env&sjk=8829037925250372",
+        "resourceType": "XHR",
+        "transferSize": 13793,
+        "resourceSize": 18258
+      },
+      {
+        "url": "http://localhost:3102/methodologie?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 978,
+        "resourceSize": 786
+      },
+      {
+        "url": "http://localhost:3102/outils?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 943,
+        "resourceSize": 780
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1807,
+        "resourceSize": 4012
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=yIp22O3xgPPxC28X",
+        "resourceType": "Fetch",
+        "transferSize": 6111,
+        "resourceSize": 25938
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=dAdXdQJ-omyvBoKl",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0svyblr_8zn6x.js",
+        "resourceType": "Script",
+        "transferSize": 6071,
+        "resourceSize": 14469
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=-fK3tTuPZ9Btn_yZ",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=EyZRanxaygP7Z3dK",
+        "resourceType": "Fetch",
+        "transferSize": 7212,
+        "resourceSize": 37079
+      },
+      {
+        "url": "http://localhost:3102/voitures-electriques?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1663,
+        "resourceSize": 3540
+      },
+      {
+        "url": "http://localhost:3102/voitures-electriques?_rsc=jwmfzMUGSS9yddpl",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/voitures-electriques?_rsc=vtQRjfIEOIcSnA8C",
+        "resourceType": "Fetch",
+        "transferSize": 6594,
+        "resourceSize": 30328
+      },
+      {
+        "url": "http://localhost:3102/comparer?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1668,
+        "resourceSize": 3513
+      },
+      {
+        "url": "http://localhost:3102/comparer?_rsc=WfWBWx07PXB0Zafu",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "resourceType": "Script",
+        "transferSize": 7717,
+        "resourceSize": 21546
+      },
+      {
+        "url": "http://localhost:3102/comparer?_rsc=i48_brVKlipQOF1g",
+        "resourceType": "Fetch",
+        "transferSize": 7397,
+        "resourceSize": 38533
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0rafkxlp7_p2k.js",
+        "resourceType": "Script",
+        "transferSize": 8695,
+        "resourceSize": 26310
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1675,
+        "resourceSize": 3535
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=XuRAQlwoBb3DBgw_",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=Npvf18QV6N2pz_RZ",
+        "resourceType": "Fetch",
+        "transferSize": 3142,
+        "resourceSize": 8683
+      },
+      {
+        "url": "http://localhost:3102/guides?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1664,
+        "resourceSize": 3557
+      },
+      {
+        "url": "http://localhost:3102/guides?_rsc=gYCxHVIPHgSY50lU",
+        "resourceType": "Fetch",
+        "transferSize": 5240,
+        "resourceSize": 20324
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/05pmjy56faf7a.js",
+        "resourceType": "Script",
+        "transferSize": 7408,
+        "resourceSize": 19304
+      },
+      {
+        "url": "http://localhost:3102/recharge?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1677,
+        "resourceSize": 3471
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/025glc_ydtwcl.js",
+        "resourceType": "Script",
+        "transferSize": 7686,
+        "resourceSize": 19013
+      },
+      {
+        "url": "http://localhost:3102/recharge?_rsc=JpYt-IqL3vANQsDo",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/recharge?_rsc=qTy5g5CI8FplxT-r",
+        "resourceType": "Fetch",
+        "transferSize": 4770,
+        "resourceSize": 21785
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/126voaff9mf9w.js",
+        "resourceType": "Script",
+        "transferSize": 7776,
+        "resourceSize": 19322
+      },
+      {
+        "url": "http://localhost:3102/?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1659,
+        "resourceSize": 3525
+      },
+      {
+        "url": "http://localhost:3102/?_rsc=8nTjltbQWvg6NcbE",
+        "resourceType": "Fetch",
+        "transferSize": 13767,
+        "resourceSize": 99647
+      },
+      {
+        "url": "http://localhost:3102/a-propos?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1638,
+        "resourceSize": 3489
+      },
+      {
+        "url": "http://localhost:3102/a-propos?_rsc=E7BAuzz_KZL07E4T",
+        "resourceType": "Fetch",
+        "transferSize": 860,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/a-propos?_rsc=tS-t9qJlyKi2kgW6",
+        "resourceType": "Fetch",
+        "transferSize": 3033,
+        "resourceSize": 6767
+      },
+      {
+        "url": "http://localhost:3102/sources?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1654,
+        "resourceSize": 3427
+      },
+      {
+        "url": "http://localhost:3102/sources?_rsc=MjW4gad1zV9j7aYR",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2/255/runner.html",
+        "resourceType": "Document",
+        "transferSize": 5521,
+        "resourceSize": 14627
+      },
+      {
+        "url": "http://localhost:3102/sources?_rsc=Uj_hwpAr8bOzvZRl",
+        "resourceType": "Fetch",
+        "transferSize": 4973,
+        "resourceSize": 20849
+      },
+      {
+        "url": "http://localhost:3102/methodologie?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1665,
+        "resourceSize": 3554
+      },
+      {
+        "url": "http://localhost:3102/methodologie?_rsc=VrWGd_UwBhVTxWhd",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/methodologie?_rsc=v8U2g33Q74oVoF3i",
+        "resourceType": "Fetch",
+        "transferSize": 5500,
+        "resourceSize": 23486
+      },
+      {
+        "url": "http://localhost:3102/outils?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1617,
+        "resourceSize": 3428
+      },
+      {
+        "url": "http://localhost:3102/outils?_rsc=RzveAgfEDt7aZZAs",
+        "resourceType": "Fetch",
+        "transferSize": 860,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/outils?_rsc=9iObgNaA4_bosHYo",
+        "resourceType": "Fetch",
+        "transferSize": 2626,
+        "resourceSize": 11081
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/bicbSm1QHv6PCE7k41PwdE0n8BoGbNC7zjsNTNo3qrw.js",
+        "resourceType": "Script",
+        "transferSize": 24411,
+        "resourceSize": 63573
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/generate_204?6eFReQ",
+        "resourceType": "Image",
+        "transferSize": 10,
+        "resourceSize": 0
+      },
+      {
+        "url": "http://localhost:3102/brand/video.mp4",
+        "resourceType": "Media",
+        "transferSize": 663990,
+        "resourceSize": 663447
+      },
+      {
+        "url": "https://ep1.adtrafficquality.google/pagead/sodar?id=sodar2&v=255&t=2&li=gda_r20261007&jk=8829037925250372&bg=!ExClEHLNAAbHcf5V53E7AEcBe5WfODQWDnVqxg5Krr7INNl3NbZwrv1MuT8tEIDJPgSntqbTBth3mivo-2umR7aaD085qNi2Pe7yg5H7jcggkyDrTpE1iAIAAAAxUgAAAANoAQd-ADdzdM88JifA5HSUmDKg6ayF9As4E_dKhU2APUYu6n4jomFgoVZ3c-80ChXL0FMCaivaVyD8dPxTmQKWfBYG0GW1mlQ-fMSaxT7-KMJzR8IIrAl1QqIfA1GOf3oot8SfIbYg27bkEoK90Y18xEGkbiatgtgCVEImCfc0nik2bbnYQye_iTf9Qh-2S2vSvL4smPLwKERLL0yApP9kkzQ37xNJzwBOiFCamcFDFTYnED6QAy8c0XeMz3_9UJBdfu8xtRJLnBrlR4ItIoWgRmQERVRjpbLXs6jU-XTwcjVzpORj6harZAU2G8z1Cn8-pWKsTjHBAeIaWxSTy-uqpLtP-BaZBG3tNIsr1BuBeY9KPzIfY8AW1R9ilIvqobzolsFkMmsUm1XTRWOmp9dxIYbjxVDAPPIua7rF5rhfyowoex8_2RNm82y0rjLakejsRSF74I-hkIidPlhO3khNHH9-wxta2kl9XwM0XzxFCYNe9uBZTLhXmANCcEGb1pFUecGdCrxj_EB6bGBGwNMXM6_w2bYIhQbIMetH7w7B_9EeIPNrL8VGlbPIC-VpvVPZQMpB-SbqpoReWrJEz5XXklFSsFtNmDz3KWpoNgJd8O8IZOX8q1tEDVKf2mEqpGs6JEza_7nanCrE_VqsibJnxkco4BSXWyBZp4GiLVdqj5zEkf2UqCsBWJ-ErxgLJMNgOPgJ4IZ2zPZ16URj0g5X8pl-af0knFvQw5-_fQnqVqCa_ggPPk1l-i0tkozo99WlHSLpHvXh5figWetv-3IjhKM4AZvRWtIPLZzKriYKxRcZqNy0y3QeSfbo8RhFuQv2AaYsTjL9P2792X1CpThjbEoBbZZqJEJQB5V-HMqE4ORZ440_40eQ5H5mQ_05pZWc0Ahbm4nJZFagsrg4H8XH4re2LDbjxTRP-a_N3lRMbjlQSbR-XVKfBbQA0QJPLHmfuyD6Uqg",
+        "resourceType": "Image",
+        "transferSize": 17,
+        "resourceSize": 0
+      }
+    ]
+  },
+  {
+    "repeat": 2,
+    "pair": 2,
+    "path": "/",
+    "device": "desktop",
+    "buildId": "vOyU91A6qh5gw4aZqf0pg",
+    "score": 93,
+    "accessibility": 100,
+    "fcp": 246.62689999999998,
+    "lcp": 1699.4900750000002,
+    "cls": 0,
+    "tbt": 0,
+    "lcpElement": "<video muted=\"\" loop=\"\" playsinline=\"\" preload=\"none\" aria-hidden=\"true\" tabindex=\"-1\" disablepictureinpicture=\"\" disableremoteplayback=\"\" class=\"h-full w-full object-cover object-right\" src=\"/brand/video.mp4\" data-playing=\"\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "desktop",
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": false,
+        "width": 1350,
+        "height": 940,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "network": [
+      {
+        "url": "http://localhost:3102/",
+        "resourceType": "Document",
+        "transferSize": 35098,
+        "resourceSize": 262047
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/23b7a97ae3b5c134-s.p.0o14nraug8u5s.woff2",
+        "resourceType": "Font",
+        "transferSize": 10594,
+        "resourceSize": 10120
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/99e609270109b47d-s.p.16-z~2sp29ex6.woff2",
+        "resourceType": "Font",
+        "transferSize": 10526,
+        "resourceSize": 10052
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/SchibstedGrotesk_latin_var-s.p.0magfa.1.zbwp.woff2",
+        "resourceType": "Font",
+        "transferSize": 36590,
+        "resourceSize": 36116
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/a7e15459c1805da0-s.p.15mmg7gamto4l.woff2",
+        "resourceType": "Font",
+        "transferSize": 10602,
+        "resourceSize": 10128
+      },
+      {
+        "url": "http://localhost:3102/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&w=1080&q=75",
+        "resourceType": "Image",
+        "transferSize": 43286,
+        "resourceSize": 42683
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/07kb922s295wf.css",
+        "resourceType": "Stylesheet",
+        "transferSize": 15214,
+        "resourceSize": 75070
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "resourceType": "Script",
+        "transferSize": 8379,
+        "resourceSize": 24965
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "resourceType": "Script",
+        "transferSize": 9809,
+        "resourceSize": 44394
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "resourceType": "Script",
+        "transferSize": 71347,
+        "resourceSize": 226343
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "resourceType": "Script",
+        "transferSize": 41018,
+        "resourceSize": 150336
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "resourceType": "Script",
+        "transferSize": 4715,
+        "resourceSize": 10580
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "resourceType": "Script",
+        "transferSize": 8096,
+        "resourceSize": 20481
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "resourceType": "Script",
+        "transferSize": 13439,
+        "resourceSize": 54624
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "resourceType": "Script",
+        "transferSize": 1953,
+        "resourceSize": 3027
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "resourceType": "Script",
+        "transferSize": 9346,
+        "resourceSize": 28484
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "resourceType": "Script",
+        "transferSize": 1276,
+        "resourceSize": 1605
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "resourceType": "Script",
+        "transferSize": 7694,
+        "resourceSize": 18426
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "resourceType": "Script",
+        "transferSize": 57254,
+        "resourceSize": 166260
+      },
+      {
+        "url": "http://localhost:3102/manifest.webmanifest",
+        "resourceType": "Manifest",
+        "transferSize": 1211,
+        "resourceSize": 694
+      },
+      {
+        "url": "http://localhost:3102/brand/favicon.ico",
+        "resourceType": "Other",
+        "transferSize": 1697,
+        "resourceSize": 1167
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/getconfig/abg_config?client=ca-pub-7903460199253248&plah=localhost&ama_t=adsense",
+        "resourceType": "Fetch",
+        "transferSize": 30,
+        "resourceSize": 3
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610050101/show_ads_impl_fy2021.js",
+        "resourceType": "Script",
+        "transferSize": 167858,
+        "resourceSize": 510928
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 1018,
+        "resourceSize": 906
+      },
+      {
+        "url": "http://localhost:3102/voitures-electriques?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 984,
+        "resourceSize": 794
+      },
+      {
+        "url": "http://localhost:3102/comparer?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 974,
+        "resourceSize": 782
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 972,
+        "resourceSize": 778
+      },
+      {
+        "url": "http://localhost:3102/guides?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 973,
+        "resourceSize": 780
+      },
+      {
+        "url": "http://localhost:3102/recharge?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 974,
+        "resourceSize": 782
+      },
+      {
+        "url": "http://localhost:3102/a-propos?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 944,
+        "resourceSize": 782
+      },
+      {
+        "url": "http://localhost:3102/sources?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 973,
+        "resourceSize": 781
+      },
+      {
+        "url": "http://localhost:3102/methodologie?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 978,
+        "resourceSize": 786
+      },
+      {
+        "url": "http://localhost:3102/outils?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 943,
+        "resourceSize": 780
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1807,
+        "resourceSize": 4012
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=yIp22O3xgPPxC28X",
+        "resourceType": "Fetch",
+        "transferSize": 6111,
+        "resourceSize": 25938
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=dAdXdQJ-omyvBoKl",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0svyblr_8zn6x.js",
+        "resourceType": "Script",
+        "transferSize": 6071,
+        "resourceSize": 14469
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=-fK3tTuPZ9Btn_yZ",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=EyZRanxaygP7Z3dK",
+        "resourceType": "Fetch",
+        "transferSize": 7212,
+        "resourceSize": 37079
+      },
+      {
+        "url": "http://localhost:3102/voitures-electriques?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1663,
+        "resourceSize": 3540
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/html/r20261007/r20190131/zrt_lookup_fy2021.html",
+        "resourceType": "Document",
+        "transferSize": 3912,
+        "resourceSize": 8586
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-7903460199253248&output=html&adk=1812271804&adf=3025194257&abgtt=6&lmt=1791629724&plat=3%3A16%2C4%3A16%2C9%3A134250504%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32%2C44%3A32&format=0x0&url=http%3A%2F%2Flocalhost%3A3102%2F&pra=5&aiof=14&asro=0&itsi=-1&aimartd=4&aieuf=1&aicrs=1&uach=WyJtYWNPUyIsIjEwLjE1LjciLCJ4ODYiLCIiLCIxMzYuMC4wLjAiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxNTQuMC44MDM3Ljk4Il0sWyJHb29nbGUgQ2hyb21lIiwiMTU0LjAuODAzNy45OCJdLFsiTm90IEEoQnJhbmQiLCI5OS4wLjAuMCJdXSwwXQ..&dt=1791629724202&bpp=2&bdt=125&idt=67&shv=r20261007&mjsv=m202610050101&ptt=9&saldr=aa&abxe=1&eoidce=1&nras=1&correlator=7765316173586&frm=20&pv=2&u_tz=120&u_his=2&u_h=600&u_w=800&u_ah=600&u_aw=800&u_cd=24&u_sd=1&dmc=32&adx=-12245933&ady=-12245933&biw=1350&bih=940&scr_x=0&scr_y=0&eid=95404844%2C42533293&oid=2&pvsid=5912545079359723&tmod=864106054&uas=0&nvt=1&fsapi=1&fc=1920&brdim=22%2C22%2C22%2C22%2C800%2C0%2C756%2C556%2C1350%2C940&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=0.56&pgls=CAk.&ifi=1&uci=a!1&fsb=1&dtd=83",
+        "resourceType": "Document",
+        "transferSize": 65,
+        "resourceSize": 603
+      },
+      {
+        "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261007&st=env&sjk=5912545079359723",
+        "resourceType": "XHR",
+        "transferSize": 13881,
+        "resourceSize": 18374
+      },
+      {
+        "url": "http://localhost:3102/voitures-electriques?_rsc=jwmfzMUGSS9yddpl",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/voitures-electriques?_rsc=vtQRjfIEOIcSnA8C",
+        "resourceType": "Fetch",
+        "transferSize": 6594,
+        "resourceSize": 30328
+      },
+      {
+        "url": "http://localhost:3102/comparer?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1668,
+        "resourceSize": 3513
+      },
+      {
+        "url": "http://localhost:3102/comparer?_rsc=WfWBWx07PXB0Zafu",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/comparer?_rsc=i48_brVKlipQOF1g",
+        "resourceType": "Fetch",
+        "transferSize": 7397,
+        "resourceSize": 38533
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1675,
+        "resourceSize": 3535
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0rafkxlp7_p2k.js",
+        "resourceType": "Script",
+        "transferSize": 8695,
+        "resourceSize": 26310
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=XuRAQlwoBb3DBgw_",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=Npvf18QV6N2pz_RZ",
+        "resourceType": "Fetch",
+        "transferSize": 3142,
+        "resourceSize": 8683
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/05pmjy56faf7a.js",
+        "resourceType": "Script",
+        "transferSize": 7408,
+        "resourceSize": 19304
+      },
+      {
+        "url": "http://localhost:3102/guides?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1664,
+        "resourceSize": 3557
+      },
+      {
+        "url": "http://localhost:3102/guides?_rsc=gYCxHVIPHgSY50lU",
+        "resourceType": "Fetch",
+        "transferSize": 5240,
+        "resourceSize": 20324
+      },
+      {
+        "url": "http://localhost:3102/recharge?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1677,
+        "resourceSize": 3471
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/025glc_ydtwcl.js",
+        "resourceType": "Script",
+        "transferSize": 7686,
+        "resourceSize": 19013
+      },
+      {
+        "url": "http://localhost:3102/recharge?_rsc=JpYt-IqL3vANQsDo",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/recharge?_rsc=qTy5g5CI8FplxT-r",
+        "resourceType": "Fetch",
+        "transferSize": 4770,
+        "resourceSize": 21785
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/126voaff9mf9w.js",
+        "resourceType": "Script",
+        "transferSize": 7776,
+        "resourceSize": 19322
+      },
+      {
+        "url": "http://localhost:3102/?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1659,
+        "resourceSize": 3525
+      },
+      {
+        "url": "http://localhost:3102/?_rsc=8nTjltbQWvg6NcbE",
+        "resourceType": "Fetch",
+        "transferSize": 13767,
+        "resourceSize": 99647
+      },
+      {
+        "url": "http://localhost:3102/a-propos?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1638,
+        "resourceSize": 3489
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "resourceType": "Script",
+        "transferSize": 7717,
+        "resourceSize": 21546
+      },
+      {
+        "url": "http://localhost:3102/a-propos?_rsc=E7BAuzz_KZL07E4T",
+        "resourceType": "Fetch",
+        "transferSize": 860,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/a-propos?_rsc=tS-t9qJlyKi2kgW6",
+        "resourceType": "Fetch",
+        "transferSize": 3033,
+        "resourceSize": 6767
+      },
+      {
+        "url": "http://localhost:3102/sources?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1654,
+        "resourceSize": 3427
+      },
+      {
+        "url": "http://localhost:3102/sources?_rsc=MjW4gad1zV9j7aYR",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/sources?_rsc=Uj_hwpAr8bOzvZRl",
+        "resourceType": "Fetch",
+        "transferSize": 4973,
+        "resourceSize": 20849
+      },
+      {
+        "url": "http://localhost:3102/methodologie?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1665,
+        "resourceSize": 3554
+      },
+      {
+        "url": "http://localhost:3102/methodologie?_rsc=VrWGd_UwBhVTxWhd",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/methodologie?_rsc=v8U2g33Q74oVoF3i",
+        "resourceType": "Fetch",
+        "transferSize": 5500,
+        "resourceSize": 23486
+      },
+      {
+        "url": "http://localhost:3102/outils?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1617,
+        "resourceSize": 3428
+      },
+      {
+        "url": "http://localhost:3102/outils?_rsc=RzveAgfEDt7aZZAs",
+        "resourceType": "Fetch",
+        "transferSize": 860,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/outils?_rsc=9iObgNaA4_bosHYo",
+        "resourceType": "Fetch",
+        "transferSize": 2626,
+        "resourceSize": 11081
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2/255/runner.html",
+        "resourceType": "Document",
+        "transferSize": 5521,
+        "resourceSize": 14627
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/bicbSm1QHv6PCE7k41PwdE0n8BoGbNC7zjsNTNo3qrw.js",
+        "resourceType": "Script",
+        "transferSize": 24411,
+        "resourceSize": 63573
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/generate_204?Y0vgkw",
+        "resourceType": "Image",
+        "transferSize": 10,
+        "resourceSize": 0
+      },
+      {
+        "url": "http://localhost:3102/brand/video.mp4",
+        "resourceType": "Media",
+        "transferSize": 663990,
+        "resourceSize": 663447
+      },
+      {
+        "url": "https://ep1.adtrafficquality.google/pagead/sodar?id=sodar2&v=255&t=2&li=gda_r20261007&jk=5912545079359723&bg=!OzilOFrNAAbHcf5V53E7AEcBe5WfOHgBQR9Q8s5yll-N77jhc9iivCF78IH25CEFvHjb4-jPx8-x783FRyOlxFqcmAcuOReHGJcXoS15ciC0o5QrzkIXqwIAAAAyUgAAAANoAQd-ADfffdp9biQx2Unik86zfGuSDIvzYzh2UEODqz_NaD9MpuC7bkVPqnSTNsk2wwbeg5B8Fpk0EoD5CgAxp9lvy-i3bX_Q1dV5yR6elLCCScMFpg2xzYa-IZBtVRDAj-X2yiP9vXSpPo8ZSmPASJkCjy-iqwnjDHerDUlB6uJT0SyEfs0FC5cwhbS_dGsC1I9P07_dK3RXGXtFFuCUSkvMWb4EO4zU1Da-q2B46FTqDrgmOcosqwR0Q-Nr3tqfesAU5dIZEHIc5peEdbNBlYCps0txdKfYeU_KGhdqelLxX1OgaZ6UsVskWvQ5GIhdQy5G9_Y894LmjGPScyqY3P57ZWkwJnpTtjmFHuQcrI24JxMbzFuUAkm025tj6gNMS-SZenmSZifloyry3iZ8X8IdDVXoY2kWzjo3FbZwKgHiWMm-HBYybCk5liCNiiSoT0-gQGiUUGKZdq2lsuPzAfdpXD2FWt00F2ay1TvyGRYSgVFZciKlnXr39DSZJvOdAry1WubLvk82HVSMydR9OYQoXlIx5148dlStLaUudGf0q956MI6o6fCJLbzHU78DIXMkkJb3c4PKRNdEaZAkWI829gEBd5BuVgA8yglchWqdKBSd4qSbfEcaDDnErU5quN-gQMdzUHd0rb5UDfncCXS8vG2pzO3gA9ULC7OgpbO886TqGrcVBSoeQEv_9ENKB4eNQtqagwtlwAPOnmvRm0O5s6I1Yj1s8B8XKpWS8xiSZvcB_vdKt8HGcBB7GJoml2fj-jUCEe2UlUT1l-TDl62KEqut7eza1JVT6cKDXRjD5mUc-2BpFf2Ob-S5_cZTT1FtmJtQQg7BPOfCPmONf_DlzOkqBgaCGOI4f-o2f0XZ3tu3FmYryFA8Yit0WP1iepWFsagiiQTbAIg6DeB1_8_916vELHotUnwGTpjkH4j3yLq9WoeN0yjTFSSvqZG-iWATFHhg2jzrmqvidpZtnXAwQXro3MHQEHrS8HFkC3-2xhk00HbNR6qpd1U8SCxR9Po",
+        "resourceType": "Image",
+        "transferSize": 17,
+        "resourceSize": 0
+      }
+    ]
+  },
+  {
+    "repeat": 3,
+    "pair": 3,
+    "path": "/",
+    "device": "desktop",
+    "buildId": "vOyU91A6qh5gw4aZqf0pg",
+    "score": 93,
+    "accessibility": 100,
+    "fcp": 248.75570000000002,
+    "lcp": 1735.9950749999998,
+    "cls": 0,
+    "tbt": 0,
+    "lcpElement": "<video muted=\"\" loop=\"\" playsinline=\"\" preload=\"none\" aria-hidden=\"true\" tabindex=\"-1\" disablepictureinpicture=\"\" disableremoteplayback=\"\" class=\"h-full w-full object-cover object-right\" src=\"/brand/video.mp4\" data-playing=\"\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "desktop",
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": false,
+        "width": 1350,
+        "height": 940,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "network": [
+      {
+        "url": "http://localhost:3102/",
+        "resourceType": "Document",
+        "transferSize": 35098,
+        "resourceSize": 262047
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/23b7a97ae3b5c134-s.p.0o14nraug8u5s.woff2",
+        "resourceType": "Font",
+        "transferSize": 10594,
+        "resourceSize": 10120
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/99e609270109b47d-s.p.16-z~2sp29ex6.woff2",
+        "resourceType": "Font",
+        "transferSize": 10526,
+        "resourceSize": 10052
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/SchibstedGrotesk_latin_var-s.p.0magfa.1.zbwp.woff2",
+        "resourceType": "Font",
+        "transferSize": 36590,
+        "resourceSize": 36116
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/a7e15459c1805da0-s.p.15mmg7gamto4l.woff2",
+        "resourceType": "Font",
+        "transferSize": 10602,
+        "resourceSize": 10128
+      },
+      {
+        "url": "http://localhost:3102/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&w=1080&q=75",
+        "resourceType": "Image",
+        "transferSize": 43286,
+        "resourceSize": 42683
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/07kb922s295wf.css",
+        "resourceType": "Stylesheet",
+        "transferSize": 15214,
+        "resourceSize": 75070
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "resourceType": "Script",
+        "transferSize": 8379,
+        "resourceSize": 24965
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "resourceType": "Script",
+        "transferSize": 9809,
+        "resourceSize": 44394
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "resourceType": "Script",
+        "transferSize": 71347,
+        "resourceSize": 226343
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "resourceType": "Script",
+        "transferSize": 41018,
+        "resourceSize": 150336
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "resourceType": "Script",
+        "transferSize": 4715,
+        "resourceSize": 10580
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "resourceType": "Script",
+        "transferSize": 8096,
+        "resourceSize": 20481
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "resourceType": "Script",
+        "transferSize": 13439,
+        "resourceSize": 54624
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "resourceType": "Script",
+        "transferSize": 1953,
+        "resourceSize": 3027
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "resourceType": "Script",
+        "transferSize": 9346,
+        "resourceSize": 28484
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "resourceType": "Script",
+        "transferSize": 1276,
+        "resourceSize": 1605
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "resourceType": "Script",
+        "transferSize": 7694,
+        "resourceSize": 18426
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "resourceType": "Script",
+        "transferSize": 57259,
+        "resourceSize": 166260
+      },
+      {
+        "url": "http://localhost:3102/manifest.webmanifest",
+        "resourceType": "Manifest",
+        "transferSize": 1211,
+        "resourceSize": 694
+      },
+      {
+        "url": "http://localhost:3102/brand/favicon.ico",
+        "resourceType": "Other",
+        "transferSize": 1697,
+        "resourceSize": 1167
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/getconfig/abg_config?client=ca-pub-7903460199253248&plah=localhost&ama_t=adsense",
+        "resourceType": "Fetch",
+        "transferSize": 30,
+        "resourceSize": 3
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610050101/show_ads_impl_fy2021.js",
+        "resourceType": "Script",
+        "transferSize": 167858,
+        "resourceSize": 510928
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 1018,
+        "resourceSize": 906
+      },
+      {
+        "url": "http://localhost:3102/voitures-electriques?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 984,
+        "resourceSize": 794
+      },
+      {
+        "url": "http://localhost:3102/comparer?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 974,
+        "resourceSize": 782
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 972,
+        "resourceSize": 778
+      },
+      {
+        "url": "http://localhost:3102/guides?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 973,
+        "resourceSize": 780
+      },
+      {
+        "url": "http://localhost:3102/recharge?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 974,
+        "resourceSize": 782
+      },
+      {
+        "url": "http://localhost:3102/a-propos?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 944,
+        "resourceSize": 782
+      },
+      {
+        "url": "http://localhost:3102/sources?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 973,
+        "resourceSize": 781
+      },
+      {
+        "url": "http://localhost:3102/methodologie?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 978,
+        "resourceSize": 786
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/html/r20261007/r20190131/zrt_lookup_fy2021.html",
+        "resourceType": "Document",
+        "transferSize": 3912,
+        "resourceSize": 8586
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-7903460199253248&output=html&adk=1812271804&adf=3025194257&abgtt=6&lmt=1791629747&plat=3%3A16%2C4%3A16%2C9%3A134250504%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32%2C44%3A32&format=0x0&url=http%3A%2F%2Flocalhost%3A3102%2F&pra=5&aiof=14&asro=0&itsi=-1&aimartd=4&aieuf=1&aicrs=1&uach=WyJtYWNPUyIsIjEwLjE1LjciLCJ4ODYiLCIiLCIxMzYuMC4wLjAiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxNTQuMC44MDM3Ljk4Il0sWyJHb29nbGUgQ2hyb21lIiwiMTU0LjAuODAzNy45OCJdLFsiTm90IEEoQnJhbmQiLCI5OS4wLjAuMCJdXSwwXQ..&dt=1791629747155&bpp=2&bdt=124&idt=36&shv=r20261007&mjsv=m202610050101&ptt=9&saldr=aa&abxe=1&eoidce=1&nras=1&correlator=7465201293025&frm=20&pv=2&u_tz=120&u_his=2&u_h=600&u_w=800&u_ah=600&u_aw=800&u_cd=24&u_sd=1&dmc=32&adx=-12245933&ady=-12245933&biw=1350&bih=940&scr_x=0&scr_y=0&eid=95404825%2C95404844%2C122880836&oid=2&pvsid=2376980660618854&tmod=751359590&uas=0&nvt=1&fsapi=1&fc=1920&brdim=22%2C22%2C22%2C22%2C800%2C0%2C756%2C556%2C1350%2C940&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=0.56&pgls=CAk.&ifi=1&uci=a!1&fsb=1&dtd=55",
+        "resourceType": "Document",
+        "transferSize": 65,
+        "resourceSize": 603
+      },
+      {
+        "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261007&st=env&sjk=2376980660618854",
+        "resourceType": "XHR",
+        "transferSize": 14023,
+        "resourceSize": 18562
+      },
+      {
+        "url": "http://localhost:3102/outils?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 943,
+        "resourceSize": 780
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1807,
+        "resourceSize": 4012
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=yIp22O3xgPPxC28X",
+        "resourceType": "Fetch",
+        "transferSize": 6111,
+        "resourceSize": 25938
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=dAdXdQJ-omyvBoKl",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0svyblr_8zn6x.js",
+        "resourceType": "Script",
+        "transferSize": 6071,
+        "resourceSize": 14469
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=-fK3tTuPZ9Btn_yZ",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=EyZRanxaygP7Z3dK",
+        "resourceType": "Fetch",
+        "transferSize": 7212,
+        "resourceSize": 37079
+      },
+      {
+        "url": "http://localhost:3102/voitures-electriques?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1663,
+        "resourceSize": 3540
+      },
+      {
+        "url": "http://localhost:3102/voitures-electriques?_rsc=jwmfzMUGSS9yddpl",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/voitures-electriques?_rsc=vtQRjfIEOIcSnA8C",
+        "resourceType": "Fetch",
+        "transferSize": 6594,
+        "resourceSize": 30328
+      },
+      {
+        "url": "http://localhost:3102/comparer?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1668,
+        "resourceSize": 3513
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "resourceType": "Script",
+        "transferSize": 7717,
+        "resourceSize": 21546
+      },
+      {
+        "url": "http://localhost:3102/comparer?_rsc=WfWBWx07PXB0Zafu",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0rafkxlp7_p2k.js",
+        "resourceType": "Script",
+        "transferSize": 8695,
+        "resourceSize": 26310
+      },
+      {
+        "url": "http://localhost:3102/comparer?_rsc=i48_brVKlipQOF1g",
+        "resourceType": "Fetch",
+        "transferSize": 7397,
+        "resourceSize": 38533
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1675,
+        "resourceSize": 3535
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=XuRAQlwoBb3DBgw_",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/05pmjy56faf7a.js",
+        "resourceType": "Script",
+        "transferSize": 7408,
+        "resourceSize": 19304
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=Npvf18QV6N2pz_RZ",
+        "resourceType": "Fetch",
+        "transferSize": 3142,
+        "resourceSize": 8683
+      },
+      {
+        "url": "http://localhost:3102/guides?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1664,
+        "resourceSize": 3557
+      },
+      {
+        "url": "http://localhost:3102/guides?_rsc=gYCxHVIPHgSY50lU",
+        "resourceType": "Fetch",
+        "transferSize": 5240,
+        "resourceSize": 20324
+      },
+      {
+        "url": "http://localhost:3102/recharge?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1677,
+        "resourceSize": 3471
+      },
+      {
+        "url": "http://localhost:3102/recharge?_rsc=JpYt-IqL3vANQsDo",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/025glc_ydtwcl.js",
+        "resourceType": "Script",
+        "transferSize": 7686,
+        "resourceSize": 19013
+      },
+      {
+        "url": "http://localhost:3102/recharge?_rsc=qTy5g5CI8FplxT-r",
+        "resourceType": "Fetch",
+        "transferSize": 4770,
+        "resourceSize": 21785
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2/255/runner.html",
+        "resourceType": "Document",
+        "transferSize": 5521,
+        "resourceSize": 14627
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/126voaff9mf9w.js",
+        "resourceType": "Script",
+        "transferSize": 7776,
+        "resourceSize": 19322
+      },
+      {
+        "url": "http://localhost:3102/?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1659,
+        "resourceSize": 3525
+      },
+      {
+        "url": "http://localhost:3102/?_rsc=8nTjltbQWvg6NcbE",
+        "resourceType": "Fetch",
+        "transferSize": 13767,
+        "resourceSize": 99647
+      },
+      {
+        "url": "http://localhost:3102/a-propos?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1638,
+        "resourceSize": 3489
+      },
+      {
+        "url": "http://localhost:3102/a-propos?_rsc=E7BAuzz_KZL07E4T",
+        "resourceType": "Fetch",
+        "transferSize": 860,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/a-propos?_rsc=tS-t9qJlyKi2kgW6",
+        "resourceType": "Fetch",
+        "transferSize": 3033,
+        "resourceSize": 6767
+      },
+      {
+        "url": "http://localhost:3102/sources?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1654,
+        "resourceSize": 3427
+      },
+      {
+        "url": "http://localhost:3102/sources?_rsc=MjW4gad1zV9j7aYR",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/sources?_rsc=Uj_hwpAr8bOzvZRl",
+        "resourceType": "Fetch",
+        "transferSize": 4973,
+        "resourceSize": 20849
+      },
+      {
+        "url": "http://localhost:3102/methodologie?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1665,
+        "resourceSize": 3554
+      },
+      {
+        "url": "http://localhost:3102/methodologie?_rsc=VrWGd_UwBhVTxWhd",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/methodologie?_rsc=v8U2g33Q74oVoF3i",
+        "resourceType": "Fetch",
+        "transferSize": 5500,
+        "resourceSize": 23486
+      },
+      {
+        "url": "http://localhost:3102/outils?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1617,
+        "resourceSize": 3428
+      },
+      {
+        "url": "http://localhost:3102/outils?_rsc=RzveAgfEDt7aZZAs",
+        "resourceType": "Fetch",
+        "transferSize": 860,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/outils?_rsc=9iObgNaA4_bosHYo",
+        "resourceType": "Fetch",
+        "transferSize": 2626,
+        "resourceSize": 11081
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/bicbSm1QHv6PCE7k41PwdE0n8BoGbNC7zjsNTNo3qrw.js",
+        "resourceType": "Script",
+        "transferSize": 24411,
+        "resourceSize": 63573
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/generate_204?h6BA3A",
+        "resourceType": "Image",
+        "transferSize": 10,
+        "resourceSize": 0
+      },
+      {
+        "url": "http://localhost:3102/brand/video.mp4",
+        "resourceType": "Media",
+        "transferSize": 663990,
+        "resourceSize": 663447
+      },
+      {
+        "url": "https://ep1.adtrafficquality.google/pagead/sodar?id=sodar2&v=255&t=2&li=gda_r20261007&jk=2376980660618854&bg=!NTalNlTNAAbHcf5V53E7AEcBe5WfOC_3OFvM3rdYizLCkHFlkcdHAN1ECqry7Di1cOaZKfqgdJYcWaOJaDisKOWjyhFp-kXCE69ihezVJDu8RUYWlSZ9JQIAAAAzUgAAAANoAQd-ADf9vGBATPWMscqX2mA_K_krZGxih8GYbiN-ewBJzoZKBlf8c8wYxXsULjwOuxj4WrvtIoki8vl6CgBrjc7VGJteasx99O2kKkCQhJUdOnKDFXEQ9Mm_IdE6W7uS-exCprLTmV3zByj5Lkr7vc1fdai7oWpt95V6z_rWlU2SvwYmY8YLw_fyUvdYKb-S6GSVIiLu1g2KI5HbMQ1euBlNckj8HdFkLjCZAqL-4Lcpz7-Wfn3Kbb21fLnH9Mje9SBuhpLVCUIBL3QXCnfOlmeB0B8V6AJmrYq4ugNiOQM0HwRS7Jv2lkVEaeFxqQaDeVd4Qw5c7fvfefU8ze4INuZsQa1VVrWOIwRyFdp5FGrlFRCLIj1vnHHAGnU8uWgkhOpMbxVKAHAePF3fbJ68Doe2XSRjqRzZtqJLNoGlLy2cYoAitlhS8IdnYQiG5iyTYBR5FhvQ9Pn50Z1wqbqMq3SB2Twq5isLBmIuqCW2GZ8xP3YFdV3OM0pWFsUtx7zNa7HhCJiTnSSaxlCOHlTa89E7VgKTxAqQTZMbExPyMtEXMg3myuibr1XYMfsJM6HrMbHhn4DSefSFZkOR7KEQBTS6gyG6t88ViMINuJrV0YaqT2JPZPVOzfzAgHTYo07Hkj8NLRJ78uoYAJGGUUl7Fyp8DImvei8zv2o0x_QT_sAU0MTx4lb3j0q6GREIFjAdOBBKrTevrRV1oYOS3TiDQRQInDaUQT16g1SOImr9d0NySllyA8vktufTrNSWfqPgPJT8xq92rBpsTAkJuh5lUsKCgC4-QLWl7FrNJX4IPYgr5in56sUsahWO-3tONeyNirhwi7auiHC8o8k1uAnqE557Y4Mz1gAbzfcVWbRYxuM6V6HhdvZtrodTlMaZE5v6HJa_G59rLhFu-ynghWstMQaR80p24-hPMjNhSy2l0AIvrHxqkKW4gU3xYCd2OdO2Yj3HAJkAzuP1X1HuXtdbM-Driq42BcYp98Ik0Upr64F73XEa5ObgC9WXc4uOaM_9CwmoW7HtIYYp4h792MT21ADqDndIEHBi2EQQZkHaF42X8vZctLBDzJUCQWtbSwxZ3FwkNDuXVHajVCDMnIZnRJtfn088a6eGvLv4YBoc8g",
+        "resourceType": "Image",
+        "transferSize": 17,
+        "resourceSize": 0
+      }
+    ]
+  },
+  {
+    "repeat": 4,
+    "pair": 4,
+    "path": "/",
+    "device": "desktop",
+    "buildId": "vOyU91A6qh5gw4aZqf0pg",
+    "score": 100,
+    "accessibility": 100,
+    "fcp": 252.30559999999997,
+    "lcp": 716.6209999999999,
+    "cls": 0,
+    "tbt": 0,
+    "lcpElement": "<img alt=\"\" width=\"1376\" height=\"768\" decoding=\"async\" data-nimg=\"1\" class=\"hero-poster h-full w-full object-cover object-right mix-blend-lighten\" style=\"color: transparent;\" sizes=\"(min-width: 1024px) min(68vw, 1100px), 100vw\" srcset=\"/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=640&amp;q=75 640w, /_next/ima…\" src=\"http://localhost:3102/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=1080…\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "desktop",
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": false,
+        "width": 1350,
+        "height": 940,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "network": [
+      {
+        "url": "http://localhost:3102/",
+        "resourceType": "Document",
+        "transferSize": 35098,
+        "resourceSize": 262047
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/23b7a97ae3b5c134-s.p.0o14nraug8u5s.woff2",
+        "resourceType": "Font",
+        "transferSize": 10594,
+        "resourceSize": 10120
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/99e609270109b47d-s.p.16-z~2sp29ex6.woff2",
+        "resourceType": "Font",
+        "transferSize": 10526,
+        "resourceSize": 10052
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/SchibstedGrotesk_latin_var-s.p.0magfa.1.zbwp.woff2",
+        "resourceType": "Font",
+        "transferSize": 36590,
+        "resourceSize": 36116
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/a7e15459c1805da0-s.p.15mmg7gamto4l.woff2",
+        "resourceType": "Font",
+        "transferSize": 10602,
+        "resourceSize": 10128
+      },
+      {
+        "url": "http://localhost:3102/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&w=1080&q=75",
+        "resourceType": "Image",
+        "transferSize": 43286,
+        "resourceSize": 42683
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/07kb922s295wf.css",
+        "resourceType": "Stylesheet",
+        "transferSize": 15214,
+        "resourceSize": 75070
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "resourceType": "Script",
+        "transferSize": 8379,
+        "resourceSize": 24965
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "resourceType": "Script",
+        "transferSize": 9809,
+        "resourceSize": 44394
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "resourceType": "Script",
+        "transferSize": 71347,
+        "resourceSize": 226343
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "resourceType": "Script",
+        "transferSize": 41018,
+        "resourceSize": 150336
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "resourceType": "Script",
+        "transferSize": 4715,
+        "resourceSize": 10580
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "resourceType": "Script",
+        "transferSize": 8096,
+        "resourceSize": 20481
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "resourceType": "Script",
+        "transferSize": 13439,
+        "resourceSize": 54624
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "resourceType": "Script",
+        "transferSize": 1953,
+        "resourceSize": 3027
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "resourceType": "Script",
+        "transferSize": 9346,
+        "resourceSize": 28484
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "resourceType": "Script",
+        "transferSize": 1276,
+        "resourceSize": 1605
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "resourceType": "Script",
+        "transferSize": 7694,
+        "resourceSize": 18426
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "resourceType": "Script",
+        "transferSize": 57269,
+        "resourceSize": 166277
+      },
+      {
+        "url": "http://localhost:3102/manifest.webmanifest",
+        "resourceType": "Manifest",
+        "transferSize": 1211,
+        "resourceSize": 694
+      },
+      {
+        "url": "http://localhost:3102/brand/favicon.ico",
+        "resourceType": "Other",
+        "transferSize": 1697,
+        "resourceSize": 1167
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 1018,
+        "resourceSize": 906
+      },
+      {
+        "url": "http://localhost:3102/voitures-electriques?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 984,
+        "resourceSize": 794
+      },
+      {
+        "url": "http://localhost:3102/comparer?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 974,
+        "resourceSize": 782
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 972,
+        "resourceSize": 778
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/getconfig/abg_config?client=ca-pub-7903460199253248&plah=localhost&ama_t=adsense&bust=122881492",
+        "resourceType": "Fetch",
+        "transferSize": 30,
+        "resourceSize": 3
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610070101/show_ads_impl_fy2021.js?bust=122881492",
+        "resourceType": "Script",
+        "transferSize": 168748,
+        "resourceSize": 512603
+      },
+      {
+        "url": "http://localhost:3102/guides?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 973,
+        "resourceSize": 780
+      },
+      {
+        "url": "http://localhost:3102/recharge?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 974,
+        "resourceSize": 782
+      },
+      {
+        "url": "http://localhost:3102/a-propos?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 944,
+        "resourceSize": 782
+      },
+      {
+        "url": "http://localhost:3102/sources?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 973,
+        "resourceSize": 781
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/html/r20261007/r20190131/zrt_lookup_fy2021.html",
+        "resourceType": "Document",
+        "transferSize": 3912,
+        "resourceSize": 8586
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-7903460199253248&output=html&adk=1812271804&adf=3025194257&abgtt=6&lmt=1791629755&plat=3%3A16%2C4%3A16%2C9%3A134250504%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32%2C44%3A32&format=0x0&url=http%3A%2F%2Flocalhost%3A3102%2F&pra=5&aiof=14&asro=0&itsi=-1&aimartd=4&aieuf=1&aicrs=1&uach=WyJtYWNPUyIsIjEwLjE1LjciLCJ4ODYiLCIiLCIxMzYuMC4wLjAiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxNTQuMC44MDM3Ljk4Il0sWyJHb29nbGUgQ2hyb21lIiwiMTU0LjAuODAzNy45OCJdLFsiTm90IEEoQnJhbmQiLCI5OS4wLjAuMCJdXSwwXQ..&dt=1791629754952&bpp=1&bdt=148&idt=37&shv=r20261007&mjsv=m202610070101&ptt=9&saldr=aa&abxe=1&eoidce=1&nras=1&correlator=5007510808491&frm=20&pv=2&u_tz=120&u_his=2&u_h=600&u_w=800&u_ah=600&u_aw=800&u_cd=24&u_sd=1&dmc=32&adx=-12245933&ady=-12245933&biw=1350&bih=940&scr_x=0&scr_y=0&eid=31084127%2C95404823%2C95404844%2C95405492%2C122881492%2C31061690%2C95340253%2C95340255&oid=2&pvsid=1515583514271013&tmod=1108768499&uas=0&nvt=1&fsapi=1&fc=1920&brdim=22%2C22%2C22%2C22%2C800%2C0%2C756%2C556%2C1350%2C940&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=0.56&pgls=CAk.&ifi=1&uci=a!1&fsb=1&dtd=53",
+        "resourceType": "Document",
+        "transferSize": 65,
+        "resourceSize": 603
+      },
+      {
+        "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261007&st=env&sjk=1515583514271013",
+        "resourceType": "XHR",
+        "transferSize": 13966,
+        "resourceSize": 18489
+      },
+      {
+        "url": "http://localhost:3102/methodologie?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 978,
+        "resourceSize": 786
+      },
+      {
+        "url": "http://localhost:3102/outils?_rsc=5CB68i4pnAekjehf",
+        "resourceType": "Fetch",
+        "transferSize": 943,
+        "resourceSize": 780
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1807,
+        "resourceSize": 4012
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=yIp22O3xgPPxC28X",
+        "resourceType": "Fetch",
+        "transferSize": 6111,
+        "resourceSize": 25938
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=dAdXdQJ-omyvBoKl",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0svyblr_8zn6x.js",
+        "resourceType": "Script",
+        "transferSize": 6071,
+        "resourceSize": 14469
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=-fK3tTuPZ9Btn_yZ",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/guides/calculer-autonomie-reelle?_rsc=EyZRanxaygP7Z3dK",
+        "resourceType": "Fetch",
+        "transferSize": 7212,
+        "resourceSize": 37079
+      },
+      {
+        "url": "http://localhost:3102/voitures-electriques?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1663,
+        "resourceSize": 3540
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "resourceType": "Script",
+        "transferSize": 7717,
+        "resourceSize": 21546
+      },
+      {
+        "url": "http://localhost:3102/voitures-electriques?_rsc=jwmfzMUGSS9yddpl",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/voitures-electriques?_rsc=vtQRjfIEOIcSnA8C",
+        "resourceType": "Fetch",
+        "transferSize": 6594,
+        "resourceSize": 30328
+      },
+      {
+        "url": "http://localhost:3102/comparer?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1668,
+        "resourceSize": 3513
+      },
+      {
+        "url": "http://localhost:3102/comparer?_rsc=WfWBWx07PXB0Zafu",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/comparer?_rsc=i48_brVKlipQOF1g",
+        "resourceType": "Fetch",
+        "transferSize": 7397,
+        "resourceSize": 38533
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1675,
+        "resourceSize": 3535
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=XuRAQlwoBb3DBgw_",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0rafkxlp7_p2k.js",
+        "resourceType": "Script",
+        "transferSize": 8695,
+        "resourceSize": 26310
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=Npvf18QV6N2pz_RZ",
+        "resourceType": "Fetch",
+        "transferSize": 3142,
+        "resourceSize": 8683
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2/255/runner.html",
+        "resourceType": "Document",
+        "transferSize": 5521,
+        "resourceSize": 14627
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/05pmjy56faf7a.js",
+        "resourceType": "Script",
+        "transferSize": 7408,
+        "resourceSize": 19304
+      },
+      {
+        "url": "http://localhost:3102/guides?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1664,
+        "resourceSize": 3557
+      },
+      {
+        "url": "http://localhost:3102/guides?_rsc=gYCxHVIPHgSY50lU",
+        "resourceType": "Fetch",
+        "transferSize": 5240,
+        "resourceSize": 20324
+      },
+      {
+        "url": "http://localhost:3102/recharge?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1677,
+        "resourceSize": 3471
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/025glc_ydtwcl.js",
+        "resourceType": "Script",
+        "transferSize": 7686,
+        "resourceSize": 19013
+      },
+      {
+        "url": "http://localhost:3102/recharge?_rsc=JpYt-IqL3vANQsDo",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/recharge?_rsc=qTy5g5CI8FplxT-r",
+        "resourceType": "Fetch",
+        "transferSize": 4770,
+        "resourceSize": 21785
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/126voaff9mf9w.js",
+        "resourceType": "Script",
+        "transferSize": 7776,
+        "resourceSize": 19322
+      },
+      {
+        "url": "http://localhost:3102/?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1659,
+        "resourceSize": 3525
+      },
+      {
+        "url": "http://localhost:3102/?_rsc=8nTjltbQWvg6NcbE",
+        "resourceType": "Fetch",
+        "transferSize": 13767,
+        "resourceSize": 99647
+      },
+      {
+        "url": "http://localhost:3102/a-propos?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1638,
+        "resourceSize": 3489
+      },
+      {
+        "url": "http://localhost:3102/a-propos?_rsc=E7BAuzz_KZL07E4T",
+        "resourceType": "Fetch",
+        "transferSize": 860,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/a-propos?_rsc=tS-t9qJlyKi2kgW6",
+        "resourceType": "Fetch",
+        "transferSize": 3033,
+        "resourceSize": 6767
+      },
+      {
+        "url": "http://localhost:3102/sources?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1654,
+        "resourceSize": 3427
+      },
+      {
+        "url": "http://localhost:3102/sources?_rsc=MjW4gad1zV9j7aYR",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/sources?_rsc=Uj_hwpAr8bOzvZRl",
+        "resourceType": "Fetch",
+        "transferSize": 4973,
+        "resourceSize": 20849
+      },
+      {
+        "url": "http://localhost:3102/methodologie?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1665,
+        "resourceSize": 3554
+      },
+      {
+        "url": "http://localhost:3102/methodologie?_rsc=VrWGd_UwBhVTxWhd",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/methodologie?_rsc=v8U2g33Q74oVoF3i",
+        "resourceType": "Fetch",
+        "transferSize": 5500,
+        "resourceSize": 23486
+      },
+      {
+        "url": "http://localhost:3102/outils?_rsc=7h4NYy5eoyMcNlUN",
+        "resourceType": "Fetch",
+        "transferSize": 1617,
+        "resourceSize": 3428
+      },
+      {
+        "url": "http://localhost:3102/outils?_rsc=RzveAgfEDt7aZZAs",
+        "resourceType": "Fetch",
+        "transferSize": 860,
+        "resourceSize": 445
+      },
+      {
+        "url": "http://localhost:3102/outils?_rsc=9iObgNaA4_bosHYo",
+        "resourceType": "Fetch",
+        "transferSize": 2626,
+        "resourceSize": 11081
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/bicbSm1QHv6PCE7k41PwdE0n8BoGbNC7zjsNTNo3qrw.js",
+        "resourceType": "Script",
+        "transferSize": 24411,
+        "resourceSize": 63573
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/generate_204?MkkmzA",
+        "resourceType": "Image",
+        "transferSize": 10,
+        "resourceSize": 0
+      },
+      {
+        "url": "http://localhost:3102/brand/video.mp4",
+        "resourceType": "Media",
+        "transferSize": 663990,
+        "resourceSize": 663447
+      },
+      {
+        "url": "https://ep1.adtrafficquality.google/pagead/sodar?id=sodar2&v=255&t=2&li=gda_r20261007&jk=1515583514271013&bg=!BwSlBGbNAAbHcf5V53E7AEcBe5WfOKPxX5-oHWtkJp1Nt-2vo8oHo1X3kt6o0N2mVEcEErKi14J37JI-35cnrcmjKHQG5CfY9E1WcKyF2DbhgmthYP64TQIAAAAyUgAAAANoAQd-ADdR6-jn6HmP-_ZDKm_MF444HCQ9CgP9mf7GR4euZg-h0B8IfrKdPyzib1Or64567rki4ssmoSJVmQKadR5AE6TtyVssCE3-EZNY9UZR-3U4baxfgyI9nJ4PRgXOoIN58KLqh80Hc3pjcfiE6errQKJdUjbjJXdR-Jg7S0AGAAYWRqHGaYP26qTYkx5ZDp8JT9U5bngwUhdjPYOL503QPbm0EXAAnofO2yp8uqe4GTbtwslNYYXjyXO-DofLb23Liz5OKtBHl_ixb_N_dya8nnIb6VJrEOtl09L_4-pImZKilzCL-vpAXG-Xt2FDl8rA4AXQv9W9CDntpYqgbdyZnJ5U2om06hkyd9PJYhN3kZFvUgijknRE3WqWqi3dSWAsnjQ7GSOEppI7cAumW4ZCBbHQ-Z2J8jWJ8HFaomuPU_AN5qS7XP3MTARnoJRHes0-R0PEz4pgeSOzbNumwDKoU6X3_oSu6ifOPhurQBrvTEgZqKBTRvk7Yh9fQpVNhGlViGu4PcN3M4zjURWOhBVT6vxXp9x-OsZ4vJfbONCdi0lgvehQvhMTT-E-jLLwyZSPFhnwzmcbrSKRgFzS7P9SatRjmtIefXRoyUn4kRCP8zIlEDfeF94UvW70ULScwyMLCR_ZiCVtn-q6CjEKINNOb-xq9AiYtu8kuhe6jpAeHscn8BZm4Z9aGpqBaQEKnef46LkPDytsHSB9A2wkW4dfUanH9mfCvSObaBbYAGFWlJtVbRUB9aFfUIsgGiUUa-SPiKurqAlxeO9k-5N7XGH91RnagPO28p00S4mKr-4TBoDIUczti4RY2Nua4_Z8KthQ0QThP046czneplGbaoxMsOh6XzNAoKrwspD8fcqoRndCcGlKnWC3i7YFntIdVJ7UqVawvoxkgp7tqRlUxow2rvcCW-vLXzLqEbRQZ9K4HbGlVCvZZ5197C8OvivDws6YBk1uBrgO",
+        "resourceType": "Image",
+        "transferSize": 17,
+        "resourceSize": 0
+      }
+    ]
+  }
+]

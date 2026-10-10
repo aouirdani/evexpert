@@ -6,6 +6,8 @@ import { ASSUMPTIONS } from "@/data/assumptions";
 import { computeTco, type TcoInput } from "@/lib/calculators";
 import { formatEuro } from "@/lib/format";
 import { Field, NumberInput, ResultCard } from "./kit";
+import { inputPanelClass, resultPanelClass } from "@/components/ui/componentStyles";
+import { cx } from "@/lib/cx";
 
 const defaultA: TcoInput = {
   price: 40000,
@@ -54,7 +56,7 @@ function TcoForm({ title, state, set }: { title: string; state: TcoInput; set: (
     { k: "taxes", label: "Taxes (€/an)", step: 10 },
   ];
   return (
-    <div className="rounded-2xl border border-line bg-surface p-5">
+    <div className={inputPanelClass}>
       <h2 className="text-base font-bold text-ink">{title}</h2>
       <div className="mt-4 grid grid-cols-2 gap-3">
         {fields.map((f) => (
@@ -92,7 +94,7 @@ export function TcoCalculator() {
         <TcoForm title="Véhicule B" state={b} set={setB} />
       </div>
 
-      <div className="on-ink grid gap-x-8 gap-y-5 rounded-2xl bg-ink p-6 text-paper sm:grid-cols-2 sm:p-8" aria-live="polite">
+      <div className={cx(resultPanelClass, "grid gap-x-8 gap-y-5 sm:grid-cols-2")} aria-live="polite">
         <ResultCard label={`TCO total — Véhicule A (${a.years} ans)`} value={formatEuro(rA.total)} emphasis />
         <ResultCard label={`TCO total — Véhicule B (${b.years} ans)`} value={formatEuro(rB.total)} emphasis />
         <ResultCard label="Coût mensuel — A" value={formatEuro(rA.perMonth)} />
@@ -101,7 +103,7 @@ export function TcoCalculator() {
         <ResultCard label="Coût / km — B" value={formatEuro(rB.perKm, 2)} />
       </div>
 
-      <div className="rounded-2xl border border-line bg-surface p-5">
+      <div className={inputPanelClass}>
         <h2 className="mb-4 text-base font-bold text-ink">
           Répartition des coûts par poste
         </h2>

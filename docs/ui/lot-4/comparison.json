@@ -1,0 +1,99 @@
+{
+  "seo.json": {
+    "equal": true,
+    "items_before": 190,
+    "items_after": 190
+  },
+  "assets-redirects.json": {
+    "equal": true,
+    "items_before": 12,
+    "items_after": 12
+  },
+  "calculators.json": {
+    "equal": true,
+    "items_before": 20,
+    "items_after": 20
+  },
+  "accessible-tables.json": {
+    "equal": true,
+    "items_before": 2,
+    "items_after": 2
+  },
+  "interactions.json": {
+    "equal": true,
+    "items_before": 10,
+    "items_after": 10
+  },
+  "hero.json": {
+    "equal": true,
+    "items_before": 3,
+    "items_after": 3
+  },
+  "geometry.json": {
+    "equal": true,
+    "items_before": 85,
+    "items_after": 85
+  },
+  "semantic-structure.json": {
+    "equal": true,
+    "items_before": 190,
+    "items_after": 190
+  },
+  "navigation-menus.json": {
+    "equal": true,
+    "items_before": 5,
+    "items_after": 5
+  },
+  "editorial-focus.json": {
+    "equal": true,
+    "items_before": 2,
+    "items_after": 2
+  },
+  "editorial-filters.json": {
+    "equal": true,
+    "items_before": 13,
+    "items_after": 13
+  },
+  "consent-control.json": {
+    "equal": true,
+    "items_before": 2,
+    "items_after": 2
+  },
+  "editorial-axe.json": {
+    "equal": true,
+    "items_before": 0,
+    "items_after": 0
+  },
+  "navigation_geometry": {
+    "cases": 40,
+    "overflow": [],
+    "header_diff": [],
+    "ads_diff": [],
+    "toc_diff": [],
+    "card_clipped": [],
+    "footer_outside_viewport": []
+  },
+  "inventory": {
+    "routes": 190,
+    "status_counts": {
+      "200": 190
+    },
+    "html_pages": 186,
+    "noindex": 58
+  },
+  "hero-geometry.json": {
+    "equal": true,
+    "items_before": 5,
+    "items_after": 5
+  },
+  "editorial-toc-settled.json": {
+    "equal": true,
+    "items_before": 2,
+    "items_after": 2
+  },
+  "internal-links-check.json": {
+    "equal": true,
+    "items_before": 5,
+    "items_after": 5
+  }
+}

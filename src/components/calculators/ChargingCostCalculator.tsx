@@ -49,13 +49,13 @@ export function ChargingCostCalculator({ presets = [] }: { presets?: VehiclePres
             <RangeInputControl id="cc-target" value={targetSoc} onChange={setTarget} min={0} max={100} suffix="%" />
           </Field>
           <Field label="Prix du kWh (€)" htmlFor="cc-price" hint="Hypothèse de départ (0,25 € à domicile) : reprenez le prix de votre contrat ou celui affiché à la borne.">
-            <NumberInput id="cc-price" value={price} onChange={setPrice} min={0} max={2} step={0.01} suffix="€/kWh" />
+            <NumberInput id="cc-price" aria-describedby="cc-price-hint" value={price} onChange={setPrice} min={0} max={2} step={0.01} suffix="€/kWh" />
           </Field>
           <Field label="Rendement de recharge" htmlFor="cc-eff" hint="Pertes en chaleur : généralement 85-95 %.">
-            <RangeInputControl id="cc-eff" value={efficiency} onChange={setEfficiency} min={70} max={100} suffix="%" />
+            <RangeInputControl id="cc-eff" aria-describedby="cc-eff-hint" value={efficiency} onChange={setEfficiency} min={70} max={100} suffix="%" />
           </Field>
           <Field label="Consommation moyenne (kWh/100 km)" htmlFor="cc-conso" hint="Sert à estimer les km ajoutés.">
-            <NumberInput id="cc-conso" value={consumption} onChange={setConsumption} min={8} max={35} step={0.5} suffix="kWh" />
+            <NumberInput id="cc-conso" aria-describedby="cc-conso-hint" value={consumption} onChange={setConsumption} min={8} max={35} step={0.5} suffix="kWh" />
           </Field>
         </>
       }

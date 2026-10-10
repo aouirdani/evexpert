@@ -1,0 +1,209 @@
+[
+  {
+    "name": "assets-redirects.json",
+    "passed": true,
+    "detail": "Comparaison exacte des valeurs JSON avant/après."
+  },
+  {
+    "name": "calculators.json",
+    "passed": true,
+    "detail": "Comparaison exacte des valeurs JSON avant/après."
+  },
+  {
+    "name": "hero.json",
+    "passed": true,
+    "detail": "Comparaison exacte des valeurs JSON avant/après."
+  },
+  {
+    "name": "sources",
+    "passed": true,
+    "detail": {
+      "changed": [
+        "src/app/globals.css",
+        "src/app/voitures-electriques/[brand]/page.tsx",
+        "src/components/vehicles/BrandOverview.tsx",
+        "src/components/vehicles/DataTableScroll.tsx",
+        "src/components/vehicles/ModelOverview.tsx",
+        "src/components/vehicles/SpecTable.tsx",
+        "src/components/vehicles/VehicleCard.tsx",
+        "src/components/vehicles/VehicleDetail.tsx",
+        "src/components/vehicles/VehicleExplorer.tsx",
+        "src/components/vehicles/catalogue.css",
+        "src/components/vehicles/catalogueStyles.ts"
+      ],
+      "unchanged": 313
+    }
+  },
+  {
+    "name": "coverage",
+    "passed": true,
+    "detail": "17 pages × 5 largeurs."
+  },
+  {
+    "name": "responsive",
+    "passed": true,
+    "detail": "Aucun document plus large que le viewport, y compris TCO et Essence vs électrique."
+  },
+  {
+    "name": "ad-reservations",
+    "passed": true,
+    "detail": "Coordonnées, dimensions, visibilité et identifiants identiques pour les réservations capturées."
+  },
+  {
+    "name": "catalogue-complet",
+    "passed": true,
+    "detail": "47 cartes, marques/versions sans ellipsis ou débordement horizontal du texte."
+  },
+  {
+    "name": "selection-size",
+    "passed": true,
+    "detail": "Boutons de sélection au moins 44 × 44 px."
+  },
+  {
+    "name": "copy-size",
+    "passed": true,
+    "detail": "Copie : 276,16 × 44 px aux cinq largeurs."
+  },
+  {
+    "name": "filter",
+    "passed": true,
+    "detail": "Kona : une version, même lien modèle."
+  },
+  {
+    "name": "garage",
+    "passed": true,
+    "detail": "Sélection, limite 3, vidage et lien comparateur préservés."
+  },
+  {
+    "name": "selection-widths",
+    "passed": true,
+    "detail": "Tap/clic réel puis sélection clavier, barre sans débordement."
+  },
+  {
+    "name": "comparison",
+    "passed": true,
+    "detail": "Trois véhicules, URL partagée et activation clavier de la copie."
+  },
+  {
+    "name": "focus",
+    "passed": true,
+    "detail": "Contours cobalt 2 px, mêmes liens atteints par Tab."
+  },
+  {
+    "name": "link-navigation",
+    "passed": true,
+    "detail": "Activation Entrée du véritable lien HTML."
+  },
+  {
+    "name": "hero-controls",
+    "passed": true,
+    "detail": "Pause et reprise vidéo fonctionnelles."
+  },
+  {
+    "name": "accessible-tables",
+    "passed": true,
+    "detail": [
+      {
+        "tool": "tco-voiture-electrique",
+        "tables": [
+          {
+            "name": "Répartition des coûts par poste, véhicule A et véhicule B",
+            "ignored": false
+          }
+        ],
+        "cellCount": 21
+      },
+      {
+        "tool": "essence-vs-electrique",
+        "tables": [
+          {
+            "name": "Coût cumulé sur 3, 5 et 8 ans : électrique et essence",
+            "ignored": false
+          }
+        ],
+        "cellCount": 12
+      }
+    ]
+  },
+  {
+    "name": "javascript-errors",
+    "passed": true,
+    "detail": "Aucune erreur pageerror dans la série finale."
+  },
+  {
+    "name": "seo-protected",
+    "passed": true,
+    "detail": {
+      "differences": [],
+      "routes": 190
+    }
+  },
+  {
+    "name": "new-ui-only",
+    "passed": true,
+    "detail": {
+      "count": 347,
+      "pages": 115
+    }
+  },
+  {
+    "name": "homepage",
+    "passed": true,
+    "detail": "Texte brut et géométrie des cartes/actions de l’accueil intacts."
+  },
+  {
+    "name": "catalogue-scenarios",
+    "passed": true,
+    "detail": "13 scénarios : cinq tris, marque, carrosserie, seuils, recherche, accents/espaces, vide et reset."
+  },
+  {
+    "name": "catalogue-coverage",
+    "passed": true,
+    "detail": "6 pages × 5 largeurs."
+  },
+  {
+    "name": "catalogue-data-tables",
+    "passed": true,
+    "detail": "Captions, lignes, cellules, entêtes scope et texte identiques."
+  },
+  {
+    "name": "catalogue-responsive",
+    "passed": true,
+    "detail": "Documents, noms/métriques et cibles de sélection contrôlés."
+  },
+  {
+    "name": "mobile-filter",
+    "passed": true,
+    "detail": "Ouverture clavier, critères inchangés, champs ouverts ≥44 px et accès sticky après défilement."
+  },
+  {
+    "name": "catalogue-table-view",
+    "passed": true,
+    "detail": "Même contenu/47 lignes de versions en vue tableau à 1024 et 1440 px."
+  },
+  {
+    "name": "catalogue-errors",
+    "passed": true,
+    "detail": "Aucune pageerror ciblée."
+  },
+  {
+    "name": "accessibility",
+    "passed": true,
+    "detail": "15 cas, régions nommées, descriptions présentes et tables dans l’arbre accessible."
+  },
+  {
+    "name": "keyboard-scroll",
+    "passed": true,
+    "detail": "Flèche droite native et focus visibles pour les régions de tableaux."
+  },
+  {
+    "name": "deep-filter-open-close",
+    "passed": true,
+    "detail": "Six cas à 320/390/768 px × 640/900 px de hauteur, avec trois véhicules sélectionnés."
+  },
+  {
+    "name": "deep-filter-native-scroll",
+    "passed": true,
+    "detail": "Panneau natif défilable, reset accessible au clavier."
+  }
+]

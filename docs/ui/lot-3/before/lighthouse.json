@@ -1,0 +1,3434 @@
+[
+  {
+    "repeat": 1,
+    "path": "/",
+    "device": "mobile",
+    "score": 95,
+    "accessibility": 100,
+    "fcp": 908.1649,
+    "lcp": 3012.2473500000006,
+    "cls": 0,
+    "tbt": 19,
+    "lcpElement": "<h1 class=\"balance mt-6 text-display font-bold text-paper\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57286
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610060101/show_ads_impl_fy2021.js?bust=122881491",
+        "transferSize": 168485
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/153dxdo6lycn..js",
+        "transferSize": 7850
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0mnnfab2nly.s.js",
+        "transferSize": 7390
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 8070
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 1,
+    "path": "/",
+    "device": "desktop",
+    "score": 100,
+    "accessibility": 100,
+    "fcp": 245.80519999999996,
+    "lcp": 628.753925,
+    "cls": 0,
+    "tbt": 0,
+    "lcpElement": "<img alt=\"\" width=\"1376\" height=\"768\" decoding=\"async\" data-nimg=\"1\" class=\"hero-poster h-full w-full object-cover object-right mix-blend-lighten\" style=\"color: transparent;\" sizes=\"(min-width: 1024px) min(68vw, 1100px), 100vw\" srcset=\"/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=640&amp;q=75 640w, /_next/ima…\" src=\"http://localhost:3102/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=1080…\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "desktop",
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": false,
+        "width": 1350,
+        "height": 940,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57281
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610060101/show_ads_impl_fy2021.js?bust=122881491",
+        "transferSize": 168485
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0svyblr_8zn6x.js",
+        "transferSize": 6071
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/153dxdo6lycn..js",
+        "transferSize": 7850
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0mnnfab2nly.s.js",
+        "transferSize": 7390
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y-8y1kh2r_fi.js",
+        "transferSize": 7638
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0yogrd~j8m6c_.js",
+        "transferSize": 7726
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 1,
+    "path": "/voitures-electriques",
+    "device": "mobile",
+    "score": 96,
+    "accessibility": 100,
+    "fcp": 904.6116000000001,
+    "lcp": 2706.9593999999997,
+    "cls": 0,
+    "tbt": 23.5,
+    "lcpElement": "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/153dxdo6lycn..js",
+        "transferSize": 7850
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57294
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610080101/show_ads_impl_fy2021.js?bust=122881530",
+        "transferSize": 168591
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0q08jzdum0i47.js",
+        "transferSize": 1659
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/12y7yb2irzn-o.js",
+        "transferSize": 6458
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 1,
+    "path": "/comparer",
+    "device": "mobile",
+    "score": 95,
+    "accessibility": 100,
+    "fcp": 906.4208,
+    "lcp": 2860.0535999999997,
+    "cls": 0,
+    "tbt": 20,
+    "lcpElement": "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0mnnfab2nly.s.js",
+        "transferSize": 7390
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57291
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610070101/show_ads_impl_fy2021.js?bust=122881492",
+        "transferSize": 168748
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/06xjo3~yu80iz.js",
+        "transferSize": 5565
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 1,
+    "path": "/outils/tco-voiture-electrique",
+    "device": "mobile",
+    "score": 96,
+    "accessibility": 100,
+    "fcp": 908.6976999999999,
+    "lcp": 2713.04655,
+    "cls": 0,
+    "tbt": 17.5,
+    "lcpElement": "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_xcqcyo980fq.js",
+        "transferSize": 5664
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57293
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610070101/show_ads_impl_fy2021.js?bust=122881529",
+        "transferSize": 168748
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0svyblr_8zn6x.js",
+        "transferSize": 6071
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 1,
+    "path": "/voitures-electriques",
+    "device": "desktop",
+    "score": 100,
+    "accessibility": 100,
+    "fcp": 245.4851,
+    "lcp": 608.2276499999999,
+    "cls": 0,
+    "tbt": 0,
+    "lcpElement": "<h1 class=\"balance mt-4 text-h1 font-bold text-ink\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "desktop",
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": false,
+        "width": 1350,
+        "height": 940,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/153dxdo6lycn..js",
+        "transferSize": 7850
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57297
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610080101/show_ads_impl_fy2021.js?bust=122881530",
+        "transferSize": 168591
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/06xjo3~yu80iz.js",
+        "transferSize": 5565
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0q08jzdum0i47.js",
+        "transferSize": 1659
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 8070
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/12y7yb2irzn-o.js",
+        "transferSize": 6458
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y-8y1kh2r_fi.js",
+        "transferSize": 7638
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0yogrd~j8m6c_.js",
+        "transferSize": 7726
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0svyblr_8zn6x.js",
+        "transferSize": 6071
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0mnnfab2nly.s.js",
+        "transferSize": 7390
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 1,
+    "path": "/voitures-electriques/renault",
+    "device": "mobile",
+    "score": 95,
+    "accessibility": 100,
+    "fcp": 908.9060999999997,
+    "lcp": 2863.7655999999997,
+    "cls": 0,
+    "tbt": 17.5,
+    "lcpElement": "<p id=\"brand-intro\" class=\"pretty mt-8 max-w-3xl text-body\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0q08jzdum0i47.js",
+        "transferSize": 1659
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57297
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610080101/show_ads_impl_fy2021.js?bust=122881530",
+        "transferSize": 168591
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/06xjo3~yu80iz.js",
+        "transferSize": 5565
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/153dxdo6lycn..js",
+        "transferSize": 7850
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 1,
+    "path": "/voitures-electriques/tesla/model-3",
+    "device": "mobile",
+    "score": 96,
+    "accessibility": 100,
+    "fcp": 907.1896,
+    "lcp": 2710.8173999999995,
+    "cls": 0,
+    "tbt": 17.5,
+    "lcpElement": "<p class=\"pretty text-body [&amp;:not(:first-child)]:mt-4\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/06xjo3~yu80iz.js",
+        "transferSize": 5565
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57283
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610020101/show_ads_impl_fy2021.js",
+        "transferSize": 167544
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0q08jzdum0i47.js",
+        "transferSize": 1659
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/153dxdo6lycn..js",
+        "transferSize": 7850
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 2,
+    "path": "/",
+    "device": "mobile",
+    "score": 95,
+    "accessibility": 100,
+    "fcp": 906.9483999999998,
+    "lcp": 2935.4985,
+    "cls": 0,
+    "tbt": 26,
+    "lcpElement": "<h1 class=\"balance mt-6 text-display font-bold text-paper\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57282
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610060101/show_ads_impl_fy2021.js?bust=122881491",
+        "transferSize": 168485
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/153dxdo6lycn..js",
+        "transferSize": 7850
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0mnnfab2nly.s.js",
+        "transferSize": 7390
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 2,
+    "path": "/",
+    "device": "desktop",
+    "score": 100,
+    "accessibility": 100,
+    "fcp": 245.75089999999997,
+    "lcp": 628.6762249999999,
+    "cls": 0,
+    "tbt": 0,
+    "lcpElement": "<img alt=\"\" width=\"1376\" height=\"768\" decoding=\"async\" data-nimg=\"1\" class=\"hero-poster h-full w-full object-cover object-right mix-blend-lighten\" style=\"color: transparent;\" sizes=\"(min-width: 1024px) min(68vw, 1100px), 100vw\" srcset=\"/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=640&amp;q=75 640w, /_next/ima…\" src=\"http://localhost:3102/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=1080…\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "desktop",
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": false,
+        "width": 1350,
+        "height": 940,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57287
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610020101/show_ads_impl_fy2021.js",
+        "transferSize": 167544
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0svyblr_8zn6x.js",
+        "transferSize": 6071
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/153dxdo6lycn..js",
+        "transferSize": 7850
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0mnnfab2nly.s.js",
+        "transferSize": 7390
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y-8y1kh2r_fi.js",
+        "transferSize": 7638
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0yogrd~j8m6c_.js",
+        "transferSize": 7726
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 2,
+    "path": "/voitures-electriques",
+    "device": "mobile",
+    "score": 96,
+    "accessibility": 100,
+    "fcp": 905.3184999999999,
+    "lcp": 2708.14925,
+    "cls": 0,
+    "tbt": 22,
+    "lcpElement": "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/153dxdo6lycn..js",
+        "transferSize": 7850
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57282
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610050101/show_ads_impl_fy2021.js?bust=122881438",
+        "transferSize": 167858
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0q08jzdum0i47.js",
+        "transferSize": 1659
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/12y7yb2irzn-o.js",
+        "transferSize": 6458
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 2,
+    "path": "/comparer",
+    "device": "mobile",
+    "score": 95,
+    "accessibility": 100,
+    "fcp": 908.5788,
+    "lcp": 2863.0266,
+    "cls": 0,
+    "tbt": 11,
+    "lcpElement": "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0mnnfab2nly.s.js",
+        "transferSize": 7390
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57287
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610050101/show_ads_impl_fy2021.js?bust=122881395",
+        "transferSize": 167858
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/06xjo3~yu80iz.js",
+        "transferSize": 5565
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 2,
+    "path": "/outils/tco-voiture-electrique",
+    "device": "mobile",
+    "score": 95,
+    "accessibility": 100,
+    "fcp": 906.3136999999998,
+    "lcp": 2859.4875999999995,
+    "cls": 0,
+    "tbt": 16,
+    "lcpElement": "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_xcqcyo980fq.js",
+        "transferSize": 5664
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57289
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610060101/show_ads_impl_fy2021.js?bust=122881491",
+        "transferSize": 168485
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0svyblr_8zn6x.js",
+        "transferSize": 6071
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 2,
+    "path": "/voitures-electriques",
+    "device": "desktop",
+    "score": 100,
+    "accessibility": 100,
+    "fcp": 245.4678,
+    "lcp": 608.4767999999999,
+    "cls": 0,
+    "tbt": 0,
+    "lcpElement": "<h1 class=\"balance mt-4 text-h1 font-bold text-ink\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "desktop",
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": false,
+        "width": 1350,
+        "height": 940,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/153dxdo6lycn..js",
+        "transferSize": 7850
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57282
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610050101/show_ads_impl_fy2021.js?bust=122881395",
+        "transferSize": 167858
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/06xjo3~yu80iz.js",
+        "transferSize": 5565
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0q08jzdum0i47.js",
+        "transferSize": 1659
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/12y7yb2irzn-o.js",
+        "transferSize": 6458
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y-8y1kh2r_fi.js",
+        "transferSize": 7638
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0yogrd~j8m6c_.js",
+        "transferSize": 7726
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0svyblr_8zn6x.js",
+        "transferSize": 6071
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0mnnfab2nly.s.js",
+        "transferSize": 7390
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 2,
+    "path": "/voitures-electriques/renault",
+    "device": "mobile",
+    "score": 95,
+    "accessibility": 100,
+    "fcp": 907.1662000000001,
+    "lcp": 2861.1354,
+    "cls": 0,
+    "tbt": 20,
+    "lcpElement": "<p id=\"brand-intro\" class=\"pretty mt-8 max-w-3xl text-body\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0q08jzdum0i47.js",
+        "transferSize": 1659
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57290
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610080101/show_ads_impl_fy2021.js?bust=122881530",
+        "transferSize": 168591
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/06xjo3~yu80iz.js",
+        "transferSize": 5565
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/153dxdo6lycn..js",
+        "transferSize": 7850
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 2,
+    "path": "/voitures-electriques/tesla/model-3",
+    "device": "mobile",
+    "score": 95,
+    "accessibility": 100,
+    "fcp": 906.4523000000002,
+    "lcp": 2859.7477500000005,
+    "cls": 0,
+    "tbt": 21,
+    "lcpElement": "<p class=\"pretty text-body [&amp;:not(:first-child)]:mt-4\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/06xjo3~yu80iz.js",
+        "transferSize": 5565
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57284
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610020101/show_ads_impl_fy2021.js",
+        "transferSize": 167544
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0q08jzdum0i47.js",
+        "transferSize": 1659
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/153dxdo6lycn..js",
+        "transferSize": 7850
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 3,
+    "path": "/",
+    "device": "mobile",
+    "score": 95,
+    "accessibility": 100,
+    "fcp": 909.3443,
+    "lcp": 2939.0233499999995,
+    "cls": 0,
+    "tbt": 16.5,
+    "lcpElement": "<h1 class=\"balance mt-6 text-display font-bold text-paper\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57287
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610020101/show_ads_impl_fy2021.js",
+        "transferSize": 167544
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/153dxdo6lycn..js",
+        "transferSize": 7850
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0mnnfab2nly.s.js",
+        "transferSize": 7390
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 3,
+    "path": "/",
+    "device": "desktop",
+    "score": 94,
+    "accessibility": 100,
+    "fcp": 246.638,
+    "lcp": 1677.9761749999998,
+    "cls": 0,
+    "tbt": 0,
+    "lcpElement": "<video muted=\"\" loop=\"\" playsinline=\"\" preload=\"none\" aria-hidden=\"true\" tabindex=\"-1\" disablepictureinpicture=\"\" disableremoteplayback=\"\" class=\"h-full w-full object-cover object-right\" src=\"/brand/video.mp4\" data-playing=\"\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "desktop",
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": false,
+        "width": 1350,
+        "height": 940,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57297
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610070101/show_ads_impl_fy2021.js?bust=122881529",
+        "transferSize": 168748
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0svyblr_8zn6x.js",
+        "transferSize": 6071
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/153dxdo6lycn..js",
+        "transferSize": 7850
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0mnnfab2nly.s.js",
+        "transferSize": 7390
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y-8y1kh2r_fi.js",
+        "transferSize": 7638
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0yogrd~j8m6c_.js",
+        "transferSize": 7726
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 3,
+    "path": "/voitures-electriques",
+    "device": "mobile",
+    "score": 96,
+    "accessibility": 100,
+    "fcp": 903.7828,
+    "lcp": 2855.7335999999996,
+    "cls": 0,
+    "tbt": 11,
+    "lcpElement": "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/153dxdo6lycn..js",
+        "transferSize": 7850
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57294
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610070101/show_ads_impl_fy2021.js?bust=122881529",
+        "transferSize": 168748
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0q08jzdum0i47.js",
+        "transferSize": 1659
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/12y7yb2irzn-o.js",
+        "transferSize": 6458
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 3,
+    "path": "/comparer",
+    "device": "mobile",
+    "score": 99,
+    "accessibility": 100,
+    "fcp": 905.8307,
+    "lcp": 2258.8017,
+    "cls": 0,
+    "tbt": 19.5,
+    "lcpElement": "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0mnnfab2nly.s.js",
+        "transferSize": 7390
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57282
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610060101/show_ads_impl_fy2021.js?bust=122881491",
+        "transferSize": 168485
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/06xjo3~yu80iz.js",
+        "transferSize": 5565
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 3,
+    "path": "/outils/tco-voiture-electrique",
+    "device": "mobile",
+    "score": 95,
+    "accessibility": 100,
+    "fcp": 908.2421999999999,
+    "lcp": 2862.3633000000004,
+    "cls": 0,
+    "tbt": 23,
+    "lcpElement": "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_xcqcyo980fq.js",
+        "transferSize": 5664
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57294
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610080101/show_ads_impl_fy2021.js?bust=122881530",
+        "transferSize": 168591
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0svyblr_8zn6x.js",
+        "transferSize": 6071
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 3,
+    "path": "/voitures-electriques",
+    "device": "desktop",
+    "score": 100,
+    "accessibility": 100,
+    "fcp": 243.6979,
+    "lcp": 605.76525,
+    "cls": 0,
+    "tbt": 0,
+    "lcpElement": "<h1 class=\"balance mt-4 text-h1 font-bold text-ink\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "desktop",
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": false,
+        "width": 1350,
+        "height": 940,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/153dxdo6lycn..js",
+        "transferSize": 7850
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57297
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610070101/show_ads_impl_fy2021.js?bust=122881492",
+        "transferSize": 168748
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/06xjo3~yu80iz.js",
+        "transferSize": 5565
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0q08jzdum0i47.js",
+        "transferSize": 1659
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/12y7yb2irzn-o.js",
+        "transferSize": 6458
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y-8y1kh2r_fi.js",
+        "transferSize": 7638
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0yogrd~j8m6c_.js",
+        "transferSize": 7726
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0svyblr_8zn6x.js",
+        "transferSize": 6071
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0mnnfab2nly.s.js",
+        "transferSize": 7390
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 3,
+    "path": "/voitures-electriques/renault",
+    "device": "mobile",
+    "score": 96,
+    "accessibility": 100,
+    "fcp": 908.3866999999999,
+    "lcp": 2712.6325500000003,
+    "cls": 0,
+    "tbt": 17,
+    "lcpElement": "<p id=\"brand-intro\" class=\"pretty mt-8 max-w-3xl text-body\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0q08jzdum0i47.js",
+        "transferSize": 1659
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57289
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610050101/show_ads_impl_fy2021.js?bust=122881395",
+        "transferSize": 167858
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/06xjo3~yu80iz.js",
+        "transferSize": 5565
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/153dxdo6lycn..js",
+        "transferSize": 7850
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  },
+  {
+    "repeat": 3,
+    "path": "/voitures-electriques/tesla/model-3",
+    "device": "mobile",
+    "score": 95,
+    "accessibility": 100,
+    "fcp": 907.2257,
+    "lcp": 2860.9161,
+    "cls": 0,
+    "tbt": 18.5,
+    "lcpElement": "<p class=\"pretty text-body [&amp;:not(:first-child)]:mt-4\">",
+    "warnings": [],
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "scripts": [
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "transferSize": 8379
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "transferSize": 9809
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "transferSize": 71347
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "transferSize": 41018
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "transferSize": 4715
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "transferSize": 8096
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "transferSize": 13439
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "transferSize": 1953
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "transferSize": 9346
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "transferSize": 1276
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/06xjo3~yu80iz.js",
+        "transferSize": 5565
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "transferSize": 57290
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610060101/show_ads_impl_fy2021.js?bust=122881491",
+        "transferSize": 168485
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0q08jzdum0i47.js",
+        "transferSize": 1659
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/153dxdo6lycn..js",
+        "transferSize": 7850
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "transferSize": 7694
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "transferSize": 7717
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/vCQGANOT0f69Fe7oc4iKh-xgXbpnZgMkymlv5VxpOpY.js",
+        "transferSize": 24721
+      }
+    ]
+  }
+]

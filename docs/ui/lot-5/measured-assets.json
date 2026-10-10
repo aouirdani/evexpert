@@ -1,0 +1,150 @@
+{
+  "css": {
+    "before": {
+      "12iwg6uklehze.css": {
+        "bytes": 71725,
+        "sha256": "53548e13bd31cca53745d16fd8bace12dfa1d79aea7af53d58ca7bfaa2668c5e"
+      }
+    },
+    "after": {
+      "0b8cex5vy425o.css": {
+        "bytes": 74531,
+        "sha256": "0b79b6c5293d1390b77ff0ae3dce0d284f0d850ea3646b7987d2f9713de94675"
+      }
+    }
+  },
+  "fonts": {
+    "before": {
+      "59b15b4bcd7b1eb5-s.0x08jh8vondwt.woff2": {
+        "bytes": 5476,
+        "sha256": "7b59d6bf7f8b8408ac28f27d01dca9a890abeae77045d343b1d8ccb089a92e54"
+      },
+      "e532fa1b9921e1cd-s.0~wrfy7sm-h4g.woff2": {
+        "bytes": 4000,
+        "sha256": "0a8b854cc18641bd1b8222afa7ec82a75e59bc6501f777744ec87db1b6cd7a2c"
+      },
+      "1a69062cfe6f77f8-s.07r2ragk8ph~z.woff2": {
+        "bytes": 5548,
+        "sha256": "b814a03d7e57b0626a906f76911b9361d173a1aabc5544c40f72d6a35a1e4940"
+      },
+      "a7e15459c1805da0-s.p.15mmg7gamto4l.woff2": {
+        "bytes": 10128,
+        "sha256": "9e1455e6e9c5866f607e464fffb7855486dcf575b7e69b83a3d234e587fce41b"
+      },
+      "99e609270109b47d-s.p.16-z~2sp29ex6.woff2": {
+        "bytes": 10052,
+        "sha256": "c36f509c0a8f9f85f29cb44bc8701d8a9e0b14c499e77a884f789ead7093a7ac"
+      },
+      "fe48c93add1d142c-s.169mj0m4oygmx.woff2": {
+        "bytes": 4064,
+        "sha256": "429a912c8121ee6755458dc215abed11c9e783d6ce0fea883f699823bdd0a62a"
+      },
+      "6ff74e33ebd7bca3-s.0_n_qwbzcushi.woff2": {
+        "bytes": 4320,
+        "sha256": "f746246b6b0b641f99d9e26e0bf4e42197bde692126857857f0195a94362d52a"
+      },
+      "e390973e931a41c5-s.08hd0g.321csk.woff2": {
+        "bytes": 4348,
+        "sha256": "c6f09ee0e0a24b7c85ecb2a601eb99332f65b1f6b37c31e0bbe73fb307625eca"
+      },
+      "2fe89d53234c61d4-s.0k_.i63k_i_qa.woff2": {
+        "bytes": 8860,
+        "sha256": "f1050dc5317b43434c0aeda599d4624c774ffc162e87a8cf204b949b6a85816d"
+      },
+      "2e95a7d252b9825a-s.0dgq8lqrj3gc_.woff2": {
+        "bytes": 8960,
+        "sha256": "1b6b18fd0fd240bc6d5850f4df621484722d4b5d3650ebdd1e3a8bbd81c75854"
+      },
+      "5256dd17dd2ccf14-s.0-bj-4.3jk9zi.woff2": {
+        "bytes": 5540,
+        "sha256": "bb7642ad6085595ee4d28c89965450943c78e9772403e79e655d4e347a293d12"
+      },
+      "SchibstedGrotesk_latin_var-s.p.0magfa.1.zbwp.woff2": {
+        "bytes": 36116,
+        "sha256": "94f29c1eaa7aff54701fe2ebb6722229fe3defb7abfa3162e97c69954334ccbb"
+      },
+      "5689d89b20a4bd5b-s.072srq0~jhoqa.woff2": {
+        "bytes": 8748,
+        "sha256": "099842414ddad0cb366cf984641b14e75c01a2c6e3f42fa13a6e89d1f4c3fc20"
+      },
+      "23b7a97ae3b5c134-s.p.0o14nraug8u5s.woff2": {
+        "bytes": 10120,
+        "sha256": "ad4580d8cb4b5f627c2d18457656732f7f7b070f7837fbc380e08054157e6f6c"
+      },
+      "9a4838fcda0d1bca-s.0787d67~10694.woff2": {
+        "bytes": 4116,
+        "sha256": "69744cabbccc9faf77516ce9b744361e1e6be7f8081400006035a153797d2965"
+      },
+      "f53f4557ddd9f7a6-s.0l86rvwdd07jt.woff2": {
+        "bytes": 4344,
+        "sha256": "c7fa87a1d7be5a6f94a1039b4c43d8ac2e8af035280dabcc5734d0da9f6afcf2"
+      }
+    },
+    "after": {
+      "59b15b4bcd7b1eb5-s.0x08jh8vondwt.woff2": {
+        "bytes": 5476,
+        "sha256": "7b59d6bf7f8b8408ac28f27d01dca9a890abeae77045d343b1d8ccb089a92e54"
+      },
+      "e532fa1b9921e1cd-s.0~wrfy7sm-h4g.woff2": {
+        "bytes": 4000,
+        "sha256": "0a8b854cc18641bd1b8222afa7ec82a75e59bc6501f777744ec87db1b6cd7a2c"
+      },
+      "1a69062cfe6f77f8-s.07r2ragk8ph~z.woff2": {
+        "bytes": 5548,
+        "sha256": "b814a03d7e57b0626a906f76911b9361d173a1aabc5544c40f72d6a35a1e4940"
+      },
+      "a7e15459c1805da0-s.p.15mmg7gamto4l.woff2": {
+        "bytes": 10128,
+        "sha256": "9e1455e6e9c5866f607e464fffb7855486dcf575b7e69b83a3d234e587fce41b"
+      },
+      "99e609270109b47d-s.p.16-z~2sp29ex6.woff2": {
+        "bytes": 10052,
+        "sha256": "c36f509c0a8f9f85f29cb44bc8701d8a9e0b14c499e77a884f789ead7093a7ac"
+      },
+      "fe48c93add1d142c-s.169mj0m4oygmx.woff2": {
+        "bytes": 4064,
+        "sha256": "429a912c8121ee6755458dc215abed11c9e783d6ce0fea883f699823bdd0a62a"
+      },
+      "6ff74e33ebd7bca3-s.0_n_qwbzcushi.woff2": {
+        "bytes": 4320,
+        "sha256": "f746246b6b0b641f99d9e26e0bf4e42197bde692126857857f0195a94362d52a"
+      },
+      "e390973e931a41c5-s.08hd0g.321csk.woff2": {
+        "bytes": 4348,
+        "sha256": "c6f09ee0e0a24b7c85ecb2a601eb99332f65b1f6b37c31e0bbe73fb307625eca"
+      },
+      "2fe89d53234c61d4-s.0k_.i63k_i_qa.woff2": {
+        "bytes": 8860,
+        "sha256": "f1050dc5317b43434c0aeda599d4624c774ffc162e87a8cf204b949b6a85816d"
+      },
+      "2e95a7d252b9825a-s.0dgq8lqrj3gc_.woff2": {
+        "bytes": 8960,
+        "sha256": "1b6b18fd0fd240bc6d5850f4df621484722d4b5d3650ebdd1e3a8bbd81c75854"
+      },
+      "5256dd17dd2ccf14-s.0-bj-4.3jk9zi.woff2": {
+        "bytes": 5540,
+        "sha256": "bb7642ad6085595ee4d28c89965450943c78e9772403e79e655d4e347a293d12"
+      },
+      "SchibstedGrotesk_latin_var-s.p.0magfa.1.zbwp.woff2": {
+        "bytes": 36116,
+        "sha256": "94f29c1eaa7aff54701fe2ebb6722229fe3defb7abfa3162e97c69954334ccbb"
+      },
+      "5689d89b20a4bd5b-s.072srq0~jhoqa.woff2": {
+        "bytes": 8748,
+        "sha256": "099842414ddad0cb366cf984641b14e75c01a2c6e3f42fa13a6e89d1f4c3fc20"
+      },
+      "23b7a97ae3b5c134-s.p.0o14nraug8u5s.woff2": {
+        "bytes": 10120,
+        "sha256": "ad4580d8cb4b5f627c2d18457656732f7f7b070f7837fbc380e08054157e6f6c"
+      },
+      "9a4838fcda0d1bca-s.0787d67~10694.woff2": {
+        "bytes": 4116,
+        "sha256": "69744cabbccc9faf77516ce9b744361e1e6be7f8081400006035a153797d2965"
+      },
+      "f53f4557ddd9f7a6-s.0l86rvwdd07jt.woff2": {
+        "bytes": 4344,
+        "sha256": "c7fa87a1d7be5a6f94a1039b4c43d8ac2e8af035280dabcc5734d0da9f6afcf2"
+      }
+    }
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "filter": {
+    "count": "1 version sur 47",
+    "links": [
+      "/voitures-electriques/hyundai/kona-electric"
+    ]
+  },
+  "garage": {
+    "selected": 3,
+    "disabled": 44,
+    "href": "/comparer?v=mercedes-benz-cla-250,volkswagen-id-7-86-kwh,tesla-model-3-long-range-rwd",
+    "client": 320,
+    "scroll": 320,
+    "bar": {
+      "x": 16,
+      "y": 816,
+      "width": 288,
+      "height": 68,
+      "top": 816,
+      "right": 304,
+      "bottom": 884,
+      "left": 16
+    }
+  },
+  "cleared": true,
+  "selectionWidths": [
+    {
+      "width": 320,
+      "selected": 3,
+      "client": 320,
+      "scroll": 320,
+      "controls": [
+        {
+          "tag": "A",
+          "x": 144.171875,
+          "y": 828,
+          "width": 91.828125,
+          "height": 44,
+          "top": 828,
+          "right": 236,
+          "bottom": 872,
+          "left": 144.171875
+        },
+        {
+          "tag": "BUTTON",
+          "x": 244,
+          "y": 828,
+          "width": 44,
+          "height": 44,
+          "top": 828,
+          "right": 288,
+          "bottom": 872,
+          "left": 244
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "selected": 3,
+      "client": 390,
+      "scroll": 390,
+      "controls": [
+        {
+          "tag": "A",
+          "x": 214.171875,
+          "y": 828,
+          "width": 91.828125,
+          "height": 44,
+          "top": 828,
+          "right": 306,
+          "bottom": 872,
+          "left": 214.171875
+        },
+        {
+          "tag": "BUTTON",
+          "x": 314,
+          "y": 828,
+          "width": 44,
+          "height": 44,
+          "top": 828,
+          "right": 358,
+          "bottom": 872,
+          "left": 314
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "selected": 3,
+      "client": 768,
+      "scroll": 768,
+      "controls": [
+        {
+          "tag": "A",
+          "x": 194,
+          "y": 828,
+          "width": 91.828125,
+          "height": 44,
+          "top": 828,
+          "right": 285.828125,
+          "bottom": 872,
+          "left": 194
+        },
+        {
+          "tag": "BUTTON",
+          "x": 293.828125,
+          "y": 828,
+          "width": 44,
+          "height": 44,
+          "top": 828,
+          "right": 337.828125,
+          "bottom": 872,
+          "left": 293.828125
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "selected": 3,
+      "client": 1024,
+      "scroll": 1024,
+      "controls": [
+        {
+          "tag": "A",
+          "x": 194,
+          "y": 828,
+          "width": 91.828125,
+          "height": 44,
+          "top": 828,
+          "right": 285.828125,
+          "bottom": 872,
+          "left": 194
+        },
+        {
+          "tag": "BUTTON",
+          "x": 293.828125,
+          "y": 828,
+          "width": 44,
+          "height": 44,
+          "top": 828,
+          "right": 337.828125,
+          "bottom": 872,
+          "left": 293.828125
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "selected": 3,
+      "client": 1440,
+      "scroll": 1440,
+      "controls": [
+        {
+          "tag": "A",
+          "x": 194,
+          "y": 828,
+          "width": 91.828125,
+          "height": 44,
+          "top": 828,
+          "right": 285.828125,
+          "bottom": 872,
+          "left": 194
+        },
+        {
+          "tag": "BUTTON",
+          "x": 293.828125,
+          "y": 828,
+          "width": 44,
+          "height": 44,
+          "top": 828,
+          "right": 337.828125,
+          "bottom": 872,
+          "left": 293.828125
+        }
+      ]
+    }
+  ],
+  "comparison": {
+    "url": "/comparer?v=renault-5-e-tech-52-kwh-150-ch,peugeot-e-208-50-kwh,tesla-model-3-rwd",
+    "selections": [
+      "renault-5-e-tech-52-kwh-150-ch",
+      "peugeot-e-208-50-kwh",
+      "tesla-model-3-rwd"
+    ]
+  },
+  "copy": {
+    "copied": "http://localhost:3102/comparer?v=renault-5-e-tech-52-kwh-150-ch,peugeot-e-208-50-kwh,tesla-model-3-rwd",
+    "label": "Lien copié",
+    "url": "http://localhost:3102/comparer?v=renault-5-e-tech-52-kwh-150-ch,peugeot-e-208-50-kwh,tesla-model-3-rwd"
+  },
+  "focus": [
+    {
+      "path": "/voitures-electriques/tesla/model-3",
+      "width": 320,
+      "href": "/voitures-electriques/tesla/model-3/rwd",
+      "focusVisible": true,
+      "outline": [
+        "none",
+        "2px",
+        "rgb(20, 72, 200)"
+      ],
+      "pseudoOutline": [
+        "solid",
+        "2px",
+        "rgb(20, 72, 200)"
+      ],
+      "pseudoOffset": "-2px"
+    },
+    {
+      "path": "/voitures-electriques/tesla/model-3",
+      "width": 390,
+      "href": "/voitures-electriques/tesla/model-3/rwd",
+      "focusVisible": true,
+      "outline": [
+        "none",
+        "2px",
+        "rgb(20, 72, 200)"
+      ],
+      "pseudoOutline": [
+        "solid",
+        "2px",
+        "rgb(20, 72, 200)"
+      ],
+      "pseudoOffset": "-2px"
+    },
+    {
+      "path": "/voitures-electriques/tesla/model-3",
+      "width": 768,
+      "href": "/voitures-electriques/tesla/model-3/rwd",
+      "focusVisible": true,
+      "outline": [
+        "none",
+        "2px",
+        "rgb(20, 72, 200)"
+      ],
+      "pseudoOutline": [
+        "solid",
+        "2px",
+        "rgb(20, 72, 200)"
+      ],
+      "pseudoOffset": "-2px"
+    },
+    {
+      "path": "/voitures-electriques/tesla/model-3",
+      "width": 1024,
+      "href": "/voitures-electriques/tesla/model-3/rwd",
+      "focusVisible": true,
+      "outline": [
+        "none",
+        "2px",
+        "rgb(20, 72, 200)"
+      ],
+      "pseudoOutline": [
+        "solid",
+        "2px",
+        "rgb(20, 72, 200)"
+      ],
+      "pseudoOffset": "-2px"
+    },
+    {
+      "path": "/voitures-electriques/tesla/model-3",
+      "width": 1440,
+      "href": "/voitures-electriques/tesla/model-3/rwd",
+      "focusVisible": true,
+      "outline": [
+        "none",
+        "2px",
+        "rgb(20, 72, 200)"
+      ],
+      "pseudoOutline": [
+        "solid",
+        "2px",
+        "rgb(20, 72, 200)"
+      ],
+      "pseudoOffset": "-2px"
+    },
+    {
+      "path": "/voitures-electriques",
+      "width": 1024,
+      "href": "/voitures-electriques/mercedes-benz/cla",
+      "focusVisible": true,
+      "outline": [
+        "none",
+        "2px",
+        "rgb(20, 72, 200)"
+      ],
+      "pseudoOutline": [
+        "solid",
+        "2px",
+        "rgb(20, 72, 200)"
+      ],
+      "pseudoOffset": "-2px"
+    },
+    {
+      "path": "/voitures-electriques",
+      "width": 1440,
+      "href": "/voitures-electriques/mercedes-benz/cla",
+      "focusVisible": true,
+      "outline": [
+        "none",
+        "2px",
+        "rgb(20, 72, 200)"
+      ],
+      "pseudoOutline": [
+        "solid",
+        "2px",
+        "rgb(20, 72, 200)"
+      ],
+      "pseudoOffset": "-2px"
+    }
+  ],
+  "followedLink": {
+    "expected": "/voitures-electriques/mercedes-benz/cla",
+    "actual": "/voitures-electriques/mercedes-benz/cla"
+  },
+  "heroPause": true,
+  "heroResume": true
+}

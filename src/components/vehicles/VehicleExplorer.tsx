@@ -7,17 +7,19 @@ import { ASSUMPTIONS } from "@/data/assumptions";
 import { costPer100km } from "@/lib/vehicle-calcs";
 import { bodyTypeLabels } from "@/lib/vehicle-format";
 import { cx } from "@/lib/cx";
-import { fieldClass, labelClass } from "@/components/ui/Field";
+import { comfortableFieldClass, labelClass, rangeFieldClass } from "@/components/ui/Field";
+import { comfortableChoiceActionClass, iconActionClass, textActionClass } from "@/components/ui/componentStyles";
 import { VehicleCard } from "./VehicleCard";
 import { VehicleRow, VehicleRowsHead } from "./VehicleRow";
+import { DataTableScroll } from "./DataTableScroll";
+import { catalogueStyles as styles } from "./catalogueStyles";
 
 type SortKey = "range-desc" | "cost-asc" | "dc-desc" | "battery-desc" | "name";
 type View = "cards" | "table";
 
-// Champ de tri : même style que les autres champs, un peu moins haut (cx ne résout pas py-2.5 / py-2).
-const sortField = fieldClass.replace("py-2.5", "py-2");
-const viewButton =
-  "inline-flex h-10 w-10 items-center justify-center rounded-sm border transition-colors duration-150";
+// Le tri et les filtres utilisent la même variante confortable.
+const sortField = comfortableFieldClass;
+const viewButton = iconActionClass;
 
 /** Filtres côté client uniquement : aucune combinaison de filtres ne crée d'URL indexable. */
 export function VehicleExplorer({ vehicles }: { vehicles: ExplorerVehicle[] }) {
@@ -69,8 +71,8 @@ export function VehicleExplorer({ vehicles }: { vehicles: ExplorerVehicle[] }) {
   };
 
   return (
-    <div className="grid gap-x-12 gap-y-6 lg:grid-cols-[14.5rem_minmax(0,1fr)]">
-      <div className="lg:sticky lg:top-[calc(var(--header-h)+1.5rem)] lg:h-fit">
+    <div className={cx("grid gap-x-12 gap-y-6 lg:grid-cols-[14.5rem_minmax(0,1fr)]", styles.explorer)}>
+      <div data-filters-open={filtersOpen} className={styles.filters}>
         <div className="flex gap-2 lg:block">
           <div className="min-w-0 flex-1">
             <label htmlFor="v-search" className={labelClass}>Rechercher</label>
@@ -80,7 +82,7 @@ export function VehicleExplorer({ vehicles }: { vehicles: ExplorerVehicle[] }) {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Marque ou modèle"
-              className={fieldClass}
+              className={cx(comfortableFieldClass, query && styles.activeControl)}
             />
           </div>
           <button
@@ -88,7 +90,7 @@ export function VehicleExplorer({ vehicles }: { vehicles: ExplorerVehicle[] }) {
             aria-expanded={filtersOpen}
             aria-controls="v-filters"
             onClick={() => setFiltersOpen((o) => !o)}
-            className="mt-auto inline-flex h-[2.625rem] items-center gap-2 rounded-md border border-control bg-surface px-3 text-sm font-semibold text-ink lg:hidden"
+            className={cx(comfortableChoiceActionClass, "mt-auto gap-2 border-control bg-surface text-ink enabled:hover:border-ink lg:hidden")}
           >
             <SlidersHorizontal className="h-4 w-4" aria-hidden />
             Filtres{activeFilters > 0 && <span className="num rounded-sm bg-ink px-1.5 text-xs text-paper">{activeFilters}</span>}
@@ -103,14 +105,14 @@ export function VehicleExplorer({ vehicles }: { vehicles: ExplorerVehicle[] }) {
         >
           <div>
             <label htmlFor="v-brand" className={labelClass}>Marque</label>
-            <select id="v-brand" value={brand} onChange={(e) => setBrand(e.target.value)} className={fieldClass}>
+            <select id="v-brand" value={brand} onChange={(e) => setBrand(e.target.value)} className={cx(comfortableFieldClass, brand !== "all" && styles.activeControl)}>
               <option value="all">Toutes</option>
               {brands.map((b) => (<option key={b} value={b}>{b}</option>))}
             </select>
           </div>
           <div>
             <label htmlFor="v-body" className={labelClass}>Carrosserie</label>
-            <select id="v-body" value={body} onChange={(e) => setBody(e.target.value)} className={fieldClass}>
+            <select id="v-body" value={body} onChange={(e) => setBody(e.target.value)} className={cx(comfortableFieldClass, body !== "all" && styles.activeControl)}>
               <option value="all">Toutes</option>
               {bodies.map((b) => (<option key={b} value={b}>{bodyTypeLabels[b]}</option>))}
             </select>
@@ -119,16 +121,16 @@ export function VehicleExplorer({ vehicles }: { vehicles: ExplorerVehicle[] }) {
             <label htmlFor="v-range" className={labelClass}>
               Autonomie WLTP min. <span className="num float-right font-bold">{minRange} km</span>
             </label>
-            <input id="v-range" type="range" min={0} max={700} step={50} value={minRange} onChange={(e) => setMinRange(Number(e.target.value))} className="w-full accent-signal-deep" />
+            <input id="v-range" type="range" min={0} max={700} step={50} value={minRange} onChange={(e) => setMinRange(Number(e.target.value))} className={rangeFieldClass} data-active={minRange > 0} />
           </div>
           <div>
             <label htmlFor="v-dc" className={labelClass}>
               Charge DC min. <span className="num float-right font-bold">{minDc} kW</span>
             </label>
-            <input id="v-dc" type="range" min={0} max={300} step={25} value={minDc} onChange={(e) => setMinDc(Number(e.target.value))} className="w-full accent-signal-deep" />
+            <input id="v-dc" type="range" min={0} max={300} step={25} value={minDc} onChange={(e) => setMinDc(Number(e.target.value))} className={rangeFieldClass} data-active={minDc > 0} />
           </div>
           {(activeFilters > 0 || query) && (
-            <button type="button" onClick={reset} className="link-u text-sm font-semibold text-signal-deep">
+            <button type="button" onClick={reset} className={textActionClass}>
               Réinitialiser les filtres
             </button>
           )}
@@ -137,7 +139,7 @@ export function VehicleExplorer({ vehicles }: { vehicles: ExplorerVehicle[] }) {
 
       <div className="min-w-0">
         <h2 className="sr-only">Résultats</h2>
-        <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-3 border-b border-line pb-3">
+        <div className={cx("flex flex-wrap items-end justify-between gap-x-6 gap-y-3 border-b border-line pb-3", styles.toolbar)}>
           <p className="text-sm text-muted" role="status" aria-live="polite">
             <span className="num text-data-md font-bold text-ink">{filtered.length}</span> version{filtered.length > 1 ? "s" : ""} sur {vehicles.length}
           </p>
@@ -176,28 +178,30 @@ export function VehicleExplorer({ vehicles }: { vehicles: ExplorerVehicle[] }) {
         </div>
 
         {filtered.length === 0 ? (
-          <div className="mt-6 border-t-2 border-ink pt-5">
+          <div className={cx("mt-6 border-t-2 border-ink pt-5", styles.empty)}>
             <p className="text-h3 font-bold text-ink">Aucune version ne correspond.</p>
             <p className="mt-1 text-muted">Assouplissez un critère ou réinitialisez les filtres.</p>
-            <button type="button" onClick={reset} className="link-u mt-3 text-sm font-semibold text-signal-deep">
+            <button type="button" onClick={reset} className={cx(textActionClass, "mt-3")}>
               Réinitialiser les filtres
             </button>
           </div>
         ) : view === "table" ? (
-          <table className="mt-5 hidden w-full lg:table">
-            <caption className="sr-only">Versions affichées, triées</caption>
-            <VehicleRowsHead />
-            <tbody>
-              {filtered.map((v) => (
-                <VehicleRow key={v.id} vehicle={v} href={v.href} />
-              ))}
-            </tbody>
-          </table>
+          <DataTableScroll label="Versions affichées, triées" hintId="catalogue-scroll-hint" className="mt-5 hidden lg:block">
+            <table className="w-full min-w-[42rem]">
+              <caption className="sr-only">Versions affichées, triées</caption>
+              <VehicleRowsHead />
+              <tbody>
+                {filtered.map((v) => (
+                  <VehicleRow key={v.id} vehicle={v} href={v.href} />
+                ))}
+              </tbody>
+            </table>
+          </DataTableScroll>
         ) : null}
         {filtered.length > 0 && (
           <div className={cx("mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-3", view === "table" && "lg:hidden")}>
             {filtered.map((v) => (
-              <VehicleCard key={v.id} vehicle={v} href={v.href} />
+              <VehicleCard presentation="catalogue" key={v.id} vehicle={v} href={v.href} />
             ))}
           </div>
         )}

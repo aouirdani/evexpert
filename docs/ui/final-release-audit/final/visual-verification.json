@@ -1,0 +1,226 @@
+{
+  "rows": [
+    {
+      "path": "/voitures-electriques",
+      "width": 320,
+      "units": [
+        {
+          "text": "kWh",
+          "display": "inline",
+          "width": 21.96875
+        },
+        {
+          "text": "kWh",
+          "display": "none",
+          "width": 0
+        },
+        {
+          "text": "kW",
+          "display": "inline",
+          "width": 14.640625
+        },
+        {
+          "text": "kW",
+          "display": "none",
+          "width": 0
+        },
+        {
+          "text": "kWh/100 km",
+          "display": "inline",
+          "width": 73.203125
+        },
+        {
+          "text": "kWh/100 km",
+          "display": "none",
+          "width": 0
+        }
+      ],
+      "tables": []
+    },
+    {
+      "path": "/voitures-electriques",
+      "width": 390,
+      "units": [
+        {
+          "text": "kWh",
+          "display": "inline",
+          "width": 21.96875
+        },
+        {
+          "text": "kWh",
+          "display": "none",
+          "width": 0
+        },
+        {
+          "text": "kW",
+          "display": "inline",
+          "width": 14.640625
+        },
+        {
+          "text": "kW",
+          "display": "none",
+          "width": 0
+        },
+        {
+          "text": "kWh/100 km",
+          "display": "inline",
+          "width": 73.203125
+        },
+        {
+          "text": "kWh/100 km",
+          "display": "none",
+          "width": 0
+        }
+      ],
+      "tables": []
+    },
+    {
+      "path": "/guides/acheter-voiture-electrique-occasion",
+      "width": 390,
+      "units": [],
+      "tables": [
+        {
+          "heading": "Construire un dossier de preuves, pas une impression générale",
+          "caption": "Grille de vérification EVExpert : des preuves complémentaires, sans note globale",
+          "client": 358,
+          "scroll": 1085,
+          "tabIndex": -1,
+          "focusAccepted": true,
+          "focusableChildren": 0,
+          "html": "<div class=\"relative mt-6 overflow-x-auto\"><table class=\"w-full min-w-[26rem] text-left text-sm\"><caption class=\"label pb-2 text-left\">Grille de vérification EV"
+        },
+        {
+          "heading": "Traduire une capacité restante en marge pour vos trajets",
+          "caption": "Scénario EVExpert : capacité retenue 90 %, fenêtre 80–10 %, consommation hypothétique 16 kWh/100 km",
+          "client": 358,
+          "scroll": 759,
+          "tabIndex": -1,
+          "focusAccepted": true,
+          "focusableChildren": 2,
+          "html": "<div class=\"relative mt-6 overflow-x-auto\"><table class=\"w-full min-w-[26rem] text-left text-sm\"><caption class=\"label pb-2 text-left\">Scénario EVExpert : capac"
+        }
+      ]
+    },
+    {
+      "path": "/guides/acheter-voiture-electrique-occasion",
+      "width": 1440,
+      "units": [],
+      "tables": [
+        {
+          "heading": "Construire un dossier de preuves, pas une impression générale",
+          "caption": "Grille de vérification EVExpert : des preuves complémentaires, sans note globale",
+          "client": 704,
+          "scroll": 1085,
+          "tabIndex": -1,
+          "focusAccepted": true,
+          "focusableChildren": 0,
+          "html": "<div class=\"relative mt-6 overflow-x-auto\"><table class=\"w-full min-w-[26rem] text-left text-sm\"><caption class=\"label pb-2 text-left\">Grille de vérification EV"
+        },
+        {
+          "heading": "Traduire une capacité restante en marge pour vos trajets",
+          "caption": "Scénario EVExpert : capacité retenue 90 %, fenêtre 80–10 %, consommation hypothétique 16 kWh/100 km",
+          "client": 704,
+          "scroll": 759,
+          "tabIndex": -1,
+          "focusAccepted": true,
+          "focusableChildren": 2,
+          "html": "<div class=\"relative mt-6 overflow-x-auto\"><table class=\"w-full min-w-[26rem] text-left text-sm\"><caption class=\"label pb-2 text-left\">Scénario EVExpert : capac"
+        }
+      ]
+    },
+    {
+      "path": "/blog/voitures-electriques-chinoises-byd-mg",
+      "width": 390,
+      "units": [],
+      "tables": [
+        {
+          "heading": "Partir de la carrosserie et de la version exacte",
+          "caption": "Versions BYD et MG présentes dans EVExpert — données spécialisées, pas une liste de stocks français",
+          "client": 358,
+          "scroll": 498,
+          "tabIndex": -1,
+          "focusAccepted": true,
+          "focusableChildren": 5,
+          "html": "<div class=\"relative mt-6 overflow-x-auto\"><table class=\"w-full min-w-[26rem] text-left text-sm\"><caption class=\"label pb-2 text-left\">Versions BYD et MG présen"
+        },
+        {
+          "heading": "LFP ou NMC : ne pas attribuer une chimie à une nationalité",
+          "client": 358,
+          "scroll": 454,
+          "tabIndex": -1,
+          "focusAccepted": true,
+          "focusableChildren": 0,
+          "html": "<div class=\"relative mt-6 overflow-x-auto\"><table class=\"w-full min-w-[26rem] text-left text-sm\"><thead><tr><th scope=\"col\" class=\"label whitespace-nowrap pb-2."
+        },
+        {
+          "heading": "Recharge à domicile : comparer la borne avec le plafond AC",
+          "caption": "Calcul EVExpert, 10–80 %, rendement 90 %, puissance effective plafonnée au chargeur AC",
+          "client": 358,
+          "scroll": 465,
+          "tabIndex": -1,
+          "focusAccepted": true,
+          "focusableChildren": 0,
+          "html": "<div class=\"relative mt-6 overflow-x-auto\"><table class=\"w-full min-w-[26rem] text-left text-sm\"><caption class=\"label pb-2 text-left\">Calcul EVExpert, 10–80 %,"
+        },
+        {
+          "heading": "Recharge rapide : rapprocher durée et énergie ajoutée",
+          "caption": "DC : pic et temps publiés ; énergie et moyenne équivalente calculées par EVExpert",
+          "client": 358,
+          "scroll": 597,
+          "tabIndex": -1,
+          "focusAccepted": true,
+          "focusableChildren": 0,
+          "html": "<div class=\"relative mt-6 overflow-x-auto\"><table class=\"w-full min-w-[26rem] text-left text-sm\"><caption class=\"label pb-2 text-left\">DC : pic et temps publiés"
+        }
+      ]
+    }
+  ],
+  "cmp": [
+    {
+      "origin": "https://www.evexpert.fr",
+      "googlefc": true,
+      "tcf": "function",
+      "visibleDialogs": [],
+      "frames": [
+        {
+          "src": "",
+          "visible": false
+        },
+        {
+          "src": "about:blank",
+          "visible": false
+        },
+        {
+          "src": "about:blank",
+          "visible": false
+        },
+        {
+          "src": "about:blank",
+          "visible": false
+        }
+      ],
+      "shadowHosts": [
+        "NEXT-ROUTE-ANNOUNCER"
+      ]
+    },
+    {
+      "origin": "http://localhost:3102",
+      "googlefc": true,
+      "tcf": "undefined",
+      "visibleDialogs": [],
+      "frames": [
+        {
+          "src": "https://pagead2.googlesyndication.com/pagead/ads",
+          "visible": false
+        },
+        {
+          "src": "https://pagead2.googlesyndication.com/pagead/html/r20261007/r20190131/zrt_lookup.html",
+          "visible": false
+        }
+      ],
+      "shadowHosts": [
+        "NEXT-ROUTE-ANNOUNCER"
+      ]
+    }
+  ]
+}

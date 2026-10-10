@@ -1,0 +1,14 @@
+[
+  {
+    "file": "src/components/home/Hero.tsx",
+    "before": "b93e6292aeed253a2fde22848742127c2eeab8781c2fcaee68fed66dfc98fa18",
+    "after": "b93e6292aeed253a2fde22848742127c2eeab8781c2fcaee68fed66dfc98fa18",
+    "equal": true
+  },
+  {
+    "file": "src/components/home/sections.tsx",
+    "before": "532e723bc9536219c91b75cce2c07c4addcab4a8d075d5049b22e86f9cdb2ba1",
+    "after": "532e723bc9536219c91b75cce2c07c4addcab4a8d075d5049b22e86f9cdb2ba1",
+    "equal": true
+  }
+]

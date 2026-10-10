@@ -1,0 +1,659 @@
+[
+  {
+    "width": 320,
+    "selector": "main section:first-child a[href=\"/comparer\"]",
+    "tag": "A",
+    "href": "/comparer",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(200, 255, 46)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 320,
+    "selector": "main section:first-child a[href=\"/voitures-electriques\"]",
+    "tag": "A",
+    "href": "/voitures-electriques",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(200, 255, 46)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(243, 246, 252)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 320,
+    "selector": "section[aria-labelledby=\"selection\"] article h3 a",
+    "tag": "A",
+    "href": "/voitures-electriques/renault/5-e-tech",
+    "focus": true,
+    "outline": [
+      "none",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": [
+      "solid",
+      "2px"
+    ]
+  },
+  {
+    "width": 320,
+    "selector": "section[aria-labelledby=\"selection\"] button[aria-pressed]",
+    "tag": "BUTTON",
+    "href": null,
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(7, 26, 58)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": [
+      "none",
+      "3px"
+    ]
+  },
+  {
+    "width": 320,
+    "selector": "section[aria-labelledby=\"lire\"] article h3 a",
+    "tag": "A",
+    "href": "/guides/batterie-brute-batterie-utile",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": [
+      "none",
+      "3px"
+    ]
+  },
+  {
+    "width": 320,
+    "selector": "section[aria-labelledby=\"outils\"] ol a",
+    "tag": "A",
+    "href": "/outils/cout-recharge-voiture-electrique",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 320,
+    "selector": "main details summary",
+    "tag": "SUMMARY",
+    "href": null,
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 390,
+    "selector": "main section:first-child a[href=\"/comparer\"]",
+    "tag": "A",
+    "href": "/comparer",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(200, 255, 46)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 390,
+    "selector": "main section:first-child a[href=\"/voitures-electriques\"]",
+    "tag": "A",
+    "href": "/voitures-electriques",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(200, 255, 46)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(243, 246, 252)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 390,
+    "selector": "section[aria-labelledby=\"selection\"] article h3 a",
+    "tag": "A",
+    "href": "/voitures-electriques/renault/5-e-tech",
+    "focus": true,
+    "outline": [
+      "none",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": [
+      "solid",
+      "2px"
+    ]
+  },
+  {
+    "width": 390,
+    "selector": "section[aria-labelledby=\"selection\"] button[aria-pressed]",
+    "tag": "BUTTON",
+    "href": null,
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(7, 26, 58)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": [
+      "none",
+      "3px"
+    ]
+  },
+  {
+    "width": 390,
+    "selector": "section[aria-labelledby=\"lire\"] article h3 a",
+    "tag": "A",
+    "href": "/guides/batterie-brute-batterie-utile",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": [
+      "none",
+      "3px"
+    ]
+  },
+  {
+    "width": 390,
+    "selector": "section[aria-labelledby=\"outils\"] ol a",
+    "tag": "A",
+    "href": "/outils/cout-recharge-voiture-electrique",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 390,
+    "selector": "main details summary",
+    "tag": "SUMMARY",
+    "href": null,
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 768,
+    "selector": "main section:first-child a[href=\"/comparer\"]",
+    "tag": "A",
+    "href": "/comparer",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(200, 255, 46)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 768,
+    "selector": "main section:first-child a[href=\"/voitures-electriques\"]",
+    "tag": "A",
+    "href": "/voitures-electriques",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(200, 255, 46)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(243, 246, 252)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 768,
+    "selector": "section[aria-labelledby=\"selection\"] tbody th a",
+    "tag": "A",
+    "href": "/voitures-electriques/renault/5-e-tech",
+    "focus": true,
+    "outline": [
+      "none",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "solid",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 768,
+    "selector": "section[aria-labelledby=\"selection\"] button[aria-pressed]",
+    "tag": "BUTTON",
+    "href": null,
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(7, 26, 58)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 768,
+    "selector": "section[aria-labelledby=\"lire\"] article h3 a",
+    "tag": "A",
+    "href": "/guides/batterie-brute-batterie-utile",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": [
+      "none",
+      "3px"
+    ]
+  },
+  {
+    "width": 768,
+    "selector": "section[aria-labelledby=\"outils\"] ol a",
+    "tag": "A",
+    "href": "/outils/cout-recharge-voiture-electrique",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 768,
+    "selector": "main details summary",
+    "tag": "SUMMARY",
+    "href": null,
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 1024,
+    "selector": "main section:first-child a[href=\"/comparer\"]",
+    "tag": "A",
+    "href": "/comparer",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(200, 255, 46)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 1024,
+    "selector": "main section:first-child a[href=\"/voitures-electriques\"]",
+    "tag": "A",
+    "href": "/voitures-electriques",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(200, 255, 46)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(243, 246, 252)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 1024,
+    "selector": "section[aria-labelledby=\"selection\"] tbody th a",
+    "tag": "A",
+    "href": "/voitures-electriques/renault/5-e-tech",
+    "focus": true,
+    "outline": [
+      "none",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "solid",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 1024,
+    "selector": "section[aria-labelledby=\"selection\"] button[aria-pressed]",
+    "tag": "BUTTON",
+    "href": null,
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(7, 26, 58)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 1024,
+    "selector": "section[aria-labelledby=\"lire\"] article h3 a",
+    "tag": "A",
+    "href": "/guides/batterie-brute-batterie-utile",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": [
+      "none",
+      "3px"
+    ]
+  },
+  {
+    "width": 1024,
+    "selector": "section[aria-labelledby=\"outils\"] ol a",
+    "tag": "A",
+    "href": "/outils/cout-recharge-voiture-electrique",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 1024,
+    "selector": "main details summary",
+    "tag": "SUMMARY",
+    "href": null,
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 1440,
+    "selector": "main section:first-child a[href=\"/comparer\"]",
+    "tag": "A",
+    "href": "/comparer",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(200, 255, 46)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 1440,
+    "selector": "main section:first-child a[href=\"/voitures-electriques\"]",
+    "tag": "A",
+    "href": "/voitures-electriques",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(200, 255, 46)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(243, 246, 252)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 1440,
+    "selector": "section[aria-labelledby=\"selection\"] tbody th a",
+    "tag": "A",
+    "href": "/voitures-electriques/renault/5-e-tech",
+    "focus": true,
+    "outline": [
+      "none",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "solid",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 1440,
+    "selector": "section[aria-labelledby=\"selection\"] button[aria-pressed]",
+    "tag": "BUTTON",
+    "href": null,
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(7, 26, 58)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 1440,
+    "selector": "section[aria-labelledby=\"lire\"] article h3 a",
+    "tag": "A",
+    "href": "/guides/batterie-brute-batterie-utile",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": [
+      "none",
+      "3px"
+    ]
+  },
+  {
+    "width": 1440,
+    "selector": "section[aria-labelledby=\"outils\"] ol a",
+    "tag": "A",
+    "href": "/outils/cout-recharge-voiture-electrique",
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": null
+  },
+  {
+    "width": 1440,
+    "selector": "main details summary",
+    "tag": "SUMMARY",
+    "href": null,
+    "focus": true,
+    "outline": [
+      "solid",
+      "2px",
+      "rgb(20, 72, 200)"
+    ],
+    "pseudoOutline": [
+      "none",
+      "3px",
+      "rgb(7, 26, 58)"
+    ],
+    "cardOutline": null
+  }
+]

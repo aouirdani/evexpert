@@ -1,0 +1,26 @@
+[
+  {
+    "file": "src/components/layout/Header.tsx",
+    "before": "53c26c7ab48e910ec9d1656293a13385b32a4373e02a0b3e1c0d9adcc94a8c22",
+    "after": "53c26c7ab48e910ec9d1656293a13385b32a4373e02a0b3e1c0d9adcc94a8c22",
+    "equal": true
+  },
+  {
+    "file": "src/components/layout/Footer.tsx",
+    "before": "2a0b59dc6acff3cb110fecc55661efcd96741a72c96772d2f1236837404991b0",
+    "after": "2a0b59dc6acff3cb110fecc55661efcd96741a72c96772d2f1236837404991b0",
+    "equal": true
+  },
+  {
+    "file": "src/components/guides/GuideCardVisual.tsx",
+    "before": "9bdf78af2e3c2fae4f355e3ec9a5b61a44cb51e7cd55c17073cc348dfb46a95d",
+    "after": "9bdf78af2e3c2fae4f355e3ec9a5b61a44cb51e7cd55c17073cc348dfb46a95d",
+    "equal": true
+  },
+  {
+    "file": "src/components/ui/Prose.tsx",
+    "before": "4874b89cef05fc30349d59493966ac7bf77bf017f947133a4f7a705e8db0498e",
+    "after": "4874b89cef05fc30349d59493966ac7bf77bf017f947133a4f7a705e8db0498e",
+    "equal": true
+  }
+]

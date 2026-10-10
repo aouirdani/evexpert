@@ -39,7 +39,7 @@ export function GroupedBars({
   const clusterW = barW * series.length + (series.length - 1) * 4;
 
   return (
-    <figure>
+    <figure className="relative">
       <svg
         viewBox={`0 0 ${W} ${H}`}
         className="h-auto w-full"
@@ -92,29 +92,33 @@ export function GroupedBars({
           </span>
         ))}
       </figcaption>
-      <table className="sr-only">
-        <caption>{title}</caption>
-        <thead>
-          <tr>
-            <th scope="col">Groupe</th>
-            {series.map((s) => (
-              <th key={s.label} scope="col">
-                {s.label}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {groups.map((g) => (
-            <tr key={g.label}>
-              <th scope="row">{g.label}</th>
-              {g.values.map((v, i) => (
-                <td key={i}>{format(v)}</td>
+      {/* Le masquage porte sur une boîte, pas sur le tableau : sa largeur intrinsèque
+          peut dépasser 1 px malgré `sr-only` et agrandir le document sur mobile. */}
+      <div className="sr-only">
+        <table>
+          <caption>{title}</caption>
+          <thead>
+            <tr>
+              <th scope="col">Groupe</th>
+              {series.map((s) => (
+                <th key={s.label} scope="col">
+                  {s.label}
+                </th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {groups.map((g) => (
+              <tr key={g.label}>
+                <th scope="row">{g.label}</th>
+                {g.values.map((v, i) => (
+                  <td key={i}>{format(v)}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </figure>
   );
 }

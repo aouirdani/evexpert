@@ -56,19 +56,19 @@ describe("pages dynamiques alimentées par la base (URLs inchangées)", () => {
     expect(pageTitle(md)).toContain("comparatif");
     expect(md.robots).toMatchObject({ index: false });
   });
-  it("/guides/[slug] et /blog/[slug] : 25 guides, 7 articles", async () => {
+  it("/guides/[slug] et /blog/[slug] : 26 guides, 8 articles", async () => {
     // Passe éditoriale : +3 guides (kW/kWh, consommation, prise domestique) et +1 analyse (garantie batterie) ; puis +2 guides batterie (durée de vie, prix).
-    expect(await (await import("@/app/guides/[slug]/page")).generateStaticParams()).toHaveLength(25);
-    expect(await (await import("@/app/blog/[slug]/page")).generateStaticParams()).toHaveLength(7);
+    expect(await (await import("@/app/guides/[slug]/page")).generateStaticParams()).toHaveLength(26);
+    expect(await (await import("@/app/blog/[slug]/page")).generateStaticParams()).toHaveLength(8);
   });
-  it("sitemap : 122 URLs uniques, toutes sur www.evexpert.fr", async () => {
+  it("sitemap : 124 URLs uniques, toutes sur www.evexpert.fr", async () => {
     // +2 depuis la passe fonctionnalités : /outils/trajet-longue-distance, /voitures-electriques/trouver ; +2 avec les guides batterie.
     // Lot confiance-catalogue : -8 duels (/comparer/[slug], retirés en attendant une analyse rédigée par paire) ; +1 /politique-editoriale.
     // Lot auteur-fiches : +1 /auteur.
     const sitemap = (await import("@/app/sitemap")).default;
     const urls = (await sitemap()).map((e) => e.url);
-    expect(urls).toHaveLength(122);
-    expect(new Set(urls).size).toBe(122);
+    expect(urls).toHaveLength(124);
+    expect(new Set(urls).size).toBe(124);
     expect(urls.every((u) => u.startsWith("https://www.evexpert.fr"))).toBe(true);
     expect(urls).toContain("https://www.evexpert.fr/voitures-electriques/tesla/model-3/long-range-rwd");
     expect(urls).not.toContain("https://www.evexpert.fr/voitures-electriques/renault/5-e-tech/52-kwh-150-ch");

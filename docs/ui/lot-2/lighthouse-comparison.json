@@ -1,0 +1,202 @@
+[
+  {
+    "path": "/",
+    "device": "mobile",
+    "before": {
+      "score": 95,
+      "fcp": 904.5088000000001,
+      "lcp": 2931.858075,
+      "cls": 0,
+      "tbt": 47.5,
+      "accessibility": 100,
+      "scores": [
+        95,
+        95,
+        95
+      ],
+      "lcpRange": [
+        2930.5489500000003,
+        2935.74795
+      ],
+      "localScriptBytes": 191590
+    },
+    "after": {
+      "score": 95,
+      "fcp": 906.0183000000001,
+      "lcp": 2931.2412000000004,
+      "cls": 0,
+      "tbt": 14.5,
+      "accessibility": 100,
+      "scores": [
+        95,
+        95,
+        96
+      ],
+      "lcpRange": [
+        2859.0934499999994,
+        2934.1944000000003
+      ],
+      "localScriptBytes": 192312
+    }
+  },
+  {
+    "path": "/",
+    "device": "desktop",
+    "before": {
+      "score": 100,
+      "fcp": 243.4025,
+      "lcp": 625.3163749999999,
+      "cls": 0,
+      "tbt": 0,
+      "accessibility": 100,
+      "scores": [
+        100,
+        99,
+        100
+      ],
+      "lcpRange": [
+        625.2437749999999,
+        966.2228000000006
+      ],
+      "localScriptBytes": 213025
+    },
+    "after": {
+      "score": 100,
+      "fcp": 243.58429999999998,
+      "lcp": 625.5958250000001,
+      "cls": 0,
+      "tbt": 0,
+      "accessibility": 100,
+      "scores": [
+        100,
+        100,
+        94
+      ],
+      "lcpRange": [
+        625.31945,
+        1642.7215250000002
+      ],
+      "localScriptBytes": 213747
+    }
+  },
+  {
+    "path": "/voitures-electriques",
+    "device": "mobile",
+    "before": {
+      "score": 96,
+      "fcp": 902.6441,
+      "lcp": 2853.385350000001,
+      "cls": 0,
+      "tbt": 48,
+      "accessibility": 100,
+      "scores": [
+        96,
+        96,
+        96
+      ],
+      "lcpRange": [
+        2704.0201499999994,
+        2854.093050000001
+      ],
+      "localScriptBytes": 192334
+    },
+    "after": {
+      "score": 96,
+      "fcp": 902.8951,
+      "lcp": 2854.3176000000003,
+      "cls": 0,
+      "tbt": 12.999999999999545,
+      "accessibility": 100,
+      "scores": [
+        96,
+        96,
+        96
+      ],
+      "lcpRange": [
+        2705.2325500000006,
+        2854.3971
+      ],
+      "localScriptBytes": 193039
+    }
+  },
+  {
+    "path": "/comparer",
+    "device": "mobile",
+    "before": {
+      "score": 96,
+      "fcp": 904.3434,
+      "lcp": 2856.515099999999,
+      "cls": 0,
+      "tbt": 10.5,
+      "accessibility": 100,
+      "scores": [
+        96,
+        96,
+        96
+      ],
+      "lcpRange": [
+        2855.9977499999995,
+        2858.1229500000004
+      ],
+      "localScriptBytes": 189171
+    },
+    "after": {
+      "score": 96,
+      "fcp": 904.5151999999998,
+      "lcp": 2856.8058,
+      "cls": 0,
+      "tbt": 7,
+      "accessibility": 100,
+      "scores": [
+        96,
+        96,
+        96
+      ],
+      "lcpRange": [
+        2855.340599999999,
+        2858.2419
+      ],
+      "localScriptBytes": 190027
+    }
+  },
+  {
+    "path": "/outils/tco-voiture-electrique",
+    "device": "mobile",
+    "before": {
+      "score": 96,
+      "fcp": 905.0128,
+      "lcp": 2857.5423,
+      "cls": 0,
+      "tbt": 13.5,
+      "accessibility": 100,
+      "scores": [
+        96,
+        96,
+        96
+      ],
+      "lcpRange": [
+        2706.5658,
+        2857.790400000001
+      ],
+      "localScriptBytes": 188300
+    },
+    "after": {
+      "score": 96,
+      "fcp": 904.5763999999999,
+      "lcp": 2856.8646,
+      "cls": 0,
+      "tbt": 10,
+      "accessibility": 100,
+      "scores": [
+        96,
+        96,
+        96
+      ],
+      "lcpRange": [
+        2706.1977499999994,
+        2857.0840999999996
+      ],
+      "localScriptBytes": 188807
+    }
+  }
+]

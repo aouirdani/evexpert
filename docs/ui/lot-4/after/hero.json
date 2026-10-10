@@ -1,0 +1,65 @@
+[
+  {
+    "width": 390,
+    "motion": "no-preference",
+    "src": null,
+    "paused": true,
+    "muted": true,
+    "loop": true,
+    "preload": "none",
+    "display": "none",
+    "h1": "Voiture électrique : comparez l'autonomie, la recharge et le coût réel",
+    "sections": [
+      "Quelle autonomie vous faut-il ?",
+      "Six modèles pour commencer",
+      "Deux modèles, un seul tableau",
+      "Recharger, c'est une puissance, un lieu et un tarif.",
+      "Guides et analyses",
+      "Faites le calcul vous-même",
+      "Un chiffre, une source, une nature.",
+      "Questions fréquentes"
+    ]
+  },
+  {
+    "width": 1440,
+    "motion": "no-preference",
+    "src": "/brand/video.mp4",
+    "paused": false,
+    "muted": true,
+    "loop": true,
+    "preload": "none",
+    "display": "block",
+    "h1": "Voiture électrique : comparez l'autonomie, la recharge et le coût réel",
+    "sections": [
+      "Quelle autonomie vous faut-il ?",
+      "Six modèles pour commencer",
+      "Deux modèles, un seul tableau",
+      "Recharger, c'est une puissance, un lieu et un tarif.",
+      "Guides et analyses",
+      "Faites le calcul vous-même",
+      "Un chiffre, une source, une nature.",
+      "Questions fréquentes"
+    ]
+  },
+  {
+    "width": 1440,
+    "motion": "reduce",
+    "src": null,
+    "paused": true,
+    "muted": true,
+    "loop": true,
+    "preload": "none",
+    "display": "none",
+    "h1": "Voiture électrique : comparez l'autonomie, la recharge et le coût réel",
+    "sections": [
+      "Quelle autonomie vous faut-il ?",
+      "Six modèles pour commencer",
+      "Deux modèles, un seul tableau",
+      "Recharger, c'est une puissance, un lieu et un tarif.",
+      "Guides et analyses",
+      "Faites le calcul vous-même",
+      "Un chiffre, une source, une nature.",
+      "Questions fréquentes"
+    ]
+  }
+]

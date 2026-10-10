@@ -1,0 +1,70 @@
+{
+  "package.json": {
+    "hash": "1d2a73a362b0026eabedaa7ab10c09ca291525ac3e9066d1b9ba3c1bca348935",
+    "sameAsMain": true
+  },
+  "package-lock.json": {
+    "hash": "f7ef82fd2bbd7686287affcf0a3ed865e1557e2b9578cc13f24f12cea82aeedd",
+    "sameAsMain": true
+  },
+  "next.config.ts": {
+    "hash": "332b5328b96a2c7f4554d52e9c4b1b5d017ede7f74bbf9b54122344026682d56",
+    "sameAsMain": true
+  },
+  "tsconfig.json": {
+    "hash": "4ea5303fb21d01b83151db57d43246ba2ac0bbb4e79b9e83b3a120b2599c4351",
+    "sameAsMain": true
+  },
+  "postcss.config.mjs": {
+    "hash": "b8cd36495468ea54e029eb4b2e0e98f0feff6f95d6513e70db37a71c0e3bfba4",
+    "sameAsMain": true
+  },
+  "eslint.config.mjs": {
+    "hash": "c971926abccc506da1532570c55a95d5298b606901c4801866a4862969c13302",
+    "sameAsMain": true
+  },
+  "src/app/layout.tsx": {
+    "hash": "181d9e120b00467e59436c704cb584c30015a35840e9e09b05851ba54157651b",
+    "sameAsMain": true
+  },
+  "src/app/robots.ts": {
+    "hash": "db1aa8ba1f6e817c538708921c56b36f19ebdbd9e8138e8a663fc0f1524586c3",
+    "sameAsMain": true
+  },
+  "src/components/Analytics.tsx": {
+    "hash": "334f66edb9d7c44b20639f78886162f447ccccf72d4de624cbb568cb0cea8d89",
+    "sameAsMain": true
+  },
+  "src/config/analytics.ts": {
+    "hash": "e6d84a3911626bbb3b2fb8a33c9b82b571e08abf65c1a6a50823f8c7d3098dcc",
+    "sameAsMain": true
+  },
+  "src/lib/consent-script.ts": {
+    "hash": "2f79a9e7d7aec46645d3860b9e10e9ec08b379d8a612e5f895cdbd8431b935a5",
+    "sameAsMain": true
+  },
+  "src/components/ads/AdSlot.tsx": {
+    "hash": "7df2aaeaee8e8a0a06b8124a02c859189c88af434e3cc306ff2543894e1bd9ee",
+    "sameAsMain": true
+  },
+  "src/components/home/Hero.tsx": {
+    "hash": "ef360174048dfa5b3a5905cd60ddea1bbe4a5aef6964f1acd961d3e3808d377d",
+    "sameAsMain": true
+  },
+  "src/components/home/HeroVideo.tsx": {
+    "hash": "4fa34d72083c96770dc8b7164e44a59e2a58c5238ea5336de01f1fb988e37e14",
+    "sameAsMain": true
+  },
+  "src/data/assumptions.ts": {
+    "hash": "daf8d826d968b518f3c3888df5952e076b2f5394c17bc3986c43400a92587fec",
+    "sameAsMain": true
+  },
+  "public/ads.txt": {
+    "hash": "54eef6edfabebbdfe22bcdb88e42601347d74c421bd329fe60698c64a18e49d0",
+    "sameAsMain": true
+  },
+  "src/components/calculators/ChargingTimeCalculator.tsx": {
+    "hash": "bf9c420c4e25835cad16967084c9f01aa4edd6453599e2e18ada0d4da38b2ca0",
+    "sameAsMain": true
+  }
+}

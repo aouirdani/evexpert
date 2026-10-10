@@ -78,7 +78,7 @@ export function TripPlanner({ presets = [] }: { presets?: VehiclePreset[] }) {
               <NumberInput id="tp-conso" value={consumption} onChange={setConsumption} min={8} max={35} step={0.5} suffix="kWh/100" />
             </Field>
             <Field label="Puissance DC moyenne réellement atteignable" htmlFor="tp-dc" hint="Pas le pic annoncé : voir le 10-80 % publié sur la fiche du modèle.">
-              <NumberInput id="tp-dc" value={dcAveragePowerKw} onChange={setDcAveragePowerKw} min={10} max={300} step={5} suffix="kW" />
+              <NumberInput id="tp-dc" aria-describedby="tp-dc-hint" value={dcAveragePowerKw} onChange={setDcAveragePowerKw} min={10} max={300} step={5} suffix="kW" />
             </Field>
             <Field label="Prix de la recharge rapide" htmlFor="tp-price">
               <NumberInput id="tp-price" value={dcPrice} onChange={setDcPrice} min={0} max={1} step={0.01} suffix="€/kWh" />

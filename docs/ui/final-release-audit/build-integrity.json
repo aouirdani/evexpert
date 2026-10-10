@@ -1,0 +1,26 @@
+{
+  "measuredBuildId": "mbQ0qhSCv0kei6iYyUxeo",
+  "finalBuildId": "jBBZbOH88RbawNVaS9Dh0",
+  "staticAssetDifferences": [
+    "static/jBBZbOH88RbawNVaS9Dh0/_buildManifest.js",
+    "static/jBBZbOH88RbawNVaS9Dh0/_clientMiddlewareManifest.js",
+    "static/jBBZbOH88RbawNVaS9Dh0/_ssgManifest.js",
+    "static/mbQ0qhSCv0kei6iYyUxeo/_buildManifest.js",
+    "static/mbQ0qhSCv0kei6iYyUxeo/_clientMiddlewareManifest.js",
+    "static/mbQ0qhSCv0kei6iYyUxeo/_ssgManifest.js"
+  ],
+  "css": [
+    {
+      "name": "0b8cex5vy425o.css",
+      "bytes": 74531,
+      "hash": "0b79b6c5293d1390b77ff0ae3dce0d284f0d850ea3646b7987d2f9713de94675"
+    }
+  ],
+  "manifestsIdentical": {
+    "prerender-manifest.json": true,
+    "routes-manifest.json": true,
+    "server/app-paths-manifest.json": true
+  },
+  "staticAssetsIdenticalAfterBuildIdNormalization": true,
+  "documentationScanGuardPassed": true
+}

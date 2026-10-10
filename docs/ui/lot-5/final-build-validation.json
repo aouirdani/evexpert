@@ -1,0 +1,19 @@
+{
+  "buildExitCode": 0,
+  "sourceChangesSinceMeasurements": [],
+  "assetsFingerprintsEqual": {
+    "css": true,
+    "fonts": true
+  },
+  "measuredStaticAssets": 24,
+  "staticSizeMismatches": [],
+  "applicationJavaScriptChangesFromBaseline": [],
+  "renderingManifestsEqual": {
+    "routes-manifest.json": true,
+    "app-paths-manifest.json": true,
+    "prerender-manifest.json": true
+  },
+  "environmentUnchanged": true,
+  "measuredBuildId": "dPoeTs2m0wK9RhD20vtbn",
+  "finalBuildId": "WajQJKka_tMABCgXqOdhZ"
+}

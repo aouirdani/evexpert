@@ -1,0 +1,1364 @@
+[
+  {
+    "path": "/",
+    "device": "mobile",
+    "before": {
+      "score": {
+        "median": 95,
+        "min": 95,
+        "max": 95
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 2935.13145,
+        "min": 2932.9962,
+        "max": 2937.3551249999996
+      },
+      "fcp": {
+        "median": 906.7543000000001,
+        "min": 905.2917000000001,
+        "max": 908.1964999999999
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 18,
+        "min": 11.5,
+        "max": 21
+      },
+      "count": 3,
+      "elements": {
+        "<h1 class=\"balance mt-6 text-display font-bold text-paper\">": 3
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14259,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 193175,
+          "request_counts": [
+            13
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 22981,
+          "request_counts": [
+            1
+          ]
+        }
+      }
+    },
+    "after": {
+      "score": {
+        "median": 95,
+        "min": 95,
+        "max": 95
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 2935.4202,
+        "min": 2932.697025,
+        "max": 2935.7760749999998
+      },
+      "fcp": {
+        "median": 906.8930999999999,
+        "min": 904.8978999999999,
+        "max": 906.9467999999999
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 16,
+        "min": 14,
+        "max": 19.5
+      },
+      "count": 3,
+      "elements": {
+        "<h1 class=\"balance mt-6 text-display font-bold text-paper\">": 3
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14705,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 193175,
+          "request_counts": [
+            13
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 22981,
+          "request_counts": [
+            1
+          ]
+        }
+      }
+    },
+    "delta": {
+      "score": 0,
+      "lcp": 0.2887500000001637,
+      "fcp": 0.13879999999983283,
+      "cls": 0,
+      "tbt": -2
+    },
+    "settings_equal": true
+  },
+  {
+    "path": "/",
+    "device": "desktop",
+    "before": {
+      "score": {
+        "median": 100,
+        "min": 94,
+        "max": 100
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 628.9185500000001,
+        "min": 627.6053,
+        "max": 1652.1545999999998
+      },
+      "fcp": {
+        "median": 244.8922,
+        "min": 244.7883,
+        "max": 245.73269999999997
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "count": 3,
+      "elements": {
+        "<video muted=\"\" loop=\"\" playsinline=\"\" preload=\"none\" aria-hidden=\"true\" tabindex=\"-1\" disablepictureinpicture=\"\" disableremoteplayback=\"\" class=\"h-full w-full object-cover object-right\" src=\"/brand/video.mp4\" data-playing=\"\">": 1,
+        "<img alt=\"\" width=\"1376\" height=\"768\" decoding=\"async\" data-nimg=\"1\" class=\"hero-poster h-full w-full object-cover object-right mix-blend-lighten\" style=\"color: transparent;\" sizes=\"(min-width: 1024px) min(68vw, 1100px), 100vw\" srcset=\"/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=640&amp;q=75 640w, /_next/ima\u2026\" src=\"http://localhost:3102/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=1080\u2026\">": 2
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14259,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 214610,
+          "request_counts": [
+            16
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 43286,
+          "request_counts": [
+            1
+          ]
+        }
+      }
+    },
+    "after": {
+      "score": {
+        "median": 94,
+        "min": 94,
+        "max": 100
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 1647.9484000000004,
+        "min": 626.4856249999999,
+        "max": 1661.9242999999992
+      },
+      "fcp": {
+        "median": 243.96429999999998,
+        "min": 243.41629999999998,
+        "max": 244.2985
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "count": 3,
+      "elements": {
+        "<video muted=\"\" loop=\"\" playsinline=\"\" preload=\"none\" aria-hidden=\"true\" tabindex=\"-1\" disablepictureinpicture=\"\" disableremoteplayback=\"\" class=\"h-full w-full object-cover object-right\" src=\"/brand/video.mp4\" data-playing=\"\">": 2,
+        "<img alt=\"\" width=\"1376\" height=\"768\" decoding=\"async\" data-nimg=\"1\" class=\"hero-poster h-full w-full object-cover object-right mix-blend-lighten\" style=\"color: transparent;\" sizes=\"(min-width: 1024px) min(68vw, 1100px), 100vw\" srcset=\"/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=640&amp;q=75 640w, /_next/ima\u2026\" src=\"http://localhost:3102/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=1080\u2026\">": 1
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14705,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 214708,
+          "request_counts": [
+            16
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 43286,
+          "request_counts": [
+            1
+          ]
+        }
+      }
+    },
+    "delta": {
+      "score": -6,
+      "lcp": 1019.0298500000004,
+      "fcp": -0.9279000000000224,
+      "cls": 0,
+      "tbt": 0
+    },
+    "settings_equal": true
+  },
+  {
+    "path": "/guides",
+    "device": "mobile",
+    "before": {
+      "score": {
+        "median": 93,
+        "min": 93,
+        "max": 94
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 3161.1963,
+        "min": 3158.6314999999995,
+        "max": 3162.5200000000004
+      },
+      "fcp": {
+        "median": 907.1587,
+        "min": 905.7318,
+        "max": 908.3250000000002
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 15,
+        "min": 10.5,
+        "max": 15.5
+      },
+      "count": 3,
+      "elements": {
+        "<h1 class=\"balance text-h1 font-bold text-ink\">": 3
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14259,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 184798,
+          "request_counts": [
+            12
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 132406,
+          "request_counts": [
+            4
+          ]
+        }
+      }
+    },
+    "after": {
+      "score": {
+        "median": 94,
+        "min": 93,
+        "max": 94
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 3158.495600000001,
+        "min": 3093.9839999999995,
+        "max": 3160.06605
+      },
+      "fcp": {
+        "median": 906.6249,
+        "min": 905.636,
+        "max": 912.591
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 14.5,
+        "min": 10,
+        "max": 20
+      },
+      "count": 3,
+      "elements": {
+        "<h1 class=\"balance text-h1 font-bold text-ink\">": 3
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14705,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 184848,
+          "request_counts": [
+            12
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 148250,
+          "request_counts": [
+            5
+          ]
+        }
+      }
+    },
+    "delta": {
+      "score": 1,
+      "lcp": -2.7006999999989603,
+      "fcp": -0.5337999999999283,
+      "cls": 0,
+      "tbt": -0.5
+    },
+    "settings_equal": true
+  },
+  {
+    "path": "/blog",
+    "device": "mobile",
+    "before": {
+      "score": {
+        "median": 93,
+        "min": 93,
+        "max": 95
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 3236.006849999999,
+        "min": 3013.14225,
+        "max": 3239.20755
+      },
+      "fcp": {
+        "median": 908.2022999999999,
+        "min": 907.3261999999999,
+        "max": 909.4393
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 18,
+        "min": 9.5,
+        "max": 20
+      },
+      "count": 3,
+      "elements": {
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">": 3
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14259,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 190781,
+          "request_counts": [
+            13
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 150760,
+          "request_counts": [
+            5
+          ]
+        }
+      }
+    },
+    "after": {
+      "score": {
+        "median": 93,
+        "min": 93,
+        "max": 93
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 3236.945849999999,
+        "min": 3234.9899250000003,
+        "max": 3237.4180499999993
+      },
+      "fcp": {
+        "median": 907.9539999999998,
+        "min": 906.6487000000002,
+        "max": 908.2417999999999
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 17,
+        "min": 14,
+        "max": 18
+      },
+      "count": 3,
+      "elements": {
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">": 3
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14705,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 190829,
+          "request_counts": [
+            13
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 150760,
+          "request_counts": [
+            5
+          ]
+        }
+      }
+    },
+    "delta": {
+      "score": 0,
+      "lcp": 0.9390000000003056,
+      "fcp": -0.24830000000008567,
+      "cls": 0,
+      "tbt": -1
+    },
+    "settings_equal": true
+  },
+  {
+    "path": "/guides/temps-recharge-voiture-electrique",
+    "device": "mobile",
+    "before": {
+      "score": {
+        "median": 95,
+        "min": 95,
+        "max": 95
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 2935.282875,
+        "min": 2933.043275,
+        "max": 2936.867475
+      },
+      "fcp": {
+        "median": 906.8242,
+        "min": 904.9960999999998,
+        "max": 907.8760000000001
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 16,
+        "min": 14.5,
+        "max": 16
+      },
+      "count": 3,
+      "elements": {
+        "<p class=\"pretty mt-6 max-w-3xl text-dek text-body\">": 3
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14259,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 190869,
+          "request_counts": [
+            13
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 10742,
+          "request_counts": [
+            1
+          ]
+        }
+      }
+    },
+    "after": {
+      "score": {
+        "median": 95,
+        "min": 95,
+        "max": 95
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 2931.81285,
+        "min": 2930.07755,
+        "max": 2935.9596
+      },
+      "fcp": {
+        "median": 904.5028000000001,
+        "min": 903.3673999999999,
+        "max": 907.012
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 11,
+        "min": 11,
+        "max": 17
+      },
+      "count": 3,
+      "elements": {
+        "<p class=\"pretty mt-6 max-w-3xl text-dek text-body\">": 3
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14705,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 190919,
+          "request_counts": [
+            13
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 10742,
+          "request_counts": [
+            1
+          ]
+        }
+      }
+    },
+    "delta": {
+      "score": 0,
+      "lcp": -3.470025000000078,
+      "fcp": -2.321399999999926,
+      "cls": 0,
+      "tbt": -5
+    },
+    "settings_equal": true
+  },
+  {
+    "path": "/guides/temps-recharge-voiture-electrique",
+    "device": "desktop",
+    "before": {
+      "score": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 607.3444,
+        "min": 607.1656,
+        "max": 607.40265
+      },
+      "fcp": {
+        "median": 244.79229999999995,
+        "min": 244.76260000000002,
+        "max": 244.88739999999999
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "count": 3,
+      "elements": {
+        "<img alt=\"Main d'une personne qui enfonce le connecteur d'un c\u00e2ble de recharge dans \u2026\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Ftemps-recharge-voiture-electriq\u2026\" src=\"http://localhost:3102/_next/image?url=%2Feditorial%2Flicences%2Ftemps-rech\u2026\">": 3
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14259,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 223542,
+          "request_counts": [
+            18
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 10742,
+          "request_counts": [
+            1
+          ]
+        }
+      }
+    },
+    "after": {
+      "score": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 626.7524749999999,
+        "min": 625.5958999999998,
+        "max": 628.6950500000002
+      },
+      "fcp": {
+        "median": 244.29089999999997,
+        "min": 243.63260000000002,
+        "max": 245.76520000000005
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "count": 3,
+      "elements": {
+        "<img alt=\"Main d'une personne qui enfonce le connecteur d'un c\u00e2ble de recharge dans \u2026\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Ftemps-recharge-voiture-electriq\u2026\" src=\"http://localhost:3102/_next/image?url=%2Feditorial%2Flicences%2Ftemps-rech\u2026\">": 3
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14705,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 223640,
+          "request_counts": [
+            18
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 10742,
+          "request_counts": [
+            1
+          ]
+        }
+      }
+    },
+    "delta": {
+      "score": 0,
+      "lcp": 19.40807499999994,
+      "fcp": -0.5013999999999896,
+      "cls": 0,
+      "tbt": 0
+    },
+    "settings_equal": true
+  },
+  {
+    "path": "/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
+    "device": "mobile",
+    "before": {
+      "score": {
+        "median": 95,
+        "min": 95,
+        "max": 95
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 2934.4410750000006,
+        "min": 2932.695625,
+        "max": 2937.5731750000004
+      },
+      "fcp": {
+        "median": 906.2561000000001,
+        "min": 905.1239,
+        "max": 908.2905000000001
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 18,
+        "min": 14.5,
+        "max": 19
+      },
+      "count": 3,
+      "elements": {
+        "<img alt=\"Pack de batterie lithium-ion d'une BMW i3 pr\u00e9sent\u00e9 capot ouvert : des modu\u2026\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-\u2026\" src=\"http://localhost:3102/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc\u2026\">": 3
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14259,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 190781,
+          "request_counts": [
+            13
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 23521,
+          "request_counts": [
+            1
+          ]
+        }
+      }
+    },
+    "after": {
+      "score": {
+        "median": 95,
+        "min": 95,
+        "max": 95
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 2934.5099000000005,
+        "min": 2933.9883500000005,
+        "max": 2938.529625
+      },
+      "fcp": {
+        "median": 906.3154,
+        "min": 905.7584,
+        "max": 908.7586999999999
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 12.5,
+        "min": 11,
+        "max": 19.5
+      },
+      "count": 3,
+      "elements": {
+        "<img alt=\"Pack de batterie lithium-ion d'une BMW i3 pr\u00e9sent\u00e9 capot ouvert : des modu\u2026\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-\u2026\" src=\"http://localhost:3102/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc\u2026\">": 3
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14705,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 190829,
+          "request_counts": [
+            13
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 23521,
+          "request_counts": [
+            1
+          ]
+        }
+      }
+    },
+    "delta": {
+      "score": 0,
+      "lcp": 0.06882499999983338,
+      "fcp": 0.05929999999989377,
+      "cls": 0,
+      "tbt": -5.5
+    },
+    "settings_equal": true
+  },
+  {
+    "path": "/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
+    "device": "desktop",
+    "before": {
+      "score": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 629.020925,
+        "min": 627.8882,
+        "max": 629.3652499999998
+      },
+      "fcp": {
+        "median": 245.89620000000002,
+        "min": 245.24580000000003,
+        "max": 246.23600000000002
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "count": 3,
+      "elements": {
+        "<img alt=\"Pack de batterie lithium-ion d'une BMW i3 pr\u00e9sent\u00e9 capot ouvert : des modu\u2026\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-\u2026\" src=\"http://localhost:3102/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc\u2026\">": 3
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14259,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 219406,
+          "request_counts": [
+            17
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 23521,
+          "request_counts": [
+            1
+          ]
+        }
+      }
+    },
+    "after": {
+      "score": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 626.6890999999998,
+        "min": 625.16885,
+        "max": 629.3303000000001
+      },
+      "fcp": {
+        "median": 244.45940000000002,
+        "min": 243.29540000000003,
+        "max": 246.22019999999998
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "count": 3,
+      "elements": {
+        "<img alt=\"Pack de batterie lithium-ion d'une BMW i3 pr\u00e9sent\u00e9 capot ouvert : des modu\u2026\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-\u2026\" src=\"http://localhost:3102/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc\u2026\">": 3
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14705,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 219504,
+          "request_counts": [
+            17
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 23521,
+          "request_counts": [
+            1
+          ]
+        }
+      }
+    },
+    "delta": {
+      "score": 0,
+      "lcp": -2.331825000000208,
+      "fcp": -1.4368000000000052,
+      "cls": 0,
+      "tbt": 0
+    },
+    "settings_equal": true
+  },
+  {
+    "path": "/voitures-electriques",
+    "device": "mobile",
+    "before": {
+      "score": {
+        "median": 96,
+        "min": 96,
+        "max": 96
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 2856.4757,
+        "min": 2855.9568,
+        "max": 2857.28085
+      },
+      "fcp": {
+        "median": 904.0435999999997,
+        "min": 903.9712,
+        "max": 904.8110000000001
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 20,
+        "min": 19,
+        "max": 22.5
+      },
+      "count": 3,
+      "elements": {
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">": 3
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14259,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 193884,
+          "request_counts": [
+            14
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 0,
+          "request_counts": [
+            0
+          ]
+        }
+      }
+    },
+    "after": {
+      "score": {
+        "median": 96,
+        "min": 96,
+        "max": 96
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 2856.7046,
+        "min": 2854.9413000000004,
+        "max": 2857.5697500000006
+      },
+      "fcp": {
+        "median": 904.4008,
+        "min": 903.0269000000002,
+        "max": 904.722
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 17.5,
+        "min": 12.5,
+        "max": 24
+      },
+      "count": 3,
+      "elements": {
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">": 3
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14705,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 193884,
+          "request_counts": [
+            14
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 0,
+          "request_counts": [
+            0
+          ]
+        }
+      }
+    },
+    "delta": {
+      "score": 0,
+      "lcp": 0.22890000000006694,
+      "fcp": 0.35720000000026175,
+      "cls": 0,
+      "tbt": -2.5
+    },
+    "settings_equal": true
+  },
+  {
+    "path": "/voitures-electriques",
+    "device": "desktop",
+    "before": {
+      "score": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 605.9029499999999,
+        "min": 605.1116999999998,
+        "max": 606.6333999999999
+      },
+      "fcp": {
+        "median": 243.93529999999998,
+        "min": 243.36719999999997,
+        "max": 244.36579999999998
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "count": 3,
+      "elements": {
+        "<h1 class=\"balance mt-4 text-h1 font-bold text-ink\">": 3
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14259,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 228292,
+          "request_counts": [
+            19
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 0,
+          "request_counts": [
+            0
+          ]
+        }
+      }
+    },
+    "after": {
+      "score": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "accessibility": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "lcp": {
+        "median": 605.6493,
+        "min": 604.3884,
+        "max": 606.0864000000001
+      },
+      "fcp": {
+        "median": 243.76620000000003,
+        "min": 242.90250000000003,
+        "max": 244.01350000000002
+      },
+      "cls": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "tbt": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "count": 3,
+      "elements": {
+        "<h1 class=\"balance mt-4 text-h1 font-bold text-ink\">": 3
+      },
+      "local_resources": {
+        "Stylesheet": {
+          "transfer_median": 14705,
+          "request_counts": [
+            1
+          ]
+        },
+        "Script": {
+          "transfer_median": 228390,
+          "request_counts": [
+            19
+          ]
+        },
+        "Font": {
+          "transfer_median": 68312,
+          "request_counts": [
+            4
+          ]
+        },
+        "Image": {
+          "transfer_median": 0,
+          "request_counts": [
+            0
+          ]
+        }
+      }
+    },
+    "delta": {
+      "score": 0,
+      "lcp": -0.2536499999998796,
+      "fcp": -0.16909999999995762,
+      "cls": 0,
+      "tbt": 0
+    },
+    "settings_equal": true
+  }
+]

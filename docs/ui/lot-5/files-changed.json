@@ -1,0 +1,15 @@
+{
+  "baselineCount": 327,
+  "afterCount": 328,
+  "modified": [
+    "src/app/globals.css",
+    "src/components/home/sections.tsx"
+  ],
+  "added": [
+    "src/components/home/refinements.css"
+  ],
+  "removed": [],
+  "unchanged": 325,
+  "environmentUnchanged": true,
+  "heroByteIdentical": true
+}

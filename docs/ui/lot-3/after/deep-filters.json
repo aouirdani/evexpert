@@ -1,0 +1,194 @@
+[
+  {
+    "width": 320,
+    "height": 640,
+    "before": {
+      "y": 107,
+      "expanded": "false"
+    },
+    "after": {
+      "expanded": "true",
+      "buttonY": 107,
+      "buttonVisible": true,
+      "formY": 175,
+      "formH": 381,
+      "panelH": 472,
+      "panelClient": 470,
+      "panelScroll": 507,
+      "panelBottom": 536,
+      "garageTop": 556,
+      "global": 320,
+      "inner": 320,
+      "url": "/voitures-electriques"
+    },
+    "native": {
+      "scroll": 101
+    },
+    "resetWorks": true,
+    "closed": {
+      "expanded": "false",
+      "y": 107,
+      "visible": true
+    }
+  },
+  {
+    "width": 320,
+    "height": 900,
+    "before": {
+      "y": 107,
+      "expanded": "false"
+    },
+    "after": {
+      "expanded": "true",
+      "buttonY": 107,
+      "buttonVisible": true,
+      "formY": 175,
+      "formH": 381,
+      "panelH": 509,
+      "panelClient": 507,
+      "panelScroll": 507,
+      "panelBottom": 573,
+      "garageTop": 816,
+      "global": 320,
+      "inner": 320,
+      "url": "/voitures-electriques"
+    },
+    "native": {
+      "scroll": 0
+    },
+    "resetWorks": true,
+    "closed": {
+      "expanded": "false",
+      "y": 107,
+      "visible": true
+    }
+  },
+  {
+    "width": 390,
+    "height": 640,
+    "before": {
+      "y": 107,
+      "expanded": "false"
+    },
+    "after": {
+      "expanded": "true",
+      "buttonY": 107,
+      "buttonVisible": true,
+      "formY": 175,
+      "formH": 381,
+      "panelH": 472,
+      "panelClient": 470,
+      "panelScroll": 507,
+      "panelBottom": 536,
+      "garageTop": 556,
+      "global": 390,
+      "inner": 390,
+      "url": "/voitures-electriques"
+    },
+    "native": {
+      "scroll": 101
+    },
+    "resetWorks": true,
+    "closed": {
+      "expanded": "false",
+      "y": 107,
+      "visible": true
+    }
+  },
+  {
+    "width": 390,
+    "height": 900,
+    "before": {
+      "y": 107,
+      "expanded": "false"
+    },
+    "after": {
+      "expanded": "true",
+      "buttonY": 107,
+      "buttonVisible": true,
+      "formY": 175,
+      "formH": 381,
+      "panelH": 509,
+      "panelClient": 507,
+      "panelScroll": 507,
+      "panelBottom": 573,
+      "garageTop": 816,
+      "global": 390,
+      "inner": 390,
+      "url": "/voitures-electriques"
+    },
+    "native": {
+      "scroll": 0
+    },
+    "resetWorks": true,
+    "closed": {
+      "expanded": "false",
+      "y": 107,
+      "visible": true
+    }
+  },
+  {
+    "width": 768,
+    "height": 640,
+    "before": {
+      "y": 107,
+      "expanded": "false"
+    },
+    "after": {
+      "expanded": "true",
+      "buttonY": 107,
+      "buttonVisible": true,
+      "formY": 175,
+      "formH": 381,
+      "panelH": 472,
+      "panelClient": 470,
+      "panelScroll": 507,
+      "panelBottom": 536,
+      "garageTop": 556,
+      "global": 768,
+      "inner": 768,
+      "url": "/voitures-electriques"
+    },
+    "native": {
+      "scroll": 101
+    },
+    "resetWorks": true,
+    "closed": {
+      "expanded": "false",
+      "y": 107,
+      "visible": true
+    }
+  },
+  {
+    "width": 768,
+    "height": 900,
+    "before": {
+      "y": 107,
+      "expanded": "false"
+    },
+    "after": {
+      "expanded": "true",
+      "buttonY": 107,
+      "buttonVisible": true,
+      "formY": 175,
+      "formH": 381,
+      "panelH": 509,
+      "panelClient": 507,
+      "panelScroll": 507,
+      "panelBottom": 573,
+      "garageTop": 816,
+      "global": 768,
+      "inner": 768,
+      "url": "/voitures-electriques"
+    },
+    "native": {
+      "scroll": 0
+    },
+    "resetWorks": true,
+    "closed": {
+      "expanded": "false",
+      "y": 107,
+      "visible": true
+    }
+  }
+]

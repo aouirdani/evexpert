@@ -1,0 +1,176 @@
+[
+  {
+    "path": "/voitures-electriques",
+    "width": 390,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 95
+      }
+    ]
+  },
+  {
+    "path": "/voitures-electriques",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 95
+      }
+    ]
+  },
+  {
+    "path": "/comparer",
+    "width": 390,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 24
+      },
+      {
+        "id": "th-has-data-cells",
+        "nodes": 1
+      }
+    ]
+  },
+  {
+    "path": "/comparer",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 24
+      },
+      {
+        "id": "th-has-data-cells",
+        "nodes": 1
+      }
+    ]
+  },
+  {
+    "path": "/outils/tco-voiture-electrique",
+    "width": 390,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 31
+      }
+    ]
+  },
+  {
+    "path": "/outils/tco-voiture-electrique",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 31
+      }
+    ]
+  },
+  {
+    "path": "/guides/acheter-voiture-electrique-occasion",
+    "width": 390,
+    "violations": [
+      {
+        "id": "scrollable-region-focusable",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "section:nth-child(2) > .overflow-x-auto.mt-6.relative"
+            ],
+            "summary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable",
+            "html": "<div class=\"relative mt-6 overflow-x-auto\">"
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 59
+      }
+    ]
+  },
+  {
+    "path": "/guides/acheter-voiture-electrique-occasion",
+    "width": 1440,
+    "violations": [
+      {
+        "id": "scrollable-region-focusable",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "section:nth-child(2) > .overflow-x-auto.mt-6.relative"
+            ],
+            "summary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable",
+            "html": "<div class=\"relative mt-6 overflow-x-auto\">"
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 36
+      }
+    ]
+  },
+  {
+    "path": "/blog/voitures-electriques-chinoises-byd-mg",
+    "width": 390,
+    "violations": [
+      {
+        "id": "scrollable-region-focusable",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "section:nth-child(6) > .overflow-x-auto.mt-6.relative"
+            ],
+            "summary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable",
+            "html": "<div class=\"relative mt-6 overflow-x-auto\">"
+          },
+          {
+            "target": [
+              "section:nth-child(7) > .overflow-x-auto.mt-6.relative"
+            ],
+            "summary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable",
+            "html": "<div class=\"relative mt-6 overflow-x-auto\">"
+          },
+          {
+            "target": [
+              "section:nth-child(8) > .overflow-x-auto.mt-6.relative"
+            ],
+            "summary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable",
+            "html": "<div class=\"relative mt-6 overflow-x-auto\">"
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 77
+      }
+    ]
+  },
+  {
+    "path": "/blog/voitures-electriques-chinoises-byd-mg",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 45
+      }
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "file": "src/components/vehicles/BrandOverview.tsx",
+    "unchanged": true,
+    "count": 0
+  },
+  {
+    "file": "src/components/vehicles/ModelOverview.tsx",
+    "unchanged": true,
+    "count": 0
+  },
+  {
+    "file": "src/components/vehicles/SpecTable.tsx",
+    "unchanged": true,
+    "count": 0
+  },
+  {
+    "file": "src/components/vehicles/VehicleCard.tsx",
+    "unchanged": true,
+    "count": 0
+  },
+  {
+    "file": "src/components/vehicles/VehicleDetail.tsx",
+    "unchanged": true,
+    "count": 0
+  },
+  {
+    "file": "src/components/vehicles/VehicleExplorer.tsx",
+    "unchanged": true,
+    "count": 12
+  }
+]

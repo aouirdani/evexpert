@@ -26,14 +26,14 @@ export function GarageBar() {
 
   return (
     <div role="status" className="fixed inset-x-4 bottom-4 z-50 sm:inset-x-auto sm:left-4">
-      <div className="on-ink flex items-center gap-4 rounded-sm bg-ink px-4 py-3 text-paper shadow-lg">
-        <p className="text-sm font-semibold">
+      <div className="on-ink flex items-center gap-2 rounded-sm bg-ink px-4 py-3 text-paper shadow-lg">
+        <p className="min-w-0 flex-1 text-sm font-semibold">
           <span className="num">{ids.length}</span>
           <span className="text-ink-muted"> / 3 dans ma sélection</span>
         </p>
         <Link
           href={`/comparer?v=${ids.join(",")}`}
-          className="rounded-sm bg-signal px-3 py-1.5 text-sm font-semibold text-ink transition-colors hover:bg-[#c8f65c]"
+          className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-sm bg-signal px-3 py-1.5 text-sm font-semibold text-ink transition-colors hover:bg-[#c8f65c]"
         >
           Comparer
         </Link>
@@ -41,7 +41,7 @@ export function GarageBar() {
           type="button"
           onClick={() => clearGarage()}
           aria-label="Vider ma sélection"
-          className="ml-auto inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-sm text-ink-muted transition-colors hover:bg-ink-raised hover:text-paper"
+          className="ml-auto inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-sm text-ink-muted transition-colors hover:bg-ink-raised hover:text-paper"
         >
           <X className="h-4 w-4" aria-hidden />
         </button>

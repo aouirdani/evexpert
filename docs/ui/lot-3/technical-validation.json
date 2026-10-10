@@ -1,0 +1,34 @@
+[
+  {
+    "command": "npm run lint",
+    "chunk_id": "058961",
+    "wall_time_seconds": 0.000007291,
+    "exit_code": 0,
+    "original_token_count": 0,
+    "output": ""
+  },
+  {
+    "command": "npm run typecheck",
+    "chunk_id": "dfd36e",
+    "wall_time_seconds": 0.000004292,
+    "exit_code": 0,
+    "original_token_count": 0,
+    "output": ""
+  },
+  {
+    "command": "npm test -- --config vitest.unit.config.ts",
+    "chunk_id": "8c483b",
+    "wall_time_seconds": 0.00000375,
+    "exit_code": 0,
+    "original_token_count": 88,
+    "output": "\n Test Files  15 passed (15)\n      Tests  160 passed (160)\n   Start at  19:27:14\n   Duration  4.16s (tests 48%, import 31%, transform 18%, worker 3%)\n\n    Isolate  15 workers spawned · ~131ms startup each (spawn + environment, per file)\n             at least ~1.83s faster with isolate: false — reuses workers across files instead of one per file\n\n"
+  },
+  {
+    "command": "EVEXPERT_DATA_SOURCE=local npm run build",
+    "chunk_id": "9aceed",
+    "wall_time_seconds": 1.9274109579999998,
+    "exit_code": 0,
+    "original_token_count": 1411,
+    "output": "▲ Next.js 16.2.6 (Turbopack)\n- Environments: .env.local\n- Experiments (use with caution):\n  · optimizePackageImports\n\n  Creating an optimized production build ...\n✓ Compiled successfully in 6.2s\n  Running TypeScript ...\n  Finished TypeScript in 4.2s ...\n  Collecting page data using 7 workers ...\n  Generating static pages using 7 workers (0/192) ...\n  Generating static pages using 7 workers (48/192) \r\n  Generating static pages using 7 workers (96/192) \r\n  Generating static pages using 7 workers (144/192) \r\n✓ Generating static pages using 7 workers (192/192) in 1631ms\n  Finalizing page optimization ...\n\nRoute (app)                                                                   Revalidate  Expire\n┌ ○ /                                                                                 1d      1y\n├ ○ /_not-found\n├ ○ /a-propos\n├ ƒ /api/health\n├ ○ /auteur\n├ ○ /blog                                                                             1d      1y\n├ ● /blog/[slug]                                                                      1d      1y\n│ ├ /blog/voitures-electriques-les-plus-sobres                                        1d      1y\n│ ├ /blog/recharge-rapide-temps-10-80                                                 1d      1y\n│ ├ /blog/autonomie-wltp-repartition-catalogue                                        1d      1y\n│ └ [+5 more paths]\n├ ○ /blog/rss.xml                                                                     1d      1y\n├ ○ /comparer                                                                         1d      1y\n├ ● /comparer/[slug]                                                                  1d      1y\n│ ├ /comparer/renault-5-e-tech-52-kwh-150-ch-vs-peugeot-e-208-50-kwh                  1d      1y\n│ ├ /comparer/citroen-e-c3-standard-range-44-kwh-vs-fiat-grande-panda-44-kwh          1d      1y\n│ ├ /comparer/tesla-model-y-rwd-vs-skoda-elroq-85                                     1d      1y\n│ └ [+5 more paths]\n├ ○ /conditions-utilisation\n├ ○ /confidentialite\n├ ○ /contact\n├ ○ /cookies\n├ ○ /guides                                                                           1d      1y\n├ ● /guides/[slug]                                                                    1d      1y\n│ ├ /guides/calculer-autonomie-reelle                                                 1d      1y\n│ ├ /guides/autonomie-hiver                                                           1d      1y\n│ ├ /guides/autonomie-autoroute                                                       1d      1y\n│ └ [+23 more paths]\n├ ○ /manifest.webmanifest\n├ ○ /mentions-legales\n├ ○ /methodologie                                                                     1d      1y\n├ ○ /outils\n├ ○ /outils/autonomie-voiture-electrique                                              1d      1y\n├ ○ /outils/cout-100-km                                                               1d      1y\n├ ○ /outils/cout-recharge-voiture-electrique                                          1d      1y\n├ ○ /outils/essence-vs-electrique\n├ ○ /outils/puissance-borne-recharge                                                  1d      1y\n├ ○ /outils/tco-voiture-electrique\n├ ○ /outils/temps-recharge                                                            1d      1y\n├ ○ /outils/trajet-longue-distance                                                    1d      1y\n├ ○ /politique-editoriale\n├ ○ /recharge                                                                         1d      1y\n├ ● /recharge/[topic]\n│ ├ /recharge/type-2\n│ ├ /recharge/ccs\n│ └ /recharge/chademo\n├ ƒ /recherche\n├ ○ /robots.txt\n├ ○ /sitemap.xml                                                                      1d      1y\n├ ○ /sources                                                                          1d      1y\n├ ○ /voitures-electriques                                                             1d      1y\n├ ● /voitures-electriques/[brand]                                                     1d      1y\n│ ├ /voitures-electriques/audi                                                        1d      1y\n│ ├ /voitures-electriques/bmw                                                         1d      1y\n│ ├ /voitures-electriques/byd                                                         1d      1y\n│ └ [+19 more paths]\n├ ● /voitures-electriques/[brand]/[model]                                             1d      1y\n│ ├ /voitures-electriques/tesla/model-3                                               1d      1y\n│ ├ /voitures-electriques/tesla/model-y                                               1d      1y\n│ ├ /voitures-electriques/renault/5-e-tech                                            1d      1y\n│ └ [+42 more paths]\n├ ● /voitures-electriques/[brand]/[model]/[version]                                   1d      1y\n│ ├ /voitures-electriques/tesla/model-3/rwd                                           1d      1y\n│ ├ /voitures-electriques/tesla/model-3/long-range-rwd                                1d      1y\n│ ├ /voitures-electriques/tesla/model-y/rwd                                           1d      1y\n│ └ [+44 more paths]\n└ ○ /voitures-electriques/trouver                                                     1d      1y\n\n\n○  (Static)   prerendered as static content\n●  (SSG)      prerendered as static HTML (uses generateStaticParams)\nƒ  (Dynamic)  server-rendered on demand\n\n"
+  }
+]

@@ -8,6 +8,7 @@ import { buildRechargeGuides } from "@/data/guides/recharge";
 import { buildUsageGuides } from "@/data/guides/usage";
 import { buildNewGuides } from "@/data/guides/nouveaux";
 import { buildBatteryGuides } from "@/data/guides/batterie";
+import { buildOccasionGuides } from "@/data/guides/occasion";
 import { makeGuideContext } from "@/data/guides/helpers";
 import { decorateArticles, decorateGuides } from "@/data/editorial/decorate";
 import { EDITORIAL_HEROES, EDITORIAL_PHOTOS } from "@/data/editorial/media";
@@ -19,7 +20,7 @@ import { chargingTopics } from "@/data/charging";
 import type { ArticleSection } from "@/types";
 
 const ctx = makeGuideContext(vehicles);
-const guides = decorateGuides([...buildAutonomieGuides(ctx), ...buildRechargeGuides(ctx), ...buildUsageGuides(ctx), ...buildNewGuides(ctx), ...buildBatteryGuides(ctx)], vehicles);
+const guides = decorateGuides([...buildAutonomieGuides(ctx), ...buildRechargeGuides(ctx), ...buildUsageGuides(ctx), ...buildNewGuides(ctx), ...buildBatteryGuides(ctx), ...buildOccasionGuides(ctx)], vehicles);
 const articles = decorateArticles(buildArticles(vehicles), vehicles);
 const all = [
   ...guides.map((g) => ({ ...g, path: `/guides/${g.slug}` })),

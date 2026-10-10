@@ -1,0 +1,55 @@
+[
+  {
+    "path": "/audit-route-inconnue-20261010",
+    "status": 404,
+    "robots": [
+      "noindex"
+    ],
+    "h1": "Page introuvable"
+  },
+  {
+    "path": "/voitures-electriques/audit-marque-inconnue",
+    "status": 404,
+    "robots": [
+      "noindex"
+    ]
+  },
+  {
+    "path": "/voitures-electriques/renault/audit-modele-inconnu",
+    "status": 404,
+    "robots": [
+      "noindex"
+    ]
+  },
+  {
+    "path": "/voitures-electriques/tesla/model-3/audit-version-inconnue",
+    "status": 404,
+    "robots": [
+      "noindex"
+    ]
+  },
+  {
+    "path": "/guides/audit-guide-inconnu",
+    "status": 404,
+    "robots": [
+      "noindex"
+    ],
+    "h1": "Page introuvable"
+  },
+  {
+    "path": "/blog/audit-article-inconnu",
+    "status": 404,
+    "robots": [
+      "noindex"
+    ],
+    "h1": "Page introuvable"
+  },
+  {
+    "path": "/comparer/audit-duel-inconnu",
+    "status": 404,
+    "robots": [
+      "noindex"
+    ],
+    "h1": "Page introuvable"
+  }
+]

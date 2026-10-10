@@ -1,0 +1,62 @@
+{
+  "responsiveCases": 65,
+  "scenariosUnchanged": 10,
+  "fieldFocusCases": 13,
+  "actionFocusCases": 4,
+  "unitOverlap": 0,
+  "helpLinks": [
+    {
+      "id": "cc-preset-hint",
+      "controls": [
+        "cc-preset"
+      ]
+    },
+    {
+      "id": "cc-price-hint",
+      "controls": [
+        "cc-price"
+      ]
+    },
+    {
+      "id": "cc-eff-hint",
+      "controls": [
+        "cc-eff"
+      ]
+    },
+    {
+      "id": "cc-conso-hint",
+      "controls": [
+        "cc-conso"
+      ]
+    }
+  ],
+  "accessibleDescriptions": [
+    {
+      "role": "generic",
+      "name": "",
+      "description": "Estimation reposant sur des hypothèses explicites : elle peut différer de votre usage réel."
+    },
+    {
+      "role": "combobox",
+      "name": "Préremplir avec un modèle (facultatif)",
+      "description": "Préremplit les champs avec les données de la fiche (source citée sur la fiche du modèle)."
+    },
+    {
+      "role": "spinbutton",
+      "name": "Prix du kWh (€)",
+      "description": "Hypothèse de départ (0,25 € à domicile) : reprenez le prix de votre contrat ou celui affiché à la borne."
+    },
+    {
+      "role": "slider",
+      "name": "Rendement de recharge",
+      "description": "Pertes en chaleur : généralement 85-95 %."
+    },
+    {
+      "role": "spinbutton",
+      "name": "Consommation moyenne (kWh/100 km)",
+      "description": "Sert à estimer les km ajoutés."
+    }
+  ],
+  "javascriptErrors": [],
+  "targetsMinPx": 44
+}

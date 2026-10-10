@@ -73,7 +73,7 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
       {
         heading: "Suivre l'état de sa batterie",
         paragraphs: [
-          "Certains véhicules affichent un indicateur de santé (« state of health »). En occasion, demandez un rapport de santé de batterie avant l'achat : c'est un élément de valeur important.",
+          "Certains véhicules affichent un indicateur de santé (« state of health »). En occasion, demandez un rapport de santé de batterie avant l'achat : c'est un élément de valeur important. Le [guide des vérifications avant un achat d'occasion](/guides/acheter-voiture-electrique-occasion) distingue rapport batterie, documents et essai de recharge.",
         ],
       },
     ],
@@ -501,7 +501,7 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
       {
         heading: "Longs trajets réguliers",
         paragraphs: [
-          "Sur route, deux critères comptent surtout : l'autonomie sur autoroute et le temps de charge rapide 10-80 %. Ne vous fiez pas au seul chiffre WLTP : consultez les guides sur l'autoroute et la recharge DC.",
+          "Sur route, deux critères comptent surtout : l'autonomie sur autoroute et le temps de charge rapide 10-80 %. Ne vous fiez pas au seul chiffre WLTP : consultez les guides sur l'autoroute et la recharge DC. Notre [analyse des différences entre BYD et MG](/blog/voitures-electriques-chinoises-byd-mg) rapproche aussi énergie ajoutée et durée de recharge entre plusieurs versions.",
         ],
         table: {
           caption: "Modèles du catalogue avec au moins 600 km WLTP et une charge 10-80 % en 32 min ou moins",
@@ -580,7 +580,7 @@ export function buildUsageGuides(ctx: GuideContext): Guide[] {
       {
         heading: "5. Neuve ou d'occasion ?",
         paragraphs: [
-          "En occasion, demandez un rapport de santé de batterie et les conditions de transfert de la garantie. Vérifiez l'historique de recharge rapide si possible et le connecteur adapté à votre usage.",
+          "En occasion, demandez un rapport de santé de batterie et les conditions de transfert de la garantie. Vérifiez l'historique de recharge rapide si possible et le connecteur adapté à votre usage. Pour examiner un exemplaire précis, suivez les [vérifications avant d'acheter une électrique d'occasion](/guides/acheter-voiture-electrique-occasion).",
         ],
       },
       {

@@ -1,0 +1,2328 @@
+{
+  "checks": [
+    {
+      "path": "/voitures-electriques",
+      "width": 320,
+      "fields": [
+        {
+          "id": "v-search",
+          "x": 33,
+          "w": 153.8125,
+          "h": 48,
+          "min": "",
+          "max": "",
+          "step": "",
+          "labels": [
+            "Rechercher"
+          ],
+          "options": null
+        },
+        {
+          "id": "v-brand",
+          "x": 33,
+          "w": 254,
+          "h": 48,
+          "labels": [
+            "Marque"
+          ],
+          "options": [
+            "all",
+            "Audi",
+            "BMW",
+            "BYD",
+            "Citroën",
+            "CUPRA",
+            "Dacia",
+            "Fiat",
+            "Ford",
+            "Hyundai",
+            "Kia",
+            "Mercedes-Benz",
+            "MG",
+            "Nissan",
+            "Opel",
+            "Peugeot",
+            "Porsche",
+            "Renault",
+            "Škoda",
+            "smart",
+            "Tesla",
+            "Volkswagen",
+            "Volvo"
+          ]
+        },
+        {
+          "id": "v-body",
+          "x": 33,
+          "w": 254,
+          "h": 48,
+          "labels": [
+            "Carrosserie"
+          ],
+          "options": [
+            "all",
+            "berline",
+            "SUV",
+            "citadine",
+            "compacte"
+          ]
+        },
+        {
+          "id": "v-range",
+          "x": 33,
+          "w": 254,
+          "h": 44,
+          "min": "0",
+          "max": "700",
+          "step": "50",
+          "labels": [
+            "Autonomie WLTP min. 0 km"
+          ],
+          "options": null
+        },
+        {
+          "id": "v-dc",
+          "x": 33,
+          "w": 254,
+          "h": 44,
+          "min": "0",
+          "max": "300",
+          "step": "25",
+          "labels": [
+            "Charge DC min. 0 kW"
+          ],
+          "options": null
+        },
+        {
+          "id": "v-sort",
+          "x": 33,
+          "w": 254,
+          "h": 48,
+          "labels": [
+            "Trier par"
+          ],
+          "options": [
+            "range-desc",
+            "cost-asc",
+            "dc-desc",
+            "battery-desc",
+            "name"
+          ]
+        }
+      ],
+      "focus": {
+        "id": "",
+        "label": "Filtres",
+        "visible": true,
+        "outline": "2px",
+        "style": "solid"
+      },
+      "openDoc": {
+        "inner": 320,
+        "scroll": 320
+      },
+      "ax": [
+        {
+          "role": "region",
+          "name": "Ce que couvre le catalogue",
+          "ignored": false
+        }
+      ],
+      "regions": []
+    },
+    {
+      "path": "/voitures-electriques",
+      "width": 390,
+      "fields": [
+        {
+          "id": "v-search",
+          "x": 33,
+          "w": 223.8125,
+          "h": 48,
+          "min": "",
+          "max": "",
+          "step": "",
+          "labels": [
+            "Rechercher"
+          ],
+          "options": null
+        },
+        {
+          "id": "v-brand",
+          "x": 33,
+          "w": 324,
+          "h": 48,
+          "labels": [
+            "Marque"
+          ],
+          "options": [
+            "all",
+            "Audi",
+            "BMW",
+            "BYD",
+            "Citroën",
+            "CUPRA",
+            "Dacia",
+            "Fiat",
+            "Ford",
+            "Hyundai",
+            "Kia",
+            "Mercedes-Benz",
+            "MG",
+            "Nissan",
+            "Opel",
+            "Peugeot",
+            "Porsche",
+            "Renault",
+            "Škoda",
+            "smart",
+            "Tesla",
+            "Volkswagen",
+            "Volvo"
+          ]
+        },
+        {
+          "id": "v-body",
+          "x": 33,
+          "w": 324,
+          "h": 48,
+          "labels": [
+            "Carrosserie"
+          ],
+          "options": [
+            "all",
+            "berline",
+            "SUV",
+            "citadine",
+            "compacte"
+          ]
+        },
+        {
+          "id": "v-range",
+          "x": 33,
+          "w": 324,
+          "h": 44,
+          "min": "0",
+          "max": "700",
+          "step": "50",
+          "labels": [
+            "Autonomie WLTP min. 0 km"
+          ],
+          "options": null
+        },
+        {
+          "id": "v-dc",
+          "x": 33,
+          "w": 324,
+          "h": 44,
+          "min": "0",
+          "max": "300",
+          "step": "25",
+          "labels": [
+            "Charge DC min. 0 kW"
+          ],
+          "options": null
+        },
+        {
+          "id": "v-sort",
+          "x": 33,
+          "w": 324,
+          "h": 48,
+          "labels": [
+            "Trier par"
+          ],
+          "options": [
+            "range-desc",
+            "cost-asc",
+            "dc-desc",
+            "battery-desc",
+            "name"
+          ]
+        }
+      ],
+      "focus": {
+        "id": "",
+        "label": "Filtres",
+        "visible": true,
+        "outline": "2px",
+        "style": "solid"
+      },
+      "openDoc": {
+        "inner": 390,
+        "scroll": 390
+      },
+      "ax": [
+        {
+          "role": "region",
+          "name": "Ce que couvre le catalogue",
+          "ignored": false
+        }
+      ],
+      "regions": []
+    },
+    {
+      "path": "/voitures-electriques",
+      "width": 768,
+      "fields": [
+        {
+          "id": "v-search",
+          "x": 41,
+          "w": 585.8125,
+          "h": 48,
+          "min": "",
+          "max": "",
+          "step": "",
+          "labels": [
+            "Rechercher"
+          ],
+          "options": null
+        },
+        {
+          "id": "v-brand",
+          "x": 41,
+          "w": 686,
+          "h": 48,
+          "labels": [
+            "Marque"
+          ],
+          "options": [
+            "all",
+            "Audi",
+            "BMW",
+            "BYD",
+            "Citroën",
+            "CUPRA",
+            "Dacia",
+            "Fiat",
+            "Ford",
+            "Hyundai",
+            "Kia",
+            "Mercedes-Benz",
+            "MG",
+            "Nissan",
+            "Opel",
+            "Peugeot",
+            "Porsche",
+            "Renault",
+            "Škoda",
+            "smart",
+            "Tesla",
+            "Volkswagen",
+            "Volvo"
+          ]
+        },
+        {
+          "id": "v-body",
+          "x": 41,
+          "w": 686,
+          "h": 48,
+          "labels": [
+            "Carrosserie"
+          ],
+          "options": [
+            "all",
+            "berline",
+            "SUV",
+            "citadine",
+            "compacte"
+          ]
+        },
+        {
+          "id": "v-range",
+          "x": 41,
+          "w": 686,
+          "h": 44,
+          "min": "0",
+          "max": "700",
+          "step": "50",
+          "labels": [
+            "Autonomie WLTP min. 0 km"
+          ],
+          "options": null
+        },
+        {
+          "id": "v-dc",
+          "x": 41,
+          "w": 686,
+          "h": 44,
+          "min": "0",
+          "max": "300",
+          "step": "25",
+          "labels": [
+            "Charge DC min. 0 kW"
+          ],
+          "options": null
+        },
+        {
+          "id": "v-sort",
+          "x": 497,
+          "w": 230,
+          "h": 48,
+          "labels": [
+            "Trier par"
+          ],
+          "options": [
+            "range-desc",
+            "cost-asc",
+            "dc-desc",
+            "battery-desc",
+            "name"
+          ]
+        }
+      ],
+      "focus": {
+        "id": "",
+        "label": "Filtres",
+        "visible": true,
+        "outline": "2px",
+        "style": "solid"
+      },
+      "openDoc": {
+        "inner": 768,
+        "scroll": 768
+      },
+      "ax": [
+        {
+          "role": "region",
+          "name": "Ce que couvre le catalogue",
+          "ignored": false
+        }
+      ],
+      "regions": []
+    },
+    {
+      "path": "/voitures-electriques",
+      "width": 1024,
+      "fields": [
+        {
+          "id": "v-search",
+          "x": 57,
+          "w": 198,
+          "h": 48,
+          "min": "",
+          "max": "",
+          "step": "",
+          "labels": [
+            "Rechercher"
+          ],
+          "options": null
+        },
+        {
+          "id": "v-brand",
+          "x": 57,
+          "w": 198,
+          "h": 48,
+          "labels": [
+            "Marque"
+          ],
+          "options": [
+            "all",
+            "Audi",
+            "BMW",
+            "BYD",
+            "Citroën",
+            "CUPRA",
+            "Dacia",
+            "Fiat",
+            "Ford",
+            "Hyundai",
+            "Kia",
+            "Mercedes-Benz",
+            "MG",
+            "Nissan",
+            "Opel",
+            "Peugeot",
+            "Porsche",
+            "Renault",
+            "Škoda",
+            "smart",
+            "Tesla",
+            "Volkswagen",
+            "Volvo"
+          ]
+        },
+        {
+          "id": "v-body",
+          "x": 57,
+          "w": 198,
+          "h": 48,
+          "labels": [
+            "Carrosserie"
+          ],
+          "options": [
+            "all",
+            "berline",
+            "SUV",
+            "citadine",
+            "compacte"
+          ]
+        },
+        {
+          "id": "v-range",
+          "x": 57,
+          "w": 198,
+          "h": 44,
+          "min": "0",
+          "max": "700",
+          "step": "50",
+          "labels": [
+            "Autonomie WLTP min. 0 km"
+          ],
+          "options": null
+        },
+        {
+          "id": "v-dc",
+          "x": 57,
+          "w": 198,
+          "h": 44,
+          "min": "0",
+          "max": "300",
+          "step": "25",
+          "labels": [
+            "Charge DC min. 0 kW"
+          ],
+          "options": null
+        },
+        {
+          "id": "v-sort",
+          "x": 633,
+          "w": 230,
+          "h": 48,
+          "labels": [
+            "Trier par"
+          ],
+          "options": [
+            "range-desc",
+            "cost-asc",
+            "dc-desc",
+            "battery-desc",
+            "name"
+          ]
+        }
+      ],
+      "focus": {
+        "id": "v-brand",
+        "label": "ToutesAudiBMWBYDCitroënCUPRADaciaFiatFordHyundaiKiaMercedes-BenzMGNissanOpelPeugeotPorscheRenaultŠkodasmartTeslaVolkswagenVolvo",
+        "visible": true,
+        "outline": "2px",
+        "style": "solid"
+      },
+      "openDoc": {
+        "inner": 1024,
+        "scroll": 1024
+      },
+      "ax": [
+        {
+          "role": "region",
+          "name": "Versions affichées, triées",
+          "description": "Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Ce que couvre le catalogue",
+          "ignored": false
+        },
+        {
+          "role": "table",
+          "name": "Versions affichées, triées",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "MERCEDES-BENZ Mercedes-Benz CLA 250+ 250+",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "VOLKSWAGEN Volkswagen ID.7 86 kWh 86 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "TESLA Tesla Model 3 Long Range RWD Long Range RWD",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "PEUGEOT Peugeot e-3008 97 kWh Long Range 97 kWh Long Range",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "MERCEDES-BENZ Mercedes-Benz GLA 250+ 250+",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "BMW BMW iX3 40 40",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "NISSAN Nissan Leaf Extended Range 75 kWh Extended Range 75 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "RENAULT Renault Scénic E-Tech EV87 220 ch EV87 220 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "BMW BMW i4 eDrive40 eDrive40",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "PORSCHE Porsche Macan 4 Electric 4 Electric",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "KIA Kia EV3 Long Range Long Range",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "FORD Ford Explorer Extended Range RWD Extended Range RWD",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "ŠKODA Škoda Enyaq 85 85",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "VOLVO Volvo EX40 P5 Long Range P5 Long Range",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "VOLKSWAGEN Volkswagen ID.4 Pro Pro",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "ŠKODA Škoda Elroq 85 85",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "TESLA Tesla Model 3 RWD RWD",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "HYUNDAI Hyundai IONIQ 5 84 kWh RWD 84 kWh RWD",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "TESLA Tesla Model Y Long Range AWD Long Range AWD",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "CUPRA CUPRA Born 170 kW 79 kWh 170 kW 79 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "KIA Kia EV6 Long Range AWD Long Range AWD",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "BYD BYD Seal 82,5 kWh AWD Excellence 82,5 kWh AWD Excellence",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "BMW BMW iX1 eDrive20 eDrive20",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "HYUNDAI Hyundai Kona Electric 65 kWh 65 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "BYD BYD Atto 3 Evo RWD Design RWD Design",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "TESLA Tesla Model Y RWD RWD",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "MG MG MGS5 EV 64 kWh EV 64 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "VOLVO Volvo EX30 Single Motor Extended Range Single Motor Extended Range",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "RENAULT Renault Mégane E-Tech EV60 220 ch EV60 220 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "PEUGEOT Peugeot e-208 50 kWh 50 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "SMART smart #1 Pro+ Pro+",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "RENAULT Renault 5 E-Tech 52 kWh 150 ch 52 kWh 150 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "MG MG MG4 Urban Comfort Long Range Urban Comfort Long Range",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "AUDI Audi Q4 e-tron 40 40",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "PEUGEOT Peugeot e-2008 54 kWh 54 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "OPEL Opel Corsa Electric 51 kWh 51 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "OPEL Opel Mokka Electric 54 kWh 54 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "CITROËN Citroën ë-C3 Aircross Extended Range 54 kWh Extended Range 54 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "RENAULT Renault 4 E-Tech 52 kWh 150 ch 52 kWh 150 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "FORD Ford Puma Gen-E Gen-E Gen-E",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "HYUNDAI Hyundai INSTER Long Range Long Range",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "FIAT Fiat 500e Hatchback 42 kWh Hatchback 42 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "CITROËN Citroën ë-C3 Standard Range 44 kWh Standard Range 44 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "FIAT Fiat Grande Panda 44 kWh 44 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "BYD BYD Dolphin Surf 43,2 kWh Comfort 43,2 kWh Comfort",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "RENAULT Renault Twingo E-Tech 27,5 kWh 27,5 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "DACIA Dacia Spring Electric 70 Electric 70",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "MODÈLE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "AUTONOMIE WLTP",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "BATTERIE UTILE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CHARGE DC",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "SÉLECTION",
+          "ignored": false
+        }
+      ],
+      "regions": [
+        {
+          "label": "Versions affichées, triées",
+          "tabIndex": 0,
+          "description": "↔Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "caption": "Versions affichées, triées",
+          "overflow": true,
+          "width": 662,
+          "scrollWidth": 700
+        }
+      ],
+      "keyboard": [
+        {
+          "scroll": 38,
+          "focusVisible": true,
+          "outline": "2px",
+          "style": "solid"
+        }
+      ]
+    },
+    {
+      "path": "/voitures-electriques",
+      "width": 1440,
+      "fields": [
+        {
+          "id": "v-search",
+          "x": 217,
+          "w": 198,
+          "h": 48,
+          "min": "",
+          "max": "",
+          "step": "",
+          "labels": [
+            "Rechercher"
+          ],
+          "options": null
+        },
+        {
+          "id": "v-brand",
+          "x": 217,
+          "w": 198,
+          "h": 48,
+          "labels": [
+            "Marque"
+          ],
+          "options": [
+            "all",
+            "Audi",
+            "BMW",
+            "BYD",
+            "Citroën",
+            "CUPRA",
+            "Dacia",
+            "Fiat",
+            "Ford",
+            "Hyundai",
+            "Kia",
+            "Mercedes-Benz",
+            "MG",
+            "Nissan",
+            "Opel",
+            "Peugeot",
+            "Porsche",
+            "Renault",
+            "Škoda",
+            "smart",
+            "Tesla",
+            "Volkswagen",
+            "Volvo"
+          ]
+        },
+        {
+          "id": "v-body",
+          "x": 217,
+          "w": 198,
+          "h": 48,
+          "labels": [
+            "Carrosserie"
+          ],
+          "options": [
+            "all",
+            "berline",
+            "SUV",
+            "citadine",
+            "compacte"
+          ]
+        },
+        {
+          "id": "v-range",
+          "x": 217,
+          "w": 198,
+          "h": 44,
+          "min": "0",
+          "max": "700",
+          "step": "50",
+          "labels": [
+            "Autonomie WLTP min. 0 km"
+          ],
+          "options": null
+        },
+        {
+          "id": "v-dc",
+          "x": 217,
+          "w": 198,
+          "h": 44,
+          "min": "0",
+          "max": "300",
+          "step": "25",
+          "labels": [
+            "Charge DC min. 0 kW"
+          ],
+          "options": null
+        },
+        {
+          "id": "v-sort",
+          "x": 889,
+          "w": 230,
+          "h": 48,
+          "labels": [
+            "Trier par"
+          ],
+          "options": [
+            "range-desc",
+            "cost-asc",
+            "dc-desc",
+            "battery-desc",
+            "name"
+          ]
+        }
+      ],
+      "focus": {
+        "id": "v-brand",
+        "label": "ToutesAudiBMWBYDCitroënCUPRADaciaFiatFordHyundaiKiaMercedes-BenzMGNissanOpelPeugeotPorscheRenaultŠkodasmartTeslaVolkswagenVolvo",
+        "visible": true,
+        "outline": "2px",
+        "style": "solid"
+      },
+      "openDoc": {
+        "inner": 1440,
+        "scroll": 1440
+      },
+      "ax": [
+        {
+          "role": "region",
+          "name": "Versions affichées, triées",
+          "description": "Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Ce que couvre le catalogue",
+          "ignored": false
+        },
+        {
+          "role": "table",
+          "name": "Versions affichées, triées",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "MERCEDES-BENZ Mercedes-Benz CLA 250+ 250+",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "VOLKSWAGEN Volkswagen ID.7 86 kWh 86 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "TESLA Tesla Model 3 Long Range RWD Long Range RWD",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "PEUGEOT Peugeot e-3008 97 kWh Long Range 97 kWh Long Range",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "MERCEDES-BENZ Mercedes-Benz GLA 250+ 250+",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "BMW BMW iX3 40 40",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "NISSAN Nissan Leaf Extended Range 75 kWh Extended Range 75 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "RENAULT Renault Scénic E-Tech EV87 220 ch EV87 220 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "BMW BMW i4 eDrive40 eDrive40",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "PORSCHE Porsche Macan 4 Electric 4 Electric",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "KIA Kia EV3 Long Range Long Range",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "FORD Ford Explorer Extended Range RWD Extended Range RWD",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "ŠKODA Škoda Enyaq 85 85",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "VOLVO Volvo EX40 P5 Long Range P5 Long Range",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "VOLKSWAGEN Volkswagen ID.4 Pro Pro",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "ŠKODA Škoda Elroq 85 85",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "TESLA Tesla Model 3 RWD RWD",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "HYUNDAI Hyundai IONIQ 5 84 kWh RWD 84 kWh RWD",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "TESLA Tesla Model Y Long Range AWD Long Range AWD",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "CUPRA CUPRA Born 170 kW 79 kWh 170 kW 79 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "KIA Kia EV6 Long Range AWD Long Range AWD",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "BYD BYD Seal 82,5 kWh AWD Excellence 82,5 kWh AWD Excellence",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "BMW BMW iX1 eDrive20 eDrive20",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "HYUNDAI Hyundai Kona Electric 65 kWh 65 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "BYD BYD Atto 3 Evo RWD Design RWD Design",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "TESLA Tesla Model Y RWD RWD",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "MG MG MGS5 EV 64 kWh EV 64 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "VOLVO Volvo EX30 Single Motor Extended Range Single Motor Extended Range",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "RENAULT Renault Mégane E-Tech EV60 220 ch EV60 220 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "PEUGEOT Peugeot e-208 50 kWh 50 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "SMART smart #1 Pro+ Pro+",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "RENAULT Renault 5 E-Tech 52 kWh 150 ch 52 kWh 150 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "MG MG MG4 Urban Comfort Long Range Urban Comfort Long Range",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "AUDI Audi Q4 e-tron 40 40",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "PEUGEOT Peugeot e-2008 54 kWh 54 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "OPEL Opel Corsa Electric 51 kWh 51 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "OPEL Opel Mokka Electric 54 kWh 54 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "CITROËN Citroën ë-C3 Aircross Extended Range 54 kWh Extended Range 54 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "RENAULT Renault 4 E-Tech 52 kWh 150 ch 52 kWh 150 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "FORD Ford Puma Gen-E Gen-E Gen-E",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "HYUNDAI Hyundai INSTER Long Range Long Range",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "FIAT Fiat 500e Hatchback 42 kWh Hatchback 42 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "CITROËN Citroën ë-C3 Standard Range 44 kWh Standard Range 44 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "FIAT Fiat Grande Panda 44 kWh 44 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "BYD BYD Dolphin Surf 43,2 kWh Comfort 43,2 kWh Comfort",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "RENAULT Renault Twingo E-Tech 27,5 kWh 27,5 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "DACIA Dacia Spring Electric 70 Electric 70",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "MODÈLE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CARROSSERIE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "AUTONOMIE WLTP",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "BATTERIE UTILE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CHARGE DC",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "10 → 80 %",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "SÉLECTION",
+          "ignored": false
+        }
+      ],
+      "regions": [
+        {
+          "label": "Versions affichées, triées",
+          "tabIndex": 0,
+          "description": "↔Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "caption": "Versions affichées, triées",
+          "overflow": true,
+          "width": 758,
+          "scrollWidth": 924
+        }
+      ],
+      "keyboard": [
+        {
+          "scroll": 40,
+          "focusVisible": true,
+          "outline": "2px",
+          "style": "solid"
+        }
+      ]
+    },
+    {
+      "path": "/voitures-electriques/renault",
+      "width": 320,
+      "ax": [
+        {
+          "role": "region",
+          "name": "Les versions Renault",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Coût d'usage",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Pour quel usage ?",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Duels du comparateur",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Sources des données",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Comparaison des versions Renault",
+          "description": "Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "ignored": false
+        },
+        {
+          "role": "table",
+          "name": "Comparaison des versions Renault",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "5 E-Tech 52 kWh 150 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "4 E-Tech 52 kWh 150 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Twingo E-Tech 27,5 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Scénic E-Tech EV87 220 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Mégane E-Tech EV60 220 ch",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "MODÈLE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CARROSSERIE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "AUTONOMIE WLTP",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "BATTERIE UTILE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CHARGE DC MAX",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "10 → 80 %",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CONSOMMATION CALCULÉE",
+          "ignored": false
+        }
+      ],
+      "regions": [
+        {
+          "label": "Comparaison des versions Renault",
+          "tabIndex": 0,
+          "description": "↔Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "caption": "Comparaison des versions Renault",
+          "overflow": true,
+          "width": 286,
+          "scrollWidth": 1013
+        }
+      ],
+      "keyboard": [
+        {
+          "scroll": 40,
+          "focusVisible": true,
+          "outline": "2px",
+          "style": "solid"
+        }
+      ]
+    },
+    {
+      "path": "/voitures-electriques/renault",
+      "width": 390,
+      "ax": [
+        {
+          "role": "region",
+          "name": "Les versions Renault",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Coût d'usage",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Pour quel usage ?",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Duels du comparateur",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Sources des données",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Comparaison des versions Renault",
+          "description": "Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "ignored": false
+        },
+        {
+          "role": "table",
+          "name": "Comparaison des versions Renault",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "5 E-Tech 52 kWh 150 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "4 E-Tech 52 kWh 150 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Twingo E-Tech 27,5 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Scénic E-Tech EV87 220 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Mégane E-Tech EV60 220 ch",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "MODÈLE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CARROSSERIE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "AUTONOMIE WLTP",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "BATTERIE UTILE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CHARGE DC MAX",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "10 → 80 %",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CONSOMMATION CALCULÉE",
+          "ignored": false
+        }
+      ],
+      "regions": [
+        {
+          "label": "Comparaison des versions Renault",
+          "tabIndex": 0,
+          "description": "↔Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "caption": "Comparaison des versions Renault",
+          "overflow": true,
+          "width": 356,
+          "scrollWidth": 1013
+        }
+      ],
+      "keyboard": [
+        {
+          "scroll": 40,
+          "focusVisible": true,
+          "outline": "2px",
+          "style": "solid"
+        }
+      ]
+    },
+    {
+      "path": "/voitures-electriques/renault",
+      "width": 768,
+      "ax": [
+        {
+          "role": "region",
+          "name": "Les versions Renault",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Coût d'usage",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Pour quel usage ?",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Duels du comparateur",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Sources des données",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Comparaison des versions Renault",
+          "description": "Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "ignored": false
+        },
+        {
+          "role": "table",
+          "name": "Comparaison des versions Renault",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "5 E-Tech 52 kWh 150 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "4 E-Tech 52 kWh 150 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Twingo E-Tech 27,5 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Scénic E-Tech EV87 220 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Mégane E-Tech EV60 220 ch",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "MODÈLE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CARROSSERIE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "AUTONOMIE WLTP",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "BATTERIE UTILE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CHARGE DC MAX",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "10 → 80 %",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CONSOMMATION CALCULÉE",
+          "ignored": false
+        }
+      ],
+      "regions": [
+        {
+          "label": "Comparaison des versions Renault",
+          "tabIndex": 0,
+          "description": "↔Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "caption": "Comparaison des versions Renault",
+          "overflow": true,
+          "width": 718,
+          "scrollWidth": 1013
+        }
+      ],
+      "keyboard": [
+        {
+          "scroll": 40,
+          "focusVisible": true,
+          "outline": "2px",
+          "style": "solid"
+        }
+      ]
+    },
+    {
+      "path": "/voitures-electriques/renault",
+      "width": 1024,
+      "ax": [
+        {
+          "role": "region",
+          "name": "Les versions Renault",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Coût d'usage",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Pour quel usage ?",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Duels du comparateur",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Sources des données",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Comparaison des versions Renault",
+          "description": "Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "ignored": false
+        },
+        {
+          "role": "table",
+          "name": "Comparaison des versions Renault",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "5 E-Tech 52 kWh 150 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "4 E-Tech 52 kWh 150 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Twingo E-Tech 27,5 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Scénic E-Tech EV87 220 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Mégane E-Tech EV60 220 ch",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "MODÈLE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CARROSSERIE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "AUTONOMIE WLTP",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "BATTERIE UTILE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CHARGE DC MAX",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "10 → 80 %",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CONSOMMATION CALCULÉE",
+          "ignored": false
+        }
+      ],
+      "regions": [
+        {
+          "label": "Comparaison des versions Renault",
+          "tabIndex": 0,
+          "description": "↔Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "caption": "Comparaison des versions Renault",
+          "overflow": true,
+          "width": 942,
+          "scrollWidth": 1013
+        }
+      ],
+      "keyboard": [
+        {
+          "scroll": 40,
+          "focusVisible": true,
+          "outline": "2px",
+          "style": "solid"
+        }
+      ]
+    },
+    {
+      "path": "/voitures-electriques/renault",
+      "width": 1440,
+      "ax": [
+        {
+          "role": "region",
+          "name": "Les versions Renault",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Coût d'usage",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Pour quel usage ?",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Duels du comparateur",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Sources des données",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Comparaison des versions Renault",
+          "description": "↔ Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "ignored": false
+        },
+        {
+          "role": "table",
+          "name": "Comparaison des versions Renault",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "5 E-Tech 52 kWh 150 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "4 E-Tech 52 kWh 150 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Twingo E-Tech 27,5 kWh",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Scénic E-Tech EV87 220 ch",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Mégane E-Tech EV60 220 ch",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "MODÈLE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CARROSSERIE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "AUTONOMIE WLTP",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "BATTERIE UTILE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CHARGE DC MAX",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "10 → 80 %",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CONSOMMATION CALCULÉE",
+          "ignored": false
+        }
+      ],
+      "regions": [
+        {
+          "label": "Comparaison des versions Renault",
+          "tabIndex": 0,
+          "description": "↔Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "caption": "Comparaison des versions Renault",
+          "overflow": false,
+          "width": 1038,
+          "scrollWidth": 1038
+        }
+      ],
+      "keyboard": [
+        {
+          "scroll": 0,
+          "focusVisible": true,
+          "outline": "2px",
+          "style": "solid"
+        }
+      ]
+    },
+    {
+      "path": "/voitures-electriques/tesla/model-3",
+      "width": 320,
+      "ax": [
+        {
+          "role": "region",
+          "name": "Comparaison des versions du Tesla Model 3",
+          "description": "Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Sources des données",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Véhicules similaires",
+          "ignored": false
+        },
+        {
+          "role": "table",
+          "name": "Comparaison des versions du TeslaModel 3",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "RWD 2026",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Long Range RWD 2024-2025",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "VERSION",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "AUTONOMIE WLTP",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "BATTERIE UTILE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CHARGE DC",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "10 → 80 %",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "PUISSANCE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "COÛT /100 KM*",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "SÉLECTION",
+          "ignored": false
+        }
+      ],
+      "regions": [
+        {
+          "label": "Comparaison des versions du Tesla Model 3",
+          "tabIndex": 0,
+          "description": "↔Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "caption": "Comparaison des versions du Tesla Model 3",
+          "overflow": true,
+          "width": 286,
+          "scrollWidth": 983
+        }
+      ],
+      "keyboard": [
+        {
+          "scroll": 40,
+          "focusVisible": true,
+          "outline": "2px",
+          "style": "solid"
+        }
+      ]
+    },
+    {
+      "path": "/voitures-electriques/tesla/model-3",
+      "width": 390,
+      "ax": [
+        {
+          "role": "region",
+          "name": "Comparaison des versions du Tesla Model 3",
+          "description": "Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Sources des données",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Véhicules similaires",
+          "ignored": false
+        },
+        {
+          "role": "table",
+          "name": "Comparaison des versions du TeslaModel 3",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "RWD 2026",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Long Range RWD 2024-2025",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "VERSION",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "AUTONOMIE WLTP",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "BATTERIE UTILE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CHARGE DC",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "10 → 80 %",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "PUISSANCE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "COÛT /100 KM*",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "SÉLECTION",
+          "ignored": false
+        }
+      ],
+      "regions": [
+        {
+          "label": "Comparaison des versions du Tesla Model 3",
+          "tabIndex": 0,
+          "description": "↔Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "caption": "Comparaison des versions du Tesla Model 3",
+          "overflow": true,
+          "width": 356,
+          "scrollWidth": 983
+        }
+      ],
+      "keyboard": [
+        {
+          "scroll": 40,
+          "focusVisible": true,
+          "outline": "2px",
+          "style": "solid"
+        }
+      ]
+    },
+    {
+      "path": "/voitures-electriques/tesla/model-3",
+      "width": 768,
+      "ax": [
+        {
+          "role": "region",
+          "name": "Comparaison des versions du Tesla Model 3",
+          "description": "Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Sources des données",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Véhicules similaires",
+          "ignored": false
+        },
+        {
+          "role": "table",
+          "name": "Comparaison des versions du TeslaModel 3",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "RWD 2026",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Long Range RWD 2024-2025",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "VERSION",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "AUTONOMIE WLTP",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "BATTERIE UTILE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CHARGE DC",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "10 → 80 %",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "PUISSANCE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "COÛT /100 KM*",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "SÉLECTION",
+          "ignored": false
+        }
+      ],
+      "regions": [
+        {
+          "label": "Comparaison des versions du Tesla Model 3",
+          "tabIndex": 0,
+          "description": "↔Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "caption": "Comparaison des versions du Tesla Model 3",
+          "overflow": true,
+          "width": 718,
+          "scrollWidth": 983
+        }
+      ],
+      "keyboard": [
+        {
+          "scroll": 40,
+          "focusVisible": true,
+          "outline": "2px",
+          "style": "solid"
+        }
+      ]
+    },
+    {
+      "path": "/voitures-electriques/tesla/model-3",
+      "width": 1024,
+      "ax": [
+        {
+          "role": "region",
+          "name": "Comparaison des versions du Tesla Model 3",
+          "description": "Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Sources des données",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Véhicules similaires",
+          "ignored": false
+        },
+        {
+          "role": "table",
+          "name": "Comparaison des versions du TeslaModel 3",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "RWD 2026",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Long Range RWD 2024-2025",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "VERSION",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "AUTONOMIE WLTP",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "BATTERIE UTILE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CHARGE DC",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "10 → 80 %",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "PUISSANCE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "COÛT /100 KM*",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "SÉLECTION",
+          "ignored": false
+        }
+      ],
+      "regions": [
+        {
+          "label": "Comparaison des versions du Tesla Model 3",
+          "tabIndex": 0,
+          "description": "↔Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "caption": "Comparaison des versions du Tesla Model 3",
+          "overflow": true,
+          "width": 942,
+          "scrollWidth": 983
+        }
+      ],
+      "keyboard": [
+        {
+          "scroll": 40,
+          "focusVisible": true,
+          "outline": "2px",
+          "style": "solid"
+        }
+      ]
+    },
+    {
+      "path": "/voitures-electriques/tesla/model-3",
+      "width": 1440,
+      "ax": [
+        {
+          "role": "region",
+          "name": "Comparaison des versions du Tesla Model 3",
+          "description": "↔ Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Sources des données",
+          "ignored": false
+        },
+        {
+          "role": "region",
+          "name": "Véhicules similaires",
+          "ignored": false
+        },
+        {
+          "role": "table",
+          "name": "Comparaison des versions du TeslaModel 3",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "RWD 2026",
+          "ignored": false
+        },
+        {
+          "role": "rowheader",
+          "name": "Long Range RWD 2024-2025",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "VERSION",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "AUTONOMIE WLTP",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "BATTERIE UTILE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "CHARGE DC",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "10 → 80 %",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "PUISSANCE",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "COÛT /100 KM*",
+          "ignored": false
+        },
+        {
+          "role": "columnheader",
+          "name": "SÉLECTION",
+          "ignored": false
+        }
+      ],
+      "regions": [
+        {
+          "label": "Comparaison des versions du Tesla Model 3",
+          "tabIndex": 0,
+          "description": "↔Si nécessaire, faites défiler horizontalement pour voir toutes les colonnes.",
+          "caption": "Comparaison des versions du Tesla Model 3",
+          "overflow": false,
+          "width": 1038,
+          "scrollWidth": 1038
+        }
+      ],
+      "keyboard": [
+        {
+          "scroll": 0,
+          "focusVisible": true,
+          "outline": "2px",
+          "style": "solid"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

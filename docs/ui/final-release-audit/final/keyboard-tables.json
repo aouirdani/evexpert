@@ -1,0 +1,91 @@
+[
+  {
+    "path": "/guides/acheter-voiture-electrique-occasion",
+    "width": 390,
+    "unlinkedScrollableTables": 1,
+    "reached": 1,
+    "focus": [
+      {
+        "heading": "Construire un dossier de preuves, pas une impression générale",
+        "tabIndex": -1,
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "2px",
+        "before": 0,
+        "client": 358,
+        "scroll": 1085,
+        "emptyFocus": true,
+        "after": 240,
+        "tabNumber": 23
+      }
+    ]
+  },
+  {
+    "path": "/guides/acheter-voiture-electrique-occasion",
+    "width": 1440,
+    "unlinkedScrollableTables": 1,
+    "reached": 1,
+    "focus": [
+      {
+        "heading": "Construire un dossier de preuves, pas une impression générale",
+        "tabIndex": -1,
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "2px",
+        "before": 0,
+        "client": 704,
+        "scroll": 1085,
+        "emptyFocus": true,
+        "after": 240,
+        "tabNumber": 21
+      }
+    ]
+  },
+  {
+    "path": "/blog/voitures-electriques-chinoises-byd-mg",
+    "width": 390,
+    "unlinkedScrollableTables": 3,
+    "reached": 3,
+    "focus": [
+      {
+        "heading": "LFP ou NMC : ne pas attribuer une chimie à une nationalité",
+        "tabIndex": -1,
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "2px",
+        "before": 0,
+        "client": 358,
+        "scroll": 454,
+        "emptyFocus": true,
+        "after": 96,
+        "tabNumber": 34
+      },
+      {
+        "heading": "Recharge à domicile : comparer la borne avec le plafond AC",
+        "tabIndex": -1,
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "2px",
+        "before": 0,
+        "client": 358,
+        "scroll": 465,
+        "emptyFocus": true,
+        "after": 107,
+        "tabNumber": 38
+      },
+      {
+        "heading": "Recharge rapide : rapprocher durée et énergie ajoutée",
+        "tabIndex": -1,
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "2px",
+        "before": 0,
+        "client": 358,
+        "scroll": 597,
+        "emptyFocus": true,
+        "after": 239,
+        "tabNumber": 40
+      }
+    ]
+  }
+]

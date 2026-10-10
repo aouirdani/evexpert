@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Check, Link2 } from "lucide-react";
 import type { CompareVehicle } from "@/lib/vehicle-lite";
-import { fieldClass } from "@/components/ui/Field";
+import { comfortableFieldClass } from "@/components/ui/Field";
+import { textActionClass } from "@/components/ui/componentStyles";
 import { resolveInitialIds } from "@/lib/comparison-url";
 import { ComparisonTable } from "./ComparisonTable";
 
@@ -46,7 +47,7 @@ function CopyLinkButton() {
     <button
       type="button"
       onClick={copy}
-      className="inline-flex items-center gap-1.5 text-sm font-semibold text-signal-deep"
+      className={textActionClass}
     >
       {copied ? <Check className="h-4 w-4" aria-hidden /> : <Link2 className="h-4 w-4" aria-hidden />}
       {copied ? "Lien copié" : "Copier le lien de cette comparaison"}
@@ -97,7 +98,7 @@ export function ComparisonBuilder({
               id={`cmp-${i}`}
               value={ids[i]}
               onChange={(e) => setIds((prev) => prev.map((x, j) => (j === i ? e.target.value : x)))}
-              className={fieldClass}
+              className={comfortableFieldClass}
             >
               {/* Emplacement facultatif (C) : option vide toujours proposée. A/B : seulement si vide au
                   chargement (ex. lien partagé avec un seul véhicule) — sinon un <select> sans option

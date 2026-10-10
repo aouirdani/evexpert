@@ -1,0 +1,937 @@
+{
+  "errors": [
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/audit-route-inconnue-20261010",
+      "status": 404,
+      "robots": [
+        "noindex"
+      ],
+      "h1": "Page introuvable",
+      "body": "Aller au contenu(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag ="
+    },
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/voitures-electriques/audit-marque-inconnue",
+      "status": 404,
+      "robots": [
+        "noindex"
+      ],
+      "body": "(self.__next_f=self.__next_f||[]).push([0])self.__next_f.push([1,\"1:\\\"$Sreact.fragment\\\"\\n2:I[79520,[\\\"/_next/static/chunks/0.f3-3c83~_r~.js\\\",\\\"/_next/static/chunks/0d3shmwh5_nmn."
+    },
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/voitures-electriques/renault/audit-modele-inconnu",
+      "status": 404,
+      "robots": [
+        "noindex"
+      ],
+      "body": "(self.__next_f=self.__next_f||[]).push([0])self.__next_f.push([1,\"1:\\\"$Sreact.fragment\\\"\\n2:I[79520,[\\\"/_next/static/chunks/0.f3-3c83~_r~.js\\\",\\\"/_next/static/chunks/0d3shmwh5_nmn."
+    },
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/voitures-electriques/tesla/model-3/audit-version-inconnue",
+      "status": 404,
+      "robots": [
+        "noindex"
+      ],
+      "body": "(self.__next_f=self.__next_f||[]).push([0])self.__next_f.push([1,\"1:\\\"$Sreact.fragment\\\"\\n2:I[79520,[\\\"/_next/static/chunks/0.f3-3c83~_r~.js\\\",\\\"/_next/static/chunks/0d3shmwh5_nmn."
+    },
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/guides/audit-guide-inconnu",
+      "status": 404,
+      "robots": [
+        "noindex"
+      ],
+      "h1": "Page introuvable",
+      "body": "Aller au contenu(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag ="
+    },
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/blog/audit-article-inconnu",
+      "status": 404,
+      "robots": [
+        "noindex"
+      ],
+      "h1": "Page introuvable",
+      "body": "Aller au contenu(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag ="
+    },
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/comparer/audit-duel-inconnu",
+      "status": 404,
+      "robots": [
+        "noindex"
+      ],
+      "h1": "Page introuvable",
+      "body": "Aller au contenu(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag ="
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/audit-route-inconnue-20261010",
+      "status": 404,
+      "robots": [
+        "noindex"
+      ],
+      "h1": "Page introuvable",
+      "body": "Aller au contenu(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag ="
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/voitures-electriques/audit-marque-inconnue",
+      "status": 404,
+      "robots": [
+        "noindex"
+      ],
+      "body": "(self.__next_f=self.__next_f||[]).push([0])self.__next_f.push([1,\"1:\\\"$Sreact.fragment\\\"\\n2:I[48957,[\\\"/_next/static/chunks/0scp9wmhg1mkl.js\\\",\\\"/_next/static/chunks/15exm892ri-xw."
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/voitures-electriques/renault/audit-modele-inconnu",
+      "status": 404,
+      "robots": [
+        "noindex"
+      ],
+      "body": "(self.__next_f=self.__next_f||[]).push([0])self.__next_f.push([1,\"1:\\\"$Sreact.fragment\\\"\\n2:I[48957,[\\\"/_next/static/chunks/0scp9wmhg1mkl.js\\\",\\\"/_next/static/chunks/15exm892ri-xw."
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/voitures-electriques/tesla/model-3/audit-version-inconnue",
+      "status": 404,
+      "robots": [
+        "noindex"
+      ],
+      "body": "(self.__next_f=self.__next_f||[]).push([0])self.__next_f.push([1,\"1:\\\"$Sreact.fragment\\\"\\n2:I[48957,[\\\"/_next/static/chunks/0scp9wmhg1mkl.js\\\",\\\"/_next/static/chunks/15exm892ri-xw."
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/guides/audit-guide-inconnu",
+      "status": 404,
+      "robots": [
+        "noindex"
+      ],
+      "h1": "Page introuvable",
+      "body": "Aller au contenu(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag ="
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/blog/audit-article-inconnu",
+      "status": 404,
+      "robots": [
+        "noindex"
+      ],
+      "h1": "Page introuvable",
+      "body": "Aller au contenu(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag ="
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/comparer/audit-duel-inconnu",
+      "status": 404,
+      "robots": [
+        "noindex"
+      ],
+      "h1": "Page introuvable",
+      "body": "Aller au contenu(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag ="
+    }
+  ],
+  "assets": [
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/brand/video.mp4",
+      "status": 200,
+      "bytes": 663447,
+      "hash": "04ba4db4ea5002b6ff6638567952f115a23862038f50536d9be6dd1e5a754a2d",
+      "headers": {
+        "cache-control": "public, max-age=86400, stale-while-revalidate=604800",
+        "x-vercel-cache": "HIT"
+      }
+    },
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/brand/evexpert-hero.jpeg",
+      "status": 200,
+      "bytes": 781661,
+      "hash": "2fad67dba5be769008d9547efefb11a3f87f7a602d6845b59b21a56ca20e3c14",
+      "headers": {
+        "cache-control": "public, max-age=86400, stale-while-revalidate=604800",
+        "x-vercel-cache": "MISS"
+      }
+    },
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/brand/og-image.png",
+      "status": 200,
+      "bytes": 23110,
+      "hash": "4595a85324b67f086b1c4ff327fd2dd3b787a365a34ad0958e0283c936cb31cb",
+      "headers": {
+        "cache-control": "public, max-age=86400, stale-while-revalidate=604800",
+        "x-vercel-cache": "HIT"
+      }
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/brand/video.mp4",
+      "status": 200,
+      "bytes": 663447,
+      "hash": "04ba4db4ea5002b6ff6638567952f115a23862038f50536d9be6dd1e5a754a2d",
+      "headers": {
+        "cache-control": "public, max-age=86400, stale-while-revalidate=604800",
+        "x-vercel-cache": null
+      }
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/brand/evexpert-hero.jpeg",
+      "status": 200,
+      "bytes": 781661,
+      "hash": "2fad67dba5be769008d9547efefb11a3f87f7a602d6845b59b21a56ca20e3c14",
+      "headers": {
+        "cache-control": "public, max-age=86400, stale-while-revalidate=604800",
+        "x-vercel-cache": null
+      }
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/brand/og-image.png",
+      "status": 200,
+      "bytes": 23110,
+      "hash": "4595a85324b67f086b1c4ff327fd2dd3b787a365a34ad0958e0283c936cb31cb",
+      "headers": {
+        "cache-control": "public, max-age=86400, stale-while-revalidate=604800",
+        "x-vercel-cache": null
+      }
+    }
+  ],
+  "pages": [
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0pqt~8bl3ukh4.js",
+        "/_next/static/chunks/0m_p1bxtorv5i.js",
+        "/_next/static/chunks/02g3221oh~3le.js",
+        "/_next/static/chunks/turbopack-0~dymj8._h2gc.js",
+        "/_next/static/chunks/0.f3-3c83~_r~.js",
+        "/_next/static/chunks/0d3shmwh5_nmn.js",
+        "/_next/static/chunks/0mozcut~yh97e.js",
+        "/_next/static/chunks/0d0a22qj1ucc2.js",
+        "/_next/static/chunks/0p1b-al6~s0pp.js",
+        "/_next/static/chunks/07ak5ajsco_u-.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0zaia6i55l01..js"
+      ],
+      "css": [
+        "/_next/static/chunks/0bpl33t34okcv.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"index\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"__PAGE__\\\",{}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0bpl33t34okcv.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0.f3-3c83~_r~.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0d3shmwh5_nmn.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__2wtglG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"email\\\\\\\":\\\\\\\"aymane.ouirdani94@icloud.com\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0mozcut~yh97e.js\\\",\\\"async\\\":true}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0d0a22qj1ucc2.js\\\",\\\"async\\\":true}]],\\\"template\\\":[[[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"on-ink hidden bg-ink lg:block\\\",\\\"children\\\":\\\"$L6\\\"}],\\\"$L7\\\"],\\\"$L8\\\"],\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$L9\\\"],\\\"notFound\\\":\\\"$La\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$Lb\\\",\\\"$Lc\\\",\\\"$Ld\\\"]}]}]]}],{\\\"children\\\":[\\\"$Le\\\",{},null,false,null]},null,false,null],\\\"$Lf\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$10\\\",[\\\"$L11\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"rhkf96f_Opsth65kI1os_\\\"}\\n\"])"
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&w=3840&q=75",
+          "alt": "",
+          "width": "1376",
+          "height": "768",
+          "loading": "auto"
+        },
+        {
+          "src": "/_next/image?url=%2Feditorial%2Frecharge-station-haute-puissance.jpeg&w=3840&q=75",
+          "alt": "Voiture électrique en recharge sur une station haute puissance, avec plusieurs bornes alignées au second plan.",
+          "width": "1376",
+          "height": "768",
+          "loading": "lazy"
+        },
+        {
+          "src": "/_next/image?url=%2Feditorial%2Fbatterie-pack-technique.jpeg&w=3840&q=75",
+          "alt": "",
+          "width": "1376",
+          "height": "768",
+          "loading": "lazy"
+        }
+      ],
+      "adReserves": []
+    },
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/voitures-electriques",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0pqt~8bl3ukh4.js",
+        "/_next/static/chunks/0m_p1bxtorv5i.js",
+        "/_next/static/chunks/02g3221oh~3le.js",
+        "/_next/static/chunks/turbopack-0~dymj8._h2gc.js",
+        "/_next/static/chunks/0.f3-3c83~_r~.js",
+        "/_next/static/chunks/0d3shmwh5_nmn.js",
+        "/_next/static/chunks/0mozcut~yh97e.js",
+        "/_next/static/chunks/0d0a22qj1ucc2.js",
+        "/_next/static/chunks/0p1b-al6~s0pp.js",
+        "/_next/static/chunks/0job.ez47e6hb.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0zaia6i55l01..js"
+      ],
+      "css": [
+        "/_next/static/chunks/0bpl33t34okcv.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"voitures-electriques\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"voitures-electriques\\\",{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0bpl33t34okcv.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0.f3-3c83~_r~.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0d3shmwh5_nmn.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__2wtglG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"email\\\\\\\":\\\\\\\"aymane.ouirdani94@icloud.com\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0mozcut~yh97e.js\\\",\\\"async\\\":true}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0d0a22qj1ucc2.js\\\",\\\"async\\\":true}]],\\\"template\\\":\\\"$L6\\\",\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$L7\\\"],\\\"notFound\\\":\\\"$L8\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$L9\\\",\\\"$La\\\",\\\"$Lb\\\"]}]}]]}],{\\\"children\\\":[\\\"$Lc\\\",{\\\"children\\\":[\\\"$Ld\\\",{},null,false,null]},null,false,\\\"$@e\\\"]},null,false,null],\\\"$Lf\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$10\\\",[\\\"$L11\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"rhkf96f_Opsth65kI1os_\\\"}\\n\"])"
+      ],
+      "images": [],
+      "adReserves": []
+    },
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/comparer",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0pqt~8bl3ukh4.js",
+        "/_next/static/chunks/0m_p1bxtorv5i.js",
+        "/_next/static/chunks/02g3221oh~3le.js",
+        "/_next/static/chunks/turbopack-0~dymj8._h2gc.js",
+        "/_next/static/chunks/0.f3-3c83~_r~.js",
+        "/_next/static/chunks/0d3shmwh5_nmn.js",
+        "/_next/static/chunks/0mozcut~yh97e.js",
+        "/_next/static/chunks/0d0a22qj1ucc2.js",
+        "/_next/static/chunks/0p1b-al6~s0pp.js",
+        "/_next/static/chunks/0q5950tq6tgf3.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0zaia6i55l01..js"
+      ],
+      "css": [
+        "/_next/static/chunks/0bpl33t34okcv.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"comparer\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"comparer\\\",{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0bpl33t34okcv.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0.f3-3c83~_r~.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0d3shmwh5_nmn.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__2wtglG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"email\\\\\\\":\\\\\\\"aymane.ouirdani94@icloud.com\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0mozcut~yh97e.js\\\",\\\"async\\\":true}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0d0a22qj1ucc2.js\\\",\\\"async\\\":true}]],\\\"template\\\":\\\"$L6\\\",\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$L7\\\"],\\\"notFound\\\":\\\"$L8\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$L9\\\",\\\"$La\\\",\\\"$Lb\\\"]}]}]]}],{\\\"children\\\":[\\\"$Lc\\\",{\\\"children\\\":[\\\"$Ld\\\",{},null,false,null]},null,false,\\\"$@e\\\"]},null,false,null],\\\"$Lf\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$10\\\",[\\\"$L11\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"rhkf96f_Opsth65kI1os_\\\"}\\n\"])"
+      ],
+      "images": [],
+      "adReserves": []
+    },
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/outils/tco-voiture-electrique",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0pqt~8bl3ukh4.js",
+        "/_next/static/chunks/0m_p1bxtorv5i.js",
+        "/_next/static/chunks/02g3221oh~3le.js",
+        "/_next/static/chunks/turbopack-0~dymj8._h2gc.js",
+        "/_next/static/chunks/0.f3-3c83~_r~.js",
+        "/_next/static/chunks/0d3shmwh5_nmn.js",
+        "/_next/static/chunks/0mozcut~yh97e.js",
+        "/_next/static/chunks/0d0a22qj1ucc2.js",
+        "/_next/static/chunks/0p1b-al6~s0pp.js",
+        "/_next/static/chunks/0ruzucnxc-t~v.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0zaia6i55l01..js"
+      ],
+      "css": [
+        "/_next/static/chunks/0bpl33t34okcv.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"outils\\\",\\\"tco-voiture-electrique\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"outils\\\",{\\\"children\\\":[\\\"tco-voiture-electrique\\\",{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0bpl33t34okcv.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0.f3-3c83~_r~.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0d3shmwh5_nmn.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__2wtglG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"email\\\\\\\":\\\\\\\"aymane.ouirdani94@icloud.com\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0mozcut~yh97e.js\\\",\\\"async\\\":true}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0d0a22qj1ucc2.js\\\",\\\"async\\\":true}]],\\\"template\\\":\\\"$L6\\\",\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$L7\\\"],\\\"notFound\\\":\\\"$L8\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$L9\\\",\\\"$La\\\",\\\"$Lb\\\"]}]}]]}],{\\\"children\\\":[\\\"$Lc\\\",{\\\"children\\\":[\\\"$Ld\\\",{\\\"children\\\":[\\\"$Le\\\",{},null,false,null]},null,false,\\\"$@f\\\"]},null,false,\\\"$@f\\\"]},null,false,null],\\\"$L10\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$11\\\",[\\\"$L12\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"rhkf96f_Opsth65kI1os_\\\"}\\n\"])"
+      ],
+      "images": [],
+      "adReserves": []
+    },
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/voitures-electriques/renault",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0pqt~8bl3ukh4.js",
+        "/_next/static/chunks/0m_p1bxtorv5i.js",
+        "/_next/static/chunks/02g3221oh~3le.js",
+        "/_next/static/chunks/turbopack-0~dymj8._h2gc.js",
+        "/_next/static/chunks/0.f3-3c83~_r~.js",
+        "/_next/static/chunks/0d3shmwh5_nmn.js",
+        "/_next/static/chunks/0mozcut~yh97e.js",
+        "/_next/static/chunks/0d0a22qj1ucc2.js",
+        "/_next/static/chunks/0p1b-al6~s0pp.js",
+        "/_next/static/chunks/0w7-i3elyuhio.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0zaia6i55l01..js"
+      ],
+      "css": [
+        "/_next/static/chunks/0bpl33t34okcv.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"voitures-electriques\\\",\\\"renault\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"voitures-electriques\\\",{\\\"children\\\":[[\\\"brand\\\",\\\"renault\\\",\\\"d\\\",null],{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0bpl33t34okcv.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0.f3-3c83~_r~.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0d3shmwh5_nmn.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__2wtglG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"email\\\\\\\":\\\\\\\"aymane.ouirdani94@icloud.com\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0mozcut~yh97e.js\\\",\\\"async\\\":true}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0d0a22qj1ucc2.js\\\",\\\"async\\\":true}]],\\\"template\\\":\\\"$L6\\\",\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$L7\\\"],\\\"notFound\\\":\\\"$L8\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$L9\\\",\\\"$La\\\",\\\"$Lb\\\"]}]}]]}],{\\\"children\\\":[\\\"$Lc\\\",{\\\"children\\\":[\\\"$Ld\\\",{\\\"children\\\":[\\\"$Le\\\",{},null,false,null]},null,false,\\\"$@f\\\"]},null,false,\\\"$@f\\\"]},null,false,null],\\\"$L10\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$11\\\",[\\\"$L12\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"rhkf96f_Opsth65kI1os_\\\"}\\n\"])"
+      ],
+      "images": [],
+      "adReserves": []
+    },
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/voitures-electriques/tesla/model-3",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0pqt~8bl3ukh4.js",
+        "/_next/static/chunks/0m_p1bxtorv5i.js",
+        "/_next/static/chunks/02g3221oh~3le.js",
+        "/_next/static/chunks/turbopack-0~dymj8._h2gc.js",
+        "/_next/static/chunks/0.f3-3c83~_r~.js",
+        "/_next/static/chunks/0d3shmwh5_nmn.js",
+        "/_next/static/chunks/0mozcut~yh97e.js",
+        "/_next/static/chunks/0d0a22qj1ucc2.js",
+        "/_next/static/chunks/0p1b-al6~s0pp.js",
+        "/_next/static/chunks/14-w74._.xji_.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0zaia6i55l01..js"
+      ],
+      "css": [
+        "/_next/static/chunks/0bpl33t34okcv.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"voitures-electriques\\\",\\\"tesla\\\",\\\"model-3\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"voitures-electriques\\\",{\\\"children\\\":[[\\\"brand\\\",\\\"tesla\\\",\\\"d\\\",null],{\\\"children\\\":[[\\\"model\\\",\\\"model-3\\\",\\\"d\\\",null],{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]}]}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0bpl33t34okcv.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0.f3-3c83~_r~.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0d3shmwh5_nmn.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__2wtglG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"email\\\\\\\":\\\\\\\"aymane.ouirdani94@icloud.com\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0mozcut~yh97e.js\\\",\\\"async\\\":true}],\\\"$L6\\\"],\\\"template\\\":\\\"$L7\\\",\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$L8\\\"],\\\"notFound\\\":\\\"$L9\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$La\\\",\\\"$Lb\\\",\\\"$Lc\\\"]}]}]]}],{\\\"children\\\":[\\\"$Ld\\\",{\\\"children\\\":[\\\"$Le\\\",{\\\"children\\\":[\\\"$Lf\\\",{\\\"children\\\":[\\\"$L10\\\",{},null,false,null]},null,false,\\\"$@11\\\"]},null,false,\\\"$@11\\\"]},null,false,\\\"$@11\\\"]},null,false,null],\\\"$L12\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$13\\\",[\\\"$L14\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"rhkf96f_Opsth65kI1os_\\\"}\\n\"])"
+      ],
+      "images": [],
+      "adReserves": []
+    },
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/guides/temps-recharge-voiture-electrique",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0pqt~8bl3ukh4.js",
+        "/_next/static/chunks/0m_p1bxtorv5i.js",
+        "/_next/static/chunks/02g3221oh~3le.js",
+        "/_next/static/chunks/turbopack-0~dymj8._h2gc.js",
+        "/_next/static/chunks/0.f3-3c83~_r~.js",
+        "/_next/static/chunks/0d3shmwh5_nmn.js",
+        "/_next/static/chunks/0mozcut~yh97e.js",
+        "/_next/static/chunks/0d0a22qj1ucc2.js",
+        "/_next/static/chunks/0p1b-al6~s0pp.js",
+        "/_next/static/chunks/0poyf4wlw.w5e.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0zaia6i55l01..js"
+      ],
+      "css": [
+        "/_next/static/chunks/0bpl33t34okcv.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"guides\\\",\\\"temps-recharge-voiture-electrique\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"guides\\\",{\\\"children\\\":[[\\\"slug\\\",\\\"temps-recharge-voiture-electrique\\\",\\\"d\\\",null],{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0bpl33t34okcv.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0.f3-3c83~_r~.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0d3shmwh5_nmn.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__2wtglG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"email\\\\\\\":\\\\\\\"aymane.ouirdani94@icloud.com\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0mozcut~yh97e.js\\\",\\\"async\\\":true}],\\\"$L6\\\"],\\\"template\\\":\\\"$L7\\\",\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$L8\\\"],\\\"notFound\\\":\\\"$L9\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$La\\\",\\\"$Lb\\\",\\\"$Lc\\\"]}]}]]}],{\\\"children\\\":[\\\"$Ld\\\",{\\\"children\\\":[\\\"$Le\\\",{\\\"children\\\":[\\\"$Lf\\\",{},null,false,null]},null,false,\\\"$@10\\\"]},null,false,\\\"$@10\\\"]},null,false,null],\\\"$L11\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$12\\\",[\\\"$L13\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"rhkf96f_Opsth65kI1os_\\\"}\\n\"])"
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Feditorial%2Flicences%2Ftemps-recharge-voiture-electrique.jpeg&w=3840&q=75",
+          "alt": "Main d'une personne qui enfonce le connecteur d'un câble de recharge dans la trappe latérale d'une voiture électrique blanche, en contre-jour.",
+          "width": "1600",
+          "height": "900",
+          "loading": "auto"
+        }
+      ],
+      "adReserves": [
+        {
+          "tag": "DIV",
+          "attributes": [
+            [
+              "aria-hidden",
+              "true"
+            ],
+            [
+              "data-reserved-slot",
+              "guide-sidebar"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0pqt~8bl3ukh4.js",
+        "/_next/static/chunks/0m_p1bxtorv5i.js",
+        "/_next/static/chunks/02g3221oh~3le.js",
+        "/_next/static/chunks/turbopack-0~dymj8._h2gc.js",
+        "/_next/static/chunks/0.f3-3c83~_r~.js",
+        "/_next/static/chunks/0d3shmwh5_nmn.js",
+        "/_next/static/chunks/0mozcut~yh97e.js",
+        "/_next/static/chunks/0d0a22qj1ucc2.js",
+        "/_next/static/chunks/0p1b-al6~s0pp.js",
+        "/_next/static/chunks/0poyf4wlw.w5e.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0zaia6i55l01..js"
+      ],
+      "css": [
+        "/_next/static/chunks/0bpl33t34okcv.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"blog\\\",\\\"lfp-ou-nmc-ce-que-montrent-les-donnees\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"blog\\\",{\\\"children\\\":[[\\\"slug\\\",\\\"lfp-ou-nmc-ce-que-montrent-les-donnees\\\",\\\"d\\\",null],{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0bpl33t34okcv.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0.f3-3c83~_r~.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0d3shmwh5_nmn.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__2wtglG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"email\\\\\\\":\\\\\\\"aymane.ouirdani94@icloud.com\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0mozcut~yh97e.js\\\",\\\"async\\\":true}],\\\"$L6\\\"],\\\"template\\\":\\\"$L7\\\",\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$L8\\\"],\\\"notFound\\\":\\\"$L9\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$La\\\",\\\"$Lb\\\",\\\"$Lc\\\"]}]}]]}],{\\\"children\\\":[\\\"$Ld\\\",{\\\"children\\\":[\\\"$Le\\\",{\\\"children\\\":[\\\"$Lf\\\",{},null,false,null]},null,false,\\\"$@10\\\"]},null,false,\\\"$@10\\\"]},null,false,null],\\\"$L11\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$12\\\",[\\\"$L13\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"rhkf96f_Opsth65kI1os_\\\"}\\n\"])"
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-donnees.jpeg&w=3840&q=75",
+          "alt": "Pack de batterie lithium-ion d'une BMW i3 présenté capot ouvert : des modules de cellules et leurs connexions métalliques.",
+          "width": "1600",
+          "height": "900",
+          "loading": "auto"
+        }
+      ],
+      "adReserves": [
+        {
+          "tag": "DIV",
+          "attributes": [
+            [
+              "aria-hidden",
+              "true"
+            ],
+            [
+              "data-reserved-slot",
+              "guide-sidebar"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/cookies",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0pqt~8bl3ukh4.js",
+        "/_next/static/chunks/0m_p1bxtorv5i.js",
+        "/_next/static/chunks/02g3221oh~3le.js",
+        "/_next/static/chunks/turbopack-0~dymj8._h2gc.js",
+        "/_next/static/chunks/0.f3-3c83~_r~.js",
+        "/_next/static/chunks/0d3shmwh5_nmn.js",
+        "/_next/static/chunks/0mozcut~yh97e.js",
+        "/_next/static/chunks/0d0a22qj1ucc2.js",
+        "/_next/static/chunks/0p1b-al6~s0pp.js",
+        "/_next/static/chunks/0poyf4wlw.w5e.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0zaia6i55l01..js"
+      ],
+      "css": [
+        "/_next/static/chunks/0bpl33t34okcv.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"cookies\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"cookies\\\",{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0bpl33t34okcv.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0.f3-3c83~_r~.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0d3shmwh5_nmn.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__2wtglG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"email\\\\\\\":\\\\\\\"aymane.ouirdani94@icloud.com\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0mozcut~yh97e.js\\\",\\\"async\\\":true}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0d0a22qj1ucc2.js\\\",\\\"async\\\":true}]],\\\"template\\\":\\\"$L6\\\",\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$L7\\\"],\\\"notFound\\\":\\\"$L8\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$L9\\\",\\\"$La\\\",\\\"$Lb\\\"]}]}]]}],{\\\"children\\\":[\\\"$Lc\\\",{\\\"children\\\":[\\\"$Ld\\\",{},null,false,null]},null,false,\\\"$@e\\\"]},null,false,null],\\\"$Lf\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$10\\\",[\\\"$L11\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"rhkf96f_Opsth65kI1os_\\\"}\\n\"])"
+      ],
+      "images": [],
+      "adReserves": []
+    },
+    {
+      "origin": "https://www.evexpert.fr",
+      "path": "/contact",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0pqt~8bl3ukh4.js",
+        "/_next/static/chunks/0m_p1bxtorv5i.js",
+        "/_next/static/chunks/02g3221oh~3le.js",
+        "/_next/static/chunks/turbopack-0~dymj8._h2gc.js",
+        "/_next/static/chunks/0.f3-3c83~_r~.js",
+        "/_next/static/chunks/0d3shmwh5_nmn.js",
+        "/_next/static/chunks/0mozcut~yh97e.js",
+        "/_next/static/chunks/0d0a22qj1ucc2.js",
+        "/_next/static/chunks/0p1b-al6~s0pp.js",
+        "/_next/static/chunks/0poyf4wlw.w5e.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0zaia6i55l01..js"
+      ],
+      "css": [
+        "/_next/static/chunks/0bpl33t34okcv.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"contact\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"contact\\\",{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0bpl33t34okcv.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0.f3-3c83~_r~.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0d3shmwh5_nmn.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__2wtglG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"email\\\\\\\":\\\\\\\"aymane.ouirdani94@icloud.com\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0mozcut~yh97e.js\\\",\\\"async\\\":true}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0d0a22qj1ucc2.js\\\",\\\"async\\\":true}]],\\\"template\\\":\\\"$L6\\\",\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$L7\\\"],\\\"notFound\\\":\\\"$L8\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$L9\\\",\\\"$La\\\",\\\"$Lb\\\"]}]}]]}],{\\\"children\\\":[\\\"$Lc\\\",{\\\"children\\\":[\\\"$Ld\\\",{},null,false,null]},null,false,\\\"$@e\\\"]},null,false,null],\\\"$Lf\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$10\\\",[\\\"$L11\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"rhkf96f_Opsth65kI1os_\\\"}\\n\"])"
+      ],
+      "images": [],
+      "adReserves": []
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0anb4hls5q2no.js",
+        "/_next/static/chunks/0_e2vyrbei4_k.js",
+        "/_next/static/chunks/0nfgnadpwps_q.js",
+        "/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "/_next/static/chunks/0scp9wmhg1mkl.js",
+        "/_next/static/chunks/15exm892ri-xw.js",
+        "/_next/static/chunks/11amf0z0.179g.js",
+        "/_next/static/chunks/0o1-~oxa50f82.js",
+        "/_next/static/chunks/03~4p_qpmcatu.js",
+        "/_next/static/chunks/0t_~gkzqby-ke.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0y1q7879-1gp_.js"
+      ],
+      "css": [
+        "/_next/static/chunks/0b8cex5vy425o.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"__PAGE__\\\",{}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0b8cex5vy425o.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0scp9wmhg1mkl.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/15exm892ri-xw.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__0Iq_nG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/11amf0z0.179g.js\\\",\\\"async\\\":true}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0o1-~oxa50f82.js\\\",\\\"async\\\":true}]],\\\"template\\\":[[[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"on-ink hidden bg-ink lg:block\\\",\\\"children\\\":[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mx-auto flex h-9 w-full max-w-page items-center justify-between px-6\\\",\\\"children\\\":[\\\"$L6\\\",\\\"$L7\\\"]}]}],\\\"$L8\\\"],\\\"$L9\\\"],\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$La\\\"],\\\"notFound\\\":\\\"$Lb\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$Lc\\\",\\\"$Ld\\\",\\\"$Le\\\"]}]}]]}],{\\\"children\\\":[\\\"$Lf\\\",{},null,false,null]},null,false,null],\\\"$L10\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$11\\\",[\\\"$L12\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"mbQ0qhSCv0kei6iYyUxeo\\\"}\\n\"])"
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&w=3840&q=75",
+          "alt": "",
+          "width": "1376",
+          "height": "768",
+          "loading": "auto"
+        },
+        {
+          "src": "/_next/image?url=%2Feditorial%2Frecharge-station-haute-puissance.jpeg&w=3840&q=75",
+          "alt": "Voiture électrique en recharge sur une station haute puissance, avec plusieurs bornes alignées au second plan.",
+          "width": "1376",
+          "height": "768",
+          "loading": "lazy"
+        },
+        {
+          "src": "/_next/image?url=%2Feditorial%2Fbatterie-pack-technique.jpeg&w=3840&q=75",
+          "alt": "",
+          "width": "1376",
+          "height": "768",
+          "loading": "lazy"
+        }
+      ],
+      "adReserves": []
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/voitures-electriques",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0anb4hls5q2no.js",
+        "/_next/static/chunks/0_e2vyrbei4_k.js",
+        "/_next/static/chunks/0nfgnadpwps_q.js",
+        "/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "/_next/static/chunks/0scp9wmhg1mkl.js",
+        "/_next/static/chunks/15exm892ri-xw.js",
+        "/_next/static/chunks/11amf0z0.179g.js",
+        "/_next/static/chunks/0o1-~oxa50f82.js",
+        "/_next/static/chunks/03~4p_qpmcatu.js",
+        "/_next/static/chunks/0rafkxlp7_p2k.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0y1q7879-1gp_.js"
+      ],
+      "css": [
+        "/_next/static/chunks/0b8cex5vy425o.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"voitures-electriques\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"voitures-electriques\\\",{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0b8cex5vy425o.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0scp9wmhg1mkl.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/15exm892ri-xw.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__0Iq_nG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/11amf0z0.179g.js\\\",\\\"async\\\":true}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0o1-~oxa50f82.js\\\",\\\"async\\\":true}]],\\\"template\\\":[[[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"on-ink hidden bg-ink lg:block\\\",\\\"children\\\":\\\"$L6\\\"}],\\\"$L7\\\"],\\\"$L8\\\"],\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$L9\\\"],\\\"notFound\\\":\\\"$La\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$Lb\\\",\\\"$Lc\\\",\\\"$Ld\\\"]}]}]]}],{\\\"children\\\":[\\\"$Le\\\",{\\\"children\\\":[\\\"$Lf\\\",{},null,false,null]},null,false,\\\"$@10\\\"]},null,false,null],\\\"$L11\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$12\\\",[\\\"$L13\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"mbQ0qhSCv0kei6iYyUxeo\\\"}\\n\"])"
+      ],
+      "images": [],
+      "adReserves": []
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/comparer",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0anb4hls5q2no.js",
+        "/_next/static/chunks/0_e2vyrbei4_k.js",
+        "/_next/static/chunks/0nfgnadpwps_q.js",
+        "/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "/_next/static/chunks/0scp9wmhg1mkl.js",
+        "/_next/static/chunks/15exm892ri-xw.js",
+        "/_next/static/chunks/11amf0z0.179g.js",
+        "/_next/static/chunks/0o1-~oxa50f82.js",
+        "/_next/static/chunks/03~4p_qpmcatu.js",
+        "/_next/static/chunks/05pmjy56faf7a.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0y1q7879-1gp_.js"
+      ],
+      "css": [
+        "/_next/static/chunks/0b8cex5vy425o.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"comparer\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"comparer\\\",{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0b8cex5vy425o.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0scp9wmhg1mkl.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/15exm892ri-xw.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__0Iq_nG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/11amf0z0.179g.js\\\",\\\"async\\\":true}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0o1-~oxa50f82.js\\\",\\\"async\\\":true}]],\\\"template\\\":[[[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"on-ink hidden bg-ink lg:block\\\",\\\"children\\\":\\\"$L6\\\"}],\\\"$L7\\\"],\\\"$L8\\\"],\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$L9\\\"],\\\"notFound\\\":\\\"$La\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$Lb\\\",\\\"$Lc\\\",\\\"$Ld\\\"]}]}]]}],{\\\"children\\\":[\\\"$Le\\\",{\\\"children\\\":[\\\"$Lf\\\",{},null,false,null]},null,false,\\\"$@10\\\"]},null,false,null],\\\"$L11\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$12\\\",[\\\"$L13\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"mbQ0qhSCv0kei6iYyUxeo\\\"}\\n\"])"
+      ],
+      "images": [],
+      "adReserves": []
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/outils/tco-voiture-electrique",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0anb4hls5q2no.js",
+        "/_next/static/chunks/0_e2vyrbei4_k.js",
+        "/_next/static/chunks/0nfgnadpwps_q.js",
+        "/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "/_next/static/chunks/0scp9wmhg1mkl.js",
+        "/_next/static/chunks/15exm892ri-xw.js",
+        "/_next/static/chunks/11amf0z0.179g.js",
+        "/_next/static/chunks/0o1-~oxa50f82.js",
+        "/_next/static/chunks/03~4p_qpmcatu.js",
+        "/_next/static/chunks/0_xcqcyo980fq.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0y1q7879-1gp_.js"
+      ],
+      "css": [
+        "/_next/static/chunks/0b8cex5vy425o.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"outils\\\",\\\"tco-voiture-electrique\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"outils\\\",{\\\"children\\\":[\\\"tco-voiture-electrique\\\",{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0b8cex5vy425o.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0scp9wmhg1mkl.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/15exm892ri-xw.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__0Iq_nG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/11amf0z0.179g.js\\\",\\\"async\\\":true}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0o1-~oxa50f82.js\\\",\\\"async\\\":true}]],\\\"template\\\":\\\"$L6\\\",\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$L7\\\"],\\\"notFound\\\":\\\"$L8\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$L9\\\",\\\"$La\\\",\\\"$Lb\\\"]}]}]]}],{\\\"children\\\":[\\\"$Lc\\\",{\\\"children\\\":[\\\"$Ld\\\",{\\\"children\\\":[\\\"$Le\\\",{},null,false,null]},null,false,\\\"$@f\\\"]},null,false,\\\"$@f\\\"]},null,false,null],\\\"$L10\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$11\\\",[\\\"$L12\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"mbQ0qhSCv0kei6iYyUxeo\\\"}\\n\"])"
+      ],
+      "images": [],
+      "adReserves": []
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/voitures-electriques/renault",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0anb4hls5q2no.js",
+        "/_next/static/chunks/0_e2vyrbei4_k.js",
+        "/_next/static/chunks/0nfgnadpwps_q.js",
+        "/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "/_next/static/chunks/0scp9wmhg1mkl.js",
+        "/_next/static/chunks/15exm892ri-xw.js",
+        "/_next/static/chunks/11amf0z0.179g.js",
+        "/_next/static/chunks/0o1-~oxa50f82.js",
+        "/_next/static/chunks/03~4p_qpmcatu.js",
+        "/_next/static/chunks/0q08jzdum0i47.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0y1q7879-1gp_.js"
+      ],
+      "css": [
+        "/_next/static/chunks/0b8cex5vy425o.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"voitures-electriques\\\",\\\"renault\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"voitures-electriques\\\",{\\\"children\\\":[[\\\"brand\\\",\\\"renault\\\",\\\"d\\\",null],{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0b8cex5vy425o.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0scp9wmhg1mkl.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/15exm892ri-xw.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__0Iq_nG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/11amf0z0.179g.js\\\",\\\"async\\\":true}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0o1-~oxa50f82.js\\\",\\\"async\\\":true}]],\\\"template\\\":\\\"$L6\\\",\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$L7\\\"],\\\"notFound\\\":\\\"$L8\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$L9\\\",\\\"$La\\\",\\\"$Lb\\\"]}]}]]}],{\\\"children\\\":[\\\"$Lc\\\",{\\\"children\\\":[\\\"$Ld\\\",{\\\"children\\\":[\\\"$Le\\\",{},null,false,null]},null,false,\\\"$@f\\\"]},null,false,\\\"$@f\\\"]},null,false,null],\\\"$L10\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$11\\\",[\\\"$L12\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"mbQ0qhSCv0kei6iYyUxeo\\\"}\\n\"])"
+      ],
+      "images": [],
+      "adReserves": []
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/voitures-electriques/tesla/model-3",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0anb4hls5q2no.js",
+        "/_next/static/chunks/0_e2vyrbei4_k.js",
+        "/_next/static/chunks/0nfgnadpwps_q.js",
+        "/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "/_next/static/chunks/0scp9wmhg1mkl.js",
+        "/_next/static/chunks/15exm892ri-xw.js",
+        "/_next/static/chunks/11amf0z0.179g.js",
+        "/_next/static/chunks/0o1-~oxa50f82.js",
+        "/_next/static/chunks/03~4p_qpmcatu.js",
+        "/_next/static/chunks/06xjo3~yu80iz.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0y1q7879-1gp_.js"
+      ],
+      "css": [
+        "/_next/static/chunks/0b8cex5vy425o.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"voitures-electriques\\\",\\\"tesla\\\",\\\"model-3\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"voitures-electriques\\\",{\\\"children\\\":[[\\\"brand\\\",\\\"tesla\\\",\\\"d\\\",null],{\\\"children\\\":[[\\\"model\\\",\\\"model-3\\\",\\\"d\\\",null],{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]}]}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0b8cex5vy425o.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0scp9wmhg1mkl.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/15exm892ri-xw.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__0Iq_nG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/11amf0z0.179g.js\\\",\\\"async\\\":true}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0o1-~oxa50f82.js\\\",\\\"async\\\":true}]],\\\"template\\\":\\\"$L6\\\",\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$L7\\\"],\\\"notFound\\\":\\\"$L8\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$L9\\\",\\\"$La\\\",\\\"$Lb\\\"]}]}]]}],{\\\"children\\\":[\\\"$Lc\\\",{\\\"children\\\":[\\\"$Ld\\\",{\\\"children\\\":[\\\"$Le\\\",{\\\"children\\\":[\\\"$Lf\\\",{},null,false,null]},null,false,\\\"$@10\\\"]},null,false,\\\"$@10\\\"]},null,false,\\\"$@10\\\"]},null,false,null],\\\"$L11\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$12\\\",[\\\"$L13\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"mbQ0qhSCv0kei6iYyUxeo\\\"}\\n\"])"
+      ],
+      "images": [],
+      "adReserves": []
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/guides/temps-recharge-voiture-electrique",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0anb4hls5q2no.js",
+        "/_next/static/chunks/0_e2vyrbei4_k.js",
+        "/_next/static/chunks/0nfgnadpwps_q.js",
+        "/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "/_next/static/chunks/0scp9wmhg1mkl.js",
+        "/_next/static/chunks/15exm892ri-xw.js",
+        "/_next/static/chunks/11amf0z0.179g.js",
+        "/_next/static/chunks/0o1-~oxa50f82.js",
+        "/_next/static/chunks/03~4p_qpmcatu.js",
+        "/_next/static/chunks/0svyblr_8zn6x.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0y1q7879-1gp_.js"
+      ],
+      "css": [
+        "/_next/static/chunks/0b8cex5vy425o.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"guides\\\",\\\"temps-recharge-voiture-electrique\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"guides\\\",{\\\"children\\\":[[\\\"slug\\\",\\\"temps-recharge-voiture-electrique\\\",\\\"d\\\",null],{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0b8cex5vy425o.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0scp9wmhg1mkl.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/15exm892ri-xw.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__0Iq_nG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/11amf0z0.179g.js\\\",\\\"async\\\":true}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0o1-~oxa50f82.js\\\",\\\"async\\\":true}]],\\\"template\\\":\\\"$L6\\\",\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$L7\\\"],\\\"notFound\\\":\\\"$L8\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$L9\\\",\\\"$La\\\",\\\"$Lb\\\"]}]}]]}],{\\\"children\\\":[\\\"$Lc\\\",{\\\"children\\\":[\\\"$Ld\\\",{\\\"children\\\":[\\\"$Le\\\",{},null,false,null]},null,false,\\\"$@f\\\"]},null,false,\\\"$@f\\\"]},null,false,null],\\\"$L10\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$11\\\",[\\\"$L12\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"mbQ0qhSCv0kei6iYyUxeo\\\"}\\n\"])"
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Feditorial%2Flicences%2Ftemps-recharge-voiture-electrique.jpeg&w=3840&q=75",
+          "alt": "Main d'une personne qui enfonce le connecteur d'un câble de recharge dans la trappe latérale d'une voiture électrique blanche, en contre-jour.",
+          "width": "1600",
+          "height": "900",
+          "loading": "auto"
+        }
+      ],
+      "adReserves": [
+        {
+          "tag": "DIV",
+          "attributes": [
+            [
+              "aria-hidden",
+              "true"
+            ],
+            [
+              "data-reserved-slot",
+              "guide-sidebar"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0anb4hls5q2no.js",
+        "/_next/static/chunks/0_e2vyrbei4_k.js",
+        "/_next/static/chunks/0nfgnadpwps_q.js",
+        "/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "/_next/static/chunks/0scp9wmhg1mkl.js",
+        "/_next/static/chunks/15exm892ri-xw.js",
+        "/_next/static/chunks/11amf0z0.179g.js",
+        "/_next/static/chunks/0o1-~oxa50f82.js",
+        "/_next/static/chunks/03~4p_qpmcatu.js",
+        "/_next/static/chunks/0svyblr_8zn6x.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0y1q7879-1gp_.js"
+      ],
+      "css": [
+        "/_next/static/chunks/0b8cex5vy425o.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"blog\\\",\\\"lfp-ou-nmc-ce-que-montrent-les-donnees\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"blog\\\",{\\\"children\\\":[[\\\"slug\\\",\\\"lfp-ou-nmc-ce-que-montrent-les-donnees\\\",\\\"d\\\",null],{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0b8cex5vy425o.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0scp9wmhg1mkl.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/15exm892ri-xw.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__0Iq_nG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/11amf0z0.179g.js\\\",\\\"async\\\":true}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0o1-~oxa50f82.js\\\",\\\"async\\\":true}]],\\\"template\\\":\\\"$L6\\\",\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$L7\\\"],\\\"notFound\\\":\\\"$L8\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$L9\\\",\\\"$La\\\",\\\"$Lb\\\"]}]}]]}],{\\\"children\\\":[\\\"$Lc\\\",{\\\"children\\\":[\\\"$Ld\\\",{\\\"children\\\":[\\\"$Le\\\",{},null,false,null]},null,false,\\\"$@f\\\"]},null,false,\\\"$@f\\\"]},null,false,null],\\\"$L10\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$11\\\",[\\\"$L12\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"mbQ0qhSCv0kei6iYyUxeo\\\"}\\n\"])"
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-donnees.jpeg&w=3840&q=75",
+          "alt": "Pack de batterie lithium-ion d'une BMW i3 présenté capot ouvert : des modules de cellules et leurs connexions métalliques.",
+          "width": "1600",
+          "height": "900",
+          "loading": "auto"
+        }
+      ],
+      "adReserves": [
+        {
+          "tag": "DIV",
+          "attributes": [
+            [
+              "aria-hidden",
+              "true"
+            ],
+            [
+              "data-reserved-slot",
+              "guide-sidebar"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/cookies",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0anb4hls5q2no.js",
+        "/_next/static/chunks/0_e2vyrbei4_k.js",
+        "/_next/static/chunks/0nfgnadpwps_q.js",
+        "/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "/_next/static/chunks/0scp9wmhg1mkl.js",
+        "/_next/static/chunks/15exm892ri-xw.js",
+        "/_next/static/chunks/11amf0z0.179g.js",
+        "/_next/static/chunks/0o1-~oxa50f82.js",
+        "/_next/static/chunks/03~4p_qpmcatu.js",
+        "/_next/static/chunks/0svyblr_8zn6x.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0y1q7879-1gp_.js"
+      ],
+      "css": [
+        "/_next/static/chunks/0b8cex5vy425o.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"cookies\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"cookies\\\",{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0b8cex5vy425o.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0scp9wmhg1mkl.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/15exm892ri-xw.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__0Iq_nG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/11amf0z0.179g.js\\\",\\\"async\\\":true}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0o1-~oxa50f82.js\\\",\\\"async\\\":true}]],\\\"template\\\":[[[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"on-ink hidden bg-ink lg:block\\\",\\\"children\\\":\\\"$L6\\\"}],\\\"$L7\\\"],\\\"$L8\\\"],\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$L9\\\"],\\\"notFound\\\":\\\"$La\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$Lb\\\",\\\"$Lc\\\",\\\"$Ld\\\"]}]}]]}],{\\\"children\\\":[\\\"$Le\\\",{\\\"children\\\":[\\\"$Lf\\\",{},null,false,null]},null,false,\\\"$@10\\\"]},null,false,null],\\\"$L11\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$12\\\",[\\\"$L13\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"mbQ0qhSCv0kei6iYyUxeo\\\"}\\n\"])"
+      ],
+      "images": [],
+      "adReserves": []
+    },
+    {
+      "origin": "http://localhost:3102",
+      "path": "/contact",
+      "status": 200,
+      "adsense": [],
+      "scripts": [
+        "/_next/static/chunks/0anb4hls5q2no.js",
+        "/_next/static/chunks/0_e2vyrbei4_k.js",
+        "/_next/static/chunks/0nfgnadpwps_q.js",
+        "/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "/_next/static/chunks/0scp9wmhg1mkl.js",
+        "/_next/static/chunks/15exm892ri-xw.js",
+        "/_next/static/chunks/11amf0z0.179g.js",
+        "/_next/static/chunks/0o1-~oxa50f82.js",
+        "/_next/static/chunks/03~4p_qpmcatu.js",
+        "/_next/static/chunks/0svyblr_8zn6x.js",
+        "/_next/static/chunks/03~yq9q893hmn.js",
+        "/_next/static/chunks/0y1q7879-1gp_.js"
+      ],
+      "css": [
+        "/_next/static/chunks/0b8cex5vy425o.css"
+      ],
+      "head": [
+        "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"window.dataLayer = window.dataLayer || [];\\nfunction gtag(){window.dataLayer.push(arguments);}\\nwindow.gtag = window.gtag || gtag;\\ngtag('consent', 'default', {\\n  'ad_storage': 'denied',\\n  'ad_user_data': 'denied',\\n  'ad_personalization': 'denied',\\n  'analytics_storage': 'denied'\\n});\\n(function () {\\n  var GA4_ID = \\\"G-1HZPD8J76K\\\";\\n  var loaded = false;\\n  function loadGa4() {\\n    if (loaded) return;\\n    loaded = true;\\n    var s = document.createElement('script');\\n    s.async = true;\\n    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;\\n    document.head.appendChild(s);\\n    gtag('js', new Date());\\n    gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false });\\n  }\\n  function isAnalyticsGranted(entry) {\\n    return entry \\u0026\\u0026 entry.length \\u003e= 3 \\u0026\\u0026 entry[0] === 'consent' \\u0026\\u0026 entry[1] === 'update'\\n      \\u0026\\u0026 entry[2] \\u0026\\u0026 entry[2].analytics_storage === 'granted';\\n  }\\n  for (var i = 0; i \\u003c window.dataLayer.length; i++) {\\n    if (isAnalyticsGranted(window.dataLayer[i])) { loadGa4(); break; }\\n  }\\n  var originalPush = window.dataLayer.push.bind(window.dataLayer);\\n  window.dataLayer.push = function () {\\n    for (var i = 0; i \\u003c arguments.length; i++) {\\n      if (isAnalyticsGranted(arguments[i])) loadGa4();\\n    }\\n    return originalPush.apply(window.dataLayer, arguments);\\n  };\\n})();\",\"id\":\"consent-default\"}])",
+        "self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"contact\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"contact\\\",{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0b8cex5vy425o.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0scp9wmhg1mkl.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/15exm892ri-xw.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"fr\\\",\\\"className\\\":\\\"brandfont_ade78f1d-module__0Iq_nG__variable ibm_plex_mono_6fb4f1bb-module__ubl7Lq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"flex min-h-screen flex-col bg-paper font-sans text-ink antialiased\\\",\\\"children\\\":[[\\\"$\\\",\\\"a\\\",null,{\\\"href\\\":\\\"#contenu\\\",\\\"className\\\":\\\"sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg\\\",\\\"children\\\":\\\"Aller au contenu\\\"}],[\\\"$\\\",\\\"$L2\\\",null,{\\\"id\\\":\\\"consent-default\\\",\\\"strategy\\\":\\\"beforeInteractive\\\",\\\"children\\\":\\\"$3\\\"}],[[\\\"$\\\",\\\"script\\\",\\\"0\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"WebSite\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Comprenez, comparez et calculez le coût réel d'une voiture électrique : calculateurs transparents, fiches techniques sourcées, guides sur la recharge et l'autonomie.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"fr-FR\\\\\\\",\\\\\\\"potentialAction\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"SearchAction\\\\\\\",\\\\\\\"target\\\\\\\":\\\\\\\"https://www.evexpert.fr/recherche?q={search_term_string}\\\\\\\",\\\\\\\"query-input\\\\\\\":\\\\\\\"required name=search_term_string\\\\\\\"}}\\\"}}],[\\\"$\\\",\\\"script\\\",\\\"1\\\",{\\\"type\\\":\\\"application/ld+json\\\",\\\"dangerouslySetInnerHTML\\\":{\\\"__html\\\":\\\"{\\\\\\\"@context\\\\\\\":\\\\\\\"https://schema.org\\\\\\\",\\\\\\\"@type\\\\\\\":\\\\\\\"Organization\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"EVExpert\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.evexpert.fr\\\\\\\"}\\\"}}]],[\\\"$\\\",\\\"$L2\\\",null,{\\\"async\\\":true,\\\"src\\\":\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248\\\",\\\"strategy\\\":\\\"afterInteractive\\\",\\\"crossOrigin\\\":\\\"anonymous\\\"}],[\\\"$\\\",\\\"$L4\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$5\\\",\\\"errorStyles\\\":[],\\\"errorScripts\\\":[[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/11amf0z0.179g.js\\\",\\\"async\\\":true}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/0o1-~oxa50f82.js\\\",\\\"async\\\":true}]],\\\"template\\\":[[[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"on-ink hidden bg-ink lg:block\\\",\\\"children\\\":\\\"$L6\\\"}],\\\"$L7\\\"],\\\"$L8\\\"],\\\"templateStyles\\\":[],\\\"templateScripts\\\":[\\\"$L9\\\"],\\\"notFound\\\":\\\"$La\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}],\\\"$Lb\\\",\\\"$Lc\\\",\\\"$Ld\\\"]}]}]]}],{\\\"children\\\":[\\\"$Le\\\",{\\\"children\\\":[\\\"$Lf\\\",{},null,false,null]},null,false,\\\"$@10\\\"]},null,false,null],\\\"$L11\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$12\\\",[\\\"$L13\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"mbQ0qhSCv0kei6iYyUxeo\\\"}\\n\"])"
+      ],
+      "images": [],
+      "adReserves": []
+    }
+  ],
+  "domain": [
+    {
+      "url": "https://evexpert.fr/",
+      "status": 308,
+      "location": "https://www.evexpert.fr/"
+    },
+    {
+      "url": "http://evexpert.fr/",
+      "status": 308,
+      "location": "https://evexpert.fr/"
+    },
+    {
+      "url": "http://www.evexpert.fr/",
+      "status": 308,
+      "location": "https://www.evexpert.fr/"
+    }
+  ]
+}

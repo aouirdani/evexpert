@@ -1,0 +1,54 @@
+[
+  {
+    "name": "[query, setQuery]",
+    "unchanged": true
+  },
+  {
+    "name": "[brand, setBrand]",
+    "unchanged": true
+  },
+  {
+    "name": "[body, setBody]",
+    "unchanged": true
+  },
+  {
+    "name": "[minRange, setMinRange]",
+    "unchanged": true
+  },
+  {
+    "name": "[minDc, setMinDc]",
+    "unchanged": true
+  },
+  {
+    "name": "[sort, setSort]",
+    "unchanged": true
+  },
+  {
+    "name": "[view, setView]",
+    "unchanged": true
+  },
+  {
+    "name": "[filtersOpen, setFiltersOpen]",
+    "unchanged": true
+  },
+  {
+    "name": "brands",
+    "unchanged": true
+  },
+  {
+    "name": "bodies",
+    "unchanged": true
+  },
+  {
+    "name": "filtered",
+    "unchanged": true
+  },
+  {
+    "name": "activeFilters",
+    "unchanged": true
+  },
+  {
+    "name": "reset",
+    "unchanged": true
+  }
+]

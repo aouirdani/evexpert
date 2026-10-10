@@ -1,0 +1,122 @@
+[
+  {
+    "width": 320,
+    "selected": {
+      "selected": 3,
+      "href": "/comparer?v=renault-5-e-tech-52-kwh-150-ch,tesla-model-y-rwd,kia-ev3-long-range",
+      "scroll": 320
+    },
+    "cleared": true,
+    "faqOpened": true,
+    "paths": [
+      {
+        "expected": "/comparer",
+        "actual": "/comparer"
+      },
+      {
+        "expected": "/voitures-electriques",
+        "actual": "/voitures-electriques"
+      },
+      {
+        "expected": "/voitures-electriques/renault/5-e-tech",
+        "actual": "/voitures-electriques/renault/5-e-tech"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "selected": {
+      "selected": 3,
+      "href": "/comparer?v=renault-5-e-tech-52-kwh-150-ch,tesla-model-y-rwd,kia-ev3-long-range",
+      "scroll": 390
+    },
+    "cleared": true,
+    "faqOpened": true,
+    "paths": [
+      {
+        "expected": "/comparer",
+        "actual": "/comparer"
+      },
+      {
+        "expected": "/voitures-electriques",
+        "actual": "/voitures-electriques"
+      },
+      {
+        "expected": "/voitures-electriques/renault/5-e-tech",
+        "actual": "/voitures-electriques/renault/5-e-tech"
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "selected": {
+      "selected": 3,
+      "href": "/comparer?v=renault-5-e-tech-52-kwh-150-ch,tesla-model-y-rwd,kia-ev3-long-range",
+      "scroll": 768
+    },
+    "cleared": true,
+    "faqOpened": true,
+    "paths": [
+      {
+        "expected": "/comparer",
+        "actual": "/comparer"
+      },
+      {
+        "expected": "/voitures-electriques",
+        "actual": "/voitures-electriques"
+      },
+      {
+        "expected": "/voitures-electriques/renault/5-e-tech",
+        "actual": "/voitures-electriques/renault/5-e-tech"
+      }
+    ]
+  },
+  {
+    "width": 1024,
+    "selected": {
+      "selected": 3,
+      "href": "/comparer?v=renault-5-e-tech-52-kwh-150-ch,tesla-model-y-rwd,kia-ev3-long-range",
+      "scroll": 1024
+    },
+    "cleared": true,
+    "faqOpened": true,
+    "paths": [
+      {
+        "expected": "/comparer",
+        "actual": "/comparer"
+      },
+      {
+        "expected": "/voitures-electriques",
+        "actual": "/voitures-electriques"
+      },
+      {
+        "expected": "/voitures-electriques/renault/5-e-tech",
+        "actual": "/voitures-electriques/renault/5-e-tech"
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "selected": {
+      "selected": 3,
+      "href": "/comparer?v=renault-5-e-tech-52-kwh-150-ch,tesla-model-y-rwd,kia-ev3-long-range",
+      "scroll": 1440
+    },
+    "cleared": true,
+    "faqOpened": true,
+    "paths": [
+      {
+        "expected": "/comparer",
+        "actual": "/comparer"
+      },
+      {
+        "expected": "/voitures-electriques",
+        "actual": "/voitures-electriques"
+      },
+      {
+        "expected": "/voitures-electriques/renault/5-e-tech",
+        "actual": "/voitures-electriques/renault/5-e-tech"
+      }
+    ]
+  }
+]

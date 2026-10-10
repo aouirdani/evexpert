@@ -44,8 +44,8 @@ export function GarageToggle({
         toggleGarage(id);
       }}
       className={cx(
-        "z-10 inline-flex h-8 shrink-0 items-center justify-center gap-1.5 rounded-sm border bg-surface text-xs font-semibold transition-colors duration-150",
-        showLabel ? "px-2.5" : "w-8",
+        "z-10 inline-flex h-11 min-w-11 shrink-0 items-center justify-center gap-1.5 rounded-sm border bg-surface text-xs font-semibold transition-colors duration-150",
+        showLabel ? "px-2.5" : "w-11",
         active
           ? "border-ink bg-ink text-paper"
           : full

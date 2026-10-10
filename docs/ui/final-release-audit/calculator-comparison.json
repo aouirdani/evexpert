@@ -1,0 +1,314 @@
+[
+  {
+    "tool": "tco-voiture-electrique",
+    "case": "default",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "TCO total — Véhicule A (5 ans)30 980 €TCO total — Véhicule B (5 ans)33 081 €Coût mensuel — A516 €Coût mensuel — B551 €Coût / km — A0,41 €Coût / km — B0,44 €",
+      "22 000 €17 000 €Dépréciation3 480 €8 531 €Énergie3 500 €3 500 €Assurance1 250 €3 000 €Entretien750 €750 €Pneus0 €300 €TaxesVéhicule AVéhicule BRépartition des coûts par poste, véhicule A et véhicule BGroupeVéhicule AVéhicule BDépréciation22 000 €17 000 €Énergie3 480 €8 531 €Assurance3 500 €3 500 €Entretien1 250 €3 000 €Pneus750 €750 €Taxes0 €300 €",
+      "Dépréciationprix d'achat − aides − valeur de revente estiméeÉnergieénergie totale × (part domicile × prix domicile + part publique × prix public)Autres postes(assurance + entretien + pneus + taxes) × duréeTCOdépréciation + énergie + autres postes ; par mois = TCO ÷ (12 × durée)"
+    ],
+    "localResults": [
+      "TCO total — Véhicule A (5 ans)30 980 €TCO total — Véhicule B (5 ans)33 081 €Coût mensuel — A516 €Coût mensuel — B551 €Coût / km — A0,41 €Coût / km — B0,44 €",
+      "22 000 €17 000 €Dépréciation3 480 €8 531 €Énergie3 500 €3 500 €Assurance1 250 €3 000 €Entretien750 €750 €Pneus0 €300 €TaxesVéhicule AVéhicule BRépartition des coûts par poste, véhicule A et véhicule BGroupeVéhicule AVéhicule BDépréciation22 000 €17 000 €Énergie3 480 €8 531 €Assurance3 500 €3 500 €Entretien1 250 €3 000 €Pneus750 €750 €Taxes0 €300 €",
+      "Dépréciationprix d'achat − aides − valeur de revente estiméeÉnergieénergie totale × (part domicile × prix domicile + part publique × prix public)Autres postes(assurance + entretien + pneus + taxes) × duréeTCOdépréciation + énergie + autres postes ; par mois = TCO ÷ (12 × durée)"
+    ]
+  },
+  {
+    "tool": "tco-voiture-electrique",
+    "case": "fixed",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "TCO total — Véhicule A (8 ans)45 248 €TCO total — Véhicule B (8 ans)48 680 €Coût mensuel — A471 €Coût mensuel — B507 €Coût / km — A0,28 €Coût / km — B0,30 €",
+      "28 000 €17 000 €Dépréciation8 448 €19 600 €Énergie5 600 €5 600 €Assurance2 000 €4 800 €Entretien1 200 €1 200 €Pneus0 €480 €TaxesVéhicule AVéhicule BRépartition des coûts par poste, véhicule A et véhicule BGroupeVéhicule AVéhicule BDépréciation28 000 €17 000 €Énergie8 448 €19 600 €Assurance5 600 €5 600 €Entretien2 000 €4 800 €Pneus1 200 €1 200 €Taxes0 €480 €",
+      "Dépréciationprix d'achat − aides − valeur de revente estiméeÉnergieénergie totale × (part domicile × prix domicile + part publique × prix public)Autres postes(assurance + entretien + pneus + taxes) × duréeTCOdépréciation + énergie + autres postes ; par mois = TCO ÷ (12 × durée)"
+    ],
+    "localResults": [
+      "TCO total — Véhicule A (8 ans)45 248 €TCO total — Véhicule B (8 ans)48 680 €Coût mensuel — A471 €Coût mensuel — B507 €Coût / km — A0,28 €Coût / km — B0,30 €",
+      "28 000 €17 000 €Dépréciation8 448 €19 600 €Énergie5 600 €5 600 €Assurance2 000 €4 800 €Entretien1 200 €1 200 €Pneus0 €480 €TaxesVéhicule AVéhicule BRépartition des coûts par poste, véhicule A et véhicule BGroupeVéhicule AVéhicule BDépréciation28 000 €17 000 €Énergie8 448 €19 600 €Assurance5 600 €5 600 €Entretien2 000 €4 800 €Pneus1 200 €1 200 €Taxes0 €480 €",
+      "Dépréciationprix d'achat − aides − valeur de revente estiméeÉnergieénergie totale × (part domicile × prix domicile + part publique × prix public)Autres postes(assurance + entretien + pneus + taxes) × duréeTCOdépréciation + énergie + autres postes ; par mois = TCO ÷ (12 × durée)"
+    ]
+  },
+  {
+    "tool": "essence-vs-electrique",
+    "case": "default",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "Coût annuel (électrique)6 350 €Coût mensuel (électrique)529 €Coût / km (électrique)0,42 €Coût annuel (essence)7 156 €Coût mensuel (essence)596 €Coût / km (essence)0,48 €",
+      "19 050 €21 469 €3 ans31 750 €35 781 €5 ans50 800 €57 250 €8 ansÉlectriqueEssenceCoût cumulé sur 3, 5 et 8 ans : électrique et essenceGroupeÉlectriqueEssence3 ans19 050 €21 469 €5 ans31 750 €35 781 €8 ans50 800 €57 250 €",
+      "Énergie annuelleconsommation × prix de l'énergie × kilométrage annuel ÷ 100Dépréciation annuelleprix d'achat × taux de dépréciationCoût annuelénergie + assurance + entretien + dépréciationCoût cumulécoût annuel × nombre d'années"
+    ],
+    "localResults": [
+      "Coût annuel (électrique)6 350 €Coût mensuel (électrique)529 €Coût / km (électrique)0,42 €Coût annuel (essence)7 156 €Coût mensuel (essence)596 €Coût / km (essence)0,48 €",
+      "19 050 €21 469 €3 ans31 750 €35 781 €5 ans50 800 €57 250 €8 ansÉlectriqueEssenceCoût cumulé sur 3, 5 et 8 ans : électrique et essenceGroupeÉlectriqueEssence3 ans19 050 €21 469 €5 ans31 750 €35 781 €8 ans50 800 €57 250 €",
+      "Énergie annuelleconsommation × prix de l'énergie × kilométrage annuel ÷ 100Dépréciation annuelleprix d'achat × taux de dépréciationCoût annuelénergie + assurance + entretien + dépréciationCoût cumulécoût annuel × nombre d'années"
+    ]
+  },
+  {
+    "tool": "essence-vs-electrique",
+    "case": "fixed",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "Coût annuel (électrique)7 250 €Coût mensuel (électrique)604 €Coût / km (électrique)0,36 €Coût annuel (essence)7 900 €Coût mensuel (essence)658 €Coût / km (essence)0,40 €",
+      "21 750 €23 700 €3 ans36 250 €39 500 €5 ans58 000 €63 200 €8 ansÉlectriqueEssenceCoût cumulé sur 3, 5 et 8 ans : électrique et essenceGroupeÉlectriqueEssence3 ans21 750 €23 700 €5 ans36 250 €39 500 €8 ans58 000 €63 200 €",
+      "Énergie annuelleconsommation × prix de l'énergie × kilométrage annuel ÷ 100Dépréciation annuelleprix d'achat × taux de dépréciationCoût annuelénergie + assurance + entretien + dépréciationCoût cumulécoût annuel × nombre d'années"
+    ],
+    "localResults": [
+      "Coût annuel (électrique)7 250 €Coût mensuel (électrique)604 €Coût / km (électrique)0,36 €Coût annuel (essence)7 900 €Coût mensuel (essence)658 €Coût / km (essence)0,40 €",
+      "21 750 €23 700 €3 ans36 250 €39 500 €5 ans58 000 €63 200 €8 ansÉlectriqueEssenceCoût cumulé sur 3, 5 et 8 ans : électrique et essenceGroupeÉlectriqueEssence3 ans21 750 €23 700 €5 ans36 250 €39 500 €8 ans58 000 €63 200 €",
+      "Énergie annuelleconsommation × prix de l'énergie × kilométrage annuel ÷ 100Dépréciation annuelleprix d'achat × taux de dépréciationCoût annuelénergie + assurance + entretien + dépréciationCoût cumulécoût annuel × nombre d'années"
+    ]
+  },
+  {
+    "tool": "temps-recharge",
+    "case": "default",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "RésultatsTemps de recharge estimé3 h 3836,0 kWh à rechargerÉnergie à recharger36,0 kWhDurée en minutes≈ 218 minCalcul : énergie à recharger = capacité × (cible − actuel) / 100 ; temps = énergie / (puissance × rendement).",
+      "Énergie à ajoutercapacité utile × (état de charge visé − état de charge actuel) ÷ 100Puissance effectivepuissance de la borne × rendement (limitée par le chargeur du véhicule)Duréeénergie à ajouter ÷ puissance effective, en heures"
+    ],
+    "localResults": [
+      "RésultatsTemps de recharge estimé3 h 3836,0 kWh à rechargerÉnergie à recharger36,0 kWhDurée en minutes≈ 218 minCalcul : énergie à recharger = capacité × (cible − actuel) / 100 ; temps = énergie / (puissance × rendement).",
+      "Énergie à ajoutercapacité utile × (état de charge visé − état de charge actuel) ÷ 100Puissance effectivepuissance de la borne × rendement (limitée par le chargeur du véhicule)Duréeénergie à ajouter ÷ puissance effective, en heures"
+    ]
+  },
+  {
+    "tool": "temps-recharge",
+    "case": "fixed",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "RésultatsTemps de recharge estimé8 h 0150,4 kWh à rechargerÉnergie à recharger50,4 kWhDurée en minutes≈ 481 minCalcul : énergie à recharger = capacité × (cible − actuel) / 100 ; temps = énergie / (puissance × rendement).",
+      "Énergie à ajoutercapacité utile × (état de charge visé − état de charge actuel) ÷ 100Puissance effectivepuissance de la borne × rendement (limitée par le chargeur du véhicule)Duréeénergie à ajouter ÷ puissance effective, en heures"
+    ],
+    "localResults": [
+      "RésultatsTemps de recharge estimé8 h 0150,4 kWh à rechargerÉnergie à recharger50,4 kWhDurée en minutes≈ 481 minCalcul : énergie à recharger = capacité × (cible − actuel) / 100 ; temps = énergie / (puissance × rendement).",
+      "Énergie à ajoutercapacité utile × (état de charge visé − état de charge actuel) ÷ 100Puissance effectivepuissance de la borne × rendement (limitée par le chargeur du véhicule)Duréeénergie à ajouter ÷ puissance effective, en heures"
+    ]
+  },
+  {
+    "tool": "cout-recharge-voiture-electrique",
+    "case": "default",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "RésultatsCoût total de la recharge10,00 €≈ 4,44 € / 100 km · +225 kmÉnergie stockée36,0 kWhÉnergie au compteur40,0 kWhCoût aux 100 km4,44 €Autonomie ajoutée≈ 225 kmCalcul transparent : énergie stockée = capacité × (cible − actuel) / 100 ; énergie au compteur = énergie stockée / rendement ; coût = énergie au compteur × prix du kWh.",
+      "Énergie stockéecapacité utile × (état de charge visé − état de charge actuel) ÷ 100Énergie au compteurénergie stockée ÷ rendement de chargeCoût de la rechargeénergie au compteur × prix du kWhAutonomie ajoutéeénergie stockée ÷ consommation × 100"
+    ],
+    "localResults": [
+      "RésultatsCoût total de la recharge10,00 €≈ 4,44 € / 100 km · +225 kmÉnergie stockée36,0 kWhÉnergie au compteur40,0 kWhCoût aux 100 km4,44 €Autonomie ajoutée≈ 225 kmCalcul transparent : énergie stockée = capacité × (cible − actuel) / 100 ; énergie au compteur = énergie stockée / rendement ; coût = énergie au compteur × prix du kWh.",
+      "Énergie stockéecapacité utile × (état de charge visé − état de charge actuel) ÷ 100Énergie au compteurénergie stockée ÷ rendement de chargeCoût de la rechargeénergie au compteur × prix du kWhAutonomie ajoutéeénergie stockée ÷ consommation × 100"
+    ]
+  },
+  {
+    "tool": "cout-recharge-voiture-electrique",
+    "case": "fixed",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "RésultatsCoût total de la recharge16,94 €≈ 4,71 € / 100 km · +360 kmÉnergie stockée57,6 kWhÉnergie au compteur67,8 kWhCoût aux 100 km4,71 €Autonomie ajoutée≈ 360 kmCalcul transparent : énergie stockée = capacité × (cible − actuel) / 100 ; énergie au compteur = énergie stockée / rendement ; coût = énergie au compteur × prix du kWh.",
+      "Énergie stockéecapacité utile × (état de charge visé − état de charge actuel) ÷ 100Énergie au compteurénergie stockée ÷ rendement de chargeCoût de la rechargeénergie au compteur × prix du kWhAutonomie ajoutéeénergie stockée ÷ consommation × 100"
+    ],
+    "localResults": [
+      "RésultatsCoût total de la recharge16,94 €≈ 4,71 € / 100 km · +360 kmÉnergie stockée57,6 kWhÉnergie au compteur67,8 kWhCoût aux 100 km4,71 €Autonomie ajoutée≈ 360 kmCalcul transparent : énergie stockée = capacité × (cible − actuel) / 100 ; énergie au compteur = énergie stockée / rendement ; coût = énergie au compteur × prix du kWh.",
+      "Énergie stockéecapacité utile × (état de charge visé − état de charge actuel) ÷ 100Énergie au compteurénergie stockée ÷ rendement de chargeCoût de la rechargeénergie au compteur × prix du kWhAutonomie ajoutéeénergie stockée ÷ consommation × 100"
+    ]
+  },
+  {
+    "tool": "autonomie-voiture-electrique",
+    "case": "default",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "RésultatsAutonomie estimée279 kmConsommation ajustée ≈ 19,4 kWh/100 kmÉnergie exploitable54,0 kWhConsommation ajustée19,4 kWh/100L'estimation applique des facteurs liés à la vitesse, la température et le type de conduite à votre consommation de référence.",
+      "Consommation ajustéeconsommation de référence × facteur température × facteur trajet × facteur vitesseÉnergie exploitablecapacité utile × (1 − réserve conservée)Autonomie estiméeénergie exploitable ÷ consommation ajustée × 100Consommation de référencecapacité utile ÷ autonomie WLTP × 100 (côté batterie)"
+    ],
+    "localResults": [
+      "RésultatsAutonomie estimée279 kmConsommation ajustée ≈ 19,4 kWh/100 kmÉnergie exploitable54,0 kWhConsommation ajustée19,4 kWh/100L'estimation applique des facteurs liés à la vitesse, la température et le type de conduite à votre consommation de référence.",
+      "Consommation ajustéeconsommation de référence × facteur température × facteur trajet × facteur vitesseÉnergie exploitablecapacité utile × (1 − réserve conservée)Autonomie estiméeénergie exploitable ÷ consommation ajustée × 100Consommation de référencecapacité utile ÷ autonomie WLTP × 100 (côté batterie)"
+    ]
+  },
+  {
+    "tool": "autonomie-voiture-electrique",
+    "case": "fixed",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "RésultatsAutonomie estimée176 kmConsommation ajustée ≈ 34,8 kWh/100 kmÉnergie exploitable61,2 kWhConsommation ajustée34,8 kWh/100L'estimation applique des facteurs liés à la vitesse, la température et le type de conduite à votre consommation de référence.",
+      "Consommation ajustéeconsommation de référence × facteur température × facteur trajet × facteur vitesseÉnergie exploitablecapacité utile × (1 − réserve conservée)Autonomie estiméeénergie exploitable ÷ consommation ajustée × 100Consommation de référencecapacité utile ÷ autonomie WLTP × 100 (côté batterie)"
+    ],
+    "localResults": [
+      "RésultatsAutonomie estimée176 kmConsommation ajustée ≈ 34,8 kWh/100 kmÉnergie exploitable61,2 kWhConsommation ajustée34,8 kWh/100L'estimation applique des facteurs liés à la vitesse, la température et le type de conduite à votre consommation de référence.",
+      "Consommation ajustéeconsommation de référence × facteur température × facteur trajet × facteur vitesseÉnergie exploitablecapacité utile × (1 − réserve conservée)Autonomie estiméeénergie exploitable ÷ consommation ajustée × 100Consommation de référencecapacité utile ÷ autonomie WLTP × 100 (côté batterie)"
+    ]
+  },
+  {
+    "tool": "puissance-borne-recharge",
+    "case": "default",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "RésultatsRecharge la plus rapide (théorique)17 minRecharge rapide 150,0 kW → 150,0 kW effectifsTemps de recharge théorique selon la puissance de la borneBornePuissance utiliséeDurée3,7 kW AC3,7 kW12 h 377,4 kW AC7,4 kW6 h 1811,0 kW AC11,0 kW4 h 1522,0 kW AC11,0 kW(limité par le véhicule)4 h 1550,0 kW DC50,0 kW50 min150,0 kW DC150,0 kW17 min350,0 kW DC150,0 kW(limité par le véhicule)17 minTemps théorique à puissance constante. En DC la puissance réelle baisse au fil du remplissage : le temps réel est plus long (voir le temps 10-80 % publié sur la fiche de chaque modèle). En AC, rendement de charge de 90 % supposé.",
+      "Puissance utiliséeminimum(puissance de la borne ; limite du véhicule dans ce mode)Limite en ACpuissance du chargeur embarqué (par ex. 7,4 / 11 / 22 kW)Limite en DCpuissance maximale acceptée par la batterie (pic de la courbe de charge)Durée théoriqueénergie à ajouter ÷ puissance utilisée (rendement 90 % en AC)"
+    ],
+    "localResults": [
+      "RésultatsRecharge la plus rapide (théorique)17 minRecharge rapide 150,0 kW → 150,0 kW effectifsTemps de recharge théorique selon la puissance de la borneBornePuissance utiliséeDurée3,7 kW AC3,7 kW12 h 377,4 kW AC7,4 kW6 h 1811,0 kW AC11,0 kW4 h 1522,0 kW AC11,0 kW(limité par le véhicule)4 h 1550,0 kW DC50,0 kW50 min150,0 kW DC150,0 kW17 min350,0 kW DC150,0 kW(limité par le véhicule)17 minTemps théorique à puissance constante. En DC la puissance réelle baisse au fil du remplissage : le temps réel est plus long (voir le temps 10-80 % publié sur la fiche de chaque modèle). En AC, rendement de charge de 90 % supposé.",
+      "Puissance utiliséeminimum(puissance de la borne ; limite du véhicule dans ce mode)Limite en ACpuissance du chargeur embarqué (par ex. 7,4 / 11 / 22 kW)Limite en DCpuissance maximale acceptée par la batterie (pic de la courbe de charge)Durée théoriqueénergie à ajouter ÷ puissance utilisée (rendement 90 % en AC)"
+    ]
+  },
+  {
+    "tool": "puissance-borne-recharge",
+    "case": "fixed",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "RésultatsRecharge la plus rapide (théorique)25 minRecharge rapide 150,0 kW → 120,0 kW effectifsTemps de recharge théorique selon la puissance de la borneBornePuissance utiliséeDurée3,7 kW AC3,7 kW15 h 087,4 kW AC7,4 kW7 h 3411,0 kW AC7,4 kW(limité par le véhicule)7 h 3422,0 kW AC7,4 kW(limité par le véhicule)7 h 3450,0 kW DC50,0 kW1 h150,0 kW DC120,0 kW(limité par le véhicule)25 min350,0 kW DC120,0 kW(limité par le véhicule)25 minTemps théorique à puissance constante. En DC la puissance réelle baisse au fil du remplissage : le temps réel est plus long (voir le temps 10-80 % publié sur la fiche de chaque modèle). En AC, rendement de charge de 90 % supposé.",
+      "Puissance utiliséeminimum(puissance de la borne ; limite du véhicule dans ce mode)Limite en ACpuissance du chargeur embarqué (par ex. 7,4 / 11 / 22 kW)Limite en DCpuissance maximale acceptée par la batterie (pic de la courbe de charge)Durée théoriqueénergie à ajouter ÷ puissance utilisée (rendement 90 % en AC)"
+    ],
+    "localResults": [
+      "RésultatsRecharge la plus rapide (théorique)25 minRecharge rapide 150,0 kW → 120,0 kW effectifsTemps de recharge théorique selon la puissance de la borneBornePuissance utiliséeDurée3,7 kW AC3,7 kW15 h 087,4 kW AC7,4 kW7 h 3411,0 kW AC7,4 kW(limité par le véhicule)7 h 3422,0 kW AC7,4 kW(limité par le véhicule)7 h 3450,0 kW DC50,0 kW1 h150,0 kW DC120,0 kW(limité par le véhicule)25 min350,0 kW DC120,0 kW(limité par le véhicule)25 minTemps théorique à puissance constante. En DC la puissance réelle baisse au fil du remplissage : le temps réel est plus long (voir le temps 10-80 % publié sur la fiche de chaque modèle). En AC, rendement de charge de 90 % supposé.",
+      "Puissance utiliséeminimum(puissance de la borne ; limite du véhicule dans ce mode)Limite en ACpuissance du chargeur embarqué (par ex. 7,4 / 11 / 22 kW)Limite en DCpuissance maximale acceptée par la batterie (pic de la courbe de charge)Durée théoriqueénergie à ajouter ÷ puissance utilisée (rendement 90 % en AC)"
+    ]
+  },
+  {
+    "tool": "cout-100-km",
+    "case": "default",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "Coût au km4,0 c/kmCoût aux 100 km4,00 €Coût énergie annuel600 €",
+      "Coût au km11,4 c/kmCoût aux 100 km11,38 €Coût énergie annuel1 706 €",
+      "Coût au km8,3 c/kmCoût aux 100 km8,25 €Coût énergie annuel1 238 €",
+      "Coût au km7,9 c/kmCoût aux 100 km7,88 €Coût énergie annuel1 181 €",
+      "Électriqueconsommation (kWh/100 km) × prix du kWhThermiqueconsommation (L/100 km) × prix du litreCoût annuel de l'énergiecoût aux 100 km × kilométrage annuel ÷ 100"
+    ],
+    "localResults": [
+      "Coût au km4,0 c/kmCoût aux 100 km4,00 €Coût énergie annuel600 €",
+      "Coût au km11,4 c/kmCoût aux 100 km11,38 €Coût énergie annuel1 706 €",
+      "Coût au km8,3 c/kmCoût aux 100 km8,25 €Coût énergie annuel1 238 €",
+      "Coût au km7,9 c/kmCoût aux 100 km7,88 €Coût énergie annuel1 181 €",
+      "Électriqueconsommation (kWh/100 km) × prix du kWhThermiqueconsommation (L/100 km) × prix du litreCoût annuel de l'énergiecoût aux 100 km × kilométrage annuel ÷ 100"
+    ]
+  },
+  {
+    "tool": "cout-100-km",
+    "case": "fixed",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "Coût au km4,5 c/kmCoût aux 100 km4,50 €Coût énergie annuel900 €",
+      "Coût au km13,0 c/kmCoût aux 100 km12,95 €Coût énergie annuel2 590 €",
+      "Coût au km8,3 c/kmCoût aux 100 km8,25 €Coût énergie annuel1 650 €",
+      "Coût au km7,9 c/kmCoût aux 100 km7,88 €Coût énergie annuel1 575 €",
+      "Électriqueconsommation (kWh/100 km) × prix du kWhThermiqueconsommation (L/100 km) × prix du litreCoût annuel de l'énergiecoût aux 100 km × kilométrage annuel ÷ 100"
+    ],
+    "localResults": [
+      "Coût au km4,5 c/kmCoût aux 100 km4,50 €Coût énergie annuel900 €",
+      "Coût au km13,0 c/kmCoût aux 100 km12,95 €Coût énergie annuel2 590 €",
+      "Coût au km8,3 c/kmCoût aux 100 km8,25 €Coût énergie annuel1 650 €",
+      "Coût au km7,9 c/kmCoût aux 100 km7,88 €Coût énergie annuel1 575 €",
+      "Électriqueconsommation (kWh/100 km) × prix du kWhThermiqueconsommation (L/100 km) × prix du litreCoût annuel de l'énergiecoût aux 100 km × kilométrage annuel ÷ 100"
+    ]
+  },
+  {
+    "tool": "trajet-longue-distance",
+    "case": "default",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "Résultats2 arrêts de recharge1 h 20Autonomie réelle estimée (autoroute, réserve 10 %) : ≈ 204 km par trajetÉnergie rechargée en route120,0 kWhCoût de recharge en route78,00 €Chaque arrêt est simulé comme une recharge complète d'un trajet (après réserve de sécurité), à la puissance DC moyenne indiquée. Le temps de conduite lui-même n'est pas compté.",
+      "Autonomie réelle par trajetmême modèle que le calculateur d'autonomie (vitesse, température, réserve de sécurité)Nombre d'arrêtsarrondi supérieur(distance ÷ autonomie réelle) − 1Énergie par arrêténergie utilisable d'une pleine autonomie réelle (après réserve)Durée par arrêténergie par arrêt ÷ puissance DC moyenne réellement atteignable"
+    ],
+    "localResults": [
+      "Résultats2 arrêts de recharge1 h 20Autonomie réelle estimée (autoroute, réserve 10 %) : ≈ 204 km par trajetÉnergie rechargée en route120,0 kWhCoût de recharge en route78,00 €Chaque arrêt est simulé comme une recharge complète d'un trajet (après réserve de sécurité), à la puissance DC moyenne indiquée. Le temps de conduite lui-même n'est pas compté.",
+      "Autonomie réelle par trajetmême modèle que le calculateur d'autonomie (vitesse, température, réserve de sécurité)Nombre d'arrêtsarrondi supérieur(distance ÷ autonomie réelle) − 1Énergie par arrêténergie utilisable d'une pleine autonomie réelle (après réserve)Durée par arrêténergie par arrêt ÷ puissance DC moyenne réellement atteignable"
+    ]
+  },
+  {
+    "tool": "trajet-longue-distance",
+    "case": "fixed",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "Résultats4 arrêts de recharge3 h 12Autonomie réelle estimée (autoroute, réserve 10 %) : ≈ 186 km par trajetÉnergie rechargée en route288,0 kWhCoût de recharge en route187,20 €Chaque arrêt est simulé comme une recharge complète d'un trajet (après réserve de sécurité), à la puissance DC moyenne indiquée. Le temps de conduite lui-même n'est pas compté.",
+      "Autonomie réelle par trajetmême modèle que le calculateur d'autonomie (vitesse, température, réserve de sécurité)Nombre d'arrêtsarrondi supérieur(distance ÷ autonomie réelle) − 1Énergie par arrêténergie utilisable d'une pleine autonomie réelle (après réserve)Durée par arrêténergie par arrêt ÷ puissance DC moyenne réellement atteignable"
+    ],
+    "localResults": [
+      "Résultats4 arrêts de recharge3 h 12Autonomie réelle estimée (autoroute, réserve 10 %) : ≈ 186 km par trajetÉnergie rechargée en route288,0 kWhCoût de recharge en route187,20 €Chaque arrêt est simulé comme une recharge complète d'un trajet (après réserve de sécurité), à la puissance DC moyenne indiquée. Le temps de conduite lui-même n'est pas compté.",
+      "Autonomie réelle par trajetmême modèle que le calculateur d'autonomie (vitesse, température, réserve de sécurité)Nombre d'arrêtsarrondi supérieur(distance ÷ autonomie réelle) − 1Énergie par arrêténergie utilisable d'une pleine autonomie réelle (après réserve)Durée par arrêténergie par arrêt ÷ puissance DC moyenne réellement atteignable"
+    ]
+  },
+  {
+    "tool": "/voitures-electriques/renault/5-e-tech",
+    "case": "default",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "Aux 100 km4,31 €Par mois43 €Par an517 €1 667 kWh/anSur 3 ans1 550 €"
+    ],
+    "localResults": [
+      "Aux 100 km4,31 €Par mois43 €Par an517 €1 667 kWh/anSur 3 ans1 550 €"
+    ]
+  },
+  {
+    "tool": "/voitures-electriques/renault/5-e-tech",
+    "case": "fixed",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "Aux 100 km5,42 €Par mois90 €Par an1 083 €2 778 kWh/anSur 3 ans3 250 €"
+    ],
+    "localResults": [
+      "Aux 100 km5,42 €Par mois90 €Par an1 083 €2 778 kWh/anSur 3 ans3 250 €"
+    ]
+  },
+  {
+    "tool": "/voitures-electriques/tesla/model-3/rwd",
+    "case": "default",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "Aux 100 km3,61 €Par mois36 €Par an434 €1 399 kWh/anSur 3 ans1 301 €"
+    ],
+    "localResults": [
+      "Aux 100 km3,61 €Par mois36 €Par an434 €1 399 kWh/anSur 3 ans1 301 €"
+    ]
+  },
+  {
+    "tool": "/voitures-electriques/tesla/model-3/rwd",
+    "case": "fixed",
+    "fieldsIdentical": true,
+    "resultsIdentical": true,
+    "accessibleTablesIdentical": true,
+    "productionResults": [
+      "Aux 100 km4,55 €Par mois76 €Par an909 €2 331 kWh/anSur 3 ans2 727 €"
+    ],
+    "localResults": [
+      "Aux 100 km4,55 €Par mois76 €Par an909 €2 331 kWh/anSur 3 ans2 727 €"
+    ]
+  }
+]

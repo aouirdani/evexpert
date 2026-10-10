@@ -1,0 +1,13 @@
+[
+  "src/app/globals.css",
+  "src/app/voitures-electriques/[brand]/page.tsx",
+  "src/components/vehicles/BrandOverview.tsx",
+  "src/components/vehicles/DataTableScroll.tsx",
+  "src/components/vehicles/ModelOverview.tsx",
+  "src/components/vehicles/SpecTable.tsx",
+  "src/components/vehicles/VehicleCard.tsx",
+  "src/components/vehicles/VehicleDetail.tsx",
+  "src/components/vehicles/VehicleExplorer.tsx",
+  "src/components/vehicles/catalogue.css",
+  "src/components/vehicles/catalogueStyles.ts"
+]

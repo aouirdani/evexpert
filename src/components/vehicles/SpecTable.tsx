@@ -1,6 +1,7 @@
 import type { DataType } from "@/types";
 import { DataBadge } from "@/components/ui/DataBadge";
 import { NA } from "@/lib/vehicle-format";
+import { catalogueStyles as styles } from "./catalogueStyles";
 
 export interface SpecRow {
   label: string;
@@ -32,7 +33,7 @@ export function SpecTable({
   const filled = rows.filter((r) => r.value !== NA);
   if (filled.length === 0) return null;
   return (
-    <section aria-labelledby={id} className="min-w-0">
+    <section aria-labelledby={id} className={`min-w-0 ${styles.specGroup}`}>
       <h3 id={id} className="border-t-2 border-ink pb-1 pt-3 text-base font-bold text-ink">
         {title}
       </h3>

@@ -1,0 +1,134 @@
+[
+  {
+    "name": "seo.json",
+    "passed": true,
+    "detail": "Comparaison exacte des valeurs JSON avant/après."
+  },
+  {
+    "name": "assets-redirects.json",
+    "passed": true,
+    "detail": "Comparaison exacte des valeurs JSON avant/après."
+  },
+  {
+    "name": "calculators.json",
+    "passed": true,
+    "detail": "Comparaison exacte des valeurs JSON avant/après."
+  },
+  {
+    "name": "hero.json",
+    "passed": true,
+    "detail": "Comparaison exacte des valeurs JSON avant/après."
+  },
+  {
+    "name": "sources",
+    "passed": true,
+    "detail": {
+      "changed": [
+        "src/components/charts/GroupedBars.tsx",
+        "src/components/comparison/ComparisonBuilder.tsx",
+        "src/components/garage/GarageBar.tsx",
+        "src/components/garage/GarageToggle.tsx",
+        "src/components/vehicles/ModelOverview.tsx",
+        "src/components/vehicles/VehicleCard.tsx",
+        "src/components/vehicles/VehicleRow.tsx"
+      ],
+      "unchanged": 313
+    }
+  },
+  {
+    "name": "coverage",
+    "passed": true,
+    "detail": "9 pages × 5 largeurs."
+  },
+  {
+    "name": "responsive",
+    "passed": true,
+    "detail": "Aucun document plus large que le viewport, y compris TCO et Essence vs électrique."
+  },
+  {
+    "name": "ad-reservations",
+    "passed": true,
+    "detail": "Coordonnées, dimensions, visibilité et identifiants identiques pour les réservations capturées."
+  },
+  {
+    "name": "catalogue-complet",
+    "passed": true,
+    "detail": "47 cartes, marques/versions sans ellipsis ou débordement horizontal du texte."
+  },
+  {
+    "name": "selection-size",
+    "passed": true,
+    "detail": "Boutons de sélection au moins 44 × 44 px."
+  },
+  {
+    "name": "copy-size",
+    "passed": true,
+    "detail": "Copie : 276,16 × 44 px aux cinq largeurs."
+  },
+  {
+    "name": "filter",
+    "passed": true,
+    "detail": "Kona : une version, même lien modèle."
+  },
+  {
+    "name": "garage",
+    "passed": true,
+    "detail": "Sélection, limite 3, vidage et lien comparateur préservés."
+  },
+  {
+    "name": "selection-widths",
+    "passed": true,
+    "detail": "Tap/clic réel puis sélection clavier, barre sans débordement."
+  },
+  {
+    "name": "comparison",
+    "passed": true,
+    "detail": "Trois véhicules, URL partagée et activation clavier de la copie."
+  },
+  {
+    "name": "focus",
+    "passed": true,
+    "detail": "Contours cobalt 2 px, mêmes liens atteints par Tab."
+  },
+  {
+    "name": "link-navigation",
+    "passed": true,
+    "detail": "Activation Entrée du véritable lien HTML."
+  },
+  {
+    "name": "hero-controls",
+    "passed": true,
+    "detail": "Pause et reprise vidéo fonctionnelles."
+  },
+  {
+    "name": "accessible-tables",
+    "passed": true,
+    "detail": [
+      {
+        "tool": "tco-voiture-electrique",
+        "tables": [
+          {
+            "name": "Répartition des coûts par poste, véhicule A et véhicule B",
+            "ignored": false
+          }
+        ],
+        "cellCount": 21
+      },
+      {
+        "tool": "essence-vs-electrique",
+        "tables": [
+          {
+            "name": "Coût cumulé sur 3, 5 et 8 ans : électrique et essence",
+            "ignored": false
+          }
+        ],
+        "cellCount": 12
+      }
+    ]
+  },
+  {
+    "name": "javascript-errors",
+    "passed": true,
+    "detail": "Aucune erreur pageerror dans la série finale."
+  }
+]

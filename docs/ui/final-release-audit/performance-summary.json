@@ -1,0 +1,3345 @@
+{
+  "production-local": [
+    {
+      "path": "/",
+      "device": "desktop",
+      "origin": "local",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 94,
+          "min": 94,
+          "max": 100,
+          "values": [
+            100,
+            94,
+            94
+          ]
+        },
+        "lcp": {
+          "median": 1654.9251749999994,
+          "min": 626.8909249999999,
+          "max": 1661.4399499999995,
+          "values": [
+            626.8909249999999,
+            1654.9251749999994,
+            1661.4399499999995
+          ]
+        },
+        "fcp": {
+          "median": 243.92809999999997,
+          "min": 243.43280000000001,
+          "max": 244.57820000000004,
+          "values": [
+            244.57820000000004,
+            243.43280000000001,
+            243.92809999999997
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "ttfb": {
+          "median": 5.174,
+          "min": 3.7439999999999998,
+          "max": 5.322,
+          "values": [
+            5.322,
+            3.7439999999999998,
+            5.174
+          ]
+        },
+        "mainThread": {
+          "median": 245.1040000000006,
+          "min": 223.1870000000004,
+          "max": 250.5010000000007,
+          "values": [
+            250.5010000000007,
+            223.1870000000004,
+            245.1040000000006
+          ]
+        }
+      },
+      "lcpElements": [
+        "<img alt=\"\" width=\"1376\" height=\"768\" decoding=\"async\" data-nimg=\"1\" class=\"hero-poster h-full w-full object-cover object-right mix-blend-lighten\" style=\"color: transparent;\" sizes=\"(min-width: 1024px) min(68vw, 1100px), 100vw\" srcset=\"/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=640&amp;q=75 640w, /_next/ima…\" src=\"http://localhost:3102/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=1080…\">",
+        "<video muted=\"\" loop=\"\" playsinline=\"\" preload=\"none\" aria-hidden=\"true\" tabindex=\"-1\" disablepictureinpicture=\"\" disableremoteplayback=\"\" class=\"h-full w-full object-cover object-right\" src=\"/brand/video.mp4\" data-playing=\"\">",
+        "<video muted=\"\" loop=\"\" playsinline=\"\" preload=\"none\" aria-hidden=\"true\" tabindex=\"-1\" disablepictureinpicture=\"\" disableremoteplayback=\"\" class=\"h-full w-full object-cover object-right\" src=\"/brand/video.mp4\" data-playing=\"\">"
+      ]
+    },
+    {
+      "path": "/",
+      "device": "desktop",
+      "origin": "production",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 98,
+          "min": 97,
+          "max": 100,
+          "values": [
+            98,
+            97,
+            100
+          ]
+        },
+        "lcp": {
+          "median": 1193.5497,
+          "min": 497.5997000000001,
+          "max": 1322.3445000000002,
+          "values": [
+            1193.5497,
+            1322.3445000000002,
+            497.5997000000001
+          ]
+        },
+        "fcp": {
+          "median": 271.2255,
+          "min": 270.555,
+          "max": 273.58500000000004,
+          "values": [
+            271.2255,
+            270.555,
+            273.58500000000004
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "ttfb": {
+          "median": 6.596,
+          "min": 5.225,
+          "max": 10.591999999999999,
+          "values": [
+            10.591999999999999,
+            6.596,
+            5.225
+          ]
+        },
+        "mainThread": {
+          "median": 246.4380000000001,
+          "min": 233.9540000000001,
+          "max": 273.36800000000034,
+          "values": [
+            246.4380000000001,
+            233.9540000000001,
+            273.36800000000034
+          ]
+        }
+      },
+      "lcpElements": [
+        "<img alt=\"\" width=\"1376\" height=\"768\" decoding=\"async\" data-nimg=\"1\" class=\"hero-poster h-full w-full object-cover object-right mix-blend-lighten\" style=\"color: transparent;\" sizes=\"(min-width: 1024px) min(68vw, 1100px), 100vw\" srcset=\"/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=640&amp;q=75 640w, /_next/ima…\" src=\"https://www.evexpert.fr/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=10…\">",
+        "<video muted=\"\" loop=\"\" playsinline=\"\" preload=\"none\" aria-hidden=\"true\" tabindex=\"-1\" disablepictureinpicture=\"\" disableremoteplayback=\"\" class=\"h-full w-full object-cover object-right\" src=\"/brand/video.mp4\" data-playing=\"\">",
+        "<img alt=\"\" width=\"1376\" height=\"768\" decoding=\"async\" data-nimg=\"1\" class=\"hero-poster h-full w-full object-cover object-right mix-blend-lighten\" style=\"color: transparent;\" sizes=\"(min-width: 1024px) min(68vw, 1100px), 100vw\" srcset=\"/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=640&amp;q=75 640w, /_next/ima…\" src=\"https://www.evexpert.fr/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=10…\">"
+      ]
+    },
+    {
+      "path": "/",
+      "device": "mobile",
+      "origin": "local",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 95,
+          "min": 95,
+          "max": 95,
+          "values": [
+            95,
+            95,
+            95
+          ]
+        },
+        "lcp": {
+          "median": 2932.4556750000006,
+          "min": 2931.06945,
+          "max": 2935.3519499999993,
+          "values": [
+            2935.3519499999993,
+            2932.4556750000006,
+            2931.06945
+          ]
+        },
+        "fcp": {
+          "median": 904.9509,
+          "min": 904.0463,
+          "max": 906.9013,
+          "values": [
+            906.9013,
+            904.9509,
+            904.0463
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 13,
+          "min": 11,
+          "max": 17,
+          "values": [
+            17,
+            11,
+            13
+          ]
+        },
+        "ttfb": {
+          "median": 4.1739999999999995,
+          "min": 3.771,
+          "max": 5.842,
+          "values": [
+            3.771,
+            5.842,
+            4.1739999999999995
+          ]
+        },
+        "mainThread": {
+          "median": 710.768,
+          "min": 703.7560000000014,
+          "max": 745.0960000000017,
+          "values": [
+            703.7560000000014,
+            710.768,
+            745.0960000000017
+          ]
+        }
+      },
+      "lcpElements": [
+        "<h1 class=\"balance mt-6 text-display font-bold text-paper\">",
+        "<h1 class=\"balance mt-6 text-display font-bold text-paper\">",
+        "<h1 class=\"balance mt-6 text-display font-bold text-paper\">"
+      ]
+    },
+    {
+      "path": "/",
+      "device": "mobile",
+      "origin": "production",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 98,
+          "min": 98,
+          "max": 98,
+          "values": [
+            98,
+            98,
+            98
+          ]
+        },
+        "lcp": {
+          "median": 2342.2102000000004,
+          "min": 2263.84,
+          "max": 2416.0975,
+          "values": [
+            2263.84,
+            2342.2102000000004,
+            2416.0975
+          ]
+        },
+        "fcp": {
+          "median": 956.0265000000002,
+          "min": 955.84,
+          "max": 963.1703,
+          "values": [
+            955.84,
+            963.1703,
+            956.0265000000002
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 56,
+          "min": 55.5,
+          "max": 65,
+          "values": [
+            65,
+            56,
+            55.5
+          ]
+        },
+        "ttfb": {
+          "median": 8.695,
+          "min": 6.46,
+          "max": 9.875999999999998,
+          "values": [
+            9.875999999999998,
+            8.695,
+            6.46
+          ]
+        },
+        "mainThread": {
+          "median": 850.2360000000011,
+          "min": 830.6239999999991,
+          "max": 863.616,
+          "values": [
+            850.2360000000011,
+            863.616,
+            830.6239999999991
+          ]
+        }
+      },
+      "lcpElements": [
+        "<h1 class=\"balance mt-6 text-display font-bold text-paper\">",
+        "<h1 class=\"balance mt-6 text-display font-bold text-paper\">",
+        "<h1 class=\"balance mt-6 text-display font-bold text-paper\">"
+      ]
+    },
+    {
+      "path": "/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
+      "device": "desktop",
+      "origin": "local",
+      "n": 1,
+      "metrics": {
+        "score": {
+          "median": 100,
+          "min": 100,
+          "max": 100,
+          "values": [
+            100
+          ]
+        },
+        "lcp": {
+          "median": 626.1828499999999,
+          "min": 626.1828499999999,
+          "max": 626.1828499999999,
+          "values": [
+            626.1828499999999
+          ]
+        },
+        "fcp": {
+          "median": 244.1069,
+          "min": 244.1069,
+          "max": 244.1069,
+          "values": [
+            244.1069
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "ttfb": {
+          "median": 4.243,
+          "min": 4.243,
+          "max": 4.243,
+          "values": [
+            4.243
+          ]
+        },
+        "mainThread": {
+          "median": 207.41900000000007,
+          "min": 207.41900000000007,
+          "max": 207.41900000000007,
+          "values": [
+            207.41900000000007
+          ]
+        }
+      },
+      "lcpElements": [
+        "<img alt=\"Pack de batterie lithium-ion d'une BMW i3 présenté capot ouvert : des modu…\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-…\" src=\"http://localhost:3102/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc…\">"
+      ]
+    },
+    {
+      "path": "/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
+      "device": "desktop",
+      "origin": "production",
+      "n": 1,
+      "metrics": {
+        "score": {
+          "median": 100,
+          "min": 100,
+          "max": 100,
+          "values": [
+            100
+          ]
+        },
+        "lcp": {
+          "median": 457.3624500000001,
+          "min": 457.3624500000001,
+          "max": 457.3624500000001,
+          "values": [
+            457.3624500000001
+          ]
+        },
+        "fcp": {
+          "median": 268.35370000000006,
+          "min": 268.35370000000006,
+          "max": 268.35370000000006,
+          "values": [
+            268.35370000000006
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "ttfb": {
+          "median": 7.133,
+          "min": 7.133,
+          "max": 7.133,
+          "values": [
+            7.133
+          ]
+        },
+        "mainThread": {
+          "median": 246.49300000000068,
+          "min": 246.49300000000068,
+          "max": 246.49300000000068,
+          "values": [
+            246.49300000000068
+          ]
+        }
+      },
+      "lcpElements": [
+        "<img alt=\"Pack de batterie lithium-ion d'une BMW i3 présenté capot ouvert : des modu…\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-…\" src=\"https://www.evexpert.fr/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-n…\">"
+      ]
+    },
+    {
+      "path": "/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
+      "device": "mobile",
+      "origin": "local",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 95,
+          "min": 95,
+          "max": 95,
+          "values": [
+            95,
+            95,
+            95
+          ]
+        },
+        "lcp": {
+          "median": 2933.7045,
+          "min": 2932.627949999999,
+          "max": 2933.9417999999996,
+          "values": [
+            2933.9417999999996,
+            2933.7045,
+            2932.627949999999
+          ]
+        },
+        "fcp": {
+          "median": 905.8030000000001,
+          "min": 905.0553999999997,
+          "max": 905.9312999999997,
+          "values": [
+            905.9312999999997,
+            905.8030000000001,
+            905.0553999999997
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 11,
+          "min": 7.500000000000227,
+          "max": 11.999999999999545,
+          "values": [
+            11.999999999999545,
+            11,
+            7.500000000000227
+          ]
+        },
+        "ttfb": {
+          "median": 4.205,
+          "min": 3.005,
+          "max": 4.9399999999999995,
+          "values": [
+            3.005,
+            4.205,
+            4.9399999999999995
+          ]
+        },
+        "mainThread": {
+          "median": 679.0280000000018,
+          "min": 644.6960000000016,
+          "max": 697.2680000000007,
+          "values": [
+            679.0280000000018,
+            644.6960000000016,
+            697.2680000000007
+          ]
+        }
+      },
+      "lcpElements": [
+        "<img alt=\"Pack de batterie lithium-ion d'une BMW i3 présenté capot ouvert : des modu…\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-…\" src=\"http://localhost:3102/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc…\">",
+        "<img alt=\"Pack de batterie lithium-ion d'une BMW i3 présenté capot ouvert : des modu…\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-…\" src=\"http://localhost:3102/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc…\">",
+        "<img alt=\"Pack de batterie lithium-ion d'une BMW i3 présenté capot ouvert : des modu…\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-…\" src=\"http://localhost:3102/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc…\">"
+      ]
+    },
+    {
+      "path": "/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
+      "device": "mobile",
+      "origin": "production",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 99,
+          "min": 87,
+          "max": 99,
+          "values": [
+            87,
+            99,
+            99
+          ]
+        },
+        "lcp": {
+          "median": 2116.6938,
+          "min": 1976.5320000000002,
+          "max": 4057.4866999999995,
+          "values": [
+            4057.4866999999995,
+            1976.5320000000002,
+            2116.6938
+          ]
+        },
+        "fcp": {
+          "median": 943.6758,
+          "min": 918.2685999999999,
+          "max": 947.8750000000001,
+          "values": [
+            918.2685999999999,
+            947.8750000000001,
+            943.6758
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 52,
+          "min": 48,
+          "max": 58.999999999999545,
+          "values": [
+            48,
+            58.999999999999545,
+            52
+          ]
+        },
+        "ttfb": {
+          "median": 10.259,
+          "min": 8.866,
+          "max": 10.710999999999999,
+          "values": [
+            10.259,
+            10.710999999999999,
+            8.866
+          ]
+        },
+        "mainThread": {
+          "median": 719.6080000000003,
+          "min": 699.408000000002,
+          "max": 756.6039999999996,
+          "values": [
+            699.408000000002,
+            756.6039999999996,
+            719.6080000000003
+          ]
+        }
+      },
+      "lcpElements": [
+        "<img alt=\"Pack de batterie lithium-ion d'une BMW i3 présenté capot ouvert : des modu…\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-…\" src=\"https://www.evexpert.fr/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-n…\">",
+        "<img alt=\"Pack de batterie lithium-ion d'une BMW i3 présenté capot ouvert : des modu…\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-…\" src=\"https://www.evexpert.fr/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-n…\">",
+        "<img alt=\"Pack de batterie lithium-ion d'une BMW i3 présenté capot ouvert : des modu…\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-…\" src=\"https://www.evexpert.fr/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-n…\">"
+      ]
+    },
+    {
+      "path": "/comparer",
+      "device": "desktop",
+      "origin": "local",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 100,
+          "min": 100,
+          "max": 100,
+          "values": [
+            100,
+            100,
+            100
+          ]
+        },
+        "lcp": {
+          "median": 606.64545,
+          "min": 605.4556000000001,
+          "max": 606.9487499999999,
+          "values": [
+            606.9487499999999,
+            605.4556000000001,
+            606.64545
+          ]
+        },
+        "fcp": {
+          "median": 244.4303,
+          "min": 243.62260000000003,
+          "max": 244.61710000000002,
+          "values": [
+            244.61710000000002,
+            243.62260000000003,
+            244.4303
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "ttfb": {
+          "median": 4.067,
+          "min": 3.879,
+          "max": 4.705,
+          "values": [
+            3.879,
+            4.705,
+            4.067
+          ]
+        },
+        "mainThread": {
+          "median": 236.91400000000033,
+          "min": 218.9310000000005,
+          "max": 258.11700000000025,
+          "values": [
+            218.9310000000005,
+            236.91400000000033,
+            258.11700000000025
+          ]
+        }
+      },
+      "lcpElements": [
+        "<h1 class=\"balance text-h1 font-bold text-ink\">",
+        "<h1 class=\"balance text-h1 font-bold text-ink\">",
+        "<h1 class=\"balance text-h1 font-bold text-ink\">"
+      ]
+    },
+    {
+      "path": "/comparer",
+      "device": "desktop",
+      "origin": "production",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 100,
+          "min": 100,
+          "max": 100,
+          "values": [
+            100,
+            100,
+            100
+          ]
+        },
+        "lcp": {
+          "median": 656.6142999999998,
+          "min": 456.1257,
+          "max": 657.4326000000001,
+          "values": [
+            657.4326000000001,
+            456.1257,
+            656.6142999999998
+          ]
+        },
+        "fcp": {
+          "median": 564.74785,
+          "min": 265.1132,
+          "max": 629.4838,
+          "values": [
+            564.74785,
+            265.1132,
+            629.4838
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "ttfb": {
+          "median": 9.235,
+          "min": 7.932,
+          "max": 10.855,
+          "values": [
+            9.235,
+            7.932,
+            10.855
+          ]
+        },
+        "mainThread": {
+          "median": 269.79600000000113,
+          "min": 255.65800000000075,
+          "max": 277.5950000000014,
+          "values": [
+            269.79600000000113,
+            255.65800000000075,
+            277.5950000000014
+          ]
+        }
+      },
+      "lcpElements": [
+        "<h1 class=\"balance text-h1 font-bold text-ink\">",
+        "<h1 class=\"balance text-h1 font-bold text-ink\">",
+        "<h1 class=\"balance text-h1 font-bold text-ink\">"
+      ]
+    },
+    {
+      "path": "/comparer",
+      "device": "mobile",
+      "origin": "local",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 96,
+          "min": 96,
+          "max": 96,
+          "values": [
+            96,
+            96,
+            96
+          ]
+        },
+        "lcp": {
+          "median": 2856.81945,
+          "min": 2856.46455,
+          "max": 2857.0278,
+          "values": [
+            2857.0278,
+            2856.46455,
+            2856.81945
+          ]
+        },
+        "fcp": {
+          "median": 904.5441,
+          "min": 904.2998,
+          "max": 904.6851999999999,
+          "values": [
+            904.6851999999999,
+            904.2998,
+            904.5441
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 9.5,
+          "min": 7.5,
+          "max": 15,
+          "values": [
+            15,
+            7.5,
+            9.5
+          ]
+        },
+        "ttfb": {
+          "median": 4.674,
+          "min": 3.954,
+          "max": 4.771,
+          "values": [
+            4.674,
+            3.954,
+            4.771
+          ]
+        },
+        "mainThread": {
+          "median": 865.640000000001,
+          "min": 765.7160000000013,
+          "max": 932.7640000000011,
+          "values": [
+            865.640000000001,
+            765.7160000000013,
+            932.7640000000011
+          ]
+        }
+      },
+      "lcpElements": [
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">"
+      ]
+    },
+    {
+      "path": "/comparer",
+      "device": "mobile",
+      "origin": "production",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 99,
+          "min": 98,
+          "max": 100,
+          "values": [
+            98,
+            100,
+            99
+          ]
+        },
+        "lcp": {
+          "median": 2119.9736999999996,
+          "min": 1816.0610000000001,
+          "max": 2225.659,
+          "values": [
+            2225.659,
+            1816.0610000000001,
+            2119.9736999999996
+          ]
+        },
+        "fcp": {
+          "median": 945.9432999999999,
+          "min": 939.0454000000001,
+          "max": 980.227,
+          "values": [
+            980.227,
+            939.0454000000001,
+            945.9432999999999
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 63.5,
+          "min": 58,
+          "max": 104.99999999999989,
+          "values": [
+            104.99999999999989,
+            58,
+            63.5
+          ]
+        },
+        "ttfb": {
+          "median": 8.314,
+          "min": 8.222,
+          "max": 14.761000000000003,
+          "values": [
+            14.761000000000003,
+            8.314,
+            8.222
+          ]
+        },
+        "mainThread": {
+          "median": 912.7920000000024,
+          "min": 877.4600000000013,
+          "max": 1377.7520000000507,
+          "values": [
+            1377.7520000000507,
+            877.4600000000013,
+            912.7920000000024
+          ]
+        }
+      },
+      "lcpElements": [
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">"
+      ]
+    },
+    {
+      "path": "/guides/temps-recharge-voiture-electrique",
+      "device": "desktop",
+      "origin": "local",
+      "n": 1,
+      "metrics": {
+        "score": {
+          "median": 100,
+          "min": 100,
+          "max": 100,
+          "values": [
+            100
+          ]
+        },
+        "lcp": {
+          "median": 625.382225,
+          "min": 625.382225,
+          "max": 625.382225,
+          "values": [
+            625.382225
+          ]
+        },
+        "fcp": {
+          "median": 243.57089999999994,
+          "min": 243.57089999999994,
+          "max": 243.57089999999994,
+          "values": [
+            243.57089999999994
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "ttfb": {
+          "median": 5.027,
+          "min": 5.027,
+          "max": 5.027,
+          "values": [
+            5.027
+          ]
+        },
+        "mainThread": {
+          "median": 209.8500000000007,
+          "min": 209.8500000000007,
+          "max": 209.8500000000007,
+          "values": [
+            209.8500000000007
+          ]
+        }
+      },
+      "lcpElements": [
+        "<img alt=\"Main d'une personne qui enfonce le connecteur d'un câble de recharge dans …\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Ftemps-recharge-voiture-electriq…\" src=\"http://localhost:3102/_next/image?url=%2Feditorial%2Flicences%2Ftemps-rech…\">"
+      ]
+    },
+    {
+      "path": "/guides/temps-recharge-voiture-electrique",
+      "device": "desktop",
+      "origin": "production",
+      "n": 1,
+      "metrics": {
+        "score": {
+          "median": 100,
+          "min": 100,
+          "max": 100,
+          "values": [
+            100
+          ]
+        },
+        "lcp": {
+          "median": 456.8873000000001,
+          "min": 456.8873000000001,
+          "max": 456.8873000000001,
+          "values": [
+            456.8873000000001
+          ]
+        },
+        "fcp": {
+          "median": 265.8628,
+          "min": 265.8628,
+          "max": 265.8628,
+          "values": [
+            265.8628
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "ttfb": {
+          "median": 8.28,
+          "min": 8.28,
+          "max": 8.28,
+          "values": [
+            8.28
+          ]
+        },
+        "mainThread": {
+          "median": 241.44200000000015,
+          "min": 241.44200000000015,
+          "max": 241.44200000000015,
+          "values": [
+            241.44200000000015
+          ]
+        }
+      },
+      "lcpElements": [
+        "<img alt=\"Main d'une personne qui enfonce le connecteur d'un câble de recharge dans …\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Ftemps-recharge-voiture-electriq…\" src=\"https://www.evexpert.fr/_next/image?url=%2Feditorial%2Flicences%2Ftemps-re…\">"
+      ]
+    },
+    {
+      "path": "/guides/temps-recharge-voiture-electrique",
+      "device": "mobile",
+      "origin": "local",
+      "n": 1,
+      "metrics": {
+        "score": {
+          "median": 95,
+          "min": 95,
+          "max": 95,
+          "values": [
+            95
+          ]
+        },
+        "lcp": {
+          "median": 2932.3624500000005,
+          "min": 2932.3624500000005,
+          "max": 2932.3624500000005,
+          "values": [
+            2932.3624500000005
+          ]
+        },
+        "fcp": {
+          "median": 904.8416000000001,
+          "min": 904.8416000000001,
+          "max": 904.8416000000001,
+          "values": [
+            904.8416000000001
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "tbt": {
+          "median": 9,
+          "min": 9,
+          "max": 9,
+          "values": [
+            9
+          ]
+        },
+        "ttfb": {
+          "median": 4.485,
+          "min": 4.485,
+          "max": 4.485,
+          "values": [
+            4.485
+          ]
+        },
+        "mainThread": {
+          "median": 797.7519999999996,
+          "min": 797.7519999999996,
+          "max": 797.7519999999996,
+          "values": [
+            797.7519999999996
+          ]
+        }
+      },
+      "lcpElements": [
+        "<p class=\"pretty mt-6 max-w-3xl text-dek text-body\">"
+      ]
+    },
+    {
+      "path": "/guides/temps-recharge-voiture-electrique",
+      "device": "mobile",
+      "origin": "production",
+      "n": 1,
+      "metrics": {
+        "score": {
+          "median": 99,
+          "min": 99,
+          "max": 99,
+          "values": [
+            99
+          ]
+        },
+        "lcp": {
+          "median": 1967.7819000000004,
+          "min": 1967.7819000000004,
+          "max": 1967.7819000000004,
+          "values": [
+            1967.7819000000004
+          ]
+        },
+        "fcp": {
+          "median": 948.7455000000002,
+          "min": 948.7455000000002,
+          "max": 948.7455000000002,
+          "values": [
+            948.7455000000002
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "tbt": {
+          "median": 55.5,
+          "min": 55.5,
+          "max": 55.5,
+          "values": [
+            55.5
+          ]
+        },
+        "ttfb": {
+          "median": 6.838,
+          "min": 6.838,
+          "max": 6.838,
+          "values": [
+            6.838
+          ]
+        },
+        "mainThread": {
+          "median": 851.3040000000017,
+          "min": 851.3040000000017,
+          "max": 851.3040000000017,
+          "values": [
+            851.3040000000017
+          ]
+        }
+      },
+      "lcpElements": [
+        "<p class=\"pretty mt-6 max-w-3xl text-dek text-body\">"
+      ]
+    },
+    {
+      "path": "/outils/tco-voiture-electrique",
+      "device": "desktop",
+      "origin": "local",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 100,
+          "min": 100,
+          "max": 100,
+          "values": [
+            100,
+            100,
+            100
+          ]
+        },
+        "lcp": {
+          "median": 606.3810000000001,
+          "min": 604.65735,
+          "max": 606.6185999999999,
+          "values": [
+            606.3810000000001,
+            604.65735,
+            606.6185999999999
+          ]
+        },
+        "fcp": {
+          "median": 244.23159999999996,
+          "min": 243.1021,
+          "max": 244.40120000000002,
+          "values": [
+            244.23159999999996,
+            243.1021,
+            244.40120000000002
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "ttfb": {
+          "median": 3.9959999999999996,
+          "min": 2.519,
+          "max": 4.013,
+          "values": [
+            4.013,
+            3.9959999999999996,
+            2.519
+          ]
+        },
+        "mainThread": {
+          "median": 216.9550000000002,
+          "min": 196.61600000000075,
+          "max": 222.87000000000037,
+          "values": [
+            196.61600000000075,
+            222.87000000000037,
+            216.9550000000002
+          ]
+        }
+      },
+      "lcpElements": [
+        "<h1 class=\"balance text-h1 font-bold text-ink\">",
+        "<h1 class=\"balance text-h1 font-bold text-ink\">",
+        "<h1 class=\"balance text-h1 font-bold text-ink\">"
+      ]
+    },
+    {
+      "path": "/outils/tco-voiture-electrique",
+      "device": "desktop",
+      "origin": "production",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 100,
+          "min": 99,
+          "max": 100,
+          "values": [
+            100,
+            99,
+            100
+          ]
+        },
+        "lcp": {
+          "median": 458.4788499999999,
+          "min": 456.6973999999999,
+          "max": 839.6377999999999,
+          "values": [
+            456.6973999999999,
+            839.6377999999999,
+            458.4788499999999
+          ]
+        },
+        "fcp": {
+          "median": 268.6824,
+          "min": 268.45259999999996,
+          "max": 685.4997000000001,
+          "values": [
+            268.6824,
+            685.4997000000001,
+            268.45259999999996
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "ttfb": {
+          "median": 9.009,
+          "min": 5.48,
+          "max": 10.148,
+          "values": [
+            5.48,
+            9.009,
+            10.148
+          ]
+        },
+        "mainThread": {
+          "median": 223.49900000000014,
+          "min": 198.76800000000017,
+          "max": 234.13799999999998,
+          "values": [
+            223.49900000000014,
+            198.76800000000017,
+            234.13799999999998
+          ]
+        }
+      },
+      "lcpElements": [
+        "<h1 class=\"balance text-h1 font-bold text-ink\">",
+        "<h1 class=\"balance text-h1 font-bold text-ink\">",
+        "<h1 class=\"balance text-h1 font-bold text-ink\">"
+      ]
+    },
+    {
+      "path": "/outils/tco-voiture-electrique",
+      "device": "mobile",
+      "origin": "local",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 96,
+          "min": 95,
+          "max": 96,
+          "values": [
+            95,
+            96,
+            96
+          ]
+        },
+        "lcp": {
+          "median": 2857.8475499999995,
+          "min": 2855.2524000000003,
+          "max": 2859.5773000000004,
+          "values": [
+            2859.5773000000004,
+            2855.2524000000003,
+            2857.8475499999995
+          ]
+        },
+        "fcp": {
+          "median": 905.2317,
+          "min": 903.4928,
+          "max": 906.3757,
+          "values": [
+            906.3757,
+            903.4928,
+            905.2317
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 11,
+          "min": 10.5,
+          "max": 12.5,
+          "values": [
+            11,
+            10.5,
+            12.5
+          ]
+        },
+        "ttfb": {
+          "median": 4.787,
+          "min": 2.365,
+          "max": 4.886,
+          "values": [
+            4.787,
+            2.365,
+            4.886
+          ]
+        },
+        "mainThread": {
+          "median": 746.4480000000011,
+          "min": 666.1400000000025,
+          "max": 827.3520000000018,
+          "values": [
+            827.3520000000018,
+            666.1400000000025,
+            746.4480000000011
+          ]
+        }
+      },
+      "lcpElements": [
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">"
+      ]
+    },
+    {
+      "path": "/outils/tco-voiture-electrique",
+      "device": "mobile",
+      "origin": "production",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 99,
+          "min": 99,
+          "max": 99,
+          "values": [
+            99,
+            99,
+            99
+          ]
+        },
+        "lcp": {
+          "median": 2116.8772,
+          "min": 2115.678,
+          "max": 2118.9169999999995,
+          "values": [
+            2116.8772,
+            2118.9169999999995,
+            2115.678
+          ]
+        },
+        "fcp": {
+          "median": 949.8512,
+          "min": 946.678,
+          "max": 951.8993999999999,
+          "values": [
+            949.8512,
+            951.8993999999999,
+            946.678
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 57.5,
+          "min": 55,
+          "max": 63.5,
+          "values": [
+            57.5,
+            55,
+            63.5
+          ]
+        },
+        "ttfb": {
+          "median": 10.251,
+          "min": 8.973,
+          "max": 13.013,
+          "values": [
+            8.973,
+            10.251,
+            13.013
+          ]
+        },
+        "mainThread": {
+          "median": 729.7480000000014,
+          "min": 728.9640000000014,
+          "max": 752.4720000000013,
+          "values": [
+            729.7480000000014,
+            752.4720000000013,
+            728.9640000000014
+          ]
+        }
+      },
+      "lcpElements": [
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">"
+      ]
+    },
+    {
+      "path": "/voitures-electriques",
+      "device": "desktop",
+      "origin": "local",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 100,
+          "min": 100,
+          "max": 100,
+          "values": [
+            100,
+            100,
+            100
+          ]
+        },
+        "lcp": {
+          "median": 605.3461500000001,
+          "min": 604.99605,
+          "max": 605.49165,
+          "values": [
+            605.3461500000001,
+            605.49165,
+            604.99605
+          ]
+        },
+        "fcp": {
+          "median": 243.5641,
+          "min": 243.30619999999993,
+          "max": 243.64919999999995,
+          "values": [
+            243.5641,
+            243.64919999999995,
+            243.30619999999993
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "ttfb": {
+          "median": 5.970999999999999,
+          "min": 5.745,
+          "max": 6.472,
+          "values": [
+            5.970999999999999,
+            6.472,
+            5.745
+          ]
+        },
+        "mainThread": {
+          "median": 288.56100000000123,
+          "min": 283.78100000000063,
+          "max": 319.48200000000185,
+          "values": [
+            283.78100000000063,
+            288.56100000000123,
+            319.48200000000185
+          ]
+        }
+      },
+      "lcpElements": [
+        "<h1 class=\"balance mt-4 text-h1 font-bold text-ink\">",
+        "<h1 class=\"balance mt-4 text-h1 font-bold text-ink\">",
+        "<h1 class=\"balance mt-4 text-h1 font-bold text-ink\">"
+      ]
+    },
+    {
+      "path": "/voitures-electriques",
+      "device": "desktop",
+      "origin": "production",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 100,
+          "min": 100,
+          "max": 100,
+          "values": [
+            100,
+            100,
+            100
+          ]
+        },
+        "lcp": {
+          "median": 457.19350000000003,
+          "min": 457.1687999999999,
+          "max": 457.3574,
+          "values": [
+            457.3574,
+            457.1687999999999,
+            457.19350000000003
+          ]
+        },
+        "fcp": {
+          "median": 258.3574,
+          "min": 258.1735,
+          "max": 271.1663,
+          "values": [
+            258.3574,
+            271.1663,
+            258.1735
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "ttfb": {
+          "median": 7.5169999999999995,
+          "min": 6.218999999999999,
+          "max": 7.664,
+          "values": [
+            7.664,
+            6.218999999999999,
+            7.5169999999999995
+          ]
+        },
+        "mainThread": {
+          "median": 314.5100000000013,
+          "min": 303.5140000000009,
+          "max": 333.0060000000022,
+          "values": [
+            333.0060000000022,
+            303.5140000000009,
+            314.5100000000013
+          ]
+        }
+      },
+      "lcpElements": [
+        "<h1 class=\"balance mt-4 text-h1 font-bold text-ink\">",
+        "<h1 class=\"balance mt-4 text-h1 font-bold text-ink\">",
+        "<h1 class=\"balance mt-4 text-h1 font-bold text-ink\">"
+      ]
+    },
+    {
+      "path": "/voitures-electriques",
+      "device": "mobile",
+      "origin": "local",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 96,
+          "min": 96,
+          "max": 96,
+          "values": [
+            96,
+            96,
+            96
+          ]
+        },
+        "lcp": {
+          "median": 2855.2137999999995,
+          "min": 2854.9408500000004,
+          "max": 2857.14315,
+          "values": [
+            2857.14315,
+            2854.9408500000004,
+            2855.2137999999995
+          ]
+        },
+        "fcp": {
+          "median": 903.4391999999999,
+          "min": 903.2202000000001,
+          "max": 904.7445,
+          "values": [
+            904.7445,
+            903.2202000000001,
+            903.4391999999999
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 11.5,
+          "min": 8.5,
+          "max": 15.5,
+          "values": [
+            15.5,
+            8.5,
+            11.5
+          ]
+        },
+        "ttfb": {
+          "median": 6.74,
+          "min": 5.739999999999999,
+          "max": 6.931,
+          "values": [
+            6.931,
+            5.739999999999999,
+            6.74
+          ]
+        },
+        "mainThread": {
+          "median": 1028.1120000000017,
+          "min": 982.2040000000036,
+          "max": 1066.4760000000033,
+          "values": [
+            1066.4760000000033,
+            982.2040000000036,
+            1028.1120000000017
+          ]
+        }
+      },
+      "lcpElements": [
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">"
+      ]
+    },
+    {
+      "path": "/voitures-electriques",
+      "device": "mobile",
+      "origin": "production",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 98,
+          "min": 98,
+          "max": 99,
+          "values": [
+            98,
+            99,
+            98
+          ]
+        },
+        "lcp": {
+          "median": 2266.5635499999994,
+          "min": 2266.31005,
+          "max": 2387.763,
+          "values": [
+            2387.763,
+            2266.31005,
+            2266.5635499999994
+          ]
+        },
+        "fcp": {
+          "median": 959.2852999999999,
+          "min": 955.5315999999999,
+          "max": 1081.6972999999998,
+          "values": [
+            1081.6972999999998,
+            959.2852999999999,
+            955.5315999999999
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 59,
+          "min": 56,
+          "max": 88.99999999999989,
+          "values": [
+            56,
+            59,
+            88.99999999999989
+          ]
+        },
+        "ttfb": {
+          "median": 9.061,
+          "min": 7.462999999999999,
+          "max": 9.333,
+          "values": [
+            9.333,
+            9.061,
+            7.462999999999999
+          ]
+        },
+        "mainThread": {
+          "median": 1205.2920000000065,
+          "min": 1045.3800000000024,
+          "max": 1356.2160000000022,
+          "values": [
+            1356.2160000000022,
+            1045.3800000000024,
+            1205.2920000000065
+          ]
+        }
+      },
+      "lcpElements": [
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">"
+      ]
+    },
+    {
+      "path": "/voitures-electriques/renault",
+      "device": "desktop",
+      "origin": "local",
+      "n": 1,
+      "metrics": {
+        "score": {
+          "median": 100,
+          "min": 100,
+          "max": 100,
+          "values": [
+            100
+          ]
+        },
+        "lcp": {
+          "median": 606.2443499999999,
+          "min": 606.2443499999999,
+          "max": 606.2443499999999,
+          "values": [
+            606.2443499999999
+          ]
+        },
+        "fcp": {
+          "median": 244.1587,
+          "min": 244.1587,
+          "max": 244.1587,
+          "values": [
+            244.1587
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "ttfb": {
+          "median": 3.9419999999999997,
+          "min": 3.9419999999999997,
+          "max": 3.9419999999999997,
+          "values": [
+            3.9419999999999997
+          ]
+        },
+        "mainThread": {
+          "median": 207.65100000000058,
+          "min": 207.65100000000058,
+          "max": 207.65100000000058,
+          "values": [
+            207.65100000000058
+          ]
+        }
+      },
+      "lcpElements": [
+        "<h1 class=\"balance text-h1 font-bold text-ink\">"
+      ]
+    },
+    {
+      "path": "/voitures-electriques/renault",
+      "device": "desktop",
+      "origin": "production",
+      "n": 1,
+      "metrics": {
+        "score": {
+          "median": 100,
+          "min": 100,
+          "max": 100,
+          "values": [
+            100
+          ]
+        },
+        "lcp": {
+          "median": 457.66855000000004,
+          "min": 457.66855000000004,
+          "max": 457.66855000000004,
+          "values": [
+            457.66855000000004
+          ]
+        },
+        "fcp": {
+          "median": 267.64930000000004,
+          "min": 267.64930000000004,
+          "max": 267.64930000000004,
+          "values": [
+            267.64930000000004
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "ttfb": {
+          "median": 8.498000000000001,
+          "min": 8.498000000000001,
+          "max": 8.498000000000001,
+          "values": [
+            8.498000000000001
+          ]
+        },
+        "mainThread": {
+          "median": 260.31000000000006,
+          "min": 260.31000000000006,
+          "max": 260.31000000000006,
+          "values": [
+            260.31000000000006
+          ]
+        }
+      },
+      "lcpElements": [
+        "<h1 class=\"balance text-h1 font-bold text-ink\">"
+      ]
+    },
+    {
+      "path": "/voitures-electriques/renault",
+      "device": "mobile",
+      "origin": "local",
+      "n": 1,
+      "metrics": {
+        "score": {
+          "median": 96,
+          "min": 96,
+          "max": 96,
+          "values": [
+            96
+          ]
+        },
+        "lcp": {
+          "median": 2858.0980000000004,
+          "min": 2858.0980000000004,
+          "max": 2858.0980000000004,
+          "values": [
+            2858.0980000000004
+          ]
+        },
+        "fcp": {
+          "median": 905.3895,
+          "min": 905.3895,
+          "max": 905.3895,
+          "values": [
+            905.3895
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "tbt": {
+          "median": 10,
+          "min": 10,
+          "max": 10,
+          "values": [
+            10
+          ]
+        },
+        "ttfb": {
+          "median": 2.904,
+          "min": 2.904,
+          "max": 2.904,
+          "values": [
+            2.904
+          ]
+        },
+        "mainThread": {
+          "median": 674.9960000000004,
+          "min": 674.9960000000004,
+          "max": 674.9960000000004,
+          "values": [
+            674.9960000000004
+          ]
+        }
+      },
+      "lcpElements": [
+        "<p id=\"brand-intro\" class=\"pretty mt-8 max-w-3xl text-body\">"
+      ]
+    },
+    {
+      "path": "/voitures-electriques/renault",
+      "device": "mobile",
+      "origin": "production",
+      "n": 1,
+      "metrics": {
+        "score": {
+          "median": 99,
+          "min": 99,
+          "max": 99,
+          "values": [
+            99
+          ]
+        },
+        "lcp": {
+          "median": 2116.3967999999995,
+          "min": 2116.3967999999995,
+          "max": 2116.3967999999995,
+          "values": [
+            2116.3967999999995
+          ]
+        },
+        "fcp": {
+          "median": 947.3411999999998,
+          "min": 947.3411999999998,
+          "max": 947.3411999999998,
+          "values": [
+            947.3411999999998
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "tbt": {
+          "median": 54.5,
+          "min": 54.5,
+          "max": 54.5,
+          "values": [
+            54.5
+          ]
+        },
+        "ttfb": {
+          "median": 11.454,
+          "min": 11.454,
+          "max": 11.454,
+          "values": [
+            11.454
+          ]
+        },
+        "mainThread": {
+          "median": 779.5239999999994,
+          "min": 779.5239999999994,
+          "max": 779.5239999999994,
+          "values": [
+            779.5239999999994
+          ]
+        }
+      },
+      "lcpElements": [
+        "<p id=\"brand-intro\" class=\"pretty mt-8 max-w-3xl text-body\">"
+      ]
+    },
+    {
+      "path": "/voitures-electriques/tesla/model-3",
+      "device": "desktop",
+      "origin": "local",
+      "n": 1,
+      "metrics": {
+        "score": {
+          "median": 100,
+          "min": 100,
+          "max": 100,
+          "values": [
+            100
+          ]
+        },
+        "lcp": {
+          "median": 606.5274000000001,
+          "min": 606.5274000000001,
+          "max": 606.5274000000001,
+          "values": [
+            606.5274000000001
+          ]
+        },
+        "fcp": {
+          "median": 244.33759999999995,
+          "min": 244.33759999999995,
+          "max": 244.33759999999995,
+          "values": [
+            244.33759999999995
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "ttfb": {
+          "median": 2.934,
+          "min": 2.934,
+          "max": 2.934,
+          "values": [
+            2.934
+          ]
+        },
+        "mainThread": {
+          "median": 199.26700000000045,
+          "min": 199.26700000000045,
+          "max": 199.26700000000045,
+          "values": [
+            199.26700000000045
+          ]
+        }
+      },
+      "lcpElements": [
+        "<h1 class=\"balance mt-5 font-bold text-ink text-h1\">"
+      ]
+    },
+    {
+      "path": "/voitures-electriques/tesla/model-3",
+      "device": "desktop",
+      "origin": "production",
+      "n": 1,
+      "metrics": {
+        "score": {
+          "median": 100,
+          "min": 100,
+          "max": 100,
+          "values": [
+            100
+          ]
+        },
+        "lcp": {
+          "median": 455.87780000000004,
+          "min": 455.87780000000004,
+          "max": 455.87780000000004,
+          "values": [
+            455.87780000000004
+          ]
+        },
+        "fcp": {
+          "median": 267.8643,
+          "min": 267.8643,
+          "max": 267.8643,
+          "values": [
+            267.8643
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "ttfb": {
+          "median": 10.137,
+          "min": 10.137,
+          "max": 10.137,
+          "values": [
+            10.137
+          ]
+        },
+        "mainThread": {
+          "median": 246.7830000000002,
+          "min": 246.7830000000002,
+          "max": 246.7830000000002,
+          "values": [
+            246.7830000000002
+          ]
+        }
+      },
+      "lcpElements": [
+        "<h1 class=\"balance mt-5 font-bold text-ink text-h1\">"
+      ]
+    },
+    {
+      "path": "/voitures-electriques/tesla/model-3",
+      "device": "mobile",
+      "origin": "local",
+      "n": 1,
+      "metrics": {
+        "score": {
+          "median": 96,
+          "min": 96,
+          "max": 96,
+          "values": [
+            96
+          ]
+        },
+        "lcp": {
+          "median": 2857.6326,
+          "min": 2857.6326,
+          "max": 2857.6326,
+          "values": [
+            2857.6326
+          ]
+        },
+        "fcp": {
+          "median": 905.0884000000001,
+          "min": 905.0884000000001,
+          "max": 905.0884000000001,
+          "values": [
+            905.0884000000001
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "tbt": {
+          "median": 12.499999999999545,
+          "min": 12.499999999999545,
+          "max": 12.499999999999545,
+          "values": [
+            12.499999999999545
+          ]
+        },
+        "ttfb": {
+          "median": 5.828,
+          "min": 5.828,
+          "max": 5.828,
+          "values": [
+            5.828
+          ]
+        },
+        "mainThread": {
+          "median": 751.484000000001,
+          "min": 751.484000000001,
+          "max": 751.484000000001,
+          "values": [
+            751.484000000001
+          ]
+        }
+      },
+      "lcpElements": [
+        "<p class=\"pretty text-body [&amp;:not(:first-child)]:mt-4\">"
+      ]
+    },
+    {
+      "path": "/voitures-electriques/tesla/model-3",
+      "device": "mobile",
+      "origin": "production",
+      "n": 1,
+      "metrics": {
+        "score": {
+          "median": 99,
+          "min": 99,
+          "max": 99,
+          "values": [
+            99
+          ]
+        },
+        "lcp": {
+          "median": 2115.6838,
+          "min": 2115.6838,
+          "max": 2115.6838,
+          "values": [
+            2115.6838
+          ]
+        },
+        "fcp": {
+          "median": 945.6757999999999,
+          "min": 945.6757999999999,
+          "max": 945.6757999999999,
+          "values": [
+            945.6757999999999
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0
+          ]
+        },
+        "tbt": {
+          "median": 66.5,
+          "min": 66.5,
+          "max": 66.5,
+          "values": [
+            66.5
+          ]
+        },
+        "ttfb": {
+          "median": 6.92,
+          "min": 6.92,
+          "max": 6.92,
+          "values": [
+            6.92
+          ]
+        },
+        "mainThread": {
+          "median": 855.5440000000001,
+          "min": 855.5440000000001,
+          "max": 855.5440000000001,
+          "values": [
+            855.5440000000001
+          ]
+        }
+      },
+      "lcpElements": [
+        "<p class=\"pretty mt-6 max-w-2xl text-lg text-body\">"
+      ]
+    }
+  ],
+  "controlled": [
+    {
+      "path": "/",
+      "device": "desktop",
+      "origin": "git-main-local",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 100,
+          "min": 94,
+          "max": 100,
+          "values": [
+            100,
+            100,
+            94
+          ]
+        },
+        "lcp": {
+          "median": 700.5053,
+          "min": 626.6421499999999,
+          "max": 1656.9846999999995,
+          "values": [
+            700.5053,
+            626.6421499999999,
+            1656.9846999999995
+          ]
+        },
+        "fcp": {
+          "median": 244.39560000000006,
+          "min": 244.2722,
+          "max": 245.6171,
+          "values": [
+            245.6171,
+            244.39560000000006,
+            244.2722
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "ttfb": {
+          "median": 6.734,
+          "min": 5.902,
+          "max": 7.519,
+          "values": [
+            6.734,
+            7.519,
+            5.902
+          ]
+        },
+        "mainThread": {
+          "median": 219.15400000000082,
+          "min": 216.2830000000006,
+          "max": 254.26900000000055,
+          "values": [
+            219.15400000000082,
+            254.26900000000055,
+            216.2830000000006
+          ]
+        }
+      },
+      "lcpElements": [
+        "<img alt=\"\" width=\"1376\" height=\"768\" decoding=\"async\" data-nimg=\"1\" class=\"hero-poster h-full w-full object-cover object-right mix-blend-lighten\" style=\"color: transparent;\" sizes=\"(min-width: 1024px) min(68vw, 1100px), 100vw\" srcset=\"/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=640&amp;q=75 640w, /_next/ima…\" src=\"http://localhost:3103/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=1080…\">",
+        "<img alt=\"\" width=\"1376\" height=\"768\" decoding=\"async\" data-nimg=\"1\" class=\"hero-poster h-full w-full object-cover object-right mix-blend-lighten\" style=\"color: transparent;\" sizes=\"(min-width: 1024px) min(68vw, 1100px), 100vw\" srcset=\"/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=640&amp;q=75 640w, /_next/ima…\" src=\"http://localhost:3103/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=1080…\">",
+        "<video muted=\"\" loop=\"\" playsinline=\"\" preload=\"none\" aria-hidden=\"true\" tabindex=\"-1\" disablepictureinpicture=\"\" disableremoteplayback=\"\" class=\"h-full w-full object-cover object-right\" src=\"/brand/video.mp4\" data-playing=\"\">"
+      ]
+    },
+    {
+      "path": "/",
+      "device": "desktop",
+      "origin": "local",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 100,
+          "min": 100,
+          "max": 100,
+          "values": [
+            100,
+            100,
+            100
+          ]
+        },
+        "lcp": {
+          "median": 625.086575,
+          "min": 624.7944500000001,
+          "max": 625.8585499999999,
+          "values": [
+            624.7944500000001,
+            625.8585499999999,
+            625.086575
+          ]
+        },
+        "fcp": {
+          "median": 243.34380000000002,
+          "min": 243.18579999999997,
+          "max": 243.87570000000002,
+          "values": [
+            243.18579999999997,
+            243.87570000000002,
+            243.34380000000002
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "ttfb": {
+          "median": 5.212,
+          "min": 5.197,
+          "max": 6.0089999999999995,
+          "values": [
+            5.212,
+            5.197,
+            6.0089999999999995
+          ]
+        },
+        "mainThread": {
+          "median": 219.86600000000044,
+          "min": 219.1250000000002,
+          "max": 246.55500000000106,
+          "values": [
+            246.55500000000106,
+            219.86600000000044,
+            219.1250000000002
+          ]
+        }
+      },
+      "lcpElements": [
+        "<img alt=\"\" width=\"1376\" height=\"768\" decoding=\"async\" data-nimg=\"1\" class=\"hero-poster h-full w-full object-cover object-right mix-blend-lighten\" style=\"color: transparent;\" sizes=\"(min-width: 1024px) min(68vw, 1100px), 100vw\" srcset=\"/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=640&amp;q=75 640w, /_next/ima…\" src=\"http://localhost:3102/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=1080…\">",
+        "<img alt=\"\" width=\"1376\" height=\"768\" decoding=\"async\" data-nimg=\"1\" class=\"hero-poster h-full w-full object-cover object-right mix-blend-lighten\" style=\"color: transparent;\" sizes=\"(min-width: 1024px) min(68vw, 1100px), 100vw\" srcset=\"/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=640&amp;q=75 640w, /_next/ima…\" src=\"http://localhost:3102/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=1080…\">",
+        "<img alt=\"\" width=\"1376\" height=\"768\" decoding=\"async\" data-nimg=\"1\" class=\"hero-poster h-full w-full object-cover object-right mix-blend-lighten\" style=\"color: transparent;\" sizes=\"(min-width: 1024px) min(68vw, 1100px), 100vw\" srcset=\"/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=640&amp;q=75 640w, /_next/ima…\" src=\"http://localhost:3102/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=1080…\">"
+      ]
+    },
+    {
+      "path": "/",
+      "device": "mobile",
+      "origin": "git-main-local",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 95,
+          "min": 95,
+          "max": 100,
+          "values": [
+            100,
+            95,
+            95
+          ]
+        },
+        "lcp": {
+          "median": 2932.663875,
+          "min": 1816.8566,
+          "max": 2933.5183750000006,
+          "values": [
+            1816.8566,
+            2933.5183750000006,
+            2932.663875
+          ]
+        },
+        "fcp": {
+          "median": 905.6057000000001,
+          "min": 905.0805,
+          "max": 916.8566000000001,
+          "values": [
+            916.8566000000001,
+            905.6057000000001,
+            905.0805
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 12,
+          "min": 10,
+          "max": 12,
+          "values": [
+            10,
+            12,
+            12
+          ]
+        },
+        "ttfb": {
+          "median": 7.355,
+          "min": 5.998,
+          "max": 22.206999999999997,
+          "values": [
+            22.206999999999997,
+            5.998,
+            7.355
+          ]
+        },
+        "mainThread": {
+          "median": 783.0440000000006,
+          "min": 735.032000000001,
+          "max": 796.2519999999992,
+          "values": [
+            796.2519999999992,
+            735.032000000001,
+            783.0440000000006
+          ]
+        }
+      },
+      "lcpElements": [
+        "<h1 class=\"balance mt-6 text-display font-bold text-paper\">",
+        "<h1 class=\"balance mt-6 text-display font-bold text-paper\">",
+        "<h1 class=\"balance mt-6 text-display font-bold text-paper\">"
+      ]
+    },
+    {
+      "path": "/",
+      "device": "mobile",
+      "origin": "local",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 95,
+          "min": 95,
+          "max": 95,
+          "values": [
+            95,
+            95,
+            95
+          ]
+        },
+        "lcp": {
+          "median": 2934.1037499999998,
+          "min": 2932.486725,
+          "max": 2934.3368250000003,
+          "values": [
+            2934.3368250000003,
+            2934.1037499999998,
+            2932.486725
+          ]
+        },
+        "fcp": {
+          "median": 906.0591999999999,
+          "min": 904.9187000000001,
+          "max": 906.1728,
+          "values": [
+            906.1728,
+            906.0591999999999,
+            904.9187000000001
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 10.5,
+          "min": 9,
+          "max": 14,
+          "values": [
+            14,
+            9,
+            10.5
+          ]
+        },
+        "ttfb": {
+          "median": 3.67,
+          "min": 3.628,
+          "max": 5.2829999999999995,
+          "values": [
+            3.628,
+            3.67,
+            5.2829999999999995
+          ]
+        },
+        "mainThread": {
+          "median": 747.1160000000017,
+          "min": 713.9960000000019,
+          "max": 795.0839999999996,
+          "values": [
+            747.1160000000017,
+            795.0839999999996,
+            713.9960000000019
+          ]
+        }
+      },
+      "lcpElements": [
+        "<h1 class=\"balance mt-6 text-display font-bold text-paper\">",
+        "<h1 class=\"balance mt-6 text-display font-bold text-paper\">",
+        "<h1 class=\"balance mt-6 text-display font-bold text-paper\">"
+      ]
+    },
+    {
+      "path": "/comparer",
+      "device": "mobile",
+      "origin": "git-main-local",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 96,
+          "min": 96,
+          "max": 96,
+          "values": [
+            96,
+            96,
+            96
+          ]
+        },
+        "lcp": {
+          "median": 2857.6294499999995,
+          "min": 2857.39215,
+          "max": 2857.9653000000008,
+          "values": [
+            2857.6294499999995,
+            2857.39215,
+            2857.9653000000008
+          ]
+        },
+        "fcp": {
+          "median": 905.0576999999998,
+          "min": 904.9281000000001,
+          "max": 905.2772,
+          "values": [
+            905.0576999999998,
+            904.9281000000001,
+            905.2772
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 6.5,
+          "min": 6,
+          "max": 11,
+          "values": [
+            6,
+            11,
+            6.5
+          ]
+        },
+        "ttfb": {
+          "median": 5.229,
+          "min": 3.771,
+          "max": 5.447,
+          "values": [
+            5.229,
+            5.447,
+            3.771
+          ]
+        },
+        "mainThread": {
+          "median": 835.9920000000009,
+          "min": 800.9239999999996,
+          "max": 1011.2560000000037,
+          "values": [
+            1011.2560000000037,
+            800.9239999999996,
+            835.9920000000009
+          ]
+        }
+      },
+      "lcpElements": [
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">"
+      ]
+    },
+    {
+      "path": "/comparer",
+      "device": "mobile",
+      "origin": "local",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 96,
+          "min": 96,
+          "max": 96,
+          "values": [
+            96,
+            96,
+            96
+          ]
+        },
+        "lcp": {
+          "median": 2856.37665,
+          "min": 2855.93925,
+          "max": 2857.0930500000004,
+          "values": [
+            2856.37665,
+            2855.93925,
+            2857.0930500000004
+          ]
+        },
+        "fcp": {
+          "median": 904.2511,
+          "min": 903.8978999999999,
+          "max": 904.7286999999999,
+          "values": [
+            904.2511,
+            903.8978999999999,
+            904.7286999999999
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 11,
+          "min": 9.5,
+          "max": 11.499999999999545,
+          "values": [
+            9.5,
+            11,
+            11.499999999999545
+          ]
+        },
+        "ttfb": {
+          "median": 4.139,
+          "min": 4.002,
+          "max": 4.692,
+          "values": [
+            4.002,
+            4.139,
+            4.692
+          ]
+        },
+        "mainThread": {
+          "median": 864.167999999999,
+          "min": 819.6480000000006,
+          "max": 926.0520000000005,
+          "values": [
+            819.6480000000006,
+            926.0520000000005,
+            864.167999999999
+          ]
+        }
+      },
+      "lcpElements": [
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">"
+      ]
+    },
+    {
+      "path": "/outils/tco-voiture-electrique",
+      "device": "mobile",
+      "origin": "git-main-local",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 96,
+          "min": 95,
+          "max": 96,
+          "values": [
+            95,
+            96,
+            96
+          ]
+        },
+        "lcp": {
+          "median": 2858.0543999999995,
+          "min": 2856.1396499999996,
+          "max": 2859.7434999999996,
+          "values": [
+            2859.7434999999996,
+            2858.0543999999995,
+            2856.1396499999996
+          ]
+        },
+        "fcp": {
+          "median": 905.3442999999997,
+          "min": 904.0545999999999,
+          "max": 906.4227000000001,
+          "values": [
+            906.4227000000001,
+            905.3442999999997,
+            904.0545999999999
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 9,
+          "min": 7,
+          "max": 11.5,
+          "values": [
+            9,
+            7,
+            11.5
+          ]
+        },
+        "ttfb": {
+          "median": 5.773000000000001,
+          "min": 3.806,
+          "max": 6.876,
+          "values": [
+            5.773000000000001,
+            3.806,
+            6.876
+          ]
+        },
+        "mainThread": {
+          "median": 709.6439999999991,
+          "min": 647.9599999999999,
+          "max": 757.6160000000016,
+          "values": [
+            709.6439999999991,
+            647.9599999999999,
+            757.6160000000016
+          ]
+        }
+      },
+      "lcpElements": [
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">"
+      ]
+    },
+    {
+      "path": "/outils/tco-voiture-electrique",
+      "device": "mobile",
+      "origin": "local",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 96,
+          "min": 96,
+          "max": 96,
+          "values": [
+            96,
+            96,
+            96
+          ]
+        },
+        "lcp": {
+          "median": 2857.6342000000004,
+          "min": 2857.520849999999,
+          "max": 2858.6048999999994,
+          "values": [
+            2858.6048999999994,
+            2857.6342000000004,
+            2857.520849999999
+          ]
+        },
+        "fcp": {
+          "median": 905.0791999999998,
+          "min": 904.9786999999998,
+          "max": 905.6728,
+          "values": [
+            905.6728,
+            905.0791999999998,
+            904.9786999999998
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 10.5,
+          "min": 8.5,
+          "max": 11,
+          "values": [
+            11,
+            10.5,
+            8.5
+          ]
+        },
+        "ttfb": {
+          "median": 2.947,
+          "min": 2.598,
+          "max": 4.8100000000000005,
+          "values": [
+            4.8100000000000005,
+            2.947,
+            2.598
+          ]
+        },
+        "mainThread": {
+          "median": 762.7040000000007,
+          "min": 672.4440000000018,
+          "max": 783.8800000000002,
+          "values": [
+            672.4440000000018,
+            762.7040000000007,
+            783.8800000000002
+          ]
+        }
+      },
+      "lcpElements": [
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">"
+      ]
+    },
+    {
+      "path": "/voitures-electriques",
+      "device": "mobile",
+      "origin": "git-main-local",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 96,
+          "min": 96,
+          "max": 96,
+          "values": [
+            96,
+            96,
+            96
+          ]
+        },
+        "lcp": {
+          "median": 2854.9032,
+          "min": 2706.0433000000007,
+          "max": 2856.5435999999995,
+          "values": [
+            2854.9032,
+            2706.0433000000007,
+            2856.5435999999995
+          ]
+        },
+        "fcp": {
+          "median": 904.0002000000001,
+          "min": 903.2446,
+          "max": 904.2953000000001,
+          "values": [
+            903.2446,
+            904.0002000000001,
+            904.2953000000001
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 8.5,
+          "min": 7.5,
+          "max": 22,
+          "values": [
+            22,
+            8.5,
+            7.5
+          ]
+        },
+        "ttfb": {
+          "median": 7.473,
+          "min": 5.949,
+          "max": 7.646,
+          "values": [
+            7.646,
+            5.949,
+            7.473
+          ]
+        },
+        "mainThread": {
+          "median": 980.224000000003,
+          "min": 915.452000000002,
+          "max": 992.7800000000029,
+          "values": [
+            980.224000000003,
+            915.452000000002,
+            992.7800000000029
+          ]
+        }
+      },
+      "lcpElements": [
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">"
+      ]
+    },
+    {
+      "path": "/voitures-electriques",
+      "device": "mobile",
+      "origin": "local",
+      "n": 3,
+      "metrics": {
+        "score": {
+          "median": 96,
+          "min": 96,
+          "max": 96,
+          "values": [
+            96,
+            96,
+            96
+          ]
+        },
+        "lcp": {
+          "median": 2854.2117,
+          "min": 2853.555,
+          "max": 2854.6742999999997,
+          "values": [
+            2853.555,
+            2854.6742999999997,
+            2854.2117
+          ]
+        },
+        "fcp": {
+          "median": 902.7626999999998,
+          "min": 902.3403000000001,
+          "max": 903.0446999999999,
+          "values": [
+            902.3403000000001,
+            903.0446999999999,
+            902.7626999999998
+          ]
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "tbt": {
+          "median": 7,
+          "min": 6.5,
+          "max": 8,
+          "values": [
+            6.5,
+            8,
+            7
+          ]
+        },
+        "ttfb": {
+          "median": 6.5200000000000005,
+          "min": 5.8,
+          "max": 6.649,
+          "values": [
+            6.5200000000000005,
+            6.649,
+            5.8
+          ]
+        },
+        "mainThread": {
+          "median": 938.8640000000021,
+          "min": 924.6040000000015,
+          "max": 981.5720000000007,
+          "values": [
+            924.6040000000015,
+            938.8640000000021,
+            981.5720000000007
+          ]
+        }
+      },
+      "lcpElements": [
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">",
+        "<p class=\"pretty mt-5 max-w-2xl text-dek text-body\">"
+      ]
+    }
+  ],
+  "heroCohorts": [
+    {
+      "group": "production-local",
+      "origin": "local",
+      "lcpKind": "poster",
+      "n": 1,
+      "medianLcp": 626.8909249999999,
+      "lcpValues": [
+        626.8909249999999
+      ]
+    },
+    {
+      "group": "production-local",
+      "origin": "local",
+      "lcpKind": "video",
+      "n": 2,
+      "medianLcp": 1658.1825624999994,
+      "lcpValues": [
+        1654.9251749999994,
+        1661.4399499999995
+      ]
+    },
+    {
+      "group": "production-local",
+      "origin": "production",
+      "lcpKind": "poster",
+      "n": 2,
+      "medianLcp": 845.5747000000001,
+      "lcpValues": [
+        1193.5497,
+        497.5997000000001
+      ]
+    },
+    {
+      "group": "production-local",
+      "origin": "production",
+      "lcpKind": "video",
+      "n": 1,
+      "medianLcp": 1322.3445000000002,
+      "lcpValues": [
+        1322.3445000000002
+      ]
+    },
+    {
+      "group": "controlled",
+      "origin": "git-main-local",
+      "lcpKind": "poster",
+      "n": 2,
+      "medianLcp": 663.573725,
+      "lcpValues": [
+        700.5053,
+        626.6421499999999
+      ]
+    },
+    {
+      "group": "controlled",
+      "origin": "git-main-local",
+      "lcpKind": "video",
+      "n": 1,
+      "medianLcp": 1656.9846999999995,
+      "lcpValues": [
+        1656.9846999999995
+      ]
+    },
+    {
+      "group": "controlled",
+      "origin": "local",
+      "lcpKind": "poster",
+      "n": 3,
+      "medianLcp": 625.086575,
+      "lcpValues": [
+        624.7944500000001,
+        625.8585499999999,
+        625.086575
+      ]
+    }
+  ]
+}

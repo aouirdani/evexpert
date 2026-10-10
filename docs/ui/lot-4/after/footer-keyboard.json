@@ -1,0 +1,787 @@
+[
+  {
+    "width": 320,
+    "href": "/confidentialite",
+    "focus": true,
+    "outline": "2px",
+    "links": [
+      {
+        "text": "Voitures électriques",
+        "height": 44,
+        "width": 129.578125,
+        "clipped": false
+      },
+      {
+        "text": "Comparateur",
+        "height": 44,
+        "width": 85.421875,
+        "clipped": false
+      },
+      {
+        "text": "Recharge",
+        "height": 44,
+        "width": 61.5,
+        "clipped": false
+      },
+      {
+        "text": "Outils",
+        "height": 44,
+        "width": 38.015625,
+        "clipped": false
+      },
+      {
+        "text": "Coût de recharge",
+        "height": 44,
+        "width": 112.515625,
+        "clipped": false
+      },
+      {
+        "text": "Coût aux 100 km",
+        "height": 44,
+        "width": 107.375,
+        "clipped": false
+      },
+      {
+        "text": "Autonomie réelle",
+        "height": 44,
+        "width": 110.9375,
+        "clipped": false
+      },
+      {
+        "text": "Temps de recharge",
+        "height": 44,
+        "width": 124.53125,
+        "clipped": false
+      },
+      {
+        "text": "Essence vs électrique",
+        "height": 44,
+        "width": 136,
+        "clipped": false
+      },
+      {
+        "text": "Calculateur TCO",
+        "height": 44,
+        "width": 106.984375,
+        "clipped": false
+      },
+      {
+        "text": "Guides",
+        "height": 44,
+        "width": 45,
+        "clipped": false
+      },
+      {
+        "text": "Blog",
+        "height": 44,
+        "width": 28.828125,
+        "clipped": false
+      },
+      {
+        "text": "Méthodologie",
+        "height": 44,
+        "width": 89.125,
+        "clipped": false
+      },
+      {
+        "text": "Politique éditoriale",
+        "height": 44,
+        "width": 120.9375,
+        "clipped": false
+      },
+      {
+        "text": "Sources des données",
+        "height": 44,
+        "width": 136,
+        "clipped": false
+      },
+      {
+        "text": "Flux RSS du blog",
+        "height": 44,
+        "width": 108.765625,
+        "clipped": false
+      },
+      {
+        "text": "À propos",
+        "height": 44,
+        "width": 59.296875,
+        "clipped": false
+      },
+      {
+        "text": "Auteur",
+        "height": 44,
+        "width": 44.125,
+        "clipped": false
+      },
+      {
+        "text": "Contact",
+        "height": 44,
+        "width": 50.84375,
+        "clipped": false
+      },
+      {
+        "text": "Mentions légales",
+        "height": 44,
+        "width": 109.21875,
+        "clipped": false
+      },
+      {
+        "text": "Politique de confidentialité",
+        "height": 44,
+        "width": 136,
+        "clipped": false
+      },
+      {
+        "text": "Cookies",
+        "height": 44,
+        "width": 52.96875,
+        "clipped": false
+      },
+      {
+        "text": "Conditions d'utilisation",
+        "height": 44,
+        "width": 136,
+        "clipped": false
+      }
+    ],
+    "consent": {
+      "x": 16,
+      "y": 3588.546875,
+      "width": 149.921875,
+      "height": 44,
+      "top": 3588.546875,
+      "right": 165.921875,
+      "bottom": 3632.546875,
+      "left": 16
+    },
+    "followed": "/confidentialite"
+  },
+  {
+    "width": 390,
+    "href": "/confidentialite",
+    "focus": true,
+    "outline": "2px",
+    "links": [
+      {
+        "text": "Voitures électriques",
+        "height": 44,
+        "width": 129.578125,
+        "clipped": false
+      },
+      {
+        "text": "Comparateur",
+        "height": 44,
+        "width": 85.421875,
+        "clipped": false
+      },
+      {
+        "text": "Recharge",
+        "height": 44,
+        "width": 61.5,
+        "clipped": false
+      },
+      {
+        "text": "Outils",
+        "height": 44,
+        "width": 38.015625,
+        "clipped": false
+      },
+      {
+        "text": "Coût de recharge",
+        "height": 44,
+        "width": 112.515625,
+        "clipped": false
+      },
+      {
+        "text": "Coût aux 100 km",
+        "height": 44,
+        "width": 107.375,
+        "clipped": false
+      },
+      {
+        "text": "Autonomie réelle",
+        "height": 44,
+        "width": 110.9375,
+        "clipped": false
+      },
+      {
+        "text": "Temps de recharge",
+        "height": 44,
+        "width": 124.53125,
+        "clipped": false
+      },
+      {
+        "text": "Essence vs électrique",
+        "height": 44,
+        "width": 141.734375,
+        "clipped": false
+      },
+      {
+        "text": "Calculateur TCO",
+        "height": 44,
+        "width": 106.984375,
+        "clipped": false
+      },
+      {
+        "text": "Guides",
+        "height": 44,
+        "width": 45,
+        "clipped": false
+      },
+      {
+        "text": "Blog",
+        "height": 44,
+        "width": 28.828125,
+        "clipped": false
+      },
+      {
+        "text": "Méthodologie",
+        "height": 44,
+        "width": 89.125,
+        "clipped": false
+      },
+      {
+        "text": "Politique éditoriale",
+        "height": 44,
+        "width": 120.9375,
+        "clipped": false
+      },
+      {
+        "text": "Sources des données",
+        "height": 44,
+        "width": 140.15625,
+        "clipped": false
+      },
+      {
+        "text": "Flux RSS du blog",
+        "height": 44,
+        "width": 108.765625,
+        "clipped": false
+      },
+      {
+        "text": "À propos",
+        "height": 44,
+        "width": 59.296875,
+        "clipped": false
+      },
+      {
+        "text": "Auteur",
+        "height": 44,
+        "width": 44.125,
+        "clipped": false
+      },
+      {
+        "text": "Contact",
+        "height": 44,
+        "width": 50.84375,
+        "clipped": false
+      },
+      {
+        "text": "Mentions légales",
+        "height": 44,
+        "width": 109.21875,
+        "clipped": false
+      },
+      {
+        "text": "Politique de confidentialité",
+        "height": 44,
+        "width": 163,
+        "clipped": false
+      },
+      {
+        "text": "Cookies",
+        "height": 44,
+        "width": 52.96875,
+        "clipped": false
+      },
+      {
+        "text": "Conditions d'utilisation",
+        "height": 44,
+        "width": 146.59375,
+        "clipped": false
+      }
+    ],
+    "consent": {
+      "x": 16,
+      "y": 3366.046875,
+      "width": 149.921875,
+      "height": 44,
+      "top": 3366.046875,
+      "right": 165.921875,
+      "bottom": 3410.046875,
+      "left": 16
+    },
+    "followed": "/confidentialite"
+  },
+  {
+    "width": 768,
+    "href": "/confidentialite",
+    "focus": true,
+    "outline": "2px",
+    "links": [
+      {
+        "text": "Voitures électriques",
+        "height": 44,
+        "width": 129.578125,
+        "clipped": false
+      },
+      {
+        "text": "Comparateur",
+        "height": 44,
+        "width": 85.421875,
+        "clipped": false
+      },
+      {
+        "text": "Recharge",
+        "height": 44,
+        "width": 61.5,
+        "clipped": false
+      },
+      {
+        "text": "Outils",
+        "height": 44,
+        "width": 38.015625,
+        "clipped": false
+      },
+      {
+        "text": "Coût de recharge",
+        "height": 44,
+        "width": 112.515625,
+        "clipped": false
+      },
+      {
+        "text": "Coût aux 100 km",
+        "height": 44,
+        "width": 107.375,
+        "clipped": false
+      },
+      {
+        "text": "Autonomie réelle",
+        "height": 44,
+        "width": 110.9375,
+        "clipped": false
+      },
+      {
+        "text": "Temps de recharge",
+        "height": 44,
+        "width": 124.53125,
+        "clipped": false
+      },
+      {
+        "text": "Essence vs électrique",
+        "height": 44,
+        "width": 141.734375,
+        "clipped": false
+      },
+      {
+        "text": "Calculateur TCO",
+        "height": 44,
+        "width": 106.984375,
+        "clipped": false
+      },
+      {
+        "text": "Guides",
+        "height": 44,
+        "width": 45,
+        "clipped": false
+      },
+      {
+        "text": "Blog",
+        "height": 44,
+        "width": 28.828125,
+        "clipped": false
+      },
+      {
+        "text": "Méthodologie",
+        "height": 44,
+        "width": 89.125,
+        "clipped": false
+      },
+      {
+        "text": "Politique éditoriale",
+        "height": 44,
+        "width": 120.9375,
+        "clipped": false
+      },
+      {
+        "text": "Sources des données",
+        "height": 44,
+        "width": 140.15625,
+        "clipped": false
+      },
+      {
+        "text": "Flux RSS du blog",
+        "height": 44,
+        "width": 108.765625,
+        "clipped": false
+      },
+      {
+        "text": "À propos",
+        "height": 44,
+        "width": 59.296875,
+        "clipped": false
+      },
+      {
+        "text": "Auteur",
+        "height": 44,
+        "width": 44.125,
+        "clipped": false
+      },
+      {
+        "text": "Contact",
+        "height": 44,
+        "width": 50.84375,
+        "clipped": false
+      },
+      {
+        "text": "Mentions légales",
+        "height": 44,
+        "width": 109.21875,
+        "clipped": false
+      },
+      {
+        "text": "Politique de confidentialité",
+        "height": 44,
+        "width": 156,
+        "clipped": false
+      },
+      {
+        "text": "Cookies",
+        "height": 44,
+        "width": 52.96875,
+        "clipped": false
+      },
+      {
+        "text": "Conditions d'utilisation",
+        "height": 44,
+        "width": 146.59375,
+        "clipped": false
+      }
+    ],
+    "consent": {
+      "x": 594.078125,
+      "y": 2337.484375,
+      "width": 149.921875,
+      "height": 44,
+      "top": 2337.484375,
+      "right": 744,
+      "bottom": 2381.484375,
+      "left": 594.078125
+    },
+    "followed": "/confidentialite"
+  },
+  {
+    "width": 1024,
+    "href": "/confidentialite",
+    "focus": true,
+    "outline": "2px",
+    "links": [
+      {
+        "text": "Voitures électriques",
+        "height": 44,
+        "width": 129.578125,
+        "clipped": false
+      },
+      {
+        "text": "Comparateur",
+        "height": 44,
+        "width": 85.421875,
+        "clipped": false
+      },
+      {
+        "text": "Recharge",
+        "height": 44,
+        "width": 61.5,
+        "clipped": false
+      },
+      {
+        "text": "Outils",
+        "height": 44,
+        "width": 38.015625,
+        "clipped": false
+      },
+      {
+        "text": "Coût de recharge",
+        "height": 44,
+        "width": 112.515625,
+        "clipped": false
+      },
+      {
+        "text": "Coût aux 100 km",
+        "height": 44,
+        "width": 107.375,
+        "clipped": false
+      },
+      {
+        "text": "Autonomie réelle",
+        "height": 44,
+        "width": 110.9375,
+        "clipped": false
+      },
+      {
+        "text": "Temps de recharge",
+        "height": 44,
+        "width": 124.53125,
+        "clipped": false
+      },
+      {
+        "text": "Essence vs électrique",
+        "height": 44,
+        "width": 141.734375,
+        "clipped": false
+      },
+      {
+        "text": "Calculateur TCO",
+        "height": 44,
+        "width": 106.984375,
+        "clipped": false
+      },
+      {
+        "text": "Guides",
+        "height": 44,
+        "width": 45,
+        "clipped": false
+      },
+      {
+        "text": "Blog",
+        "height": 44,
+        "width": 28.828125,
+        "clipped": false
+      },
+      {
+        "text": "Méthodologie",
+        "height": 44,
+        "width": 89.125,
+        "clipped": false
+      },
+      {
+        "text": "Politique éditoriale",
+        "height": 44,
+        "width": 120.9375,
+        "clipped": false
+      },
+      {
+        "text": "Sources des données",
+        "height": 44,
+        "width": 140.15625,
+        "clipped": false
+      },
+      {
+        "text": "Flux RSS du blog",
+        "height": 44,
+        "width": 108.765625,
+        "clipped": false
+      },
+      {
+        "text": "À propos",
+        "height": 44,
+        "width": 59.296875,
+        "clipped": false
+      },
+      {
+        "text": "Auteur",
+        "height": 44,
+        "width": 44.125,
+        "clipped": false
+      },
+      {
+        "text": "Contact",
+        "height": 44,
+        "width": 50.84375,
+        "clipped": false
+      },
+      {
+        "text": "Mentions légales",
+        "height": 44,
+        "width": 109.21875,
+        "clipped": false
+      },
+      {
+        "text": "Politique de confidentialité",
+        "height": 44,
+        "width": 171.53125,
+        "clipped": false
+      },
+      {
+        "text": "Cookies",
+        "height": 44,
+        "width": 52.96875,
+        "clipped": false
+      },
+      {
+        "text": "Conditions d'utilisation",
+        "height": 44,
+        "width": 146.59375,
+        "clipped": false
+      }
+    ],
+    "consent": {
+      "x": 850.078125,
+      "y": 2384.375,
+      "width": 149.921875,
+      "height": 44,
+      "top": 2384.375,
+      "right": 1000,
+      "bottom": 2428.375,
+      "left": 850.078125
+    },
+    "followed": "/confidentialite"
+  },
+  {
+    "width": 1440,
+    "href": "/confidentialite",
+    "focus": true,
+    "outline": "2px",
+    "links": [
+      {
+        "text": "Voitures électriques",
+        "height": 44,
+        "width": 129.578125,
+        "clipped": false
+      },
+      {
+        "text": "Comparateur",
+        "height": 44,
+        "width": 85.421875,
+        "clipped": false
+      },
+      {
+        "text": "Recharge",
+        "height": 44,
+        "width": 61.5,
+        "clipped": false
+      },
+      {
+        "text": "Outils",
+        "height": 44,
+        "width": 38.015625,
+        "clipped": false
+      },
+      {
+        "text": "Coût de recharge",
+        "height": 44,
+        "width": 112.515625,
+        "clipped": false
+      },
+      {
+        "text": "Coût aux 100 km",
+        "height": 44,
+        "width": 107.375,
+        "clipped": false
+      },
+      {
+        "text": "Autonomie réelle",
+        "height": 44,
+        "width": 110.9375,
+        "clipped": false
+      },
+      {
+        "text": "Temps de recharge",
+        "height": 44,
+        "width": 124.53125,
+        "clipped": false
+      },
+      {
+        "text": "Essence vs électrique",
+        "height": 44,
+        "width": 141.734375,
+        "clipped": false
+      },
+      {
+        "text": "Calculateur TCO",
+        "height": 44,
+        "width": 106.984375,
+        "clipped": false
+      },
+      {
+        "text": "Guides",
+        "height": 44,
+        "width": 45,
+        "clipped": false
+      },
+      {
+        "text": "Blog",
+        "height": 44,
+        "width": 28.828125,
+        "clipped": false
+      },
+      {
+        "text": "Méthodologie",
+        "height": 44,
+        "width": 89.125,
+        "clipped": false
+      },
+      {
+        "text": "Politique éditoriale",
+        "height": 44,
+        "width": 120.9375,
+        "clipped": false
+      },
+      {
+        "text": "Sources des données",
+        "height": 44,
+        "width": 140.15625,
+        "clipped": false
+      },
+      {
+        "text": "Flux RSS du blog",
+        "height": 44,
+        "width": 108.765625,
+        "clipped": false
+      },
+      {
+        "text": "À propos",
+        "height": 44,
+        "width": 59.296875,
+        "clipped": false
+      },
+      {
+        "text": "Auteur",
+        "height": 44,
+        "width": 44.125,
+        "clipped": false
+      },
+      {
+        "text": "Contact",
+        "height": 44,
+        "width": 50.84375,
+        "clipped": false
+      },
+      {
+        "text": "Mentions légales",
+        "height": 44,
+        "width": 109.21875,
+        "clipped": false
+      },
+      {
+        "text": "Politique de confidentialité",
+        "height": 44,
+        "width": 171.53125,
+        "clipped": false
+      },
+      {
+        "text": "Cookies",
+        "height": 44,
+        "width": 52.96875,
+        "clipped": false
+      },
+      {
+        "text": "Conditions d'utilisation",
+        "height": 44,
+        "width": 146.59375,
+        "clipped": false
+      }
+    ],
+    "consent": {
+      "x": 1122.078125,
+      "y": 2382.59375,
+      "width": 149.921875,
+      "height": 44,
+      "top": 2382.59375,
+      "right": 1272,
+      "bottom": 2426.59375,
+      "left": 1122.078125
+    },
+    "followed": "/confidentialite"
+  }
+]

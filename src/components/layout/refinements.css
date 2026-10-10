@@ -1,0 +1,131 @@
+/* Lot 4 : selectors opt-in, existing tokens, no extra stylesheet request. */
+.evx-header > div > a:first-child,
+.evx-header nav[aria-label="Navigation principale"] a[href="/comparer"],
+.evx-header input {
+  min-height: 44px;
+}
+
+.evx-header nav[aria-label="Navigation principale"] a:not([href="/comparer"]):hover {
+  background-color: var(--color-brand-raised);
+}
+
+.evx-header summary:focus-visible {
+  outline-color: var(--color-signal);
+  outline-offset: -3px;
+}
+
+.evx-header nav[aria-label="Navigation mobile"] a[href="/comparer"] {
+  background-color: var(--color-signal);
+  color: var(--color-ink);
+}
+
+.evx-header nav[aria-label="Navigation mobile"] a[href="/comparer"][aria-current] {
+  box-shadow: inset 0 -3px 0 var(--color-ink);
+}
+
+.evx-header nav[aria-label="Navigation mobile"] a[href="/comparer"]:hover {
+  background-color: var(--color-signal-tint);
+}
+
+.evx-editorial-card {
+  min-width: 0;
+  height: 100%;
+  padding: 16px;
+  border: 1px solid var(--color-line);
+  border-top: 2px solid var(--color-brand);
+  border-radius: 8px;
+  background-color: var(--color-surface);
+  transition: border-color 150ms;
+}
+
+.evx-editorial-card:hover,
+.evx-editorial-card:focus-within {
+  border-color: var(--color-brand);
+}
+
+.evx-editorial-card .evx-editorial-media img {
+  transform: none;
+  scale: 1;
+  transition: none;
+}
+
+.evx-editorial-media[data-editorial-image="false"] {
+  position: relative;
+  aspect-ratio: auto;
+  height: 40px;
+}
+
+.evx-editorial-media[data-editorial-image="false"]::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 12px;
+  width: 32px;
+  height: 3px;
+  background-color: var(--color-brand);
+}
+
+.evx-editorial-meta {
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+
+.evx-editorial-meta > :first-child {
+  color: var(--color-brand);
+}
+
+.evx-editorial-meta > :last-child {
+  white-space: nowrap;
+}
+
+.evx-editorial-title,
+.evx-editorial-card p {
+  overflow-wrap: anywhere;
+}
+
+.evx-editorial-date {
+  padding-top: 12px;
+  border-top: 1px solid var(--color-line);
+}
+
+/* Keep dimensions and anchor layout intact: the ad reservation follows this TOC. */
+.evx-editorial-toc > ol {
+  border-top-color: var(--color-brand);
+}
+
+.evx-editorial-toc a {
+  border-radius: 4px;
+}
+
+.evx-editorial-toc a:hover,
+.evx-editorial-toc a:focus-visible {
+  background-color: var(--color-paper-deep);
+  color: var(--color-brand);
+}
+
+.evx-footer-link {
+  min-height: 44px;
+  max-width: 100%;
+  text-underline-offset: 4px;
+}
+
+.evx-footer-link:hover,
+.evx-footer-link:focus-visible {
+  text-decoration: underline;
+}
+
+.evx-footer > div > div:last-child > button {
+  min-height: 44px;
+}
+
+@media (max-width: 24rem) {
+  .evx-footer-columns {
+    column-gap: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .evx-editorial-card {
+    transition: none;
+  }
+}

@@ -89,7 +89,7 @@ export function Header() {
         </div>
       </div>
 
-      <header className="on-brand sticky top-0 z-50 border-b border-brand-line bg-brand">
+      <header className="evx-header on-brand sticky top-0 z-50 border-b border-brand-line bg-brand">
         <div className="mx-auto flex h-(--header-h) w-full max-w-page items-center gap-2 px-4 sm:px-6 lg:gap-6">
           <Link
             href="/"

@@ -1,0 +1,20 @@
+/** Classes privées du catalogue ; styles inclus dans la feuille déjà chargée. */
+export const catalogueStyles = {
+  explorer: "evx-catalogue-explorer",
+  card: "evx-catalogue-card",
+  identity: "evx-catalogue-identity",
+  range: "evx-catalogue-range",
+  specs: "evx-catalogue-specs",
+  inlineUnit: "evx-catalogue-inlineUnit",
+  separateUnit: "evx-catalogue-separateUnit",
+  computedSpec: "evx-catalogue-computedSpec",
+  footer: "evx-catalogue-footer",
+  filters: "evx-catalogue-filters",
+  activeControl: "evx-catalogue-activeControl",
+  toolbar: "evx-catalogue-toolbar",
+  empty: "evx-catalogue-empty",
+  tableShell: "evx-catalogue-tableShell",
+  scrollHint: "evx-catalogue-scrollHint",
+  tableScroll: "evx-catalogue-tableScroll",
+  specGroup: "evx-catalogue-specGroup",
+} as const;

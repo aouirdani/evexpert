@@ -1,0 +1,171 @@
+/* Lot 5: opt-in homepage sections. Hero, loading and typography remain unchanged. */
+/* The existing SectionHeading is the first child inside these five sections. */
+.evx-home-section > div > div:first-child {
+  border-top-color: var(--color-brand);
+}
+
+.evx-home-range {
+  padding: 16px;
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  background-color: var(--color-surface);
+}
+
+.evx-home-range svg circle {
+  fill: var(--color-brand);
+}
+
+.evx-home-range-bands > li:first-child {
+  border-top-color: var(--color-brand);
+}
+
+.evx-home-selection article {
+  border: 1px solid var(--color-line);
+  border-top: 2px solid var(--color-brand);
+  border-radius: 8px;
+}
+
+.evx-home-selection article:hover,
+.evx-home-selection article:focus-within {
+  border-color: var(--color-brand);
+}
+
+.evx-home-table {
+  border: 1px solid var(--color-line);
+  border-spacing: 0;
+  border-collapse: separate;
+  border-radius: 8px;
+  background-color: var(--color-surface);
+}
+
+.evx-home-table thead th {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: var(--color-paper);
+}
+
+.evx-home-table thead th:first-child {
+  border-top-left-radius: 7px;
+}
+
+.evx-home-table thead th:last-child {
+  border-top-right-radius: 7px;
+}
+
+.evx-home-table tbody th,
+.evx-home-table tbody td {
+  border-top: 1px solid var(--color-line);
+}
+
+.evx-home-table tr > :first-child {
+  padding-left: 8px;
+}
+
+.evx-home-table tr > :last-child {
+  padding-right: 8px;
+}
+
+.evx-home-selection .evx-home-table tbody tr:hover {
+  background-color: var(--color-paper);
+}
+
+@media (min-width: 40rem) {
+  .evx-home-table tr > :first-child {
+    padding-left: 16px;
+  }
+  .evx-home-table tr > :last-child {
+    padding-right: 16px;
+  }
+}
+
+.evx-home-brands {
+  gap: 8px;
+}
+
+.evx-home-brands a {
+  display: inline-flex;
+  min-height: 44px;
+  max-width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-line);
+  border-radius: 4px;
+  background-color: var(--color-surface);
+  background-image: none;
+}
+
+.evx-home-brands a:hover,
+.evx-home-brands a:focus-visible {
+  border-color: var(--color-brand);
+  color: var(--color-brand);
+}
+
+.evx-home-photo,
+.evx-home-lead img {
+  border-radius: 8px;
+}
+
+.evx-home-lead {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--color-line);
+  border-top: 2px solid var(--color-brand);
+  border-radius: 8px;
+  background-color: var(--color-surface);
+}
+
+.evx-home-lead:hover,
+.evx-home-lead:focus-within {
+  border-color: var(--color-brand);
+}
+
+.evx-home-reading-list,
+.evx-home-charge-list > li:first-child {
+  border-top-color: var(--color-brand);
+}
+
+.evx-home-reading-list a,
+.evx-home-charge-list a {
+  padding-inline: 12px;
+  border-radius: 4px;
+}
+
+.evx-home-reading-list a:hover,
+.evx-home-reading-list a:focus-visible {
+  background-color: var(--color-paper-deep);
+}
+
+.evx-home-charge-list a:hover,
+.evx-home-charge-list a:focus-visible {
+  background-color: var(--color-surface);
+}
+
+.evx-home-tools {
+  gap: 12px 24px;
+  border-top: 0;
+}
+
+.evx-home-tools > li {
+  min-width: 0;
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  background-color: var(--color-surface);
+}
+
+.evx-home-tools > li:hover,
+.evx-home-tools > li:focus-within {
+  border-color: var(--color-brand);
+}
+
+.evx-home-tools a {
+  height: 100%;
+  padding: 20px 16px;
+  border-radius: 7px;
+}
+
+.evx-home-tools a > span:nth-child(2) {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}

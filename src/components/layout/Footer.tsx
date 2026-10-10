@@ -20,7 +20,7 @@ function Ruler() {
 
 export function Footer() {
   return (
-    <footer className="on-ink mt-section bg-brand text-brand-muted">
+    <footer className="evx-footer on-ink mt-section bg-brand text-brand-muted">
       <Ruler />
       <div className="mx-auto w-full max-w-page px-4 pb-10 pt-14 sm:px-6 sm:pt-20">
         {/* Bandeau éditorial : promesse + accès direct aux deux usages centraux. */}
@@ -54,7 +54,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-x-8 gap-y-12 py-14 md:grid-cols-4">
+        <div className="evx-footer-columns grid grid-cols-2 gap-x-8 gap-y-12 py-14 md:grid-cols-4">
           {footerNav.map((col) => (
             <nav key={col.title} aria-label={col.title}>
               <h2 className="eyebrow text-paper">{col.title}</h2>
@@ -63,7 +63,7 @@ export function Footer() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="inline-flex min-h-8 items-center rounded-sm text-sm transition-colors hover:text-paper"
+                      className="evx-footer-link inline-flex min-h-8 items-center rounded-sm text-sm transition-colors hover:text-paper"
                     >
                       {item.label}
                     </Link>

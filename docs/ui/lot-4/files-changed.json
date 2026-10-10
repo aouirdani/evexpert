@@ -1,0 +1,16 @@
+{
+  "modified": [
+    "src/app/globals.css",
+    "src/components/guides/GuideCardVisual.tsx",
+    "src/components/layout/Footer.tsx",
+    "src/components/layout/Header.tsx",
+    "src/components/ui/Prose.tsx"
+  ],
+  "added": [
+    "src/components/layout/refinements.css"
+  ],
+  "deleted": [],
+  "unchanged": 321,
+  "before_count": 326,
+  "after_count": 327
+}

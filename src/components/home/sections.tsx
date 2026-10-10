@@ -35,7 +35,7 @@ export function RangeFinder({ vehicles }: { vehicles: WithHref[] }) {
   const lo = Math.min(...ranges);
   const hi = Math.max(...ranges);
   return (
-    <Section labelledBy="autonomie">
+    <Section labelledBy="autonomie" className="evx-home-section">
       <SectionHeading
         id="autonomie"
         numeral="01"
@@ -45,10 +45,10 @@ export function RangeFinder({ vehicles }: { vehicles: WithHref[] }) {
         action={<ArrowLink href="/guides/calculer-autonomie-reelle">Estimer son autonomie réelle</ArrowLink>}
       />
       <div className="grid gap-x-16 gap-y-12 lg:grid-cols-12">
-        <div className="lg:col-span-7">
+        <div className="evx-home-range lg:col-span-7">
           <RangeDistribution ranges={ranges} />
         </div>
-        <ol className="lg:col-span-5">
+        <ol className="evx-home-range-bands lg:col-span-5">
           {bands.map((b) => {
             const inBand = vehicles.filter((v) => b.test(v.rangeWltp)).sort((x, y) => y.rangeWltp - x.rangeWltp);
             // Un lien par modèle (les versions d'un même modèle se suivent), trois au plus.
@@ -110,7 +110,7 @@ export function Selection({
   total: number;
 }) {
   return (
-    <Section tone="deep" labelledBy="selection">
+    <Section tone="deep" labelledBy="selection" className="evx-home-section evx-home-selection">
       <SectionHeading
         id="selection"
         numeral="02"
@@ -120,7 +120,7 @@ export function Selection({
         action={<ArrowLink href="/voitures-electriques">Les {total} versions</ArrowLink>}
       />
 
-      <table className="hidden w-full sm:table">
+      <table className="evx-home-table hidden w-full sm:table">
         <caption className="sr-only">Six modèles du catalogue : autonomie, batterie et puissance de charge</caption>
         <VehicleRowsHead />
         <tbody>
@@ -135,7 +135,7 @@ export function Selection({
         ))}
       </div>
 
-      <nav aria-label="Marques" className="mt-12 flex flex-wrap items-baseline gap-x-5 gap-y-2 border-t border-line pt-5">
+      <nav aria-label="Marques" className="evx-home-brands mt-12 flex flex-wrap items-baseline gap-x-5 gap-y-2 border-t border-line pt-5">
         <span className="label mr-1">Par marque</span>
         {brands.map((b) => (
           <Link key={b.slug} href={`/voitures-electriques/${b.slug}`} className="link-u text-sm font-medium text-ink">
@@ -165,7 +165,7 @@ export function CompareSpotlight({ comparisons }: { comparisons: { slug: string;
   const duel = comparisons[0];
   const [a, b] = duel?.vehicles ?? [];
   return (
-    <Section labelledBy="compare">
+    <Section labelledBy="compare" className="evx-home-section">
       <SectionHeading
         id="compare"
         numeral="03"
@@ -181,7 +181,7 @@ export function CompareSpotlight({ comparisons }: { comparisons: { slug: string;
 
       {duel && a && b && (
         <div className="relative">
-          <table className="w-full text-left">
+          <table className="evx-home-table w-full text-left">
             <caption className="sr-only">
               Exemple de comparaison : {vehicleTitle(a)} contre {vehicleTitle(b)}
             </caption>
@@ -275,7 +275,7 @@ export function ChargingFeature({ photo }: { photo?: EditorialImage }) {
           <h2 id="recharge" className="balance mt-5 text-h1 font-bold text-ink">
             Recharger, c&apos;est une puissance, un lieu et un tarif.
           </h2>
-          <ul className="mt-10">
+          <ul className="evx-home-charge-list mt-10">
             {chargeItems.map((c) => (
               <li key={c.href} className="border-t border-line first:border-ink first:border-t-2">
                 <Link href={c.href} className="group flex items-start gap-4 py-5">
@@ -303,7 +303,7 @@ export function ChargingFeature({ photo }: { photo?: EditorialImage }) {
               width={photo.width}
               height={photo.height}
               sizes="(min-width: 1152px) 640px, (min-width: 1024px) 55vw, 100vw"
-              className="h-auto w-full"
+              className="evx-home-photo h-auto w-full"
             />
             <figcaption className="mt-3 text-caption text-muted">{photo.caption}</figcaption>
           </figure>
@@ -329,7 +329,7 @@ export function ReadingSection({
   guideTotal: number;
 }) {
   return (
-    <Section labelledBy="lire">
+    <Section labelledBy="lire" className="evx-home-section">
       <SectionHeading
         id="lire"
         numeral="05"
@@ -339,7 +339,7 @@ export function ReadingSection({
       />
       <div className="grid gap-x-14 gap-y-12 lg:grid-cols-12">
         {lead && (
-          <article className="group relative lg:col-span-7">
+          <article className="evx-home-lead group relative lg:col-span-7">
             {lead.hero && (
               <Image
                 src={lead.hero.src}
@@ -365,7 +365,7 @@ export function ReadingSection({
           </article>
         )}
         <div className={cn("min-w-0", lead ? "lg:col-span-5" : "lg:col-span-12")}>
-          <ul className="border-t-2 border-ink">
+          <ul className="evx-home-reading-list border-t-2 border-ink">
             {guides.map((g) => (
               <li key={g.slug} className="border-b border-line">
                 <Link href={`/guides/${g.slug}`} className="group flex items-start gap-4 py-5">
@@ -381,7 +381,7 @@ export function ReadingSection({
             ))}
           </ul>
           <p className="label mb-2 mt-10">Analyses récentes</p>
-          <ul className="border-t-2 border-ink">
+          <ul className="evx-home-reading-list border-t-2 border-ink">
             {articles.map((a) => (
               <li key={a.slug} className="border-b border-line">
                 <Link href={`/blog/${a.slug}`} className="group block py-5">
@@ -410,7 +410,7 @@ export function ReadingSection({
 
 export function ToolsLedger({ tools }: { tools: Tool[] }) {
   return (
-    <Section tone="deep" labelledBy="outils">
+    <Section tone="deep" labelledBy="outils" className="evx-home-section">
       <SectionHeading
         id="outils"
         numeral="06"
@@ -419,7 +419,7 @@ export function ToolsLedger({ tools }: { tools: Tool[] }) {
         description="Chaque outil affiche sa formule, un exemple chiffré, ses limites et une FAQ."
         action={<ArrowLink href="/outils">Tous les outils</ArrowLink>}
       />
-      <ol className="grid gap-x-14 border-t border-ink/15 md:grid-cols-2">
+      <ol className="evx-home-tools grid gap-x-14 border-t border-ink/15 md:grid-cols-2">
         {tools.map((t, i) => (
           <li key={t.slug} className="border-b border-ink/15">
             <Link href={t.href} className="group flex items-baseline gap-5 py-6">

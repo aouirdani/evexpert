@@ -1,0 +1,914 @@
+[
+  {
+    "tool": "tco-voiture-electrique",
+    "case": "default",
+    "fields": [
+      {
+        "id": "Véhicule A-price",
+        "value": "40000"
+      },
+      {
+        "id": "Véhicule A-bonus",
+        "value": "0"
+      },
+      {
+        "id": "Véhicule A-resaleValue",
+        "value": "18000"
+      },
+      {
+        "id": "Véhicule A-years",
+        "value": "5"
+      },
+      {
+        "id": "Véhicule A-annualKm",
+        "value": "15000"
+      },
+      {
+        "id": "Véhicule A-consumption",
+        "value": "16"
+      },
+      {
+        "id": "Véhicule A-energyPrice",
+        "value": "0.25"
+      },
+      {
+        "id": "Véhicule A-publicChargingShare",
+        "value": "20"
+      },
+      {
+        "id": "Véhicule A-publicChargingPrice",
+        "value": "0.45"
+      },
+      {
+        "id": "Véhicule A-insurance",
+        "value": "700"
+      },
+      {
+        "id": "Véhicule A-maintenance",
+        "value": "250"
+      },
+      {
+        "id": "Véhicule A-tires",
+        "value": "150"
+      },
+      {
+        "id": "Véhicule A-taxes",
+        "value": "0"
+      },
+      {
+        "id": "Véhicule B-price",
+        "value": "30000"
+      },
+      {
+        "id": "Véhicule B-bonus",
+        "value": "0"
+      },
+      {
+        "id": "Véhicule B-resaleValue",
+        "value": "13000"
+      },
+      {
+        "id": "Véhicule B-years",
+        "value": "5"
+      },
+      {
+        "id": "Véhicule B-annualKm",
+        "value": "15000"
+      },
+      {
+        "id": "Véhicule B-consumption",
+        "value": "6.5"
+      },
+      {
+        "id": "Véhicule B-energyPrice",
+        "value": "1.75"
+      },
+      {
+        "id": "Véhicule B-publicChargingShare",
+        "value": "0"
+      },
+      {
+        "id": "Véhicule B-publicChargingPrice",
+        "value": "0"
+      },
+      {
+        "id": "Véhicule B-insurance",
+        "value": "700"
+      },
+      {
+        "id": "Véhicule B-maintenance",
+        "value": "600"
+      },
+      {
+        "id": "Véhicule B-tires",
+        "value": "150"
+      },
+      {
+        "id": "Véhicule B-taxes",
+        "value": "60"
+      }
+    ],
+    "text": "Accueil/Outils/Calculateur TCO{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Outils\",\"item\":\"https://www.evexpert.fr/outils\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Calculateur TCO\",\"item\":\"https://www.evexpert.fr/outils/tco-voiture-electrique\"}]}CalculateurCalculateur de coût total de possession (TCO)Le coût total de possession (TCO) additionne tout ce qu'une voiture coûte sur la durée où vous la gardez : perte de valeur, énergie, assurance, entretien, pneus et taxes, moins les aides éventuelles.Estimation EVExpertDernière mise à jour : 21 septembre 2026Par Aymane OuirdaniDistinguez vos données (prix, kilométrage, énergie) des hypothèses (revente, assurance, entretien). Le TCO est aussi fiable que les valeurs saisies.Véhicule APrix (€)Aides déduites (€)Revente estimée (€)Durée (ans)Km / anConso /100 kmPrix énergiePart recharge publique (%)Prix recharge publiqueAssurance (€/an)Entretien (€/an)Pneus (€/an)Taxes (€/an)Véhicule BPrix (€)Aides déduites (€)Revente estimée (€)Durée (ans)Km / anConso /100 kmPrix énergiePart recharge publique (%)Prix recharge publiqueAssurance (€/an)Entretien (€/an)Pneus (€/an)Taxes (€/an)TCO total — Véhicule A (5 ans)30 980 €TCO total — Véhicule B (5 ans)33 081 €Coût mensuel — A516 €Coût mensuel — B551 €Coût / km — A0,41 €Coût / km — B0,44 €Répartition des coûts par poste22 000 €17 000 €Dépréciation3 480 €8 531 €Énergie3 500 €3 500 €Assurance1 250 €3 000 €Entretien750 €750 €Pneus0 €300 €TaxesVéhicule AVéhicule BRépartition des coûts par poste, véhicule A et véhicule BGroupeVéhicule AVéhicule BDépréciation22 000 €17 000 €Énergie3 480 €8 531 €Assurance3 500 €3 500 €Entretien1 250 €3 000 €Pneus750 €750 €Taxes0 €300 €Comparez deux véhicules côte à côte, électriques ou non. Distinguez bien ce que vous connaissez (prix, kilométrage, énergie) de ce que vous supposez (revente, entretien).Comment le calcul fonctionneChaque étape est visible : aucune hypothèse n'est cachée.Dépréciationprix d'achat − aides − valeur de revente estiméeÉnergieénergie totale × (part domicile × prix domicile + part publique × prix public)Autres postes(assurance + entretien + pneus + taxes) × duréeTCOdépréciation + énergie + autres postes ; par mois = TCO ÷ (12 × durée)Exemple concretExemple illustratif : véhicule à 40 000 €, revendu 18 000 € après 5 ans, 15 000 km/anDépréciation : 40 000 − 0 − 18 000 = 22 000 €Énergie sur 75 000 km (16 kWh/100 km, 20 % en recharge publique) : 3 480 €Assurance, entretien, pneus : 5 500 €TCO sur 5 ans : 30 980 €, soit 516 €/mois et 0,41 €/kmLimites du calculLa valeur de revente est l'hypothèse la plus sensible et la plus incertaine ; testez plusieurs scénarios.Les valeurs par défaut sont des exemples : elles ne représentent pas un modèle précis.Le calcul ne comprend ni le financement (intérêts), ni le coût d'une borne à domicile, ni le carburant de trajets exceptionnels.Les aides varient dans le temps et selon votre situation : saisissez uniquement celles auxquelles vous avez droit, vérifiées sur les sites officiels.La méthode complète, les hypothèses et les sources sont détaillées sur la page Méthodologie.Autres outilsCoût de recharge d'une voiture électrique : simulateurCoût au km et aux 100 km d'une voiture électriqueComparateur essence vs électriqueGuides associésComment calculer le TCO d'une voiture électrique ?Voiture électrique vs essence : quel est le coût réel ?Combien coûte une borne de recharge à domicile ?Fiches véhicules à consulterTesla Model Y RWD : fiche techniqueRenault Scénic E-Tech EV87 220 ch : fiche techniqueBYD Atto 3 Evo RWD Design : fiche techniqueQuestions fréquentesQue faut-il inclure dans les aides ?+Seulement les aides que vous pouvez effectivement percevoir, après vérification sur les sites officiels. Laissez 0 en cas de doute.Pourquoi le TCO est-il utile pour une électrique ?+Une électrique coûte généralement plus cher à l'achat mais peut coûter moins cher en énergie et en entretien : seule une vision sur plusieurs années permet de le vérifier pour votre usage.Sur quelle durée calculer ?+Sur la durée pendant laquelle vous comptez réellement garder la voiture (souvent 4 à 8 ans). Une durée trop courte accentue le poids de la dépréciation.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Que faut-il inclure dans les aides ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Seulement les aides que vous pouvez effectivement percevoir, après vérification sur les sites officiels. Laissez 0 en cas de doute.\"}},{\"@type\":\"Question\",\"name\":\"Pourquoi le TCO est-il utile pour une électrique ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Une électrique coûte généralement plus cher à l'achat mais peut coûter moins cher en énergie et en entretien : seule une vision sur plusieurs années permet de le vérifier pour votre usage.\"}},{\"@type\":\"Question\",\"name\":\"Sur quelle durée calculer ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Sur la durée pendant laquelle vous comptez réellement garder la voiture (souvent 4 à 8 ans). Une durée trop courte accentue le poids de la dépréciation.\"}}]}",
+    "tables": [
+      "Répartition des coûts par poste, véhicule A et véhicule BGroupeVéhicule AVéhicule BDépréciation22 000 €17 000 €Énergie3 480 €8 531 €Assurance3 500 €3 500 €Entretien1 250 €3 000 €Pneus750 €750 €Taxes0 €300 €"
+    ]
+  },
+  {
+    "tool": "tco-voiture-electrique",
+    "case": "fixed",
+    "fields": [
+      {
+        "id": "Véhicule A-price",
+        "value": "45000"
+      },
+      {
+        "id": "Véhicule A-bonus",
+        "value": "0"
+      },
+      {
+        "id": "Véhicule A-resaleValue",
+        "value": "17000"
+      },
+      {
+        "id": "Véhicule A-years",
+        "value": "8"
+      },
+      {
+        "id": "Véhicule A-annualKm",
+        "value": "20000"
+      },
+      {
+        "id": "Véhicule A-consumption",
+        "value": "16"
+      },
+      {
+        "id": "Véhicule A-energyPrice",
+        "value": "0.25"
+      },
+      {
+        "id": "Véhicule A-publicChargingShare",
+        "value": "40"
+      },
+      {
+        "id": "Véhicule A-publicChargingPrice",
+        "value": "0.45"
+      },
+      {
+        "id": "Véhicule A-insurance",
+        "value": "700"
+      },
+      {
+        "id": "Véhicule A-maintenance",
+        "value": "250"
+      },
+      {
+        "id": "Véhicule A-tires",
+        "value": "150"
+      },
+      {
+        "id": "Véhicule A-taxes",
+        "value": "0"
+      },
+      {
+        "id": "Véhicule B-price",
+        "value": "30000"
+      },
+      {
+        "id": "Véhicule B-bonus",
+        "value": "0"
+      },
+      {
+        "id": "Véhicule B-resaleValue",
+        "value": "13000"
+      },
+      {
+        "id": "Véhicule B-years",
+        "value": "8"
+      },
+      {
+        "id": "Véhicule B-annualKm",
+        "value": "20000"
+      },
+      {
+        "id": "Véhicule B-consumption",
+        "value": "7"
+      },
+      {
+        "id": "Véhicule B-energyPrice",
+        "value": "1.75"
+      },
+      {
+        "id": "Véhicule B-publicChargingShare",
+        "value": "0"
+      },
+      {
+        "id": "Véhicule B-publicChargingPrice",
+        "value": "0"
+      },
+      {
+        "id": "Véhicule B-insurance",
+        "value": "700"
+      },
+      {
+        "id": "Véhicule B-maintenance",
+        "value": "600"
+      },
+      {
+        "id": "Véhicule B-tires",
+        "value": "150"
+      },
+      {
+        "id": "Véhicule B-taxes",
+        "value": "60"
+      }
+    ],
+    "text": "Accueil/Outils/Calculateur TCO{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Outils\",\"item\":\"https://www.evexpert.fr/outils\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Calculateur TCO\",\"item\":\"https://www.evexpert.fr/outils/tco-voiture-electrique\"}]}CalculateurCalculateur de coût total de possession (TCO)Le coût total de possession (TCO) additionne tout ce qu'une voiture coûte sur la durée où vous la gardez : perte de valeur, énergie, assurance, entretien, pneus et taxes, moins les aides éventuelles.Estimation EVExpertDernière mise à jour : 21 septembre 2026Par Aymane OuirdaniDistinguez vos données (prix, kilométrage, énergie) des hypothèses (revente, assurance, entretien). Le TCO est aussi fiable que les valeurs saisies.Véhicule APrix (€)Aides déduites (€)Revente estimée (€)Durée (ans)Km / anConso /100 kmPrix énergiePart recharge publique (%)Prix recharge publiqueAssurance (€/an)Entretien (€/an)Pneus (€/an)Taxes (€/an)Véhicule BPrix (€)Aides déduites (€)Revente estimée (€)Durée (ans)Km / anConso /100 kmPrix énergiePart recharge publique (%)Prix recharge publiqueAssurance (€/an)Entretien (€/an)Pneus (€/an)Taxes (€/an)TCO total — Véhicule A (8 ans)45 248 €TCO total — Véhicule B (8 ans)48 680 €Coût mensuel — A471 €Coût mensuel — B507 €Coût / km — A0,28 €Coût / km — B0,30 €Répartition des coûts par poste28 000 €17 000 €Dépréciation8 448 €19 600 €Énergie5 600 €5 600 €Assurance2 000 €4 800 €Entretien1 200 €1 200 €Pneus0 €480 €TaxesVéhicule AVéhicule BRépartition des coûts par poste, véhicule A et véhicule BGroupeVéhicule AVéhicule BDépréciation28 000 €17 000 €Énergie8 448 €19 600 €Assurance5 600 €5 600 €Entretien2 000 €4 800 €Pneus1 200 €1 200 €Taxes0 €480 €Comparez deux véhicules côte à côte, électriques ou non. Distinguez bien ce que vous connaissez (prix, kilométrage, énergie) de ce que vous supposez (revente, entretien).Comment le calcul fonctionneChaque étape est visible : aucune hypothèse n'est cachée.Dépréciationprix d'achat − aides − valeur de revente estiméeÉnergieénergie totale × (part domicile × prix domicile + part publique × prix public)Autres postes(assurance + entretien + pneus + taxes) × duréeTCOdépréciation + énergie + autres postes ; par mois = TCO ÷ (12 × durée)Exemple concretExemple illustratif : véhicule à 40 000 €, revendu 18 000 € après 5 ans, 15 000 km/anDépréciation : 40 000 − 0 − 18 000 = 22 000 €Énergie sur 75 000 km (16 kWh/100 km, 20 % en recharge publique) : 3 480 €Assurance, entretien, pneus : 5 500 €TCO sur 5 ans : 30 980 €, soit 516 €/mois et 0,41 €/kmLimites du calculLa valeur de revente est l'hypothèse la plus sensible et la plus incertaine ; testez plusieurs scénarios.Les valeurs par défaut sont des exemples : elles ne représentent pas un modèle précis.Le calcul ne comprend ni le financement (intérêts), ni le coût d'une borne à domicile, ni le carburant de trajets exceptionnels.Les aides varient dans le temps et selon votre situation : saisissez uniquement celles auxquelles vous avez droit, vérifiées sur les sites officiels.La méthode complète, les hypothèses et les sources sont détaillées sur la page Méthodologie.Autres outilsCoût de recharge d'une voiture électrique : simulateurCoût au km et aux 100 km d'une voiture électriqueComparateur essence vs électriqueGuides associésComment calculer le TCO d'une voiture électrique ?Voiture électrique vs essence : quel est le coût réel ?Combien coûte une borne de recharge à domicile ?Fiches véhicules à consulterTesla Model Y RWD : fiche techniqueRenault Scénic E-Tech EV87 220 ch : fiche techniqueBYD Atto 3 Evo RWD Design : fiche techniqueQuestions fréquentesQue faut-il inclure dans les aides ?+Seulement les aides que vous pouvez effectivement percevoir, après vérification sur les sites officiels. Laissez 0 en cas de doute.Pourquoi le TCO est-il utile pour une électrique ?+Une électrique coûte généralement plus cher à l'achat mais peut coûter moins cher en énergie et en entretien : seule une vision sur plusieurs années permet de le vérifier pour votre usage.Sur quelle durée calculer ?+Sur la durée pendant laquelle vous comptez réellement garder la voiture (souvent 4 à 8 ans). Une durée trop courte accentue le poids de la dépréciation.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Que faut-il inclure dans les aides ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Seulement les aides que vous pouvez effectivement percevoir, après vérification sur les sites officiels. Laissez 0 en cas de doute.\"}},{\"@type\":\"Question\",\"name\":\"Pourquoi le TCO est-il utile pour une électrique ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Une électrique coûte généralement plus cher à l'achat mais peut coûter moins cher en énergie et en entretien : seule une vision sur plusieurs années permet de le vérifier pour votre usage.\"}},{\"@type\":\"Question\",\"name\":\"Sur quelle durée calculer ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Sur la durée pendant laquelle vous comptez réellement garder la voiture (souvent 4 à 8 ans). Une durée trop courte accentue le poids de la dépréciation.\"}}]}",
+    "tables": [
+      "Répartition des coûts par poste, véhicule A et véhicule BGroupeVéhicule AVéhicule BDépréciation28 000 €17 000 €Énergie8 448 €19 600 €Assurance5 600 €5 600 €Entretien2 000 €4 800 €Pneus1 200 €1 200 €Taxes0 €480 €"
+    ]
+  },
+  {
+    "tool": "essence-vs-electrique",
+    "case": "default",
+    "fields": [
+      {
+        "id": "Électrique-price",
+        "value": "40000"
+      },
+      {
+        "id": "Électrique-km",
+        "value": "15000"
+      },
+      {
+        "id": "Électrique-conso",
+        "value": "16"
+      },
+      {
+        "id": "Électrique-energy",
+        "value": "0.25"
+      },
+      {
+        "id": "Électrique-ins",
+        "value": "700"
+      },
+      {
+        "id": "Électrique-maint",
+        "value": "250"
+      },
+      {
+        "id": "Électrique-dep",
+        "value": "12"
+      },
+      {
+        "id": "Essence-price",
+        "value": "30000"
+      },
+      {
+        "id": "Essence-km",
+        "value": "15000"
+      },
+      {
+        "id": "Essence-conso",
+        "value": "6.5"
+      },
+      {
+        "id": "Essence-energy",
+        "value": "1.75"
+      },
+      {
+        "id": "Essence-ins",
+        "value": "650"
+      },
+      {
+        "id": "Essence-maint",
+        "value": "600"
+      },
+      {
+        "id": "Essence-dep",
+        "value": "14"
+      }
+    ],
+    "text": "Accueil/Outils/Essence vs électrique{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Outils\",\"item\":\"https://www.evexpert.fr/outils\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Essence vs électrique\",\"item\":\"https://www.evexpert.fr/outils/essence-vs-electrique\"}]}CalculateurComparateur essence vs électriqueComparer une électrique et une essence uniquement sur le prix d'achat ou sur le plein donne une image incomplète. Ce comparateur ajoute l'énergie, l'assurance, l'entretien et la dépréciation pour obtenir un coût annuel et un coût cumulé sur 3, 5 et 8 ans.Estimation EVExpertDernière mise à jour : 21 septembre 2026Par Aymane OuirdaniLes valeurs par défaut sont des hypothèses modifiables (assurance, entretien, dépréciation). Ajustez-les à votre situation pour un résultat pertinent.ÉlectriquePrix (€)Km / anConso (kWh/100)Prix énergieAssurance (€/an)Entretien (€/an)Dépréciation (%/an)EssencePrix (€)Km / anConso (L/100)Prix énergieAssurance (€/an)Entretien (€/an)Dépréciation (%/an)Coût annuel (électrique)6 350 €Coût mensuel (électrique)529 €Coût / km (électrique)0,42 €Coût annuel (essence)7 156 €Coût mensuel (essence)596 €Coût / km (essence)0,48 €Coût cumulé selon la durée19 050 €21 469 €3 ans31 750 €35 781 €5 ans50 800 €57 250 €8 ansÉlectriqueEssenceCoût cumulé sur 3, 5 et 8 ans : électrique et essenceGroupeÉlectriqueEssence3 ans19 050 €21 469 €5 ans31 750 €35 781 €8 ans50 800 €57 250 €Toutes les valeurs par défaut sont des hypothèses que vous pouvez modifier. Le résultat n'est utile que si vous les adaptez à votre situation.Comment le calcul fonctionneChaque étape est visible : aucune hypothèse n'est cachée.Énergie annuelleconsommation × prix de l'énergie × kilométrage annuel ÷ 100Dépréciation annuelleprix d'achat × taux de dépréciationCoût annuelénergie + assurance + entretien + dépréciationCoût cumulécoût annuel × nombre d'annéesExemple concretExemple illustratif : électrique à 40 000 €, essence à 30 000 €, 15 000 km/anÉlectrique : énergie 600 € + assurance 700 € + entretien 250 € + dépréciation 4 800 € = 6 350 €/anEssence : énergie 1 706 € + assurance 650 € + entretien 600 € + dépréciation 4 200 € = 7 156 €/anÉcart annuel : 806 € (les prix d'achat et taux de dépréciation ci-dessus sont fictifs, à remplacer par les vôtres)Limites du calculLes prix d'achat, assurances, entretiens et taux de dépréciation par défaut sont des hypothèses d'illustration, pas des données de marché.Les aides à l'achat, le coût d'une borne à domicile et la fiscalité ne sont pas inclus : ajoutez-les via le calculateur TCO.La dépréciation réelle dépend du modèle, du kilométrage et du marché de l'occasion : elle est difficile à prévoir.La méthode complète, les hypothèses et les sources sont détaillées sur la page Méthodologie.Autres outilsCoût de recharge d'une voiture électrique : simulateurCoût au km et aux 100 km d'une voiture électriqueCalculateur de coût total de possession (TCO)Guides associésVoiture électrique vs essence : quel est le coût réel ?Comment calculer le TCO d'une voiture électrique ?Comment choisir sa première voiture électrique ?Fiches véhicules à consulterRenault 5 E-Tech 52 kWh 150 ch : fiche techniquePeugeot e-208 50 kWh : fiche techniqueCitroën ë-C3 Standard Range 44 kWh : fiche techniqueQuestions fréquentesComment choisir le taux de dépréciation ?+Il est incertain. Testez plusieurs valeurs (par exemple 10, 12, 15 %) pour voir si la conclusion change : si oui, votre résultat dépend surtout de cette hypothèse.Pourquoi comparer sur 3, 5 et 8 ans ?+L'électrique coûte souvent plus cher à l'achat mais moins en usage : l'écart évolue avec la durée de détention.Ce comparateur remplace-t-il le TCO ?+Non : le TCO, plus détaillé, tient compte de la revente, des pneus, des taxes et de la part de recharge publique.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Comment choisir le taux de dépréciation ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Il est incertain. Testez plusieurs valeurs (par exemple 10, 12, 15 %) pour voir si la conclusion change : si oui, votre résultat dépend surtout de cette hypothèse.\"}},{\"@type\":\"Question\",\"name\":\"Pourquoi comparer sur 3, 5 et 8 ans ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"L'électrique coûte souvent plus cher à l'achat mais moins en usage : l'écart évolue avec la durée de détention.\"}},{\"@type\":\"Question\",\"name\":\"Ce comparateur remplace-t-il le TCO ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Non : le TCO, plus détaillé, tient compte de la revente, des pneus, des taxes et de la part de recharge publique.\"}}]}",
+    "tables": [
+      "Coût cumulé sur 3, 5 et 8 ans : électrique et essenceGroupeÉlectriqueEssence3 ans19 050 €21 469 €5 ans31 750 €35 781 €8 ans50 800 €57 250 €"
+    ]
+  },
+  {
+    "tool": "essence-vs-electrique",
+    "case": "fixed",
+    "fields": [
+      {
+        "id": "Électrique-price",
+        "value": "45000"
+      },
+      {
+        "id": "Électrique-km",
+        "value": "20000"
+      },
+      {
+        "id": "Électrique-conso",
+        "value": "18"
+      },
+      {
+        "id": "Électrique-energy",
+        "value": "0.25"
+      },
+      {
+        "id": "Électrique-ins",
+        "value": "700"
+      },
+      {
+        "id": "Électrique-maint",
+        "value": "250"
+      },
+      {
+        "id": "Électrique-dep",
+        "value": "12"
+      },
+      {
+        "id": "Essence-price",
+        "value": "30000"
+      },
+      {
+        "id": "Essence-km",
+        "value": "20000"
+      },
+      {
+        "id": "Essence-conso",
+        "value": "7"
+      },
+      {
+        "id": "Essence-energy",
+        "value": "1.75"
+      },
+      {
+        "id": "Essence-ins",
+        "value": "650"
+      },
+      {
+        "id": "Essence-maint",
+        "value": "600"
+      },
+      {
+        "id": "Essence-dep",
+        "value": "14"
+      }
+    ],
+    "text": "Accueil/Outils/Essence vs électrique{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Outils\",\"item\":\"https://www.evexpert.fr/outils\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Essence vs électrique\",\"item\":\"https://www.evexpert.fr/outils/essence-vs-electrique\"}]}CalculateurComparateur essence vs électriqueComparer une électrique et une essence uniquement sur le prix d'achat ou sur le plein donne une image incomplète. Ce comparateur ajoute l'énergie, l'assurance, l'entretien et la dépréciation pour obtenir un coût annuel et un coût cumulé sur 3, 5 et 8 ans.Estimation EVExpertDernière mise à jour : 21 septembre 2026Par Aymane OuirdaniLes valeurs par défaut sont des hypothèses modifiables (assurance, entretien, dépréciation). Ajustez-les à votre situation pour un résultat pertinent.ÉlectriquePrix (€)Km / anConso (kWh/100)Prix énergieAssurance (€/an)Entretien (€/an)Dépréciation (%/an)EssencePrix (€)Km / anConso (L/100)Prix énergieAssurance (€/an)Entretien (€/an)Dépréciation (%/an)Coût annuel (électrique)7 250 €Coût mensuel (électrique)604 €Coût / km (électrique)0,36 €Coût annuel (essence)7 900 €Coût mensuel (essence)658 €Coût / km (essence)0,40 €Coût cumulé selon la durée21 750 €23 700 €3 ans36 250 €39 500 €5 ans58 000 €63 200 €8 ansÉlectriqueEssenceCoût cumulé sur 3, 5 et 8 ans : électrique et essenceGroupeÉlectriqueEssence3 ans21 750 €23 700 €5 ans36 250 €39 500 €8 ans58 000 €63 200 €Toutes les valeurs par défaut sont des hypothèses que vous pouvez modifier. Le résultat n'est utile que si vous les adaptez à votre situation.Comment le calcul fonctionneChaque étape est visible : aucune hypothèse n'est cachée.Énergie annuelleconsommation × prix de l'énergie × kilométrage annuel ÷ 100Dépréciation annuelleprix d'achat × taux de dépréciationCoût annuelénergie + assurance + entretien + dépréciationCoût cumulécoût annuel × nombre d'annéesExemple concretExemple illustratif : électrique à 40 000 €, essence à 30 000 €, 15 000 km/anÉlectrique : énergie 600 € + assurance 700 € + entretien 250 € + dépréciation 4 800 € = 6 350 €/anEssence : énergie 1 706 € + assurance 650 € + entretien 600 € + dépréciation 4 200 € = 7 156 €/anÉcart annuel : 806 € (les prix d'achat et taux de dépréciation ci-dessus sont fictifs, à remplacer par les vôtres)Limites du calculLes prix d'achat, assurances, entretiens et taux de dépréciation par défaut sont des hypothèses d'illustration, pas des données de marché.Les aides à l'achat, le coût d'une borne à domicile et la fiscalité ne sont pas inclus : ajoutez-les via le calculateur TCO.La dépréciation réelle dépend du modèle, du kilométrage et du marché de l'occasion : elle est difficile à prévoir.La méthode complète, les hypothèses et les sources sont détaillées sur la page Méthodologie.Autres outilsCoût de recharge d'une voiture électrique : simulateurCoût au km et aux 100 km d'une voiture électriqueCalculateur de coût total de possession (TCO)Guides associésVoiture électrique vs essence : quel est le coût réel ?Comment calculer le TCO d'une voiture électrique ?Comment choisir sa première voiture électrique ?Fiches véhicules à consulterRenault 5 E-Tech 52 kWh 150 ch : fiche techniquePeugeot e-208 50 kWh : fiche techniqueCitroën ë-C3 Standard Range 44 kWh : fiche techniqueQuestions fréquentesComment choisir le taux de dépréciation ?+Il est incertain. Testez plusieurs valeurs (par exemple 10, 12, 15 %) pour voir si la conclusion change : si oui, votre résultat dépend surtout de cette hypothèse.Pourquoi comparer sur 3, 5 et 8 ans ?+L'électrique coûte souvent plus cher à l'achat mais moins en usage : l'écart évolue avec la durée de détention.Ce comparateur remplace-t-il le TCO ?+Non : le TCO, plus détaillé, tient compte de la revente, des pneus, des taxes et de la part de recharge publique.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Comment choisir le taux de dépréciation ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Il est incertain. Testez plusieurs valeurs (par exemple 10, 12, 15 %) pour voir si la conclusion change : si oui, votre résultat dépend surtout de cette hypothèse.\"}},{\"@type\":\"Question\",\"name\":\"Pourquoi comparer sur 3, 5 et 8 ans ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"L'électrique coûte souvent plus cher à l'achat mais moins en usage : l'écart évolue avec la durée de détention.\"}},{\"@type\":\"Question\",\"name\":\"Ce comparateur remplace-t-il le TCO ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Non : le TCO, plus détaillé, tient compte de la revente, des pneus, des taxes et de la part de recharge publique.\"}}]}",
+    "tables": [
+      "Coût cumulé sur 3, 5 et 8 ans : électrique et essenceGroupeÉlectriqueEssence3 ans21 750 €23 700 €5 ans36 250 €39 500 €8 ans58 000 €63 200 €"
+    ]
+  },
+  {
+    "tool": "temps-recharge",
+    "case": "default",
+    "fields": [
+      {
+        "id": "t-preset",
+        "value": ""
+      },
+      {
+        "id": "t-cap",
+        "value": "60"
+      },
+      {
+        "id": "t-current",
+        "value": "20"
+      },
+      {
+        "id": "t-target",
+        "value": "80"
+      },
+      {
+        "id": "t-power",
+        "value": "11"
+      },
+      {
+        "id": "t-eff",
+        "value": "90"
+      }
+    ],
+    "text": "Accueil/Outils/Temps de recharge{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Outils\",\"item\":\"https://www.evexpert.fr/outils\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Temps de recharge\",\"item\":\"https://www.evexpert.fr/outils/temps-recharge\"}]}CalculateurSimulateur de temps de recharge voiture électriqueLe temps de recharge dépend de l'énergie à ajouter et de la puissance réellement utilisée, qui est plafonnée à la fois par la borne et par la voiture.Estimation EVExpertDernière mise à jour : 21 septembre 2026Par Aymane OuirdaniCe temps est théorique. En recharge rapide (DC), la courbe de charge n'est pas linéaire : la puissance diminue au-delà de 80 %, le temps réel peut donc être plus long.Vos paramètresPréremplir avec un modèle (facultatif)Saisie manuelleTesla Model 3 RWD — 60 kWh utilesTesla Model 3 Long Range RWD — 75 kWh utilesTesla Model Y RWD — 60 kWh utilesTesla Model Y Long Range AWD — 75 kWh utilesRenault 5 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault 4 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault Twingo E-Tech 27,5 kWh — 27,5 kWh utilesRenault Scénic E-Tech EV87 220 ch — 87 kWh utilesRenault Mégane E-Tech EV60 220 ch — 60 kWh utilesCitroën ë-C3 Standard Range 44 kWh — 43,8 kWh utilesCitroën ë-C3 Aircross Extended Range 54 kWh — 53,5 kWh utilesPeugeot e-208 50 kWh — 50,8 kWh utilesPeugeot e-2008 54 kWh — 50,8 kWh utilesPeugeot e-3008 97 kWh Long Range — 96,9 kWh utilesDacia Spring Electric 70 — 24 kWh utilesFiat Grande Panda 44 kWh — 43,8 kWh utilesFiat 500e Hatchback 42 kWh — 37,3 kWh utilesOpel Corsa Electric 51 kWh — 48,1 kWh utilesOpel Mokka Electric 54 kWh — 50,8 kWh utilesFord Puma Gen-E Gen-E — 43,6 kWh utilesFord Explorer Extended Range RWD — 77 kWh utilesVolkswagen ID.4 Pro — 77 kWh utilesVolkswagen ID.7 86 kWh — 86 kWh utilesŠkoda Elroq 85 — 77 kWh utilesŠkoda Enyaq 85 — 77 kWh utilesCUPRA Born 170 kW 79 kWh — 79 kWh utilesAudi Q4 e-tron 40 — 59 kWh utilesBMW iX1 eDrive20 — 65,2 kWh utilesBMW i4 eDrive40 — 81,3 kWh utilesBMW iX3 40 — 82,6 kWh utilesMercedes-Benz CLA 250+ — 85 kWh utilesMercedes-Benz GLA 250+ — 85 kWh utilesHyundai Kona Electric 65 kWh — 65,4 kWh utilesHyundai IONIQ 5 84 kWh RWD — 80 kWh utilesHyundai INSTER Long Range — 46 kWh utilesKia EV3 Long Range — 78 kWh utilesKia EV6 Long Range AWD — 80 kWh utilesVolvo EX30 Single Motor Extended Range — 65 kWh utilesVolvo EX40 P5 Long Range — 79 kWh utilesBYD Dolphin Surf 43,2 kWh Comfort — 43,2 kWh utilesBYD Atto 3 Evo RWD Design — 74,8 kWh utilesBYD Seal 82,5 kWh AWD Excellence — 82,5 kWh utilesMG MG4 Urban Comfort Long Range — 52,8 kWh utilesMG MGS5 EV 64 kWh — 62,1 kWh utilesNissan Leaf Extended Range 75 kWh — 75,1 kWh utilessmart #1 Pro+ — 62 kWh utilesPorsche Macan 4 Electric — 94,9 kWh utilesRenseigne la capacité utile et rappelle la puissance AC maximale du modèle.Capacité utile (kWh)kWhÉtat de charge actuel20 %État de charge souhaité80 %Puissance de recharge3,7 kW — prise renforcée7,4 kW — wallbox monophasée11 kW — wallbox triphasée22 kW — borne AC voirie50 kW — recharge rapide150 kW — recharge rapide250 kW — ultra-rapideRendement de recharge90 %RésultatsTemps de recharge estimé3 h 3836,0 kWh à rechargerÉnergie à recharger36,0 kWhDurée en minutes≈ 218 minCalcul : énergie à recharger = capacité × (cible − actuel) / 100 ; temps = énergie / (puissance × rendement).Cet outil donne un temps théorique à puissance constante. Il est fiable en courant alternatif (AC), moins en recharge rapide (DC), où la puissance baisse au fil du remplissage.Comment le calcul fonctionneChaque étape est visible : aucune hypothèse n'est cachée.Énergie à ajoutercapacité utile × (état de charge visé − état de charge actuel) ÷ 100Puissance effectivepuissance de la borne × rendement (limitée par le chargeur du véhicule)Duréeénergie à ajouter ÷ puissance effective, en heuresExemple concretExemple : 60 kWh utiles, de 20 à 80 %, wallbox 11 kWÉnergie à ajouter : 60 × 60 ÷ 100 = 36,0 kWhPuissance effective : 11 × 0,90 = 9,9 kWDurée : 36,0 ÷ 9,9 ≈ 3 h 38Limites du calculEn DC, la courbe de charge n'est pas plate : la puissance diminue à mesure que la batterie se remplit, surtout au-delà de 80 %.La température de la batterie, l'état de santé et la borne elle-même peuvent limiter la puissance.Si la voiture n'accepte que 7,4 kW en AC, une borne 22 kW ne la chargera pas plus vite : saisissez la puissance que le véhicule accepte.La méthode complète, les hypothèses et les sources sont détaillées sur la page Méthodologie.Autres outilsCoût de recharge d'une voiture électrique : simulateurSimulateur d'autonomie d'une voiture électriquePuissance de borne : quel temps de recharge selon 3,7, 7,4, 11, 22 kW ou DC ?Guides associésCombien de temps faut-il pour recharger une voiture électrique ?Recharge AC ou DC : quelle différence ?Faut-il charger une voiture électrique à 80 % ?Fiches véhicules à consulterHyundai IONIQ 5 84 kWh RWD : fiche techniqueKia EV6 Long Range AWD : fiche techniqueRenault 5 E-Tech 52 kWh 150 ch : fiche techniqueQuestions fréquentesCombien de temps pour recharger de 10 à 80 % ?+Cela dépend du modèle et de la borne. Comparez dans le catalogue le temps 10-80 % en DC publié pour chaque fiche, et utilisez cet outil pour l'AC.Pourquoi la fin de la charge est-elle plus lente ?+La puissance est réduite pour protéger la batterie quand elle est presque pleine ; c'est pourquoi on s'arrête souvent vers 80 % en recharge rapide.Quelle puissance saisir à domicile ?+Celle de votre wallbox, ou du chargeur embarqué si celui-ci est plus faible. Une prise domestique classique délivre bien moins qu'une wallbox.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Combien de temps pour recharger de 10 à 80 % ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Cela dépend du modèle et de la borne. Comparez dans le catalogue le temps 10-80 % en DC publié pour chaque fiche, et utilisez cet outil pour l'AC.\"}},{\"@type\":\"Question\",\"name\":\"Pourquoi la fin de la charge est-elle plus lente ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"La puissance est réduite pour protéger la batterie quand elle est presque pleine ; c'est pourquoi on s'arrête souvent vers 80 % en recharge rapide.\"}},{\"@type\":\"Question\",\"name\":\"Quelle puissance saisir à domicile ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Celle de votre wallbox, ou du chargeur embarqué si celui-ci est plus faible. Une prise domestique classique délivre bien moins qu'une wallbox.\"}}]}",
+    "tables": []
+  },
+  {
+    "tool": "temps-recharge",
+    "case": "fixed",
+    "fields": [
+      {
+        "id": "t-preset",
+        "value": ""
+      },
+      {
+        "id": "t-cap",
+        "value": "72"
+      },
+      {
+        "id": "t-current",
+        "value": "15"
+      },
+      {
+        "id": "t-target",
+        "value": "85"
+      },
+      {
+        "id": "t-power",
+        "value": "7.4"
+      },
+      {
+        "id": "t-eff",
+        "value": "85"
+      }
+    ],
+    "text": "Accueil/Outils/Temps de recharge{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Outils\",\"item\":\"https://www.evexpert.fr/outils\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Temps de recharge\",\"item\":\"https://www.evexpert.fr/outils/temps-recharge\"}]}CalculateurSimulateur de temps de recharge voiture électriqueLe temps de recharge dépend de l'énergie à ajouter et de la puissance réellement utilisée, qui est plafonnée à la fois par la borne et par la voiture.Estimation EVExpertDernière mise à jour : 21 septembre 2026Par Aymane OuirdaniCe temps est théorique. En recharge rapide (DC), la courbe de charge n'est pas linéaire : la puissance diminue au-delà de 80 %, le temps réel peut donc être plus long.Vos paramètresPréremplir avec un modèle (facultatif)Saisie manuelleTesla Model 3 RWD — 60 kWh utilesTesla Model 3 Long Range RWD — 75 kWh utilesTesla Model Y RWD — 60 kWh utilesTesla Model Y Long Range AWD — 75 kWh utilesRenault 5 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault 4 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault Twingo E-Tech 27,5 kWh — 27,5 kWh utilesRenault Scénic E-Tech EV87 220 ch — 87 kWh utilesRenault Mégane E-Tech EV60 220 ch — 60 kWh utilesCitroën ë-C3 Standard Range 44 kWh — 43,8 kWh utilesCitroën ë-C3 Aircross Extended Range 54 kWh — 53,5 kWh utilesPeugeot e-208 50 kWh — 50,8 kWh utilesPeugeot e-2008 54 kWh — 50,8 kWh utilesPeugeot e-3008 97 kWh Long Range — 96,9 kWh utilesDacia Spring Electric 70 — 24 kWh utilesFiat Grande Panda 44 kWh — 43,8 kWh utilesFiat 500e Hatchback 42 kWh — 37,3 kWh utilesOpel Corsa Electric 51 kWh — 48,1 kWh utilesOpel Mokka Electric 54 kWh — 50,8 kWh utilesFord Puma Gen-E Gen-E — 43,6 kWh utilesFord Explorer Extended Range RWD — 77 kWh utilesVolkswagen ID.4 Pro — 77 kWh utilesVolkswagen ID.7 86 kWh — 86 kWh utilesŠkoda Elroq 85 — 77 kWh utilesŠkoda Enyaq 85 — 77 kWh utilesCUPRA Born 170 kW 79 kWh — 79 kWh utilesAudi Q4 e-tron 40 — 59 kWh utilesBMW iX1 eDrive20 — 65,2 kWh utilesBMW i4 eDrive40 — 81,3 kWh utilesBMW iX3 40 — 82,6 kWh utilesMercedes-Benz CLA 250+ — 85 kWh utilesMercedes-Benz GLA 250+ — 85 kWh utilesHyundai Kona Electric 65 kWh — 65,4 kWh utilesHyundai IONIQ 5 84 kWh RWD — 80 kWh utilesHyundai INSTER Long Range — 46 kWh utilesKia EV3 Long Range — 78 kWh utilesKia EV6 Long Range AWD — 80 kWh utilesVolvo EX30 Single Motor Extended Range — 65 kWh utilesVolvo EX40 P5 Long Range — 79 kWh utilesBYD Dolphin Surf 43,2 kWh Comfort — 43,2 kWh utilesBYD Atto 3 Evo RWD Design — 74,8 kWh utilesBYD Seal 82,5 kWh AWD Excellence — 82,5 kWh utilesMG MG4 Urban Comfort Long Range — 52,8 kWh utilesMG MGS5 EV 64 kWh — 62,1 kWh utilesNissan Leaf Extended Range 75 kWh — 75,1 kWh utilessmart #1 Pro+ — 62 kWh utilesPorsche Macan 4 Electric — 94,9 kWh utilesRenseigne la capacité utile et rappelle la puissance AC maximale du modèle.Capacité utile (kWh)kWhÉtat de charge actuel15 %État de charge souhaité85 %Puissance de recharge3,7 kW — prise renforcée7,4 kW — wallbox monophasée11 kW — wallbox triphasée22 kW — borne AC voirie50 kW — recharge rapide150 kW — recharge rapide250 kW — ultra-rapideRendement de recharge85 %RésultatsTemps de recharge estimé8 h 0150,4 kWh à rechargerÉnergie à recharger50,4 kWhDurée en minutes≈ 481 minCalcul : énergie à recharger = capacité × (cible − actuel) / 100 ; temps = énergie / (puissance × rendement).Cet outil donne un temps théorique à puissance constante. Il est fiable en courant alternatif (AC), moins en recharge rapide (DC), où la puissance baisse au fil du remplissage.Comment le calcul fonctionneChaque étape est visible : aucune hypothèse n'est cachée.Énergie à ajoutercapacité utile × (état de charge visé − état de charge actuel) ÷ 100Puissance effectivepuissance de la borne × rendement (limitée par le chargeur du véhicule)Duréeénergie à ajouter ÷ puissance effective, en heuresExemple concretExemple : 60 kWh utiles, de 20 à 80 %, wallbox 11 kWÉnergie à ajouter : 60 × 60 ÷ 100 = 36,0 kWhPuissance effective : 11 × 0,90 = 9,9 kWDurée : 36,0 ÷ 9,9 ≈ 3 h 38Limites du calculEn DC, la courbe de charge n'est pas plate : la puissance diminue à mesure que la batterie se remplit, surtout au-delà de 80 %.La température de la batterie, l'état de santé et la borne elle-même peuvent limiter la puissance.Si la voiture n'accepte que 7,4 kW en AC, une borne 22 kW ne la chargera pas plus vite : saisissez la puissance que le véhicule accepte.La méthode complète, les hypothèses et les sources sont détaillées sur la page Méthodologie.Autres outilsCoût de recharge d'une voiture électrique : simulateurSimulateur d'autonomie d'une voiture électriquePuissance de borne : quel temps de recharge selon 3,7, 7,4, 11, 22 kW ou DC ?Guides associésCombien de temps faut-il pour recharger une voiture électrique ?Recharge AC ou DC : quelle différence ?Faut-il charger une voiture électrique à 80 % ?Fiches véhicules à consulterHyundai IONIQ 5 84 kWh RWD : fiche techniqueKia EV6 Long Range AWD : fiche techniqueRenault 5 E-Tech 52 kWh 150 ch : fiche techniqueQuestions fréquentesCombien de temps pour recharger de 10 à 80 % ?+Cela dépend du modèle et de la borne. Comparez dans le catalogue le temps 10-80 % en DC publié pour chaque fiche, et utilisez cet outil pour l'AC.Pourquoi la fin de la charge est-elle plus lente ?+La puissance est réduite pour protéger la batterie quand elle est presque pleine ; c'est pourquoi on s'arrête souvent vers 80 % en recharge rapide.Quelle puissance saisir à domicile ?+Celle de votre wallbox, ou du chargeur embarqué si celui-ci est plus faible. Une prise domestique classique délivre bien moins qu'une wallbox.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Combien de temps pour recharger de 10 à 80 % ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Cela dépend du modèle et de la borne. Comparez dans le catalogue le temps 10-80 % en DC publié pour chaque fiche, et utilisez cet outil pour l'AC.\"}},{\"@type\":\"Question\",\"name\":\"Pourquoi la fin de la charge est-elle plus lente ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"La puissance est réduite pour protéger la batterie quand elle est presque pleine ; c'est pourquoi on s'arrête souvent vers 80 % en recharge rapide.\"}},{\"@type\":\"Question\",\"name\":\"Quelle puissance saisir à domicile ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Celle de votre wallbox, ou du chargeur embarqué si celui-ci est plus faible. Une prise domestique classique délivre bien moins qu'une wallbox.\"}}]}",
+    "tables": []
+  },
+  {
+    "tool": "cout-recharge-voiture-electrique",
+    "case": "default",
+    "fields": [
+      {
+        "id": "cc-preset",
+        "value": ""
+      },
+      {
+        "id": "cc-battery",
+        "value": "60"
+      },
+      {
+        "id": "cc-current",
+        "value": "20"
+      },
+      {
+        "id": "cc-target",
+        "value": "80"
+      },
+      {
+        "id": "cc-price",
+        "value": "0.25"
+      },
+      {
+        "id": "cc-eff",
+        "value": "90"
+      },
+      {
+        "id": "cc-conso",
+        "value": "16"
+      }
+    ],
+    "text": "Accueil/Outils/Coût de recharge{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Outils\",\"item\":\"https://www.evexpert.fr/outils\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Coût de recharge\",\"item\":\"https://www.evexpert.fr/outils/cout-recharge-voiture-electrique\"}]}CalculateurCoût de recharge d'une voiture électrique : simulateurCombien coûte une recharge, de 20 à 80 % ou de 0 à 100 % ? La réponse dépend de trois choses : l'énergie que la batterie doit recevoir, les pertes de charge, et le prix du kWh à l'endroit où vous vous branchez.Estimation EVExpertDernière mise à jour : 21 septembre 2026Par Aymane OuirdaniVos paramètresPréremplir avec un modèle (facultatif)Saisie manuelleTesla Model 3 RWD — 60 kWh utilesTesla Model 3 Long Range RWD — 75 kWh utilesTesla Model Y RWD — 60 kWh utilesTesla Model Y Long Range AWD — 75 kWh utilesRenault 5 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault 4 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault Twingo E-Tech 27,5 kWh — 27,5 kWh utilesRenault Scénic E-Tech EV87 220 ch — 87 kWh utilesRenault Mégane E-Tech EV60 220 ch — 60 kWh utilesCitroën ë-C3 Standard Range 44 kWh — 43,8 kWh utilesCitroën ë-C3 Aircross Extended Range 54 kWh — 53,5 kWh utilesPeugeot e-208 50 kWh — 50,8 kWh utilesPeugeot e-2008 54 kWh — 50,8 kWh utilesPeugeot e-3008 97 kWh Long Range — 96,9 kWh utilesDacia Spring Electric 70 — 24 kWh utilesFiat Grande Panda 44 kWh — 43,8 kWh utilesFiat 500e Hatchback 42 kWh — 37,3 kWh utilesOpel Corsa Electric 51 kWh — 48,1 kWh utilesOpel Mokka Electric 54 kWh — 50,8 kWh utilesFord Puma Gen-E Gen-E — 43,6 kWh utilesFord Explorer Extended Range RWD — 77 kWh utilesVolkswagen ID.4 Pro — 77 kWh utilesVolkswagen ID.7 86 kWh — 86 kWh utilesŠkoda Elroq 85 — 77 kWh utilesŠkoda Enyaq 85 — 77 kWh utilesCUPRA Born 170 kW 79 kWh — 79 kWh utilesAudi Q4 e-tron 40 — 59 kWh utilesBMW iX1 eDrive20 — 65,2 kWh utilesBMW i4 eDrive40 — 81,3 kWh utilesBMW iX3 40 — 82,6 kWh utilesMercedes-Benz CLA 250+ — 85 kWh utilesMercedes-Benz GLA 250+ — 85 kWh utilesHyundai Kona Electric 65 kWh — 65,4 kWh utilesHyundai IONIQ 5 84 kWh RWD — 80 kWh utilesHyundai INSTER Long Range — 46 kWh utilesKia EV3 Long Range — 78 kWh utilesKia EV6 Long Range AWD — 80 kWh utilesVolvo EX30 Single Motor Extended Range — 65 kWh utilesVolvo EX40 P5 Long Range — 79 kWh utilesBYD Dolphin Surf 43,2 kWh Comfort — 43,2 kWh utilesBYD Atto 3 Evo RWD Design — 74,8 kWh utilesBYD Seal 82,5 kWh AWD Excellence — 82,5 kWh utilesMG MG4 Urban Comfort Long Range — 52,8 kWh utilesMG MGS5 EV 64 kWh — 62,1 kWh utilesNissan Leaf Extended Range 75 kWh — 75,1 kWh utilessmart #1 Pro+ — 62 kWh utilesPorsche Macan 4 Electric — 94,9 kWh utilesPréremplit les champs avec les données de la fiche (source citée sur la fiche du modèle).Capacité utile de la batterie (kWh)kWhÉtat de charge actuel20 %État de charge souhaité80 %Prix du kWh (€)€/kWhHypothèse de départ (0,25 € à domicile) : reprenez le prix de votre contrat ou celui affiché à la borne.Rendement de recharge90 %Pertes en chaleur : généralement 85-95 %.Consommation moyenne (kWh/100 km)kWhSert à estimer les km ajoutés.RésultatsCoût total de la recharge10,00 €≈ 4,44 € / 100 km · +225 kmÉnergie stockée36,0 kWhÉnergie au compteur40,0 kWhCoût aux 100 km4,44 €Autonomie ajoutée≈ 225 kmCalcul transparent : énergie stockée = capacité × (cible − actuel) / 100 ; énergie au compteur = énergie stockée / rendement ; coût = énergie au compteur × prix du kWh.Cet outil détaille chaque étape du calcul pour que vous puissiez vérifier le résultat, l'adapter à votre contrat d'électricité et l'utiliser pour comparer domicile, borne publique et recharge rapide.Comment le calcul fonctionneChaque étape est visible : aucune hypothèse n'est cachée.Énergie stockéecapacité utile × (état de charge visé − état de charge actuel) ÷ 100Énergie au compteurénergie stockée ÷ rendement de chargeCoût de la rechargeénergie au compteur × prix du kWhAutonomie ajoutéeénergie stockée ÷ consommation × 100Exemple concretExemple : batterie de 60 kWh utiles, de 20 à 80 %, à 0,25 €/kWhÉnergie stockée : 60 × (80 − 20) ÷ 100 = 36,0 kWhÉnergie au compteur (rendement 90 %) : 36,0 ÷ 0,90 = 40,0 kWhCoût : 40,0 × 0,25 = 10,00 €Autonomie ajoutée à 16 kWh/100 km : 36,0 ÷ 16 × 100 ≈ 225 km, soit 4,44 € aux 100 kmLimites du calculLe prix du kWh est une valeur que vous saisissez : la valeur par défaut est une hypothèse EVExpert, pas un tarif officiel.Le rendement de charge varie (température, puissance, état de la batterie) ; 90 % est une valeur courante mais non universelle.En recharge rapide, certains opérateurs facturent à la minute ou avec un abonnement : le calcul au kWh ne les reflète pas.Les kilomètres ajoutés dépendent de votre consommation réelle, qui varie avec la vitesse et la température.La méthode complète, les hypothèses et les sources sont détaillées sur la page Méthodologie.Autres outilsSimulateur d'autonomie d'une voiture électriqueCoût au km et aux 100 km d'une voiture électriqueSimulateur de temps de recharge voiture électriqueGuides associésCombien coûte la recharge d'une voiture électrique à la maison ?Voiture électrique : recharge à domicile ou borne publique ?Faut-il charger une voiture électrique à 80 % ?Fiches véhicules à consulterRenault 5 E-Tech 52 kWh 150 ch : fiche techniqueTesla Model Y RWD : fiche techniqueŠkoda Elroq 85 : fiche techniqueQuestions fréquentesQuel prix du kWh faut-il saisir à domicile ?+Reprenez le prix TTC du kWh de votre contrat d'électricité (option de base ou heures creuses). Il figure sur votre facture ou dans votre espace client.Pourquoi l'énergie au compteur est-elle supérieure à l'énergie stockée ?+Une partie de l'énergie est perdue en chaleur dans le chargeur, les câbles et la batterie. Le rendement de charge mesure la part réellement stockée.Le calcul est-il valable en recharge rapide (DC) ?+Oui pour le coût au kWh, à condition de saisir le prix affiché à la borne. Les pertes y sont souvent moins bien connues : ajustez le rendement si besoin.Comment estimer le coût d'un plein complet ?+Réglez l'état de charge actuel à 0 % et l'objectif à 100 %. Dans la pratique, on recharge rarement de 0 à 100 % : voir le guide sur la charge à 80 %.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Quel prix du kWh faut-il saisir à domicile ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Reprenez le prix TTC du kWh de votre contrat d'électricité (option de base ou heures creuses). Il figure sur votre facture ou dans votre espace client.\"}},{\"@type\":\"Question\",\"name\":\"Pourquoi l'énergie au compteur est-elle supérieure à l'énergie stockée ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Une partie de l'énergie est perdue en chaleur dans le chargeur, les câbles et la batterie. Le rendement de charge mesure la part réellement stockée.\"}},{\"@type\":\"Question\",\"name\":\"Le calcul est-il valable en recharge rapide (DC) ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Oui pour le coût au kWh, à condition de saisir le prix affiché à la borne. Les pertes y sont souvent moins bien connues : ajustez le rendement si besoin.\"}},{\"@type\":\"Question\",\"name\":\"Comment estimer le coût d'un plein complet ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Réglez l'état de charge actuel à 0 % et l'objectif à 100 %. Dans la pratique, on recharge rarement de 0 à 100 % : voir le guide sur la charge à 80 %.\"}}]}",
+    "tables": []
+  },
+  {
+    "tool": "cout-recharge-voiture-electrique",
+    "case": "fixed",
+    "fields": [
+      {
+        "id": "cc-preset",
+        "value": ""
+      },
+      {
+        "id": "cc-battery",
+        "value": "72"
+      },
+      {
+        "id": "cc-current",
+        "value": "10"
+      },
+      {
+        "id": "cc-target",
+        "value": "90"
+      },
+      {
+        "id": "cc-price",
+        "value": "0.25"
+      },
+      {
+        "id": "cc-eff",
+        "value": "85"
+      },
+      {
+        "id": "cc-conso",
+        "value": "16"
+      }
+    ],
+    "text": "Accueil/Outils/Coût de recharge{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Outils\",\"item\":\"https://www.evexpert.fr/outils\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Coût de recharge\",\"item\":\"https://www.evexpert.fr/outils/cout-recharge-voiture-electrique\"}]}CalculateurCoût de recharge d'une voiture électrique : simulateurCombien coûte une recharge, de 20 à 80 % ou de 0 à 100 % ? La réponse dépend de trois choses : l'énergie que la batterie doit recevoir, les pertes de charge, et le prix du kWh à l'endroit où vous vous branchez.Estimation EVExpertDernière mise à jour : 21 septembre 2026Par Aymane OuirdaniVos paramètresPréremplir avec un modèle (facultatif)Saisie manuelleTesla Model 3 RWD — 60 kWh utilesTesla Model 3 Long Range RWD — 75 kWh utilesTesla Model Y RWD — 60 kWh utilesTesla Model Y Long Range AWD — 75 kWh utilesRenault 5 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault 4 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault Twingo E-Tech 27,5 kWh — 27,5 kWh utilesRenault Scénic E-Tech EV87 220 ch — 87 kWh utilesRenault Mégane E-Tech EV60 220 ch — 60 kWh utilesCitroën ë-C3 Standard Range 44 kWh — 43,8 kWh utilesCitroën ë-C3 Aircross Extended Range 54 kWh — 53,5 kWh utilesPeugeot e-208 50 kWh — 50,8 kWh utilesPeugeot e-2008 54 kWh — 50,8 kWh utilesPeugeot e-3008 97 kWh Long Range — 96,9 kWh utilesDacia Spring Electric 70 — 24 kWh utilesFiat Grande Panda 44 kWh — 43,8 kWh utilesFiat 500e Hatchback 42 kWh — 37,3 kWh utilesOpel Corsa Electric 51 kWh — 48,1 kWh utilesOpel Mokka Electric 54 kWh — 50,8 kWh utilesFord Puma Gen-E Gen-E — 43,6 kWh utilesFord Explorer Extended Range RWD — 77 kWh utilesVolkswagen ID.4 Pro — 77 kWh utilesVolkswagen ID.7 86 kWh — 86 kWh utilesŠkoda Elroq 85 — 77 kWh utilesŠkoda Enyaq 85 — 77 kWh utilesCUPRA Born 170 kW 79 kWh — 79 kWh utilesAudi Q4 e-tron 40 — 59 kWh utilesBMW iX1 eDrive20 — 65,2 kWh utilesBMW i4 eDrive40 — 81,3 kWh utilesBMW iX3 40 — 82,6 kWh utilesMercedes-Benz CLA 250+ — 85 kWh utilesMercedes-Benz GLA 250+ — 85 kWh utilesHyundai Kona Electric 65 kWh — 65,4 kWh utilesHyundai IONIQ 5 84 kWh RWD — 80 kWh utilesHyundai INSTER Long Range — 46 kWh utilesKia EV3 Long Range — 78 kWh utilesKia EV6 Long Range AWD — 80 kWh utilesVolvo EX30 Single Motor Extended Range — 65 kWh utilesVolvo EX40 P5 Long Range — 79 kWh utilesBYD Dolphin Surf 43,2 kWh Comfort — 43,2 kWh utilesBYD Atto 3 Evo RWD Design — 74,8 kWh utilesBYD Seal 82,5 kWh AWD Excellence — 82,5 kWh utilesMG MG4 Urban Comfort Long Range — 52,8 kWh utilesMG MGS5 EV 64 kWh — 62,1 kWh utilesNissan Leaf Extended Range 75 kWh — 75,1 kWh utilessmart #1 Pro+ — 62 kWh utilesPorsche Macan 4 Electric — 94,9 kWh utilesPréremplit les champs avec les données de la fiche (source citée sur la fiche du modèle).Capacité utile de la batterie (kWh)kWhÉtat de charge actuel10 %État de charge souhaité90 %Prix du kWh (€)€/kWhHypothèse de départ (0,25 € à domicile) : reprenez le prix de votre contrat ou celui affiché à la borne.Rendement de recharge85 %Pertes en chaleur : généralement 85-95 %.Consommation moyenne (kWh/100 km)kWhSert à estimer les km ajoutés.RésultatsCoût total de la recharge16,94 €≈ 4,71 € / 100 km · +360 kmÉnergie stockée57,6 kWhÉnergie au compteur67,8 kWhCoût aux 100 km4,71 €Autonomie ajoutée≈ 360 kmCalcul transparent : énergie stockée = capacité × (cible − actuel) / 100 ; énergie au compteur = énergie stockée / rendement ; coût = énergie au compteur × prix du kWh.Cet outil détaille chaque étape du calcul pour que vous puissiez vérifier le résultat, l'adapter à votre contrat d'électricité et l'utiliser pour comparer domicile, borne publique et recharge rapide.Comment le calcul fonctionneChaque étape est visible : aucune hypothèse n'est cachée.Énergie stockéecapacité utile × (état de charge visé − état de charge actuel) ÷ 100Énergie au compteurénergie stockée ÷ rendement de chargeCoût de la rechargeénergie au compteur × prix du kWhAutonomie ajoutéeénergie stockée ÷ consommation × 100Exemple concretExemple : batterie de 60 kWh utiles, de 20 à 80 %, à 0,25 €/kWhÉnergie stockée : 60 × (80 − 20) ÷ 100 = 36,0 kWhÉnergie au compteur (rendement 90 %) : 36,0 ÷ 0,90 = 40,0 kWhCoût : 40,0 × 0,25 = 10,00 €Autonomie ajoutée à 16 kWh/100 km : 36,0 ÷ 16 × 100 ≈ 225 km, soit 4,44 € aux 100 kmLimites du calculLe prix du kWh est une valeur que vous saisissez : la valeur par défaut est une hypothèse EVExpert, pas un tarif officiel.Le rendement de charge varie (température, puissance, état de la batterie) ; 90 % est une valeur courante mais non universelle.En recharge rapide, certains opérateurs facturent à la minute ou avec un abonnement : le calcul au kWh ne les reflète pas.Les kilomètres ajoutés dépendent de votre consommation réelle, qui varie avec la vitesse et la température.La méthode complète, les hypothèses et les sources sont détaillées sur la page Méthodologie.Autres outilsSimulateur d'autonomie d'une voiture électriqueCoût au km et aux 100 km d'une voiture électriqueSimulateur de temps de recharge voiture électriqueGuides associésCombien coûte la recharge d'une voiture électrique à la maison ?Voiture électrique : recharge à domicile ou borne publique ?Faut-il charger une voiture électrique à 80 % ?Fiches véhicules à consulterRenault 5 E-Tech 52 kWh 150 ch : fiche techniqueTesla Model Y RWD : fiche techniqueŠkoda Elroq 85 : fiche techniqueQuestions fréquentesQuel prix du kWh faut-il saisir à domicile ?+Reprenez le prix TTC du kWh de votre contrat d'électricité (option de base ou heures creuses). Il figure sur votre facture ou dans votre espace client.Pourquoi l'énergie au compteur est-elle supérieure à l'énergie stockée ?+Une partie de l'énergie est perdue en chaleur dans le chargeur, les câbles et la batterie. Le rendement de charge mesure la part réellement stockée.Le calcul est-il valable en recharge rapide (DC) ?+Oui pour le coût au kWh, à condition de saisir le prix affiché à la borne. Les pertes y sont souvent moins bien connues : ajustez le rendement si besoin.Comment estimer le coût d'un plein complet ?+Réglez l'état de charge actuel à 0 % et l'objectif à 100 %. Dans la pratique, on recharge rarement de 0 à 100 % : voir le guide sur la charge à 80 %.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Quel prix du kWh faut-il saisir à domicile ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Reprenez le prix TTC du kWh de votre contrat d'électricité (option de base ou heures creuses). Il figure sur votre facture ou dans votre espace client.\"}},{\"@type\":\"Question\",\"name\":\"Pourquoi l'énergie au compteur est-elle supérieure à l'énergie stockée ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Une partie de l'énergie est perdue en chaleur dans le chargeur, les câbles et la batterie. Le rendement de charge mesure la part réellement stockée.\"}},{\"@type\":\"Question\",\"name\":\"Le calcul est-il valable en recharge rapide (DC) ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Oui pour le coût au kWh, à condition de saisir le prix affiché à la borne. Les pertes y sont souvent moins bien connues : ajustez le rendement si besoin.\"}},{\"@type\":\"Question\",\"name\":\"Comment estimer le coût d'un plein complet ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Réglez l'état de charge actuel à 0 % et l'objectif à 100 %. Dans la pratique, on recharge rarement de 0 à 100 % : voir le guide sur la charge à 80 %.\"}}]}",
+    "tables": []
+  },
+  {
+    "tool": "autonomie-voiture-electrique",
+    "case": "default",
+    "fields": [
+      {
+        "id": "r-preset",
+        "value": ""
+      },
+      {
+        "id": "r-cap",
+        "value": "60"
+      },
+      {
+        "id": "r-conso",
+        "value": "16"
+      },
+      {
+        "id": "r-speed",
+        "value": "110"
+      },
+      {
+        "id": "r-temp",
+        "value": "15"
+      },
+      {
+        "id": "r-driving",
+        "value": "mixte"
+      },
+      {
+        "id": "r-reserve",
+        "value": "10"
+      }
+    ],
+    "text": "Accueil/Outils/Autonomie réelle{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Outils\",\"item\":\"https://www.evexpert.fr/outils\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Autonomie réelle\",\"item\":\"https://www.evexpert.fr/outils/autonomie-voiture-electrique\"}]}CalculateurSimulateur d'autonomie d'une voiture électriqueL'autonomie WLTP affichée par les constructeurs est mesurée dans des conditions normalisées. Sur la route, la vitesse, la température et le type de trajet la font varier, parfois fortement.Estimation EVExpertDernière mise à jour : 21 septembre 2026Par Aymane OuirdaniCette autonomie est une estimation et non une valeur officielle constructeur. Elle dépend de nombreux facteurs réels.Vos paramètresPréremplir avec un modèle (facultatif)Saisie manuelleTesla Model 3 RWD — 60 kWh utilesTesla Model 3 Long Range RWD — 75 kWh utilesTesla Model Y RWD — 60 kWh utilesTesla Model Y Long Range AWD — 75 kWh utilesRenault 5 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault 4 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault Twingo E-Tech 27,5 kWh — 27,5 kWh utilesRenault Scénic E-Tech EV87 220 ch — 87 kWh utilesRenault Mégane E-Tech EV60 220 ch — 60 kWh utilesCitroën ë-C3 Standard Range 44 kWh — 43,8 kWh utilesCitroën ë-C3 Aircross Extended Range 54 kWh — 53,5 kWh utilesPeugeot e-208 50 kWh — 50,8 kWh utilesPeugeot e-2008 54 kWh — 50,8 kWh utilesPeugeot e-3008 97 kWh Long Range — 96,9 kWh utilesDacia Spring Electric 70 — 24 kWh utilesFiat Grande Panda 44 kWh — 43,8 kWh utilesFiat 500e Hatchback 42 kWh — 37,3 kWh utilesOpel Corsa Electric 51 kWh — 48,1 kWh utilesOpel Mokka Electric 54 kWh — 50,8 kWh utilesFord Puma Gen-E Gen-E — 43,6 kWh utilesFord Explorer Extended Range RWD — 77 kWh utilesVolkswagen ID.4 Pro — 77 kWh utilesVolkswagen ID.7 86 kWh — 86 kWh utilesŠkoda Elroq 85 — 77 kWh utilesŠkoda Enyaq 85 — 77 kWh utilesCUPRA Born 170 kW 79 kWh — 79 kWh utilesAudi Q4 e-tron 40 — 59 kWh utilesBMW iX1 eDrive20 — 65,2 kWh utilesBMW i4 eDrive40 — 81,3 kWh utilesBMW iX3 40 — 82,6 kWh utilesMercedes-Benz CLA 250+ — 85 kWh utilesMercedes-Benz GLA 250+ — 85 kWh utilesHyundai Kona Electric 65 kWh — 65,4 kWh utilesHyundai IONIQ 5 84 kWh RWD — 80 kWh utilesHyundai INSTER Long Range — 46 kWh utilesKia EV3 Long Range — 78 kWh utilesKia EV6 Long Range AWD — 80 kWh utilesVolvo EX30 Single Motor Extended Range — 65 kWh utilesVolvo EX40 P5 Long Range — 79 kWh utilesBYD Dolphin Surf 43,2 kWh Comfort — 43,2 kWh utilesBYD Atto 3 Evo RWD Design — 74,8 kWh utilesBYD Seal 82,5 kWh AWD Excellence — 82,5 kWh utilesMG MG4 Urban Comfort Long Range — 52,8 kWh utilesMG MGS5 EV 64 kWh — 62,1 kWh utilesNissan Leaf Extended Range 75 kWh — 75,1 kWh utilessmart #1 Pro+ — 62 kWh utilesPorsche Macan 4 Electric — 94,9 kWh utilesConsommation de référence = capacité utile ÷ autonomie WLTP de la fiche.Capacité utile (kWh)kWhConsommation de référence (kWh/100 km)kWhVitesse moyenne110 km/hTempérature extérieure15 °CType de conduiteVilleMixteAutorouteRéserve de batterie conservée10 %RésultatsAutonomie estimée279 kmConsommation ajustée ≈ 19,4 kWh/100 kmÉnergie exploitable54,0 kWhConsommation ajustée19,4 kWh/100L'estimation applique des facteurs liés à la vitesse, la température et le type de conduite à votre consommation de référence.Cet outil applique des facteurs simples et visibles à la consommation de référence de votre voiture pour estimer l'autonomie dans vos conditions. Le résultat est une estimation EVExpert, jamais une valeur constructeur.Comment le calcul fonctionneChaque étape est visible : aucune hypothèse n'est cachée.Consommation ajustéeconsommation de référence × facteur température × facteur trajet × facteur vitesseÉnergie exploitablecapacité utile × (1 − réserve conservée)Autonomie estiméeénergie exploitable ÷ consommation ajustée × 100Consommation de référencecapacité utile ÷ autonomie WLTP × 100 (côté batterie)Exemple concretExemple : 60 kWh utiles, 16 kWh/100 km de référence, mixte, 15 °C, 110 km/h, 10 % de réserveFacteurs appliqués : température 15 °C ×1,08 ; trajet mixte ×1,00 ; vitesse 110 km/h ×1,12 (0,6 % par km/h au-delà de 90)Consommation ajustée : 16 × 1,08 × 1,00 × 1,12 ≈ 19,4 kWh/100 kmÉnergie exploitable : 60 × 0,90 = 54,0 kWhAutonomie estimée : 54,0 ÷ 19,4 × 100 ≈ 279 kmLimites du calculLes facteurs (température, vitesse, trajet) sont des approximations EVExpert, pas des mesures : voir la page Méthodologie.Le modèle ignore le dénivelé, le vent, les pneus, le chauffage de l'habitacle, la charge du véhicule et l'état de santé de la batterie.La consommation de référence dérive de l'autonomie WLTP : si la valeur WLTP de la source est différente de la vôtre, saisissez la vôtre.Une réserve de sécurité évite de rouler jusqu'à 0 % ; 10 % est un choix prudent, pas une règle.La méthode complète, les hypothèses et les sources sont détaillées sur la page Méthodologie.Autres outilsCoût de recharge d'une voiture électrique : simulateurCoût au km et aux 100 km d'une voiture électriqueSimulateur de temps de recharge voiture électriqueGuides associésComment calculer l'autonomie réelle d'une voiture électrique ?Pourquoi l'autonomie d'une voiture électrique baisse-t-elle en hiver ?Quelle autonomie sur autoroute avec une voiture électrique ?WLTP : qu'est-ce que c'est et que mesure-t-il vraiment ?Fiches véhicules à consulterTesla Model 3 Long Range RWD : fiche techniqueVolkswagen ID.7 86 kWh : fiche techniqueKia EV3 Long Range : fiche techniqueQuestions fréquentesPourquoi mon autonomie réelle est-elle inférieure à l'autonomie WLTP ?+Le WLTP est mesuré en laboratoire, à température douce et avec une vitesse moyenne modérée. Vitesse élevée, froid, chauffage et relief augmentent la consommation.L'estimation vaut-elle pour un trajet sur autoroute ?+Choisissez « Autoroute » et la vitesse réelle. C'est le cas où l'écart avec le WLTP est le plus fort, car la résistance de l'air croît avec le carré de la vitesse.Comment obtenir une autonomie plus précise ?+Relevez la consommation moyenne affichée par votre voiture sur des trajets comparables et saisissez-la comme consommation de référence.Le froid réduit-il la capacité de la batterie ?+Il réduit surtout l'efficacité globale : chauffage, batterie moins performante à basse température. Le résultat est une consommation plus élevée.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Pourquoi mon autonomie réelle est-elle inférieure à l'autonomie WLTP ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Le WLTP est mesuré en laboratoire, à température douce et avec une vitesse moyenne modérée. Vitesse élevée, froid, chauffage et relief augmentent la consommation.\"}},{\"@type\":\"Question\",\"name\":\"L'estimation vaut-elle pour un trajet sur autoroute ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Choisissez « Autoroute » et la vitesse réelle. C'est le cas où l'écart avec le WLTP est le plus fort, car la résistance de l'air croît avec le carré de la vitesse.\"}},{\"@type\":\"Question\",\"name\":\"Comment obtenir une autonomie plus précise ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Relevez la consommation moyenne affichée par votre voiture sur des trajets comparables et saisissez-la comme consommation de référence.\"}},{\"@type\":\"Question\",\"name\":\"Le froid réduit-il la capacité de la batterie ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Il réduit surtout l'efficacité globale : chauffage, batterie moins performante à basse température. Le résultat est une consommation plus élevée.\"}}]}",
+    "tables": []
+  },
+  {
+    "tool": "autonomie-voiture-electrique",
+    "case": "fixed",
+    "fields": [
+      {
+        "id": "r-preset",
+        "value": ""
+      },
+      {
+        "id": "r-cap",
+        "value": "72"
+      },
+      {
+        "id": "r-conso",
+        "value": "18"
+      },
+      {
+        "id": "r-speed",
+        "value": "130"
+      },
+      {
+        "id": "r-temp",
+        "value": "0"
+      },
+      {
+        "id": "r-driving",
+        "value": "autoroute"
+      },
+      {
+        "id": "r-reserve",
+        "value": "15"
+      }
+    ],
+    "text": "Accueil/Outils/Autonomie réelle{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Outils\",\"item\":\"https://www.evexpert.fr/outils\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Autonomie réelle\",\"item\":\"https://www.evexpert.fr/outils/autonomie-voiture-electrique\"}]}CalculateurSimulateur d'autonomie d'une voiture électriqueL'autonomie WLTP affichée par les constructeurs est mesurée dans des conditions normalisées. Sur la route, la vitesse, la température et le type de trajet la font varier, parfois fortement.Estimation EVExpertDernière mise à jour : 21 septembre 2026Par Aymane OuirdaniCette autonomie est une estimation et non une valeur officielle constructeur. Elle dépend de nombreux facteurs réels.Vos paramètresPréremplir avec un modèle (facultatif)Saisie manuelleTesla Model 3 RWD — 60 kWh utilesTesla Model 3 Long Range RWD — 75 kWh utilesTesla Model Y RWD — 60 kWh utilesTesla Model Y Long Range AWD — 75 kWh utilesRenault 5 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault 4 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault Twingo E-Tech 27,5 kWh — 27,5 kWh utilesRenault Scénic E-Tech EV87 220 ch — 87 kWh utilesRenault Mégane E-Tech EV60 220 ch — 60 kWh utilesCitroën ë-C3 Standard Range 44 kWh — 43,8 kWh utilesCitroën ë-C3 Aircross Extended Range 54 kWh — 53,5 kWh utilesPeugeot e-208 50 kWh — 50,8 kWh utilesPeugeot e-2008 54 kWh — 50,8 kWh utilesPeugeot e-3008 97 kWh Long Range — 96,9 kWh utilesDacia Spring Electric 70 — 24 kWh utilesFiat Grande Panda 44 kWh — 43,8 kWh utilesFiat 500e Hatchback 42 kWh — 37,3 kWh utilesOpel Corsa Electric 51 kWh — 48,1 kWh utilesOpel Mokka Electric 54 kWh — 50,8 kWh utilesFord Puma Gen-E Gen-E — 43,6 kWh utilesFord Explorer Extended Range RWD — 77 kWh utilesVolkswagen ID.4 Pro — 77 kWh utilesVolkswagen ID.7 86 kWh — 86 kWh utilesŠkoda Elroq 85 — 77 kWh utilesŠkoda Enyaq 85 — 77 kWh utilesCUPRA Born 170 kW 79 kWh — 79 kWh utilesAudi Q4 e-tron 40 — 59 kWh utilesBMW iX1 eDrive20 — 65,2 kWh utilesBMW i4 eDrive40 — 81,3 kWh utilesBMW iX3 40 — 82,6 kWh utilesMercedes-Benz CLA 250+ — 85 kWh utilesMercedes-Benz GLA 250+ — 85 kWh utilesHyundai Kona Electric 65 kWh — 65,4 kWh utilesHyundai IONIQ 5 84 kWh RWD — 80 kWh utilesHyundai INSTER Long Range — 46 kWh utilesKia EV3 Long Range — 78 kWh utilesKia EV6 Long Range AWD — 80 kWh utilesVolvo EX30 Single Motor Extended Range — 65 kWh utilesVolvo EX40 P5 Long Range — 79 kWh utilesBYD Dolphin Surf 43,2 kWh Comfort — 43,2 kWh utilesBYD Atto 3 Evo RWD Design — 74,8 kWh utilesBYD Seal 82,5 kWh AWD Excellence — 82,5 kWh utilesMG MG4 Urban Comfort Long Range — 52,8 kWh utilesMG MGS5 EV 64 kWh — 62,1 kWh utilesNissan Leaf Extended Range 75 kWh — 75,1 kWh utilessmart #1 Pro+ — 62 kWh utilesPorsche Macan 4 Electric — 94,9 kWh utilesConsommation de référence = capacité utile ÷ autonomie WLTP de la fiche.Capacité utile (kWh)kWhConsommation de référence (kWh/100 km)kWhVitesse moyenne130 km/hTempérature extérieure0 °CType de conduiteVilleMixteAutorouteRéserve de batterie conservée15 %RésultatsAutonomie estimée176 kmConsommation ajustée ≈ 34,8 kWh/100 kmÉnergie exploitable61,2 kWhConsommation ajustée34,8 kWh/100L'estimation applique des facteurs liés à la vitesse, la température et le type de conduite à votre consommation de référence.Cet outil applique des facteurs simples et visibles à la consommation de référence de votre voiture pour estimer l'autonomie dans vos conditions. Le résultat est une estimation EVExpert, jamais une valeur constructeur.Comment le calcul fonctionneChaque étape est visible : aucune hypothèse n'est cachée.Consommation ajustéeconsommation de référence × facteur température × facteur trajet × facteur vitesseÉnergie exploitablecapacité utile × (1 − réserve conservée)Autonomie estiméeénergie exploitable ÷ consommation ajustée × 100Consommation de référencecapacité utile ÷ autonomie WLTP × 100 (côté batterie)Exemple concretExemple : 60 kWh utiles, 16 kWh/100 km de référence, mixte, 15 °C, 110 km/h, 10 % de réserveFacteurs appliqués : température 15 °C ×1,08 ; trajet mixte ×1,00 ; vitesse 110 km/h ×1,12 (0,6 % par km/h au-delà de 90)Consommation ajustée : 16 × 1,08 × 1,00 × 1,12 ≈ 19,4 kWh/100 kmÉnergie exploitable : 60 × 0,90 = 54,0 kWhAutonomie estimée : 54,0 ÷ 19,4 × 100 ≈ 279 kmLimites du calculLes facteurs (température, vitesse, trajet) sont des approximations EVExpert, pas des mesures : voir la page Méthodologie.Le modèle ignore le dénivelé, le vent, les pneus, le chauffage de l'habitacle, la charge du véhicule et l'état de santé de la batterie.La consommation de référence dérive de l'autonomie WLTP : si la valeur WLTP de la source est différente de la vôtre, saisissez la vôtre.Une réserve de sécurité évite de rouler jusqu'à 0 % ; 10 % est un choix prudent, pas une règle.La méthode complète, les hypothèses et les sources sont détaillées sur la page Méthodologie.Autres outilsCoût de recharge d'une voiture électrique : simulateurCoût au km et aux 100 km d'une voiture électriqueSimulateur de temps de recharge voiture électriqueGuides associésComment calculer l'autonomie réelle d'une voiture électrique ?Pourquoi l'autonomie d'une voiture électrique baisse-t-elle en hiver ?Quelle autonomie sur autoroute avec une voiture électrique ?WLTP : qu'est-ce que c'est et que mesure-t-il vraiment ?Fiches véhicules à consulterTesla Model 3 Long Range RWD : fiche techniqueVolkswagen ID.7 86 kWh : fiche techniqueKia EV3 Long Range : fiche techniqueQuestions fréquentesPourquoi mon autonomie réelle est-elle inférieure à l'autonomie WLTP ?+Le WLTP est mesuré en laboratoire, à température douce et avec une vitesse moyenne modérée. Vitesse élevée, froid, chauffage et relief augmentent la consommation.L'estimation vaut-elle pour un trajet sur autoroute ?+Choisissez « Autoroute » et la vitesse réelle. C'est le cas où l'écart avec le WLTP est le plus fort, car la résistance de l'air croît avec le carré de la vitesse.Comment obtenir une autonomie plus précise ?+Relevez la consommation moyenne affichée par votre voiture sur des trajets comparables et saisissez-la comme consommation de référence.Le froid réduit-il la capacité de la batterie ?+Il réduit surtout l'efficacité globale : chauffage, batterie moins performante à basse température. Le résultat est une consommation plus élevée.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Pourquoi mon autonomie réelle est-elle inférieure à l'autonomie WLTP ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Le WLTP est mesuré en laboratoire, à température douce et avec une vitesse moyenne modérée. Vitesse élevée, froid, chauffage et relief augmentent la consommation.\"}},{\"@type\":\"Question\",\"name\":\"L'estimation vaut-elle pour un trajet sur autoroute ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Choisissez « Autoroute » et la vitesse réelle. C'est le cas où l'écart avec le WLTP est le plus fort, car la résistance de l'air croît avec le carré de la vitesse.\"}},{\"@type\":\"Question\",\"name\":\"Comment obtenir une autonomie plus précise ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Relevez la consommation moyenne affichée par votre voiture sur des trajets comparables et saisissez-la comme consommation de référence.\"}},{\"@type\":\"Question\",\"name\":\"Le froid réduit-il la capacité de la batterie ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Il réduit surtout l'efficacité globale : chauffage, batterie moins performante à basse température. Le résultat est une consommation plus élevée.\"}}]}",
+    "tables": []
+  },
+  {
+    "tool": "puissance-borne-recharge",
+    "case": "default",
+    "fields": [
+      {
+        "id": "sp-preset",
+        "value": ""
+      },
+      {
+        "id": "sp-cap",
+        "value": "60"
+      },
+      {
+        "id": "sp-ac",
+        "value": "11"
+      },
+      {
+        "id": "sp-dc",
+        "value": "150"
+      },
+      {
+        "id": "sp-from",
+        "value": "10"
+      },
+      {
+        "id": "sp-to",
+        "value": "80"
+      }
+    ],
+    "text": "Accueil/Outils/Puissance des bornes{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Outils\",\"item\":\"https://www.evexpert.fr/outils\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Puissance des bornes\",\"item\":\"https://www.evexpert.fr/outils/puissance-borne-recharge\"}]}CalculateurPuissance de borne : quel temps de recharge selon 3,7, 7,4, 11, 22 kW ou DC ?Une borne de 22 kW est-elle toujours plus rapide qu'une borne de 7,4 kW ? Pas forcément : la vitesse de charge est celle du maillon le plus faible entre la borne et la voiture.Estimation EVExpertDernière mise à jour : 21 septembre 2026Par Aymane OuirdaniVos paramètresPréremplir avec un modèle (facultatif)Saisie manuelleTesla Model 3 RWD — 60 kWh utilesTesla Model 3 Long Range RWD — 75 kWh utilesTesla Model Y RWD — 60 kWh utilesTesla Model Y Long Range AWD — 75 kWh utilesRenault 5 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault 4 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault Twingo E-Tech 27,5 kWh — 27,5 kWh utilesRenault Scénic E-Tech EV87 220 ch — 87 kWh utilesRenault Mégane E-Tech EV60 220 ch — 60 kWh utilesCitroën ë-C3 Standard Range 44 kWh — 43,8 kWh utilesCitroën ë-C3 Aircross Extended Range 54 kWh — 53,5 kWh utilesPeugeot e-208 50 kWh — 50,8 kWh utilesPeugeot e-2008 54 kWh — 50,8 kWh utilesPeugeot e-3008 97 kWh Long Range — 96,9 kWh utilesDacia Spring Electric 70 — 24 kWh utilesFiat Grande Panda 44 kWh — 43,8 kWh utilesFiat 500e Hatchback 42 kWh — 37,3 kWh utilesOpel Corsa Electric 51 kWh — 48,1 kWh utilesOpel Mokka Electric 54 kWh — 50,8 kWh utilesFord Puma Gen-E Gen-E — 43,6 kWh utilesFord Explorer Extended Range RWD — 77 kWh utilesVolkswagen ID.4 Pro — 77 kWh utilesVolkswagen ID.7 86 kWh — 86 kWh utilesŠkoda Elroq 85 — 77 kWh utilesŠkoda Enyaq 85 — 77 kWh utilesCUPRA Born 170 kW 79 kWh — 79 kWh utilesAudi Q4 e-tron 40 — 59 kWh utilesBMW iX1 eDrive20 — 65,2 kWh utilesBMW i4 eDrive40 — 81,3 kWh utilesBMW iX3 40 — 82,6 kWh utilesMercedes-Benz CLA 250+ — 85 kWh utilesMercedes-Benz GLA 250+ — 85 kWh utilesHyundai Kona Electric 65 kWh — 65,4 kWh utilesHyundai IONIQ 5 84 kWh RWD — 80 kWh utilesHyundai INSTER Long Range — 46 kWh utilesKia EV3 Long Range — 78 kWh utilesKia EV6 Long Range AWD — 80 kWh utilesVolvo EX30 Single Motor Extended Range — 65 kWh utilesVolvo EX40 P5 Long Range — 79 kWh utilesBYD Dolphin Surf 43,2 kWh Comfort — 43,2 kWh utilesBYD Atto 3 Evo RWD Design — 74,8 kWh utilesBYD Seal 82,5 kWh AWD Excellence — 82,5 kWh utilesMG MG4 Urban Comfort Long Range — 52,8 kWh utilesMG MGS5 EV 64 kWh — 62,1 kWh utilesNissan Leaf Extended Range 75 kWh — 75,1 kWh utilessmart #1 Pro+ — 62 kWh utilesPorsche Macan 4 Electric — 94,9 kWh utilesRenseigne la capacité utile et les limites de charge AC et DC du modèle.Capacité utile (kWh)kWhPuissance AC maximale du véhicule (kW)kWChargeur embarqué : souvent 7,4, 11 ou 22 kW.Puissance DC maximale du véhicule (kW)kWPic de la courbe de charge, non tenu en continu.État de charge de départ10 %État de charge visé80 %RésultatsRecharge la plus rapide (théorique)17 minRecharge rapide 150,0 kW → 150,0 kW effectifsTemps de recharge théorique selon la puissance de la borneBornePuissance utiliséeDurée3,7 kW AC3,7 kW12 h 377,4 kW AC7,4 kW6 h 1811,0 kW AC11,0 kW4 h 1522,0 kW AC11,0 kW(limité par le véhicule)4 h 1550,0 kW DC50,0 kW50 min150,0 kW DC150,0 kW17 min350,0 kW DC150,0 kW(limité par le véhicule)17 minTemps théorique à puissance constante. En DC la puissance réelle baisse au fil du remplissage : le temps réel est plus long (voir le temps 10-80 % publié sur la fiche de chaque modèle). En AC, rendement de charge de 90 % supposé.Choisissez un modèle du catalogue (ou saisissez ses limites) pour voir, borne par borne, la puissance réellement utilisée et le temps théorique correspondant.Comment le calcul fonctionneChaque étape est visible : aucune hypothèse n'est cachée.Puissance utiliséeminimum(puissance de la borne ; limite du véhicule dans ce mode)Limite en ACpuissance du chargeur embarqué (par ex. 7,4 / 11 / 22 kW)Limite en DCpuissance maximale acceptée par la batterie (pic de la courbe de charge)Durée théoriqueénergie à ajouter ÷ puissance utilisée (rendement 90 % en AC)Exemple concretExemple : batterie de 60 kWh, limite AC du véhicule 11 kW, de 10 à 80 %Énergie à ajouter : 60 × 70 ÷ 100 = 42,0 kWhSur une borne 22 kW : puissance utilisée = min(22 ; 11) = 11 kW → ≈ 4 h 15Sur une borne 11 kW : puissance utilisée = 11 kW → même durée : passer à 22 kW ne change rien pour ce véhiculeLimites du calculEn DC, le tableau suppose une puissance constante égale au pic du véhicule : c'est une borne basse du temps réel.La puissance disponible à une borne dépend aussi du nombre de véhicules branchés et de l'installation électrique.Les limites AC/DC des modèles du catalogue viennent de la source citée sur leur fiche ; vérifiez-les sur la notice de votre voiture.La méthode complète, les hypothèses et les sources sont détaillées sur la page Méthodologie.Autres outilsCoût de recharge d'une voiture électrique : simulateurSimulateur d'autonomie d'une voiture électriqueSimulateur de temps de recharge voiture électriqueGuides associésQuelle puissance de borne choisir : 7,4, 11 ou 22 kW ?Recharge AC ou DC : quelle différence ?Que signifie la puissance de recharge DC d'une voiture électrique ?Fiches véhicules à consulterHyundai IONIQ 5 84 kWh RWD : fiche techniqueMercedes-Benz CLA 250+ : fiche techniqueRenault Scénic E-Tech EV87 220 ch : fiche techniqueQuestions fréquentesMa voiture accepte 11 kW : une borne 22 kW est-elle utile ?+Elle ne la charge pas plus vite en AC, mais elle n'est pas dangereuse : la voiture limite la puissance.Quelle puissance de wallbox choisir à domicile ?+Celle que votre voiture accepte et que votre installation électrique et votre contrat permettent. Voir le guide dédié pour choisir entre 7,4, 11 et 22 kW.Pourquoi les bornes DC affichent-elles des temps théoriques optimistes ?+Parce que la voiture n'utilise sa puissance maximale que sur une partie de la charge : la courbe descend ensuite.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Ma voiture accepte 11 kW : une borne 22 kW est-elle utile ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Elle ne la charge pas plus vite en AC, mais elle n'est pas dangereuse : la voiture limite la puissance.\"}},{\"@type\":\"Question\",\"name\":\"Quelle puissance de wallbox choisir à domicile ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Celle que votre voiture accepte et que votre installation électrique et votre contrat permettent. Voir le guide dédié pour choisir entre 7,4, 11 et 22 kW.\"}},{\"@type\":\"Question\",\"name\":\"Pourquoi les bornes DC affichent-elles des temps théoriques optimistes ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Parce que la voiture n'utilise sa puissance maximale que sur une partie de la charge : la courbe descend ensuite.\"}}]}",
+    "tables": []
+  },
+  {
+    "tool": "puissance-borne-recharge",
+    "case": "fixed",
+    "fields": [
+      {
+        "id": "sp-preset",
+        "value": ""
+      },
+      {
+        "id": "sp-cap",
+        "value": "72"
+      },
+      {
+        "id": "sp-ac",
+        "value": "7.4"
+      },
+      {
+        "id": "sp-dc",
+        "value": "120"
+      },
+      {
+        "id": "sp-from",
+        "value": "15"
+      },
+      {
+        "id": "sp-to",
+        "value": "85"
+      }
+    ],
+    "text": "Accueil/Outils/Puissance des bornes{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Outils\",\"item\":\"https://www.evexpert.fr/outils\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Puissance des bornes\",\"item\":\"https://www.evexpert.fr/outils/puissance-borne-recharge\"}]}CalculateurPuissance de borne : quel temps de recharge selon 3,7, 7,4, 11, 22 kW ou DC ?Une borne de 22 kW est-elle toujours plus rapide qu'une borne de 7,4 kW ? Pas forcément : la vitesse de charge est celle du maillon le plus faible entre la borne et la voiture.Estimation EVExpertDernière mise à jour : 21 septembre 2026Par Aymane OuirdaniVos paramètresPréremplir avec un modèle (facultatif)Saisie manuelleTesla Model 3 RWD — 60 kWh utilesTesla Model 3 Long Range RWD — 75 kWh utilesTesla Model Y RWD — 60 kWh utilesTesla Model Y Long Range AWD — 75 kWh utilesRenault 5 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault 4 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault Twingo E-Tech 27,5 kWh — 27,5 kWh utilesRenault Scénic E-Tech EV87 220 ch — 87 kWh utilesRenault Mégane E-Tech EV60 220 ch — 60 kWh utilesCitroën ë-C3 Standard Range 44 kWh — 43,8 kWh utilesCitroën ë-C3 Aircross Extended Range 54 kWh — 53,5 kWh utilesPeugeot e-208 50 kWh — 50,8 kWh utilesPeugeot e-2008 54 kWh — 50,8 kWh utilesPeugeot e-3008 97 kWh Long Range — 96,9 kWh utilesDacia Spring Electric 70 — 24 kWh utilesFiat Grande Panda 44 kWh — 43,8 kWh utilesFiat 500e Hatchback 42 kWh — 37,3 kWh utilesOpel Corsa Electric 51 kWh — 48,1 kWh utilesOpel Mokka Electric 54 kWh — 50,8 kWh utilesFord Puma Gen-E Gen-E — 43,6 kWh utilesFord Explorer Extended Range RWD — 77 kWh utilesVolkswagen ID.4 Pro — 77 kWh utilesVolkswagen ID.7 86 kWh — 86 kWh utilesŠkoda Elroq 85 — 77 kWh utilesŠkoda Enyaq 85 — 77 kWh utilesCUPRA Born 170 kW 79 kWh — 79 kWh utilesAudi Q4 e-tron 40 — 59 kWh utilesBMW iX1 eDrive20 — 65,2 kWh utilesBMW i4 eDrive40 — 81,3 kWh utilesBMW iX3 40 — 82,6 kWh utilesMercedes-Benz CLA 250+ — 85 kWh utilesMercedes-Benz GLA 250+ — 85 kWh utilesHyundai Kona Electric 65 kWh — 65,4 kWh utilesHyundai IONIQ 5 84 kWh RWD — 80 kWh utilesHyundai INSTER Long Range — 46 kWh utilesKia EV3 Long Range — 78 kWh utilesKia EV6 Long Range AWD — 80 kWh utilesVolvo EX30 Single Motor Extended Range — 65 kWh utilesVolvo EX40 P5 Long Range — 79 kWh utilesBYD Dolphin Surf 43,2 kWh Comfort — 43,2 kWh utilesBYD Atto 3 Evo RWD Design — 74,8 kWh utilesBYD Seal 82,5 kWh AWD Excellence — 82,5 kWh utilesMG MG4 Urban Comfort Long Range — 52,8 kWh utilesMG MGS5 EV 64 kWh — 62,1 kWh utilesNissan Leaf Extended Range 75 kWh — 75,1 kWh utilessmart #1 Pro+ — 62 kWh utilesPorsche Macan 4 Electric — 94,9 kWh utilesRenseigne la capacité utile et les limites de charge AC et DC du modèle.Capacité utile (kWh)kWhPuissance AC maximale du véhicule (kW)kWChargeur embarqué : souvent 7,4, 11 ou 22 kW.Puissance DC maximale du véhicule (kW)kWPic de la courbe de charge, non tenu en continu.État de charge de départ15 %État de charge visé85 %RésultatsRecharge la plus rapide (théorique)25 minRecharge rapide 150,0 kW → 120,0 kW effectifsTemps de recharge théorique selon la puissance de la borneBornePuissance utiliséeDurée3,7 kW AC3,7 kW15 h 087,4 kW AC7,4 kW7 h 3411,0 kW AC7,4 kW(limité par le véhicule)7 h 3422,0 kW AC7,4 kW(limité par le véhicule)7 h 3450,0 kW DC50,0 kW1 h150,0 kW DC120,0 kW(limité par le véhicule)25 min350,0 kW DC120,0 kW(limité par le véhicule)25 minTemps théorique à puissance constante. En DC la puissance réelle baisse au fil du remplissage : le temps réel est plus long (voir le temps 10-80 % publié sur la fiche de chaque modèle). En AC, rendement de charge de 90 % supposé.Choisissez un modèle du catalogue (ou saisissez ses limites) pour voir, borne par borne, la puissance réellement utilisée et le temps théorique correspondant.Comment le calcul fonctionneChaque étape est visible : aucune hypothèse n'est cachée.Puissance utiliséeminimum(puissance de la borne ; limite du véhicule dans ce mode)Limite en ACpuissance du chargeur embarqué (par ex. 7,4 / 11 / 22 kW)Limite en DCpuissance maximale acceptée par la batterie (pic de la courbe de charge)Durée théoriqueénergie à ajouter ÷ puissance utilisée (rendement 90 % en AC)Exemple concretExemple : batterie de 60 kWh, limite AC du véhicule 11 kW, de 10 à 80 %Énergie à ajouter : 60 × 70 ÷ 100 = 42,0 kWhSur une borne 22 kW : puissance utilisée = min(22 ; 11) = 11 kW → ≈ 4 h 15Sur une borne 11 kW : puissance utilisée = 11 kW → même durée : passer à 22 kW ne change rien pour ce véhiculeLimites du calculEn DC, le tableau suppose une puissance constante égale au pic du véhicule : c'est une borne basse du temps réel.La puissance disponible à une borne dépend aussi du nombre de véhicules branchés et de l'installation électrique.Les limites AC/DC des modèles du catalogue viennent de la source citée sur leur fiche ; vérifiez-les sur la notice de votre voiture.La méthode complète, les hypothèses et les sources sont détaillées sur la page Méthodologie.Autres outilsCoût de recharge d'une voiture électrique : simulateurSimulateur d'autonomie d'une voiture électriqueSimulateur de temps de recharge voiture électriqueGuides associésQuelle puissance de borne choisir : 7,4, 11 ou 22 kW ?Recharge AC ou DC : quelle différence ?Que signifie la puissance de recharge DC d'une voiture électrique ?Fiches véhicules à consulterHyundai IONIQ 5 84 kWh RWD : fiche techniqueMercedes-Benz CLA 250+ : fiche techniqueRenault Scénic E-Tech EV87 220 ch : fiche techniqueQuestions fréquentesMa voiture accepte 11 kW : une borne 22 kW est-elle utile ?+Elle ne la charge pas plus vite en AC, mais elle n'est pas dangereuse : la voiture limite la puissance.Quelle puissance de wallbox choisir à domicile ?+Celle que votre voiture accepte et que votre installation électrique et votre contrat permettent. Voir le guide dédié pour choisir entre 7,4, 11 et 22 kW.Pourquoi les bornes DC affichent-elles des temps théoriques optimistes ?+Parce que la voiture n'utilise sa puissance maximale que sur une partie de la charge : la courbe descend ensuite.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Ma voiture accepte 11 kW : une borne 22 kW est-elle utile ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Elle ne la charge pas plus vite en AC, mais elle n'est pas dangereuse : la voiture limite la puissance.\"}},{\"@type\":\"Question\",\"name\":\"Quelle puissance de wallbox choisir à domicile ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Celle que votre voiture accepte et que votre installation électrique et votre contrat permettent. Voir le guide dédié pour choisir entre 7,4, 11 et 22 kW.\"}},{\"@type\":\"Question\",\"name\":\"Pourquoi les bornes DC affichent-elles des temps théoriques optimistes ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Parce que la voiture n'utilise sa puissance maximale que sur une partie de la charge : la courbe descend ensuite.\"}}]}",
+    "tables": []
+  },
+  {
+    "tool": "cout-100-km",
+    "case": "default",
+    "fields": [
+      {
+        "id": "c100-preset",
+        "value": ""
+      },
+      {
+        "id": "c100-km",
+        "value": "15000"
+      },
+      {
+        "id": "c-ev",
+        "value": "16"
+      },
+      {
+        "id": "p-ev",
+        "value": "0.25"
+      },
+      {
+        "id": "c-essence",
+        "value": "6.5"
+      },
+      {
+        "id": "p-essence",
+        "value": "1.75"
+      },
+      {
+        "id": "c-diesel",
+        "value": "5"
+      },
+      {
+        "id": "p-diesel",
+        "value": "1.65"
+      },
+      {
+        "id": "c-hybride",
+        "value": "4.5"
+      },
+      {
+        "id": "p-hybride",
+        "value": "1.75"
+      }
+    ],
+    "text": "Accueil/Outils/Coût aux 100 km{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Outils\",\"item\":\"https://www.evexpert.fr/outils\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Coût aux 100 km\",\"item\":\"https://www.evexpert.fr/outils/cout-100-km\"}]}CalculateurCoût au km et aux 100 km d'une voiture électriqueLe coût aux 100 km est la manière la plus directe de comparer l'énergie d'une électrique, d'une essence, d'un diesel et d'une hybride : une consommation multipliée par un prix.Estimation EVExpertDernière mise à jour : 21 septembre 2026Par Aymane OuirdaniPréremplir avec un modèle (facultatif)Saisie manuelleTesla Model 3 RWD — 60 kWh utilesTesla Model 3 Long Range RWD — 75 kWh utilesTesla Model Y RWD — 60 kWh utilesTesla Model Y Long Range AWD — 75 kWh utilesRenault 5 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault 4 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault Twingo E-Tech 27,5 kWh — 27,5 kWh utilesRenault Scénic E-Tech EV87 220 ch — 87 kWh utilesRenault Mégane E-Tech EV60 220 ch — 60 kWh utilesCitroën ë-C3 Standard Range 44 kWh — 43,8 kWh utilesCitroën ë-C3 Aircross Extended Range 54 kWh — 53,5 kWh utilesPeugeot e-208 50 kWh — 50,8 kWh utilesPeugeot e-2008 54 kWh — 50,8 kWh utilesPeugeot e-3008 97 kWh Long Range — 96,9 kWh utilesDacia Spring Electric 70 — 24 kWh utilesFiat Grande Panda 44 kWh — 43,8 kWh utilesFiat 500e Hatchback 42 kWh — 37,3 kWh utilesOpel Corsa Electric 51 kWh — 48,1 kWh utilesOpel Mokka Electric 54 kWh — 50,8 kWh utilesFord Puma Gen-E Gen-E — 43,6 kWh utilesFord Explorer Extended Range RWD — 77 kWh utilesVolkswagen ID.4 Pro — 77 kWh utilesVolkswagen ID.7 86 kWh — 86 kWh utilesŠkoda Elroq 85 — 77 kWh utilesŠkoda Enyaq 85 — 77 kWh utilesCUPRA Born 170 kW 79 kWh — 79 kWh utilesAudi Q4 e-tron 40 — 59 kWh utilesBMW iX1 eDrive20 — 65,2 kWh utilesBMW i4 eDrive40 — 81,3 kWh utilesBMW iX3 40 — 82,6 kWh utilesMercedes-Benz CLA 250+ — 85 kWh utilesMercedes-Benz GLA 250+ — 85 kWh utilesHyundai Kona Electric 65 kWh — 65,4 kWh utilesHyundai IONIQ 5 84 kWh RWD — 80 kWh utilesHyundai INSTER Long Range — 46 kWh utilesKia EV3 Long Range — 78 kWh utilesKia EV6 Long Range AWD — 80 kWh utilesVolvo EX30 Single Motor Extended Range — 65 kWh utilesVolvo EX40 P5 Long Range — 79 kWh utilesBYD Dolphin Surf 43,2 kWh Comfort — 43,2 kWh utilesBYD Atto 3 Evo RWD Design — 74,8 kWh utilesBYD Seal 82,5 kWh AWD Excellence — 82,5 kWh utilesMG MG4 Urban Comfort Long Range — 52,8 kWh utilesMG MGS5 EV 64 kWh — 62,1 kWh utilesNissan Leaf Extended Range 75 kWh — 75,1 kWh utilessmart #1 Pro+ — 62 kWh utilesPorsche Macan 4 Electric — 94,9 kWh utilesPréremplit la consommation électrique (énergie tirée du réseau, rendement 90 %).Kilométrage annuel10 000 km/an15 000 km/an20 000 km/an30 000 km/anÉlectriqueLe moins cherConso (kWh/100)Prix (€/kWh)Coût au km4,0 c/kmCoût aux 100 km4,00 €Coût énergie annuel600 €EssenceConso (L/100)Prix (€/L)Coût au km11,4 c/kmCoût aux 100 km11,38 €Coût énergie annuel1 706 €DieselConso (L/100)Prix (€/L)Coût au km8,3 c/kmCoût aux 100 km8,25 €Coût énergie annuel1 238 €HybrideConso (L/100)Prix (€/L)Coût au km7,9 c/kmCoût aux 100 km7,88 €Coût énergie annuel1 181 €Économie annuelle estimée de l'électrique face à l'essence : 1 106 € (coût énergie uniquement).Saisissez vos propres consommations et vos prix. Cet outil ne compte que l'énergie ; pour intégrer achat, entretien et dépréciation, utilisez les outils essence vs électrique et TCO.Comment le calcul fonctionneChaque étape est visible : aucune hypothèse n'est cachée.Électriqueconsommation (kWh/100 km) × prix du kWhThermiqueconsommation (L/100 km) × prix du litreCoût annuel de l'énergiecoût aux 100 km × kilométrage annuel ÷ 100Exemple concretExemple : électrique à 16 kWh/100 km et 0,25 €/kWh, essence à 6,5 L/100 km et 1,75 €/LÉlectrique : 16 × 0,25 = 4,00 € aux 100 kmEssence : 6,5 × 1,75 = 11,38 € aux 100 kmSur 12 000 km/an : 480 € contre 1 365 € d'énergieLimites du calculLes prix par défaut sont des hypothèses EVExpert : remplacez-les par vos prix réels (contrat, station).Le coût d'une recharge publique ou rapide est plus élevé qu'à domicile : si vous en dépendez beaucoup, saisissez un prix moyen pondéré.Seule l'énergie est comptée : ni achat, ni assurance, ni entretien, ni dépréciation.La consommation d'une électrique par kWh au compteur inclut les pertes de charge (voir l'exemple ci-dessous : consommation batterie ÷ rendement).La méthode complète, les hypothèses et les sources sont détaillées sur la page Méthodologie.Autres outilsCoût de recharge d'une voiture électrique : simulateurComparateur essence vs électriqueCalculateur de coût total de possession (TCO)Guides associésCombien coûte 100 km en voiture électrique ?Voiture électrique vs essence : quel est le coût réel ?Comment calculer le TCO d'une voiture électrique ?Fiches véhicules à consulterRenault 5 E-Tech 52 kWh 150 ch : fiche techniqueDacia Spring Electric 70 : fiche techniqueTesla Model 3 RWD : fiche techniqueQuestions fréquentesQuelle consommation saisir pour ma voiture électrique ?+La consommation au compteur relevée sur votre tableau de bord, majorée d'environ 10 % pour les pertes de charge, ou la valeur préremplie à partir d'une fiche du catalogue.L'électrique est-elle toujours moins chère aux 100 km ?+Rechargée à domicile, en général oui. Sur une recharge rapide publique chère, l'écart avec un thermique sobre peut se réduire : le résultat dépend des prix saisis.Comment inclure les recharges publiques ?+Calculez un prix moyen du kWh selon la part de chaque type de recharge (par exemple 80 % domicile, 20 % public) et saisissez-le comme prix de l'énergie.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Quelle consommation saisir pour ma voiture électrique ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"La consommation au compteur relevée sur votre tableau de bord, majorée d'environ 10 % pour les pertes de charge, ou la valeur préremplie à partir d'une fiche du catalogue.\"}},{\"@type\":\"Question\",\"name\":\"L'électrique est-elle toujours moins chère aux 100 km ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Rechargée à domicile, en général oui. Sur une recharge rapide publique chère, l'écart avec un thermique sobre peut se réduire : le résultat dépend des prix saisis.\"}},{\"@type\":\"Question\",\"name\":\"Comment inclure les recharges publiques ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Calculez un prix moyen du kWh selon la part de chaque type de recharge (par exemple 80 % domicile, 20 % public) et saisissez-le comme prix de l'énergie.\"}}]}",
+    "tables": []
+  },
+  {
+    "tool": "cout-100-km",
+    "case": "fixed",
+    "fields": [
+      {
+        "id": "c100-preset",
+        "value": ""
+      },
+      {
+        "id": "c100-km",
+        "value": "20000"
+      },
+      {
+        "id": "c-ev",
+        "value": "18"
+      },
+      {
+        "id": "p-ev",
+        "value": "0.25"
+      },
+      {
+        "id": "c-essence",
+        "value": "7"
+      },
+      {
+        "id": "p-essence",
+        "value": "1.85"
+      },
+      {
+        "id": "c-diesel",
+        "value": "5"
+      },
+      {
+        "id": "p-diesel",
+        "value": "1.65"
+      },
+      {
+        "id": "c-hybride",
+        "value": "4.5"
+      },
+      {
+        "id": "p-hybride",
+        "value": "1.75"
+      }
+    ],
+    "text": "Accueil/Outils/Coût aux 100 km{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Outils\",\"item\":\"https://www.evexpert.fr/outils\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Coût aux 100 km\",\"item\":\"https://www.evexpert.fr/outils/cout-100-km\"}]}CalculateurCoût au km et aux 100 km d'une voiture électriqueLe coût aux 100 km est la manière la plus directe de comparer l'énergie d'une électrique, d'une essence, d'un diesel et d'une hybride : une consommation multipliée par un prix.Estimation EVExpertDernière mise à jour : 21 septembre 2026Par Aymane OuirdaniPréremplir avec un modèle (facultatif)Saisie manuelleTesla Model 3 RWD — 60 kWh utilesTesla Model 3 Long Range RWD — 75 kWh utilesTesla Model Y RWD — 60 kWh utilesTesla Model Y Long Range AWD — 75 kWh utilesRenault 5 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault 4 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault Twingo E-Tech 27,5 kWh — 27,5 kWh utilesRenault Scénic E-Tech EV87 220 ch — 87 kWh utilesRenault Mégane E-Tech EV60 220 ch — 60 kWh utilesCitroën ë-C3 Standard Range 44 kWh — 43,8 kWh utilesCitroën ë-C3 Aircross Extended Range 54 kWh — 53,5 kWh utilesPeugeot e-208 50 kWh — 50,8 kWh utilesPeugeot e-2008 54 kWh — 50,8 kWh utilesPeugeot e-3008 97 kWh Long Range — 96,9 kWh utilesDacia Spring Electric 70 — 24 kWh utilesFiat Grande Panda 44 kWh — 43,8 kWh utilesFiat 500e Hatchback 42 kWh — 37,3 kWh utilesOpel Corsa Electric 51 kWh — 48,1 kWh utilesOpel Mokka Electric 54 kWh — 50,8 kWh utilesFord Puma Gen-E Gen-E — 43,6 kWh utilesFord Explorer Extended Range RWD — 77 kWh utilesVolkswagen ID.4 Pro — 77 kWh utilesVolkswagen ID.7 86 kWh — 86 kWh utilesŠkoda Elroq 85 — 77 kWh utilesŠkoda Enyaq 85 — 77 kWh utilesCUPRA Born 170 kW 79 kWh — 79 kWh utilesAudi Q4 e-tron 40 — 59 kWh utilesBMW iX1 eDrive20 — 65,2 kWh utilesBMW i4 eDrive40 — 81,3 kWh utilesBMW iX3 40 — 82,6 kWh utilesMercedes-Benz CLA 250+ — 85 kWh utilesMercedes-Benz GLA 250+ — 85 kWh utilesHyundai Kona Electric 65 kWh — 65,4 kWh utilesHyundai IONIQ 5 84 kWh RWD — 80 kWh utilesHyundai INSTER Long Range — 46 kWh utilesKia EV3 Long Range — 78 kWh utilesKia EV6 Long Range AWD — 80 kWh utilesVolvo EX30 Single Motor Extended Range — 65 kWh utilesVolvo EX40 P5 Long Range — 79 kWh utilesBYD Dolphin Surf 43,2 kWh Comfort — 43,2 kWh utilesBYD Atto 3 Evo RWD Design — 74,8 kWh utilesBYD Seal 82,5 kWh AWD Excellence — 82,5 kWh utilesMG MG4 Urban Comfort Long Range — 52,8 kWh utilesMG MGS5 EV 64 kWh — 62,1 kWh utilesNissan Leaf Extended Range 75 kWh — 75,1 kWh utilessmart #1 Pro+ — 62 kWh utilesPorsche Macan 4 Electric — 94,9 kWh utilesPréremplit la consommation électrique (énergie tirée du réseau, rendement 90 %).Kilométrage annuel10 000 km/an15 000 km/an20 000 km/an30 000 km/anÉlectriqueLe moins cherConso (kWh/100)Prix (€/kWh)Coût au km4,5 c/kmCoût aux 100 km4,50 €Coût énergie annuel900 €EssenceConso (L/100)Prix (€/L)Coût au km13,0 c/kmCoût aux 100 km12,95 €Coût énergie annuel2 590 €DieselConso (L/100)Prix (€/L)Coût au km8,3 c/kmCoût aux 100 km8,25 €Coût énergie annuel1 650 €HybrideConso (L/100)Prix (€/L)Coût au km7,9 c/kmCoût aux 100 km7,88 €Coût énergie annuel1 575 €Économie annuelle estimée de l'électrique face à l'essence : 1 690 € (coût énergie uniquement).Saisissez vos propres consommations et vos prix. Cet outil ne compte que l'énergie ; pour intégrer achat, entretien et dépréciation, utilisez les outils essence vs électrique et TCO.Comment le calcul fonctionneChaque étape est visible : aucune hypothèse n'est cachée.Électriqueconsommation (kWh/100 km) × prix du kWhThermiqueconsommation (L/100 km) × prix du litreCoût annuel de l'énergiecoût aux 100 km × kilométrage annuel ÷ 100Exemple concretExemple : électrique à 16 kWh/100 km et 0,25 €/kWh, essence à 6,5 L/100 km et 1,75 €/LÉlectrique : 16 × 0,25 = 4,00 € aux 100 kmEssence : 6,5 × 1,75 = 11,38 € aux 100 kmSur 12 000 km/an : 480 € contre 1 365 € d'énergieLimites du calculLes prix par défaut sont des hypothèses EVExpert : remplacez-les par vos prix réels (contrat, station).Le coût d'une recharge publique ou rapide est plus élevé qu'à domicile : si vous en dépendez beaucoup, saisissez un prix moyen pondéré.Seule l'énergie est comptée : ni achat, ni assurance, ni entretien, ni dépréciation.La consommation d'une électrique par kWh au compteur inclut les pertes de charge (voir l'exemple ci-dessous : consommation batterie ÷ rendement).La méthode complète, les hypothèses et les sources sont détaillées sur la page Méthodologie.Autres outilsCoût de recharge d'une voiture électrique : simulateurComparateur essence vs électriqueCalculateur de coût total de possession (TCO)Guides associésCombien coûte 100 km en voiture électrique ?Voiture électrique vs essence : quel est le coût réel ?Comment calculer le TCO d'une voiture électrique ?Fiches véhicules à consulterRenault 5 E-Tech 52 kWh 150 ch : fiche techniqueDacia Spring Electric 70 : fiche techniqueTesla Model 3 RWD : fiche techniqueQuestions fréquentesQuelle consommation saisir pour ma voiture électrique ?+La consommation au compteur relevée sur votre tableau de bord, majorée d'environ 10 % pour les pertes de charge, ou la valeur préremplie à partir d'une fiche du catalogue.L'électrique est-elle toujours moins chère aux 100 km ?+Rechargée à domicile, en général oui. Sur une recharge rapide publique chère, l'écart avec un thermique sobre peut se réduire : le résultat dépend des prix saisis.Comment inclure les recharges publiques ?+Calculez un prix moyen du kWh selon la part de chaque type de recharge (par exemple 80 % domicile, 20 % public) et saisissez-le comme prix de l'énergie.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Quelle consommation saisir pour ma voiture électrique ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"La consommation au compteur relevée sur votre tableau de bord, majorée d'environ 10 % pour les pertes de charge, ou la valeur préremplie à partir d'une fiche du catalogue.\"}},{\"@type\":\"Question\",\"name\":\"L'électrique est-elle toujours moins chère aux 100 km ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Rechargée à domicile, en général oui. Sur une recharge rapide publique chère, l'écart avec un thermique sobre peut se réduire : le résultat dépend des prix saisis.\"}},{\"@type\":\"Question\",\"name\":\"Comment inclure les recharges publiques ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Calculez un prix moyen du kWh selon la part de chaque type de recharge (par exemple 80 % domicile, 20 % public) et saisissez-le comme prix de l'énergie.\"}}]}",
+    "tables": []
+  },
+  {
+    "tool": "trajet-longue-distance",
+    "case": "default",
+    "fields": [
+      {
+        "id": "tp-preset",
+        "value": ""
+      },
+      {
+        "id": "tp-distance",
+        "value": "500"
+      },
+      {
+        "id": "tp-speed",
+        "value": "120"
+      },
+      {
+        "id": "tp-temp",
+        "value": "10"
+      },
+      {
+        "id": "tp-margin",
+        "value": "10"
+      },
+      {
+        "id": "tp-capacity",
+        "value": "60"
+      },
+      {
+        "id": "tp-conso",
+        "value": "16"
+      },
+      {
+        "id": "tp-dc",
+        "value": "90"
+      },
+      {
+        "id": "tp-price",
+        "value": "0.65"
+      }
+    ],
+    "text": "Accueil/Outils/Trajet longue distance{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Outils\",\"item\":\"https://www.evexpert.fr/outils\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Trajet longue distance\",\"item\":\"https://www.evexpert.fr/outils/trajet-longue-distance\"}]}CalculateurSimulateur de trajet longue distance en voiture électriqueUne voiture électrique passe-t-elle un trajet de 500 ou 800 km, et avec combien d'arrêts ? La réponse dépend de l'autonomie réelle à la vitesse choisie (pas de l'autonomie WLTP) et de la puissance de recharge rapide moyenne, pas du pic annoncé.Estimation EVExpertDernière mise à jour : 21 septembre 2026Par Aymane OuirdaniSimulation, pas une navigation : distance, vitesse et température sont les vôtres, pas celles d'un itinéraire réel. Vérifiez les bornes disponibles avec une carte à jour avant de partir.Vos paramètresPréremplir avec un modèle (facultatif)Saisie manuelleTesla Model 3 RWD — 60 kWh utilesTesla Model 3 Long Range RWD — 75 kWh utilesTesla Model Y RWD — 60 kWh utilesTesla Model Y Long Range AWD — 75 kWh utilesRenault 5 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault 4 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault Twingo E-Tech 27,5 kWh — 27,5 kWh utilesRenault Scénic E-Tech EV87 220 ch — 87 kWh utilesRenault Mégane E-Tech EV60 220 ch — 60 kWh utilesCitroën ë-C3 Standard Range 44 kWh — 43,8 kWh utilesCitroën ë-C3 Aircross Extended Range 54 kWh — 53,5 kWh utilesPeugeot e-208 50 kWh — 50,8 kWh utilesPeugeot e-2008 54 kWh — 50,8 kWh utilesPeugeot e-3008 97 kWh Long Range — 96,9 kWh utilesDacia Spring Electric 70 — 24 kWh utilesFiat Grande Panda 44 kWh — 43,8 kWh utilesFiat 500e Hatchback 42 kWh — 37,3 kWh utilesOpel Corsa Electric 51 kWh — 48,1 kWh utilesOpel Mokka Electric 54 kWh — 50,8 kWh utilesFord Puma Gen-E Gen-E — 43,6 kWh utilesFord Explorer Extended Range RWD — 77 kWh utilesVolkswagen ID.4 Pro — 77 kWh utilesVolkswagen ID.7 86 kWh — 86 kWh utilesŠkoda Elroq 85 — 77 kWh utilesŠkoda Enyaq 85 — 77 kWh utilesCUPRA Born 170 kW 79 kWh — 79 kWh utilesAudi Q4 e-tron 40 — 59 kWh utilesBMW iX1 eDrive20 — 65,2 kWh utilesBMW i4 eDrive40 — 81,3 kWh utilesBMW iX3 40 — 82,6 kWh utilesMercedes-Benz CLA 250+ — 85 kWh utilesMercedes-Benz GLA 250+ — 85 kWh utilesHyundai Kona Electric 65 kWh — 65,4 kWh utilesHyundai IONIQ 5 84 kWh RWD — 80 kWh utilesHyundai INSTER Long Range — 46 kWh utilesKia EV3 Long Range — 78 kWh utilesKia EV6 Long Range AWD — 80 kWh utilesVolvo EX30 Single Motor Extended Range — 65 kWh utilesVolvo EX40 P5 Long Range — 79 kWh utilesBYD Dolphin Surf 43,2 kWh Comfort — 43,2 kWh utilesBYD Atto 3 Evo RWD Design — 74,8 kWh utilesBYD Seal 82,5 kWh AWD Excellence — 82,5 kWh utilesMG MG4 Urban Comfort Long Range — 52,8 kWh utilesMG MGS5 EV 64 kWh — 62,1 kWh utilesNissan Leaf Extended Range 75 kWh — 75,1 kWh utilessmart #1 Pro+ — 62 kWh utilesPorsche Macan 4 Electric — 94,9 kWh utilesRenseigne la batterie, la consommation de référence et une puissance DC moyenne approchée.Distance du trajetkmVitesse moyenne120 km/hTempérature extérieure10 °CRéserve de sécurité gardée à chaque arrêt10 %Batterie utilekWhConsommation de référencekWh/100Puissance DC moyenne réellement atteignablekWPas le pic annoncé : voir le 10-80 % publié sur la fiche du modèle.Prix de la recharge rapide€/kWhRésultats2 arrêts de recharge1 h 20Autonomie réelle estimée (autoroute, réserve 10 %) : ≈ 204 km par trajetÉnergie rechargée en route120,0 kWhCoût de recharge en route78,00 €Chaque arrêt est simulé comme une recharge complète d'un trajet (après réserve de sécurité), à la puissance DC moyenne indiquée. Le temps de conduite lui-même n'est pas compté.C'est une simulation théorique, pas une navigation : elle ne connaît ni le relief, ni le vent, ni les bornes réellement disponibles sur votre itinéraire. Utilisez-la pour évaluer un ordre de grandeur avant de planifier le trajet avec une carte de bornes à jour.Comment le calcul fonctionneChaque étape est visible : aucune hypothèse n'est cachée.Autonomie réelle par trajetmême modèle que le calculateur d'autonomie (vitesse, température, réserve de sécurité)Nombre d'arrêtsarrondi supérieur(distance ÷ autonomie réelle) − 1Énergie par arrêténergie utilisable d'une pleine autonomie réelle (après réserve)Durée par arrêténergie par arrêt ÷ puissance DC moyenne réellement atteignableExemple concretExemple : 500 km à 130 km/h, 10 °C, batterie de 60 kWh utilesAutonomie réelle estimée : ≈ 207 kmArrêts nécessaires : arrondi supérieur(500 ÷ 207) − 1 = 2Durée totale de recharge, à 90 kW en moyenne : 1 h 20Coût de recharge en route, à 0,65 €/kWh : 78,00 €Limites du calculLe trajet est simulé départ à pleine charge (moins la réserve de sécurité) : il n'y a pas de champ pour un niveau de batterie de départ différent. Si vous partez déjà entamé, retranchez le kilométrage déjà parcouru sur cette charge de la distance saisie.La puissance DC « moyenne réellement atteignable » n'est pas le pic annoncé par le constructeur : c'est une simplification, à ajuster à la baisse pour un modèle dont la courbe de charge chute vite (voir sa fiche).Chaque arrêt est supposé recharger l'équivalent d'un plein trajet complet : dans la réalité, vous chargerez souvent moins (juste de quoi atteindre le prochain arrêt), ce qui répartit différemment le temps total mais ne le change pas beaucoup.Aucune donnée de trafic, relief, vent ou disponibilité réelle des bornes n'est prise en compte : ce n'est pas une navigation.La méthode complète, les hypothèses et les sources sont détaillées sur la page Méthodologie.Autres outilsSimulateur d'autonomie d'une voiture électriqueSimulateur de temps de recharge voiture électriquePuissance de borne : quel temps de recharge selon 3,7, 7,4, 11, 22 kW ou DC ?Guides associésQuelle autonomie sur autoroute avec une voiture électrique ?Que signifie la puissance de recharge DC d'une voiture électrique ?Pourquoi l'autonomie d'une voiture électrique baisse-t-elle en hiver ?Fiches véhicules à consulterTesla Model 3 Long Range RWD : fiche techniqueHyundai IONIQ 5 84 kWh RWD : fiche techniqueKia EV6 Long Range AWD : fiche techniqueQuestions fréquentesPourquoi l'autonomie réelle est-elle plus basse que l'autonomie WLTP ?+Le WLTP est mesuré à vitesse modérée et température tempérée. À 130 km/h et 10 °C, la résistance de l'air et le chauffage augmentent la consommation : voir le calculateur d'autonomie réelle.Pourquoi ne pas utiliser directement le temps 10-80 % publié sur la fiche ?+Ce temps correspond à une fenêtre de charge fixe (10 à 80 %) ; ce simulateur calcule l'énergie réellement nécessaire pour atteindre le prochain arrêt, qui peut être plus ou moins large.Une puissance DC plus élevée réduit-elle toujours le temps de trajet ?+Elle réduit le temps de recharge par arrêt, mais seulement jusqu'à la puissance que la batterie du véhicule peut réellement encaisser : au-delà, augmenter la puissance de la borne ne change rien.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Pourquoi l'autonomie réelle est-elle plus basse que l'autonomie WLTP ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Le WLTP est mesuré à vitesse modérée et température tempérée. À 130 km/h et 10 °C, la résistance de l'air et le chauffage augmentent la consommation : voir le calculateur d'autonomie réelle.\"}},{\"@type\":\"Question\",\"name\":\"Pourquoi ne pas utiliser directement le temps 10-80 % publié sur la fiche ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Ce temps correspond à une fenêtre de charge fixe (10 à 80 %) ; ce simulateur calcule l'énergie réellement nécessaire pour atteindre le prochain arrêt, qui peut être plus ou moins large.\"}},{\"@type\":\"Question\",\"name\":\"Une puissance DC plus élevée réduit-elle toujours le temps de trajet ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Elle réduit le temps de recharge par arrêt, mais seulement jusqu'à la puissance que la batterie du véhicule peut réellement encaisser : au-delà, augmenter la puissance de la borne ne change rien.\"}}]}",
+    "tables": []
+  },
+  {
+    "tool": "trajet-longue-distance",
+    "case": "fixed",
+    "fields": [
+      {
+        "id": "tp-preset",
+        "value": ""
+      },
+      {
+        "id": "tp-distance",
+        "value": "750"
+      },
+      {
+        "id": "tp-speed",
+        "value": "130"
+      },
+      {
+        "id": "tp-temp",
+        "value": "0"
+      },
+      {
+        "id": "tp-margin",
+        "value": "10"
+      },
+      {
+        "id": "tp-capacity",
+        "value": "72"
+      },
+      {
+        "id": "tp-conso",
+        "value": "18"
+      },
+      {
+        "id": "tp-dc",
+        "value": "90"
+      },
+      {
+        "id": "tp-price",
+        "value": "0.65"
+      }
+    ],
+    "text": "Accueil/Outils/Trajet longue distance{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Outils\",\"item\":\"https://www.evexpert.fr/outils\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Trajet longue distance\",\"item\":\"https://www.evexpert.fr/outils/trajet-longue-distance\"}]}CalculateurSimulateur de trajet longue distance en voiture électriqueUne voiture électrique passe-t-elle un trajet de 500 ou 800 km, et avec combien d'arrêts ? La réponse dépend de l'autonomie réelle à la vitesse choisie (pas de l'autonomie WLTP) et de la puissance de recharge rapide moyenne, pas du pic annoncé.Estimation EVExpertDernière mise à jour : 21 septembre 2026Par Aymane OuirdaniSimulation, pas une navigation : distance, vitesse et température sont les vôtres, pas celles d'un itinéraire réel. Vérifiez les bornes disponibles avec une carte à jour avant de partir.Vos paramètresPréremplir avec un modèle (facultatif)Saisie manuelleTesla Model 3 RWD — 60 kWh utilesTesla Model 3 Long Range RWD — 75 kWh utilesTesla Model Y RWD — 60 kWh utilesTesla Model Y Long Range AWD — 75 kWh utilesRenault 5 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault 4 E-Tech 52 kWh 150 ch — 52 kWh utilesRenault Twingo E-Tech 27,5 kWh — 27,5 kWh utilesRenault Scénic E-Tech EV87 220 ch — 87 kWh utilesRenault Mégane E-Tech EV60 220 ch — 60 kWh utilesCitroën ë-C3 Standard Range 44 kWh — 43,8 kWh utilesCitroën ë-C3 Aircross Extended Range 54 kWh — 53,5 kWh utilesPeugeot e-208 50 kWh — 50,8 kWh utilesPeugeot e-2008 54 kWh — 50,8 kWh utilesPeugeot e-3008 97 kWh Long Range — 96,9 kWh utilesDacia Spring Electric 70 — 24 kWh utilesFiat Grande Panda 44 kWh — 43,8 kWh utilesFiat 500e Hatchback 42 kWh — 37,3 kWh utilesOpel Corsa Electric 51 kWh — 48,1 kWh utilesOpel Mokka Electric 54 kWh — 50,8 kWh utilesFord Puma Gen-E Gen-E — 43,6 kWh utilesFord Explorer Extended Range RWD — 77 kWh utilesVolkswagen ID.4 Pro — 77 kWh utilesVolkswagen ID.7 86 kWh — 86 kWh utilesŠkoda Elroq 85 — 77 kWh utilesŠkoda Enyaq 85 — 77 kWh utilesCUPRA Born 170 kW 79 kWh — 79 kWh utilesAudi Q4 e-tron 40 — 59 kWh utilesBMW iX1 eDrive20 — 65,2 kWh utilesBMW i4 eDrive40 — 81,3 kWh utilesBMW iX3 40 — 82,6 kWh utilesMercedes-Benz CLA 250+ — 85 kWh utilesMercedes-Benz GLA 250+ — 85 kWh utilesHyundai Kona Electric 65 kWh — 65,4 kWh utilesHyundai IONIQ 5 84 kWh RWD — 80 kWh utilesHyundai INSTER Long Range — 46 kWh utilesKia EV3 Long Range — 78 kWh utilesKia EV6 Long Range AWD — 80 kWh utilesVolvo EX30 Single Motor Extended Range — 65 kWh utilesVolvo EX40 P5 Long Range — 79 kWh utilesBYD Dolphin Surf 43,2 kWh Comfort — 43,2 kWh utilesBYD Atto 3 Evo RWD Design — 74,8 kWh utilesBYD Seal 82,5 kWh AWD Excellence — 82,5 kWh utilesMG MG4 Urban Comfort Long Range — 52,8 kWh utilesMG MGS5 EV 64 kWh — 62,1 kWh utilesNissan Leaf Extended Range 75 kWh — 75,1 kWh utilessmart #1 Pro+ — 62 kWh utilesPorsche Macan 4 Electric — 94,9 kWh utilesRenseigne la batterie, la consommation de référence et une puissance DC moyenne approchée.Distance du trajetkmVitesse moyenne130 km/hTempérature extérieure0 °CRéserve de sécurité gardée à chaque arrêt10 %Batterie utilekWhConsommation de référencekWh/100Puissance DC moyenne réellement atteignablekWPas le pic annoncé : voir le 10-80 % publié sur la fiche du modèle.Prix de la recharge rapide€/kWhRésultats4 arrêts de recharge3 h 12Autonomie réelle estimée (autoroute, réserve 10 %) : ≈ 186 km par trajetÉnergie rechargée en route288,0 kWhCoût de recharge en route187,20 €Chaque arrêt est simulé comme une recharge complète d'un trajet (après réserve de sécurité), à la puissance DC moyenne indiquée. Le temps de conduite lui-même n'est pas compté.C'est une simulation théorique, pas une navigation : elle ne connaît ni le relief, ni le vent, ni les bornes réellement disponibles sur votre itinéraire. Utilisez-la pour évaluer un ordre de grandeur avant de planifier le trajet avec une carte de bornes à jour.Comment le calcul fonctionneChaque étape est visible : aucune hypothèse n'est cachée.Autonomie réelle par trajetmême modèle que le calculateur d'autonomie (vitesse, température, réserve de sécurité)Nombre d'arrêtsarrondi supérieur(distance ÷ autonomie réelle) − 1Énergie par arrêténergie utilisable d'une pleine autonomie réelle (après réserve)Durée par arrêténergie par arrêt ÷ puissance DC moyenne réellement atteignableExemple concretExemple : 500 km à 130 km/h, 10 °C, batterie de 60 kWh utilesAutonomie réelle estimée : ≈ 207 kmArrêts nécessaires : arrondi supérieur(500 ÷ 207) − 1 = 2Durée totale de recharge, à 90 kW en moyenne : 1 h 20Coût de recharge en route, à 0,65 €/kWh : 78,00 €Limites du calculLe trajet est simulé départ à pleine charge (moins la réserve de sécurité) : il n'y a pas de champ pour un niveau de batterie de départ différent. Si vous partez déjà entamé, retranchez le kilométrage déjà parcouru sur cette charge de la distance saisie.La puissance DC « moyenne réellement atteignable » n'est pas le pic annoncé par le constructeur : c'est une simplification, à ajuster à la baisse pour un modèle dont la courbe de charge chute vite (voir sa fiche).Chaque arrêt est supposé recharger l'équivalent d'un plein trajet complet : dans la réalité, vous chargerez souvent moins (juste de quoi atteindre le prochain arrêt), ce qui répartit différemment le temps total mais ne le change pas beaucoup.Aucune donnée de trafic, relief, vent ou disponibilité réelle des bornes n'est prise en compte : ce n'est pas une navigation.La méthode complète, les hypothèses et les sources sont détaillées sur la page Méthodologie.Autres outilsSimulateur d'autonomie d'une voiture électriqueSimulateur de temps de recharge voiture électriquePuissance de borne : quel temps de recharge selon 3,7, 7,4, 11, 22 kW ou DC ?Guides associésQuelle autonomie sur autoroute avec une voiture électrique ?Que signifie la puissance de recharge DC d'une voiture électrique ?Pourquoi l'autonomie d'une voiture électrique baisse-t-elle en hiver ?Fiches véhicules à consulterTesla Model 3 Long Range RWD : fiche techniqueHyundai IONIQ 5 84 kWh RWD : fiche techniqueKia EV6 Long Range AWD : fiche techniqueQuestions fréquentesPourquoi l'autonomie réelle est-elle plus basse que l'autonomie WLTP ?+Le WLTP est mesuré à vitesse modérée et température tempérée. À 130 km/h et 10 °C, la résistance de l'air et le chauffage augmentent la consommation : voir le calculateur d'autonomie réelle.Pourquoi ne pas utiliser directement le temps 10-80 % publié sur la fiche ?+Ce temps correspond à une fenêtre de charge fixe (10 à 80 %) ; ce simulateur calcule l'énergie réellement nécessaire pour atteindre le prochain arrêt, qui peut être plus ou moins large.Une puissance DC plus élevée réduit-elle toujours le temps de trajet ?+Elle réduit le temps de recharge par arrêt, mais seulement jusqu'à la puissance que la batterie du véhicule peut réellement encaisser : au-delà, augmenter la puissance de la borne ne change rien.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Pourquoi l'autonomie réelle est-elle plus basse que l'autonomie WLTP ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Le WLTP est mesuré à vitesse modérée et température tempérée. À 130 km/h et 10 °C, la résistance de l'air et le chauffage augmentent la consommation : voir le calculateur d'autonomie réelle.\"}},{\"@type\":\"Question\",\"name\":\"Pourquoi ne pas utiliser directement le temps 10-80 % publié sur la fiche ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Ce temps correspond à une fenêtre de charge fixe (10 à 80 %) ; ce simulateur calcule l'énergie réellement nécessaire pour atteindre le prochain arrêt, qui peut être plus ou moins large.\"}},{\"@type\":\"Question\",\"name\":\"Une puissance DC plus élevée réduit-elle toujours le temps de trajet ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Elle réduit le temps de recharge par arrêt, mais seulement jusqu'à la puissance que la batterie du véhicule peut réellement encaisser : au-delà, augmenter la puissance de la borne ne change rien.\"}}]}",
+    "tables": []
+  },
+  {
+    "tool": "/voitures-electriques/renault/5-e-tech",
+    "case": "default",
+    "fields": [
+      {
+        "id": "vce-km",
+        "value": "12000"
+      },
+      {
+        "id": "vce-home-price",
+        "value": "0.25"
+      },
+      {
+        "id": "vce-public-price",
+        "value": "0.45"
+      },
+      {
+        "id": "vce-home-share",
+        "value": "70"
+      }
+    ],
+    "text": "Accueil/Voitures électriques/Renault/5 E-Tech{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Voitures électriques\",\"item\":\"https://www.evexpert.fr/voitures-electriques\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Renault\",\"item\":\"https://www.evexpert.fr/voitures-electriques/renault\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"5 E-Tech\",\"item\":\"https://www.evexpert.fr/voitures-electriques/renault/5-e-tech\"}]}RenaultComparerRenault 5 E-Tech 52 kWh 150 ch : autonomie, recharge et caractéristiquesRenault 5 E-Tech 52 kWh 150 ch (2024-2026) : citadine électrique 5 places, traction (avant), batterie de 52,0 kWh utiles pour 416 km d'autonomie WLTP selon EV Database, recharge AC jusqu'à 11,0 kW et DC jusqu'à 101 kW.Données relevées le 21 septembre 2026 · Source spécialisée3 922 mmCitadine · L × l × h : 3 922 × 1 808 × 1 498 mm. Silhouette schématique du type de carrosserie, pas le modèle exact.La silhouette rétro de la Renault 5 E-Tech 52 kWh 150 ch cache une mécanique assez classique pour une citadine de notre catalogue : 52,0 kWh utiles, 416 km d'autonomie WLTP selon EV Database, soit une consommation calculée d'environ 12,5 kWh/100 km. Son comparateur le plus proche par taille de batterie parmi les citadines, la Peugeot e-208 50 kWh, est un peu plus puissante (115 kW contre 110 kW) pour une autonomie proche.Sa puissance de charge DC, 101 kW, permet de passer de 10 à 80 % en 31 minutes selon EV Database — quelques minutes de plus que l'e-208. En AC, elle accepte jusqu'à 11 kW, la pleine puissance d'une borne triphasée standard.Avec 5 places et un coffre de 326 L, elle couvre l'essentiel d'un usage urbain et périurbain quotidien. Son poids modéré (1 504 kg) joue en sa faveur en ville, mais n'empêche pas l'autonomie réelle de redescendre sous la valeur WLTP sur autoroute, à vitesse élevée.Autonomie WLTP416km0800 kmBatterie utile52,0kWh55,0 kWh bruteCharge DC max101kW10 → 80 % en 31 minCoût aux 100 km3,47€Calcul EVExpert, 0,25 €/kWh à domicileAutonomie réelleRechargeCoûtFiche techniqueSource01Autonomie réelle estiméeEstimation EVExpert : la consommation de référence (12,5 kWh/100 km, côté batterie) est multipliée par des facteurs de vitesse, de température et de type de trajet, décrits sur la page Méthodologie.ScénarioPart de l'autonomie WLTPVille, 20 °C≈ 490km118 %Mixte, 15 °C≈ 385km93 %Autoroute 130 km/h, 20 °C≈ 260km62 %Mixte hivernal, 0 °C≈ 345km83 %Autoroute hivernale, 0 °C≈ 215km52 %Longueur des barres : part de l'autonomie WLTP (416 km).02Temps de rechargeEn AC, temps théorique de 10 à 80 % : la puissance de la borne est plafonnée par le chargeur du véhicule. En DC, temps publié par la source : la puissance baisse pendant la charge.Temps de recharge de 10 à 80 % selon la puissance de la borneBornePuissanceDurée 10 → 80 %3,7 kW AC3,7 kW 10 h 567,4 kW AC7,4 kW 5 h 2811,0 kW AC11,0 kW 3 h 4122,0 kW AC11,0 kW (limité par le véhicule)3 h 41Borne DC rapidejusqu'à 101 kW31 minCalcul EVExpert durées AC · Source spécialisée durée DC03Coût de rechargeCalcul EVExpert sur les conditions WLTP, avec un rendement de charge de 90 % et trois tarifs d'hypothèse. Remplacez-les par vos prix dans le calculateur de coût de recharge.Coût de recharge selon le tarifTarifAux 100 km10 → 80 %0 → 100 %Domicile0,25 €/kWh3,47 €10,11 €+290 km14,44 €Borne publique AC0,45 €/kWh6,25 €18,20 €+290 km26,00 €Recharge rapide DC0,65 €/kWh9,03 €26,29 €+290 km37,56 €Votre coût annuel personnaliséKilométrage annuelkmPrix domicile (€/kWh)€/kWhHypothèse EVExpert, pas un tarif universel : remplacez par votre contrat.Prix public (€/kWh)€/kWhHypothèse EVExpert : les prix varient fortement selon l'opérateur et la puissance.Recharge à domicile : 70 %70 %Aux 100 km4,31 €Par mois43 €Par an517 €1 667 kWh/anSur 3 ans1 550 €Calcul EVExpert : consommation réseau propre à ce modèle (13,9 kWh/100 km, pertes de charge comprises) × prix moyen pondéré par la part domicile/public que vous indiquez. N'inclut ni assurance, ni entretien, ni dépréciation — pour un coût total, utilisez le calculateur de coût total de possession.04Fiche techniqueUne donnée absente de la source n'est jamais estimée : la ligne correspondante n'apparaît pas.Batterie et autonomieBatterie brute55,0 kWhBatterie utile52,0 kWhTechnologieNMCAutonomie WLTP (mixte)416 kmConsommation WLTP14,8 kWh/100 kmConsommation calculée (côté batterie)12,5 kWh/100 kmCalcul EVExpertCapacité utile ÷ autonomie WLTP × 100.RechargePuissance AC maximale11,0 kWPuissance DC maximale101 kWCharge DC 10-80 %31 minPerformancesPuissance110 kW (150 ch)Couple245 Nm0 à 100 km/h8,0 sVitesse maximale150 km/hTransmissionTraction (avant)Dimensions, poids et coffreLongueur × largeur × hauteur3 922 × 1 808 × 1 498 mmPoids à vide1 504 kgCoffre326 LCoffre, banquette rabattue1 000 LPlaces5GarantiesGarantie batterie8 ans / 160 000 kmTelle que publiée par la source ; les conditions françaises peuvent différer.05Source des donnéesSource :EV DatabaseSource spécialiséerelevé le 21 septembre 2026Ces données ne sont pas issues d'un document constructeur : vérifiez les points importants (version exacte, année, options) auprès du constructeur avant tout achat. Politique de sources.Questions sur la Renault 5 E-TechQuelle est l'autonomie WLTP de la Renault 5 E-Tech 52 kWh 150 ch ?+EV Database indique 416 km en cycle WLTP mixte pour une batterie de 52,0 kWh utiles. L'autonomie réelle dépend de la vitesse, de la température et du type de trajet : les estimations EVExpert par scénario figurent plus haut sur cette page.Quelle puissance de recharge accepte la Renault 5 E-Tech 52 kWh 150 ch ?+Elle accepte jusqu'à 11,0 kW en courant alternatif (AC) et jusqu'à 101 kW en courant continu (DC), avec un temps de charge de 10 à 80 % de 31 minutes selon EV Database.Combien coûte 100 km en Renault 5 E-Tech ?+Avec une hypothèse de 0,25 €/kWh à domicile et un rendement de charge de 90 %, le calcul EVExpert donne environ 3,47 € aux 100 km dans les conditions WLTP. Ce montant change avec votre tarif et votre conduite : utilisez le calculateur de coût aux 100 km.Peut-on recharger la Renault 5 E-Tech à la maison ?+Oui, en courant alternatif jusqu'à 11,0 kW selon son chargeur embarqué. La puissance réellement utilisée est celle de votre installation, dans la limite de ce que le véhicule accepte.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Quelle est l'autonomie WLTP de la Renault 5 E-Tech 52 kWh 150 ch ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"EV Database indique 416 km en cycle WLTP mixte pour une batterie de 52,0 kWh utiles. L'autonomie réelle dépend de la vitesse, de la température et du type de trajet : les estimations EVExpert par scénario figurent plus haut sur cette page.\"}},{\"@type\":\"Question\",\"name\":\"Quelle puissance de recharge accepte la Renault 5 E-Tech 52 kWh 150 ch ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Elle accepte jusqu'à 11,0 kW en courant alternatif (AC) et jusqu'à 101 kW en courant continu (DC), avec un temps de charge de 10 à 80 % de 31 minutes selon EV Database.\"}},{\"@type\":\"Question\",\"name\":\"Combien coûte 100 km en Renault 5 E-Tech ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Avec une hypothèse de 0,25 €/kWh à domicile et un rendement de charge de 90 %, le calcul EVExpert donne environ 3,47 € aux 100 km dans les conditions WLTP. Ce montant change avec votre tarif et votre conduite : utilisez le calculateur de coût aux 100 km.\"}},{\"@type\":\"Question\",\"name\":\"Peut-on recharger la Renault 5 E-Tech à la maison ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Oui, en courant alternatif jusqu'à 11,0 kW selon son chargeur embarqué. La puissance réellement utilisée est celle de votre installation, dans la limite de ce que le véhicule accepte.\"}}]}Véhicules similairesMême type de carrosserie, capacité de batterie et autonomie proches.ComparerPeugeotCitadinee-20850 kWh433kmWLTPAutonomie WLTPBatterie50,8kWhkWhDC max107kWkWConso.11,7kWh/100 kmkWh/100 km10 → 80 % 28 minFicheComparerOpelCitadineCorsa Electric51 kWh406kmWLTPAutonomie WLTPBatterie48,1kWhkWhDC max100kWkWConso.11,8kWh/100 kmkWh/100 km10 → 80 % 28 minFicheComparerCitroënCitadineë-C3Standard Range 44 kWh327kmWLTPAutonomie WLTPBatterie43,8kWhkWhDC max97kWkWConso.13,4kWh/100 kmkWh/100 km10 → 80 % 31 minFicheOutils utilesCoût de recharge d'une voiture électrique : simulateurSimulateur d'autonomie d'une voiture électriqueCoût au km et aux 100 km d'une voiture électriqueSimulateur de temps de recharge voiture électriqueSimulateur de trajet longue distance en voiture électriqueGuides associésComment calculer l'autonomie réelle d'une voiture électrique ?Recharge AC ou DC : quelle différence ?Batterie brute et batterie utile : quelle différence ?Quelle voiture électrique choisir selon son usage ?",
+    "tables": []
+  },
+  {
+    "tool": "/voitures-electriques/renault/5-e-tech",
+    "case": "fixed",
+    "fields": [
+      {
+        "id": "vce-km",
+        "value": "20000"
+      },
+      {
+        "id": "vce-home-price",
+        "value": "0.25"
+      },
+      {
+        "id": "vce-public-price",
+        "value": "0.6"
+      },
+      {
+        "id": "vce-home-share",
+        "value": "60"
+      }
+    ],
+    "text": "Accueil/Voitures électriques/Renault/5 E-Tech{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Voitures électriques\",\"item\":\"https://www.evexpert.fr/voitures-electriques\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Renault\",\"item\":\"https://www.evexpert.fr/voitures-electriques/renault\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"5 E-Tech\",\"item\":\"https://www.evexpert.fr/voitures-electriques/renault/5-e-tech\"}]}RenaultComparerRenault 5 E-Tech 52 kWh 150 ch : autonomie, recharge et caractéristiquesRenault 5 E-Tech 52 kWh 150 ch (2024-2026) : citadine électrique 5 places, traction (avant), batterie de 52,0 kWh utiles pour 416 km d'autonomie WLTP selon EV Database, recharge AC jusqu'à 11,0 kW et DC jusqu'à 101 kW.Données relevées le 21 septembre 2026 · Source spécialisée3 922 mmCitadine · L × l × h : 3 922 × 1 808 × 1 498 mm. Silhouette schématique du type de carrosserie, pas le modèle exact.La silhouette rétro de la Renault 5 E-Tech 52 kWh 150 ch cache une mécanique assez classique pour une citadine de notre catalogue : 52,0 kWh utiles, 416 km d'autonomie WLTP selon EV Database, soit une consommation calculée d'environ 12,5 kWh/100 km. Son comparateur le plus proche par taille de batterie parmi les citadines, la Peugeot e-208 50 kWh, est un peu plus puissante (115 kW contre 110 kW) pour une autonomie proche.Sa puissance de charge DC, 101 kW, permet de passer de 10 à 80 % en 31 minutes selon EV Database — quelques minutes de plus que l'e-208. En AC, elle accepte jusqu'à 11 kW, la pleine puissance d'une borne triphasée standard.Avec 5 places et un coffre de 326 L, elle couvre l'essentiel d'un usage urbain et périurbain quotidien. Son poids modéré (1 504 kg) joue en sa faveur en ville, mais n'empêche pas l'autonomie réelle de redescendre sous la valeur WLTP sur autoroute, à vitesse élevée.Autonomie WLTP416km0800 kmBatterie utile52,0kWh55,0 kWh bruteCharge DC max101kW10 → 80 % en 31 minCoût aux 100 km3,47€Calcul EVExpert, 0,25 €/kWh à domicileAutonomie réelleRechargeCoûtFiche techniqueSource01Autonomie réelle estiméeEstimation EVExpert : la consommation de référence (12,5 kWh/100 km, côté batterie) est multipliée par des facteurs de vitesse, de température et de type de trajet, décrits sur la page Méthodologie.ScénarioPart de l'autonomie WLTPVille, 20 °C≈ 490km118 %Mixte, 15 °C≈ 385km93 %Autoroute 130 km/h, 20 °C≈ 260km62 %Mixte hivernal, 0 °C≈ 345km83 %Autoroute hivernale, 0 °C≈ 215km52 %Longueur des barres : part de l'autonomie WLTP (416 km).02Temps de rechargeEn AC, temps théorique de 10 à 80 % : la puissance de la borne est plafonnée par le chargeur du véhicule. En DC, temps publié par la source : la puissance baisse pendant la charge.Temps de recharge de 10 à 80 % selon la puissance de la borneBornePuissanceDurée 10 → 80 %3,7 kW AC3,7 kW 10 h 567,4 kW AC7,4 kW 5 h 2811,0 kW AC11,0 kW 3 h 4122,0 kW AC11,0 kW (limité par le véhicule)3 h 41Borne DC rapidejusqu'à 101 kW31 minCalcul EVExpert durées AC · Source spécialisée durée DC03Coût de rechargeCalcul EVExpert sur les conditions WLTP, avec un rendement de charge de 90 % et trois tarifs d'hypothèse. Remplacez-les par vos prix dans le calculateur de coût de recharge.Coût de recharge selon le tarifTarifAux 100 km10 → 80 %0 → 100 %Domicile0,25 €/kWh3,47 €10,11 €+290 km14,44 €Borne publique AC0,45 €/kWh6,25 €18,20 €+290 km26,00 €Recharge rapide DC0,65 €/kWh9,03 €26,29 €+290 km37,56 €Votre coût annuel personnaliséKilométrage annuelkmPrix domicile (€/kWh)€/kWhHypothèse EVExpert, pas un tarif universel : remplacez par votre contrat.Prix public (€/kWh)€/kWhHypothèse EVExpert : les prix varient fortement selon l'opérateur et la puissance.Recharge à domicile : 60 %60 %Aux 100 km5,42 €Par mois90 €Par an1 083 €2 778 kWh/anSur 3 ans3 250 €Calcul EVExpert : consommation réseau propre à ce modèle (13,9 kWh/100 km, pertes de charge comprises) × prix moyen pondéré par la part domicile/public que vous indiquez. N'inclut ni assurance, ni entretien, ni dépréciation — pour un coût total, utilisez le calculateur de coût total de possession.04Fiche techniqueUne donnée absente de la source n'est jamais estimée : la ligne correspondante n'apparaît pas.Batterie et autonomieBatterie brute55,0 kWhBatterie utile52,0 kWhTechnologieNMCAutonomie WLTP (mixte)416 kmConsommation WLTP14,8 kWh/100 kmConsommation calculée (côté batterie)12,5 kWh/100 kmCalcul EVExpertCapacité utile ÷ autonomie WLTP × 100.RechargePuissance AC maximale11,0 kWPuissance DC maximale101 kWCharge DC 10-80 %31 minPerformancesPuissance110 kW (150 ch)Couple245 Nm0 à 100 km/h8,0 sVitesse maximale150 km/hTransmissionTraction (avant)Dimensions, poids et coffreLongueur × largeur × hauteur3 922 × 1 808 × 1 498 mmPoids à vide1 504 kgCoffre326 LCoffre, banquette rabattue1 000 LPlaces5GarantiesGarantie batterie8 ans / 160 000 kmTelle que publiée par la source ; les conditions françaises peuvent différer.05Source des donnéesSource :EV DatabaseSource spécialiséerelevé le 21 septembre 2026Ces données ne sont pas issues d'un document constructeur : vérifiez les points importants (version exacte, année, options) auprès du constructeur avant tout achat. Politique de sources.Questions sur la Renault 5 E-TechQuelle est l'autonomie WLTP de la Renault 5 E-Tech 52 kWh 150 ch ?+EV Database indique 416 km en cycle WLTP mixte pour une batterie de 52,0 kWh utiles. L'autonomie réelle dépend de la vitesse, de la température et du type de trajet : les estimations EVExpert par scénario figurent plus haut sur cette page.Quelle puissance de recharge accepte la Renault 5 E-Tech 52 kWh 150 ch ?+Elle accepte jusqu'à 11,0 kW en courant alternatif (AC) et jusqu'à 101 kW en courant continu (DC), avec un temps de charge de 10 à 80 % de 31 minutes selon EV Database.Combien coûte 100 km en Renault 5 E-Tech ?+Avec une hypothèse de 0,25 €/kWh à domicile et un rendement de charge de 90 %, le calcul EVExpert donne environ 3,47 € aux 100 km dans les conditions WLTP. Ce montant change avec votre tarif et votre conduite : utilisez le calculateur de coût aux 100 km.Peut-on recharger la Renault 5 E-Tech à la maison ?+Oui, en courant alternatif jusqu'à 11,0 kW selon son chargeur embarqué. La puissance réellement utilisée est celle de votre installation, dans la limite de ce que le véhicule accepte.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Quelle est l'autonomie WLTP de la Renault 5 E-Tech 52 kWh 150 ch ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"EV Database indique 416 km en cycle WLTP mixte pour une batterie de 52,0 kWh utiles. L'autonomie réelle dépend de la vitesse, de la température et du type de trajet : les estimations EVExpert par scénario figurent plus haut sur cette page.\"}},{\"@type\":\"Question\",\"name\":\"Quelle puissance de recharge accepte la Renault 5 E-Tech 52 kWh 150 ch ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Elle accepte jusqu'à 11,0 kW en courant alternatif (AC) et jusqu'à 101 kW en courant continu (DC), avec un temps de charge de 10 à 80 % de 31 minutes selon EV Database.\"}},{\"@type\":\"Question\",\"name\":\"Combien coûte 100 km en Renault 5 E-Tech ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Avec une hypothèse de 0,25 €/kWh à domicile et un rendement de charge de 90 %, le calcul EVExpert donne environ 3,47 € aux 100 km dans les conditions WLTP. Ce montant change avec votre tarif et votre conduite : utilisez le calculateur de coût aux 100 km.\"}},{\"@type\":\"Question\",\"name\":\"Peut-on recharger la Renault 5 E-Tech à la maison ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Oui, en courant alternatif jusqu'à 11,0 kW selon son chargeur embarqué. La puissance réellement utilisée est celle de votre installation, dans la limite de ce que le véhicule accepte.\"}}]}Véhicules similairesMême type de carrosserie, capacité de batterie et autonomie proches.ComparerPeugeotCitadinee-20850 kWh433kmWLTPAutonomie WLTPBatterie50,8kWhkWhDC max107kWkWConso.11,7kWh/100 kmkWh/100 km10 → 80 % 28 minFicheComparerOpelCitadineCorsa Electric51 kWh406kmWLTPAutonomie WLTPBatterie48,1kWhkWhDC max100kWkWConso.11,8kWh/100 kmkWh/100 km10 → 80 % 28 minFicheComparerCitroënCitadineë-C3Standard Range 44 kWh327kmWLTPAutonomie WLTPBatterie43,8kWhkWhDC max97kWkWConso.13,4kWh/100 kmkWh/100 km10 → 80 % 31 minFicheOutils utilesCoût de recharge d'une voiture électrique : simulateurSimulateur d'autonomie d'une voiture électriqueCoût au km et aux 100 km d'une voiture électriqueSimulateur de temps de recharge voiture électriqueSimulateur de trajet longue distance en voiture électriqueGuides associésComment calculer l'autonomie réelle d'une voiture électrique ?Recharge AC ou DC : quelle différence ?Batterie brute et batterie utile : quelle différence ?Quelle voiture électrique choisir selon son usage ?",
+    "tables": []
+  },
+  {
+    "tool": "/voitures-electriques/tesla/model-3/rwd",
+    "case": "default",
+    "fields": [
+      {
+        "id": "vce-km",
+        "value": "12000"
+      },
+      {
+        "id": "vce-home-price",
+        "value": "0.25"
+      },
+      {
+        "id": "vce-public-price",
+        "value": "0.45"
+      },
+      {
+        "id": "vce-home-share",
+        "value": "70"
+      }
+    ],
+    "text": "Accueil/Voitures électriques/Tesla/Model 3/RWD{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Voitures électriques\",\"item\":\"https://www.evexpert.fr/voitures-electriques\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Tesla\",\"item\":\"https://www.evexpert.fr/voitures-electriques/tesla\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"Model 3\",\"item\":\"https://www.evexpert.fr/voitures-electriques/tesla/model-3\"},{\"@type\":\"ListItem\",\"position\":5,\"name\":\"RWD\",\"item\":\"https://www.evexpert.fr/voitures-electriques/tesla/model-3/rwd\"}]}Tesla Model 3ComparerTesla Model 3 RWD : autonomie, recharge et caractéristiquesTesla Model 3 RWD (2026) : berline électrique 5 places, propulsion (arrière), batterie de 60,0 kWh utiles pour 572 km d'autonomie WLTP selon EV Database, recharge AC jusqu'à 11,0 kW et DC jusqu'à 175 kW.Données relevées le 21 septembre 2026 · Source spécialisée4 720 mmBerline · L × l × h : 4 720 × 1 850 × 1 440 mm. Silhouette schématique du type de carrosserie, pas le modèle exact.Autonomie WLTP572km0800 kmBatterie utile60,0kWh64,0 kWh bruteCharge DC max175kW10 → 80 % en 24 minCoût aux 100 km2,91€Calcul EVExpert, 0,25 €/kWh à domicileAutonomie réelleRechargeCoûtFiche techniqueSource01Autonomie réelle estiméeEstimation EVExpert : la consommation de référence (10,5 kWh/100 km, côté batterie) est multipliée par des facteurs de vitesse, de température et de type de trajet, décrits sur la page Méthodologie.ScénarioPart de l'autonomie WLTPVille, 20 °C≈ 675km118 %Mixte, 15 °C≈ 530km93 %Autoroute 130 km/h, 20 °C≈ 355km62 %Mixte hivernal, 0 °C≈ 475km83 %Autoroute hivernale, 0 °C≈ 295km52 %Longueur des barres : part de l'autonomie WLTP (572 km).02Temps de rechargeEn AC, temps théorique de 10 à 80 % : la puissance de la borne est plafonnée par le chargeur du véhicule. En DC, temps publié par la source : la puissance baisse pendant la charge.Temps de recharge de 10 à 80 % selon la puissance de la borneBornePuissanceDurée 10 → 80 %3,7 kW AC3,7 kW 12 h 377,4 kW AC7,4 kW 6 h 1811,0 kW AC11,0 kW 4 h 1522,0 kW AC11,0 kW (limité par le véhicule)4 h 15Borne DC rapidejusqu'à 175 kW24 minCalcul EVExpert durées AC · Source spécialisée durée DC03Coût de rechargeCalcul EVExpert sur les conditions WLTP, avec un rendement de charge de 90 % et trois tarifs d'hypothèse. Remplacez-les par vos prix dans le calculateur de coût de recharge.Coût de recharge selon le tarifTarifAux 100 km10 → 80 %0 → 100 %Domicile0,25 €/kWh2,91 €11,67 €+400 km16,67 €Borne publique AC0,45 €/kWh5,24 €21,00 €+400 km30,00 €Recharge rapide DC0,65 €/kWh7,58 €30,33 €+400 km43,33 €Votre coût annuel personnaliséKilométrage annuelkmPrix domicile (€/kWh)€/kWhHypothèse EVExpert, pas un tarif universel : remplacez par votre contrat.Prix public (€/kWh)€/kWhHypothèse EVExpert : les prix varient fortement selon l'opérateur et la puissance.Recharge à domicile : 70 %70 %Aux 100 km3,61 €Par mois36 €Par an434 €1 399 kWh/anSur 3 ans1 301 €Calcul EVExpert : consommation réseau propre à ce modèle (11,7 kWh/100 km, pertes de charge comprises) × prix moyen pondéré par la part domicile/public que vous indiquez. N'inclut ni assurance, ni entretien, ni dépréciation — pour un coût total, utilisez le calculateur de coût total de possession.04Fiche techniqueUne donnée absente de la source n'est jamais estimée : la ligne correspondante n'apparaît pas.Batterie et autonomieBatterie brute64,0 kWhBatterie utile60,0 kWhTechnologieLFPAutonomie WLTP (mixte)572 kmConsommation WLTP12,2 kWh/100 kmConsommation calculée (côté batterie)10,5 kWh/100 kmCalcul EVExpertCapacité utile ÷ autonomie WLTP × 100.RechargePuissance AC maximale11,0 kWPuissance DC maximale175 kWCharge DC 10-80 %24 minPerformancesPuissance208 kW (283 ch)Couple420 Nm0 à 100 km/h6,2 sVitesse maximale201 km/hTransmissionPropulsion (arrière)Dimensions, poids et coffreLongueur × largeur × hauteur4 720 × 1 850 × 1 440 mmPoids à vide1 847 kgCoffre594 LCoffre, banquette rabattue977 LPlaces5GarantiesGarantie batterie8 ans / 160 000 kmTelle que publiée par la source ; les conditions françaises peuvent différer.05Source des donnéesSource :EV DatabaseSource spécialiséerelevé le 21 septembre 2026Ces données ne sont pas issues d'un document constructeur : vérifiez les points importants (version exacte, année, options) auprès du constructeur avant tout achat. Politique de sources.Questions sur la Tesla Model 3Quelle est l'autonomie WLTP de la Tesla Model 3 RWD ?+EV Database indique 572 km en cycle WLTP mixte pour une batterie de 60,0 kWh utiles. L'autonomie réelle dépend de la vitesse, de la température et du type de trajet : les estimations EVExpert par scénario figurent plus haut sur cette page.Quelle puissance de recharge accepte la Tesla Model 3 RWD ?+Elle accepte jusqu'à 11,0 kW en courant alternatif (AC) et jusqu'à 175 kW en courant continu (DC), avec un temps de charge de 10 à 80 % de 24 minutes selon EV Database.Combien coûte 100 km en Tesla Model 3 ?+Avec une hypothèse de 0,25 €/kWh à domicile et un rendement de charge de 90 %, le calcul EVExpert donne environ 2,91 € aux 100 km dans les conditions WLTP. Ce montant change avec votre tarif et votre conduite : utilisez le calculateur de coût aux 100 km.Peut-on recharger la Tesla Model 3 à la maison ?+Oui, en courant alternatif jusqu'à 11,0 kW selon son chargeur embarqué. La puissance réellement utilisée est celle de votre installation, dans la limite de ce que le véhicule accepte.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Quelle est l'autonomie WLTP de la Tesla Model 3 RWD ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"EV Database indique 572 km en cycle WLTP mixte pour une batterie de 60,0 kWh utiles. L'autonomie réelle dépend de la vitesse, de la température et du type de trajet : les estimations EVExpert par scénario figurent plus haut sur cette page.\"}},{\"@type\":\"Question\",\"name\":\"Quelle puissance de recharge accepte la Tesla Model 3 RWD ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Elle accepte jusqu'à 11,0 kW en courant alternatif (AC) et jusqu'à 175 kW en courant continu (DC), avec un temps de charge de 10 à 80 % de 24 minutes selon EV Database.\"}},{\"@type\":\"Question\",\"name\":\"Combien coûte 100 km en Tesla Model 3 ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Avec une hypothèse de 0,25 €/kWh à domicile et un rendement de charge de 90 %, le calcul EVExpert donne environ 2,91 € aux 100 km dans les conditions WLTP. Ce montant change avec votre tarif et votre conduite : utilisez le calculateur de coût aux 100 km.\"}},{\"@type\":\"Question\",\"name\":\"Peut-on recharger la Tesla Model 3 à la maison ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Oui, en courant alternatif jusqu'à 11,0 kW selon son chargeur embarqué. La puissance réellement utilisée est celle de votre installation, dans la limite de ce que le véhicule accepte.\"}}]}Véhicules similairesMême type de carrosserie, capacité de batterie et autonomie proches.ComparerBMWBerlinei4eDrive40613kmWLTPAutonomie WLTPBatterie81,3kWhkWhDC max205kWkWConso.13,3kWh/100 kmkWh/100 km10 → 80 % 28 minFicheComparerBYDBerlineSeal82,5 kWh AWD Excellence520kmWLTPAutonomie WLTPBatterie82,5kWhkWhDC max150kWkWConso.15,9kWh/100 kmkWh/100 km10 → 80 % 36 minFicheComparerVolkswagenBerlineID.786 kWh703kmWLTPAutonomie WLTPBatterie86,0kWhkWhDC max199kWkWConso.12,2kWh/100 kmkWh/100 km10 → 80 % 29 minFicheOutils utilesCoût de recharge d'une voiture électrique : simulateurSimulateur d'autonomie d'une voiture électriqueCoût au km et aux 100 km d'une voiture électriqueSimulateur de temps de recharge voiture électriqueSimulateur de trajet longue distance en voiture électriqueGuides associésComment calculer l'autonomie réelle d'une voiture électrique ?Recharge AC ou DC : quelle différence ?Batterie brute et batterie utile : quelle différence ?Quelle voiture électrique choisir selon son usage ?",
+    "tables": []
+  },
+  {
+    "tool": "/voitures-electriques/tesla/model-3/rwd",
+    "case": "fixed",
+    "fields": [
+      {
+        "id": "vce-km",
+        "value": "20000"
+      },
+      {
+        "id": "vce-home-price",
+        "value": "0.25"
+      },
+      {
+        "id": "vce-public-price",
+        "value": "0.6"
+      },
+      {
+        "id": "vce-home-share",
+        "value": "60"
+      }
+    ],
+    "text": "Accueil/Voitures électriques/Tesla/Model 3/RWD{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://www.evexpert.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Voitures électriques\",\"item\":\"https://www.evexpert.fr/voitures-electriques\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Tesla\",\"item\":\"https://www.evexpert.fr/voitures-electriques/tesla\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"Model 3\",\"item\":\"https://www.evexpert.fr/voitures-electriques/tesla/model-3\"},{\"@type\":\"ListItem\",\"position\":5,\"name\":\"RWD\",\"item\":\"https://www.evexpert.fr/voitures-electriques/tesla/model-3/rwd\"}]}Tesla Model 3ComparerTesla Model 3 RWD : autonomie, recharge et caractéristiquesTesla Model 3 RWD (2026) : berline électrique 5 places, propulsion (arrière), batterie de 60,0 kWh utiles pour 572 km d'autonomie WLTP selon EV Database, recharge AC jusqu'à 11,0 kW et DC jusqu'à 175 kW.Données relevées le 21 septembre 2026 · Source spécialisée4 720 mmBerline · L × l × h : 4 720 × 1 850 × 1 440 mm. Silhouette schématique du type de carrosserie, pas le modèle exact.Autonomie WLTP572km0800 kmBatterie utile60,0kWh64,0 kWh bruteCharge DC max175kW10 → 80 % en 24 minCoût aux 100 km2,91€Calcul EVExpert, 0,25 €/kWh à domicileAutonomie réelleRechargeCoûtFiche techniqueSource01Autonomie réelle estiméeEstimation EVExpert : la consommation de référence (10,5 kWh/100 km, côté batterie) est multipliée par des facteurs de vitesse, de température et de type de trajet, décrits sur la page Méthodologie.ScénarioPart de l'autonomie WLTPVille, 20 °C≈ 675km118 %Mixte, 15 °C≈ 530km93 %Autoroute 130 km/h, 20 °C≈ 355km62 %Mixte hivernal, 0 °C≈ 475km83 %Autoroute hivernale, 0 °C≈ 295km52 %Longueur des barres : part de l'autonomie WLTP (572 km).02Temps de rechargeEn AC, temps théorique de 10 à 80 % : la puissance de la borne est plafonnée par le chargeur du véhicule. En DC, temps publié par la source : la puissance baisse pendant la charge.Temps de recharge de 10 à 80 % selon la puissance de la borneBornePuissanceDurée 10 → 80 %3,7 kW AC3,7 kW 12 h 377,4 kW AC7,4 kW 6 h 1811,0 kW AC11,0 kW 4 h 1522,0 kW AC11,0 kW (limité par le véhicule)4 h 15Borne DC rapidejusqu'à 175 kW24 minCalcul EVExpert durées AC · Source spécialisée durée DC03Coût de rechargeCalcul EVExpert sur les conditions WLTP, avec un rendement de charge de 90 % et trois tarifs d'hypothèse. Remplacez-les par vos prix dans le calculateur de coût de recharge.Coût de recharge selon le tarifTarifAux 100 km10 → 80 %0 → 100 %Domicile0,25 €/kWh2,91 €11,67 €+400 km16,67 €Borne publique AC0,45 €/kWh5,24 €21,00 €+400 km30,00 €Recharge rapide DC0,65 €/kWh7,58 €30,33 €+400 km43,33 €Votre coût annuel personnaliséKilométrage annuelkmPrix domicile (€/kWh)€/kWhHypothèse EVExpert, pas un tarif universel : remplacez par votre contrat.Prix public (€/kWh)€/kWhHypothèse EVExpert : les prix varient fortement selon l'opérateur et la puissance.Recharge à domicile : 60 %60 %Aux 100 km4,55 €Par mois76 €Par an909 €2 331 kWh/anSur 3 ans2 727 €Calcul EVExpert : consommation réseau propre à ce modèle (11,7 kWh/100 km, pertes de charge comprises) × prix moyen pondéré par la part domicile/public que vous indiquez. N'inclut ni assurance, ni entretien, ni dépréciation — pour un coût total, utilisez le calculateur de coût total de possession.04Fiche techniqueUne donnée absente de la source n'est jamais estimée : la ligne correspondante n'apparaît pas.Batterie et autonomieBatterie brute64,0 kWhBatterie utile60,0 kWhTechnologieLFPAutonomie WLTP (mixte)572 kmConsommation WLTP12,2 kWh/100 kmConsommation calculée (côté batterie)10,5 kWh/100 kmCalcul EVExpertCapacité utile ÷ autonomie WLTP × 100.RechargePuissance AC maximale11,0 kWPuissance DC maximale175 kWCharge DC 10-80 %24 minPerformancesPuissance208 kW (283 ch)Couple420 Nm0 à 100 km/h6,2 sVitesse maximale201 km/hTransmissionPropulsion (arrière)Dimensions, poids et coffreLongueur × largeur × hauteur4 720 × 1 850 × 1 440 mmPoids à vide1 847 kgCoffre594 LCoffre, banquette rabattue977 LPlaces5GarantiesGarantie batterie8 ans / 160 000 kmTelle que publiée par la source ; les conditions françaises peuvent différer.05Source des donnéesSource :EV DatabaseSource spécialiséerelevé le 21 septembre 2026Ces données ne sont pas issues d'un document constructeur : vérifiez les points importants (version exacte, année, options) auprès du constructeur avant tout achat. Politique de sources.Questions sur la Tesla Model 3Quelle est l'autonomie WLTP de la Tesla Model 3 RWD ?+EV Database indique 572 km en cycle WLTP mixte pour une batterie de 60,0 kWh utiles. L'autonomie réelle dépend de la vitesse, de la température et du type de trajet : les estimations EVExpert par scénario figurent plus haut sur cette page.Quelle puissance de recharge accepte la Tesla Model 3 RWD ?+Elle accepte jusqu'à 11,0 kW en courant alternatif (AC) et jusqu'à 175 kW en courant continu (DC), avec un temps de charge de 10 à 80 % de 24 minutes selon EV Database.Combien coûte 100 km en Tesla Model 3 ?+Avec une hypothèse de 0,25 €/kWh à domicile et un rendement de charge de 90 %, le calcul EVExpert donne environ 2,91 € aux 100 km dans les conditions WLTP. Ce montant change avec votre tarif et votre conduite : utilisez le calculateur de coût aux 100 km.Peut-on recharger la Tesla Model 3 à la maison ?+Oui, en courant alternatif jusqu'à 11,0 kW selon son chargeur embarqué. La puissance réellement utilisée est celle de votre installation, dans la limite de ce que le véhicule accepte.{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Quelle est l'autonomie WLTP de la Tesla Model 3 RWD ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"EV Database indique 572 km en cycle WLTP mixte pour une batterie de 60,0 kWh utiles. L'autonomie réelle dépend de la vitesse, de la température et du type de trajet : les estimations EVExpert par scénario figurent plus haut sur cette page.\"}},{\"@type\":\"Question\",\"name\":\"Quelle puissance de recharge accepte la Tesla Model 3 RWD ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Elle accepte jusqu'à 11,0 kW en courant alternatif (AC) et jusqu'à 175 kW en courant continu (DC), avec un temps de charge de 10 à 80 % de 24 minutes selon EV Database.\"}},{\"@type\":\"Question\",\"name\":\"Combien coûte 100 km en Tesla Model 3 ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Avec une hypothèse de 0,25 €/kWh à domicile et un rendement de charge de 90 %, le calcul EVExpert donne environ 2,91 € aux 100 km dans les conditions WLTP. Ce montant change avec votre tarif et votre conduite : utilisez le calculateur de coût aux 100 km.\"}},{\"@type\":\"Question\",\"name\":\"Peut-on recharger la Tesla Model 3 à la maison ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Oui, en courant alternatif jusqu'à 11,0 kW selon son chargeur embarqué. La puissance réellement utilisée est celle de votre installation, dans la limite de ce que le véhicule accepte.\"}}]}Véhicules similairesMême type de carrosserie, capacité de batterie et autonomie proches.ComparerBMWBerlinei4eDrive40613kmWLTPAutonomie WLTPBatterie81,3kWhkWhDC max205kWkWConso.13,3kWh/100 kmkWh/100 km10 → 80 % 28 minFicheComparerBYDBerlineSeal82,5 kWh AWD Excellence520kmWLTPAutonomie WLTPBatterie82,5kWhkWhDC max150kWkWConso.15,9kWh/100 kmkWh/100 km10 → 80 % 36 minFicheComparerVolkswagenBerlineID.786 kWh703kmWLTPAutonomie WLTPBatterie86,0kWhkWhDC max199kWkWConso.12,2kWh/100 kmkWh/100 km10 → 80 % 29 minFicheOutils utilesCoût de recharge d'une voiture électrique : simulateurSimulateur d'autonomie d'une voiture électriqueCoût au km et aux 100 km d'une voiture électriqueSimulateur de temps de recharge voiture électriqueSimulateur de trajet longue distance en voiture électriqueGuides associésComment calculer l'autonomie réelle d'une voiture électrique ?Recharge AC ou DC : quelle différence ?Batterie brute et batterie utile : quelle différence ?Quelle voiture électrique choisir selon son usage ?",
+    "tables": []
+  }
+]

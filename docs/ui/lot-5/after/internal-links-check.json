@@ -1,0 +1,657 @@
+{
+  "uniqueUrls": 198,
+  "fragmentOccurrences": 1237,
+  "broken": [],
+  "missingFragments": [
+    {
+      "source": "/voitures-electriques/audi/q4-e-tron",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/audi/q4-e-tron/40",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/bmw/i4",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/bmw/i4/edrive40",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/bmw/ix1",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/bmw/ix1/edrive20",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/bmw/ix3",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/bmw/ix3/40",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/byd/atto-3-evo",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/byd/atto-3-evo/rwd-design",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/byd/dolphin-surf",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/byd/dolphin-surf/43-2-kwh-comfort",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/byd/seal",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/byd/seal/82-5-kwh-awd-excellence",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/citroen/e-c3",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/citroen/e-c3-aircross",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/citroen/e-c3-aircross/extended-range-54-kwh",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/citroen/e-c3/standard-range-44-kwh",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/cupra/born",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/cupra/born/170-kw-79-kwh",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/dacia/spring",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/dacia/spring/electric-70",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/fiat/500e",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/fiat/500e/hatchback-42-kwh",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/fiat/grande-panda",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/fiat/grande-panda/44-kwh",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/ford/explorer",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/ford/explorer/extended-range-rwd",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/ford/puma-gen-e",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/ford/puma-gen-e/gen-e",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/hyundai/inster",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/hyundai/inster/long-range",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/hyundai/ioniq-5",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/hyundai/ioniq-5/84-kwh-rwd",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/hyundai/kona-electric",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/hyundai/kona-electric/65-kwh",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/kia/ev3",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/kia/ev3/long-range",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/kia/ev6",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/kia/ev6/long-range-awd",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/mercedes-benz/cla",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/mercedes-benz/cla/250",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/mercedes-benz/gla",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/mercedes-benz/gla/250",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/mg/mg4",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/mg/mg4/urban-comfort-long-range",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/mg/mgs5",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/mg/mgs5/ev-64-kwh",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/nissan/leaf",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/nissan/leaf/extended-range-75-kwh",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/opel/corsa-electric",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/opel/corsa-electric/51-kwh",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/opel/mokka-electric",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/opel/mokka-electric/54-kwh",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/peugeot/e-2008",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/peugeot/e-2008/54-kwh",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/peugeot/e-208",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/peugeot/e-208/50-kwh",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/peugeot/e-3008",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/peugeot/e-3008/97-kwh-long-range",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/porsche/macan",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/porsche/macan/4-electric",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/renault/4-e-tech",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/renault/4-e-tech/52-kwh-150-ch",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/renault/5-e-tech",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/renault/5-e-tech/52-kwh-150-ch",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/renault/megane-e-tech",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/renault/megane-e-tech/ev60-220-ch",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/renault/scenic-e-tech",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/renault/scenic-e-tech/ev87-220-ch",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/renault/twingo-e-tech",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/renault/twingo-e-tech/27-5-kwh",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/skoda/elroq",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/skoda/elroq/85",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/skoda/enyaq",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/skoda/enyaq/85",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/smart/smart-1",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/smart/smart-1/pro",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/tesla/model-3/long-range-rwd",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/tesla/model-3/rwd",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/tesla/model-y/long-range-awd",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/tesla/model-y/rwd",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/volkswagen/id-4",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/volkswagen/id-4/pro",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/volkswagen/id-7",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/volkswagen/id-7/86-kwh",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/volvo/ex30",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/volvo/ex30/single-motor-extended-range",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/volvo/ex40",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    },
+    {
+      "source": "/voitures-electriques/volvo/ex40/p5-long-range",
+      "path": "/methodologie",
+      "hash": "#autonomie"
+    }
+  ],
+  "statuses": {
+    "/": 200,
+    "/a-propos": 200,
+    "/auteur": 200,
+    "/blog": 200,
+    "/blog/autonomie-wltp-repartition-catalogue": 200,
+    "/blog/comment-evexpert-construit-sa-base": 200,
+    "/blog/garantie-batterie-ce-que-disent-les-donnees": 200,
+    "/blog/lfp-ou-nmc-ce-que-montrent-les-donnees": 200,
+    "/blog/recharge-ac-puissances-acceptees": 200,
+    "/blog/recharge-rapide-temps-10-80": 200,
+    "/blog/rss.xml": 200,
+    "/blog/voitures-electriques-chinoises-byd-mg": 200,
+    "/blog/voitures-electriques-les-plus-sobres": 200,
+    "/comparer": 200,
+    "/comparer/byd-atto-3-evo-rwd-design-vs-mg-mgs5-ev-64-kwh": 200,
+    "/comparer/citroen-e-c3-standard-range-44-kwh-vs-fiat-grande-panda-44-kwh": 200,
+    "/comparer/kia-ev3-long-range-vs-hyundai-kona-electric-65-kwh": 200,
+    "/comparer/mg-mg4-urban-comfort-long-range-vs-cupra-born-170-kw-79-kwh": 200,
+    "/comparer/renault-5-e-tech-52-kwh-150-ch-vs-peugeot-e-208-50-kwh": 200,
+    "/comparer/renault-scenic-e-tech-ev87-220-ch-vs-volkswagen-id-4-pro": 200,
+    "/comparer/tesla-model-3-long-range-rwd-vs-bmw-i4-edrive40": 200,
+    "/comparer/tesla-model-y-rwd-vs-skoda-elroq-85": 200,
+    "/conditions-utilisation": 200,
+    "/confidentialite": 200,
+    "/contact": 200,
+    "/cookies": 200,
+    "/editorial/batterie-brute-batterie-utile.svg": 200,
+    "/editorial/courbe-de-charge-10-80.svg": 200,
+    "/editorial/cout-recharge-trois-etapes.svg": 200,
+    "/editorial/cycle-wltc-quatre-phases.svg": 200,
+    "/editorial/fonctionnement-borne-de-recharge.svg": 200,
+    "/editorial/kw-kwh-reservoir-debit.svg": 200,
+    "/editorial/puissance-dc-pic-et-moyenne.svg": 200,
+    "/editorial/puissance-recharge-maillon-faible.svg": 200,
+    "/editorial/recharge-ac-dc-conversion.svg": 200,
+    "/editorial/resistance-air-vitesse.svg": 200,
+    "/editorial/tco-postes-de-cout.svg": 200,
+    "/guides": 200,
+    "/guides/acheter-voiture-electrique-occasion": 200,
+    "/guides/autonomie-autoroute": 200,
+    "/guides/autonomie-hiver": 200,
+    "/guides/batterie-brute-batterie-utile": 200,
+    "/guides/calculer-autonomie-reelle": 200,
+    "/guides/calculer-tco-voiture-electrique": 200,
+    "/guides/choisir-premiere-voiture-electrique": 200,
+    "/guides/choisir-voiture-electrique-selon-usage": 200,
+    "/guides/combien-coute-recharge-domicile": 200,
+    "/guides/consommation-voiture-electrique-kwh-100-km": 200,
+    "/guides/cout-100-km-voiture-electrique": 200,
+    "/guides/cout-borne-recharge-domicile": 200,
+    "/guides/duree-de-vie-batterie-voiture-electrique": 200,
+    "/guides/fonctionnement-borne-de-recharge": 200,
+    "/guides/kw-kwh-difference-voiture-electrique": 200,
+    "/guides/preserver-batterie-voiture-electrique": 200,
+    "/guides/prix-batterie-voiture-electrique": 200,
+    "/guides/puissance-borne-7-11-22-kw": 200,
+    "/guides/puissance-recharge-dc": 200,
+    "/guides/recharge-ac-ou-dc": 200,
+    "/guides/recharge-domicile-ou-borne-publique": 200,
+    "/guides/recharger-a-80-pourcent": 200,
+    "/guides/recharger-sur-prise-domestique": 200,
+    "/guides/temps-recharge-voiture-electrique": 200,
+    "/guides/voiture-electrique-vs-essence": 200,
+    "/guides/wltp-definition": 200,
+    "/mentions-legales": 200,
+    "/methodologie": 200,
+    "/outils": 200,
+    "/outils/autonomie-voiture-electrique": 200,
+    "/outils/cout-100-km": 200,
+    "/outils/cout-recharge-voiture-electrique": 200,
+    "/outils/essence-vs-electrique": 200,
+    "/outils/puissance-borne-recharge": 200,
+    "/outils/tco-voiture-electrique": 200,
+    "/outils/temps-recharge": 200,
+    "/outils/trajet-longue-distance": 200,
+    "/politique-editoriale": 200,
+    "/recharge": 200,
+    "/recharge/ccs": 200,
+    "/recharge/chademo": 200,
+    "/recharge/type-2": 200,
+    "/recherche?q=kona": 200,
+    "/sources": 200,
+    "/voitures-electriques": 200,
+    "/voitures-electriques/audi": 200,
+    "/voitures-electriques/audi/q4-e-tron": 200,
+    "/voitures-electriques/audi/q4-e-tron/40": 200,
+    "/voitures-electriques/bmw": 200,
+    "/voitures-electriques/bmw/i4": 200,
+    "/voitures-electriques/bmw/i4/edrive40": 200,
+    "/voitures-electriques/bmw/ix1": 200,
+    "/voitures-electriques/bmw/ix1/edrive20": 200,
+    "/voitures-electriques/bmw/ix3": 200,
+    "/voitures-electriques/bmw/ix3/40": 200,
+    "/voitures-electriques/byd": 200,
+    "/voitures-electriques/byd/atto-3-evo": 200,
+    "/voitures-electriques/byd/atto-3-evo/rwd-design": 200,
+    "/voitures-electriques/byd/dolphin-surf": 200,
+    "/voitures-electriques/byd/dolphin-surf/43-2-kwh-comfort": 200,
+    "/voitures-electriques/byd/seal": 200,
+    "/voitures-electriques/byd/seal/82-5-kwh-awd-excellence": 200,
+    "/voitures-electriques/citroen": 200,
+    "/voitures-electriques/citroen/e-c3": 200,
+    "/voitures-electriques/citroen/e-c3-aircross": 200,
+    "/voitures-electriques/citroen/e-c3-aircross/extended-range-54-kwh": 200,
+    "/voitures-electriques/citroen/e-c3/standard-range-44-kwh": 200,
+    "/voitures-electriques/cupra": 200,
+    "/voitures-electriques/cupra/born": 200,
+    "/voitures-electriques/cupra/born/170-kw-79-kwh": 200,
+    "/voitures-electriques/dacia": 200,
+    "/voitures-electriques/dacia/spring": 200,
+    "/voitures-electriques/dacia/spring/electric-70": 200,
+    "/voitures-electriques/fiat": 200,
+    "/voitures-electriques/fiat/500e": 200,
+    "/voitures-electriques/fiat/500e/hatchback-42-kwh": 200,
+    "/voitures-electriques/fiat/grande-panda": 200,
+    "/voitures-electriques/fiat/grande-panda/44-kwh": 200,
+    "/voitures-electriques/ford": 200,
+    "/voitures-electriques/ford/explorer": 200,
+    "/voitures-electriques/ford/explorer/extended-range-rwd": 200,
+    "/voitures-electriques/ford/puma-gen-e": 200,
+    "/voitures-electriques/ford/puma-gen-e/gen-e": 200,
+    "/voitures-electriques/hyundai": 200,
+    "/voitures-electriques/hyundai/inster": 200,
+    "/voitures-electriques/hyundai/inster/long-range": 200,
+    "/voitures-electriques/hyundai/ioniq-5": 200,
+    "/voitures-electriques/hyundai/ioniq-5/84-kwh-rwd": 200,
+    "/voitures-electriques/hyundai/kona-electric": 200,
+    "/voitures-electriques/hyundai/kona-electric/65-kwh": 200,
+    "/voitures-electriques/kia": 200,
+    "/voitures-electriques/kia/ev3": 200,
+    "/voitures-electriques/kia/ev3/long-range": 200,
+    "/voitures-electriques/kia/ev6": 200,
+    "/voitures-electriques/kia/ev6/long-range-awd": 200,
+    "/voitures-electriques/mercedes-benz": 200,
+    "/voitures-electriques/mercedes-benz/cla": 200,
+    "/voitures-electriques/mercedes-benz/cla/250": 200,
+    "/voitures-electriques/mercedes-benz/gla": 200,
+    "/voitures-electriques/mercedes-benz/gla/250": 200,
+    "/voitures-electriques/mg": 200,
+    "/voitures-electriques/mg/mg4": 200,
+    "/voitures-electriques/mg/mg4/urban-comfort-long-range": 200,
+    "/voitures-electriques/mg/mgs5": 200,
+    "/voitures-electriques/mg/mgs5/ev-64-kwh": 200,
+    "/voitures-electriques/nissan": 200,
+    "/voitures-electriques/nissan/leaf": 200,
+    "/voitures-electriques/nissan/leaf/extended-range-75-kwh": 200,
+    "/voitures-electriques/opel": 200,
+    "/voitures-electriques/opel/corsa-electric": 200,
+    "/voitures-electriques/opel/corsa-electric/51-kwh": 200,
+    "/voitures-electriques/opel/mokka-electric": 200,
+    "/voitures-electriques/opel/mokka-electric/54-kwh": 200,
+    "/voitures-electriques/peugeot": 200,
+    "/voitures-electriques/peugeot/e-2008": 200,
+    "/voitures-electriques/peugeot/e-2008/54-kwh": 200,
+    "/voitures-electriques/peugeot/e-208": 200,
+    "/voitures-electriques/peugeot/e-208/50-kwh": 200,
+    "/voitures-electriques/peugeot/e-3008": 200,
+    "/voitures-electriques/peugeot/e-3008/97-kwh-long-range": 200,
+    "/voitures-electriques/porsche": 200,
+    "/voitures-electriques/porsche/macan": 200,
+    "/voitures-electriques/porsche/macan/4-electric": 200,
+    "/voitures-electriques/renault": 200,
+    "/voitures-electriques/renault/4-e-tech": 200,
+    "/voitures-electriques/renault/4-e-tech/52-kwh-150-ch": 200,
+    "/voitures-electriques/renault/5-e-tech": 200,
+    "/voitures-electriques/renault/5-e-tech/52-kwh-150-ch": 200,
+    "/voitures-electriques/renault/megane-e-tech": 200,
+    "/voitures-electriques/renault/megane-e-tech/ev60-220-ch": 200,
+    "/voitures-electriques/renault/scenic-e-tech": 200,
+    "/voitures-electriques/renault/scenic-e-tech/ev87-220-ch": 200,
+    "/voitures-electriques/renault/twingo-e-tech": 200,
+    "/voitures-electriques/renault/twingo-e-tech/27-5-kwh": 200,
+    "/voitures-electriques/skoda": 200,
+    "/voitures-electriques/skoda/elroq": 200,
+    "/voitures-electriques/skoda/elroq/85": 200,
+    "/voitures-electriques/skoda/enyaq": 200,
+    "/voitures-electriques/skoda/enyaq/85": 200,
+    "/voitures-electriques/smart": 200,
+    "/voitures-electriques/smart/smart-1": 200,
+    "/voitures-electriques/smart/smart-1/pro": 200,
+    "/voitures-electriques/tesla": 200,
+    "/voitures-electriques/tesla/model-3": 200,
+    "/voitures-electriques/tesla/model-3/long-range-rwd": 200,
+    "/voitures-electriques/tesla/model-3/rwd": 200,
+    "/voitures-electriques/tesla/model-y": 200,
+    "/voitures-electriques/tesla/model-y/long-range-awd": 200,
+    "/voitures-electriques/tesla/model-y/rwd": 200,
+    "/voitures-electriques/trouver": 200,
+    "/voitures-electriques/volkswagen": 200,
+    "/voitures-electriques/volkswagen/id-4": 200,
+    "/voitures-electriques/volkswagen/id-4/pro": 200,
+    "/voitures-electriques/volkswagen/id-7": 200,
+    "/voitures-electriques/volkswagen/id-7/86-kwh": 200,
+    "/voitures-electriques/volvo": 200,
+    "/voitures-electriques/volvo/ex30": 200,
+    "/voitures-electriques/volvo/ex30/single-motor-extended-range": 200,
+    "/voitures-electriques/volvo/ex40": 200,
+    "/voitures-electriques/volvo/ex40/p5-long-range": 200
+  }
+}

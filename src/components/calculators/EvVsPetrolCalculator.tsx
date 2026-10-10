@@ -6,6 +6,8 @@ import { ASSUMPTIONS } from "@/data/assumptions";
 import { computeRunningCost } from "@/lib/calculators";
 import { formatEuro } from "@/lib/format";
 import { Field, NumberInput, ResultCard } from "./kit";
+import { inputPanelClass, resultPanelClass } from "@/components/ui/componentStyles";
+import { cx } from "@/lib/cx";
 
 interface CarInputs {
   price: number;
@@ -50,7 +52,7 @@ function CarForm({
 }) {
   const upd = (k: keyof CarInputs, v: number) => set({ ...state, [k]: v });
   return (
-    <div className="rounded-2xl border border-line bg-surface p-5">
+    <div className={inputPanelClass}>
       <h2 className="text-base font-bold text-ink">{title}</h2>
       <div className="mt-4 grid grid-cols-2 gap-3">
         <Field label="Prix (€)" htmlFor={`${title}-price`}>
@@ -104,7 +106,7 @@ export function EvVsPetrolCalculator() {
         <CarForm title="Essence" state={petrol} set={setPetrol} energyLabel="L/100" />
       </div>
 
-      <div className="on-ink grid gap-x-8 gap-y-5 rounded-2xl bg-ink p-6 text-paper sm:grid-cols-3 sm:p-8" aria-live="polite">
+      <div className={cx(resultPanelClass, "grid gap-x-8 gap-y-5 sm:grid-cols-3")} aria-live="polite">
         <ResultCard label="Coût annuel (électrique)" value={formatEuro(evR.annualTotal)} emphasis />
         <ResultCard label="Coût mensuel (électrique)" value={formatEuro(evR.monthly)} />
         <ResultCard label="Coût / km (électrique)" value={formatEuro(evR.perKm, 2)} />
@@ -113,7 +115,7 @@ export function EvVsPetrolCalculator() {
         <ResultCard label="Coût / km (essence)" value={formatEuro(petrolR.perKm, 2)} />
       </div>
 
-      <div className="rounded-2xl border border-line bg-surface p-5">
+      <div className={inputPanelClass}>
         <h2 className="mb-4 text-base font-bold text-ink">
           Coût cumulé selon la durée
         </h2>

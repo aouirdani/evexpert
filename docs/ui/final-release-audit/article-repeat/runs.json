@@ -1,0 +1,1456 @@
+[
+  {
+    "origin": "production",
+    "repeat": 1,
+    "path": "/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
+    "device": "mobile",
+    "date": "2026-10-10T12:52:19.356Z",
+    "score": 99,
+    "accessibility": 100,
+    "lcp": 1976.5320000000002,
+    "fcp": 947.8750000000001,
+    "cls": 0,
+    "tbt": 58.999999999999545,
+    "lcpElement": "<img alt=\"Pack de batterie lithium-ion d'une BMW i3 présenté capot ouvert : des modu…\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-…\" src=\"https://www.evexpert.fr/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-n…\">",
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "warnings": [],
+    "ttfb": 10.710999999999999,
+    "mainThread": 756.6039999999996,
+    "network": [
+      {
+        "url": "https://www.evexpert.fr/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
+        "resourceType": "Document",
+        "transferSize": 19198,
+        "resourceSize": 119455,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/media/23b7a97ae3b5c134-s.p.0o14nraug8u5s.woff2",
+        "resourceType": "Font",
+        "transferSize": 10340,
+        "resourceSize": 10120,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/media/99e609270109b47d-s.p.16-z~2sp29ex6.woff2",
+        "resourceType": "Font",
+        "transferSize": 10291,
+        "resourceSize": 10052,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/media/SchibstedGrotesk_latin_var-s.p.0magfa.1.zbwp.woff2",
+        "resourceType": "Font",
+        "transferSize": 36446,
+        "resourceSize": 36116,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/media/a7e15459c1805da0-s.p.15mmg7gamto4l.woff2",
+        "resourceType": "Font",
+        "transferSize": 10333,
+        "resourceSize": 10128,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-donnees.jpeg&w=750&q=75",
+        "resourceType": "Image",
+        "transferSize": 16770,
+        "resourceSize": 16450,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0bpl33t34okcv.css",
+        "resourceType": "Stylesheet",
+        "transferSize": 12566,
+        "resourceSize": 59563,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0zaia6i55l01..js",
+        "resourceType": "Script",
+        "transferSize": 8296,
+        "resourceSize": 24944,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0pqt~8bl3ukh4.js",
+        "resourceType": "Script",
+        "transferSize": 9876,
+        "resourceSize": 44414,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0m_p1bxtorv5i.js",
+        "resourceType": "Script",
+        "transferSize": 72270,
+        "resourceSize": 226355,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/02g3221oh~3le.js",
+        "resourceType": "Script",
+        "transferSize": 41711,
+        "resourceSize": 150333,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/turbopack-0~dymj8._h2gc.js",
+        "resourceType": "Script",
+        "transferSize": 4882,
+        "resourceSize": 11041,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0.f3-3c83~_r~.js",
+        "resourceType": "Script",
+        "transferSize": 8040,
+        "resourceSize": 20419,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0d3shmwh5_nmn.js",
+        "resourceType": "Script",
+        "transferSize": 13577,
+        "resourceSize": 54646,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0mozcut~yh97e.js",
+        "resourceType": "Script",
+        "transferSize": 1638,
+        "resourceSize": 3028,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0d0a22qj1ucc2.js",
+        "resourceType": "Script",
+        "transferSize": 9198,
+        "resourceSize": 28483,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0p1b-al6~s0pp.js",
+        "resourceType": "Script",
+        "transferSize": 874,
+        "resourceSize": 1605,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0poyf4wlw.w5e.js",
+        "resourceType": "Script",
+        "transferSize": 5882,
+        "resourceSize": 14474,
+        "statusCode": 200
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "resourceType": "Script",
+        "transferSize": 57267,
+        "resourceSize": 166279,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/manifest.webmanifest",
+        "resourceType": "Manifest",
+        "transferSize": 1145,
+        "resourceSize": 694,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-donnees.jpeg&w=750&q=75",
+        "resourceType": "Other",
+        "transferSize": 90,
+        "resourceSize": 16450,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/brand/favicon.ico",
+        "resourceType": "Other",
+        "transferSize": 1310,
+        "resourceSize": 1167,
+        "statusCode": 200
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610050101/show_ads_impl_fy2021.js?bust=122881438",
+        "resourceType": "Script",
+        "transferSize": 167858,
+        "resourceSize": 510928,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/blog?_rsc=hbNTlUG06CYEfUFD",
+        "resourceType": "Fetch",
+        "transferSize": 914,
+        "resourceSize": 778,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/?_rsc=hbNTlUG06CYEfUFD",
+        "resourceType": "Fetch",
+        "transferSize": 975,
+        "resourceSize": 710,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/?_rsc=era0v-5DKkRU7vpX",
+        "resourceType": "Fetch",
+        "transferSize": 1169,
+        "resourceSize": 3525,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/?_rsc=Ow_d30zFIi-txWDW",
+        "resourceType": "Fetch",
+        "transferSize": 6015,
+        "resourceSize": 25379,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/?_rsc=C3ib3mETd8xZaDTy",
+        "resourceType": "Fetch",
+        "transferSize": 12995,
+        "resourceSize": 97891,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/blog?_rsc=era0v-5DKkRU7vpX",
+        "resourceType": "Fetch",
+        "transferSize": 1190,
+        "resourceSize": 3535,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/07ak5ajsco_u-.js",
+        "resourceType": "Script",
+        "transferSize": 7630,
+        "resourceSize": 18422,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/blog?_rsc=WA9_undsbd_0zVFj",
+        "resourceType": "Fetch",
+        "transferSize": 553,
+        "resourceSize": 445,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/blog?_rsc=n4TPpGyX9L_eHCfk",
+        "resourceType": "Fetch",
+        "transferSize": 2747,
+        "resourceSize": 8033,
+        "statusCode": 200
+      },
+      {
+        "url": "https://fundingchoicesmessages.google.com/i/ca-pub-7903460199253248?href=https%3A%2F%2Fwww.evexpert.fr%2Fblog%2Flfp-ou-nmc-ce-que-montrent-les-donnees&ers=2",
+        "resourceType": "Script",
+        "transferSize": 72900,
+        "resourceSize": 228587,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0-62_5t1y6q50.js",
+        "resourceType": "Script",
+        "transferSize": 7627,
+        "resourceSize": 18877,
+        "statusCode": 200
+      },
+      {
+        "url": "https://fundingchoicesmessages.google.com/el/AGSKWxWQudhXPdBbU4jVGaaS70nqctMYrZifVYTw1SEZ7Gp0glMjgJpzlgLemSfP6EXwsxi0XoqYWgT8EBx1U4oNiA3H0WgMLCTQfyCbAX_sEec1sqgjJOiPjfYWTTKPMI81XFgcGVI1jA==",
+        "resourceType": "XHR",
+        "transferSize": 28,
+        "resourceSize": 0,
+        "statusCode": 204
+      },
+      {
+        "url": "https://fundingchoicesmessages.google.com/el/AGSKWxWQudhXPdBbU4jVGaaS70nqctMYrZifVYTw1SEZ7Gp0glMjgJpzlgLemSfP6EXwsxi0XoqYWgT8EBx1U4oNiA3H0WgMLCTQfyCbAX_sEec1sqgjJOiPjfYWTTKPMI81XFgcGVI1jA==",
+        "resourceType": "XHR",
+        "transferSize": 28,
+        "resourceSize": 0,
+        "statusCode": 204
+      },
+      {
+        "url": "https://fundingchoicesmessages.google.com/el/AGSKWxWQudhXPdBbU4jVGaaS70nqctMYrZifVYTw1SEZ7Gp0glMjgJpzlgLemSfP6EXwsxi0XoqYWgT8EBx1U4oNiA3H0WgMLCTQfyCbAX_sEec1sqgjJOiPjfYWTTKPMI81XFgcGVI1jA==",
+        "resourceType": "XHR",
+        "transferSize": 28,
+        "resourceSize": 0,
+        "statusCode": 204
+      },
+      {
+        "url": "https://fundingchoicesmessages.google.com/f/AGSKWxWDquOiT7U8E5Knm7YRZjizfw1yc0QYSYVUwLlrLVccYoCOGYS5rd9oqerrRcxRFLIWDluFJ8wfAZyqtZcSyqnjuQcgcl-OCzke8qa9KOJ8PCdfuEGmVzp1n1MmmdNeT-fXWbNNyQ==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzkxNjM2NzM5LDg2NjAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzddXSwiaHR0cHM6Ly93d3cuZXZleHBlcnQuZnIvYmxvZy9sZnAtb3Utbm1jLWNlLXF1ZS1tb250cmVudC1sZXMtZG9ubmVlcyIsbnVsbCxbWzgsIlk4RWtjRkdReW5JIl0sWzksImZyIl0sWzE4LCJbW1tudWxsLDI5MF1dXSJdLFszNSwiMTc5MTYzNjczOSJdLFsyNiwiMTMiXSxbMzMsIjIiXSxbMTksIjEiXSxbMTcsIlswXSJdLFsyNCwiIl0sWzI1LCJbWzk1Mzg3NjMzXV0iXSxbMjksImZhbHNlIl1dXQ",
+        "resourceType": "Script",
+        "transferSize": 1820,
+        "resourceSize": 2933,
+        "statusCode": 200
+      },
+      {
+        "url": "https://fundingchoicesmessages.google.com/el/AGSKWxWQudhXPdBbU4jVGaaS70nqctMYrZifVYTw1SEZ7Gp0glMjgJpzlgLemSfP6EXwsxi0XoqYWgT8EBx1U4oNiA3H0WgMLCTQfyCbAX_sEec1sqgjJOiPjfYWTTKPMI81XFgcGVI1jA==",
+        "resourceType": "XHR",
+        "transferSize": 28,
+        "resourceSize": 0,
+        "statusCode": 204
+      }
+    ]
+  },
+  {
+    "origin": "local",
+    "repeat": 1,
+    "path": "/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
+    "device": "mobile",
+    "date": "2026-10-10T12:52:26.182Z",
+    "score": 95,
+    "accessibility": 100,
+    "lcp": 2933.7045,
+    "fcp": 905.8030000000001,
+    "cls": 0,
+    "tbt": 11,
+    "lcpElement": "<img alt=\"Pack de batterie lithium-ion d'une BMW i3 présenté capot ouvert : des modu…\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-…\" src=\"http://localhost:3102/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc…\">",
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "warnings": [],
+    "ttfb": 4.205,
+    "mainThread": 644.6960000000016,
+    "network": [
+      {
+        "url": "http://localhost:3102/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
+        "resourceType": "Document",
+        "transferSize": 22064,
+        "resourceSize": 121220,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/23b7a97ae3b5c134-s.p.0o14nraug8u5s.woff2",
+        "resourceType": "Font",
+        "transferSize": 10594,
+        "resourceSize": 10120,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/99e609270109b47d-s.p.16-z~2sp29ex6.woff2",
+        "resourceType": "Font",
+        "transferSize": 10526,
+        "resourceSize": 10052,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/SchibstedGrotesk_latin_var-s.p.0magfa.1.zbwp.woff2",
+        "resourceType": "Font",
+        "transferSize": 36590,
+        "resourceSize": 36116,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/a7e15459c1805da0-s.p.15mmg7gamto4l.woff2",
+        "resourceType": "Font",
+        "transferSize": 10602,
+        "resourceSize": 10128,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-donnees.jpeg&w=750&q=75",
+        "resourceType": "Image",
+        "transferSize": 23521,
+        "resourceSize": 22893,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0b8cex5vy425o.css",
+        "resourceType": "Stylesheet",
+        "transferSize": 15115,
+        "resourceSize": 74531,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "resourceType": "Script",
+        "transferSize": 8379,
+        "resourceSize": 24965,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "resourceType": "Script",
+        "transferSize": 9809,
+        "resourceSize": 44394,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "resourceType": "Script",
+        "transferSize": 71347,
+        "resourceSize": 226343,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "resourceType": "Script",
+        "transferSize": 41018,
+        "resourceSize": 150336,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "resourceType": "Script",
+        "transferSize": 4715,
+        "resourceSize": 10580,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "resourceType": "Script",
+        "transferSize": 8096,
+        "resourceSize": 20481,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "resourceType": "Script",
+        "transferSize": 13439,
+        "resourceSize": 54624,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "resourceType": "Script",
+        "transferSize": 1953,
+        "resourceSize": 3027,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "resourceType": "Script",
+        "transferSize": 9346,
+        "resourceSize": 28484,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "resourceType": "Script",
+        "transferSize": 1276,
+        "resourceSize": 1605,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0svyblr_8zn6x.js",
+        "resourceType": "Script",
+        "transferSize": 6071,
+        "resourceSize": 14469,
+        "statusCode": 200
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "resourceType": "Script",
+        "transferSize": 57259,
+        "resourceSize": 166269,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/manifest.webmanifest",
+        "resourceType": "Manifest",
+        "transferSize": 1211,
+        "resourceSize": 694,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/brand/favicon.ico",
+        "resourceType": "Other",
+        "transferSize": 1697,
+        "resourceSize": 1167,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/auteur?_rsc=hbNTlUG06CYEfUFD",
+        "resourceType": "Fetch",
+        "transferSize": 945,
+        "resourceSize": 780,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=hbNTlUG06CYEfUFD",
+        "resourceType": "Fetch",
+        "transferSize": 970,
+        "resourceSize": 778,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/?_rsc=hbNTlUG06CYEfUFD",
+        "resourceType": "Fetch",
+        "transferSize": 964,
+        "resourceSize": 710,
+        "statusCode": 200
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/getconfig/abg_config?client=ca-pub-7903460199253248&plah=localhost&ama_t=adsense&bust=122881491",
+        "resourceType": "Fetch",
+        "transferSize": 30,
+        "resourceSize": 3,
+        "statusCode": 200
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610060101/show_ads_impl_fy2021.js?bust=122881491",
+        "resourceType": "Script",
+        "transferSize": 168485,
+        "resourceSize": 512049,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/auteur?_rsc=era0v-5DKkRU7vpX",
+        "resourceType": "Fetch",
+        "transferSize": 1622,
+        "resourceSize": 3425,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/auteur?_rsc=Ow_d30zFIi-txWDW",
+        "resourceType": "Fetch",
+        "transferSize": 6061,
+        "resourceSize": 25858,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/auteur?_rsc=Ka2ZCdV0_z__whh0",
+        "resourceType": "Fetch",
+        "transferSize": 860,
+        "resourceSize": 445,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/auteur?_rsc=_fKaS5E0FctYlzUx",
+        "resourceType": "Fetch",
+        "transferSize": 2014,
+        "resourceSize": 4151,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=era0v-5DKkRU7vpX",
+        "resourceType": "Fetch",
+        "transferSize": 1675,
+        "resourceSize": 3535,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=WA9_undsbd_0zVFj",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=n4TPpGyX9L_eHCfk",
+        "resourceType": "Fetch",
+        "transferSize": 3140,
+        "resourceSize": 8683,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/?_rsc=era0v-5DKkRU7vpX",
+        "resourceType": "Fetch",
+        "transferSize": 1658,
+        "resourceSize": 3525,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/?_rsc=C3ib3mETd8xZaDTy",
+        "resourceType": "Fetch",
+        "transferSize": 13760,
+        "resourceSize": 99633,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/025glc_ydtwcl.js",
+        "resourceType": "Script",
+        "transferSize": 7686,
+        "resourceSize": 19013,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "resourceType": "Script",
+        "transferSize": 7694,
+        "resourceSize": 18426,
+        "statusCode": 200
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/html/r20261007/r20190131/zrt_lookup_fy2021.html",
+        "resourceType": "Document",
+        "transferSize": 3912,
+        "resourceSize": 8586,
+        "statusCode": 200
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-7903460199253248&output=html&adk=1812271804&adf=3025194257&abgtt=6&lmt=1791636746&plat=3%3A65536%2C4%3A65536%2C9%3A134217728%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32%2C44%3A32&format=0x0&url=http%3A%2F%2Flocalhost%3A3102%2Fblog%2Flfp-ou-nmc-ce-que-montrent-les-donnees&pra=5&aiof=14&asro=0&itsi=-1&aimartd=4&aieuf=1&aicrs=1&uach=WyJBbmRyb2lkIiwiMTEuMCIsIiIsIm1vdG8gZyBwb3dlciAoMjAyMikiLCIxMzYuMC4wLjAiLG51bGwsMSxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxNTQuMC44MDM3Ljk4Il0sWyJHb29nbGUgQ2hyb21lIiwiMTU0LjAuODAzNy45OCJdLFsiTm90IEEoQnJhbmQiLCI5OS4wLjAuMCJdXSwwXQ..&dt=1791636746343&bpp=2&bdt=93&idt=70&shv=r20261007&mjsv=m202610060101&ptt=9&saldr=aa&abxe=1&eoidce=1&nras=1&correlator=6368292101529&frm=20&pv=2&u_tz=120&u_his=2&u_h=823&u_w=412&u_ah=823&u_aw=412&u_cd=24&u_sd=1.75&dmc=32&adx=-12245933&ady=-12245933&biw=412&bih=823&scr_x=0&scr_y=0&eid=95404823%2C95404844%2C122881491&oid=2&pvsid=6981946874893421&tmod=502143561&uas=0&nvt=1&fsapi=1&fc=1920&brdim=0%2C0%2C0%2C0%2C412%2C0%2C412%2C823%2C412%2C823&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1&pgls=CAk.&ifi=1&uci=a!1&fsb=1&dtd=81",
+        "resourceType": "Document",
+        "transferSize": 65,
+        "resourceSize": 603,
+        "statusCode": 200
+      },
+      {
+        "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261007&st=env&sjk=6981946874893421",
+        "resourceType": "XHR",
+        "transferSize": 13912,
+        "resourceSize": 18422,
+        "statusCode": 200
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "resourceType": "Script",
+        "transferSize": 8070,
+        "resourceSize": 21546,
+        "statusCode": 200
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2/255/runner.html",
+        "resourceType": "Document",
+        "transferSize": 5901,
+        "resourceSize": 14627,
+        "statusCode": 200
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/bicbSm1QHv6PCE7k41PwdE0n8BoGbNC7zjsNTNo3qrw.js",
+        "resourceType": "Script",
+        "transferSize": 24411,
+        "resourceSize": 63573,
+        "statusCode": 200
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/generate_204?uTOijw",
+        "resourceType": "Image",
+        "transferSize": 40,
+        "resourceSize": 0,
+        "statusCode": 204
+      },
+      {
+        "url": "https://ep1.adtrafficquality.google/pagead/sodar?id=sodar2&v=255&t=2&li=gda_r20261007&jk=6981946874893421&bg=!UVKlUjDNAAbHcf5V53E7AEcBe5WfOJ18mrIRqO4xIipXXrV58Q_Yz2nTKiVOhY06hNT4jvhjkZZdcc0Lk_RYiS34d9sqf6Lk58q-rQ9S2GxeUzlV4WsHogIAAAAlUgAAAAJoAQd-ADbVEQguk0EPw0EbdWIPkwR_UboRf4wZkyjHcXhSItGnRJ45SdmtKQHWC2dliLXZPO4o2lGwbD0KAEhqb9bWX8MzlVXTE-Bk72_9P_DTAvg0EF_Iyld47gyaNnJciETrzusmewYdKcbtx4ApTmoE2cUl8yARwBmaLJjFW7UCFF-ktemZAqQIx7asGpQF8RaURxsv7SnEGDJoaT0l7_7GkV3DovX4VznMqOXnJhYb-2FkOInhhaFn5OA4554yUuDpK7xEMCe56RYbcSQH_4euWf4H3DEHS8YUAw06tAp9xxdTjoE94qzoVF3xo3C38gkbWaqUJ8wy-SDkZV8Suo66nLdjh2YqFv1e7YTexWjhw5TRxKZStJBHOZNdgEgXuR96mZB5NXMyVC2jBFjzcS4hkJ6Q_cQQhxHE51bgF8W7A_LoIvuwDlIvqu5uaNZxmXkXS5WsOvxY3TL109soLjfySGipRwxnqT2NlS-itONE3aYbGoOgaWOqKgMEbYx_SAnEfKUbz2_EuMHRAhl29EXGliMAKlTZrXxtGR24P75Em29iRsXr4M3a2t6NpE1QWMz1x7iq8hybnf_xR87L52nOfjkX2wjAxGPSpEtuFFxSYScVohXLJLiInRdUuZlJnOGnp1v7EmgAWxHGhiT0hKmlrq4nyZhr_EAi8WN_PE_IP9zHV4HUFZ9AQ-sOOrLksZThwqxHuZmIHnEF3kNRLVtAKUWQXM8_R9PaODds9oBJrynG2lrpokmZVnvJzeDEi0tkR8Wj4fr-uQT413bVWDd4iZbP0rwtV_lrQ5S5LE_8hNexhbDG2-gSXLoyBNnV5sSxvGurg0vOb3bb9wEP4mCDdjMhpXOTNDXnN1VPgWLWjV6Xre5pnqRQU5et8GBtAr2epl842Q_VRJCwxOCPE7Z34OTB_duQ83zH4j7Pt1cspXVQ-AfgjUar6E4-0LX97LtJGlQgokM2ac-2tut1uDMaMf-QbcitVx0eRzJxX1wBtS4P_7du95uCGwcO5exFoDH7gGbLHy1W7eIt-Wnrwrw9Gt0hfln9PnbFqc-4CPrMEHYrlTArhm3kYHvk",
+        "resourceType": "Image",
+        "transferSize": 17,
+        "resourceSize": 0,
+        "statusCode": 204
+      }
+    ]
+  },
+  {
+    "origin": "local",
+    "repeat": 2,
+    "path": "/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
+    "device": "mobile",
+    "date": "2026-10-10T12:52:32.550Z",
+    "score": 95,
+    "accessibility": 100,
+    "lcp": 2932.627949999999,
+    "fcp": 905.0553999999997,
+    "cls": 0,
+    "tbt": 7.500000000000227,
+    "lcpElement": "<img alt=\"Pack de batterie lithium-ion d'une BMW i3 présenté capot ouvert : des modu…\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-…\" src=\"http://localhost:3102/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc…\">",
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "warnings": [],
+    "ttfb": 4.9399999999999995,
+    "mainThread": 697.2680000000007,
+    "network": [
+      {
+        "url": "http://localhost:3102/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
+        "resourceType": "Document",
+        "transferSize": 22064,
+        "resourceSize": 121220,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/23b7a97ae3b5c134-s.p.0o14nraug8u5s.woff2",
+        "resourceType": "Font",
+        "transferSize": 10594,
+        "resourceSize": 10120,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/99e609270109b47d-s.p.16-z~2sp29ex6.woff2",
+        "resourceType": "Font",
+        "transferSize": 10526,
+        "resourceSize": 10052,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/SchibstedGrotesk_latin_var-s.p.0magfa.1.zbwp.woff2",
+        "resourceType": "Font",
+        "transferSize": 36590,
+        "resourceSize": 36116,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/media/a7e15459c1805da0-s.p.15mmg7gamto4l.woff2",
+        "resourceType": "Font",
+        "transferSize": 10602,
+        "resourceSize": 10128,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-donnees.jpeg&w=750&q=75",
+        "resourceType": "Image",
+        "transferSize": 23521,
+        "resourceSize": 22893,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0b8cex5vy425o.css",
+        "resourceType": "Stylesheet",
+        "transferSize": 15115,
+        "resourceSize": 74531,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0y1q7879-1gp_.js",
+        "resourceType": "Script",
+        "transferSize": 8379,
+        "resourceSize": 24965,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0anb4hls5q2no.js",
+        "resourceType": "Script",
+        "transferSize": 9809,
+        "resourceSize": 44394,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0_e2vyrbei4_k.js",
+        "resourceType": "Script",
+        "transferSize": 71347,
+        "resourceSize": 226343,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0nfgnadpwps_q.js",
+        "resourceType": "Script",
+        "transferSize": 41018,
+        "resourceSize": 150336,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/turbopack-0hr_jy3cp64.u.js",
+        "resourceType": "Script",
+        "transferSize": 4715,
+        "resourceSize": 10580,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0scp9wmhg1mkl.js",
+        "resourceType": "Script",
+        "transferSize": 8096,
+        "resourceSize": 20481,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/15exm892ri-xw.js",
+        "resourceType": "Script",
+        "transferSize": 13439,
+        "resourceSize": 54624,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/11amf0z0.179g.js",
+        "resourceType": "Script",
+        "transferSize": 1953,
+        "resourceSize": 3027,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0o1-~oxa50f82.js",
+        "resourceType": "Script",
+        "transferSize": 9346,
+        "resourceSize": 28484,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/03~4p_qpmcatu.js",
+        "resourceType": "Script",
+        "transferSize": 1276,
+        "resourceSize": 1605,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0svyblr_8zn6x.js",
+        "resourceType": "Script",
+        "transferSize": 6071,
+        "resourceSize": 14469,
+        "statusCode": 200
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "resourceType": "Script",
+        "transferSize": 57259,
+        "resourceSize": 166260,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/manifest.webmanifest",
+        "resourceType": "Manifest",
+        "transferSize": 1211,
+        "resourceSize": 694,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/brand/favicon.ico",
+        "resourceType": "Other",
+        "transferSize": 1697,
+        "resourceSize": 1167,
+        "statusCode": 200
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/getconfig/abg_config?client=ca-pub-7903460199253248&plah=localhost&ama_t=adsense",
+        "resourceType": "Fetch",
+        "transferSize": 30,
+        "resourceSize": 3,
+        "statusCode": 200
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610050101/show_ads_impl_fy2021.js",
+        "resourceType": "Script",
+        "transferSize": 167858,
+        "resourceSize": 510928,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/auteur?_rsc=hbNTlUG06CYEfUFD",
+        "resourceType": "Fetch",
+        "transferSize": 945,
+        "resourceSize": 780,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=hbNTlUG06CYEfUFD",
+        "resourceType": "Fetch",
+        "transferSize": 970,
+        "resourceSize": 778,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/?_rsc=hbNTlUG06CYEfUFD",
+        "resourceType": "Fetch",
+        "transferSize": 964,
+        "resourceSize": 710,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/auteur?_rsc=era0v-5DKkRU7vpX",
+        "resourceType": "Fetch",
+        "transferSize": 1622,
+        "resourceSize": 3425,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/auteur?_rsc=Ow_d30zFIi-txWDW",
+        "resourceType": "Fetch",
+        "transferSize": 6061,
+        "resourceSize": 25858,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/auteur?_rsc=Ka2ZCdV0_z__whh0",
+        "resourceType": "Fetch",
+        "transferSize": 860,
+        "resourceSize": 445,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/auteur?_rsc=_fKaS5E0FctYlzUx",
+        "resourceType": "Fetch",
+        "transferSize": 2014,
+        "resourceSize": 4151,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=era0v-5DKkRU7vpX",
+        "resourceType": "Fetch",
+        "transferSize": 1675,
+        "resourceSize": 3535,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=WA9_undsbd_0zVFj",
+        "resourceType": "Fetch",
+        "transferSize": 890,
+        "resourceSize": 445,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/blog?_rsc=n4TPpGyX9L_eHCfk",
+        "resourceType": "Fetch",
+        "transferSize": 3140,
+        "resourceSize": 8683,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/?_rsc=era0v-5DKkRU7vpX",
+        "resourceType": "Fetch",
+        "transferSize": 1658,
+        "resourceSize": 3525,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/?_rsc=C3ib3mETd8xZaDTy",
+        "resourceType": "Fetch",
+        "transferSize": 13760,
+        "resourceSize": 99633,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/025glc_ydtwcl.js",
+        "resourceType": "Script",
+        "transferSize": 7686,
+        "resourceSize": 19013,
+        "statusCode": 200
+      },
+      {
+        "url": "http://localhost:3102/_next/static/chunks/0t_~gkzqby-ke.js",
+        "resourceType": "Script",
+        "transferSize": 7694,
+        "resourceSize": 18426,
+        "statusCode": 200
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/html/r20261007/r20190131/zrt_lookup_fy2021.html",
+        "resourceType": "Document",
+        "transferSize": 3912,
+        "resourceSize": 8586,
+        "statusCode": 200
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-7903460199253248&output=html&adk=1812271804&adf=3025194257&abgtt=6&lmt=1791636752&plat=3%3A65536%2C4%3A65536%2C9%3A134217728%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32%2C44%3A32&format=0x0&url=http%3A%2F%2Flocalhost%3A3102%2Fblog%2Flfp-ou-nmc-ce-que-montrent-les-donnees&pra=5&aiof=14&asro=0&itsi=-1&aimartd=4&aieuf=1&aicrs=1&uach=WyJBbmRyb2lkIiwiMTEuMCIsIiIsIm1vdG8gZyBwb3dlciAoMjAyMikiLCIxMzYuMC4wLjAiLG51bGwsMSxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxNTQuMC44MDM3Ljk4Il0sWyJHb29nbGUgQ2hyb21lIiwiMTU0LjAuODAzNy45OCJdLFsiTm90IEEoQnJhbmQiLCI5OS4wLjAuMCJdXSwwXQ..&dt=1791636752735&bpp=2&bdt=91&idt=39&shv=r20261007&mjsv=m202610050101&ptt=9&saldr=aa&abxe=1&eoidce=1&nras=1&correlator=1174323199728&frm=20&pv=2&u_tz=120&u_his=2&u_h=823&u_w=412&u_ah=823&u_aw=412&u_cd=24&u_sd=1.75&dmc=32&adx=-12245933&ady=-12245933&biw=412&bih=823&scr_x=0&scr_y=0&eid=95404845%2C42533294&oid=2&pvsid=349037092669029&tmod=554767642&uas=0&nvt=1&fsapi=1&fc=1920&brdim=0%2C0%2C0%2C0%2C412%2C0%2C412%2C823%2C412%2C823&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1&pgls=CAk.&bisch=1&blev=0.83&ifi=1&uci=a!1&fsb=1&dtd=60",
+        "resourceType": "Document",
+        "transferSize": 65,
+        "resourceSize": 603,
+        "statusCode": 200
+      },
+      {
+        "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261007&st=env&sjk=349037092669029",
+        "resourceType": "XHR",
+        "transferSize": 13767,
+        "resourceSize": 18222,
+        "statusCode": 200
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+        "resourceType": "Script",
+        "transferSize": 7717,
+        "resourceSize": 21546,
+        "statusCode": 200
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/sodar/sodar2/255/runner.html",
+        "resourceType": "Document",
+        "transferSize": 5521,
+        "resourceSize": 14627,
+        "statusCode": 200
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/bg/bicbSm1QHv6PCE7k41PwdE0n8BoGbNC7zjsNTNo3qrw.js",
+        "resourceType": "Script",
+        "transferSize": 24411,
+        "resourceSize": 63573,
+        "statusCode": 200
+      },
+      {
+        "url": "https://ep2.adtrafficquality.google/generate_204?VFr0EA",
+        "resourceType": "Image",
+        "transferSize": 10,
+        "resourceSize": 0,
+        "statusCode": 204
+      },
+      {
+        "url": "https://ep1.adtrafficquality.google/pagead/sodar?id=sodar2&v=255&t=2&li=gda_r20261007&jk=349037092669029&bg=!7u2l7Y_NAAbHcf5V53E7AEcBe5WfOOu-_DWJPv6pHCh8FdoMBiHRV5Qv9xTUnk-AteEPV1NGvxSho48wN6JOl2ZxLKlmsW_gnnu_RuWDcl4v7peoXPqBOAIAAAAuUgAAAARoAQd-ADZ8fEm-HETWLzJ-SLKZcMiqs0BMiEZ0nRnZosFrPWTpAvc1oWeVk-CUd7a1lztYLfKbjPCdbTuZApaBmPJZT0_2E2hreg47QdjDL380UKxdqVlnc9IRVzBSQdA5NLKrSRsYKXrCy2tz2OBBUKYPK7JPmt-Sx_So1f3qpJX26VDhwpX3USIO2HqxZL6vnoE5oW51yxI4HqE68y1zWj5jxglhFnA8jA718wxgS-NdENM_DT6MLaZMOt006BAZuOekhgy8TBK3J0BRrRVfEfgORNtQiPC7-_ppWYwa7he3ap90AP8cYip_xNoBYWQCmesmKdv_WFTa3ixm212UvLW6i-qkdgkdLSboPP-gHTZZqwoCJuNtaJDYtbOhqBCFZ2_1Yq-RtGGWQVfJgVXoDdINbjGik27hXDWol8jMhcz6VJRAcrLYdJu6J40LRmHDdp61XeSg0isK_2nuKnWQ-pBAHZbH9AomJC7a_1AKfES5YKFiiHGfSEjufY8WcIyu5mp74UiW7J1fO5c9NS7MQI7jN9z2pKddcu70ZBYpRnrGdz0mPzi_VuyToN-woM7l6gZgRYUlcl76-LLz_9hcGIXZpLOMQ2oQ_uLH_o-QS-o5p1NOUfjjmXovUi56xLZUc6lROi9NYnZesovtb2Ws3Lfb2oLg9QITw2Zg3SJ-hK2MiFVHkYEnyC8Cma281fUamHPX0jyRIjxgT7GVar1TowliQGKQIG8sx39NQW3VPLe91K8oJIfZEsEU5I5kZRpfvWqpidE206KCQAG-65jswsKSGhDZor6OBSKeI3BrFO6u0Wu_NIZzvubPVZS9itu-77TGrHJw-oqMAuTn2_qAzurJdgNCV05qcDLrjX5Y4GuJ8WfT_vZVPdse0V1b34pFtl-EHQX24AZPj4n_cLA05wgWusxo5RLKUqu2QNJsOvMOyeRhPt4d0z4DbKkTFUpxUyESgg",
+        "resourceType": "Image",
+        "transferSize": 17,
+        "resourceSize": 0,
+        "statusCode": 204
+      }
+    ]
+  },
+  {
+    "origin": "production",
+    "repeat": 2,
+    "path": "/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
+    "device": "mobile",
+    "date": "2026-10-10T12:52:38.899Z",
+    "score": 99,
+    "accessibility": 100,
+    "lcp": 2116.6938,
+    "fcp": 943.6758,
+    "cls": 0,
+    "tbt": 52,
+    "lcpElement": "<img alt=\"Pack de batterie lithium-ion d'une BMW i3 présenté capot ouvert : des modu…\" width=\"1600\" height=\"900\" decoding=\"async\" data-nimg=\"1\" class=\"h-full w-full object-cover\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 704px, 100vw\" srcset=\"/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-…\" src=\"https://www.evexpert.fr/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-n…\">",
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "warnings": [],
+    "ttfb": 8.866,
+    "mainThread": 719.6080000000003,
+    "network": [
+      {
+        "url": "https://www.evexpert.fr/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
+        "resourceType": "Document",
+        "transferSize": 18928,
+        "resourceSize": 119455,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/media/23b7a97ae3b5c134-s.p.0o14nraug8u5s.woff2",
+        "resourceType": "Font",
+        "transferSize": 10327,
+        "resourceSize": 10120,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/media/99e609270109b47d-s.p.16-z~2sp29ex6.woff2",
+        "resourceType": "Font",
+        "transferSize": 10263,
+        "resourceSize": 10052,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/media/SchibstedGrotesk_latin_var-s.p.0magfa.1.zbwp.woff2",
+        "resourceType": "Font",
+        "transferSize": 36528,
+        "resourceSize": 36116,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/media/a7e15459c1805da0-s.p.15mmg7gamto4l.woff2",
+        "resourceType": "Font",
+        "transferSize": 10427,
+        "resourceSize": 10128,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/image?url=%2Feditorial%2Flicences%2Flfp-ou-nmc-ce-que-montrent-les-donnees.jpeg&w=750&q=75",
+        "resourceType": "Image",
+        "transferSize": 16793,
+        "resourceSize": 16450,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0bpl33t34okcv.css",
+        "resourceType": "Stylesheet",
+        "transferSize": 12420,
+        "resourceSize": 59563,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0zaia6i55l01..js",
+        "resourceType": "Script",
+        "transferSize": 8315,
+        "resourceSize": 24944,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0pqt~8bl3ukh4.js",
+        "resourceType": "Script",
+        "transferSize": 9822,
+        "resourceSize": 44414,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0m_p1bxtorv5i.js",
+        "resourceType": "Script",
+        "transferSize": 72326,
+        "resourceSize": 226355,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/02g3221oh~3le.js",
+        "resourceType": "Script",
+        "transferSize": 41632,
+        "resourceSize": 150333,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/turbopack-0~dymj8._h2gc.js",
+        "resourceType": "Script",
+        "transferSize": 4733,
+        "resourceSize": 11041,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0.f3-3c83~_r~.js",
+        "resourceType": "Script",
+        "transferSize": 8171,
+        "resourceSize": 20419,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0d3shmwh5_nmn.js",
+        "resourceType": "Script",
+        "transferSize": 13551,
+        "resourceSize": 54646,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0mozcut~yh97e.js",
+        "resourceType": "Script",
+        "transferSize": 1623,
+        "resourceSize": 3028,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0d0a22qj1ucc2.js",
+        "resourceType": "Script",
+        "transferSize": 9204,
+        "resourceSize": 28483,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0p1b-al6~s0pp.js",
+        "resourceType": "Script",
+        "transferSize": 897,
+        "resourceSize": 1605,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0poyf4wlw.w5e.js",
+        "resourceType": "Script",
+        "transferSize": 5951,
+        "resourceSize": 14474,
+        "statusCode": 200
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248",
+        "resourceType": "Script",
+        "transferSize": 57271,
+        "resourceSize": 166280,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/manifest.webmanifest",
+        "resourceType": "Manifest",
+        "transferSize": 800,
+        "resourceSize": 694,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/brand/favicon.ico",
+        "resourceType": "Other",
+        "transferSize": 1355,
+        "resourceSize": 1167,
+        "statusCode": 200
+      },
+      {
+        "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610060101/show_ads_impl_fy2021.js?bust=122881491",
+        "resourceType": "Script",
+        "transferSize": 168485,
+        "resourceSize": 512049,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/blog?_rsc=hbNTlUG06CYEfUFD",
+        "resourceType": "Fetch",
+        "transferSize": 1042,
+        "resourceSize": 778,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/?_rsc=hbNTlUG06CYEfUFD",
+        "resourceType": "Fetch",
+        "transferSize": 846,
+        "resourceSize": 710,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/blog?_rsc=era0v-5DKkRU7vpX",
+        "resourceType": "Fetch",
+        "transferSize": 1192,
+        "resourceSize": 3535,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/blog?_rsc=Ow_d30zFIi-txWDW",
+        "resourceType": "Fetch",
+        "transferSize": 6016,
+        "resourceSize": 25379,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/blog?_rsc=WA9_undsbd_0zVFj",
+        "resourceType": "Fetch",
+        "transferSize": 698,
+        "resourceSize": 445,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/blog?_rsc=n4TPpGyX9L_eHCfk",
+        "resourceType": "Fetch",
+        "transferSize": 2599,
+        "resourceSize": 8033,
+        "statusCode": 200
+      },
+      {
+        "url": "https://fundingchoicesmessages.google.com/i/ca-pub-7903460199253248?href=https%3A%2F%2Fwww.evexpert.fr%2Fblog%2Flfp-ou-nmc-ce-que-montrent-les-donnees&ers=2",
+        "resourceType": "Script",
+        "transferSize": 71995,
+        "resourceSize": 228587,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/?_rsc=era0v-5DKkRU7vpX",
+        "resourceType": "Fetch",
+        "transferSize": 1169,
+        "resourceSize": 3525,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/?_rsc=C3ib3mETd8xZaDTy",
+        "resourceType": "Fetch",
+        "transferSize": 12996,
+        "resourceSize": 97891,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/0-62_5t1y6q50.js",
+        "resourceType": "Script",
+        "transferSize": 7600,
+        "resourceSize": 18877,
+        "statusCode": 200
+      },
+      {
+        "url": "https://www.evexpert.fr/_next/static/chunks/07ak5ajsco_u-.js",
+        "resourceType": "Script",
+        "transferSize": 7630,
+        "resourceSize": 18422,
+        "statusCode": 200
+      },
+      {
+        "url": "https://fundingchoicesmessages.google.com/el/AGSKWxWK6PxM2xZ-V-Aaf4J7phd6aqhvHAvGuN43QUlf5mFtfaoT5AXXWD6Tfkqg_WmfqGgrHmnT1nbvjFMiYWJ5pBms8bZ4MOsg9ib0XoYwuezJ5aC93lYwLLW4lPrPGcFLm4-DPBniqw==",
+        "resourceType": "XHR",
+        "transferSize": 28,
+        "resourceSize": 0,
+        "statusCode": 204
+      },
+      {
+        "url": "https://fundingchoicesmessages.google.com/el/AGSKWxWK6PxM2xZ-V-Aaf4J7phd6aqhvHAvGuN43QUlf5mFtfaoT5AXXWD6Tfkqg_WmfqGgrHmnT1nbvjFMiYWJ5pBms8bZ4MOsg9ib0XoYwuezJ5aC93lYwLLW4lPrPGcFLm4-DPBniqw==",
+        "resourceType": "XHR",
+        "transferSize": 28,
+        "resourceSize": 0,
+        "statusCode": 204
+      },
+      {
+        "url": "https://fundingchoicesmessages.google.com/f/AGSKWxUK-ctyxLBR7cUlmCtISBBQAfUw0uBx6SDx-KEQ6HDtd_lDVBuCYDK_FA6buDC-mXQsXB61qKk2ymfnBNwmCkpxLUz_C1MeXuQ2noBC01IJmV8lbUxa9_BWdB9z5iXHqjtBpK2U5w==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzkxNjM2NzU5LDIwNjAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzddXSwiaHR0cHM6Ly93d3cuZXZleHBlcnQuZnIvYmxvZy9sZnAtb3Utbm1jLWNlLXF1ZS1tb250cmVudC1sZXMtZG9ubmVlcyIsbnVsbCxbWzgsIlk4RWtjRkdReW5JIl0sWzksImZyIl0sWzE4LCJbW1tudWxsLDE5M11dXSJdLFszNSwiMTc5MTYzNjczOSJdLFsyNiwiMTgiXSxbMzMsIjIiXSxbMTksIjEiXSxbMTcsIlswXSJdLFsyNCwiIl0sWzI1LCJbWzk1Mzg3NjMzXV0iXSxbMjksImZhbHNlIl1dXQ",
+        "resourceType": "Script",
+        "transferSize": 1411,
+        "resourceSize": 2933,
+        "statusCode": 200
+      },
+      {
+        "url": "https://fundingchoicesmessages.google.com/el/AGSKWxWK6PxM2xZ-V-Aaf4J7phd6aqhvHAvGuN43QUlf5mFtfaoT5AXXWD6Tfkqg_WmfqGgrHmnT1nbvjFMiYWJ5pBms8bZ4MOsg9ib0XoYwuezJ5aC93lYwLLW4lPrPGcFLm4-DPBniqw==",
+        "resourceType": "XHR",
+        "transferSize": 28,
+        "resourceSize": 0,
+        "statusCode": 204
+      }
+    ]
+  }
+]

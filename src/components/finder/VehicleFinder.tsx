@@ -8,7 +8,8 @@ import { defaultFinderAnswers, matchVehicles, type FinderAnswers } from "@/lib/v
 import { bodyTypeLabels } from "@/lib/vehicle-format";
 
 import { formatNumber } from "@/lib/format";
-import { fieldClass, labelClass } from "@/components/ui/Field";
+import { comfortableFieldClass, labelClass, rangeFieldClass } from "@/components/ui/Field";
+import { choiceActionClass, textActionClass } from "@/components/ui/componentStyles";
 import { cx } from "@/lib/cx";
 import { GarageToggle } from "@/components/garage/GarageToggle";
 import Link from "next/link";
@@ -32,8 +33,8 @@ function ToggleYesNo({ id, label, value, onChange }: { id: string; label: string
             aria-pressed={value === o.v}
             onClick={() => onChange(o.v)}
             className={cx(
-              "h-10 rounded-md border text-sm font-semibold transition-colors duration-150",
-              value === o.v ? "border-ink bg-ink text-paper" : "border-control text-ink hover:border-ink",
+              choiceActionClass,
+              value === o.v ? "border-ink bg-ink text-paper enabled:hover:bg-ink-raised" : "border-control bg-surface text-ink enabled:hover:border-ink",
             )}
           >
             {o.t}
@@ -74,7 +75,7 @@ export function VehicleFinder({ vehicles }: { vehicles: FinderVehicle[] }) {
             step={5}
             value={answers.dailyKm}
             onChange={(e) => set("dailyKm", Number(e.target.value))}
-            className="w-full accent-signal-deep"
+            className={rangeFieldClass}
           />
         </div>
 
@@ -83,7 +84,7 @@ export function VehicleFinder({ vehicles }: { vehicles: FinderVehicle[] }) {
 
         <div>
           <label htmlFor="vf-seats" className={labelClass}>Places minimum</label>
-          <select id="vf-seats" value={answers.minSeats} onChange={(e) => set("minSeats", Number(e.target.value))} className={fieldClass}>
+          <select id="vf-seats" value={answers.minSeats} onChange={(e) => set("minSeats", Number(e.target.value))} className={comfortableFieldClass}>
             {seatOptions.map((n) => (
               <option key={n} value={n}>{n === 0 ? "Indifférent" : `${n} places`}</option>
             ))}
@@ -92,7 +93,7 @@ export function VehicleFinder({ vehicles }: { vehicles: FinderVehicle[] }) {
 
         <div>
           <label htmlFor="vf-trunk" className={labelClass}>Coffre minimum</label>
-          <select id="vf-trunk" value={answers.minTrunk} onChange={(e) => set("minTrunk", Number(e.target.value))} className={fieldClass}>
+          <select id="vf-trunk" value={answers.minTrunk} onChange={(e) => set("minTrunk", Number(e.target.value))} className={comfortableFieldClass}>
             {trunkOptions.map((n) => (
               <option key={n} value={n}>{n === 0 ? "Indifférent" : `${n} L`}</option>
             ))}
@@ -113,8 +114,8 @@ export function VehicleFinder({ vehicles }: { vehicles: FinderVehicle[] }) {
                     set("bodyTypes", active ? answers.bodyTypes.filter((x) => x !== bt) : [...answers.bodyTypes, bt])
                   }
                   className={cx(
-                    "h-9 rounded-sm border px-2.5 text-sm font-medium transition-colors duration-150",
-                    active ? "border-ink bg-ink text-paper" : "border-control text-ink hover:border-ink",
+                    choiceActionClass,
+                    active ? "border-ink bg-ink text-paper enabled:hover:bg-ink-raised" : "border-control bg-surface text-ink enabled:hover:border-ink",
                   )}
                 >
                   {bodyTypeLabels[bt]}
@@ -125,7 +126,7 @@ export function VehicleFinder({ vehicles }: { vehicles: FinderVehicle[] }) {
         </fieldset>
 
         {answers.bodyTypes.length > 0 && (
-          <button type="button" onClick={() => set("bodyTypes", [])} className="link-u text-sm font-semibold text-signal-deep">
+          <button type="button" onClick={() => set("bodyTypes", [])} className={textActionClass}>
             Réinitialiser la carrosserie
           </button>
         )}

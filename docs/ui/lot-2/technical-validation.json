@@ -1,0 +1,27 @@
+{
+  "lint": {
+    "command": "npm run lint",
+    "exitCode": 0
+  },
+  "typecheck": {
+    "command": "npm run typecheck",
+    "exitCode": 0
+  },
+  "unitTests": {
+    "command": "npm test -- --config vitest.unit.config.ts",
+    "exitCode": 0,
+    "files": 15,
+    "tests": 160
+  },
+  "build": {
+    "command": "EVEXPERT_DATA_SOURCE=local npm run build",
+    "exitCode": 0,
+    "buildId": "ZHsWAEzIy8OIEfX6nx7A6"
+  },
+  "adsense": {
+    "command": "node scripts/check-adsense.mjs --base http://localhost:3102",
+    "exitCode": 0,
+    "pages": 124
+  },
+  "dbIntegrationTests": "Non exécutés : setup destructif de recréation et migration DB."
+}

@@ -1,0 +1,300 @@
+[
+  {
+    "width": 320,
+    "tabMenu": true,
+    "summaryFocus": {
+      "visible": true,
+      "color": "rgb(243, 246, 252)",
+      "width": "2px"
+    },
+    "open": true,
+    "links": [
+      {
+        "href": "/voitures-electriques",
+        "text": "Voitures électriques",
+        "current": null,
+        "x": 16,
+        "w": 288,
+        "h": 48
+      },
+      {
+        "href": "/comparer",
+        "text": "Comparer",
+        "current": null,
+        "x": 16,
+        "w": 288,
+        "h": 48
+      },
+      {
+        "href": "/recharge",
+        "text": "Recharge",
+        "current": null,
+        "x": 16,
+        "w": 288,
+        "h": 48
+      },
+      {
+        "href": "/guides",
+        "text": "Guides",
+        "current": "page",
+        "x": 16,
+        "w": 288,
+        "h": 48
+      },
+      {
+        "href": "/blog",
+        "text": "Blog",
+        "current": null,
+        "x": 16,
+        "w": 288,
+        "h": 48
+      },
+      {
+        "href": "/outils",
+        "text": "Outils",
+        "current": null,
+        "x": 16,
+        "w": 138,
+        "h": 44
+      },
+      {
+        "href": "/methodologie",
+        "text": "Méthodologie",
+        "current": null,
+        "x": 166,
+        "w": 138,
+        "h": 44
+      },
+      {
+        "href": "/sources",
+        "text": "Sources des données",
+        "current": null,
+        "x": 16,
+        "w": 138,
+        "h": 44
+      },
+      {
+        "href": "/a-propos",
+        "text": "À propos",
+        "current": null,
+        "x": 166,
+        "w": 138,
+        "h": 44
+      }
+    ],
+    "closed": true,
+    "exclusive": true,
+    "search": "/recherche?q=kona",
+    "linkFocus": {
+      "visible": true,
+      "outline": "2px"
+    },
+    "followed": "/blog"
+  },
+  {
+    "width": 390,
+    "tabMenu": true,
+    "summaryFocus": {
+      "visible": true,
+      "color": "rgb(243, 246, 252)",
+      "width": "2px"
+    },
+    "open": true,
+    "links": [
+      {
+        "href": "/voitures-electriques",
+        "text": "Voitures électriques",
+        "current": null,
+        "x": 16,
+        "w": 358,
+        "h": 48
+      },
+      {
+        "href": "/comparer",
+        "text": "Comparer",
+        "current": null,
+        "x": 16,
+        "w": 358,
+        "h": 48
+      },
+      {
+        "href": "/recharge",
+        "text": "Recharge",
+        "current": null,
+        "x": 16,
+        "w": 358,
+        "h": 48
+      },
+      {
+        "href": "/guides",
+        "text": "Guides",
+        "current": "page",
+        "x": 16,
+        "w": 358,
+        "h": 48
+      },
+      {
+        "href": "/blog",
+        "text": "Blog",
+        "current": null,
+        "x": 16,
+        "w": 358,
+        "h": 48
+      },
+      {
+        "href": "/outils",
+        "text": "Outils",
+        "current": null,
+        "x": 16,
+        "w": 173,
+        "h": 44
+      },
+      {
+        "href": "/methodologie",
+        "text": "Méthodologie",
+        "current": null,
+        "x": 201,
+        "w": 173,
+        "h": 44
+      },
+      {
+        "href": "/sources",
+        "text": "Sources des données",
+        "current": null,
+        "x": 16,
+        "w": 173,
+        "h": 44
+      },
+      {
+        "href": "/a-propos",
+        "text": "À propos",
+        "current": null,
+        "x": 201,
+        "w": 173,
+        "h": 44
+      }
+    ],
+    "closed": true,
+    "exclusive": true,
+    "search": "/recherche?q=kona",
+    "linkFocus": {
+      "visible": true,
+      "outline": "2px"
+    },
+    "followed": "/blog"
+  },
+  {
+    "width": 768,
+    "tabMenu": true,
+    "summaryFocus": {
+      "visible": true,
+      "color": "rgb(243, 246, 252)",
+      "width": "2px"
+    },
+    "open": true,
+    "links": [
+      {
+        "href": "/voitures-electriques",
+        "text": "Voitures électriques",
+        "current": null,
+        "x": 24,
+        "w": 720,
+        "h": 48
+      },
+      {
+        "href": "/comparer",
+        "text": "Comparer",
+        "current": null,
+        "x": 24,
+        "w": 720,
+        "h": 48
+      },
+      {
+        "href": "/recharge",
+        "text": "Recharge",
+        "current": null,
+        "x": 24,
+        "w": 720,
+        "h": 48
+      },
+      {
+        "href": "/guides",
+        "text": "Guides",
+        "current": "page",
+        "x": 24,
+        "w": 720,
+        "h": 48
+      },
+      {
+        "href": "/blog",
+        "text": "Blog",
+        "current": null,
+        "x": 24,
+        "w": 720,
+        "h": 48
+      },
+      {
+        "href": "/outils",
+        "text": "Outils",
+        "current": null,
+        "x": 24,
+        "w": 354,
+        "h": 44
+      },
+      {
+        "href": "/methodologie",
+        "text": "Méthodologie",
+        "current": null,
+        "x": 390,
+        "w": 354,
+        "h": 44
+      },
+      {
+        "href": "/sources",
+        "text": "Sources des données",
+        "current": null,
+        "x": 24,
+        "w": 354,
+        "h": 44
+      },
+      {
+        "href": "/a-propos",
+        "text": "À propos",
+        "current": null,
+        "x": 390,
+        "w": 354,
+        "h": 44
+      }
+    ],
+    "closed": true,
+    "exclusive": true,
+    "search": "/recherche?q=kona",
+    "linkFocus": {
+      "visible": true,
+      "outline": "2px"
+    },
+    "followed": "/blog"
+  },
+  {
+    "width": 1024,
+    "tabSearch": true,
+    "search": "/recherche?q=kona",
+    "tabLink": true,
+    "linkFocus": {
+      "visible": true,
+      "outline": "2px"
+    },
+    "followed": "/blog"
+  },
+  {
+    "width": 1440,
+    "tabSearch": true,
+    "search": "/recherche?q=kona",
+    "tabLink": true,
+    "linkFocus": {
+      "visible": true,
+      "outline": "2px"
+    },
+    "followed": "/blog"
+  }
+]

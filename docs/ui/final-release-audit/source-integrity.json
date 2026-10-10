@@ -1,0 +1,11 @@
+{
+  "filesCaptured": 328,
+  "changed": [
+    "src/components/ui/Prose.tsx"
+  ],
+  "onlyChangeIsAuthorizedSectionId": true,
+  "filesDeleted": [],
+  "filesAddedInSource": [],
+  "HEADUnchanged": true,
+  "environmentUnchangedFromLot5": true
+}

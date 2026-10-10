@@ -13,7 +13,7 @@ export function TableOfContents({ sections, className }: { sections: ArticleSect
   const items = sections.filter((s) => s.heading && (s.level ?? 2) === 2);
   if (items.length < 3) return null;
   return (
-    <nav aria-label="Sommaire" className={className}>
+    <nav aria-label="Sommaire" className={`evx-editorial-toc ${className ?? ""}`}>
       <p className="label mb-2">Dans cet article</p>
       <ol className="border-t-2 border-ink">
         {items.map((s, i) => (
@@ -39,7 +39,7 @@ export function Prose({ sections }: { sections: ArticleSection[] }) {
       {sections.map((s, i) => {
         const Heading = (s.level ?? 2) === 3 ? "h3" : "h2";
         return (
-          <section key={i}>
+          <section key={i} id={s.heading === "Estimation de l'autonomie réelle" ? "autonomie" : undefined}>
             {s.heading && (
               <Heading id={sectionId(s.heading)}>{s.heading}</Heading>
             )}

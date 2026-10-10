@@ -1,0 +1,563 @@
+{
+  "totalRuns": 36,
+  "groups": [
+    {
+      "path": "/",
+      "device": "mobile",
+      "before": {
+        "runs": 6,
+        "median": {
+          "score": 95.0,
+          "accessibility": 100.0,
+          "lcp": 2941.2718875,
+          "fcp": 910.6921000000002,
+          "tbt": 22.0,
+          "cls": 0.0
+        },
+        "range": {
+          "score": [
+            95,
+            95
+          ],
+          "lcp": [
+            2935.2297749999993,
+            2943.1221
+          ],
+          "fcp": [
+            906.7588999999998,
+            912.0814
+          ],
+          "tbt": [
+            19.5,
+            24.5
+          ],
+          "cls": [
+            0,
+            0
+          ]
+        }
+      },
+      "after": {
+        "runs": 6,
+        "median": {
+          "score": 95.0,
+          "accessibility": 100.0,
+          "lcp": 2931.5454625,
+          "fcp": 905.1684,
+          "tbt": 12.5,
+          "cls": 0.0
+        },
+        "range": {
+          "score": [
+            95,
+            95
+          ],
+          "lcp": [
+            2871.8337,
+            2933.82015
+          ],
+          "fcp": [
+            904.0343,
+            914.5558000000001
+          ],
+          "tbt": [
+            8,
+            22.5
+          ],
+          "cls": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "path": "/",
+      "device": "desktop",
+      "before": {
+        "runs": 6,
+        "median": {
+          "score": 100.0,
+          "accessibility": 100.0,
+          "lcp": 630.1600249999999,
+          "fcp": 245.8888,
+          "tbt": 0.0,
+          "cls": 0.0
+        },
+        "range": {
+          "score": [
+            93,
+            100
+          ],
+          "lcp": [
+            628.0088,
+            1780.6576999999997
+          ],
+          "fcp": [
+            245.0279,
+            247.36010000000005
+          ],
+          "tbt": [
+            0,
+            0
+          ],
+          "cls": [
+            0,
+            0
+          ]
+        }
+      },
+      "after": {
+        "runs": 6,
+        "median": {
+          "score": 100.0,
+          "accessibility": 100.0,
+          "lcp": 627.6980000000001,
+          "fcp": 243.95659999999998,
+          "tbt": 0.0,
+          "cls": 0.0
+        },
+        "range": {
+          "score": [
+            94,
+            100
+          ],
+          "lcp": [
+            624.144575,
+            1666.5496999999998
+          ],
+          "fcp": [
+            242.72230000000002,
+            245.64600000000007
+          ],
+          "tbt": [
+            0,
+            0
+          ],
+          "cls": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "path": "/voitures-electriques",
+      "device": "mobile",
+      "before": {
+        "runs": 3,
+        "median": {
+          "score": 96,
+          "accessibility": 100,
+          "lcp": 2857.0928999999996,
+          "fcp": 904.7285999999999,
+          "tbt": 20.5,
+          "cls": 0
+        },
+        "range": {
+          "score": [
+            96,
+            96
+          ],
+          "lcp": [
+            2856.6848999999993,
+            2858.2089
+          ],
+          "fcp": [
+            904.3784999999998,
+            905.1447999999999
+          ],
+          "tbt": [
+            14,
+            21.5
+          ],
+          "cls": [
+            0,
+            0
+          ]
+        }
+      },
+      "after": {
+        "runs": 3,
+        "median": {
+          "score": 96,
+          "accessibility": 100,
+          "lcp": 2854.7599499999997,
+          "fcp": 903.1293000000001,
+          "tbt": 10,
+          "cls": 0
+        },
+        "range": {
+          "score": [
+            96,
+            96
+          ],
+          "lcp": [
+            2854.0130000000004,
+            2855.5009
+          ],
+          "fcp": [
+            902.6514999999999,
+            903.6437999999998
+          ],
+          "tbt": [
+            5.5,
+            14.5
+          ],
+          "cls": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "path": "/voitures-electriques",
+      "device": "desktop",
+      "before": {
+        "runs": 3,
+        "median": {
+          "score": 100,
+          "accessibility": 100,
+          "lcp": 607.3954500000001,
+          "fcp": 244.90300000000002,
+          "tbt": 0,
+          "cls": 0
+        },
+        "range": {
+          "score": [
+            100,
+            100
+          ],
+          "lcp": [
+            606.6890999999999,
+            607.44255
+          ],
+          "fcp": [
+            244.42510000000004,
+            244.92950000000005
+          ],
+          "tbt": [
+            0,
+            0
+          ],
+          "cls": [
+            0,
+            0
+          ]
+        }
+      },
+      "after": {
+        "runs": 3,
+        "median": {
+          "score": 100,
+          "accessibility": 100,
+          "lcp": 604.3734000000001,
+          "fcp": 242.8953,
+          "tbt": 0,
+          "cls": 0
+        },
+        "range": {
+          "score": [
+            100,
+            100
+          ],
+          "lcp": [
+            603.9428,
+            605.1165000000001
+          ],
+          "fcp": [
+            242.59539999999998,
+            243.3739
+          ],
+          "tbt": [
+            0,
+            0
+          ],
+          "cls": [
+            0,
+            0
+          ]
+        }
+      }
+    }
+  ],
+  "desktopByElement": {
+    "before": {
+      "poster": {
+        "runs": 4,
+        "lcpMedian": 628.8697625,
+        "lcpRange": [
+          628.0088,
+          631.3150249999999
+        ],
+        "scoreMedian": 100.0
+      },
+      "video": {
+        "runs": 2,
+        "lcpMedian": 1721.3179499999997,
+        "lcpRange": [
+          1661.9781999999996,
+          1780.6576999999997
+        ],
+        "scoreMedian": 93.5
+      }
+    },
+    "after": {
+      "poster": {
+        "runs": 4,
+        "lcpMedian": 625.8372125000001,
+        "lcpRange": [
+          624.144575,
+          628.7198750000002
+        ],
+        "scoreMedian": 100.0
+      },
+      "video": {
+        "runs": 2,
+        "lcpMedian": 1661.7314375,
+        "lcpRange": [
+          1656.9131750000001,
+          1666.5496999999998
+        ],
+        "scoreMedian": 94.0
+      }
+    }
+  },
+  "resourceBudgets": [
+    {
+      "path": "/",
+      "device": "mobile",
+      "before": {
+        "Stylesheet": {
+          "count": 1.0,
+          "transfer": 14705.0,
+          "uncompressed": 71725.0
+        },
+        "Script": {
+          "count": 13.0,
+          "transfer": 193175.0,
+          "uncompressed": 628879.0
+        },
+        "Font": {
+          "count": 4.0,
+          "transfer": 68312.0,
+          "uncompressed": 66416.0
+        },
+        "Image": {
+          "count": 1.0,
+          "transfer": 22981.0,
+          "uncompressed": 22378.0
+        },
+        "Media": {
+          "count": 0.0,
+          "transfer": 0.0,
+          "uncompressed": 0.0
+        }
+      },
+      "after": {
+        "Stylesheet": {
+          "count": 1.0,
+          "transfer": 15115.0,
+          "uncompressed": 74531.0
+        },
+        "Script": {
+          "count": 13.0,
+          "transfer": 193175.0,
+          "uncompressed": 628879.0
+        },
+        "Font": {
+          "count": 4.0,
+          "transfer": 68312.0,
+          "uncompressed": 66416.0
+        },
+        "Image": {
+          "count": 1.0,
+          "transfer": 22981.0,
+          "uncompressed": 22378.0
+        },
+        "Media": {
+          "count": 0.0,
+          "transfer": 0.0,
+          "uncompressed": 0.0
+        }
+      }
+    },
+    {
+      "path": "/",
+      "device": "desktop",
+      "before": {
+        "Stylesheet": {
+          "count": 1.0,
+          "transfer": 14705.0,
+          "uncompressed": 71725.0
+        },
+        "Script": {
+          "count": 16.0,
+          "transfer": 214708.0,
+          "uncompressed": 681683.0
+        },
+        "Font": {
+          "count": 4.0,
+          "transfer": 68312.0,
+          "uncompressed": 66416.0
+        },
+        "Image": {
+          "count": 1.0,
+          "transfer": 43286.0,
+          "uncompressed": 42683.0
+        },
+        "Media": {
+          "count": 1.0,
+          "transfer": 663990.0,
+          "uncompressed": 663447.0
+        }
+      },
+      "after": {
+        "Stylesheet": {
+          "count": 1.0,
+          "transfer": 15115.0,
+          "uncompressed": 74531.0
+        },
+        "Script": {
+          "count": 16.0,
+          "transfer": 214708.0,
+          "uncompressed": 681683.0
+        },
+        "Font": {
+          "count": 4.0,
+          "transfer": 68312.0,
+          "uncompressed": 66416.0
+        },
+        "Image": {
+          "count": 1.0,
+          "transfer": 43286.0,
+          "uncompressed": 42683.0
+        },
+        "Media": {
+          "count": 1.0,
+          "transfer": 663990.0,
+          "uncompressed": 663447.0
+        }
+      }
+    },
+    {
+      "path": "/voitures-electriques",
+      "device": "mobile",
+      "before": {
+        "Stylesheet": {
+          "count": 1,
+          "transfer": 14705,
+          "uncompressed": 71725
+        },
+        "Script": {
+          "count": 14,
+          "transfer": 193884,
+          "uncompressed": 627521
+        },
+        "Font": {
+          "count": 4,
+          "transfer": 68312,
+          "uncompressed": 66416
+        },
+        "Image": {
+          "count": 0,
+          "transfer": 0,
+          "uncompressed": 0
+        },
+        "Media": {
+          "count": 0,
+          "transfer": 0,
+          "uncompressed": 0
+        }
+      },
+      "after": {
+        "Stylesheet": {
+          "count": 1,
+          "transfer": 15115,
+          "uncompressed": 74531
+        },
+        "Script": {
+          "count": 14,
+          "transfer": 193884,
+          "uncompressed": 627521
+        },
+        "Font": {
+          "count": 4,
+          "transfer": 68312,
+          "uncompressed": 66416
+        },
+        "Image": {
+          "count": 0,
+          "transfer": 0,
+          "uncompressed": 0
+        },
+        "Media": {
+          "count": 0,
+          "transfer": 0,
+          "uncompressed": 0
+        }
+      }
+    },
+    {
+      "path": "/voitures-electriques",
+      "device": "desktop",
+      "before": {
+        "Stylesheet": {
+          "count": 1,
+          "transfer": 14705,
+          "uncompressed": 71725
+        },
+        "Script": {
+          "count": 19,
+          "transfer": 228390,
+          "uncompressed": 713560
+        },
+        "Font": {
+          "count": 4,
+          "transfer": 68312,
+          "uncompressed": 66416
+        },
+        "Image": {
+          "count": 0,
+          "transfer": 0,
+          "uncompressed": 0
+        },
+        "Media": {
+          "count": 0,
+          "transfer": 0,
+          "uncompressed": 0
+        }
+      },
+      "after": {
+        "Stylesheet": {
+          "count": 1,
+          "transfer": 15115,
+          "uncompressed": 74531
+        },
+        "Script": {
+          "count": 19,
+          "transfer": 228390,
+          "uncompressed": 713560
+        },
+        "Font": {
+          "count": 4,
+          "transfer": 68312,
+          "uncompressed": 66416
+        },
+        "Image": {
+          "count": 0,
+          "transfer": 0,
+          "uncompressed": 0
+        },
+        "Media": {
+          "count": 0,
+          "transfer": 0,
+          "uncompressed": 0
+        }
+      }
+    }
+  ],
+  "settingsEqual": true,
+  "warnings": []
+}

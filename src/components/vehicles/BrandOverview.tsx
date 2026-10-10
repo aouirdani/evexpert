@@ -13,6 +13,8 @@ import { bodyTypeLabels } from "@/lib/vehicle-format";
 import { BRAND_CONTENT } from "@/data/catalog/brand-content";
 import type { getFeaturedComparisons } from "@/lib/comparison";
 
+import { DataTableScroll } from "./DataTableScroll";
+
 const th = "label whitespace-nowrap pb-3 pr-5 text-left font-semibold";
 const driveLabel = { FWD: "traction avant", RWD: "propulsion", AWD: "transmission intégrale" } as const;
 
@@ -62,7 +64,7 @@ export function BrandOverview({
 
       <section className="mt-section" aria-labelledby="versions-titre">
         <h2 id="versions-titre" className="text-h2 font-bold text-ink">Les versions {first.brand}</h2>
-        <div className="relative mt-6 overflow-x-auto">
+        <DataTableScroll label={`Comparaison des versions ${first.brand}`} hintId="brand-versions-scroll-hint" className="mt-6">
           <table className="w-full min-w-[50rem] text-left">
             <caption className="sr-only">Comparaison des versions {first.brand}</caption>
             <thead>
@@ -90,8 +92,8 @@ export function BrandOverview({
                     <td className="py-4 pr-5 align-middle text-sm text-muted">{bodyTypeLabels[v.bodyType]}</td>
                     <td className="num py-4 pr-5 align-middle text-base font-semibold text-ink">{fmt(v.rangeWltp, "km")}</td>
                     <td className="num py-4 pr-5 text-right align-middle text-base font-semibold text-ink">{fmt(v.batteryUsable, "kWh", 1)}</td>
-                    <td className="num py-4 pr-5 text-right align-middle text-base font-semibold text-ink">{fmt(v.chargingDC, "kW")}</td>
-                    <td className="num py-4 pr-5 text-right align-middle text-base font-semibold text-ink">{fmt(v.chargingTime10to80, "min")}</td>
+                    <td className="num py-4 pr-5 text-right align-middle text-base font-semibold text-ink" data-missing={v.chargingDC === null}>{fmt(v.chargingDC, "kW")}</td>
+                    <td className="num py-4 pr-5 text-right align-middle text-base font-semibold text-ink" data-missing={v.chargingTime10to80 === null}>{fmt(v.chargingTime10to80, "min")}</td>
                     <td className="num py-4 pr-5 text-right align-middle text-base font-semibold text-ink">
                       {formatNumber(batteryConsumption100(v), 1)}
                       <span className="unit">kWh/100 km</span>
@@ -101,7 +103,7 @@ export function BrandOverview({
               })}
             </tbody>
           </table>
-        </div>
+        </DataTableScroll>
         <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-caption text-muted">
           <DataBadge type={first.source.dataType} /> autres colonnes ·<DataBadge type="calculated" /> consommation calculée (capacité utile ÷ autonomie WLTP × 100).
         </p>

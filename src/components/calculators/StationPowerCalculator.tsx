@@ -52,10 +52,10 @@ export function StationPowerCalculator({ presets = [] }: { presets?: VehiclePres
             <NumberInput id="sp-cap" value={capacity} onChange={setCapacity} min={10} max={200} step={0.5} suffix="kWh" />
           </Field>
           <Field label="Puissance AC maximale du véhicule (kW)" htmlFor="sp-ac" hint="Chargeur embarqué : souvent 7,4, 11 ou 22 kW.">
-            <NumberInput id="sp-ac" value={acLimit} onChange={setAcLimit} min={1} max={22} step={0.1} suffix="kW" />
+            <NumberInput id="sp-ac" aria-describedby="sp-ac-hint" value={acLimit} onChange={setAcLimit} min={1} max={22} step={0.1} suffix="kW" />
           </Field>
           <Field label="Puissance DC maximale du véhicule (kW)" htmlFor="sp-dc" hint="Pic de la courbe de charge, non tenu en continu.">
-            <NumberInput id="sp-dc" value={dcLimit} onChange={setDcLimit} min={20} max={400} step={1} suffix="kW" />
+            <NumberInput id="sp-dc" aria-describedby="sp-dc-hint" value={dcLimit} onChange={setDcLimit} min={20} max={400} step={1} suffix="kW" />
           </Field>
           <Field label="État de charge de départ" htmlFor="sp-from">
             <RangeInputControl id="sp-from" value={from} onChange={setFrom} min={0} max={95} suffix="%" />

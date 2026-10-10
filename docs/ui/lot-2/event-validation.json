@@ -1,0 +1,57 @@
+[
+  {
+    "file": "src/components/comparison/ComparisonBuilder.tsx",
+    "unchanged": true,
+    "count": 2
+  },
+  {
+    "file": "src/components/vehicles/VehicleCostEstimator.tsx",
+    "unchanged": true,
+    "count": 4
+  },
+  {
+    "file": "src/components/vehicles/VehicleExplorer.tsx",
+    "unchanged": true,
+    "count": 12
+  },
+  {
+    "file": "src/components/calculators/kit.tsx",
+    "unchanged": true,
+    "count": 4
+  },
+  {
+    "file": "src/components/calculators/EvVsPetrolCalculator.tsx",
+    "unchanged": true,
+    "count": 7
+  },
+  {
+    "file": "src/components/calculators/StationPowerCalculator.tsx",
+    "unchanged": true,
+    "count": 6
+  },
+  {
+    "file": "src/components/calculators/ChargingCostCalculator.tsx",
+    "unchanged": true,
+    "count": 7
+  },
+  {
+    "file": "src/components/calculators/TcoCalculator.tsx",
+    "unchanged": true,
+    "count": 1
+  },
+  {
+    "file": "src/components/calculators/TripPlanner.tsx",
+    "unchanged": true,
+    "count": 9
+  },
+  {
+    "file": "src/components/finder/VehicleFinder.tsx",
+    "unchanged": true,
+    "count": 9
+  },
+  {
+    "file": "src/components/ui/Field.tsx",
+    "unchanged": true,
+    "count": 0
+  }
+]

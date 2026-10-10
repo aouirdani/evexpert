@@ -1,0 +1,343 @@
+{
+  "stylesheet": [
+    "http://localhost:3102/_next/static/chunks/1459ha4e5rxq1.css",
+    "http://localhost:3102/_next/static/chunks/0j7op_e6oimp1.css"
+  ],
+  "violations": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": [
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(1) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(2) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(3) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(4) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(5) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(6) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(7) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(8) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(9) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(10) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(11) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(12) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(13) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(14) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(15) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(16) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(17) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(18) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(19) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(20) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(21) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(22) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(23) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(24) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(25) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(26) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(27) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(28) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(29) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(30) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(31) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(32) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(33) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(34) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(35) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(36) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(37) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(38) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(39) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(40) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(41) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(42) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(43) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(44) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(45) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(46) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"unit\">km</span>",
+          "target": [
+            "article:nth-child(47) > .min-\\[375px\\]\\:row-span-2.catalogue-module__GQ2rKW__range.col-start-1 > .text-data-lg.font-bold > .unit"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #6083da, background color: #f3f6fc, font size: 9.7pt (12.908px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    }
+  ]
+}

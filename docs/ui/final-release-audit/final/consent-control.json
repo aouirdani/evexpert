@@ -1,0 +1,11 @@
+[
+  {
+    "case": "controlled API",
+    "queued": 1,
+    "exact": true
+  },
+  {
+    "case": "API unavailable",
+    "queued": 0
+  }
+]

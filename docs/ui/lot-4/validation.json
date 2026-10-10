@@ -1,0 +1,33 @@
+{
+  "lint": {
+    "command": "npm run lint",
+    "exit": 0
+  },
+  "typecheck": {
+    "command": "npm run typecheck",
+    "exit": 0
+  },
+  "unit": {
+    "command": "npm test -- --config vitest.unit.config.ts",
+    "exit": 0,
+    "tests": 160,
+    "files": 15,
+    "db_setup": false
+  },
+  "build": {
+    "command": "EVEXPERT_DATA_SOURCE=local npm run build",
+    "exit": 0,
+    "static_entries": 192
+  },
+  "adsense": {
+    "command": "node scripts/check-adsense.mjs --base http://localhost:3102",
+    "exit": 0,
+    "pages": 124
+  },
+  "final_build": {
+    "command": "EVEXPERT_DATA_SOURCE=local npm run build",
+    "exit": 0,
+    "static_entries": 192,
+    "after_reports": true
+  }
+}

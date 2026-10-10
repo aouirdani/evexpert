@@ -1,0 +1,107 @@
+[
+  {
+    "width": 320,
+    "client": 320,
+    "scroll": 320,
+    "heroGeometryIdentical": true,
+    "h1Identical": true,
+    "paragraphIdentical": true,
+    "mediaDeltaY": 0.0,
+    "secondaryCtaHeight": [
+      25,
+      25
+    ],
+    "brandMinHeight": [
+      21,
+      44
+    ],
+    "sectionOrderIdentical": true,
+    "imageAttributesIdentical": true,
+    "tableCellsIdentical": true,
+    "adReservationsIdentical": true
+  },
+  {
+    "width": 390,
+    "client": 390,
+    "scroll": 390,
+    "heroGeometryIdentical": true,
+    "h1Identical": true,
+    "paragraphIdentical": true,
+    "mediaDeltaY": 0.0,
+    "secondaryCtaHeight": [
+      25,
+      25
+    ],
+    "brandMinHeight": [
+      21,
+      44
+    ],
+    "sectionOrderIdentical": true,
+    "imageAttributesIdentical": true,
+    "tableCellsIdentical": true,
+    "adReservationsIdentical": true
+  },
+  {
+    "width": 768,
+    "client": 768,
+    "scroll": 768,
+    "heroGeometryIdentical": true,
+    "h1Identical": true,
+    "paragraphIdentical": true,
+    "mediaDeltaY": 0.0,
+    "secondaryCtaHeight": [
+      25,
+      25
+    ],
+    "brandMinHeight": [
+      21,
+      44
+    ],
+    "sectionOrderIdentical": true,
+    "imageAttributesIdentical": true,
+    "tableCellsIdentical": true,
+    "adReservationsIdentical": true
+  },
+  {
+    "width": 1024,
+    "client": 1024,
+    "scroll": 1024,
+    "heroGeometryIdentical": true,
+    "h1Identical": true,
+    "paragraphIdentical": true,
+    "mediaDeltaY": 0,
+    "secondaryCtaHeight": [
+      25,
+      25
+    ],
+    "brandMinHeight": [
+      21,
+      44
+    ],
+    "sectionOrderIdentical": true,
+    "imageAttributesIdentical": true,
+    "tableCellsIdentical": true,
+    "adReservationsIdentical": true
+  },
+  {
+    "width": 1440,
+    "client": 1440,
+    "scroll": 1440,
+    "heroGeometryIdentical": true,
+    "h1Identical": true,
+    "paragraphIdentical": true,
+    "mediaDeltaY": 0,
+    "secondaryCtaHeight": [
+      25,
+      25
+    ],
+    "brandMinHeight": [
+      21,
+      44
+    ],
+    "sectionOrderIdentical": true,
+    "imageAttributesIdentical": true,
+    "tableCellsIdentical": true,
+    "adReservationsIdentical": true
+  }
+]

@@ -1,0 +1,322 @@
+[
+  {
+    "width": 320,
+    "section": {
+      "x": 0,
+      "y": 57,
+      "width": 320,
+      "height": 1249.828125,
+      "top": 57,
+      "right": 320,
+      "bottom": 1306.828125,
+      "left": 0
+    },
+    "media": {
+      "x": 0,
+      "y": 756.953125,
+      "width": 320,
+      "height": 256,
+      "top": 756.953125,
+      "right": 320,
+      "bottom": 1012.953125,
+      "left": 0
+    },
+    "poster": {
+      "x": 0,
+      "y": 756.953125,
+      "width": 320,
+      "height": 256,
+      "top": 756.953125,
+      "right": 320,
+      "bottom": 1012.953125,
+      "left": 0
+    },
+    "video": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "h1": {
+      "x": 16,
+      "y": 151.390625,
+      "width": 288,
+      "height": 264,
+      "top": 151.390625,
+      "right": 304,
+      "bottom": 415.390625,
+      "left": 16
+    },
+    "text": "Autonomie, batterie, recharge et coût d'usage de chaque modèle, comparés côte à côte à partir de données sourcées. La nature de chaque chiffre est toujours indiquée.",
+    "sections": [
+      "Quelle autonomie vous faut-il ?",
+      "Six modèles pour commencer",
+      "Deux modèles, un seul tableau",
+      "Recharger, c'est une puissance, un lieu et un tarif.",
+      "Guides et analyses",
+      "Faites le calcul vous-même",
+      "Un chiffre, une source, une nature.",
+      "Questions fréquentes"
+    ]
+  },
+  {
+    "width": 390,
+    "section": {
+      "x": 0,
+      "y": 57,
+      "width": 390,
+      "height": 1273.734375,
+      "top": 57,
+      "right": 390,
+      "bottom": 1330.734375,
+      "left": 0
+    },
+    "media": {
+      "x": 0,
+      "y": 743.828125,
+      "width": 390,
+      "height": 312,
+      "top": 743.828125,
+      "right": 390,
+      "bottom": 1055.828125,
+      "left": 0
+    },
+    "poster": {
+      "x": 0,
+      "y": 743.828125,
+      "width": 390,
+      "height": 312,
+      "top": 743.828125,
+      "right": 390,
+      "bottom": 1055.828125,
+      "left": 0
+    },
+    "video": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "h1": {
+      "x": 16,
+      "y": 151.390625,
+      "width": 358,
+      "height": 275.25,
+      "top": 151.390625,
+      "right": 374,
+      "bottom": 426.640625,
+      "left": 16
+    },
+    "text": "Autonomie, batterie, recharge et coût d'usage de chaque modèle, comparés côte à côte à partir de données sourcées. La nature de chaque chiffre est toujours indiquée.",
+    "sections": [
+      "Quelle autonomie vous faut-il ?",
+      "Six modèles pour commencer",
+      "Deux modèles, un seul tableau",
+      "Recharger, c'est une puissance, un lieu et un tarif.",
+      "Guides et analyses",
+      "Faites le calcul vous-même",
+      "Un chiffre, une source, une nature.",
+      "Questions fréquentes"
+    ]
+  },
+  {
+    "width": 768,
+    "section": {
+      "x": 0,
+      "y": 57,
+      "width": 768,
+      "height": 1229.984375,
+      "top": 57,
+      "right": 768,
+      "bottom": 1286.984375,
+      "left": 0
+    },
+    "media": {
+      "x": 0,
+      "y": 678.109375,
+      "width": 768,
+      "height": 432,
+      "top": 678.109375,
+      "right": 768,
+      "bottom": 1110.109375,
+      "left": 0
+    },
+    "poster": {
+      "x": 0,
+      "y": 678.109375,
+      "width": 768,
+      "height": 432,
+      "top": 678.109375,
+      "right": 768,
+      "bottom": 1110.109375,
+      "left": 0
+    },
+    "video": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "h1": {
+      "x": 24,
+      "y": 175.390625,
+      "width": 704,
+      "height": 256,
+      "top": 175.390625,
+      "right": 728,
+      "bottom": 431.390625,
+      "left": 24
+    },
+    "text": "Autonomie, batterie, recharge et coût d'usage de chaque modèle, comparés côte à côte à partir de données sourcées. La nature de chaque chiffre est toujours indiquée.",
+    "sections": [
+      "Quelle autonomie vous faut-il ?",
+      "Six modèles pour commencer",
+      "Deux modèles, un seul tableau",
+      "Recharger, c'est une puissance, un lieu et un tarif.",
+      "Guides et analyses",
+      "Faites le calcul vous-même",
+      "Un chiffre, une source, une nature.",
+      "Questions fréquentes"
+    ]
+  },
+  {
+    "width": 1024,
+    "section": {
+      "x": 0,
+      "y": 101,
+      "width": 1024,
+      "height": 846.328125,
+      "top": 101,
+      "right": 1024,
+      "bottom": 947.328125,
+      "left": 0
+    },
+    "media": {
+      "x": 327.6875,
+      "y": 109,
+      "width": 696.3125,
+      "height": 388.625,
+      "top": 109,
+      "right": 1024,
+      "bottom": 497.625,
+      "left": 327.6875
+    },
+    "poster": {
+      "x": 327.6875,
+      "y": 109,
+      "width": 696.3125,
+      "height": 388.625,
+      "top": 109,
+      "right": 1024,
+      "bottom": 497.625,
+      "left": 327.6875
+    },
+    "video": {
+      "x": 327.6875,
+      "y": 109,
+      "width": 696.3125,
+      "height": 388.625,
+      "top": 109,
+      "right": 1024,
+      "bottom": 497.625,
+      "left": 327.6875
+    },
+    "h1": {
+      "x": 40,
+      "y": 235.390625,
+      "width": 704,
+      "height": 256,
+      "top": 235.390625,
+      "right": 744,
+      "bottom": 491.390625,
+      "left": 40
+    },
+    "text": "Autonomie, batterie, recharge et coût d'usage de chaque modèle, comparés côte à côte à partir de données sourcées. La nature de chaque chiffre est toujours indiquée.",
+    "sections": [
+      "Quelle autonomie vous faut-il ?",
+      "Six modèles pour commencer",
+      "Deux modèles, un seul tableau",
+      "Recharger, c'est une puissance, un lieu et un tarif.",
+      "Guides et analyses",
+      "Faites le calcul vous-même",
+      "Un chiffre, une source, une nature.",
+      "Questions fréquentes"
+    ]
+  },
+  {
+    "width": 1440,
+    "section": {
+      "x": 0,
+      "y": 101,
+      "width": 1440,
+      "height": 885.640625,
+      "top": 101,
+      "right": 1440,
+      "bottom": 986.640625,
+      "left": 0
+    },
+    "media": {
+      "x": 460.8125,
+      "y": 109,
+      "width": 979.1875,
+      "height": 546.515625,
+      "top": 109,
+      "right": 1440,
+      "bottom": 655.515625,
+      "left": 460.8125
+    },
+    "poster": {
+      "x": 460.8125,
+      "y": 109,
+      "width": 979.1875,
+      "height": 546.515625,
+      "top": 109,
+      "right": 1440,
+      "bottom": 655.515625,
+      "left": 460.8125
+    },
+    "video": {
+      "x": 460.8125,
+      "y": 109,
+      "width": 979.1875,
+      "height": 546.515625,
+      "top": 109,
+      "right": 1440,
+      "bottom": 655.515625,
+      "left": 460.8125
+    },
+    "h1": {
+      "x": 200,
+      "y": 235.390625,
+      "width": 704,
+      "height": 256,
+      "top": 235.390625,
+      "right": 904,
+      "bottom": 491.390625,
+      "left": 200
+    },
+    "text": "Autonomie, batterie, recharge et coût d'usage de chaque modèle, comparés côte à côte à partir de données sourcées. La nature de chaque chiffre est toujours indiquée.",
+    "sections": [
+      "Quelle autonomie vous faut-il ?",
+      "Six modèles pour commencer",
+      "Deux modèles, un seul tableau",
+      "Recharger, c'est une puissance, un lieu et un tarif.",
+      "Guides et analyses",
+      "Faites le calcul vous-même",
+      "Un chiffre, une source, une nature.",
+      "Questions fréquentes"
+    ]
+  }
+]

@@ -1,0 +1,272 @@
+[
+  {
+    "path": "/guides",
+    "i": 0,
+    "pressed": [
+      "true",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    "visible": [
+      "/guides/kw-kwh-difference-voiture-electrique",
+      "/guides/calculer-autonomie-reelle",
+      "/guides/autonomie-hiver",
+      "/guides/autonomie-autoroute",
+      "/guides/wltp-definition",
+      "/guides/consommation-voiture-electrique-kwh-100-km",
+      "/guides/puissance-borne-7-11-22-kw",
+      "/guides/recharge-ac-ou-dc",
+      "/guides/temps-recharge-voiture-electrique",
+      "/guides/fonctionnement-borne-de-recharge",
+      "/guides/puissance-recharge-dc",
+      "/guides/recharge-domicile-ou-borne-publique",
+      "/guides/recharger-sur-prise-domestique",
+      "/guides/batterie-brute-batterie-utile",
+      "/guides/recharger-a-80-pourcent",
+      "/guides/preserver-batterie-voiture-electrique",
+      "/guides/duree-de-vie-batterie-voiture-electrique",
+      "/guides/prix-batterie-voiture-electrique",
+      "/guides/combien-coute-recharge-domicile",
+      "/guides/cout-borne-recharge-domicile",
+      "/guides/cout-100-km-voiture-electrique",
+      "/guides/voiture-electrique-vs-essence",
+      "/guides/calculer-tco-voiture-electrique",
+      "/guides/choisir-voiture-electrique-selon-usage",
+      "/guides/choisir-premiere-voiture-electrique",
+      "/guides/acheter-voiture-electrique-occasion"
+    ],
+    "url": "/guides"
+  },
+  {
+    "path": "/guides",
+    "i": 1,
+    "pressed": [
+      "false",
+      "true",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    "visible": [
+      "/guides/kw-kwh-difference-voiture-electrique"
+    ],
+    "url": "/guides"
+  },
+  {
+    "path": "/guides",
+    "i": 2,
+    "pressed": [
+      "false",
+      "false",
+      "true",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    "visible": [
+      "/guides/calculer-autonomie-reelle",
+      "/guides/autonomie-hiver",
+      "/guides/autonomie-autoroute",
+      "/guides/wltp-definition",
+      "/guides/consommation-voiture-electrique-kwh-100-km"
+    ],
+    "url": "/guides"
+  },
+  {
+    "path": "/guides",
+    "i": 3,
+    "pressed": [
+      "false",
+      "false",
+      "false",
+      "true",
+      "false",
+      "false",
+      "false"
+    ],
+    "visible": [
+      "/guides/puissance-borne-7-11-22-kw",
+      "/guides/recharge-ac-ou-dc",
+      "/guides/temps-recharge-voiture-electrique",
+      "/guides/fonctionnement-borne-de-recharge",
+      "/guides/puissance-recharge-dc",
+      "/guides/recharge-domicile-ou-borne-publique",
+      "/guides/recharger-sur-prise-domestique"
+    ],
+    "url": "/guides"
+  },
+  {
+    "path": "/guides",
+    "i": 4,
+    "pressed": [
+      "false",
+      "false",
+      "false",
+      "false",
+      "true",
+      "false",
+      "false"
+    ],
+    "visible": [
+      "/guides/batterie-brute-batterie-utile",
+      "/guides/recharger-a-80-pourcent",
+      "/guides/preserver-batterie-voiture-electrique",
+      "/guides/duree-de-vie-batterie-voiture-electrique",
+      "/guides/prix-batterie-voiture-electrique"
+    ],
+    "url": "/guides"
+  },
+  {
+    "path": "/guides",
+    "i": 5,
+    "pressed": [
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "true",
+      "false"
+    ],
+    "visible": [
+      "/guides/combien-coute-recharge-domicile",
+      "/guides/cout-borne-recharge-domicile",
+      "/guides/cout-100-km-voiture-electrique",
+      "/guides/voiture-electrique-vs-essence",
+      "/guides/calculer-tco-voiture-electrique"
+    ],
+    "url": "/guides"
+  },
+  {
+    "path": "/guides",
+    "i": 6,
+    "pressed": [
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "true"
+    ],
+    "visible": [
+      "/guides/choisir-voiture-electrique-selon-usage",
+      "/guides/choisir-premiere-voiture-electrique",
+      "/guides/acheter-voiture-electrique-occasion"
+    ],
+    "url": "/guides"
+  },
+  {
+    "path": "/blog",
+    "i": 0,
+    "pressed": [
+      "true",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    "visible": [
+      "/blog/voitures-electriques-chinoises-byd-mg",
+      "/blog/voitures-electriques-les-plus-sobres",
+      "/blog/recharge-rapide-temps-10-80",
+      "/blog/autonomie-wltp-repartition-catalogue",
+      "/blog/lfp-ou-nmc-ce-que-montrent-les-donnees",
+      "/blog/recharge-ac-puissances-acceptees",
+      "/blog/comment-evexpert-construit-sa-base",
+      "/blog/garantie-batterie-ce-que-disent-les-donnees"
+    ],
+    "url": "/blog"
+  },
+  {
+    "path": "/blog",
+    "i": 1,
+    "pressed": [
+      "false",
+      "true",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    "visible": [
+      "/blog/voitures-electriques-chinoises-byd-mg",
+      "/blog/voitures-electriques-les-plus-sobres"
+    ],
+    "url": "/blog"
+  },
+  {
+    "path": "/blog",
+    "i": 2,
+    "pressed": [
+      "false",
+      "false",
+      "true",
+      "false",
+      "false",
+      "false"
+    ],
+    "visible": [
+      "/blog/recharge-rapide-temps-10-80",
+      "/blog/recharge-ac-puissances-acceptees"
+    ],
+    "url": "/blog"
+  },
+  {
+    "path": "/blog",
+    "i": 3,
+    "pressed": [
+      "false",
+      "false",
+      "false",
+      "true",
+      "false",
+      "false"
+    ],
+    "visible": [
+      "/blog/autonomie-wltp-repartition-catalogue",
+      "/blog/garantie-batterie-ce-que-disent-les-donnees"
+    ],
+    "url": "/blog"
+  },
+  {
+    "path": "/blog",
+    "i": 4,
+    "pressed": [
+      "false",
+      "false",
+      "false",
+      "false",
+      "true",
+      "false"
+    ],
+    "visible": [
+      "/blog/lfp-ou-nmc-ce-que-montrent-les-donnees"
+    ],
+    "url": "/blog"
+  },
+  {
+    "path": "/blog",
+    "i": 5,
+    "pressed": [
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "true"
+    ],
+    "visible": [
+      "/blog/comment-evexpert-construit-sa-base"
+    ],
+    "url": "/blog"
+  }
+]

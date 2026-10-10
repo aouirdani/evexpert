@@ -12,6 +12,8 @@ import { RangeBar } from "./RangeBar";
 import { VehicleCard } from "./VehicleCard";
 import { GarageToggle } from "@/components/garage/GarageToggle";
 
+import { DataTableScroll } from "./DataTableScroll";
+
 const th = "label whitespace-nowrap pb-3 pr-5 text-left font-semibold";
 
 /** Page modèle à plusieurs versions : tableau comparatif des versions. */
@@ -37,7 +39,7 @@ export function ModelOverview({
           ))}
         </div>
       )}
-      <div className="relative overflow-x-auto">
+      <DataTableScroll label={`Comparaison des versions du ${first.brand} ${first.model}`} hintId="model-versions-scroll-hint">
         <table className="w-full min-w-[46rem] text-left">
           <caption className="sr-only">Comparaison des versions du {first.brand} {first.model}</caption>
           <thead>
@@ -60,7 +62,7 @@ export function ModelOverview({
                 <th scope="row" className="py-4 pr-5 text-left align-middle font-normal">
                   <Link
                     href={vehicleHref(v, "version")}
-                    className="link-h text-base font-bold text-ink after:absolute after:inset-0 after:content-[''] focus-visible:outline-none"
+                    className="link-h text-base font-bold text-ink after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:outline-2 focus-visible:after:-outline-offset-2 focus-visible:after:outline-signal-deep"
                   >
                     {v.version}
                   </Link>
@@ -74,8 +76,8 @@ export function ModelOverview({
                   <RangeBar value={v.rangeWltp} decorative className="mt-1.5" />
                 </td>
                 <td className="num py-4 pr-5 text-right align-middle font-semibold text-ink">{fmt(v.batteryUsable, "kWh", 1)}</td>
-                <td className="num py-4 pr-5 text-right align-middle font-semibold text-ink">{fmt(v.chargingDC, "kW")}</td>
-                <td className="num py-4 pr-5 text-right align-middle font-semibold text-ink">{fmt(v.chargingTime10to80, "min")}</td>
+                <td className="num py-4 pr-5 text-right align-middle font-semibold text-ink" data-missing={v.chargingDC === null}>{fmt(v.chargingDC, "kW")}</td>
+                <td className="num py-4 pr-5 text-right align-middle font-semibold text-ink" data-missing={v.chargingTime10to80 === null}>{fmt(v.chargingTime10to80, "min")}</td>
                 <td className="num py-4 pr-5 text-right align-middle font-semibold text-ink">{fmt(v.powerKw, "kW")}</td>
                 <td className="num py-4 pr-5 text-right align-middle font-semibold text-ink">{formatEuro(costPer100km(v, ASSUMPTIONS.homePrice), 2)}</td>
                 <td className="relative py-4 pl-4 text-right align-middle">
@@ -85,7 +87,7 @@ export function ModelOverview({
             ))}
           </tbody>
         </table>
-      </div>
+      </DataTableScroll>
       <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-caption text-muted">
         <DataBadge type={first.source.dataType} /> caractéristiques ·<DataBadge type="calculated" /> * coût aux 100 km à {formatNumber(ASSUMPTIONS.homePrice, 2)}&nbsp;€/kWh (hypothèse), conditions WLTP.
       </p>
@@ -113,7 +115,7 @@ export function ModelOverview({
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {similar.map((s) => (
-              <VehicleCard key={s.id} vehicle={s} href={vehicleHref(s)} />
+              <VehicleCard presentation="catalogue" key={s.id} vehicle={s} href={vehicleHref(s)} />
             ))}
           </div>
         </section>

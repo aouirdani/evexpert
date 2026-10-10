@@ -2,6 +2,7 @@ import type { Article, ArticleCategory, Vehicle } from "@/types";
 import { SOURCES } from "@/data/sources";
 import { acChargeMinutes, averageDcPower, batteryConsumption100 } from "@/lib/vehicle-calcs";
 import { formatNumber, minutesToHuman } from "@/lib/format";
+import { buildChineseVehiclesArticle } from "@/data/editorial/chinese-vehicles";
 
 export function buildArticles(vehicles: Vehicle[]): Article[] {
 
@@ -309,7 +310,7 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
       {
         heading: "Que conclure ?",
         paragraphs: [
-          "Le choix de chimie compte pour la façon de charger au quotidien (voir le guide sur la charge à 80 %) et pour le coût de fabrication, mais il ne détermine pas seul l'autonomie ni la qualité d'un modèle. Consultez la notice du constructeur pour la recommandation de charge de votre version.",
+          "Le choix de chimie compte pour la façon de charger au quotidien (voir le guide sur la charge à 80 %) et pour le coût de fabrication, mais il ne détermine pas seul l'autonomie ni la qualité d'un modèle. Consultez la notice du constructeur pour la recommandation de charge de votre version. L'[analyse croisée des BYD et MG](/blog/voitures-electriques-chinoises-byd-mg) montre comment comparer les versions au-delà de leur chimie.",
         ],
       },
     ],
@@ -374,7 +375,7 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
       {
         heading: "Avant de commander une borne",
         paragraphs: [
-          "Vérifiez la limite AC de votre modèle exact (elle peut varier selon la version ou l'option) et votre puissance souscrite. Simulez ensuite le temps de recharge avec l'outil sur la puissance de borne.",
+          "Vérifiez la limite AC de votre modèle exact (elle peut varier selon la version ou l'option) et votre puissance souscrite. Simulez ensuite le temps de recharge avec l'outil sur la puissance de borne. La [comparaison des BYD et MG de notre base](/blog/voitures-electriques-chinoises-byd-mg) applique ces plafonds à deux gammes pour en expliquer les conséquences.",
         ],
       },
     ],
@@ -498,7 +499,7 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
       {
         heading: "Comment utiliser ces données",
         paragraphs: [
-          "La garantie est un critère parmi d'autres : elle ne prédit pas la durée de vie de la batterie, qui dépend aussi des habitudes de charge et de la chaleur. Pour la ménager, voir comment préserver la batterie d'une voiture électrique. Pour comparer deux versions, ouvrez leurs fiches et le comparateur.",
+          "La garantie est un critère parmi d'autres : elle ne prédit pas la durée de vie de la batterie, qui dépend aussi des habitudes de charge et de la chaleur. Pour la ménager, voir comment préserver la batterie d'une voiture électrique. Pour comparer deux versions, ouvrez leurs fiches et le comparateur. Pour un exemplaire de seconde main, le [guide d'achat d'une électrique d'occasion](/guides/acheter-voiture-electrique-occasion) explique les documents et essais à réunir.",
         ],
       },
     ],
@@ -517,6 +518,7 @@ export function buildArticles(vehicles: Vehicle[]): Article[] {
     ],
     sources: [SOURCES.evdb],
   },
+    buildChineseVehiclesArticle(vehicles),
   ];
 }
 

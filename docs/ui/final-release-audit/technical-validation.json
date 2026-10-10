@@ -1,0 +1,39 @@
+{
+  "lint": {
+    "command": "npm run lint",
+    "exitCode": 0,
+    "log": "lint-final.log"
+  },
+  "typecheck": {
+    "command": "npm run typecheck",
+    "exitCode": 0,
+    "log": "typecheck-final.log"
+  },
+  "unit": {
+    "command": "npm test -- --config vitest.unit.config.ts",
+    "exitCode": 0,
+    "files": 15,
+    "passed": 160,
+    "DBSetupExecuted": false,
+    "log": "unit-final.log"
+  },
+  "build": {
+    "command": "EVEXPERT_DATA_SOURCE=local npm run build",
+    "exitCode": 0,
+    "generatedEntries": 192,
+    "buildId": "jBBZbOH88RbawNVaS9Dh0",
+    "log": "build-guard.log"
+  },
+  "gitDiffCheck": {
+    "exitCode": 0
+  },
+  "sourceOnlyAuthorizedAnchor": true,
+  "routes": 190,
+  "routesOK": 190,
+  "internalDestinations": 201,
+  "brokenInternalLinks": 0,
+  "calculatorCases": 20,
+  "calculatorDifferences": 0,
+  "measurements": 98,
+  "staticAssetsMatchMeasuredAfterBuildIdNormalization": true
+}

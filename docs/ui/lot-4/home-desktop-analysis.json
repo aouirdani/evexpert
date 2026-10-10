@@ -1,0 +1,509 @@
+{
+  "before": {
+    "score": {
+      "median": 100,
+      "min": 93,
+      "max": 100
+    },
+    "accessibility": {
+      "median": 100,
+      "min": 100,
+      "max": 100
+    },
+    "lcp": {
+      "median": 657.5608,
+      "min": 627.6053,
+      "max": 1715.717399999999
+    },
+    "fcp": {
+      "median": 245.99969999999996,
+      "min": 244.7883,
+      "max": 251.7072
+    },
+    "cls": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "tbt": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "count": 9,
+    "elements": {
+      "<video muted=\"\" loop=\"\" playsinline=\"\" preload=\"none\" aria-hidden=\"true\" tabindex=\"-1\" disablepictureinpicture=\"\" disableremoteplayback=\"\" class=\"h-full w-full object-cover object-right\" src=\"/brand/video.mp4\" data-playing=\"\">": 4,
+      "<img alt=\"\" width=\"1376\" height=\"768\" decoding=\"async\" data-nimg=\"1\" class=\"hero-poster h-full w-full object-cover object-right mix-blend-lighten\" style=\"color: transparent;\" sizes=\"(min-width: 1024px) min(68vw, 1100px), 100vw\" srcset=\"/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=640&amp;q=75 640w, /_next/ima\u2026\" src=\"http://localhost:3102/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=1080\u2026\">": 5
+    },
+    "local_resources": {
+      "Stylesheet": {
+        "transfer_median": 14234,
+        "request_counts": [
+          1
+        ]
+      },
+      "Script": {
+        "transfer_median": 214431,
+        "request_counts": [
+          16
+        ]
+      },
+      "Font": {
+        "transfer_median": 68312,
+        "request_counts": [
+          4
+        ]
+      },
+      "Image": {
+        "transfer_median": 43286,
+        "request_counts": [
+          1
+        ]
+      }
+    }
+  },
+  "after": {
+    "score": {
+      "median": 100,
+      "min": 94,
+      "max": 100
+    },
+    "accessibility": {
+      "median": 100,
+      "min": 100,
+      "max": 100
+    },
+    "lcp": {
+      "median": 629.4827,
+      "min": 626.4856249999999,
+      "max": 1661.9242999999992
+    },
+    "fcp": {
+      "median": 244.68070000000003,
+      "min": 243.41629999999998,
+      "max": 246.30980000000002
+    },
+    "cls": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "tbt": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "count": 9,
+    "elements": {
+      "<video muted=\"\" loop=\"\" playsinline=\"\" preload=\"none\" aria-hidden=\"true\" tabindex=\"-1\" disablepictureinpicture=\"\" disableremoteplayback=\"\" class=\"h-full w-full object-cover object-right\" src=\"/brand/video.mp4\" data-playing=\"\">": 4,
+      "<img alt=\"\" width=\"1376\" height=\"768\" decoding=\"async\" data-nimg=\"1\" class=\"hero-poster h-full w-full object-cover object-right mix-blend-lighten\" style=\"color: transparent;\" sizes=\"(min-width: 1024px) min(68vw, 1100px), 100vw\" srcset=\"/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=640&amp;q=75 640w, /_next/ima\u2026\" src=\"http://localhost:3102/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=1080\u2026\">": 5
+    },
+    "local_resources": {
+      "Stylesheet": {
+        "transfer_median": 14705,
+        "request_counts": [
+          1
+        ]
+      },
+      "Script": {
+        "transfer_median": 214708,
+        "request_counts": [
+          16
+        ]
+      },
+      "Font": {
+        "transfer_median": 68312,
+        "request_counts": [
+          4
+        ]
+      },
+      "Image": {
+        "transfer_median": 43286,
+        "request_counts": [
+          1
+        ]
+      }
+    }
+  },
+  "additional_before": {
+    "score": {
+      "median": 97.0,
+      "min": 93,
+      "max": 100
+    },
+    "accessibility": {
+      "median": 100.0,
+      "min": 100,
+      "max": 100
+    },
+    "lcp": {
+      "median": 1157.69555,
+      "min": 628.912625,
+      "max": 1715.717399999999
+    },
+    "fcp": {
+      "median": 246.17575,
+      "min": 245.90949999999998,
+      "max": 251.7072
+    },
+    "cls": {
+      "median": 0.0,
+      "min": 0,
+      "max": 0
+    },
+    "tbt": {
+      "median": 0.0,
+      "min": 0,
+      "max": 0
+    },
+    "count": 6,
+    "elements": {
+      "<video muted=\"\" loop=\"\" playsinline=\"\" preload=\"none\" aria-hidden=\"true\" tabindex=\"-1\" disablepictureinpicture=\"\" disableremoteplayback=\"\" class=\"h-full w-full object-cover object-right\" src=\"/brand/video.mp4\" data-playing=\"\">": 3,
+      "<img alt=\"\" width=\"1376\" height=\"768\" decoding=\"async\" data-nimg=\"1\" class=\"hero-poster h-full w-full object-cover object-right mix-blend-lighten\" style=\"color: transparent;\" sizes=\"(min-width: 1024px) min(68vw, 1100px), 100vw\" srcset=\"/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=640&amp;q=75 640w, /_next/ima\u2026\" src=\"http://localhost:3102/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=1080\u2026\">": 3
+    },
+    "local_resources": {
+      "Stylesheet": {
+        "transfer_median": 14234.0,
+        "request_counts": [
+          1
+        ]
+      },
+      "Script": {
+        "transfer_median": 214431.0,
+        "request_counts": [
+          16
+        ]
+      },
+      "Font": {
+        "transfer_median": 68312.0,
+        "request_counts": [
+          4
+        ]
+      },
+      "Image": {
+        "transfer_median": 43286.0,
+        "request_counts": [
+          1
+        ]
+      }
+    }
+  },
+  "additional_after": {
+    "score": {
+      "median": 100.0,
+      "min": 94,
+      "max": 100
+    },
+    "accessibility": {
+      "median": 100.0,
+      "min": 100,
+      "max": 100
+    },
+    "lcp": {
+      "median": 628.979975,
+      "min": 627.0349999999997,
+      "max": 1659.690675
+    },
+    "fcp": {
+      "median": 245.23395000000005,
+      "min": 244.43349999999998,
+      "max": 246.30980000000002
+    },
+    "cls": {
+      "median": 0.0,
+      "min": 0,
+      "max": 0
+    },
+    "tbt": {
+      "median": 0.0,
+      "min": 0,
+      "max": 0
+    },
+    "count": 6,
+    "elements": {
+      "<video muted=\"\" loop=\"\" playsinline=\"\" preload=\"none\" aria-hidden=\"true\" tabindex=\"-1\" disablepictureinpicture=\"\" disableremoteplayback=\"\" class=\"h-full w-full object-cover object-right\" src=\"/brand/video.mp4\" data-playing=\"\">": 2,
+      "<img alt=\"\" width=\"1376\" height=\"768\" decoding=\"async\" data-nimg=\"1\" class=\"hero-poster h-full w-full object-cover object-right mix-blend-lighten\" style=\"color: transparent;\" sizes=\"(min-width: 1024px) min(68vw, 1100px), 100vw\" srcset=\"/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=640&amp;q=75 640w, /_next/ima\u2026\" src=\"http://localhost:3102/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=1080\u2026\">": 4
+    },
+    "local_resources": {
+      "Stylesheet": {
+        "transfer_median": 14705.0,
+        "request_counts": [
+          1
+        ]
+      },
+      "Script": {
+        "transfer_median": 214708.0,
+        "request_counts": [
+          16
+        ]
+      },
+      "Font": {
+        "transfer_median": 68312.0,
+        "request_counts": [
+          4
+        ]
+      },
+      "Image": {
+        "transfer_median": 43286.0,
+        "request_counts": [
+          1
+        ]
+      }
+    }
+  },
+  "settings_equal": true,
+  "by_element": {
+    "before": {
+      "img": {
+        "score": {
+          "median": 100,
+          "min": 100,
+          "max": 100
+        },
+        "accessibility": {
+          "median": 100,
+          "min": 100,
+          "max": 100
+        },
+        "lcp": {
+          "median": 628.9185500000001,
+          "min": 627.6053,
+          "max": 657.5608
+        },
+        "fcp": {
+          "median": 245.90949999999998,
+          "min": 244.8922,
+          "max": 251.7072
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "count": 5,
+        "elements": {
+          "<img alt=\"\" width=\"1376\" height=\"768\" decoding=\"async\" data-nimg=\"1\" class=\"hero-poster h-full w-full object-cover object-right mix-blend-lighten\" style=\"color: transparent;\" sizes=\"(min-width: 1024px) min(68vw, 1100px), 100vw\" srcset=\"/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=640&amp;q=75 640w, /_next/ima\u2026\" src=\"http://localhost:3102/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=1080\u2026\">": 5
+        },
+        "local_resources": {
+          "Stylesheet": {
+            "transfer_median": 14234,
+            "request_counts": [
+              1
+            ]
+          },
+          "Script": {
+            "transfer_median": 214431,
+            "request_counts": [
+              16
+            ]
+          },
+          "Font": {
+            "transfer_median": 68312,
+            "request_counts": [
+              4
+            ]
+          },
+          "Image": {
+            "transfer_median": 43286,
+            "request_counts": [
+              1
+            ]
+          }
+        }
+      },
+      "video": {
+        "score": {
+          "median": 94.0,
+          "min": 93,
+          "max": 94
+        },
+        "accessibility": {
+          "median": 100.0,
+          "min": 100,
+          "max": 100
+        },
+        "lcp": {
+          "median": 1667.3082999999997,
+          "min": 1652.1545999999998,
+          "max": 1715.717399999999
+        },
+        "fcp": {
+          "median": 246.05759999999998,
+          "min": 244.7883,
+          "max": 246.236
+        },
+        "cls": {
+          "median": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "tbt": {
+          "median": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "count": 4,
+        "elements": {
+          "<video muted=\"\" loop=\"\" playsinline=\"\" preload=\"none\" aria-hidden=\"true\" tabindex=\"-1\" disablepictureinpicture=\"\" disableremoteplayback=\"\" class=\"h-full w-full object-cover object-right\" src=\"/brand/video.mp4\" data-playing=\"\">": 4
+        },
+        "local_resources": {
+          "Stylesheet": {
+            "transfer_median": 14234.0,
+            "request_counts": [
+              1
+            ]
+          },
+          "Script": {
+            "transfer_median": 214431.0,
+            "request_counts": [
+              16
+            ]
+          },
+          "Font": {
+            "transfer_median": 68312.0,
+            "request_counts": [
+              4
+            ]
+          },
+          "Image": {
+            "transfer_median": 43286.0,
+            "request_counts": [
+              1
+            ]
+          }
+        }
+      }
+    },
+    "after": {
+      "img": {
+        "score": {
+          "median": 100,
+          "min": 100,
+          "max": 100
+        },
+        "accessibility": {
+          "median": 100,
+          "min": 100,
+          "max": 100
+        },
+        "lcp": {
+          "median": 627.058175,
+          "min": 626.4856249999999,
+          "max": 629.4827
+        },
+        "fcp": {
+          "median": 244.68070000000003,
+          "min": 244.2985,
+          "max": 246.30980000000002
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "tbt": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "count": 5,
+        "elements": {
+          "<img alt=\"\" width=\"1376\" height=\"768\" decoding=\"async\" data-nimg=\"1\" class=\"hero-poster h-full w-full object-cover object-right mix-blend-lighten\" style=\"color: transparent;\" sizes=\"(min-width: 1024px) min(68vw, 1100px), 100vw\" srcset=\"/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=640&amp;q=75 640w, /_next/ima\u2026\" src=\"http://localhost:3102/_next/image?url=%2Fbrand%2Fevexpert-hero.jpeg&amp;w=1080\u2026\">": 5
+        },
+        "local_resources": {
+          "Stylesheet": {
+            "transfer_median": 14705,
+            "request_counts": [
+              1
+            ]
+          },
+          "Script": {
+            "transfer_median": 214708,
+            "request_counts": [
+              16
+            ]
+          },
+          "Font": {
+            "transfer_median": 68312,
+            "request_counts": [
+              4
+            ]
+          },
+          "Image": {
+            "transfer_median": 43286,
+            "request_counts": [
+              1
+            ]
+          }
+        }
+      },
+      "video": {
+        "score": {
+          "median": 94.0,
+          "min": 94,
+          "max": 94
+        },
+        "accessibility": {
+          "median": 100.0,
+          "min": 100,
+          "max": 100
+        },
+        "lcp": {
+          "median": 1658.7290625,
+          "min": 1647.9484000000004,
+          "max": 1661.9242999999992
+        },
+        "fcp": {
+          "median": 244.4255,
+          "min": 243.41629999999998,
+          "max": 245.58120000000005
+        },
+        "cls": {
+          "median": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "tbt": {
+          "median": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "count": 4,
+        "elements": {
+          "<video muted=\"\" loop=\"\" playsinline=\"\" preload=\"none\" aria-hidden=\"true\" tabindex=\"-1\" disablepictureinpicture=\"\" disableremoteplayback=\"\" class=\"h-full w-full object-cover object-right\" src=\"/brand/video.mp4\" data-playing=\"\">": 4
+        },
+        "local_resources": {
+          "Stylesheet": {
+            "transfer_median": 14705.0,
+            "request_counts": [
+              1
+            ]
+          },
+          "Script": {
+            "transfer_median": 214708.0,
+            "request_counts": [
+              16
+            ]
+          },
+          "Font": {
+            "transfer_median": 68312.0,
+            "request_counts": [
+              4
+            ]
+          },
+          "Image": {
+            "transfer_median": 43286.0,
+            "request_counts": [
+              1
+            ]
+          }
+        }
+      }
+    }
+  }
+}

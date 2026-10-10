@@ -1,0 +1,130 @@
+[
+  {
+    "origin": "https://www.evexpert.fr",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610050101/show_ads_impl.js?bust=122881438",
+      "https://fundingchoicesmessages.google.com/i/ca-pub-7903460199253248?href=https%3A%2F%2Fwww.evexpert.fr%2Fcookies&ers=2",
+      "https://fundingchoicesmessages.google.com/f/AGSKWxWsjU6oO0iqdu41DSfO2B8La6SMRddOeBs2pv24WJwVfCMg5I1dhmJriRmK5c4k5yMv-Sebb4wsoZ2iZzn9V8MGS1Ay38P7KPFUPEMRiChFHkLNnTO9EP542UiFs0YQN6XPB4U9KQ==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzkxNjM1Mzk3LDc5NzAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzddXSwiaHR0cHM6Ly93d3cuZXZleHBlcnQuZnIvY29va2llcyIsbnVsbCxbWzgsIlk4RWtjRkdReW5JIl0sWzksImZyIl0sWzE4LCJbW1tudWxsLDMyMF1dXSJdLFszNSwiMTc5MTYzNTM5NyJdLFsxOSwiMSJdLFsxNywiWzBdIl0sWzI0LCIiXSxbMjksImZhbHNlIl1dXQ",
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248"
+    ],
+    "frames": [
+      {
+        "src": "",
+        "title": "",
+        "visible": false
+      },
+      {
+        "src": "about:blank",
+        "title": "",
+        "visible": false
+      },
+      {
+        "src": "about:blank",
+        "title": "",
+        "visible": false
+      },
+      {
+        "src": "about:blank",
+        "title": "",
+        "visible": false
+      }
+    ],
+    "dialogs": [],
+    "googlefc": true,
+    "tcf": "function",
+    "dataLayer": [
+      [
+        "consent",
+        "default",
+        {
+          "ad_storage": "denied",
+          "ad_user_data": "denied",
+          "ad_personalization": "denied",
+          "analytics_storage": "denied"
+        }
+      ],
+      [
+        "event",
+        "page_view",
+        {
+          "page_path": "/cookies",
+          "page_location": "https://www.evexpert.fr/cookies",
+          "page_title": "Politique de cookies | EVExpert"
+        }
+      ]
+    ],
+    "ads": [
+      {
+        "status": null,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      }
+    ]
+  },
+  {
+    "origin": "http://localhost:3102",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202610070101/show_ads_impl.js?bust=122881529",
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7903460199253248"
+    ],
+    "frames": [
+      {
+        "src": "https://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-7903460199253248&output=html&adk=1812271804&adf=3025194257&abgtt=6&lmt=1791635404&plat=9%3A134250504%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32%2C44%3A32&format=0x0&url=http%3A%2F%2Flocalhost%3A3102%2Fcookies&pra=5&aiof=14&asro=0&itsi=-1&aimartd=4&aieuf=1&aicrs=1&uach=WyJtYWNPUyIsIjI3LjAuMSIsImFybSIsIiIsIjE1NC4wLjgwMzcuOTgiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxNTQuMC44MDM3Ljk4Il0sWyJHb29nbGUgQ2hyb21lIiwiMTU0LjAuODAzNy45OCJdLFsiTm90IEEoQnJhbmQiLCI5OS4wLjAuMCJdXSwwXQ..&dt=1791635404630&bpp=1&bdt=44&idt=5&shv=r20261007&mjsv=m202610070101&ptt=9&saldr=aa&abxe=1&eoidce=1&nras=1&correlator=6780222420078&frm=20&pv=2&u_tz=120&u_his=50&u_h=600&u_w=800&u_ah=600&u_aw=800&u_cd=24&u_sd=1&dmc=32&adx=-12245933&ady=-12245933&biw=1440&bih=900&scr_x=0&scr_y=0&eid=95404669%2C95404823%2C95404845%2C122881529&oid=2&pvsid=7426478090595565&tmod=96121044&uas=0&nvt=7&fsapi=1&fc=1920&brdim=22%2C22%2C22%2C22%2C800%2C0%2C756%2C556%2C1440%2C900&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&plas=128x707_l%7C128x707_r&bz=0.53&pgls=CAk.&ifi=1&uci=a!1&fsb=1&dtd=13",
+        "title": "Advertisement",
+        "visible": false
+      },
+      {
+        "src": "https://pagead2.googlesyndication.com/pagead/html/r20261007/r20190131/zrt_lookup.html",
+        "title": "",
+        "visible": false
+      }
+    ],
+    "dialogs": [],
+    "googlefc": false,
+    "tcf": "undefined",
+    "dataLayer": [
+      [
+        "consent",
+        "default",
+        {
+          "ad_storage": "denied",
+          "ad_user_data": "denied",
+          "ad_personalization": "denied",
+          "analytics_storage": "denied"
+        }
+      ],
+      [
+        "event",
+        "page_view",
+        {
+          "page_path": "/cookies",
+          "page_location": "http://localhost:3102/cookies",
+          "page_title": "Politique de cookies | EVExpert"
+        }
+      ]
+    ],
+    "ads": [
+      {
+        "status": "unfilled",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      }
+    ]
+  }
+]

@@ -71,7 +71,7 @@ export default async function BrandPage({ params }: { params: Promise<Params> })
           <h2 className="sr-only">Versions {name}</h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {list.map((v) => (
-              <VehicleCard key={v.id} vehicle={v} href={vehicleHref(v, list.filter((x) => x.modelSlug === v.modelSlug).length > 1 ? "version" : "model")} />
+              <VehicleCard presentation="catalogue" key={v.id} vehicle={v} href={vehicleHref(v, list.filter((x) => x.modelSlug === v.modelSlug).length > 1 ? "version" : "model")} />
             ))}
           </div>
         </>

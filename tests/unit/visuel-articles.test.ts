@@ -13,6 +13,7 @@ import { buildRechargeGuides } from "@/data/guides/recharge";
 import { buildUsageGuides } from "@/data/guides/usage";
 import { buildNewGuides } from "@/data/guides/nouveaux";
 import { buildBatteryGuides } from "@/data/guides/batterie";
+import { buildOccasionGuides } from "@/data/guides/occasion";
 import { makeGuideContext } from "@/data/guides/helpers";
 import { buildEssentials, firstSentence } from "@/lib/essentials";
 
@@ -120,15 +121,15 @@ describe("palette « Cobalt & volt » : contraste WCAG AA (jetons de globals.css
   });
 });
 
-describe("couverture des images (35 contenus)", () => {
+describe("couverture des images (37 contenus)", () => {
   const ctx = makeGuideContext(vehicles);
   const slugs = [
-    ...[...buildAutonomieGuides(ctx), ...buildRechargeGuides(ctx), ...buildUsageGuides(ctx), ...buildNewGuides(ctx), ...buildBatteryGuides(ctx)].map((g) => g.slug),
+    ...[...buildAutonomieGuides(ctx), ...buildRechargeGuides(ctx), ...buildUsageGuides(ctx), ...buildNewGuides(ctx), ...buildBatteryGuides(ctx), ...buildOccasionGuides(ctx)].map((g) => g.slug),
     ...buildArticles(vehicles).map((a) => a.slug),
     ...chargingTopics.map((t) => t.slug),
   ];
 
-  /** Contenus sans photo, et pourquoi : aucune image libre convenable n'a été trouvée (on ne force pas). */
+  /** Contenus sans photo : absence de source adaptée ou choix éditorial expliqué. */
   const SANS_PHOTO: Record<string, string> = {
     "wltp-definition": "schéma seul : aucune photo libre n'illustre un cycle d'homologation",
     "consommation-voiture-electrique-kwh-100-km": "aucune photo libre convenable",
@@ -136,10 +137,12 @@ describe("couverture des images (35 contenus)", () => {
     "voiture-electrique-vs-essence": "aucune photo libre convenable (comparaison électrique / essence)",
     "comment-evexpert-construit-sa-base": "contenu méthodologique : aucune photo libre pertinente",
     "garantie-batterie-ce-que-disent-les-donnees": "aucune photo libre convenable",
+    "acheter-voiture-electrique-occasion": "méthode de vérification illustrée par des tableaux ; une photo générique ne prouve pas l'état d'un exemplaire",
+    "voitures-electriques-chinoises-byd-mg": "analyse des données par version ; pas de photo de véhicule non documentée ni de montage suggérant une comparaison essayée",
   };
 
   it("chaque contenu a une photo sous licence, une illustration existante, ou une raison documentée", () => {
-    expect(slugs).toHaveLength(35);
+    expect(slugs).toHaveLength(37);
     for (const slug of slugs) {
       const has = Boolean(EDITORIAL_LICENSED[slug] || EDITORIAL_PHOTOS[slug]);
       expect(has || slug in SANS_PHOTO, slug).toBe(true);

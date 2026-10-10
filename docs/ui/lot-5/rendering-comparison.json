@@ -1,0 +1,13 @@
+{
+  "routes-manifest.json": {
+    "equal": true
+  },
+  "app-paths-manifest.json": {
+    "equal": true
+  },
+  "prerender-manifest.json": {
+    "equal": true,
+    "countBefore": 191,
+    "countAfter": 191
+  }
+}
